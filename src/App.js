@@ -1,32 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 import profilePic from './images/profile.png';
 import './App.css';
 
-function App() {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
-
-  const toggleDropdown = () => {
-    setDropdownOpen(!isDropdownOpen);
-  };
-
-  const handleClickOutside = (event) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setDropdownOpen(false);
-    }
-  };
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
+function Home() {
+  // document.getElementById("HomeLink").style.display = "none";
   return (
     <div className="App">
-      <header className="Banner">
+      {/* <header className="Banner">
         <div className="LogoContainer">
           <img src={goldfishLogo} alt="Logo" className="Logo" />
           <h1 className="Title">Goldfish AI</h1>
@@ -45,8 +27,11 @@ function App() {
             </div>
           )}
         </div>
-      </header>
+      </header> */}
+
+      
       <div className="Body">
+        {/* <Outlet /> */}
         <div className="CreateProfileContainer">
           <button className="CreateProfileButton">Create Basic Profile</button>
         </div>
@@ -87,8 +72,85 @@ function App() {
 
           </div>
         </div>
-      {/* </div> */}
+        {/* </div> */}
+      </div>
+  );
+}
+
+function EmployerPage() {
+  return (
+    <div className="EmployerContent">
+      <h2>Welcome to the Employer page!</h2>
     </div>
+  );
+}
+
+function App() {
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [page, setPage] = useState("home");
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <Router>
+      <div className="App">
+        <header className="Banner">
+          <div className="LogoContainer">
+            <img src={goldfishLogo} alt="Logo" className="Logo" />
+            <div className="TitleLinkBox">
+              <h1 className="Title">Goldfish AI</h1>
+              <nav>
+                <ul className="PageLinks">
+                  {/* <li className="HomeLink" style={{display: page === "home" ? 'none' : 'grid' }}> */}
+                  <li className="HomeLink" style={{display: page === "home" ? 'none' : 'grid' }} onClick={()=>{setPage("home")}}>
+                    <Link to="/">Home</Link>
+                  </li>
+                  {/* <li className="EmployerLink" style={{display: page === "employer" ? 'none' : 'grid' }}> */}
+                  <li className="EmployerLink" style={{display: page === "employer" ? 'none' : 'grid' }}onClick={()=>{setPage("employer")}}>
+                    <Link to="/employer">Employer</Link>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div className="ProfileDropdown">
+            <button className="ProfileButton" onClick={toggleDropdown}>
+              <img src={profilePic} alt="Profile" className="ProfileIcon" />
+            </button>
+            {isDropdownOpen && (
+              <div className="DropdownContent" ref={dropdownRef}>
+                <ul className="DropdownMenu">
+                  <button>Profile</button>
+                  <button>Settings</button>
+                  <button>Signout</button>
+                </ul>
+              </div>
+            )}
+          </div>
+
+        </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/employer" element={<EmployerPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
