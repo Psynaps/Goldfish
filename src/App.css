@@ -8,7 +8,7 @@
   background-color: #f3eeee;
 }
 
-.Banner {
+.Home .Banner {
   background-color: #ffc909;
   padding: 13px;
   display: flex;
@@ -34,7 +34,7 @@
   color: white;
 }
 
-.Body {
+.Home Body {
   margin-left: 40px;
   padding: 20px;
 }
@@ -52,6 +52,8 @@
   font-size: 16px;
   font-family: 'Gill Sans', sans-serif;
   cursor: pointer;
+  border-radius: 30%;
+  margin-right: 10px;
 }
 
 .BodyTitle {
@@ -177,6 +179,10 @@ background-color: #ffe346;
   border: none;
   padding: 0;
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 30%;
+  margin-right: 10px;
 }
 
 .DropdownContent {
@@ -235,10 +241,210 @@ background-color: #ffe346;
   /* display: flex; */
 }
 
-.HomeLink {
-  /* display: none; */
+.Employer .Banner {
+  background-color: #ffc909;
+  padding: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-  
+
+.ProfileAndSavedJobs {
+  display: flex;
+  align-items: flex-end;
+}
+
+.savedJobs {
+  padding: 10px;
+  border-radius: 5px; /* Round corners */
+  background: white;
+  color: black;
+  bottom: 50;
+}
+
+.Employer .Banner h2 {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.PortalText {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 20px;
+  color: black;
+}
+
+.FilterSection {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.SearchBox {
+  background-color: #a9a9a9;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.SearchInput {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}
+
+
+.FilterGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.FilterButton {
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 20px;
+}
+
+.Button1 {
+  background-color: #ff0000;
+}
+
+.Button2 {
+  background-color: #079907;
+}
+
+.Button3 {
+  background-color: #3700ff;
+}
+
+.Button4 {
+  background-color: #ffae00;
+}
+
+.Button5 {
+  background-color: #00ccff;
+}
+
+.Button6 {
+  background-color: #ea00ff;
+}
+
+.Button7 {
+  background-color: #717903;
+}
+
+.Button8 {
+  background-color: #00ff88;
+}
+
+.ContentSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  padding: 20px;  /* Add padding around the section */
+  box-sizing: border-box;
+}
+
+.QuestionBank .Collapsible__contentOuter,
+.JobPostingBuilder .Collapsible__contentOuter {
+  border-radius: 5px;
+  /* padding: 10px; */
+  /* margin-bottom: 10px; */
+  background: white; /* White background for each question box */
+}
+
+.QuestionBank .Collapsible {
+  border: 4px solid #FFA07A; /* Light orange border for QuestionBank */
+  margin-bottom: 20px;
+}
+
+.JobPostingBuilder .Collapsible {
+  border: 4px solid #ADD8E6; /* Light blue border for JobPostingBuilder */
+  margin-bottom: 20px;
+}
+
+.QuestionBank .Collapsible__trigger,
+.JobPostingBuilder .Collapsible__trigger {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  position: relative;
+}
+
+.QuestionBank .Collapsible__trigger:after,
+.JobPostingBuilder .Collapsible__trigger:after {
+  content: '▼';
+  position: absolute;
+  right: 0;
+  transform: none;
+}
+
+.QuestionBank .Collapsible__trigger.is-open:after,
+.JobPostingBuilder .Collapsible__trigger.is-open:after {
+  content: '▲';
+}
+
+.answerSection {
+  margin: 10px;
+}
+.TitleAndButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.AddButton {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.RemoveButton {
+  background-color: blue;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.ScrollableContent {
+  overflow-y: auto;
+  max-height: 400px;  /* Adjust this based on your needs */
+}
+
+.GridOfButtons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.GridOfButtons button {
+  background-color: lightgreen;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
   
 p {
 margin: 0;

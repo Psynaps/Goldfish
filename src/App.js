@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import Collapsible from 'react-collapsible';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
@@ -112,7 +113,7 @@ function Home() {
 function EmployerPage() {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
-  // const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const toggleDropdown = () => {
     setDropdownOpen(!isDropdownOpen);
@@ -134,47 +135,146 @@ function EmployerPage() {
   return (
     <div className="Employer">
       <header className="Banner">
-        <div className="LogoContainer">
-          <img src={goldfishLogo} alt="Logo" className="Logo" />
-          <div className="TitleLinkBox">
-            <h1 className="Title">Goldfish AI</h1>
-            {/* <nav> */}
-              {/* <ul className="PageLinks"> */}
-                {/* <li className="HomeLink" style={{display: page === "home" ? 'none' : 'grid' }}> */}
-                {/* <li className="HomeLink" style={{display: page === "home" ? 'none' : 'grid' }} onClick={()=>{setPage("home")}}> */}
-                  {/* <Link to="/">Home</Link> */}
-                {/* </li> */}
-                {/* <li className="EmployerLink" style={{display: page === "employer" ? 'none' : 'grid' }}> */}
-                {/* <li className="EmployerLink" style={{display: page === "employer" ? 'none' : 'grid' }}onClick={()=>{setPage("employer")}}> */}
-                  {/* <Link to="/employer">Employer</Link> */}
-                {/* </li> */}
-              {/* </ul> */}
-            {/* </nav> */}
+  <div className="LogoContainer">
+    <img src={goldfishLogo} alt="Logo" className="Logo" />
+    <div className="TitleLinkBox">
+      <h1 className="Title">Goldfish AI</h1>
+    </div>
+  </div>
+  <div className="PortalText">Employer Portal: Company X</div>
+  <div className="ProfileDropdown">
+    <div className="ProfileAndSavedJobs">
+      <button className="ProfileButton" onClick={toggleDropdown}>
+        <img src={profilePic} alt="Profile" className="ProfileIcon" />
+      </button>
+      <button className="savedJobs">Saved Jobs</button>
+    </div>
+    {isDropdownOpen && (
+      <div className="DropdownContent" ref={dropdownRef}>
+        <ul className="DropdownMenu">
+          <button>Profile</button>
+          <button>Settings</button>
+          <button>Signout</button>
+        </ul>
+      </div>
+    )}
+  </div>
+</header>
+      <div className="Body">
+        <div className="FilterSection">
+          <h2>Question Bank Filters</h2>
+          <div className="SearchBox">
+            <input
+              className="SearchInput"
+              type="text"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="FilterGrid">
+            <button className="FilterButton Button1">Text 1</button>
+            <button className="FilterButton Button2">Text 2</button>
+            <button className="FilterButton Button3">Text 3</button>
+            <button className="FilterButton Button4">Text 4</button>
+            <button className="FilterButton Button5">Text 5</button>
+            <button className="FilterButton Button6">Text 6</button>
+            <button className="FilterButton Button7">Text 7</button>
+            <button className="FilterButton Button8">Text 8</button>
           </div>
         </div>
-        <div className="ProfileDropdown">
-          <button className="ProfileButton" onClick={toggleDropdown}>
-            <img src={profilePic} alt="Profile" className="ProfileIcon" />
-          </button>
-          {isDropdownOpen && (
-            <div className="DropdownContent" ref={dropdownRef}>
-              <ul className="DropdownMenu">
-                <button>Profile</button>
-                <button>Settings</button>
-                <button>Signout</button>
-              </ul>
-            </div>
-          )}
-        </div>
 
-      </header>
-      <div className="Body">
-        <h2>Welcome to the Employer page!</h2>
+        <div className="ContentSection">
+          <div className="QuestionBank">
+            <div className="TitleAndButton">
+              <h2>Question Bank</h2>
+              <button className="AddButton">Add</button>
+            </div>
+            <div className="ScrollableContent">
+              <Collapsible trigger="How would you describe your level of experience with X?" open={true}>
+                <div className="answerSection">
+                  <hr />
+                  <div className="GridOfButtons">
+                    <button>Choice 1</button>
+                    <button>Choice 2</button>
+                    <button>Choice 3</button>
+                    <button>Choice 4</button>
+                  </div>
+                </div>
+              </Collapsible>
+              <Collapsible trigger="Another Question">
+                <div className="answerSection">
+                  <hr />
+                  <div className="GridOfButtons">
+                    <button>Choice 1</button>
+                    <button>Choice 2</button>
+                    <button>Choice 3</button>
+                    <button>Choice 4</button>
+                  </div>
+                </div>
+              </Collapsible>
+              <Collapsible trigger="Third Question">
+                <div className="answerSection">
+                  <hr />
+                  <div className="GridOfButtons">
+                    <button>Choice 1</button>
+                    <button>Choice 2</button>
+                    <button>Choice 3</button>
+                    <button>Choice 4</button>
+                  </div>
+                </div>
+              </Collapsible>
+            </div>
+          </div>
+
+          <div className="JobPostingBuilder">
+            <div className="TitleAndButton">
+              <h2>Job Posting Builder</h2>
+              <button className="RemoveButton">Remove</button>
+            </div>
+            <div className="ScrollableContent">
+              <Collapsible trigger="Some Question for the Job">
+                <div className="answerSection">
+                  <hr />
+                  <div className="GridOfButtons">
+                    <button>Choice 1</button>
+                    <button>Choice 2</button>
+                    <button>Choice 3</button>
+                    <button>Choice 4</button>
+                  </div>
+                </div>
+              </Collapsible>
+              <Collapsible trigger="Another Question for the Job">
+                <div className="answerSection">
+                  <hr />
+                  <div className="GridOfButtons">
+                    <button>Choice 1</button>
+                    <button>Choice 2</button>
+                    <button>Choice 3</button>
+                    <button>Choice 4</button>
+                  </div>
+                </div>
+              </Collapsible>
+              <Collapsible trigger="Third Question for the Job">
+                <div className="answerSection">
+                  <hr />
+                  <div className="GridOfButtons">
+                    <button>Choice 1</button>
+                    <button>Choice 2</button>
+                    <button>Choice 3</button>
+                    <button>Choice 4</button>
+                  </div>
+                </div>
+              </Collapsible>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    
   );
 }
+
+
 
 function App() {
   // const [page, setPage] = useState("home");
