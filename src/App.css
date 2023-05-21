@@ -369,12 +369,12 @@ background-color: #ffe346;
 
 .QuestionBank .Collapsible {
   border: 4px solid #FFA07A; /* Light orange border for QuestionBank */
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .JobPostingBuilder .Collapsible {
   border: 4px solid #ADD8E6; /* Light blue border for JobPostingBuilder */
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 
 .QuestionBank .Collapsible__trigger,
@@ -401,9 +401,7 @@ background-color: #ffe346;
   content: '▲';
 }
 
-.answerSection {
-  margin: 10px;
-}
+
 .TitleAndButton {
   display: flex;
   justify-content: space-between;
@@ -428,9 +426,18 @@ background-color: #ffe346;
   cursor: pointer;
 }
 
-.ScrollableContent {
+.Home .ScrollableContent {
   overflow-y: auto;
-  max-height: 400px;  /* Adjust this based on your needs */
+  max-height: 250px;  /* Adjust this based on your needs */
+}
+
+.Employer .ScrollableContent {
+  overflow-y: auto;
+  max-height: 250px;  /* Adjust this based on your needs */
+}
+
+.answerSection {
+  margin: 10px;
 }
 
 .GridOfButtons {
@@ -444,6 +451,27 @@ background-color: #ffe346;
   padding: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
+}
+
+.saveButton {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  float: right;
+}
+
+.answerButton.selected {
+  background-color: darkgreen;
+  border: 3px solid black;
+  transform: scale(1.06);
 }
   
 p {
