@@ -440,19 +440,13 @@ background-color: #ffe346;
   margin: 10px;
 }
 
-.GridOfButtons {
+.answerGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
+  margin: 0px 10px 10px;
 }
 
-.GridOfButtons button {
-  background-color: lightgreen;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-}
 
 .saveButton {
   background-color: blue;
@@ -468,12 +462,18 @@ background-color: #ffe346;
   float: right;
 }
 
+.answerButton{
+  background-color: rgb(235, 248, 236);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  font-size: 16px;
+}
+
 .answerButton.selected {
   background-color: darkgreen;
   border: 3px solid black;
   transform: scale(1.06);
-}
-  
-p {
-margin: 0;
 }
