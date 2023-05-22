@@ -13,7 +13,7 @@ const Answer = ({ answerID, answer, questionID, setQuestionsAnswered }) => {
                 return prev.filter(item => item.questionID !== questionID);
             }
         });
-  };
+    };
 
     return (
         <button className={`answerButton ${selected ? "selected" : ""}`} onClick={handleClick}>
