@@ -81,14 +81,15 @@
   margin-left: 10px;
   background-color: white;
   padding: 10px;
-  }
+}
 
 .Dropdown {
-width: 100%;
-padding: 10px;
-font-size: 16px;
-background-color: #ffe346;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffe346;
 }
+
 .MatchesGoContainer {
   display: flex;
   align-items: flex-start;
@@ -210,6 +211,7 @@ background-color: #ffe346;
 .DropdownMenu button:hover {
   background-color: #f5f5f5;
 }
+
 .TitleLinkBox {
   list-style-type: none;
   padding: 0;
@@ -256,7 +258,8 @@ background-color: #ffe346;
 
 .savedJobs {
   padding: 10px;
-  border-radius: 5px; /* Round corners */
+  border-radius: 5px;
+  /* Round corners */
   background: white;
   color: black;
   bottom: 50;
@@ -355,7 +358,8 @@ background-color: #ffe346;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
   width: 100%;
-  padding: 20px;  /* Add padding around the section */
+  padding: 20px;
+  /* Add padding around the section */
   box-sizing: border-box;
 }
 
@@ -364,16 +368,19 @@ background-color: #ffe346;
   border-radius: 5px;
   /* padding: 10px; */
   /* margin-bottom: 10px; */
-  background: white; /* White background for each question box */
+  background: white;
+  /* White background for each question box */
 }
 
 .QuestionBank .Collapsible {
-  border: 4px solid #FFA07A; /* Light orange border for QuestionBank */
+  border: 4px solid #FFA07A;
+  /* Light orange border for QuestionBank */
   margin-bottom: 12px;
 }
 
 .JobPostingBuilder .Collapsible {
-  border: 4px solid #ADD8E6; /* Light blue border for JobPostingBuilder */
+  border: 4px solid #ADD8E6;
+  /* Light blue border for JobPostingBuilder */
   margin-bottom: 12px;
 }
 
@@ -428,12 +435,14 @@ background-color: #ffe346;
 
 .Home .ScrollableContent {
   overflow-y: auto;
-  max-height: 250px;  /* Adjust this based on your needs */
+  max-height: 250px;
+  /* Adjust this based on your needs */
 }
 
 .Employer .ScrollableContent {
   overflow-y: auto;
-  max-height: 250px;  /* Adjust this based on your needs */
+  max-height: 250px;
+  /* Adjust this based on your needs */
 }
 
 .answerSection {
@@ -462,7 +471,7 @@ background-color: #ffe346;
   float: right;
 }
 
-.answerButton{
+.answerButton {
   background-color: rgb(235, 248, 236);
   padding: 10px;
   border: none;
@@ -476,4 +485,19 @@ background-color: #ffe346;
   background-color: darkgreen;
   border: 3px solid black;
   transform: scale(1.06);
+}
+
+.LoginButton {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  /* float: right; */
 }

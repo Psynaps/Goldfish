@@ -1,15 +1,56 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Collapsible from 'react-collapsible';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Routes, Route } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 import profilePic from './images/profile.png';
 import QuestionBank from "./QuestionBank";
+import { useAuth0 } from "@auth0/auth0-react";
 import './App.css';
+
+function LoginButton() {
+    const { loginWithRedirect } = useAuth0();
+
+    // useEffect(() => {
+    //     if (isAuthenticated) {
+    //         navigate(location.pathname); // Redirect to the current page
+    //     }
+    // }, [isAuthenticated, navigate, location]);
+
+    return (
+        <button className="LoginButton" onClick={() => loginWithRedirect({ appState: { returnTo: window.location.href } })}>
+            Log In
+        </button>
+    );
+}
+
+function LogoutButton() {
+    const { logout } = useAuth0();
+
+    return <button className="LogoutButton" onClick={() => logout({ returnTo: window.location.href })}>Log Out</button>;
+}
+
+function Callback() {
+    const { isLoading } = useAuth0();
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!isLoading) {
+            navigate('/');
+        }
+    }, [isLoading, navigate]);
+
+    return <div>Loading...</div>;
+}
+
+// TODO: Make ... component to display inplace of profile icon (and profile icon + saved jobs button for employer page) untiil login returns yes or no.
 
 function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
+
+    const { isAuthenticated, isLoading } = useAuth0();
 
     const toggleDropdown = (event) => {
         setDropdownOpen(!isDropdownOpen);
@@ -43,20 +84,28 @@ function Home() {
                         <h1 className="Title">Goldfish AI</h1>
                     </div>
                 </div>
-                <div className="ProfileDropdown" ref={dropdownRef}>
-                    <button className="ProfileButton" onClick={toggleDropdown}>
-                        <img src={profilePic} alt="Profile" className="ProfileIcon" />
-                    </button>
-                    {isDropdownOpen && (
-                        <div className="DropdownContent">
-                            <ul className="DropdownMenu">
-                                <button>Profile</button>
-                                <button>Settings</button>
-                                <button>Signout</button>
-                            </ul>
+                {isLoading ? <div>Loading ...</div> : <></>}
+                {(!isLoading && isAuthenticated) ? (
+                    <>
+                        <div className="ProfileDropdown" ref={dropdownRef}>
+                            <button className="ProfileButton" onClick={toggleDropdown}>
+                                <img src={profilePic} alt="Profile" className="ProfileIcon" />
+                            </button>
+                            {isDropdownOpen && (
+                                <div className="DropdownContent">
+                                    <ul className="DropdownMenu">
+                                        <button>Profile</button>
+                                        <button>Settings</button>
+                                        <LogoutButton />
+                                    </ul>
+                                </div>
+                            )}
                         </div>
-                    )}
-                </div>
+                    </>
+                ) : (
+                    <LoginButton />
+                )}
+
             </header>
 
             <div className="Body">
@@ -105,12 +154,9 @@ function EmployerPage() {
     const dropdownRef = useRef(null);
     const [searchTerm, setSearchTerm] = useState('');
 
-
+    const { isAuthenticated } = useAuth0();
 
     const toggleDropdown = (event) => {
-        // if (isDropdownOpen && (dropdownRef.current === event.target || dropdownRef.current.contains(event.target))) {
-        //   return;
-        // }
         setDropdownOpen(!isDropdownOpen);
     };
 
@@ -143,23 +189,30 @@ function EmployerPage() {
                     </div>
                 </div>
                 <div className="PortalText">Employer Portal: Company X</div>
-                <div className="ProfileDropdown">
-                    <div className="ProfileAndSavedJobs">
-                        <button className="ProfileButton" onClick={toggleDropdown}>
-                            <img src={profilePic} alt="Profile" className="ProfileIcon" />
-                        </button>
-                        <button className="savedJobs">Saved Jobs</button>
-                    </div>
-                    {isDropdownOpen && (
-                        <div className="DropdownContent" ref={dropdownRef}>
-                            <ul className="DropdownMenu">
-                                <button>Profile</button>
-                                <button>Settings</button>
-                                <button>Signout</button>
-                            </ul>
+                {isAuthenticated ? (
+                    <>
+                        <div className="ProfileDropdown">
+                            <div className="ProfileAndSavedJobs">
+                                <button className="ProfileButton" onClick={toggleDropdown}>
+                                    <img src={profilePic} alt="Profile" className="ProfileIcon" />
+                                </button>
+                                <button className="savedJobs">Saved Jobs</button>
+                            </div>
+                            {isDropdownOpen && (
+                                <div className="DropdownContent" ref={dropdownRef}>
+                                    <ul className="DropdownMenu">
+                                        <button>Profile</button>
+                                        <button>Settings</button>
+                                        <LogoutButton />
+                                    </ul>
+                                </div>
+                            )}
                         </div>
-                    )}
-                </div>
+                    </>
+                ) : (
+                    <LoginButton />
+                )}
+
             </header>
             <div className="Body">
                 <div className="FilterSection">
@@ -243,18 +296,21 @@ function EmployerPage() {
 }
 
 
+
+
 function App() {
     // const [page, setPage] = useState("home");
 
     return (
-        <Router>
-            <div className="App">
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/employer" element={<EmployerPage />} />
-                </Routes>
-            </div>
-        </Router>
+        // <Router>
+        <div className="App">
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/employer" element={<EmployerPage />} />
+                {/* <Route path="/callback" element={<Callback />} /> */}
+            </Routes>
+        </div>
+        // </Router>
     );
 }
 
