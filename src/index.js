@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from "@auth0/auth0-react";
+import { ChakraProvider } from '@chakra-ui/react';
 import './index.css';
 
 console.log("redir: " + window.location.origin);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
+    <ChakraProvider>
       <Auth0Provider
         domain="dev-zk5m1bwyoje0vcbj.us.auth0.com"
         clientId="WzugzMdTqCYYGtoKmoxUhgRYuND6gASj"
@@ -21,7 +22,7 @@ root.render(
       >
         <App />
       </Auth0Provider>
-    </Router>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
