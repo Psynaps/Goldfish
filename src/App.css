@@ -372,9 +372,20 @@
   /* White background for each question box */
 }
 
-.QuestionBank .Collapsible {
+/* .QuestionBank .Collapsible { */
+/* border: 4px solid #FFA07A; */
+/* Light orange border for QuestionBank */
+/* margin-bottom: 12px; */
+/* } */
+
+.QuestionBank .Question {
   border: 4px solid #FFA07A;
-  /* Light orange border for QuestionBank */
+  margin-bottom: 12px;
+}
+
+.QuestionBank .Question.selected {
+  border: 6px solid #ad6041;
+  /* background-color: #fcefcb; */
   margin-bottom: 12px;
 }
 
@@ -422,6 +433,15 @@
   border-radius: 5px;
   border: none;
   cursor: pointer;
+}
+
+.AddButton:disabled {
+  background-color: rgb(117, 117, 117);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: default
 }
 
 .RemoveButton {

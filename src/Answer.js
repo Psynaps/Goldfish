@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-
-const Answer = ({ answerID, answer, questionID, setQuestionsAnswered }) => {
+import React, { useState } from 'react';
+/*
+const Answer = ({ answer, questionID, setQuestionsAnswered, setSelectedAnswer }) => {
     const [selected, setSelected] = useState(false);
 
     const handleClick = () => {
         setSelected(!selected);
 
+        setSelectedAnswer(answer);
+
         setQuestionsAnswered(prev => {
             if (!selected) {
-                return [...prev, { questionID: questionID, answerIDs: [answerID] }];
+                return [...prev, { questionID: questionID, answerIDs: [answer.answerID] }];
             } else {
                 return prev.filter(item => item.questionID !== questionID);
             }
@@ -17,7 +19,25 @@ const Answer = ({ answerID, answer, questionID, setQuestionsAnswered }) => {
 
     return (
         <button className={`answerButton ${selected ? "selected" : ""}`} onClick={handleClick}>
-            {answer}
+            {answer.answer}
+        </button>
+    );
+};
+
+export default Answer;
+*/
+
+const Answer = ({ answer, onSelect }) => {
+    const [selected, setSelected] = useState(false);
+
+    const handleClick = () => {
+        setSelected(!selected);
+        onSelect(answer);
+    };
+
+    return (
+        <button className={`answerButton ${selected ? "selected" : ""}`} onClick={handleClick}>
+            {answer.answer}
         </button>
     );
 };

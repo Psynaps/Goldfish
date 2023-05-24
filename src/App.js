@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Collapsible from 'react-collapsible';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 import profilePic from './images/profile.png';
@@ -10,6 +10,11 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, SimpleGrid, Text } from '@chakra-ui/react';
 import './App.css';
 
+
+// TODO: Make selected questions fill the job posting builder section and make it start initially empty
+// TODO: Make a saving and exporting of a job profile to JSON or CSV
+
+// TODO: Make sure add button correctly disables when no question or answer is selected. Also make sure the first question is initially selected if it is expanded.
 function LoginButton() {
     const { loginWithRedirect } = useAuth0();
 
@@ -32,17 +37,9 @@ function LogoutButton() {
     return <button className='LogoutButton' onClick={() => logout({ returnTo: window.location.href })}>Log Out</button>;
 }
 
-function loading() {
-    return (<div className='Loading'>
+// function profileDropdown() {
 
-    </div>);
-}
-
-function profileDropdown() {
-
-}
-
-// TODO: Make ... component to display inplace of profile icon (and profile icon + saved jobs button for employer page) untiil login returns yes or no.
+// }
 
 function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -148,8 +145,10 @@ function EmployerPage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const [searchTerm, setSearchTerm] = useState('');
-
     const { isAuthenticated, isLoading } = useAuth0();
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedQuestion, setSelectedQuestion] = useState(null);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
 
     const toggleDropdown = (event) => {
         setDropdownOpen(!isDropdownOpen);
@@ -159,6 +158,10 @@ function EmployerPage() {
         if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
             setDropdownOpen(false);
         }
+    };
+
+    const handleFilterButtonClick = (category) => {
+        setSelectedCategory(category);
     };
 
     useEffect(() => {
@@ -220,14 +223,15 @@ function EmployerPage() {
                         />
                     </div>
                     <div className='FilterGrid'>
-                        <button className='FilterButton Button1'>Text 1</button>
-                        <button className='FilterButton Button2'>Text 2</button>
-                        <button className='FilterButton Button3'>Text 3</button>
-                        <button className='FilterButton Button4'>Text 4</button>
-                        <button className='FilterButton Button5'>Text 5</button>
-                        <button className='FilterButton Button6'>Text 6</button>
-                        <button className='FilterButton Button7'>Text 7</button>
-                        <button className='FilterButton Button8'>Text 8</button>
+                        <button className='FilterButton Button1' onClick={() => handleFilterButtonClick('Category1')}>Category1</button>
+                        <button className='FilterButton Button2' onClick={() => handleFilterButtonClick('Category2')}>Category2</button>
+                        <button className='FilterButton Button3' onClick={() => handleFilterButtonClick('Category3')}>Category3</button>
+                        <button className='FilterButton Button4' onClick={() => handleFilterButtonClick('Category4')}>Category4</button>
+                        <button className='FilterButton Button5' onClick={() => handleFilterButtonClick('Category5')}>Category5</button>
+                        <button className='FilterButton Button6' onClick={() => handleFilterButtonClick('Category6')}>Category6</button>
+                        <button className='FilterButton Button7' onClick={() => handleFilterButtonClick('Category7')}>Category7</button>
+                        <button className='FilterButton Button8' onClick={() => handleFilterButtonClick('Category8')}>Category8</button>
+
                     </div>
                 </div>
 
@@ -235,9 +239,15 @@ function EmployerPage() {
                     <div className='QuestionBank'>
                         <div className='TitleAndButton'>
                             <h2>Question Bank</h2>
-                            <button className='AddButton'>Add</button>
+                            <button className='AddButton' disabled={selectedQuestion === null || selectedAnswer === null}>Add</button>
                         </div>
-                        <QuestionBank />
+                        <QuestionBank
+                            selectedCategory={selectedCategory}
+                            searchTerm={searchTerm}
+                            onQuestionSelect={setSelectedQuestion}
+                            onAnswerSelect={setSelectedAnswer}
+                            selectedQuestion={selectedQuestion}
+                        />
                     </div>
 
                     <div className='JobPostingBuilder'>
