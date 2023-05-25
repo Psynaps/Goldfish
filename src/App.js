@@ -7,7 +7,7 @@ import goldfishLogo from './images/logo.png';
 import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, SimpleGrid, Text, Button, Box, useColorModeValue } from '@chakra-ui/react';
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, useColorModeValue } from "@chakra-ui/react";
 import './App.css';
 
 
@@ -219,21 +219,15 @@ function EmployerPage() {
                     </> : <LoginButton />)
                 }
             </header>
-            <div className='Body'>
-                {/* <div className='FilterSection'> */}
+            <VStack spacing={5}>
                 <Box p='20px' w='100%' borderRadius='5px' bg='#f5f5f5'>
-
-                    {/* </Box> */}
-                    <Text fontSize='20px' as='b' >Question Bank Filters</Text>
-                    <div className='SearchBox'>
-                        <input
-                            className='SearchInput'
-                            type='text'
-                            placeholder='Search...'
-                            value={searchTerm}
-                            onChange={e => setSearchTerm(e.target.value)}
-                        />
-                    </div>
+                    <Text fontSize='20px' as='b'>Question Bank Filters</Text>
+                    <Input
+                        type='text'
+                        placeholder='Search...'
+                        value={searchTerm}
+                        onChange={e => setSearchTerm(e.target.value)}
+                    />
                     <SimpleGrid columns={4} spacing={2} mt='15px' mb='15px'>
                         {categories.map(category => (
                             <Button
@@ -248,15 +242,14 @@ function EmployerPage() {
                             </Button>
                         ))}
                     </SimpleGrid>
-                    {/* </div> */}
                 </Box>
 
-                <div className='ContentSection'>
-                    <div className='QuestionBank'>
-                        <div className='TitleAndButton'>
-                            <h2>Question Bank</h2>
-                            <button className='AddButton' disabled={selectedQuestion === null || selectedAnswer === null}>Add</button>
-                        </div>
+                <Flex direction="row" justify="space-between" w="100%">
+                    <VStack spacing={5} alignItems='start' w="48%" ml='20px'>
+                        <HStack justifyContent='space-between' w='100%'>
+                            <Text fontSize='2xl'>Question Bank</Text>
+                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null}>Add</Button>
+                        </HStack>
                         <QuestionBank
                             selectedCategory={selectedCategory}
                             searchTerm={searchTerm}
@@ -264,14 +257,14 @@ function EmployerPage() {
                             onAnswerSelect={setSelectedAnswer}
                             selectedQuestion={selectedQuestion}
                         />
-                    </div>
+                    </VStack>
 
-                    <div className='JobPostingBuilder'>
-                        <div className='TitleAndButton'>
-                            <h2>Job Posting Builder</h2>
-                            <button className='RemoveButton'>Remove</button>
-                        </div>
-                        <div className='ScrollableContent'>
+                    <VStack spacing={5} alignItems='start' w="48%">
+                        <HStack justifyContent='space-between' width='100%'>
+                            <Text fontSize='2xl'>Job Posting Builder</Text>
+                            <Button>Remove</Button>
+                        </HStack>
+                        <Box maxHeight='300px' overflowY='scroll'>
                             <Collapsible trigger='Some Question for the Job'>
                                 <div className='answerSection'>
                                     <hr />
@@ -305,12 +298,12 @@ function EmployerPage() {
                                     </div>
                                 </div>
                             </Collapsible>
-                        </div>
-                        <button className='saveButton'>Save</button>
-                    </div>
-                </div>
-            </div>
-        </div >
+                        </Box>
+                        <Button colorScheme='blue'>Save</Button>
+                    </VStack>
+                </Flex>
+            </VStack>
+        </div>
     );
 }
 
