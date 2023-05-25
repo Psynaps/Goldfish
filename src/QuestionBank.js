@@ -6,7 +6,7 @@ const QuestionBank = ({ selectedCategory, searchTerm, onQuestionSelect, onAnswer
     const [questions] = useState([
         {
             questionID: 1,
-            category: 'Category1',
+            category: 'Technical Knowledge',
             tags: ['tag1', 'tag2', 'X'],
             question: 'How would you describe your level of experience with X?',
             answers: [

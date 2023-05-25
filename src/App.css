@@ -303,56 +303,6 @@
   background-color: #ffffff;
 }
 
-
-.FilterGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.FilterButton {
-  padding: 10px;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 20px;
-  border-radius: 20px;
-}
-
-.Button1 {
-  background-color: #ff0000;
-}
-
-.Button2 {
-  background-color: #079907;
-}
-
-.Button3 {
-  background-color: #3700ff;
-}
-
-.Button4 {
-  background-color: #ffae00;
-}
-
-.Button5 {
-  background-color: #00ccff;
-}
-
-.Button6 {
-  background-color: #ea00ff;
-}
-
-.Button7 {
-  background-color: #717903;
-}
-
-.Button8 {
-  background-color: #00ff88;
-}
-
 .ContentSection {
   display: grid;
   grid-template-columns: 1fr 1fr;

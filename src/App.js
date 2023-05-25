@@ -7,7 +7,7 @@ import goldfishLogo from './images/logo.png';
 import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, SimpleGrid, Text } from '@chakra-ui/react';
+import { Spinner, SimpleGrid, Text, Button, Box, useColorModeValue } from '@chakra-ui/react';
 import './App.css';
 
 
@@ -15,6 +15,7 @@ import './App.css';
 // TODO: Make a saving and exporting of a job profile to JSON or CSV
 
 // TODO: Make sure add button correctly disables when no question or answer is selected. Also make sure the first question is initially selected if it is expanded.
+//TODO: Implement way to clear category by resewlecting
 function LoginButton() {
     const { loginWithRedirect } = useAuth0();
 
@@ -150,6 +151,14 @@ function EmployerPage() {
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
+    const initialBorderColor = useColorModeValue("blue.500", "blue.200");
+    const selectedBorderColor = useColorModeValue("blue.800", "blue.300");
+    const initialColor = useColorModeValue("black", "white");
+    const selectedColor = useColorModeValue("white", "black");
+    const selectedBg = useColorModeValue("blue.200", "blue.700");
+
+    const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
+
     const toggleDropdown = (event) => {
         setDropdownOpen(!isDropdownOpen);
     };
@@ -161,7 +170,7 @@ function EmployerPage() {
     };
 
     const handleFilterButtonClick = (category) => {
-        setSelectedCategory(category);
+        setSelectedCategory(category === selectedCategory ? null : category);
     };
 
     useEffect(() => {
@@ -211,8 +220,11 @@ function EmployerPage() {
                 }
             </header>
             <div className='Body'>
-                <div className='FilterSection'>
-                    <h2>Question Bank Filters</h2>
+                {/* <div className='FilterSection'> */}
+                <Box p='20px' w='100%' borderRadius='5px' bg='#f5f5f5'>
+
+                    {/* </Box> */}
+                    <Text fontSize='20px' as='b' >Question Bank Filters</Text>
                     <div className='SearchBox'>
                         <input
                             className='SearchInput'
@@ -222,18 +234,22 @@ function EmployerPage() {
                             onChange={e => setSearchTerm(e.target.value)}
                         />
                     </div>
-                    <div className='FilterGrid'>
-                        <button className='FilterButton Button1' onClick={() => handleFilterButtonClick('Category1')}>Category1</button>
-                        <button className='FilterButton Button2' onClick={() => handleFilterButtonClick('Category2')}>Category2</button>
-                        <button className='FilterButton Button3' onClick={() => handleFilterButtonClick('Category3')}>Category3</button>
-                        <button className='FilterButton Button4' onClick={() => handleFilterButtonClick('Category4')}>Category4</button>
-                        <button className='FilterButton Button5' onClick={() => handleFilterButtonClick('Category5')}>Category5</button>
-                        <button className='FilterButton Button6' onClick={() => handleFilterButtonClick('Category6')}>Category6</button>
-                        <button className='FilterButton Button7' onClick={() => handleFilterButtonClick('Category7')}>Category7</button>
-                        <button className='FilterButton Button8' onClick={() => handleFilterButtonClick('Category8')}>Category8</button>
-
-                    </div>
-                </div>
+                    <SimpleGrid columns={4} spacing={2} mt='15px' mb='15px'>
+                        {categories.map(category => (
+                            <Button
+                                key={category}
+                                onClick={() => handleFilterButtonClick(category)}
+                                bg={selectedCategory === category ? selectedBg : "white"}
+                                color={selectedCategory === category ? selectedColor : initialColor}
+                                borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
+                                borderWidth={selectedCategory === category ? "5px" : "3px"}
+                            >
+                                {category}
+                            </Button>
+                        ))}
+                    </SimpleGrid>
+                    {/* </div> */}
+                </Box>
 
                 <div className='ContentSection'>
                     <div className='QuestionBank'>
@@ -294,7 +310,7 @@ function EmployerPage() {
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 
