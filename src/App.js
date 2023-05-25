@@ -6,8 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
+import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, useColorModeValue } from "@chakra-ui/react";
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Collapse, useColorModeValue } from "@chakra-ui/react";
 import './App.css';
 
 
@@ -142,6 +143,7 @@ function Home() {
     );
 }
 
+// TODO: make sure when a question is removed from the right side it is visdible again in the bank. 
 function EmployerPage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -150,6 +152,10 @@ function EmployerPage() {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [jobPosting, setJobPosting] = useState([]);
+    const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
+    const [questions, setQuestions] = useState(questionsData);
+
 
     const initialBorderColor = useColorModeValue("blue.500", "blue.200");
     const selectedBorderColor = useColorModeValue("blue.800", "blue.300");
@@ -171,6 +177,59 @@ function EmployerPage() {
 
     const handleFilterButtonClick = (category) => {
         setSelectedCategory(category === selectedCategory ? null : category);
+    };
+
+    // const addQuestionToJobPosting = () => {
+    //     if (selectedQuestion && selectedAnswer) {
+    //         setJobPosting(prev => [...prev, { question: selectedQuestion, selectedAnswer: selectedAnswer, importance: 'Required' }]);
+    //         setQuestions(prev => prev.filter(question => question.questionID !== selectedQuestion.questionID));
+    //         setSelectedQuestion(null);
+    //         setSelectedAnswer(null);
+    //     }
+    // };
+
+    // const addQuestionToJobPosting = (question, selectedAnswer) => {
+    //     setJobPosting(prev => [...prev, { question: question.question, answers: question.answers, selectedAnswer: selectedAnswer, importance: 'Required' }]);
+    // };
+
+    const addQuestionToJobPosting = (question, selectedAnswer) => {
+        console.log("Adding question: ", question); // Add this line
+        const newQuestion = {
+            question: question.question,
+            answers: question.answers || [],
+            selectedAnswer: selectedAnswer,
+            importance: 'Required'
+        };
+        setJobPosting(prev => {
+            const newJobPosting = [...prev, newQuestion];
+            console.log("Job Posting after adding question: ", newJobPosting);
+            return newJobPosting;
+        });
+        setQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
+    };
+
+    const removeQuestionFromJobPosting = () => {
+        if (selectedJobPostingQuestion) {
+            setJobPosting(prev => prev.filter(item => item.question.questionID !== selectedJobPostingQuestion.questionID));
+            setQuestions(prev => [...prev, selectedJobPostingQuestion]);
+            setSelectedJobPostingQuestion(null);
+        }
+    };
+
+    const handleJobPostingQuestionSelection = (question) => {
+        if (selectedJobPostingQuestion === question) {
+            setSelectedJobPostingQuestion(null);
+        } else {
+            setSelectedJobPostingQuestion(question);
+        }
+    };
+
+    const handleQuestionSelection = (question) => {
+        if (selectedQuestion === question) {
+            setSelectedQuestion(null);
+        } else {
+            setSelectedQuestion(question);
+        }
     };
 
     useEffect(() => {
@@ -219,7 +278,7 @@ function EmployerPage() {
                     </> : <LoginButton />)
                 }
             </header>
-            <VStack spacing={5}>
+            <VStack spacing='1vh'>
                 <Box p='20px' w='100%' borderRadius='5px' bg='#f5f5f5'>
                     <Text fontSize='20px' as='b'>Question Bank Filters</Text>
                     <Input
@@ -227,6 +286,7 @@ function EmployerPage() {
                         placeholder='Search...'
                         value={searchTerm}
                         onChange={e => setSearchTerm(e.target.value)}
+                        bg='white'
                     />
                     <SimpleGrid columns={4} spacing={2} mt='15px' mb='15px'>
                         {categories.map(category => (
@@ -245,61 +305,60 @@ function EmployerPage() {
                 </Box>
 
                 <Flex direction="row" justify="space-between" w="100%">
-                    <VStack spacing={5} alignItems='start' w="48%" ml='20px'>
+                    <VStack spacing="5vh" alignItems='start' w="48%" ml='2vw'>
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null}>Add</Button>
+                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>Add</Button>
                         </HStack>
                         <QuestionBank
                             selectedCategory={selectedCategory}
                             searchTerm={searchTerm}
                             onQuestionSelect={setSelectedQuestion}
                             onAnswerSelect={setSelectedAnswer}
-                            selectedQuestion={selectedQuestion}
+                            selectedQuestion={selectedQuestion || questions[0]}
+                            selectedAnswer={selectedAnswer}
+                            questions={questions}
                         />
                     </VStack>
 
-                    <VStack spacing={5} alignItems='start' w="48%">
-                        <HStack justifyContent='space-between' width='100%'>
+                    <VStack spacing="5vh" alignItems='start' w="48%" ml='2vw'>
+                        <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Job Posting Builder</Text>
-                            <Button>Remove</Button>
+                            <Button isDisabled={!selectedJobPostingQuestion} onClick={removeQuestionFromJobPosting}>Remove</Button>
                         </HStack>
-                        <Box maxHeight='300px' overflowY='scroll'>
-                            <Collapsible trigger='Some Question for the Job'>
-                                <div className='answerSection'>
-                                    <hr />
-                                    <div className='GridOfButtons'>
-                                        <button>Choice 1</button>
-                                        <button>Choice 2</button>
-                                        <button>Choice 3</button>
-                                        <button>Choice 4</button>
-                                    </div>
-                                </div>
-                            </Collapsible>
-                            <Collapsible trigger='Another Question for the Job'>
-                                <div className='answerSection'>
-                                    <hr />
-                                    <div className='GridOfButtons'>
-                                        <button>Choice 1</button>
-                                        <button>Choice 2</button>
-                                        <button>Choice 3</button>
-                                        <button>Choice 4</button>
-                                    </div>
-                                </div>
-                            </Collapsible>
-                            <Collapsible trigger='Third Question for the Job'>
-                                <div className='answerSection'>
-                                    <hr />
-                                    <div className='GridOfButtons'>
-                                        <button>Choice 1</button>
-                                        <button>Choice 2</button>
-                                        <button>Choice 3</button>
-                                        <button>Choice 4</button>
-                                    </div>
-                                </div>
-                            </Collapsible>
+                        <Box maxHeight='300px' overflowY='scroll' borderWidth='1px' borderColor='gray.200' borderRadius='10px' w='100%'>
+                            {jobPosting.map((item, index) => (
+                                <Box
+                                    key={index}
+                                    bg={selectedJobPostingQuestion === item ? selectedBg : "white"}
+                                    borderColor={selectedJobPostingQuestion === item ? selectedBorderColor : initialBorderColor}
+                                    borderWidth={selectedJobPostingQuestion === item ? "5px" : "3px"}
+                                    onClick={() => handleJobPostingQuestionSelection(item)}
+                                    py={3}
+                                    px={5}
+                                    mb={3}
+                                >
+                                    <Text>{item.question}</Text>
+                                    <HStack mt={2}>
+                                        <Text>Answer:</Text>
+                                        <Select value={item.selectedAnswer?.answer}>
+                                            {item?.answers?.map((answer, index) => (
+                                                <option key={index} value={answer.answer}>{answer.answer}</option>
+                                            ))}
+                                        </Select>
+                                    </HStack>
+                                    <HStack mt={2}>
+                                        <Text>Importance:</Text>
+                                        <Select placeholder={item.importance}>
+                                            <option value="Required">Required</option>
+                                            <option value="Important">Important</option>
+                                            <option value="Optional">Optional</option>
+                                        </Select>
+                                    </HStack>
+                                </Box>
+                            ))}
                         </Box>
-                        <Button colorScheme='blue'>Save</Button>
+                        {jobPosting.length > 0 && <Button colorScheme='blue'>Save</Button>}
                     </VStack>
                 </Flex>
             </VStack>
