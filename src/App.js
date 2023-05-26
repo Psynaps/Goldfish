@@ -39,10 +39,6 @@ function LogoutButton() {
     return <button className='LogoutButton' onClick={() => logout({ returnTo: window.location.href })}>Log Out</button>;
 }
 
-// function profileDropdown() {
-
-// }
-
 function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
@@ -162,6 +158,9 @@ function EmployerPage() {
     const initialColor = useColorModeValue("black", "white");
     const selectedColor = useColorModeValue("white", "black");
     const selectedBg = useColorModeValue("blue.200", "blue.700");
+    const jobPostingInitialBorderColor = useColorModeValue("orange.500", "orange.200");
+    const jobPostingSelectedBorderColor = useColorModeValue("orange.800", "orange.300");
+    const jobPostingSelectedBackground = useColorModeValue("orange.100", "orange.760");
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
 
@@ -203,13 +202,16 @@ function EmployerPage() {
         setJobPosting(prev => {
             const newJobPosting = [...prev, newQuestion];
             console.log("Job Posting after adding question: ", newJobPosting);
+            console.log(questions);
             return newJobPosting;
         });
         setQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
+        console.log(questions);
     };
 
     const removeQuestionFromJobPosting = () => {
-        if (selectedJobPostingQuestion) {
+        if (selectedJobPostingQuestion && selectedJobPostingQuestion.question) {
+            console.log(questions);
             setJobPosting(prev => prev.filter(item => item.question.questionID !== selectedJobPostingQuestion.questionID));
             setQuestions(prev => [...prev, selectedJobPostingQuestion]);
             setSelectedJobPostingQuestion(null);
@@ -217,6 +219,7 @@ function EmployerPage() {
     };
 
     const handleJobPostingQuestionSelection = (question) => {
+        console.log(questions);
         if (selectedJobPostingQuestion === question) {
             setSelectedJobPostingQuestion(null);
         } else {
@@ -230,6 +233,22 @@ function EmployerPage() {
         } else {
             setSelectedQuestion(question);
         }
+    };
+
+    const handleAnswerChange = (item, e) => {
+        setJobPosting(prev => prev.map(question =>
+            question.question.questionID === item.question.questionID
+                ? { ...question, selectedAnswer: question.answers.find(answer => answer.answer === e.target.value) }
+                : question
+        ));
+    };
+
+    const handleImportanceChange = (item, e) => {
+        setJobPosting(prev => prev.map(question =>
+            question.question.questionID === item.question.questionID
+                ? { ...question, importance: e.target.value }
+                : question
+        ));
     };
 
     useEffect(() => {
@@ -279,7 +298,7 @@ function EmployerPage() {
                 }
             </header>
             <VStack spacing='1vh'>
-                <Box p='20px' w='100%' borderRadius='5px' bg='#f5f5f5'>
+                <Box p='20px' w='100%' bg='#f5f5f5'>
                     <Text fontSize='20px' as='b'>Question Bank Filters</Text>
                     <Input
                         type='text'
@@ -326,12 +345,12 @@ function EmployerPage() {
                             <Text fontSize='2xl'>Job Posting Builder</Text>
                             <Button isDisabled={!selectedJobPostingQuestion} onClick={removeQuestionFromJobPosting}>Remove</Button>
                         </HStack>
-                        <Box maxHeight='300px' overflowY='scroll' borderWidth='1px' borderColor='gray.200' borderRadius='10px' w='100%'>
+                        <Box maxHeight='300px' overflowY='scroll' borderColor='gray.200' w='100%'>
                             {jobPosting.map((item, index) => (
                                 <Box
                                     key={index}
-                                    bg={selectedJobPostingQuestion === item ? selectedBg : "white"}
-                                    borderColor={selectedJobPostingQuestion === item ? selectedBorderColor : initialBorderColor}
+                                    bg={selectedJobPostingQuestion === item ? jobPostingSelectedBackground : "white"}
+                                    borderColor={selectedJobPostingQuestion === item ? jobPostingSelectedBorderColor : jobPostingInitialBorderColor}
                                     borderWidth={selectedJobPostingQuestion === item ? "5px" : "3px"}
                                     onClick={() => handleJobPostingQuestionSelection(item)}
                                     py={3}
@@ -341,7 +360,7 @@ function EmployerPage() {
                                     <Text>{item.question}</Text>
                                     <HStack mt={2}>
                                         <Text>Answer:</Text>
-                                        <Select value={item.selectedAnswer?.answer}>
+                                        <Select value={item.selectedAnswer?.answer} onChange={(e) => handleAnswerChange(item, e)}>
                                             {item?.answers?.map((answer, index) => (
                                                 <option key={index} value={answer.answer}>{answer.answer}</option>
                                             ))}
@@ -349,7 +368,7 @@ function EmployerPage() {
                                     </HStack>
                                     <HStack mt={2}>
                                         <Text>Importance:</Text>
-                                        <Select placeholder={item.importance}>
+                                        <Select value={item.importance} onChange={(e) => handleImportanceChange(item, e)}>
                                             <option value="Required">Required</option>
                                             <option value="Important">Important</option>
                                             <option value="Optional">Optional</option>
