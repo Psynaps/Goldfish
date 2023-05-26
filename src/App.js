@@ -148,10 +148,10 @@ function EmployerPage() {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedQuestion, setSelectedQuestion] = useState(null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
-    const [jobPosting, setJobPosting] = useState([]);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
-    const [questions, setQuestions] = useState(questionsData);
 
+    const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
+    const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
 
     const initialBorderColor = useColorModeValue("blue.500", "blue.200");
     const selectedBorderColor = useColorModeValue("blue.800", "blue.300");
@@ -178,48 +178,25 @@ function EmployerPage() {
         setSelectedCategory(category === selectedCategory ? null : category);
     };
 
-    // const addQuestionToJobPosting = () => {
-    //     if (selectedQuestion && selectedAnswer) {
-    //         setJobPosting(prev => [...prev, { question: selectedQuestion, selectedAnswer: selectedAnswer, importance: 'Required' }]);
-    //         setQuestions(prev => prev.filter(question => question.questionID !== selectedQuestion.questionID));
-    //         setSelectedQuestion(null);
-    //         setSelectedAnswer(null);
-    //     }
-    // };
-
-    // const addQuestionToJobPosting = (question, selectedAnswer) => {
-    //     setJobPosting(prev => [...prev, { question: question.question, answers: question.answers, selectedAnswer: selectedAnswer, importance: 'Required' }]);
-    // };
-
-    const addQuestionToJobPosting = (question, selectedAnswer) => {
-        console.log("Adding question: ", question); // Add this line
-        const newQuestion = {
-            question: question.question,
-            answers: question.answers || [],
-            selectedAnswer: selectedAnswer,
-            importance: 'Required'
-        };
-        setJobPosting(prev => {
-            const newJobPosting = [...prev, newQuestion];
-            console.log("Job Posting after adding question: ", newJobPosting);
-            console.log(questions);
-            return newJobPosting;
-        });
-        setQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
-        console.log(questions);
+    const addQuestionToJobPosting = (question, answer) => {
+        const newQuestion = { ...question, importance: "Required", selectedAnswer: answer };
+        setJobPostingQuestions(prev => [...prev, newQuestion]);
+        setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
+        setSelectedQuestion(null);
+        setSelectedAnswer(null);
     };
 
-    const removeQuestionFromJobPosting = () => {
-        if (selectedJobPostingQuestion && selectedJobPostingQuestion.question) {
-            console.log(questions);
-            setJobPosting(prev => prev.filter(item => item.question.questionID !== selectedJobPostingQuestion.questionID));
-            setQuestions(prev => [...prev, selectedJobPostingQuestion]);
-            setSelectedJobPostingQuestion(null);
-        }
+    const removeQuestionFromJobPosting = (question) => {
+        setQuestionBankQuestions(prev => {
+            const updatedList = [...prev, question];
+            updatedList.sort((a, b) => a.questionID - b.questionID);
+            return updatedList;
+        });
+        setJobPostingQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
+        setSelectedJobPostingQuestion(null);
     };
 
     const handleJobPostingQuestionSelection = (question) => {
-        console.log(questions);
         if (selectedJobPostingQuestion === question) {
             setSelectedJobPostingQuestion(null);
         } else {
@@ -227,16 +204,8 @@ function EmployerPage() {
         }
     };
 
-    const handleQuestionSelection = (question) => {
-        if (selectedQuestion === question) {
-            setSelectedQuestion(null);
-        } else {
-            setSelectedQuestion(question);
-        }
-    };
-
     const handleAnswerChange = (item, e) => {
-        setJobPosting(prev => prev.map(question =>
+        setJobPostingQuestions(prev => prev.map(question =>
             question.question.questionID === item.question.questionID
                 ? { ...question, selectedAnswer: question.answers.find(answer => answer.answer === e.target.value) }
                 : question
@@ -244,11 +213,20 @@ function EmployerPage() {
     };
 
     const handleImportanceChange = (item, e) => {
-        setJobPosting(prev => prev.map(question =>
+        setJobPostingQuestions(prev => prev.map(question =>
             question.question.questionID === item.question.questionID
                 ? { ...question, importance: e.target.value }
                 : question
         ));
+    };
+
+    const handleQuestionSelect = (question) => {
+        setSelectedQuestion(question);
+    };
+
+    const handleAnswerSelect = (answer, question) => {
+        setSelectedAnswer(answer);
+        setSelectedQuestion(question);
     };
 
     useEffect(() => {
@@ -263,6 +241,16 @@ function EmployerPage() {
             window.removeEventListener('mousedown', handleWindowClick);
         };
     }, []);
+
+    useEffect(() => {
+        const sortedQuestions = questionsData.sort((a, b) => a.questionID - b.questionID);
+        setQuestionBankQuestions(sortedQuestions);
+    }, []);
+
+    useEffect(() => {
+        // console.log('Selected answer: ', selectedAnswer);
+        // console.log('Selected question: ', selectedQuestion);
+    }, [selectedAnswer, selectedQuestion]);
 
     return (
         <div className='Employer'>
@@ -332,11 +320,13 @@ function EmployerPage() {
                         <QuestionBank
                             selectedCategory={selectedCategory}
                             searchTerm={searchTerm}
-                            onQuestionSelect={setSelectedQuestion}
-                            onAnswerSelect={setSelectedAnswer}
-                            selectedQuestion={selectedQuestion || questions[0]}
+                            onQuestionSelect={handleQuestionSelect}
+                            onAnswerSelect={handleAnswerSelect}
+                            selectedQuestion={selectedQuestion || questionsData[0]}
                             selectedAnswer={selectedAnswer}
-                            questions={questions}
+                            questions={questionsData}
+                            questionBankQuestions={questionBankQuestions}
+                            onAddQuestionToJobPosting={addQuestionToJobPosting}
                         />
                     </VStack>
 
@@ -346,7 +336,7 @@ function EmployerPage() {
                             <Button isDisabled={!selectedJobPostingQuestion} onClick={removeQuestionFromJobPosting}>Remove</Button>
                         </HStack>
                         <Box maxHeight='300px' overflowY='scroll' borderColor='gray.200' w='100%'>
-                            {jobPosting.map((item, index) => (
+                            {jobPostingQuestions.map((item, index) => (
                                 <Box
                                     key={index}
                                     bg={selectedJobPostingQuestion === item ? jobPostingSelectedBackground : "white"}
@@ -368,7 +358,7 @@ function EmployerPage() {
                                     </HStack>
                                     <HStack mt={2}>
                                         <Text>Importance:</Text>
-                                        <Select value={item.importance} onChange={(e) => handleImportanceChange(item, e)}>
+                                        <Select defaultValue={item.importance} onChange={(e) => handleImportanceChange(item, e)}>
                                             <option value="Required">Required</option>
                                             <option value="Important">Important</option>
                                             <option value="Optional">Optional</option>
@@ -377,7 +367,7 @@ function EmployerPage() {
                                 </Box>
                             ))}
                         </Box>
-                        {jobPosting.length > 0 && <Button colorScheme='blue'>Save</Button>}
+                        {jobPostingQuestions.length > 0 && <Button colorScheme='blue'>Save</Button>}
                     </VStack>
                 </Flex>
             </VStack>

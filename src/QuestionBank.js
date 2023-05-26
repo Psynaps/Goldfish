@@ -2,40 +2,51 @@ import React, { useState, useEffect } from 'react';
 import { Box, VStack } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
-// import { questionsData } from './QuestionsData';
 
-const QuestionBank = ({ questions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect, selectedQuestion, selectedAnswer }) => {
+// const QuestionBank = ({ questions, questionBankQuestions, onAddQuestionToJobPosting, selectedCategory, searchTerm, onQuestionSelect: propOnQuestionSelect, onAnswerSelect: propOnAnswerSelect }) => {
+const QuestionBank = ({ questions, questionBankQuestions, onAddQuestionToJobPosting, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect }) => {
+    const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions[0]);
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
 
-    const filteredQuestions = questions.filter(question => {
-        // Check if a category is selected, and if so, filter questions that don't belong to it
-        if (selectedCategory && question.category !== selectedCategory) {
-            return false;
+    useEffect(() => {
+        setSelectedQuestion(questionBankQuestions[0]);
+    }, [questionBankQuestions]);
+
+    useEffect(() => {
+        let updatedQuestionBank = questions;
+
+        if (selectedCategory) {
+            updatedQuestionBank = updatedQuestionBank.filter(q => q.category === selectedCategory);
         }
 
-        // Split the search term into words and check if any of the question's tags include these words
-        const searchWords = searchTerm.split(' ');
-        if (searchWords && question.tags && Array.isArray(question.tags) && !searchWords.some(word => question.tags.some(tag => tag.toLowerCase().includes(word.toLowerCase())))) {
-            return false;
+        if (searchTerm) {
+            const searchWords = searchTerm.split(' ');
+            if (searchWords && searchWords.length > 0) {
+                updatedQuestionBank = updatedQuestionBank.filter(q => q.tags && Array.isArray(q.tags) && searchWords.some(word => q.tags.some(tag => tag.toLowerCase().includes(word.toLowerCase()))));
+            }
+
+            // updating the question bank list
+            onAddQuestionToJobPosting(updatedQuestionBank);
         }
+    }, [searchTerm, selectedCategory, questions, onAddQuestionToJobPosting]);
 
-        return true;
-    });
 
-    // useEffect(() => {
-    //     if (filteredQuestions.length > 0) {
-    //         onQuestionSelect(filteredQuestions[0]);
+    // const onAddQuestionClick = () => {
+    //     if (selectedQuestion && selectedAnswer) {
+    //         onAddQuestionToJobPosting(selectedQuestion, selectedAnswer);
+    //         setSelectedQuestion(null);
+    //         setSelectedAnswer(null);
     //     }
-    // }, [filteredQuestions]);
+    // };
 
     return (
         <VStack spacing={5} align='stretch' w='100%'>
-            {filteredQuestions.map((question, index) => (
+            {questionBankQuestions.map((question, index) => (
                 <Box key={question.questionID} borderBottom='1px' borderColor='gray.200'>
                     <Question
-                        // key={question.questionID}
                         question={question}
                         isSelected={selectedQuestion === question}
-                        onSelect={() => onQuestionSelect(question)}
+                        onSelect={() => { setSelectedQuestion(question); onQuestionSelect(question); }}
                         isInitiallyOpen={index === 0}
                     >
                         <VStack align='stretch' mt={5} spacing={4}>
@@ -43,8 +54,8 @@ const QuestionBank = ({ questions, selectedCategory, searchTerm, onQuestionSelec
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}
                                     answer={answer}
-                                    selectedAnswer={selectedQuestion === question ? selectedAnswer : null}
-                                    onSelect={() => onAnswerSelect(answer)}
+                                    selectedAnswer={selectedAnswer}
+                                    onSelect={() => { setSelectedAnswer(answer); onAnswerSelect(answer, question); }} // Pass the question here
                                 />
                             ))}
                         </VStack>
@@ -54,4 +65,5 @@ const QuestionBank = ({ questions, selectedCategory, searchTerm, onQuestionSelec
         </VStack>
     );
 };
+
 export default QuestionBank;
