@@ -146,11 +146,10 @@ function EmployerPage() {
     const [searchTerm, setSearchTerm] = useState('');
     const { isAuthenticated, isLoading } = useAuth0();
     const [selectedCategory, setSelectedCategory] = useState(null);
-    const [selectedQuestion, setSelectedQuestion] = useState(null);
+    const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
+    const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
-
-    const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
 
     const initialBorderColor = useColorModeValue("blue.500", "blue.200");
@@ -179,7 +178,7 @@ function EmployerPage() {
     };
 
     const addQuestionToJobPosting = (question, answer) => {
-        const newQuestion = { ...question, importance: "Required", selectedAnswer: answer };
+        const newQuestion = { ...question, originalQuestion: question, importance: "Required", selectedAnswer: answer };
         setJobPostingQuestions(prev => [...prev, newQuestion]);
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
@@ -187,13 +186,17 @@ function EmployerPage() {
     };
 
     const removeQuestionFromJobPosting = (question) => {
+        console.log('question: ', question);
         setQuestionBankQuestions(prev => {
-            const updatedList = [...prev, question];
+            const updatedList = [...prev, question.originalQuestion];
             updatedList.sort((a, b) => a.questionID - b.questionID);
             return updatedList;
         });
-        setJobPostingQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
+        console.log('job posting questions: ', jobPostingQuestions);
+        console.log('question: ', question);
+        setJobPostingQuestions(prev => prev.filter(item => item?.originalQuestion?.questionID !== question?.originalQuestion?.questionID));
         setSelectedJobPostingQuestion(null);
+        setSelectedQuestion(null); // Add this line
     };
 
     const handleJobPostingQuestionSelection = (question) => {
@@ -333,7 +336,7 @@ function EmployerPage() {
                     <VStack spacing="5vh" alignItems='start' w="48%" ml='2vw'>
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Job Posting Builder</Text>
-                            <Button isDisabled={!selectedJobPostingQuestion} onClick={removeQuestionFromJobPosting}>Remove</Button>
+                            <Button isDisabled={!selectedJobPostingQuestion} onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>Remove</Button>
                         </HStack>
                         <Box maxHeight='300px' overflowY='scroll' borderColor='gray.200' w='100%'>
                             {jobPostingQuestions.map((item, index) => (
@@ -347,11 +350,11 @@ function EmployerPage() {
                                     px={5}
                                     mb={3}
                                 >
-                                    <Text>{item.question}</Text>
+                                    <Text>{item.originalQuestion.question}</Text>
                                     <HStack mt={2}>
                                         <Text>Answer:</Text>
                                         <Select value={item.selectedAnswer?.answer} onChange={(e) => handleAnswerChange(item, e)}>
-                                            {item?.answers?.map((answer, index) => (
+                                            {item?.originalQuestion?.answers?.map((answer, index) => (
                                                 <option key={index} value={answer.answer}>{answer.answer}</option>
                                             ))}
                                         </Select>

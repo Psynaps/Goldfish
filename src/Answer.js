@@ -5,9 +5,9 @@ const Answer = ({ answer, selectedAnswer, onSelect }) => {
     const isSelected = selectedAnswer === answer;
     // const isSelected2 = selectedAnswer?.answerID === key;
     // console.log(isSelected);
-    console.log('selectedAnswer: ', selectedAnswer);
-    console.log('answer: ', answer);
-    console.log('---------------');
+    // console.log('selectedAnswer: ', selectedAnswer);
+    // console.log('answer: ', answer);
+    // console.log('---------------');
     // console.log('key: ', key, isSelected2);
 
     const handleClick = (event) => {
