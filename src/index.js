@@ -8,22 +8,25 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import { ChakraProvider } from '@chakra-ui/react';
 import './index.css';
 
-console.log("redir: " + window.location.origin);
+// console.log("redir: " + window.location.origin);
+// console.log("href1: " + window.location.href);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ChakraProvider>
-      <Auth0Provider
-        domain="dev-zk5m1bwyoje0vcbj.us.auth0.com"
-        clientId="WzugzMdTqCYYGtoKmoxUhgRYuND6gASj"
-        authorizationParams={{
-          redirect_uri: window.location.origin
-        }}
-      >
+  <Auth0Provider
+    domain="dev-zk5m1bwyoje0vcbj.us.auth0.com"
+    clientId="WzugzMdTqCYYGtoKmoxUhgRYuND6gASj"
+    authorizationParams={{
+      redirect_uri: window.location.href
+    }}
+  >
+    <React.StrictMode>
+      <ChakraProvider>
+
         <App />
-      </Auth0Provider>
-    </ChakraProvider>
-  </React.StrictMode>
+      </ChakraProvider>
+    </React.StrictMode>
+  </Auth0Provider>
+
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -8,7 +8,8 @@ import goldfishLogo from './images/logo.png';
 import QuestionBank from './QuestionBank';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, useColorModeValue } from "@chakra-ui/react";
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from "@chakra-ui/react";
+import { ChevronDownIcon } from "@chakra-ui/icons";
 import './App.css';
 
 
@@ -18,6 +19,7 @@ import './App.css';
 // TODO: Make sure add button correctly disables when no question or answer is selected. Also make sure the first question is initially selected if it is expanded.
 //TODO: Implement way to clear category by resewlecting
 function LoginButton() {
+    // const { colorMode } = useColorMode();
     const { loginWithRedirect } = useAuth0();
 
     // useEffect(() => {
@@ -27,16 +29,16 @@ function LoginButton() {
     // }, [isAuthenticated, navigate, location]);
 
     return (
-        <button className='LoginButton' onClick={() => loginWithRedirect({ appState: { returnTo: window.location.href } })}>
-            Log In
-        </button>
+        <Button onClick={() => loginWithRedirect({ returnTo: window.location.origin })} background='blue' borderRadius={15} color={useColorModeValue("white", "white")}>
+            Log In/Sign Up
+        </Button>
     );
 }
 
 function LogoutButton() {
     const { logout } = useAuth0();
 
-    return <button className='LogoutButton' onClick={() => logout({ returnTo: window.location.href })}>Log Out</button>;
+    return <button className='LogoutButton' onClick={() => logout({ returnTo: window.location.origin })}>Log Out</button>;
 }
 
 function Home() {
@@ -144,7 +146,7 @@ function EmployerPage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const [searchTerm, setSearchTerm] = useState('');
-    const { isAuthenticated, isLoading, user } = useAuth0();
+    const { isAuthenticated, isLoading, user, logout, loginWithRedirect } = useAuth0();
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
@@ -153,6 +155,7 @@ function EmployerPage() {
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [position, setPosition] = useState("");
     const [company, setCompany] = useState("");
+    const { colorMode, toggleColorMode } = useColorMode();
 
     const initialBorderColor = useColorModeValue("blue.500", "blue.200");
     const selectedBorderColor = useColorModeValue("blue.800", "blue.300");
@@ -188,14 +191,13 @@ function EmployerPage() {
     };
 
     const removeQuestionFromJobPosting = (question) => {
-        console.log('question: ', question);
         setQuestionBankQuestions(prev => {
             const updatedList = [...prev, question.originalQuestion];
             updatedList.sort((a, b) => a.questionID - b.questionID);
             return updatedList;
         });
-        console.log('job posting questions: ', jobPostingQuestions);
-        console.log('question: ', question);
+        // console.log('job posting questions: ', jobPostingQuestions);
+        // console.log('question: ', question);
         setJobPostingQuestions(prev => prev.filter(item => item?.originalQuestion?.questionID !== question?.originalQuestion?.questionID));
         setSelectedJobPostingQuestion(null);
         setSelectedQuestion(null); // Add this line
@@ -261,9 +263,8 @@ function EmployerPage() {
     }, []);
 
     useEffect(() => {
-        // console.log('Selected answer: ', selectedAnswer);
-        // console.log('Selected question: ', selectedQuestion);
     }, [selectedAnswer, selectedQuestion]);
+
 
     return (
         <div className='Employer'>
@@ -277,25 +278,32 @@ function EmployerPage() {
                 <div className='PortalText'>Employer Portal: Company X</div>
 
                 {isLoading ? <Spinner /> :
-                    ((isAuthenticated) ? <>
-                        <div className='ProfileDropdown'>
-                            <div className='ProfileAndSavedJobs'>
-                                <button className='ProfileButton' onClick={toggleDropdown}>
-                                    <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize='90%' />
-                                </button>
-                                <button className='savedJobs'>Saved Jobs</button>
-                            </div>
-                            {isDropdownOpen && (
-                                <div className='DropdownContent' ref={dropdownRef}>
-                                    <SimpleGrid columns={1} spacing={3} >
-                                        <button>Profile</button>
-                                        <button>Settings</button>
-                                        <LogoutButton />
+                    <SimpleGrid columns={2} spacing={3}>
+                        {(isAuthenticated) ? <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} /> : <LoginButton />}
+                        <Menu>
+                            <MenuButton as={IconButton} aria-label="Options" icon={<ChevronDownIcon />} variant="outline">
+                            </MenuButton>
+                            <MenuList>
+                                {(isAuthenticated) ? <MenuItem>Profile</MenuItem> : <></>}
+                                <MenuItem>Settings</MenuItem>
+                                <MenuItem>About Us</MenuItem>
+                                <MenuItem>
+                                    <SimpleGrid columns={2} spacing={3}>
+                                        <div>Dark Mode</div>
+                                        <Switch colorScheme="blue" onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
                                     </SimpleGrid>
-                                </div>
-                            )}
-                        </div>
-                    </> : <LoginButton />)
+                                </MenuItem>
+                                <MenuItem onClick={() => logout({
+                                    logoutParams: {
+                                        returnTo: 'http://localhost:3000/employer',
+                                    }
+                                })}>
+                                    {/* <LogoutButton /> */}
+                                    Log out
+                                </MenuItem>
+                            </MenuList>
+                        </Menu>
+                    </SimpleGrid>
                 }
             </header>
             <VStack spacing='1vh' align='stretch'>
@@ -308,7 +316,7 @@ function EmployerPage() {
                         onChange={e => setSearchTerm(e.target.value)}
                         bg='white'
                     />
-                    <SimpleGrid columns={4} spacing={2} mt='15px' mb='15px'>
+                    <SimpleGrid columns={4} spacing={2} my='15px'>
                         {categories.map(category => (
                             <Button
                                 key={category}
@@ -317,7 +325,7 @@ function EmployerPage() {
                                 color={selectedCategory === category ? selectedColor : initialColor}
                                 borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
                                 borderWidth={selectedCategory === category ? "5px" : "3px"}
-                                minW={"200px"} // Add this line
+                                // minW={"200px"} // Add this line
                                 w={"auto"} // Add this line
                             >
                                 <Text isTruncated>
