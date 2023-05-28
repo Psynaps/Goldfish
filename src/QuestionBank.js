@@ -2,46 +2,30 @@ import React, { useState, useEffect } from 'react';
 import { Box, VStack } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
-
-// const QuestionBank = ({ questions, questionBankQuestions, onAddQuestionToJobPosting, selectedCategory, searchTerm, onQuestionSelect: propOnQuestionSelect, onAnswerSelect: propOnAnswerSelect }) => {
-const QuestionBank = ({ questions, questionBankQuestions, onAddQuestionToJobPosting, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect }) => {
+const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect }) => {
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions[0]);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
+
+    let displayedQuestions = questionBankQuestions;
+    if (selectedCategory) {
+        displayedQuestions = displayedQuestions.filter(q => q.category === selectedCategory);
+    }
+
+    if (searchTerm) {
+        const searchWords = searchTerm.split(' ');
+        if (searchWords && searchWords.length > 0) {
+            displayedQuestions = displayedQuestions.filter(q => q.tags && Array.isArray(q.tags) && searchWords.some(word => q.tags.some(tag => tag.toLowerCase().includes(word.toLowerCase()))));
+        }
+    }
+
     useEffect(() => {
-        setSelectedQuestion(questionBankQuestions[0]);
+        setSelectedQuestion(displayedQuestions[0]);
     }, [questionBankQuestions]);
 
-    useEffect(() => {
-        let updatedQuestionBank = questions;
-
-        if (selectedCategory) {
-            updatedQuestionBank = updatedQuestionBank.filter(q => q.category === selectedCategory);
-        }
-
-        if (searchTerm) {
-            const searchWords = searchTerm.split(' ');
-            if (searchWords && searchWords.length > 0) {
-                updatedQuestionBank = updatedQuestionBank.filter(q => q.tags && Array.isArray(q.tags) && searchWords.some(word => q.tags.some(tag => tag.toLowerCase().includes(word.toLowerCase()))));
-            }
-
-            // updating the question bank list
-            onAddQuestionToJobPosting(updatedQuestionBank);
-        }
-    }, [searchTerm, selectedCategory, questions, onAddQuestionToJobPosting]);
-
-
-    // const onAddQuestionClick = () => {
-    //     if (selectedQuestion && selectedAnswer) {
-    //         onAddQuestionToJobPosting(selectedQuestion, selectedAnswer);
-    //         setSelectedQuestion(null);
-    //         setSelectedAnswer(null);
-    //     }
-    // };
-
     return (
-        <VStack spacing={5} align='stretch' w='100%'>
-            {questionBankQuestions.map((question, index) => (
+        <VStack spacing={5} align='stretch' maxHeight='50vh' overflowY='auto' w='100%'>
+            {displayedQuestions.map((question, index) => (
                 <Box key={question.questionID} borderBottom='1px' borderColor='gray.200'>
                     <Question
                         question={question}

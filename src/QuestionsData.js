@@ -13,7 +13,7 @@ export const questionsData = [
     },
     {
         questionID: 2,
-        category: 'Category2',
+        category: 'Industry Certifications',
         tags: ['tag3', 'tag4'],
         question: 'What are your thoughts on A?',
         answers: [
@@ -25,7 +25,7 @@ export const questionsData = [
     },
     {
         questionID: 3,
-        category: 'Category3',
+        category: 'Tools & Platforms',
         tags: ['tag3', 'tag4'],
         question: 'What are your thoughts on B?',
         answers: [
@@ -37,7 +37,7 @@ export const questionsData = [
     },
     {
         questionID: 4,
-        category: 'Category4',
+        category: 'Technical Knowledge',
         tags: ['tag2', 'tag3'],
         question: 'What are your thoughts on C?',
         answers: [
@@ -49,7 +49,7 @@ export const questionsData = [
     },
     {
         questionID: 5,
-        category: 'Category1',
+        category: 'Tools & Platforms',
         tags: ['tag3', 'tag5'],
         question: 'What are your thoughts on D?',
         answers: [

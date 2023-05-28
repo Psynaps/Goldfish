@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Collapsible from 'react-collapsible';
+// import Collapsible from 'react-collapsible';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
-import profilePic from './images/profile.png';
+// import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Collapse, useColorModeValue } from "@chakra-ui/react";
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, useColorModeValue } from "@chakra-ui/react";
 import './App.css';
 
 
@@ -43,7 +43,7 @@ function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
 
-    const { isAuthenticated, isLoading } = useAuth0();
+    const { isAuthenticated, isLoading, user } = useAuth0();
 
     const toggleDropdown = (event) => {
         setDropdownOpen(!isDropdownOpen);
@@ -81,7 +81,7 @@ function Home() {
                     ((isAuthenticated) ? <>
                         <div className='ProfileDropdown' ref={dropdownRef}>
                             <button className='ProfileButton' onClick={toggleDropdown}>
-                                <img src={profilePic} alt='Profile' className='ProfileIcon' />
+                                <Avatar src={user.picture} fallbackSrc={`https://ui-avatars.com/api/?name=${user.name}&length=1`} alt='Profile' borderRadius='full' boxSize='90%' />
                             </button>
                             {isDropdownOpen && (
                                 <div className='DropdownContent'>
@@ -144,13 +144,15 @@ function EmployerPage() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const [searchTerm, setSearchTerm] = useState('');
-    const { isAuthenticated, isLoading } = useAuth0();
+    const { isAuthenticated, isLoading, user } = useAuth0();
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
+    const [position, setPosition] = useState("");
+    const [company, setCompany] = useState("");
 
     const initialBorderColor = useColorModeValue("blue.500", "blue.200");
     const selectedBorderColor = useColorModeValue("blue.800", "blue.300");
@@ -232,6 +234,14 @@ function EmployerPage() {
         setSelectedQuestion(question);
     };
 
+    const handlePositionChange = (value) => {
+        setPosition(value);
+    };
+
+    const handleCompanyChange = (value) => {
+        setCompany(value);
+    };
+
     useEffect(() => {
         const handleWindowClick = (event) => {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -271,7 +281,7 @@ function EmployerPage() {
                         <div className='ProfileDropdown'>
                             <div className='ProfileAndSavedJobs'>
                                 <button className='ProfileButton' onClick={toggleDropdown}>
-                                    <img src={profilePic} alt='Profile' className='ProfileIcon' />
+                                    <Avatar src={user.picture} fallbackSrc={`https://ui-avatars.com/api/?name=${user.name}&length=1`} alt='Profile' borderRadius='full' boxSize='90%' />
                                 </button>
                                 <button className='savedJobs'>Saved Jobs</button>
                             </div>
@@ -288,7 +298,7 @@ function EmployerPage() {
                     </> : <LoginButton />)
                 }
             </header>
-            <VStack spacing='1vh'>
+            <VStack spacing='1vh' align='stretch'>
                 <Box p='20px' w='100%' bg='#f5f5f5'>
                     <Text fontSize='20px' as='b'>Question Bank Filters</Text>
                     <Input
@@ -307,15 +317,28 @@ function EmployerPage() {
                                 color={selectedCategory === category ? selectedColor : initialColor}
                                 borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
                                 borderWidth={selectedCategory === category ? "5px" : "3px"}
+                                minW={"200px"} // Add this line
+                                w={"auto"} // Add this line
                             >
-                                {category}
+                                <Text isTruncated>
+                                    {category}
+                                </Text>
                             </Button>
                         ))}
                     </SimpleGrid>
                 </Box>
 
-                <Flex direction="row" justify="space-between" w="100%">
-                    <VStack spacing="5vh" alignItems='start' w="48%" ml='2vw'>
+                <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" w="100%">
+                    <VStack
+                        spacing="5vh"
+                        alignItems='start'
+                        w="48%"
+                        ml='2vw'
+                        border='1px'
+                        borderColor='lightblue'
+                        borderRadius='md'
+                        p={5}
+                    >
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
                             <Button isDisabled={selectedQuestion === null || selectedAnswer === null} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>Add</Button>
@@ -333,12 +356,32 @@ function EmployerPage() {
                         />
                     </VStack>
 
-                    <VStack spacing="5vh" alignItems='start' w="48%" ml='2vw'>
+                    <VStack
+                        spacing="5vh"
+                        alignItems='start'
+                        w="48%"
+                        ml='2vw'
+                        mb='2vw'
+                        border='1px'
+                        borderColor='lightblue'
+                        borderRadius='md'
+                        p={5}
+                    >
                         <HStack justifyContent='space-between' w='100%'>
-                            <Text fontSize='2xl'>Job Posting Builder</Text>
+                            {/* <Text fontSize='2xl'>Job Posting Builder</Text> */}
+                            <Textarea
+                                placeholder="Position"
+                                onChange={e => handlePositionChange(e.target.value)}
+                                minHeight='15%'
+                            />
+                            <Textarea
+                                placeholder="Company"
+                                onChange={e => handleCompanyChange(e.target.value)}
+                                minHeight='15%'
+                            />
                             <Button isDisabled={!selectedJobPostingQuestion} onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>Remove</Button>
                         </HStack>
-                        <Box maxHeight='300px' overflowY='scroll' borderColor='gray.200' w='100%'>
+                        <Box maxHeight='60vh' overflowY='auto' align='stretch' w='100%'>
                             {jobPostingQuestions.map((item, index) => (
                                 <Box
                                     key={index}
@@ -369,15 +412,16 @@ function EmployerPage() {
                                     </HStack>
                                 </Box>
                             ))}
+                            {jobPostingQuestions.length > 0 && <Button colorScheme='blue'>Publish</Button>}
                         </Box>
-                        {jobPostingQuestions.length > 0 && <Button colorScheme='blue'>Save</Button>}
                     </VStack>
                 </Flex>
-            </VStack>
-        </div>
+            </VStack >
+        </div >
     );
 }
 
+// Create a profile state in the app
 
 
 
