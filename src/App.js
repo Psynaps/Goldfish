@@ -8,8 +8,8 @@ import goldfishLogo from './images/logo.png';
 import QuestionBank from './QuestionBank';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from "@chakra-ui/react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
+import { ChevronDownIcon } from '@chakra-ui/icons';
 import './App.css';
 
 
@@ -29,7 +29,7 @@ function LoginButton() {
     // }, [isAuthenticated, navigate, location]);
 
     return (
-        <Button onClick={() => loginWithRedirect({ returnTo: window.location.origin })} background='blue' borderRadius={15} color={useColorModeValue("white", "white")}>
+        <Button onClick={() => loginWithRedirect({ returnTo: window.location.origin })} background='blue' borderRadius={15} color={useColorModeValue('white', 'white')}>
             Log In/Sign Up
         </Button>
     );
@@ -143,8 +143,6 @@ function Home() {
 
 // TODO: make sure when a question is removed from the right side it is visdible again in the bank. 
 function EmployerPage() {
-    const [isDropdownOpen, setDropdownOpen] = useState(false);
-    const dropdownRef = useRef(null);
     const [searchTerm, setSearchTerm] = useState('');
     const { isAuthenticated, isLoading, user, logout, loginWithRedirect } = useAuth0();
     const [selectedCategory, setSelectedCategory] = useState(null);
@@ -153,37 +151,28 @@ function EmployerPage() {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
-    const [position, setPosition] = useState("");
-    const [company, setCompany] = useState("");
+    const [position, setPosition] = useState('');
+    const [location, setLocation] = useState('');
     const { colorMode, toggleColorMode } = useColorMode();
 
-    const initialBorderColor = useColorModeValue("blue.500", "blue.200");
-    const selectedBorderColor = useColorModeValue("blue.800", "blue.300");
-    const initialColor = useColorModeValue("black", "white");
-    const selectedColor = useColorModeValue("white", "black");
-    const selectedBg = useColorModeValue("blue.200", "blue.700");
-    const jobPostingInitialBorderColor = useColorModeValue("orange.500", "orange.200");
-    const jobPostingSelectedBorderColor = useColorModeValue("orange.800", "orange.300");
-    const jobPostingSelectedBackground = useColorModeValue("orange.100", "orange.760");
+    const initialBorderColor = useColorModeValue('blue.500', 'blue.200');
+    const selectedBorderColor = useColorModeValue('blue.800', 'blue.300');
+    const initialColor = useColorModeValue('black', 'white');
+    const selectedColor = useColorModeValue('white', 'black');
+    const selectedBg = useColorModeValue('blue.200', 'blue.700');
+    const jobPostingInitialBorderColor = useColorModeValue('orange.500', 'orange.200');
+    const jobPostingSelectedBorderColor = useColorModeValue('orange.800', 'orange.300');
+    const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
 
-    const toggleDropdown = (event) => {
-        setDropdownOpen(!isDropdownOpen);
-    };
-
-    const handleClickOutside = (event) => {
-        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-            setDropdownOpen(false);
-        }
-    };
 
     const handleFilterButtonClick = (category) => {
         setSelectedCategory(category === selectedCategory ? null : category);
     };
 
     const addQuestionToJobPosting = (question, answer) => {
-        const newQuestion = { ...question, originalQuestion: question, importance: "Required", selectedAnswer: answer };
+        const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
         setJobPostingQuestions(prev => [...prev, newQuestion]);
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
@@ -212,6 +201,8 @@ function EmployerPage() {
     };
 
     const handleAnswerChange = (item, e) => {
+        e.stopPropagation();
+        setSelectedJobPostingQuestion(item);
         setJobPostingQuestions(prev => prev.map(question =>
             question.question.questionID === item.question.questionID
                 ? { ...question, selectedAnswer: question.answers.find(answer => answer.answer === e.target.value) }
@@ -220,6 +211,8 @@ function EmployerPage() {
     };
 
     const handleImportanceChange = (item, e) => {
+        e.stopPropagation();
+        setSelectedJobPostingQuestion(item);
         setJobPostingQuestions(prev => prev.map(question =>
             question.question.questionID === item.question.questionID
                 ? { ...question, importance: e.target.value }
@@ -240,22 +233,10 @@ function EmployerPage() {
         setPosition(value);
     };
 
-    const handleCompanyChange = (value) => {
-        setCompany(value);
+    const handleLocationChange = (value) => {
+        setLocation(value);
     };
 
-    useEffect(() => {
-        const handleWindowClick = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                handleClickOutside(event);
-            }
-        };
-
-        window.addEventListener('mousedown', handleWindowClick);
-        return () => {
-            window.removeEventListener('mousedown', handleWindowClick);
-        };
-    }, []);
 
     useEffect(() => {
         const sortedQuestions = questionsData.sort((a, b) => a.questionID - b.questionID);
@@ -268,44 +249,48 @@ function EmployerPage() {
 
     return (
         <div className='Employer'>
-            <header className='Banner'>
-                <div className='LogoContainer'>
-                    <img src={goldfishLogo} alt='Logo' className='Logo' />
-                    <div className='TitleLinkBox'>
-                        <h1 className='Title'>Goldfish AI</h1>
-                    </div>
-                </div>
-                <div className='PortalText'>Employer Portal: Company X</div>
-
-                {isLoading ? <Spinner /> :
-                    <SimpleGrid columns={2} spacing={3}>
-                        {(isAuthenticated) ? <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} /> : <LoginButton />}
-                        <Menu>
-                            <MenuButton as={IconButton} aria-label="Options" icon={<ChevronDownIcon />} variant="outline">
-                            </MenuButton>
-                            <MenuList>
-                                {(isAuthenticated) ? <MenuItem>Profile</MenuItem> : <></>}
-                                <MenuItem>Settings</MenuItem>
-                                <MenuItem>About Us</MenuItem>
-                                <MenuItem>
-                                    <SimpleGrid columns={2} spacing={3}>
-                                        <div>Dark Mode</div>
-                                        <Switch colorScheme="blue" onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
-                                    </SimpleGrid>
-                                </MenuItem>
-                                <MenuItem onClick={() => logout({
-                                    logoutParams: {
-                                        returnTo: 'http://localhost:3000/employer',
-                                    }
-                                })}>
-                                    {/* <LogoutButton /> */}
-                                    Log out
-                                </MenuItem>
-                            </MenuList>
-                        </Menu>
-                    </SimpleGrid>
-                }
-            </header>
+            <Box bg='#1398ff' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem'>
+                <Box display='flex' alignItems='baseline' p={0}>
+                    <Text fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
+                    <Text ml={3} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
+                </Box>
+                <HStack spacing={5} alignItems='top'>
+                    {isLoading ? <Spinner /> :
+                        <>
+                            {(isAuthenticated) ?
+                                <VStack spacing={1} alignItems='center'>
+                                    <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} />
+                                    <Box bg='#FAD156' borderRadius='full' px={2}>
+                                        <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
+                                    </Box>
+                                </VStack>
+                                : <LoginButton />}
+                            <Menu>
+                                <MenuButton as={IconButton} aria-label='Options' icon={<ChevronDownIcon />} variant='outline' />
+                                <MenuList>
+                                    {(isAuthenticated) ? <MenuItem>Profile</MenuItem> : <></>}
+                                    {(isAuthenticated) ? <MenuItem>Saved Jobs</MenuItem> : <></>}
+                                    <MenuItem>Settings</MenuItem>
+                                    <MenuItem>About Us</MenuItem>
+                                    <MenuItem>
+                                        <SimpleGrid columns={2} spacing={3}>
+                                            <div>Dark Mode</div>
+                                            <Switch colorScheme='blue' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
+                                        </SimpleGrid>
+                                    </MenuItem>
+                                    <MenuItem onClick={() => logout({
+                                        logoutParams: {
+                                            returnTo: 'http://localhost:3000/employer',
+                                        }
+                                    })}>
+                                        Log out
+                                    </MenuItem>
+                                </MenuList>
+                            </Menu>
+                        </>
+                    }
+                </HStack>
+            </Box>
             <VStack spacing='1vh' align='stretch'>
                 <Box p='20px' w='100%' bg='#f5f5f5'>
                     <Text fontSize='20px' as='b'>Question Bank Filters</Text>
@@ -321,12 +306,12 @@ function EmployerPage() {
                             <Button
                                 key={category}
                                 onClick={() => handleFilterButtonClick(category)}
-                                bg={selectedCategory === category ? selectedBg : "white"}
+                                bg={selectedCategory === category ? selectedBg : 'white'}
                                 color={selectedCategory === category ? selectedColor : initialColor}
                                 borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
-                                borderWidth={selectedCategory === category ? "5px" : "3px"}
-                                // minW={"200px"} // Add this line
-                                w={"auto"} // Add this line
+                                borderWidth={selectedCategory === category ? '5px' : '3px'}
+                                // minW={'200px'} // Add this line
+                                w={'auto'} // Add this line
                             >
                                 <Text isTruncated>
                                     {category}
@@ -336,12 +321,13 @@ function EmployerPage() {
                     </SimpleGrid>
                 </Box>
 
-                <Flex direction={{ base: 'column', md: 'row' }} justify="space-between" w="100%">
+                <Flex direction={{ base: 'column', md: 'row' }} justify='space-between' w='100%'>
                     <VStack
-                        spacing="5vh"
+                        spacing='5vh'
                         alignItems='start'
-                        w="48%"
-                        ml='2vw'
+                        w={{ base: '100%', md: '48%' }}
+                        mx='2vw'
+                        mb='2vw'
                         border='1px'
                         borderColor='lightblue'
                         borderRadius='md'
@@ -349,7 +335,9 @@ function EmployerPage() {
                     >
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>Add</Button>
+                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null} colorScheme={(selectedQuestion === null || selectedAnswer === null) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>
+                                <Text isTruncated>Add</Text>
+                            </Button>
                         </HStack>
                         <QuestionBank
                             selectedCategory={selectedCategory}
@@ -365,12 +353,12 @@ function EmployerPage() {
                     </VStack>
 
                     <VStack
-                        spacing="5vh"
+                        spacing='5vh'
                         alignItems='start'
-                        w="48%"
-                        ml='2vw'
+                        w={{ base: '100%', md: '48%' }}
+                        mx='2vw'
                         mb='2vw'
-                        border='1px'
+                        border={1}
                         borderColor='lightblue'
                         borderRadius='md'
                         p={5}
@@ -378,33 +366,40 @@ function EmployerPage() {
                         <HStack justifyContent='space-between' w='100%'>
                             {/* <Text fontSize='2xl'>Job Posting Builder</Text> */}
                             <Textarea
-                                placeholder="Position"
+                                placeholder='Position'
                                 onChange={e => handlePositionChange(e.target.value)}
                                 minHeight='15%'
                             />
                             <Textarea
-                                placeholder="Company"
-                                onChange={e => handleCompanyChange(e.target.value)}
+                                placeholder='Location'
+                                onChange={e => handleLocationChange(e.target.value)}
                                 minHeight='15%'
                             />
-                            <Button isDisabled={!selectedJobPostingQuestion} onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>Remove</Button>
+                            <Button isDisabled={!selectedJobPostingQuestion} colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'} size='md' onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>
+                                Remove
+                            </Button>
                         </HStack>
                         <Box maxHeight='60vh' overflowY='auto' align='stretch' w='100%'>
                             {jobPostingQuestions.map((item, index) => (
                                 <Box
                                     key={index}
-                                    bg={selectedJobPostingQuestion === item ? jobPostingSelectedBackground : "white"}
-                                    borderColor={selectedJobPostingQuestion === item ? jobPostingSelectedBorderColor : jobPostingInitialBorderColor}
-                                    borderWidth={selectedJobPostingQuestion === item ? "5px" : "3px"}
+                                    bg={selectedJobPostingQuestion?.questionID === item?.questionID ? jobPostingSelectedBackground : 'white'}
+                                    borderColor={selectedJobPostingQuestion?.questionID === item?.questionID ? jobPostingSelectedBorderColor : jobPostingInitialBorderColor}
+                                    borderWidth={selectedJobPostingQuestion?.questionID === item?.questionID ? '4px' : '3px'}
                                     onClick={() => handleJobPostingQuestionSelection(item)}
                                     py={3}
                                     px={5}
                                     mb={3}
+                                    borderRadius="md"
                                 >
                                     <Text>{item.originalQuestion.question}</Text>
                                     <HStack mt={2}>
                                         <Text>Answer:</Text>
-                                        <Select value={item.selectedAnswer?.answer} onChange={(e) => handleAnswerChange(item, e)}>
+                                        <Select
+                                            value={item.selectedAnswer?.answer}
+                                            onChange={(e) => handleAnswerChange(item, e)}
+                                            onClick={e => e.stopPropagation()}
+                                        >
                                             {item?.originalQuestion?.answers?.map((answer, index) => (
                                                 <option key={index} value={answer.answer}>{answer.answer}</option>
                                             ))}
@@ -412,10 +407,14 @@ function EmployerPage() {
                                     </HStack>
                                     <HStack mt={2}>
                                         <Text>Importance:</Text>
-                                        <Select defaultValue={item.importance} onChange={(e) => handleImportanceChange(item, e)}>
-                                            <option value="Required">Required</option>
-                                            <option value="Important">Important</option>
-                                            <option value="Optional">Optional</option>
+                                        <Select
+                                            defaultValue={item.importance}
+                                            onChange={(e) => handleImportanceChange(item, e)}
+                                            onClick={e => e.stopPropagation()}
+                                        >
+                                            <option value='Required'>Required</option>
+                                            <option value='Important'>Important</option>
+                                            <option value='Optional'>Optional</option>
                                         </Select>
                                     </HStack>
                                 </Box>

@@ -230,9 +230,6 @@
   text-align: center;
 }
 
-.EmployerContent {
-  text-align: center;
-}
 
 .PageLinks {
   list-style-type: none;
@@ -243,13 +240,6 @@
   /* display: flex; */
 }
 
-.Employer .Banner {
-  background-color: #ffc909;
-  padding: 13px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 
 .ProfileAndSavedJobs {
   display: flex;
@@ -263,11 +253,6 @@
   background: white;
   color: black;
   bottom: 50;
-}
-
-.Employer .Banner h2 {
-  flex-grow: 1;
-  text-align: center;
 }
 
 .PortalText {
@@ -292,15 +277,6 @@
   margin-top: 20px;
   width: 100%;
   box-sizing: border-box;
-}
-
-.SearchInput {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  box-sizing: border-box;
-  background-color: #ffffff;
 }
 
 .ContentSection {
@@ -370,38 +346,7 @@
 }
 
 
-.TitleAndButton {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
-.AddButton {
-  background-color: blue;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.AddButton:disabled {
-  background-color: rgb(117, 117, 117);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: default
-}
-
-.RemoveButton {
-  background-color: blue;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-}
 
 .Home .ScrollableContent {
   overflow-y: auto;
@@ -409,11 +354,6 @@
   /* Adjust this based on your needs */
 }
 
-.Employer .ScrollableContent {
-  overflow-y: auto;
-  max-height: 250px;
-  /* Adjust this based on your needs */
-}
 
 .answerSection {
   margin: 10px;
@@ -424,50 +364,4 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 10px;
   margin: 0px 10px 10px;
-}
-
-
-.saveButton {
-  background-color: blue;
-  color: white;
-  border: none;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  float: right;
-}
-
-.answerButton {
-  background-color: rgb(235, 248, 236);
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 10px;
-  font-size: 16px;
-  font-size: 16px;
-}
-
-.answerButton.selected {
-  background-color: darkgreen;
-  border: 3px solid black;
-  transform: scale(1.06);
-}
-
-.LoginButton {
-  background-color: blue;
-  color: white;
-  border: none;
-  /* padding: 10px; */
-  text-align: center;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 10px;
-  /* float: right; */
 }

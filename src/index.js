@@ -5,7 +5,7 @@ import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { Auth0Provider } from "@auth0/auth0-react";
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import './index.css';
 
 // console.log("redir: " + window.location.origin);
@@ -21,6 +21,7 @@ root.render(
   >
     <React.StrictMode>
       <ChakraProvider>
+        <ColorModeScript initialColorMode='light' />
 
         <App />
       </ChakraProvider>
