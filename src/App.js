@@ -81,7 +81,7 @@ function Home() {
                     ((isAuthenticated) ? <>
                         <div className='ProfileDropdown' ref={dropdownRef}>
                             <button className='ProfileButton' onClick={toggleDropdown}>
-                                <Avatar src={user.picture} fallbackSrc={`https://ui-avatars.com/api/?name=${user.name}&length=1`} alt='Profile' borderRadius='full' boxSize='90%' />
+                                <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize='90%' />
                             </button>
                             {isDropdownOpen && (
                                 <div className='DropdownContent'>
@@ -281,7 +281,7 @@ function EmployerPage() {
                         <div className='ProfileDropdown'>
                             <div className='ProfileAndSavedJobs'>
                                 <button className='ProfileButton' onClick={toggleDropdown}>
-                                    <Avatar src={user.picture} fallbackSrc={`https://ui-avatars.com/api/?name=${user.name}&length=1`} alt='Profile' borderRadius='full' boxSize='90%' />
+                                    <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize='90%' />
                                 </button>
                                 <button className='savedJobs'>Saved Jobs</button>
                             </div>
