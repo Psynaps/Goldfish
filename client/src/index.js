@@ -4,17 +4,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
-import { Auth0Provider } from "@auth0/auth0-react";
+import { Auth0Provider } from '@auth0/auth0-react';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import './index.css';
 
-// console.log("redir: " + window.location.origin);
-// console.log("href1: " + window.location.href);
+// console.log('redir: ' + window.location.origin);
+// console.log('href1: ' + window.location.href);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Auth0Provider
-    domain="dev-zk5m1bwyoje0vcbj.us.auth0.com"
-    clientId="WzugzMdTqCYYGtoKmoxUhgRYuND6gASj"
+    domain='dev-zk5m1bwyoje0vcbj.us.auth0.com'
+    clientId='WzugzMdTqCYYGtoKmoxUhgRYuND6gASj'
+    audience='https://dev-zk5m1bwyoje0vcbj.us.auth0.com/api/v2/'
+    scope='update:current_user_metadata'
     authorizationParams={{
       redirect_uri: window.location.href
     }}

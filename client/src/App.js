@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 // import Collapsible from 'react-collapsible';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { useNavigate } from 'react-router-dom';
@@ -177,6 +177,7 @@ function EmployerPage() {
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
         setSelectedAnswer(null);
+        console.log(user);
     };
 
     const removeQuestionFromJobPosting = (question) => {
@@ -434,9 +435,37 @@ function EmployerPage() {
 
 function App() {
     // const [page, setPage] = useState('home');
+    const [message, setMessage] = useState(null);
+    const [isFetching, setIsFetching] = useState(false);
+    const [url, setUrl] = useState('/api');
+
+    const fetchData = useCallback(() => {
+        fetch(url)
+            .then(response => {
+                console.log('something1.1');
+                if (!response.ok) {
+                    throw new Error(`status ${response.status}`);
+                }
+                console.log('something1', response.json());
+                return response.json();
+            })
+            .then(json => {
+                console.log('something2', json.message);
+                setMessage(json.message);
+                setIsFetching(false);
+            }).catch(e => {
+                setMessage(`API call failed: ${e}`);
+                setIsFetching(false);
+            });
+    }, [url]);
+
+    useEffect(() => {
+        setIsFetching(true);
+        fetchData();
+    }, [fetchData]);
 
     return (
-        <div className='App'>
+        <div className='App' >
             <Router>
                 <Routes>
                     <Route path='/' element={<Home />} />
