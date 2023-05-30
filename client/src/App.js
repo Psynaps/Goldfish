@@ -299,7 +299,7 @@ function EmployerPage() {
                     <Text fontSize='20px' as='b'>Question Bank Filters</Text>
                     <Input
                         type='text'
-                        placeholder='Search!!...'
+                        placeholder='Search...'
                         value={searchTerm}
                         onChange={e => setSearchTerm(e.target.value)}
                         bg='white'
