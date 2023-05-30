@@ -12,6 +12,8 @@ import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Se
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import './App.css';
 
+const deployURL = 'https://goldfishai.netlify.app';
+
 
 // TODO: Make selected questions fill the job posting builder section and make it start initially empty
 // TODO: Make a saving and exporting of a job profile to JSON or CSV
@@ -281,7 +283,7 @@ function EmployerPage() {
                                     </MenuItem>
                                     <MenuItem onClick={() => logout({
                                         logoutParams: {
-                                            returnTo: 'http://localhost:3000/employer',
+                                            returnTo: `${deployURL}/employer`,
                                         }
                                     })}>
                                         Log out

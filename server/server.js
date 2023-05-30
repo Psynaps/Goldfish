@@ -15,6 +15,8 @@ app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, '../client/build'))); // Maybe add / to end of build
 
+
+app.get('/', (req, res) => { res.send('Hello from Express!'); });
 // Answer API requests.
 app.get('/api', function (req, res) {
     console.error("api req received");
