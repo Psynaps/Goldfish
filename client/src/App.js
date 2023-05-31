@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 // import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
-import { questionsData } from './QuestionsData';
+import { questionsData } from './questionsData';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
@@ -15,11 +15,10 @@ import './App.css';
 const deployURL = 'https://goldfishai.netlify.app';
 
 
-// TODO: Make selected questions fill the job posting builder section and make it start initially empty
 // TODO: Make a saving and exporting of a job profile to JSON or CSV
 
-// TODO: Make sure add button correctly disables when no question or answer is selected. Also make sure the first question is initially selected if it is expanded.
-//TODO: Implement way to clear category by resewlecting
+// TODO: Bug in question bank/ larger section where it adjusts sizing when you select and unselect a category.
+
 function LoginButton() {
     // const { colorMode } = useColorMode();
     const { loginWithRedirect } = useAuth0();
@@ -437,34 +436,34 @@ function EmployerPage() {
 
 function App() {
     // const [page, setPage] = useState('home');
-    const [message, setMessage] = useState(null);
-    const [isFetching, setIsFetching] = useState(false);
-    const [url, setUrl] = useState('/api');
+    // const [message, setMessage] = useState(null);
+    // const [isFetching, setIsFetching] = useState(false);
+    // const [url, setUrl] = useState('/api');
 
-    const fetchData = useCallback(() => {
-        fetch(url)
-            .then(response => {
-                console.log('something1.1');
-                if (!response.ok) {
-                    throw new Error(`status ${response.status}`);
-                }
-                console.log('something1', response.json());
-                return response.json();
-            })
-            .then(json => {
-                console.log('something2', json.message);
-                setMessage(json.message);
-                setIsFetching(false);
-            }).catch(e => {
-                setMessage(`API call failed: ${e}`);
-                setIsFetching(false);
-            });
-    }, [url]);
+    // const fetchData = useCallback(() => {
+    //     fetch(url)
+    //         .then(response => {
+    //             console.log('something1.1');
+    //             if (!response.ok) {
+    //                 throw new Error(`status ${response.status}`);
+    //             }
+    //             console.log('something1', response.json());
+    //             return response.json();
+    //         })
+    //         .then(json => {
+    //             console.log('something2', json.message);
+    //             setMessage(json.message);
+    //             setIsFetching(false);
+    //         }).catch(e => {
+    //             setMessage(`API call failed: ${e}`);
+    //             setIsFetching(false);
+    //         });
+    // }, [url]);
 
-    useEffect(() => {
-        setIsFetching(true);
-        fetchData();
-    }, [fetchData]);
+    // useEffect(() => {
+    //     setIsFetching(true);
+    //     fetchData();
+    // }, [fetchData]);
 
     return (
         <div className='App' >

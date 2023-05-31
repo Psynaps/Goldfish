@@ -1,23 +1,35 @@
-CREATE TABLE restaurants (
-  id BIGSERIAL NOT NULL PRIMARY KEY,
-  name VARCHAR(50) NOT NULL,
-  location VARCHAR(50) NOT NULL,
-  price_range INT NOT NULL check(
-    price_range >= 1
-    AND price_range <= 5
-  )
+-- Users table
+CREATE TABLE users (
+    userid SERIAL PRIMARY KEY,
+    username VARCHAR(100) NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    email VARCHAR(100),
+    other_profile_data JSONB
 );
 
-INSERT INTO restaurants(name, location, price_range)
-VALUES ('Iya Toyosi', 'Sagamu', 3);
+-- Questions table
+CREATE TABLE questions (
+    questionID SERIAL PRIMARY KEY,
+    category VARCHAR(100),
+    tags TEXT[],  -- assuming 'tag1', 'tag2', etc are strings
+    question TEXT NOT NULL
+);
 
-CREATE TABLE reviews (
-  id BIGSERIAL NOT NULL PRIMARY KEY,
-  restaurant_id BIGINT REFERENCES restaurants(id) ON DELETE CASCADE,
-  name VARCHAR(50) NOT NULL,
-  review TEXT NOT NULL,
-  rating INT NOT NULL check(
-    rating >= 1
-    AND rating <= 5
-  )
+-- Answers table
+CREATE TABLE answers (
+    answerID SERIAL PRIMARY KEY,
+    questionID INTEGER,
+    answer TEXT NOT NULL,
+    FOREIGN KEY (questionID) REFERENCES questions(questionID)
+);
+
+-- User_Answers table
+CREATE TABLE user_answers (
+    useranswerID SERIAL PRIMARY KEY,
+    userID INTEGER,
+    questionID INTEGER,
+    answerID INTEGER,
+    FOREIGN KEY (userID) REFERENCES users(userid),
+    FOREIGN KEY (questionID) REFERENCES questions(questionID),
+    FOREIGN KEY (answerID) REFERENCES answers(answerID)
 );
