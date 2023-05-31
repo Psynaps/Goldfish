@@ -11,7 +11,7 @@ CREATE TABLE users (
 CREATE TABLE questions (
     questionID SERIAL PRIMARY KEY,
     category VARCHAR(100),
-    tags TEXT[],  -- assuming 'tag1', 'tag2', etc are strings
+    tags TEXT[],
     question TEXT NOT NULL
 );
 
@@ -29,7 +29,6 @@ CREATE TABLE user_answers (
     userID INTEGER,
     questionID INTEGER,
     answerID INTEGER,
-    FOREIGN KEY (userID) REFERENCES users(userid),
     FOREIGN KEY (questionID) REFERENCES questions(questionID),
     FOREIGN KEY (answerID) REFERENCES answers(answerID)
 );
