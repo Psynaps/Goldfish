@@ -1,4 +1,4 @@
-export const questionsData = [
+export const questionsDataFull = [
   {
     "questionID": "1",
     "category": "Industry Certifications",
@@ -8,6 +8,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Cisco Certified Internetwork Expert (CCIE)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18,6 +19,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -50,6 +52,7 @@ export const questionsData = [
       "Solutions Architect"
     ],
     "question": "Have you obtained the AWS Certified Solutions Architect - Associate certificate?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -60,6 +63,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -92,6 +96,7 @@ export const questionsData = [
       "Information Security"
     ],
     "question": "Are you a Certified Information Systems Security Professional (CISSP)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -102,6 +107,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -134,6 +140,7 @@ export const questionsData = [
       "Network Virtualization"
     ],
     "question": "Do you hold a VMware Certified Professional – Network Virtualization (VCP-NV) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -144,6 +151,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -176,6 +184,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Have you obtained AWS's Certified Solutions Architect (CSA) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -186,6 +195,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -218,6 +228,7 @@ export const questionsData = [
       "Cloud Architect"
     ],
     "question": "Are you Google Cloud Certified as a Professional Cloud Architect?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -228,6 +239,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -261,6 +273,7 @@ export const questionsData = [
       "Solutions Architect"
     ],
     "question": "Have you achieved Microsoft's Azure Solutions Architect Expert certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -271,6 +284,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -303,6 +317,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Do you hold the Certified Ethical Hacker (CEH) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -313,6 +328,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -345,6 +361,7 @@ export const questionsData = [
       "Architecture Framework"
     ],
     "question": "Do you hold The Open Group Architecture Foundation (TOGAF) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -355,6 +372,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -387,6 +405,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Do you hold the Certified Information Systems Auditor (CISA) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -397,6 +416,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -430,6 +450,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Certified ScrumMaster (CSM)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -440,6 +461,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -472,6 +494,7 @@ export const questionsData = [
       "IT Service Management"
     ],
     "question": "Have you obtained the ITIL certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -482,6 +505,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -514,6 +538,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Do you hold the Project Management Professional (PMP) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -524,6 +549,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -556,6 +582,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a certified Salesforce Administrator?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -566,6 +593,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -599,6 +627,7 @@ export const questionsData = [
       "Programmer"
     ],
     "question": "Have you achieved the Oracle Certified Professional, Java SE 8 Programmer certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -609,6 +638,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -641,6 +671,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Cisco Certified Network Associate (CCNA)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -651,6 +682,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -683,6 +715,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Do you hold the CompTIA Security+ certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -693,6 +726,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -725,6 +759,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Certified Network Defense Architect (CNDA)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -735,6 +770,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -767,6 +803,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Do you have a Certified Information Security Manager (CISM) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -777,6 +814,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -810,6 +848,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you Certified in Risk and Information Systems Control (CRISC)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -820,6 +859,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -852,6 +892,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Do you hold a Certified Cloud Security Professional (CCSP) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -862,6 +903,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -894,6 +936,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Systems Security Certified Practitioner (SSCP)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -904,6 +947,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -934,6 +978,7 @@ export const questionsData = [
       "Are you Certified in the Governance of Enterprise IT (CGEIT)?"
     ],
     "question": "Do you hold an Offensive Security Certified Professional (OSCP) certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -944,6 +989,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -976,6 +1022,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you Certified in the Governance of Enterprise IT (CGEIT)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -986,6 +1033,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1018,6 +1066,7 @@ export const questionsData = [
       "IT Service Management"
     ],
     "question": "Have you achieved the ITIL certification?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1028,6 +1077,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1060,6 +1110,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Google Certified Professional – Cloud Network Engineer?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1070,6 +1121,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1102,6 +1154,7 @@ export const questionsData = [
       "Certification"
     ],
     "question": "Are you a Certified Wireless Network Professional (CWNP)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1112,6 +1165,7 @@ export const questionsData = [
         "answer": "No"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1145,6 +1199,7 @@ export const questionsData = [
       "Coding"
     ],
     "question": "Rate your proficiency in Python based on your project experience.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1163,6 +1218,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with Python in complex projects, demonstrating deep understanding of libraries, frameworks, and performance optimization."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1257,6 +1313,7 @@ export const questionsData = [
       "Implementation"
     ],
     "question": "Rate your ability to design and implement RESTful APIs.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1275,6 +1332,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience designing and implementing RESTful APIs, with deep knowledge of optimization and advanced features."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1367,6 +1425,7 @@ export const questionsData = [
       "Database"
     ],
     "question": "Describe your proficiency in data modeling and database design.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1385,6 +1444,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with data modeling and database design, including proficiency in normalization, indexing, and performance optimization techniques."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1477,6 +1537,7 @@ export const questionsData = [
       "System Design"
     ],
     "question": "How familiar are you with microservices architecture?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1495,6 +1556,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience designing and implementing microservices architectures, with deep knowledge of best practices, patterns, and inter-service communication."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1588,6 +1650,7 @@ export const questionsData = [
       "Jenkins"
     ],
     "question": "Rate your proficiency with DevOps practices (CI/CD, Docker, Jenkins).",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1606,6 +1669,7 @@ export const questionsData = [
         "answer": "Advanced: Significant experience with DevOps practices, including automation, infrastructure as code (IaC), and monitoring and troubleshooting in a live environment."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1699,6 +1763,7 @@ export const questionsData = [
       "Google Cloud"
     ],
     "question": "Rate your expertise in cloud platforms (AWS, Azure, Google Cloud Platform).",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1717,6 +1782,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge of multiple cloud platforms, proficient in managing large-scale applications, services, and cloud infrastructure."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1811,6 +1877,7 @@ export const questionsData = [
       "React"
     ],
     "question": "Rate your proficiency with front-end development technologies (HTML, CSS, JavaScript, React).",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1829,6 +1896,7 @@ export const questionsData = [
         "answer": "Advanced: Expertise in modern front-end development, including building complex web applications using JavaScript frameworks like React."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -1921,6 +1989,7 @@ export const questionsData = [
       "Predictive Modeling"
     ],
     "question": "Describe your proficiency using Machine Learning algorithms for predictive modeling.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1939,6 +2008,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge of machine learning, experienced in feature engineering, model optimization, and deploying ML models"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2030,6 +2100,7 @@ export const questionsData = [
       "Git"
     ],
     "question": "Describe your experience with version control systems, particularly Git.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2048,6 +2119,7 @@ export const questionsData = [
         "answer": "Advanced: Mastery of Git, comfortable with advanced operations such as rebase, cherry-pick, bisect, and can administer a Git server."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2140,6 +2212,7 @@ export const questionsData = [
       "Protocols"
     ],
     "question": "Rate your understanding of data security and encryption protocols.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2158,6 +2231,7 @@ export const questionsData = [
         "answer": "Advanced: Deep understanding of various encryption protocols, hands-on experience with securing large-scale applications or infrastructure."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2250,6 +2324,7 @@ export const questionsData = [
       "Microsoft Dynamics 365"
     ],
     "question": "Rate your proficiency with CRM platforms like Salesforce or Microsoft Dynamics 365.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2268,6 +2343,7 @@ export const questionsData = [
         "answer": "Advanced: Expertise with CRM platforms, capable of customizing and integrating the platform according to business needs."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2361,6 +2437,7 @@ export const questionsData = [
       "Data Analysis"
     ],
     "question": "Rate your proficiency managing and analyzing customer data for sales and marketing purposes.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2379,6 +2456,7 @@ export const questionsData = [
         "answer": "Advanced: Expertise in managing large datasets, able to derive actionable insights for sales and marketing strategies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2471,6 +2549,7 @@ export const questionsData = [
       "Processes"
     ],
     "question": "How familiar are you with the concepts and processes of data integration?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2489,6 +2568,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge of data integration, experienced with designing and implementing large-scale data integration solutions."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2580,6 +2660,7 @@ export const questionsData = [
       "Campaigns"
     ],
     "question": "Describe your proficiency developing and executing email marketing campaigns.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2598,6 +2679,7 @@ export const questionsData = [
         "answer": "Advanced: Deep understanding of email marketing, able to strategize and execute complex campaigns for maximum conversion."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2690,6 +2772,7 @@ export const questionsData = [
       "Waterfall"
     ],
     "question": "Rate your proficiency in project management methodologies like Agile or Waterfall.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2708,6 +2791,7 @@ export const questionsData = [
         "answer": "Advanced: Deep expertise in Agile or Waterfall, able to manage complex projects and train others in these methodologies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2799,6 +2883,7 @@ export const questionsData = [
       "Communication Protocols"
     ],
     "question": "Rate your expertise in network architecture and communication protocols.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2817,6 +2902,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge in network architecture and communication protocols, able to design and implement complex networks."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -2908,6 +2994,7 @@ export const questionsData = [
       "Principles"
     ],
     "question": "Rate your understanding of cybersecurity principles.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2926,6 +3013,7 @@ export const questionsData = [
         "answer": "Advanced: Expert in cybersecurity principles, capable of developing and implementing security policies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3018,6 +3106,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in designing product configuration strategies?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3036,6 +3125,7 @@ export const questionsData = [
         "answer": "Advanced: Comprehensive understanding of product configuration strategies, including scalability and optimization"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3128,6 +3218,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "Rate your familiarity with cloud computing platforms.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3146,6 +3237,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with cloud computing platforms, able to architect and deploy complex applications."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3238,6 +3330,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in cybersecurity best practices?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3256,6 +3349,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge of cybersecurity best practices, can guide teams or organizations in adhering to them."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3348,6 +3442,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of network architecture and infrastructure.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3366,6 +3461,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge of network architecture, able to design, implement, and manage complex network infrastructure."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3459,6 +3555,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in interpreting and utilizing data analytics?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3477,6 +3574,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in data analytics, able to develop and execute data-driven strategies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3569,6 +3667,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of Machine Learning and Artificial Intelligence concepts.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3587,6 +3686,7 @@ export const questionsData = [
         "answer": "Advanced: Deep knowledge of ML and AI, capable of designing and implementing complex ML models."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3679,6 +3779,7 @@ export const questionsData = [
       "Language Proficiency"
     ],
     "question": "How proficient are you with SQL or other database querying languages?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3697,6 +3798,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with SQL, capable of optimizing queries and managing complex database systems."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3789,6 +3891,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "How well do you understand software testing methodologies?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3807,6 +3910,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in software testing, capable of leading testing strategies and methodologies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -3899,6 +4003,7 @@ export const questionsData = [
       "Comfort Level"
     ],
     "question": "How comfortable are you with integrating different software systems using APIs?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3917,6 +4022,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in API design and implementation, capable of managing complex system integrations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4010,6 +4116,7 @@ export const questionsData = [
       "Knowledge Level"
     ],
     "question": "Rate your knowledge in cryptography and its application in data security.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4028,6 +4135,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in cryptography, capable of designing and implementing secure systems using advanced cryptographic techniques."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4120,6 +4228,7 @@ export const questionsData = [
       "Familiarity Level"
     ],
     "question": "How familiar are you with distributed systems architecture?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4138,6 +4247,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in distributed systems, able to design and implement complex distributed architectures for high scalability and performance."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4229,6 +4339,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "How well do you understand data warehousing?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4247,6 +4358,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in data warehousing, able to design, implement, and manage complex data warehouses with large data volumes."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4340,6 +4452,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "How well do you understand Internet of Things (IoT) protocols and technologies?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4358,6 +4471,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with IoT, able to design, implement, and manage complex IoT systems using various protocols and technologies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4451,6 +4565,7 @@ export const questionsData = [
       "Knowledge Level"
     ],
     "question": "Rate your knowledge of DevOps methodologies and practices.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4469,6 +4584,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in a DevOps role, able to design, implement, and manage complex DevOps pipelines and practices."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4561,6 +4677,7 @@ export const questionsData = [
       "Familiarity Level"
     ],
     "question": "How familiar are you with machine learning algorithms?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4579,6 +4696,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with machine learning, able to design, train, and evaluate complex machine learning models."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4673,6 +4791,7 @@ export const questionsData = [
       "Comfort Level"
     ],
     "question": "Rate your comfort level with web development languages (HTML, CSS, JavaScript).",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4691,6 +4810,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience with web development, proficient in latest standards, able to optimize performance and usability."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4784,6 +4904,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in managing and interpreting large datasets?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4802,6 +4923,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in data management and analysis, able to design and implement complex data pipelines, proficient in advanced statistical methods."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -4895,6 +5017,7 @@ export const questionsData = [
       "Professional Experience"
     ],
     "question": "Describe your experience with disaster recovery planning and strategies in a professional setting.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4913,6 +5036,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in disaster recovery planning and implementation, able to design, test, and optimize complex disaster recovery strategies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5006,6 +5130,7 @@ export const questionsData = [
       "Comfort Level"
     ],
     "question": "Rate your comfort level with implementing or managing identity and access management",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5024,6 +5149,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in IAM, proficient in designing and implementing complex IAM strategies, experienced in working with various IAM platforms and tools."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5117,6 +5243,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "How well do you understand real-time data processing and analytics?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5135,6 +5262,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in real-time data processing, able to design and implement complex real-time analytics solutions."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5228,6 +5356,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of load balancing strategies and techniques",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5246,6 +5375,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in designing and implementing load balancing strategies, proficient in various load balancing techniques and technologies."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5339,6 +5469,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "How well do you understand machine learning algorithms and their implementation?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5357,6 +5488,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in designing and implementing complex machine learning models, proficient in a variety of machine learning algorithms and tools."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5450,6 +5582,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "Describe your experience with handling and managing Big Data solutions.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5468,6 +5601,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in managing complex Big Data solutions, able to design and implement Big Data strategies and architectures."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5561,6 +5695,7 @@ export const questionsData = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of the Secure Development Lifecycle (SDL) based on your experience.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5579,6 +5714,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive experience in SDL, able to design and implement secure development strategies, proficient in various security tools and techniques."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5672,6 +5808,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "How proficient are you with functional programming concepts and their application?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5690,6 +5827,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive professional experience with functional programming, able to apply functional programming concepts to complex software projects"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5783,6 +5921,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "Describe your experience with responsive design and cross-platform compatibility in web development.",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5801,6 +5940,7 @@ export const questionsData = [
         "answer": "Advanced: Extensive professional experience with responsive design and cross-platform compatibility, able to design and implement complex responsive designs and ensure cross-platform compatibility for large-scale projects."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -5893,6 +6033,7 @@ export const questionsData = [
       "Customer Engagement"
     ],
     "question": "What is your experience level in creating and delivering product demonstrations?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5911,6 +6052,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience creating and delivering product demonstrations in a variety of settings."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6003,6 +6145,7 @@ export const questionsData = [
       "Solution Design"
     ],
     "question": "How proficient are you in collaborating with technical teams to design solutions that fulfill customer needs?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6021,6 +6164,7 @@ export const questionsData = [
         "answer": "Advanced: Collaborating with technical teams to design solutions is a significant part of my role."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6113,6 +6257,7 @@ export const questionsData = [
       "Business Writing"
     ],
     "question": "How would you assess your proposal writing and bid management skills?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6131,6 +6276,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience in proposal writing and bid management, often leading the process."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6223,6 +6369,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "How often did you engage in the proposal writing process in your previous roles?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6241,6 +6388,7 @@ export const questionsData = [
         "answer": "Always: I always participate in proposal writing processes, it is a central aspect of my role."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6333,6 +6481,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "Based on your experience, how skilled are you in leading sales presentations to diverse stakeholders?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6351,6 +6500,7 @@ export const questionsData = [
         "answer": "Advanced: I frequently lead sales presentations to a diverse set of stakeholders, including C-level executives."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6443,6 +6593,7 @@ export const questionsData = [
       "Risk Management"
     ],
     "question": "How would you rate your ability to manage security reviews during procurement stages?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6461,6 +6612,7 @@ export const questionsData = [
         "answer": "Advanced: Handling security reviews during procurement cycles is a key part of my responsibilities."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6553,6 +6705,7 @@ export const questionsData = [
       "Trial Process"
     ],
     "question": "What is your proficiency level in supporting Proof of Concept (POC) or trial processes for customers?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6571,6 +6724,7 @@ export const questionsData = [
         "answer": "Advanced: I regularly support POC or trial processes for clients and can manage them independently."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6663,6 +6817,7 @@ export const questionsData = [
       "Response Management"
     ],
     "question": "How skilled are you in developing Request for Proposal (RFP) responses?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6681,6 +6836,7 @@ export const questionsData = [
         "answer": "Advanced: I routinely prepare RFP responses and have established a systematic approach to doing so."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6773,6 +6929,7 @@ export const questionsData = [
       "Client Requirements"
     ],
     "question": "Based on your experience, how proficient are you in demonstrating a product's technical capabilities to meet client needs during pre-sales calls?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6791,6 +6948,7 @@ export const questionsData = [
         "answer": "Advanced: Led comprehensive product demonstrations during pre-sales calls for large-scale deals with complex client requirements."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6883,6 +7041,7 @@ export const questionsData = [
       "Sales Process"
     ],
     "question": "How proficient are you in creating and delivering technical presentations to clients during the sales process?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6901,6 +7060,7 @@ export const questionsData = [
         "answer": "Advanced: Led the development and delivery of technical presentations for large-scale deals, tailoring content to client needs and concerns"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -6993,6 +7153,7 @@ export const questionsData = [
       "Government Contracts"
     ],
     "question": "Based on your experience, how well do you navigate the state and federal government procurement process in a pre-sales SE role?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7011,6 +7172,7 @@ export const questionsData = [
         "answer": "Advanced : Have independently managed the procurement process for large-scale government deals, handling complex requirements and scenarios"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7103,6 +7265,7 @@ export const questionsData = [
       "Presentation Skills"
     ],
     "question": "How proficient are you in managing compliance and regulatory requirements specific to state and federal government contracts?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7121,6 +7284,7 @@ export const questionsData = [
         "answer": "Advanced - Have independently managed complex compliance and regulatory requirements for large-scale government deals"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7213,6 +7377,7 @@ export const questionsData = [
       "Presentation Skills"
     ],
     "question": "How would you rate your skills in delivering presentations and proposals that adhere to government standards and formats?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7231,6 +7396,7 @@ export const questionsData = [
         "answer": "Advanced: Delivering presentations and proposals compliant with government standards and formats is/ was a key part of my role."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7323,6 +7489,7 @@ export const questionsData = [
       "Sales Team"
     ],
     "question": "What is your experience in presenting competitive differentiators to internal sales teams?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7341,6 +7508,7 @@ export const questionsData = [
         "answer": "Advanced: I regularly lead these presentations independently and am comfortable doing so."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7433,6 +7601,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience level with leading product feature trainings for sales teams?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7451,6 +7620,7 @@ export const questionsData = [
         "answer": "Advanced Leading training on specific product features for sales teams is/ was a key part of my role."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7543,6 +7713,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "How frequently did you collaborate with Product Management teams in your previous roles?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7561,6 +7732,7 @@ export const questionsData = [
         "answer": "Advanced: I have a strong partnership with Product Management, regularly influencing product strategy based on customer insights."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7653,6 +7825,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience in working with an internal sales team?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7671,6 +7844,7 @@ export const questionsData = [
         "answer": "Advanced: I have a strong track record of partnering with sales teams, contributing to strategy, and playing a key role in winning deals."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7763,6 +7937,7 @@ export const questionsData = [
       "Past Roles"
     ],
     "question": "What has been the average deal size you worked on in your previous roles?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7781,6 +7956,7 @@ export const questionsData = [
         "answer": "Advanced: I have worked on large deals ($200k+)."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7873,6 +8049,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What size of customer (employee count) are you most accustomed to dealing with in your sales engineering roles?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7891,6 +8068,7 @@ export const questionsData = [
         "answer": "Advanced: I have worked with large enterprises (500+ employees)."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -7983,6 +8161,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you with Salesforce CRM?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8001,6 +8180,7 @@ export const questionsData = [
         "answer": "Advanced: I've used Salesforce CRM extensively. I'm familiar with advanced features and have applied it to solve complex tasks."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8093,6 +8273,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "What is your proficiency level in using PowerPoint for sales presentations?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8111,6 +8292,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience creating sales presentations using PowerPoint, including using advanced features."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8204,6 +8386,7 @@ export const questionsData = [
       "Virtual Communication"
     ],
     "question": "How proficient are you with Zoom or comparable platforms for sales meetings and demos?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8222,6 +8405,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Zoom or similar platforms for sales meetings and demos, including hosting and managing meetings."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8315,6 +8499,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "What is your experience with proposal and contract management platforms like PandaDoc?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8333,6 +8518,7 @@ export const questionsData = [
         "answer": "I'm proficient in PandaDoc, including automating document workflows and integrating with other tools."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8427,6 +8613,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How comfortable are you working with standard G Suite tools (Google Docs, Sheets, Slides)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8445,6 +8632,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with G Suite tools, including using advanced features like scripting in Google Sheets and collaborative features in Docs and Slides."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8537,6 +8725,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "What is your experience level with Microsoft Teams for internal collaboration?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8555,6 +8744,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Microsoft Teams, including managing teams, setting permissions, and utilizing integrations for increased productivity."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8648,6 +8838,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you with Slack for team communication and collaboration?\"",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8666,6 +8857,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Slack, including setting up integrations, managing channels, and using advanced features for team collaboration."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8759,6 +8951,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "What is your experience with project management tools like Jira or Trello?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8777,6 +8970,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with project management tools like Jira or Trello, including setting up complex projects, tracking and managing workflows, and utilizing advanced features and integrations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8869,6 +9063,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you with Tableau?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8887,6 +9082,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Tableau, including data integration, advanced data analysis, creating complex interactive dashboards, and utilizing scripting for more complex tasks."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -8979,6 +9175,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "What is your experience with ZoomInfo for lead generation?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8997,6 +9194,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with ZoomInfo, including setting up and managing campaigns for lead generation, tracking and analyzing campaign results, and utilizing advanced features for targeted marketing."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9090,6 +9288,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "What's your proficiency level with GitHub for version control and code collaboration?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9108,6 +9307,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with GitHub, including managing large repositories, handling complex merges, setting up continuous integration/continuous deployment (CI/CD) workflows, and other advanced features."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9200,6 +9400,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you with HubSpot for marketing automation?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9218,6 +9419,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with HubSpot, including setting up and managing automated marketing campaigns, utilizing advanced analysis features, and integrating with other systems."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9311,6 +9513,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with LinkedIn for lead generation and networking?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9329,6 +9532,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with LinkedIn, including optimizing profiles for visibility, running LinkedIn ad campaigns, leveraging LinkedIn's Sales Navigator for advanced lead generation, and building a substantial network."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9421,6 +9625,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "What's your experience with Azure as a cloud computing service?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9439,6 +9644,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Azure, including architecting and managing complex service deployments, implementing advanced security measures, automation, and optimizing for cost and performance."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9532,6 +9738,7 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "What is your proficiency level with Snowflake BI for data warehousing and analysis?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9550,6 +9757,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Snowflake, including managing large data warehouses, implementing data security measures, complex data analysis, and optimizing queries for performance."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9643,6 +9851,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How comfortable are you with Virtualization tools like VMware or Hyper-V?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9661,6 +9870,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with virtualization tools, including managing large-scale virtual environments, implementing advanced network configurations, and optimizing for performance and security."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9754,6 +9964,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your experience level with HCM tools like Workday or SAP SuccessFactors?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9772,6 +9983,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with HCM tools, including managing complex HR processes, integrating with other systems, customizing workflows, and ensuring compliance with HR regulations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9865,6 +10077,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you with event management tools like Cvent or Eventbrite?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9883,6 +10096,7 @@ export const questionsData = [
         "answer": "dvanced: I have extensive experience with Event Management tools, including managing large-scale events, integrating with other systems for event promotion and data analysis, and customizing event experiences."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -9975,6 +10189,7 @@ export const questionsData = [
       "Experience"
     ],
     "question": "What's your experience with Auth0 for identity management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9993,6 +10208,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Auth0, including managing large user bases, implementing advanced access control strategies, integrating with other systems, and ensuring compliance with identity management regulations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10086,6 +10302,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Tealium for customer data management and event tracking?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10104,6 +10321,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Tealium, including managing large-scale customer data, setting up advanced event tracking strategies, integrating with other systems for data analysis, and ensuring compliance with data management regulations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10196,6 +10414,7 @@ export const questionsData = [
       "Comfort Level"
     ],
     "question": "How comfortable are you with Azure Active Directory for identity and access management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10214,6 +10433,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Azure Active Directory, including managing large user bases, implementing advanced access control strategies, integrating with other systems, and ensuring compliance with identity management regulations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10304,6 +10524,7 @@ export const questionsData = [
       "What's your experience level with MuleSoft for building APIs and integrations?"
     ],
     "question": "What's your experience level with MuleSoft for building APIs and integrations?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10322,6 +10543,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with MuleSoft, including managing large-scale API integrations, designing complex data transformation workflows, and ensuring compliance with API design standards."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10414,6 +10636,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you with Seismic for sales enablement?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10432,6 +10655,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Seismic, including managing large content libraries, implementing advanced customer interaction strategies, integrating with other systems, and ensuring compliance with sales enablement best practices."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10524,6 +10748,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency with Highspot for sales enablement?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10542,6 +10767,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Highspot, including managing large content libraries, implementing advanced customer interaction strategies, integrating with other systems, and ensuring compliance with sales enablement best practices."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10634,6 +10860,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience level with Workday for human capital management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10652,6 +10879,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Workday, including managing large employee bases, implementing complex HR processes, integrating with other systems, and ensuring compliance with HR management best practices."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10744,6 +10972,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Data Loss Prevention (DLP) systems?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10762,6 +10991,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with DLP systems, including strategy design, system implementation and management, incident response, and ensuring regulatory compliance."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10854,6 +11084,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your experience level with Robotic Process Automation (RPA) tools?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10872,6 +11103,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with RPA, including process identification, bot design and management, and measuring automation impacts."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -10964,6 +11196,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency with Selenium for web testing?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10982,6 +11215,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Selenium, including test planning, scripting complex test scenarios, integrating with CI/CD pipelines, and troubleshooting intricate issues."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11074,6 +11308,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your experience level with OutSystems for low-code development?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11092,6 +11327,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with OutSystems, including application planning, creating complex applications, performance optimization, and troubleshooting issues."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11184,6 +11420,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Appian for business process management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11202,6 +11439,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Appian, including process design, implementation, optimization, and advanced analytics."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11295,6 +11533,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "What's your familiarity with SharePoint for collaboration and document management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11313,6 +11552,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with SharePoint, including site design, administration, integrating with other systems, and implementing document management best practices."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11405,6 +11645,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you assess your proficiency with CrowdStrike for endpoint security?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11423,6 +11664,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with CrowdStrike, including strategy design, policy management, incident response, and advanced threat hunting."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11515,6 +11757,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience level with Sophos for cybersecurity?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11533,6 +11776,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Sophos, including strategy design, policy management, incident response, and advanced threat analysis."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11626,6 +11870,7 @@ export const questionsData = [
       "Knowledge"
     ],
     "question": "How would you evaluate your knowledge of containerization technologies like Docker or Kubernetes?\"",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11644,6 +11889,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Docker or Kubernetes, including complex deployment strategies, orchestration, scaling, and securing applications."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11736,6 +11982,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Digital Twin technology for simulations?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11754,6 +12001,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Digital Twin technology, including advanced simulation models, performance tuning, and predictive analysis."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11846,6 +12094,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your level of experience with Process Simulation tools?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11864,6 +12113,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Process Simulation tools, including complex model development, optimization, and advanced analytics."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -11956,6 +12206,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you describe your proficiency with Hadoop for big data processing?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11974,6 +12225,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Hadoop, including cluster management, performance tuning, and advanced data processing techniques."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12066,6 +12318,7 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Docker for containerization?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12084,6 +12337,7 @@ export const questionsData = [
         "answer": "Advanced: I have extensive experience with Docker, including complex multi-container setups, Docker Compose, Docker Swarm, and best practices for container security and optimization."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12176,6 +12430,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your level of experience with Web Application Firewall (WAF) solutions?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12183,17 +12438,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used WAF solutions for basic tasks, like setting up rules or responding to incidents."
+        "answer": "Beginner: I understand the concept and purpose of WAF solutions, but my practical experience is limited."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using WAF solutions for implementing comprehensive web application security strategies."
+        "answer": "Intermediate: I've implemented and managed WAF solutions in a professional setting, contributing to the security of web applications."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in WAF solutions, including setting up and managing complex web application security projects, integrating with other tools, and training others."
+        "answer": "Advanced: I have deep experience with WAF solutions, having overseen their implementation and management in large-scale environments."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12286,6 +12542,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency with Stripe for payment processing?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12293,17 +12550,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used Stripe for basic tasks, like processing payments or managing refunds."
+        "answer": "Beginner: I understand the basics of Stripe for payment processing, but haven't used it extensively in a professional setting."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Stripe for managing comprehensive payment processing strategies."
+        "answer": "Intermediate: I've integrated and managed Stripe for payment processing in a professional setting, supporting online transactions."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Stripe, including setting up and managing complex payment processing projects, integrating with other tools, and training others."
+        "answer": "Advanced: I have comprehensive knowledge and experience with Stripe, having integrated it into multiple complex online platforms."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12396,24 +12654,26 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your level of experience with Braintree for online payments?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Braintree before."
+        "answer": "I have no experience with Braintree."
       },
       {
         "answerID": 2,
-        "answer": "I've used Braintree for basic tasks, like processing payments or managing refunds."
+        "answer": "Beginner: I have a basic understanding of Braintree for online payments, but haven't used it extensively in a professional setting."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Braintree for managing comprehensive payment processing strategies."
+        "answer": "Intermediate: I've worked with Braintree in a professional setting, integrating it for online payments and managing transactions."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Braintree, including setting up and managing complex payment processing projects, integrating with other tools, and training others."
+        "answer": "Advanced: I'm proficient with Braintree, having successfully integrated it into multiple complex e-commerce systems."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12507,24 +12767,26 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you describe your proficiency with Apache Kafka for real-time event streaming and processing?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Apache Kafka before."
+        "answer": "I have no experience with Apache Kafka."
       },
       {
         "answerID": 2,
-        "answer": "I've used Apache Kafka for basic tasks, like setting up event streams or processing real-time data."
+        "answer": "Beginner: I have a basic understanding of Apache Kafka and its use in real-time event streaming and processing."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Apache Kafka for managing comprehensive real-time event streaming and processing projects."
+        "answer": "Intermediate: I've used Apache Kafka in a professional setting, setting up streams and managing real-time data processing."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Apache Kafka, including setting up and managing complex real-time event streaming and processing projects, integrating with other tools, and training others."
+        "answer": "Advanced: I'm highly experienced with Apache Kafka, having used it to handle large-scale, real-time data streams."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12619,6 +12881,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you describe your proficiency with AWS Kinesis for real-time streaming data and analytics?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12626,17 +12889,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used AWS Kinesis for basic tasks, like setting up data streams or processing real-time data."
+        "answer": "Beginner: I understand the basics of AWS Kinesis and its role in real-time data streaming and analytics."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using AWS Kinesis for managing comprehensive real-time data streaming and analytics projects."
+        "answer": "Intermediate: I've used AWS Kinesis in a professional setting, setting up data streams and managing real-time analytics."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in AWS Kinesis, including setting up and managing complex real-time data streaming and analytics projects, integrating with other tools, and training others."
+        "answer": "Advanced: I'm highly experienced with AWS Kinesis, having implemented it for large-scale, real-time data processing and analytics."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12730,6 +12994,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your experience level with Google Cloud Pub/Sub for real-time messaging and event-driven services?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12737,17 +13002,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used Google Cloud Pub/Sub for basic tasks, like setting up topics or managing real-time messaging."
+        "answer": "Beginner: I understand the basics of Google Cloud Pub/Sub and its use for real-time messaging and event-driven services."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Google Cloud Pub/Sub for implementing comprehensive real-time messaging and event-driven services."
+        "answer": "Intermediate: I've used Google Cloud Pub/Sub in a professional setting, managing real-time messaging and event-driven services."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Google Cloud Pub/Sub, including setting up and managing complex real-time messaging and event-driven projects, integrating with other tools, and training others."
+        "answer": "Advanced: I'm highly proficient with Google Cloud Pub/Sub, having implemented it in large-scale, real-time systems."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12841,6 +13107,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience level with Apache Storm for real-time computation and processing of large volumes of data?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12848,17 +13115,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used Apache Storm for basic tasks, like setting up topologies or processing real-time data."
+        "answer": "Beginner: I've used Apache Storm for basic tasks, like setting up topologies or processing real-time data."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Apache Storm for managing comprehensive real-time computation and data processing projects."
+        "answer": "Intermediate: I'm comfortable with using Apache Storm for managing comprehensive real-time computation and data processing projects."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Apache Storm, including setting up and managing complex real-time computation and data processing projects, integrating with other tools, and training others."
+        "answer": "Advanced: I'm proficient in Apache Storm, including setting up and managing complex real-time computation and data processing projects, integrating with other tools, and training others."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -12952,6 +13220,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you evaluate your proficiency with Looker for data exploration and business intelligence?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12959,17 +13228,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used Looker for basic tasks, like creating dashboards or exploring datasets."
+        "answer": "Beginner: I've used Looker for basic tasks, like creating dashboards or exploring datasets."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Looker for managing comprehensive business intelligence projects and creating complex data models."
+        "answer": "Intermediate: I'm comfortable with using Looker for managing comprehensive business intelligence projects and creating complex data models."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Looker, including setting up and managing complex business intelligence projects, integrating with other data sources, and training others."
+        "answer": "Advanced: I'm highly proficient with Looker, having used it extensively for data analysis, visualization, and business intelligence tasks."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13063,6 +13333,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What's your experience level with SAP BusinessObjects for business intelligence and reporting?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13081,6 +13352,7 @@ export const questionsData = [
         "answer": "I'm proficient in SAP BusinessObjects, including setting up and managing complex business intelligence projects, integrating with other tools, and training others."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13174,6 +13446,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you assess your proficiency with Domo for business intelligence and data visualization?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13181,17 +13454,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "I've used Domo for basic tasks, like creating dashboards or visualizing data."
+        "answer": "Beginner: I've used Domo for basic tasks, like creating dashboards or visualizing data."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using Domo for managing comprehensive business intelligence projects and creating complex data visualizations."
+        "answer": "Intermediate: I'm comfortable with using Domo for managing comprehensive business intelligence projects and creating complex data visualizations."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in Domo, including setting up and managing complex business intelligence projects, integrating with other data sources, and training others."
+        "answer": "Advanced: I'm highly proficient with Domo, having used it extensively to create data visualizations and drive business intelligence initiatives."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13284,6 +13558,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency in using Zoho CRM for managing customer relationships?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13291,17 +13566,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Basic user of Zoho CRM for contact management and deal tracking"
+        "answer": "Beginner: I have a fundamental understanding of Zoho CRM and its functions for managing customer relationships."
       },
       {
         "answerID": 3,
-        "answer": "Regular user with experience in customizing Zoho CRM fields and workflows"
+        "answer": "Intermediate: I've used Zoho CRM in a professional setting, managing customer data and interactions."
       },
       {
         "answerID": 4,
-        "answer": "Advanced user, capable of creating custom modules, automations, and integrating Zoho with other tools"
+        "answer": "Advanced: I'm highly experienced with Zoho CRM, having used it extensively for customer relationship management in a business context."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13394,6 +13670,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "How would you describe your experience with Asana as a project management tool?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13401,17 +13678,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Basic user of Asana for task management"
+        "answer": "Beginner: I have basic knowledge of Asana and its functions for project management."
       },
       {
         "answerID": 3,
-        "answer": "Regular user with experience in setting up projects, assigning tasks and deadlines"
+        "answer": "Intermediate: I've used Asana in a professional setting, managing projects and tasks."
       },
       {
         "answerID": 4,
-        "answer": "Advanced user, capable of creating custom workflows, integrating Asana with other tools and reporting on project progress"
+        "answer": "Advanced: I'm highly proficient with Asana, having used it extensively for project management and team collaboration."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13504,6 +13782,7 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience level with MySQL as a database management system?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13511,17 +13790,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Basic user of MySQL for creating databases and running simple queries"
+        "answer": "Beginner: used MySQL for creating databases and running simple queries"
       },
       {
         "answerID": 3,
-        "answer": "Regular user with experience in indexing, performance tuning, and setting up replication"
+        "answer": "Intermediate: experienced in indexing, performance tuning, and setting up replication"
       },
       {
         "answerID": 4,
-        "answer": "Advanced user, capable of database architecture design, managing MySQL clusters and performance optimization"
+        "answer": "Advanced: capable of database architecture design, managing MySQL clusters and performance optimization"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13615,6 +13895,7 @@ export const questionsData = [
       "Proficiency"
     ],
     "question": "How proficient are you in using Jira for project management and issue tracking?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13622,17 +13903,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Basic user of Jira for creating tasks and tracking progress"
+        "answer": "Beginner: I have a basic understanding of Jira, including creating tasks and simple issue tracking."
       },
       {
         "answerID": 3,
-        "answer": "Regular user with experience in creating custom workflows, managing sprints and using Jira for Agile project management"
+        "answer": "Intermediate: I've used Jira in a professional setting, managing projects, assigning tasks, and tracking issues across sprints."
       },
       {
         "answerID": 4,
-        "answer": "Advanced user, capable of integrating Jira with other tools, using Jira Service Desk and Portfolio for Jira"
+        "answer": "Advanced: I'm highly experienced with Jira, having used it extensively for project management, issue tracking, sprint planning, and reporting."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13726,24 +14008,26 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "Which statement best describes your experience with Confluence for collaboration and document management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Never used Confluence."
+        "answer": "I have no experience with Confluence."
       },
       {
         "answerID": 2,
-        "answer": "I've used Confluence for basic tasks like creating and editing pages."
+        "answer": "Beginner: I have a basic understanding of Confluence, including creating and editing pages."
       },
       {
         "answerID": 3,
-        "answer": "I've used Confluence extensively for project management and documentation."
+        "answer": "Intermediate: I've used Confluence in a professional setting, managing content, integrating with Jira, and collaborating with teams."
       },
       {
         "answerID": 4,
-        "answer": "I'm advanced in Confluence, able to leverage its advanced features like macros, custom layouts, and integrations."
+        "answer": "Advanced: I'm highly proficient with Confluence, having used it extensively for documentation, collaboration, and knowledge sharing across teams."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13836,24 +14120,26 @@ export const questionsData = [
       "Skills"
     ],
     "question": "How would you rate your skills with Postman for API testing?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "I have no experience with Postman."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can perform basic API requests using Postman"
+        "answer": "Beginner: I have a basic understanding of Postman, including creating requests and reading responses."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I am proficient in using Postman for API testing, including using environments, collections, and pre-request scripts."
+        "answer": "Intermediate: I've used Postman in a professional setting, testing APIs, using collections, and working with environments."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am an expert in Postman, able to leverage advanced features like API mocking, monitor setups, and running automated tests."
+        "answer": "Advanced: I'm highly proficient with Postman, having used it extensively for API testing, automation, and managing complex workflows."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -13946,24 +14232,26 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience with Zapier for automation?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with Zapier."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can set up basic Zaps for automation between commonly used apps."
+        "answer": "Beginner: I understand the basics of Zapier, including setting up simple 'Zaps'."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I can create multi-step Zaps, including filters and delays, across a variety of apps."
+        "answer": "Intermediate: I've used Zapier in a professional setting, setting up automated workflows between different applications."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with Zapier, including creating complex automations, managing paths, and troubleshooting issues."
+        "answer": "Advanced: I'm highly experienced with Zapier, having used it extensively to automate complex multi-step workflows across multiple applications."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14056,24 +14344,26 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "What's your proficiency level with Trello for task management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience: I have never used Trello."
+        "answer": "I have no experience with Trello."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can create and manage boards, lists, and cards."
+        "answer": "Beginner: I have basic knowledge of Trello, including creating boards, lists, and cards."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I am comfortable using Trello for project management, including labels, checklists, and due dates."
+        "answer": "Intermediate: I've used Trello in a professional setting, managing tasks, collaborating with teams, and tracking project progress."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with Trello, including power-ups, automations, and integrations."
+        "answer": "Advanced: I'm highly proficient with Trello, having used it extensively for project management, workflow customization, and integration with other tools."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14166,24 +14456,26 @@ export const questionsData = [
       "Proficiency Level"
     ],
     "question": "What is your proficiency level with Adobe Creative Suite for design tasks?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with Adobe Creative Suite."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can use basic features of Adobe Photoshop, Illustrator, or InDesign."
+        "answer": "Beginner: I have basic knowledge of Adobe Creative Suite, including using Photoshop for image editing or Illustrator for vector graphics."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I am comfortable creating more complex designs and layouts in Adobe Photoshop, Illustrator, and InDesign."
+        "answer": "Intermediate: I've used Adobe Creative Suite in a professional setting, creating designs and working with tools like Photoshop, Illustrator, and InDesign."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with Adobe Creative Suite, including advanced features and tools in Photoshop, Illustrator, and InDesign."
+        "answer": "Advanced: I'm highly experienced with Adobe Creative Suite, having used it extensively for graphic design, video editing, UX/UI design, and more."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14276,24 +14568,26 @@ export const questionsData = [
       "Skills"
     ],
     "question": "How would you rate your skills with AWS as a cloud platform?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience: I have never used AWS."
+        "answer": "I have no experience with AWS."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can perform basic operations in AWS like setting up EC2 instances and S3 buckets."
+        "answer": "Beginner: I have a basic understanding of AWS, including the purpose of key services like EC2, S3, and IAM."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I am comfortable with more complex AWS services like RDS, Lambda, and IAM."
+        "answer": "Intermediate: I've used AWS in a professional setting, setting up instances, managing storage, and implementing security measures."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with AWS, including advanced features like VPC, Elastic Beanstalk, and CloudFormation."
+        "answer": "Advanced: I'm highly proficient with AWS, having managed complex deployments, implemented advanced security measures, and optimized for performance and cost."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14386,24 +14680,26 @@ export const questionsData = [
       "Experience"
     ],
     "question": "What's your experience with SolarWinds for network management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with SolarWinds."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can use SolarWinds for basic network monitoring and performance management."
+        "answer": "Beginner: I understand the basics of SolarWinds, including network performance monitoring and fault management."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I have used SolarWinds for more complex network tasks like configuration"
+        "answer": "Intermediate: I've used SolarWinds in a professional setting, monitoring network performance, troubleshooting issues, and creating reports."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with SolarWinds, including advanced features like NetPath, PerfStack, and customizing alerts and reports."
+        "answer": "Advanced: I'm highly experienced with SolarWinds, having used it extensively for network management, configuring alerts, automating tasks, and managing network configurations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14496,24 +14792,26 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Power BI for business intelligence?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with Power BI."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can create basic reports and dashboards in Power BI."
+        "answer": "Beginner: I have a basic understanding of Power BI, including creating simple visualizations and dashboards."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I have used Power BI for advanced reporting including DAX functions, Power Query, and Dataflows."
+        "answer": "Intermediate: I've used Power BI in a professional setting, creating complex visualizations, reports, and dashboards, and integrating with various data sources."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with Power BI, including advanced features like Data Gateway, Power BI Embedded, and Row-level Security."
+        "answer": "Advanced: I'm highly proficient with Power BI, having used it extensively for data analysis, creating complex dashboards, and sharing insights with stakeholders."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14607,24 +14905,26 @@ export const questionsData = [
       "Familiarity"
     ],
     "question": "How familiar are you with Splunk for data analytics and log management?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with Splunk."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can ingest data, perform basic searches, and understand simple dashboards in Splunk."
+        "answer": "Beginner: I understand the basics of Splunk, including log ingestion and basic search functionality."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I have used Splunk for more complex tasks such as creating alerts, scheduled reports, and using SPL for advanced searches."
+        "answer": "Intermediate: I've used Splunk in a professional setting, managing logs, creating reports, and setting up alerts."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I am proficient with Splunk, including advanced features like deploying forwarders, managing indexes, and optimizing search performance."
+        "answer": "Advanced: I'm highly experienced with Splunk, having used it extensively for data analytics, log management, incident investigation, and operational intelligence."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14717,24 +15017,26 @@ export const questionsData = [
       "Skills"
     ],
     "question": "How would you rate your skills with Microsoft Dynamics 365 as a CRM system?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with Microsoft Dynamics 365."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can use Microsoft Dynamics 365 for basic CRM tasks like managing contacts, leads, and opportunities."
+        "answer": "Beginner: I have a basic understanding of Microsoft Dynamics 365, including navigating the interface and managing customer data."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Understands CRM tasks like workflow automation, custom entity creation, and integration with other Microsoft services."
+        "answer": "Intermediate: I've used Microsoft Dynamics 365 in a professional setting, managing customer relationships, sales pipelines, and generating reports."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Understands advanced features like using Power Apps, Power Automate, and managing large data volumes."
+        "answer": "Advanced: I'm highly proficient with Microsoft Dynamics 365, having used it extensively for CRM, sales, marketing, service, and more."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14828,24 +15130,26 @@ export const questionsData = [
       "Experience Level"
     ],
     "question": "What is your experience level with SharePoint for document management and collaboration?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Experience"
+        "answer": "I have no experience with SharePoint."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Can upload files, create folders, and use basic collaboration features."
+        "answer": "Beginner: I have basic knowledge of SharePoint, including uploading documents and basic collaboration features."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Familiar with more complex tasks such as setting up document libraries, managing permissions, and using workflow features."
+        "answer": "Intermediate: I've used SharePoint in a professional setting, managing documents, setting permissions, and collaborating with teams."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Understands advanced features like SharePoint Designer, integration with other Microsoft tools, and managing large SharePoint deployments."
+        "answer": "Advanced: I'm highly proficient with SharePoint, having used it extensively for document management, intranet portals, workflows, and integrations."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -14933,25 +15237,47 @@ export const questionsData = [
     "questionID": "153",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Dental",
+      "Vision",
+      "Insurance",
+      "Availability"
     ],
-    "question": "No healthcare benefits needed",
+    "question": "How important is comprehensive health benefits (medical, dental, vision) to you?",
+    "employerQuestion": "To what extent do you offer comprehensive health benefits (medical, dental, vision)?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No healthcare benefits needed"
+        "answer": "Not at all important: Health benefits not required from the employer."
       },
       {
         "answerID": 2,
-        "answer": "Basic health coverage is sufficient: Coverage for general doctor visits, emergency care, and preventative care."
+        "answer": "Somewhat important: Basic health benefits would be appreciated but are not mandatory."
       },
       {
         "answerID": 3,
-        "answer": "Comprehensive health coverage desired: Coverage for general care, emergency care, prescription drugs, mental health services, and specialty care."
+        "answer": "Very important: Expect comprehensive health benefits as part of employment."
       },
       {
         "answerID": 4,
-        "answer": "Premium health coverage expected: Comprehensive coverage, including alternative therapies, international coverage, and full coverage of dependents."
+        "answer": "Extremely important: Comprehensive health benefits are a must-have in job consideration."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not at all: No health benefits offered."
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat: Basic health benefits are offered."
+      },
+      {
+        "answerID": 3,
+        "answer": "Very much: Comprehensive health benefits package is offered, covering medical, dental, and vision."
+      },
+      {
+        "answerID": 4,
+        "answer": "To a great extent: Extensive health benefits package, including comprehensive medical, dental, vision and additional health-related benefits, is offered."
       }
     ],
     "matchScores": [
@@ -15041,25 +15367,47 @@ export const questionsData = [
     "questionID": "154",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Dental",
+      "Vision",
+      "Insurance",
+      "Availability"
     ],
     "question": "How important is dental and vision insurance to you?",
+    "employerQuestion": "To what extent does your company offer dental and vision insurance?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: Dental and vision insurance isn't a priority."
+        "answer": "Not at all important: I have no need or expectation for dental and vision insurance in my benefits package."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: Basic coverage for annual check-ups and preventive care is sufficient."
+        "answer": "Somewhat important: Dental and vision insurance are nice to have, but they are not a deal-breaker in my decision."
       },
       {
         "answerID": 3,
-        "answer": "Important: Comprehensive coverage for regular check-ups, glasses, contact lenses, and a wide range of dental procedures."
+        "answer": "Very important: I consider dental and vision insurance a significant factor in my decision-making, but it's not the only factor."
       },
       {
         "answerID": 4,
-        "answer": "Very important: Comprehensive coverage including orthodontics and advanced dental procedures."
+        "answer": "Extremely important: Dental and vision insurance are crucial for me. I expect them to be part of my benefits package."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not at all: Our company does not offer dental and vision insurance as part of our benefits package."
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat: Our company offers basic dental and vision insurance, but it's not our primary benefits focus."
+      },
+      {
+        "answerID": 3,
+        "answer": "Very much: Our company offers comprehensive dental and vision insurance as part of our benefits package, along with other benefits."
+      },
+      {
+        "answerID": 4,
+        "answer": "To a great extent: Our company puts significant emphasis on dental and vision insurance, with premium coverage options available."
       }
     ],
     "matchScores": [
@@ -15149,9 +15497,12 @@ export const questionsData = [
     "questionID": "155",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "work-life",
+      "balance",
+      "burnout"
     ],
-    "question": "How would you rate the importance of a good work-life balance?",
+    "question": "How important is work-life balance to you?",
+    "employerQuestion": "How much does the company prioritize work-life balance?",
     "answers": [
       {
         "answerID": 1,
@@ -15163,11 +15514,29 @@ export const questionsData = [
       },
       {
         "answerID": 3,
-        "answer": "Important: Strong preference for a clear separation between work and personal time."
+        "answer": "Very important: Value a strong balance between work and personal life, aim to minimize the intrusion of work into personal time."
       },
       {
         "answerID": 4,
-        "answer": "Very important: Strict boundaries between work and personal time, with limited exceptions."
+        "answer": "Extremely important: Work-life balance is a top priority, striving to maintain a strict separation between work and personal time."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not at all: No specific policies supporting work-life balance, work demands regularly intrude into personal time."
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat: Some flexibility provided, there might be times when work takes precedence over personal time."
+      },
+      {
+        "answerID": 3,
+        "answer": "Very much: Policies in place to support a healthy work-life balance, occasional periods of high work demand may occur."
+      },
+      {
+        "answerID": 4,
+        "answer": "To a great extent: Strong support for work-life balance, policies ensure work doesn't intrude into personal time barring exceptional circumstances."
       }
     ],
     "matchScores": [
@@ -15257,25 +15626,46 @@ export const questionsData = [
     "questionID": "156",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Company",
+      "Size",
+      "Preference"
     ],
     "question": "What is your preferred company size?",
+    "employerQuestion": "Which most accurately describes your company size? ",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No preference: Company size isn't a significant factor."
+        "answer": "Micro/SMEs: I prefer to work in small companies or startups where I can wear multiple hats and grow with the organization."
       },
       {
         "answerID": 2,
-        "answer": "Small company: Prefer a smaller organization where everyone knows each other."
+        "answer": "Mid-size: I prefer a balance between the close-knit environment of a small company and the resources of a larger one."
       },
       {
         "answerID": 3,
-        "answer": "Mid-sized company: Prefer a company large enough to offer room for growth, but still maintains a personal touch."
+        "answer": "Large: I prefer large companies where there are clear structures, roles, and paths for career progression."
       },
       {
         "answerID": 4,
-        "answer": "Large company: Prefer the opportunities and resources available in a large corporation."
+        "answer": "Very large/MNCs: I prefer multinational corporations where I can engage with a global team and potentially have overseas opportunities."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Micro: We are a small company or startup with a flexible and collaborative environment."
+      },
+      {
+        "answerID": 2,
+        "answer": "Mid-size: We are a mid-size company that offers a balance of small company culture and large company resources."
+      },
+      {
+        "answerID": 3,
+        "answer": "Large: We are a large company with established structures, roles, and clear paths for career progression."
+      },
+      {
+        "answerID": 4,
+        "answer": "Very large: We are a multinational corporation with opportunities for global exposure and growth."
       }
     ],
     "matchScores": [
@@ -15365,25 +15755,46 @@ export const questionsData = [
     "questionID": "157",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Manager",
+      "Relationship",
+      "Type"
     ],
     "question": "What is your ideal relationship with your manager?",
+    "employerQuestion": "How would you describe the management style at your company?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Laissez-faire: Prefer a manager who provides high-level guidance and then trusts me to get the job done."
+        "answer": "Hands-off: I prefer a manager who trusts me to work independently most of the time."
       },
       {
         "answerID": 2,
-        "answer": "Coach-like: Prefer a manager who provides ongoing feedback and development opportunities."
+        "answer": "Balanced: I prefer a manager who offers guidance but also gives me space to work independently."
       },
       {
         "answerID": 3,
-        "answer": "Directive: Prefer a manager who provides clear and direct instructions and closely supervises work."
+        "answer": "Collaborative: I prefer a manager who works closely with me, providing frequent feedback and guidance."
       },
       {
         "answerID": 4,
-        "answer": "Collaborative: Prefer a manager who works closely with the team and involves them in decision-making."
+        "answer": "Directive: I prefer a manager who gives clear instructions and closely monitors my work."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Hands-off: Our management style is mostly hands-off, trusting employees to work independently."
+      },
+      {
+        "answerID": 2,
+        "answer": "Balanced: Our management style strikes a balance, providing guidance but also allowing independent work."
+      },
+      {
+        "answerID": 3,
+        "answer": "Collaborative: Our managers work closely with their teams, providing frequent feedback and guidance."
+      },
+      {
+        "answerID": 4,
+        "answer": "Directive: Our managers provide clear instructions and closely monitor their team's work."
       }
     ],
     "matchScores": [
@@ -15473,25 +15884,47 @@ export const questionsData = [
     "questionID": "158",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Flexible",
+      "Working",
+      "Hours",
+      "Importance"
     ],
     "question": "How important are flexible working hours to you?",
+    "employerQuestion": "To what extent does your company offer flexible working hours?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: Happy to stick to a standard schedule."
+        "answer": "Not at all important: I'm comfortable with a standard, fixed work schedule."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: Prefer some degree of flexibility in start and end times."
+        "answer": "Somewhat important: I appreciate some flexibility in my work schedule but it's not a primary concern."
       },
       {
         "answerID": 3,
-        "answer": "Important: Want the option to adjust work hours regularly to accommodate personal commitments."
+        "answer": "Very important: Flexible work hours are a significant factor in my decision-making, but they're not the only factor."
       },
       {
         "answerID": 4,
-        "answer": "Very important: Require a high degree of flexibility."
+        "answer": "Extremely important: Flexible work hours are crucial to me. I need to be able to adjust my work schedule."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not at all: Our company adheres to a standard, fixed work schedule."
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat: Our company offers some flexibility in work hours, but we primarily adhere to a standard work schedule."
+      },
+      {
+        "answerID": 3,
+        "answer": "Very much: Our company provides flexible work hours as part of our commitment to work-life balance."
+      },
+      {
+        "answerID": 4,
+        "answer": "To a great extent: Our company has a strong emphasis on flexible work hours. We trust our employees to manage their own schedules."
       }
     ],
     "matchScores": [
@@ -15581,25 +16014,47 @@ export const questionsData = [
     "questionID": "159",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Diversity",
+      "Inclusion",
+      "Commitment",
+      "Importance"
     ],
-    "question": "How important is a company's commitment to diversity and inclusion?",
+    "question": "How important is a company's commitment to diversity and inclusion to you?",
+    "employerQuestion": "How committed is your company to diversity and inclusion?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: It's not a factor I consider when evaluating potential employers."
+        "answer": "Not at all important: I don't consider a company's diversity and inclusion policies when deciding on a job."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: It's a bonus if the company has a commitment to diversity and inclusion."
+        "answer": "Somewhat important: A company's commitment to diversity and inclusion is a positive factor but not a key decision point for me."
       },
       {
         "answerID": 3,
-        "answer": "Important: I prefer to work for companies that make an effort to hire and support diverse employees."
+        "answer": "Very important: A company's commitment to diversity and inclusion significantly influences my job decisions."
       },
       {
         "answerID": 4,
-        "answer": "Very important: I only want to work for companies that prioritize and demonstrate commitment to diversity and inclusion."
+        "answer": "Extremely important: I only consider companies that demonstrate a strong commitment to diversity and inclusion."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not at all: Our company doesn't have specific diversity and inclusion initiatives in place."
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat: Our company is beginning to implement diversity and inclusion initiatives."
+      },
+      {
+        "answerID": 3,
+        "answer": "Very much: Our company has several diversity and inclusion initiatives, and we consider them an important part of our culture."
+      },
+      {
+        "answerID": 4,
+        "answer": "To a great extent: Our company places a high emphasis on diversity and inclusion, and it's deeply ingrained in our culture and values."
       }
     ],
     "matchScores": [
@@ -15689,25 +16144,47 @@ export const questionsData = [
     "questionID": "160",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Mental",
+      "Health",
+      "Resources",
+      "Importance"
     ],
     "question": "How important are mental health resources and support from a prospective employer?",
+    "employerQuestion": "How comprehensive are the mental health resources and support your company offers?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: I don't require mental health resources at work."
+        "answer": "Not at all important: Mental health resources aren't a factor in my decision."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: It would be nice if the company offered mental health resources."
+        "answer": "Somewhat important: I appreciate mental health resources, but they're not a primary concern."
       },
       {
         "answerID": 3,
-        "answer": "Important: I prefer companies that offer some mental health resources."
+        "answer": "Very important: Mental health resources are a significant factor in my decision."
       },
       {
         "answerID": 4,
-        "answer": "Very important: I need a company that takes mental health seriously and provides strong support."
+        "answer": "Extremely important: The availability of robust mental health resources is a top priority for me."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "None: We currently do not offer mental health resources."
+      },
+      {
+        "answerID": 2,
+        "answer": "Basic: We offer some mental health resources like an EAP."
+      },
+      {
+        "answerID": 3,
+        "answer": "Good: We offer multiple mental health resources including coverage for therapy."
+      },
+      {
+        "answerID": 4,
+        "answer": "Excellent: We offer a wide range of mental health resources, including preventative programs and comprehensive coverage."
       }
     ],
     "matchScores": [
@@ -15797,25 +16274,47 @@ export const questionsData = [
     "questionID": "161",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Open",
+      "Office",
+      "Layouts",
+      "Preference"
     ],
     "question": "How do you feel about open office layouts?",
+    "employerQuestion": "What is your company's office layout like?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I prefer them: I enjoy the collaboration and energy of an open office."
+        "answer": "Dislike: I find open office layouts distracting and prefer individual workspaces."
       },
       {
         "answerID": 2,
-        "answer": "I don't mind them: I can work well in an open office, but it's not my top choice."
+        "answer": "Somewhat like: I don't mind open office layouts but appreciate designated quiet areas."
       },
       {
         "answerID": 3,
-        "answer": "I dislike them: I can work in them if necessary, but I prefer more privacy."
+        "answer": "Like: I enjoy the collaboration that open office layouts encourage."
       },
       {
         "answerID": 4,
-        "answer": "I can't work in them: I need a private workspace to be productive."
+        "answer": "Love: I thrive in open office layouts and highly value collaborative workspaces."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Traditional: We primarily have individual offices or cubicles."
+      },
+      {
+        "answerID": 2,
+        "answer": "Mixed: We have a mix of open spaces and individual offices or cubicles."
+      },
+      {
+        "answerID": 3,
+        "answer": "Mostly open: Our office is mainly open space with some individual offices."
+      },
+      {
+        "answerID": 4,
+        "answer": "Fully open: We have a completely open office layout that encourages collaboration."
       }
     ],
     "matchScores": [
@@ -15905,25 +16404,47 @@ export const questionsData = [
     "questionID": "162",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Work",
+      "Social",
+      "Interaction",
+      "Preference"
     ],
     "question": "What level of social interaction do you prefer at work?",
+    "employerQuestion": "What is the level of social interaction in your work environment?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I prefer a lot of interaction: I enjoy frequent team activities and socializing at work."
+        "answer": "Minimal: I prefer working independently with little social interaction."
       },
       {
         "answerID": 2,
-        "answer": "I prefer some interaction: I enjoy occasional team activities and socializing with colleagues."
+        "answer": "Moderate: I enjoy occasional social interaction but also value focused, independent work time."
       },
       {
         "answerID": 3,
-        "answer": "I prefer limited interaction: I primarily want to focus on my work, with occasional social activities."
+        "answer": "High: I enjoy regular social interaction and collaboration with my colleagues."
       },
       {
         "answerID": 4,
-        "answer": "I prefer to keep work and social life separate: I prefer to focus on my work and keep socializing to a minimum."
+        "answer": "Very high: I thrive in a highly collaborative and social work environment."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Minimal: Our work environment favors independent work with little social interaction."
+      },
+      {
+        "answerID": 2,
+        "answer": "Moderate: Our work environment balances social interaction with independent work."
+      },
+      {
+        "answerID": 3,
+        "answer": "High: Our work environment encourages regular social interaction and collaboration."
+      },
+      {
+        "answerID": 4,
+        "answer": "Very high: Our work environment is highly collaborative and social."
       }
     ],
     "matchScores": [
@@ -16013,25 +16534,46 @@ export const questionsData = [
     "questionID": "163",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Business",
+      "Travel",
+      "Preference"
     ],
     "question": "What is your preference for business travel in your role?",
+    "employerQuestion": "What level of business travel is required in this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I love it: I would like a role that involves significant travel."
+        "answer": "No travel: I prefer a role that requires no business travel."
       },
       {
         "answerID": 2,
-        "answer": "I'm okay with it: I'm willing to travel occasionally for work."
+        "answer": "Minimal travel: Occasional travel is acceptable, but it's not my preference."
       },
       {
         "answerID": 3,
-        "answer": "I prefer to avoid it: I'd rather not travel for work if possible."
+        "answer": "Moderate travel: I'm open to some travel as part of my role."
       },
       {
         "answerID": 4,
-        "answer": "I can't do it: I need a role with no business travel."
+        "answer": "Frequent travel: I enjoy traveling and am willing to do so frequently for my role."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No travel: This role does not require any business travel."
+      },
+      {
+        "answerID": 2,
+        "answer": "Minimal travel: This role requires occasional business travel."
+      },
+      {
+        "answerID": 3,
+        "answer": "Moderate travel: This role requires regular, but not frequent, business travel."
+      },
+      {
+        "answerID": 4,
+        "answer": "Frequent travel: This role requires frequent business travel."
       }
     ],
     "matchScores": [
@@ -16121,25 +16663,46 @@ export const questionsData = [
     "questionID": "164",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Environmental",
+      "Sustainability",
+      "Importance"
     ],
     "question": "How important is a company's sustainability and environmental impact to you?",
+    "employerQuestion": "How would you describe your company's commitment to sustainability and environmental impact?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: A company's environmental policies are not a major concern for me."
+        "answer": "Not at all important: A company's environmental policies aren't a factor in my decision."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: I appreciate when companies take steps to reduce their environmental impact."
+        "answer": "Somewhat important: I appreciate companies that are environmentally conscious, but it's not a primary concern."
       },
       {
         "answerID": 3,
-        "answer": "Important: I prefer to work for companies that have clear sustainability policies and practices."
+        "answer": "Very important: A company's environmental policies are a significant factor in my decision."
       },
       {
         "answerID": 4,
-        "answer": "Very important: I strongly consider a company's environmental impact when choosing an employer."
+        "answer": "Extremely important: Working for an environmentally responsible company is a top priority for me."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not a focus: Environmental sustainability is currently not a primary focus."
+      },
+      {
+        "answerID": 2,
+        "answer": "Minimal: We have some sustainability initiatives in place."
+      },
+      {
+        "answerID": 3,
+        "answer": "Good: We are actively working on improving our environmental footprint."
+      },
+      {
+        "answerID": 4,
+        "answer": "Excellent: Environmental sustainability is a core part of our mission and operations."
       }
     ],
     "matchScores": [
@@ -16232,6 +16795,7 @@ export const questionsData = [
       ""
     ],
     "question": "What is your preferred company size?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -16250,6 +16814,7 @@ export const questionsData = [
         "answer": "Large: I prefer working in a company with over 500 employees."
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -16337,25 +16902,46 @@ export const questionsData = [
     "questionID": "166",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Work",
+      "Location",
+      "Preference"
     ],
     "question": "What is your preferred work location?",
+    "employerQuestion": "What work location options does this role offer?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Office: I prefer to work in an office setting."
+        "answer": "Fully remote: I prefer to work completely remotely."
       },
       {
         "answerID": 2,
-        "answer": "Home: I prefer to work from home."
+        "answer": "Mostly remote with occasional office visits: I prefer to work remotely most of the time, but I'm open to occasional office visits."
       },
       {
         "answerID": 3,
-        "answer": "Hybrid: I prefer a mix of working from home and the office."
+        "answer": "Hybrid (half remote, half office): I prefer a balance between remote work and office-based work."
       },
       {
         "answerID": 4,
-        "answer": "Anywhere: I can work effectively in any location."
+        "answer": "Fully office-based: I prefer working in an office environment full-time."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Fully remote: This role is completely remote."
+      },
+      {
+        "answerID": 2,
+        "answer": "Mostly remote with occasional office visits: This role is mostly remote with some requirement for office visits."
+      },
+      {
+        "answerID": 3,
+        "answer": "Hybrid (half remote, half office): This role offers a balance between remote work and office-based work."
+      },
+      {
+        "answerID": 4,
+        "answer": "Fully office-based: This role requires working in the office full-time."
       }
     ],
     "matchScores": [
@@ -16445,25 +17031,46 @@ export const questionsData = [
     "questionID": "167",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Company",
+      "Mission",
+      "Importance"
     ],
     "question": "How important is the company's mission to you?",
+    "employerQuestion": "How central is your company's mission to its operations and culture?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: The company's mission doesn't greatly affect my job satisfaction."
+        "answer": "Not at all important: The company's mission isn't a factor in my decision."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: I appreciate when I can connect with the company's mission."
+        "answer": "Somewhat important: While I value a meaningful mission, it isn't my top priority."
       },
       {
         "answerID": 3,
-        "answer": "Important: I like to feel aligned with the company's mission."
+        "answer": "Very important: A compelling mission is a significant factor in my decision."
       },
       {
         "answerID": 4,
-        "answer": "Very important: I want to feel strongly connected to the company's mission and values."
+        "answer": "Extremely important: The company's mission is a top priority in my decision."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Not central: Our company mission doesn't significantly influence our operations and culture."
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat central: Our mission plays a role in our operations and culture, but it's not the primary focus."
+      },
+      {
+        "answerID": 3,
+        "answer": "Very central: Our mission significantly influences our operations and culture."
+      },
+      {
+        "answerID": 4,
+        "answer": "Extremely central: Our mission is the driving force behind our operations and culture."
       }
     ],
     "matchScores": [
@@ -16553,25 +17160,46 @@ export const questionsData = [
     "questionID": "168",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Overtime",
+      "Occurrence",
+      "Preference"
     ],
     "question": "How do you feel about working overtime occasionally?",
+    "employerQuestion": "What is the likelihood of overtime in this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I don't mind: I'm open to working overtime when needed."
+        "answer": "Dislike: I strongly prefer a strict 40-hour workweek."
       },
       {
         "answerID": 2,
-        "answer": "I prefer not to: I'd rather stick to my regular work hours, but I can make exceptions if necessary."
+        "answer": "Acceptable: While not preferred, I'm open to occasional overtime."
       },
       {
         "answerID": 3,
-        "answer": "I'm against it: I believe in maintaining a strict work-life balance."
+        "answer": "Okay: I'm okay with working overtime as needed."
       },
       {
         "answerID": 4,
-        "answer": "I can't do it: Due to personal commitments, I can't work beyond my regular hours."
+        "answer": "Comfortable: I'm comfortable with regular overtime as part of my role."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Rare: This role rarely requires overtime."
+      },
+      {
+        "answerID": 2,
+        "answer": "Occasional: This role may occasionally require overtime."
+      },
+      {
+        "answerID": 3,
+        "answer": "Frequently: Overtime is a regular part of our operations."
+      },
+      {
+        "answerID": 4,
+        "answer": "Very frequently: Overtime is a significant part of our work schedule."
       }
     ],
     "matchScores": [
@@ -16661,25 +17289,46 @@ export const questionsData = [
     "questionID": "169",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Dress",
+      "Code",
+      "Type"
     ],
     "question": "What is your preference regarding the dress code at work?",
+    "employerQuestion": "What is the dress code at your workplace?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Formal: I prefer a workplace that adheres to a formal dress code."
+        "answer": "Casual: I prefer a workplace where casual attire is acceptable."
       },
       {
         "answerID": 2,
-        "answer": "Business casual: I prefer a workplace with a business casual dress code."
+        "answer": "Business Casual: I prefer a business casual dress code."
       },
       {
         "answerID": 3,
-        "answer": "Casual: I prefer a workplace that allows casual clothing."
+        "answer": "Business Formal: I prefer a business formal dress code."
       },
       {
         "answerID": 4,
-        "answer": "Doesn't matter: The dress code is not a significant factor for me."
+        "answer": "No preference: I don't have a strong preference regarding dress code."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Casual: Our workplace allows casual attire."
+      },
+      {
+        "answerID": 2,
+        "answer": "Business Casual: Our workplace has a business casual dress code."
+      },
+      {
+        "answerID": 3,
+        "answer": "Business Formal: Our workplace has a business formal dress code."
+      },
+      {
+        "answerID": 4,
+        "answer": "Flexible: Our dress code is flexible depending on the occasion."
       }
     ],
     "matchScores": [
@@ -16769,25 +17418,47 @@ export const questionsData = [
     "questionID": "170",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Team",
+      "Building",
+      "Activities",
+      "Importance"
     ],
     "question": "How important are team-building activities to you?",
+    "employerQuestion": "How frequently does your company organize team-building activities?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: I don't particularly enjoy team-building activities."
+        "answer": "Not at all important: Team-building activities aren't a factor in my decision."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: I enjoy occasional team-building activities."
+        "answer": "Somewhat important: I appreciate team-building activities, but they're not a primary concern."
       },
       {
         "answerID": 3,
-        "answer": "Important: Regular team-building activities contribute to my job satisfaction."
+        "answer": "Very important: Team-building activities are a significant factor in my decision."
       },
       {
         "answerID": 4,
-        "answer": "Very important: I believe team-building activities are crucial for a healthy work environment."
+        "answer": "Extremely important: Regular team-building activities are a top priority for me."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Rarely: We rarely or never have organized team-building activities."
+      },
+      {
+        "answerID": 2,
+        "answer": "Occasionally: We occasionally have team-building activities."
+      },
+      {
+        "answerID": 3,
+        "answer": "Regularly: We regularly have team-building activities."
+      },
+      {
+        "answerID": 4,
+        "answer": "Very frequently: We prioritize regular team-building activities."
       }
     ],
     "matchScores": [
@@ -16877,25 +17548,47 @@ export const questionsData = [
     "questionID": "171",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Professional",
+      "Development",
+      "Opportunities",
+      "Importance"
     ],
     "question": "How important is the availability of professional development or continuous learning opportunities in a company to you?",
+    "employerQuestion": "How would you describe the professional development or continuous learning opportunities at your company?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not important: I don't consider professional development opportunities a deciding factor."
+        "answer": "Not at all important: Professional development opportunities aren't a factor in my decision."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat important: I appreciate the availability of learning opportunities but it's not a top priority."
+        "answer": "Somewhat important: I appreciate professional development opportunities, but they're not a primary concern."
       },
       {
         "answerID": 3,
-        "answer": "Important: I value companies that provide opportunities for professional development."
+        "answer": "Very important: Professional development opportunities are a significant factor in my decision."
       },
       {
         "answerID": 4,
-        "answer": "Very important: I highly prioritize companies that encourage continuous learning and provide adequate opportunities."
+        "answer": "Extremely important: The availability of robust professional development opportunities is a top priority for me."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Minimal: We offer some professional development or continuous learning opportunities."
+      },
+      {
+        "answerID": 2,
+        "answer": "Moderate: We offer a good range of professional development or continuous learning opportunities."
+      },
+      {
+        "answerID": 3,
+        "answer": "Extensive: We offer a wide variety of professional development or continuous learning opportunities."
+      },
+      {
+        "answerID": 4,
+        "answer": "Comprehensive: We have a robust program for professional development or continuous learning."
       }
     ],
     "matchScores": [
@@ -16985,25 +17678,46 @@ export const questionsData = [
     "questionID": "172",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Communication",
+      "Style",
+      "Preference"
     ],
     "question": "What is your preferred communication style at work?",
+    "employerQuestion": "What is the dominant communication style in your company?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Formal: I prefer structured and professional communication."
+        "answer": "Written: I prefer communicating via written methods such as email or chat."
       },
       {
         "answerID": 2,
-        "answer": "Informal: I appreciate a relaxed and casual communication style."
+        "answer": "Verbal: I prefer face-to-face or voice communication."
       },
       {
         "answerID": 3,
-        "answer": "Mixed: I like a balance of formal and informal communication."
+        "answer": "Mixed: I prefer a mix of written and verbal communication."
       },
       {
         "answerID": 4,
-        "answer": "Doesn't matter: I can adapt to any communication style."
+        "answer": "No preference: I don't have a strong preference and can adapt to the team's communication style."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Written: Our company primarily relies on written communication such as email or chat."
+      },
+      {
+        "answerID": 2,
+        "answer": "Verbal: Our company primarily relies on face-to-face or voice communication."
+      },
+      {
+        "answerID": 3,
+        "answer": "Mixed: Our company utilizes a balance of written and verbal communication."
+      },
+      {
+        "answerID": 4,
+        "answer": "Flexible: Our communication style is flexible and adapts to the needs of the team."
       }
     ],
     "matchScores": [
@@ -17093,25 +17807,47 @@ export const questionsData = [
     "questionID": "173",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Feedback culture",
+      "work culture",
+      "communication",
+      "performance review"
     ],
     "question": "What kind of feedback culture do you prefer at your workplace?",
+    "employerQuestion": "What type of feedback culture does your workplace have?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Scheduled: I prefer regular, structured feedback sessions."
+        "answer": "Regular, structured feedback: I appreciate regular, structured feedback that provides clarity on my performance and areas of improvement."
       },
       {
         "answerID": 2,
-        "answer": "On-the-spot: I appreciate immediate feedback on my performance."
+        "answer": "Spontaneous feedback: I prefer spontaneous feedback, as it feels more organic and in-the-moment."
       },
       {
         "answerID": 3,
-        "answer": "Balanced: I like a mix of scheduled feedback and on-the-spot reviews."
+        "answer": "Minimal feedback: I work best with minimal feedback, as long as my performance is on track."
       },
       {
         "answerID": 4,
-        "answer": "Doesn't matter: I'm open to any feedback culture as long as it's constructive."
+        "answer": "I don't have a preference: I'm flexible and can adapt to any feedback culture."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Regular, structured feedback: We provide regular, structured feedback to our employees to ensure they understand their performance and areas for improvement."
+      },
+      {
+        "answerID": 2,
+        "answer": "Spontaneous feedback: We encourage spontaneous feedback, believing it to be more organic and in-the-moment."
+      },
+      {
+        "answerID": 3,
+        "answer": "Minimal feedback: We provide minimal feedback, typically only when there is a performance concern."
+      },
+      {
+        "answerID": 4,
+        "answer": "No specific feedback culture: We don't have a specific feedback culture; it varies depending on the team and the situation."
       }
     ],
     "matchScores": [
@@ -17201,25 +17937,47 @@ export const questionsData = [
     "questionID": "174",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Travel",
+      "work requirements",
+      "job duties",
+      "location"
     ],
     "question": "How do you feel about travel requirements for work?",
+    "employerQuestion": "How often does your company require employees to travel for work?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Open: I enjoy traveling for work and am open to it."
+        "answer": "I don't mind frequent travel: I'm comfortable with a job that requires frequent travel."
       },
       {
         "answerID": 2,
-        "answer": "Limited: I'm fine with occasional travel, but I don't want it to be frequent."
+        "answer": "I prefer occasional travel: I prefer a job that requires occasional travel, but not consistently."
       },
       {
         "answerID": 3,
-        "answer": "Prefer not to: I'd rather not travel for work if possible."
+        "answer": "I prefer minimal to no travel: I prefer a job that requires minimal to no travel."
       },
       {
         "answerID": 4,
-        "answer": "Can't travel: I'm unable to travel for work due to personal commitments."
+        "answer": "I am unable to travel: I am unable to travel for work due to personal constraints."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Frequent travel: Our employees are frequently required to travel for work."
+      },
+      {
+        "answerID": 2,
+        "answer": "Occasional travel: Our employees are occasionally required to travel for work."
+      },
+      {
+        "answerID": 3,
+        "answer": "Minimal to no travel: Our employees are rarely or never required to travel for work."
+      },
+      {
+        "answerID": 4,
+        "answer": "No travel: Our roles do not require any travel."
       }
     ],
     "matchScores": [
@@ -17309,25 +18067,47 @@ export const questionsData = [
     "questionID": "175",
     "category": "HR / Work-Life Balance",
     "tags": [
-      ""
+      "Cross-functional teams",
+      "teamwork",
+      "collaboration",
+      "team structure"
     ],
     "question": "How do you feel about working in cross-functional teams?",
+    "employerQuestion": "How often do your employees work in cross-functional teams?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Enjoy it: I appreciate the diversity of perspectives and collaboration in cross-functional teams."
+        "answer": "I enjoy it: I enjoy working in cross-functional teams as it provides a diverse set of perspectives and skill sets."
       },
       {
         "answerID": 2,
-        "answer": "Don't mind it: I can work in cross-functional teams, but it's not my preference."
+        "answer": "I prefer it occasionally: I prefer occasional cross-functional collaboration, but also value working within my own team."
       },
       {
         "answerID": 3,
-        "answer": "Not a fan: I prefer working within my own department or function."
+        "answer": "I prefer working in my own department: I prefer working within my own department or team."
       },
       {
         "answerID": 4,
-        "answer": "No experience: I've never worked in a cross-functional team."
+        "answer": "No preference: I don't have a preference; I can adapt to either environment."
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Often: Our employees often work in cross-functional teams."
+      },
+      {
+        "answerID": 2,
+        "answer": "Occasionally: Our employees occasionally work in cross-functional teams."
+      },
+      {
+        "answerID": 3,
+        "answer": "Rarely: Our employees rarely work in cross-functional teams."
+      },
+      {
+        "answerID": 4,
+        "answer": "Never: Our employees do not work in cross-functional teams."
       }
     ],
     "matchScores": [
@@ -17420,6 +18200,7 @@ export const questionsData = [
       ""
     ],
     "question": "What is the highest level of education you have completed?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17438,6 +18219,7 @@ export const questionsData = [
         "answer": "Postgraduate Degree"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -17528,6 +18310,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you participated in any technical boot camps or intensive training programs?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17546,6 +18329,7 @@ export const questionsData = [
         "answer": "No programs"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -17636,6 +18420,7 @@ export const questionsData = [
       ""
     ],
     "question": "If you attended a college or university, what was your major field of study?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17654,6 +18439,7 @@ export const questionsData = [
         "answer": "Humanities / Other"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -17744,6 +18530,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you done any self-paced online learning for technical skills (e.g., Coursera, Udemy, Khan Academy)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17762,6 +18549,7 @@ export const questionsData = [
         "answer": "Never"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -17852,6 +18640,7 @@ export const questionsData = [
       ""
     ],
     "question": "How many years of experience do you have in a sales or solutions engineering role?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17870,6 +18659,7 @@ export const questionsData = [
         "answer": "More than 6 years"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -17960,6 +18750,7 @@ export const questionsData = [
       ""
     ],
     "question": "What industry sector do you have the most experience in?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17978,6 +18769,7 @@ export const questionsData = [
         "answer": "Other Industries"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18068,6 +18860,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you worked in a startup environment?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18086,6 +18879,7 @@ export const questionsData = [
         "answer": "Never"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18176,6 +18970,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you worked in a large corporate environment (5000+ employees)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18194,6 +18989,7 @@ export const questionsData = [
         "answer": "Never"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18284,6 +19080,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you managed a team before?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18302,6 +19099,7 @@ export const questionsData = [
         "answer": "No, never managed a team"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18392,6 +19190,7 @@ export const questionsData = [
       ""
     ],
     "question": "What size of deals are you most familiar with handling?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18410,6 +19209,7 @@ export const questionsData = [
         "answer": "Large deals ($1M+)"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18500,6 +19300,7 @@ export const questionsData = [
       ""
     ],
     "question": "What's the largest team you have been a part of?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18518,6 +19319,7 @@ export const questionsData = [
         "answer": "Sole contributor"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18608,6 +19410,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you led any project or product launches?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18626,6 +19429,7 @@ export const questionsData = [
         "answer": "Yes, multiple times"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18716,6 +19520,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you supported sales for products specific to any industry regulations or standards (such as HIPAA for healthcare, PCI DSS for finance)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18734,6 +19539,7 @@ export const questionsData = [
         "answer": "Yes, multiple regulations/standards"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18824,6 +19630,7 @@ export const questionsData = [
       ""
     ],
     "question": "Have you had experience selling into specific sectors (government, education, non-profit, etc.)?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18842,6 +19649,7 @@ export const questionsData = [
         "answer": "No, primarily private sector experience"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -18932,6 +19740,7 @@ export const questionsData = [
       ""
     ],
     "question": "In the next 1-2 years, do you see yourself wanting to transition into a different role?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -18950,6 +19759,7 @@ export const questionsData = [
         "answer": "No, I'd like to continue growing as an SE"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -19040,6 +19850,7 @@ export const questionsData = [
       ""
     ],
     "question": "What are your thoughts about transitioning into a management role in the future?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19058,6 +19869,7 @@ export const questionsData = [
         "answer": "No, I prefer remaining in a hands-on role"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -19148,6 +19960,7 @@ export const questionsData = [
       ""
     ],
     "question": "Do you have aspirations to become a subject matter expert in a particular technology or industry sector?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19166,6 +19979,7 @@ export const questionsData = [
         "answer": "No, I prefer a broader range of expertise"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -19256,6 +20070,7 @@ export const questionsData = [
       ""
     ],
     "question": "Are you interested in working in a startup environment to build and shape the SE function from the ground up?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19274,6 +20089,7 @@ export const questionsData = [
         "answer": "No, I prefer established organizations"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -19364,6 +20180,7 @@ export const questionsData = [
       ""
     ],
     "question": "How important is job stability to you?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19382,6 +20199,7 @@ export const questionsData = [
         "answer": "Not important - I actively seek new challenges and changes in my career"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,
@@ -19472,6 +20290,7 @@ export const questionsData = [
       ""
     ],
     "question": "Do you see yourself wanting to influence product strategy and roadmap in your future role?",
+    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19490,6 +20309,7 @@ export const questionsData = [
         "answer": "No, I'd rather focus on pre-sales"
       }
     ],
+    "employerAnswers": [],
     "matchScores": [
       {
         "answerID1": 1,

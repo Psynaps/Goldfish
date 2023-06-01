@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 
 const Answer = ({ answer, selectedAnswer, onSelect }) => {
     const isSelected = selectedAnswer === answer;
@@ -20,8 +20,11 @@ const Answer = ({ answer, selectedAnswer, onSelect }) => {
             onClick={handleClick}
             // variant={isSelected ? "solid" : "outline"}
             colorScheme={isSelected ? "blue" : "gray"}
+            height='auto'
+            blockSize='auto'
+            whiteSpace='normal'
         >
-            {answer.answer}
+            <Text>{answer.answer}</Text>
         </Button>
     );
 };

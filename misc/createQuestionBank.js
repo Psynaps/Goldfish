@@ -11,8 +11,11 @@ fs.createReadStream('questions.csv')
             category: row['Domain Tags'],
             tags: row['Search Tags'].split(', ').map(tag => tag.trim()),
             question: row['Question'],
-            answers: []
+            employerQuestion: row['Employer Question Phrasing'],
+            answers: [],
+            employerAnswers: []
         };
+        // console.log(row);
         if (!question.question || !question.questionID || !question.answers) { // Catch invalid question rows
             // console.log(row);
             return;
@@ -24,6 +27,12 @@ fs.createReadStream('questions.csv')
                 question.answers.push({
                     answerID: i,
                     answer: row[`Answer (${i})`].trim()
+                });
+            }
+            if (row[`Employer Answer ${i}`]) {
+                question.employerAnswers.push({
+                    answerID: i,
+                    answer: row[`Employer Answer ${i}`].trim()
                 });
             }
         }
@@ -41,12 +50,12 @@ fs.createReadStream('questions.csv')
         }
 
         // Add the processed question to the array
-        // console.log(question.answers);
+        // console.log(question);
         questionsData.push(question);
     })
     .on('end', () => {
         // fs.writeFile('questionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
-        fs.writeFile('../client/src/QuestionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
+        fs.writeFile('../client/src/QuestionsData.js', 'export const questionsDataFull = ' + JSON.stringify(questionsData, null, 2), function (err) {
             if (err) console.log('Error writing file:', err);
         });
     });

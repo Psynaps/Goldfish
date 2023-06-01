@@ -6,13 +6,23 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 // import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
-import { questionsData } from './QuestionsData';
+import { questionsDataFull } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import './App.css';
 
 const deployURL = 'https://goldfishai.netlify.app';
+
+let questionsData = questionsDataFull.map(function (obj) {
+    return {
+        questionID: obj.questionID,
+        category: obj.category,
+        tags: obj.tags,
+        question: (obj.employerQuestion ? obj.employerQuestion : obj.question),
+        answers: (obj.employerAnswers.length ? obj.employerAnswers : obj.answers),
+    };
+});
 
 
 // TODO: Make a saving and exporting of a job profile to JSON or CSV
@@ -402,8 +412,8 @@ function EmployerPage() {
                                             onChange={(e) => handleAnswerChange(item, e)}
                                             onClick={e => e.stopPropagation()}
                                         >
-                                            {item?.originalQuestion?.answers?.map((answer, index) => (
-                                                <option key={index} value={answer.answer}>{answer.answer}</option>
+                                            {item.originalQuestion?.answers?.map((answer, index) => (
+                                                <option key={index} value={answer.answer}>{(answer.answer.indexOf(':') != -1) ? answer.answer.substring(0, answer.answer.indexOf(':')) : answer.answer}</option>
                                             ))}
                                         </Select>
                                     </HStack>
