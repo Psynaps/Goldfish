@@ -33,7 +33,7 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                         onSelect={() => { setSelectedQuestion(question); onQuestionSelect(question); }}
                         isInitiallyOpen={index === 0}
                     >
-                        <VStack align='stretch' mt={5} spacing={4}>
+                        <VStack align='stretch' mt={5} spacing={3}>
                             {question.answers?.map((answer) => (
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}

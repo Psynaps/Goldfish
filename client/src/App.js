@@ -6,23 +6,13 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 // import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
-import { questionsDataFull } from './QuestionsData';
+import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import './App.css';
 
 const deployURL = 'https://goldfishai.netlify.app';
-
-let questionsData = questionsDataFull.map(function (obj) {
-    return {
-        questionID: obj.questionID,
-        category: obj.category,
-        tags: obj.tags,
-        question: (obj.employerQuestion ? obj.employerQuestion : obj.question),
-        answers: (obj.employerAnswers.length ? obj.employerAnswers : obj.answers),
-    };
-});
 
 
 // TODO: Make a saving and exporting of a job profile to JSON or CSV
@@ -171,8 +161,8 @@ function EmployerPage() {
     const initialColor = useColorModeValue('black', 'white');
     const selectedColor = useColorModeValue('white', 'black');
     const selectedBg = useColorModeValue('blue.200', 'blue.700');
-    const jobPostingInitialBorderColor = useColorModeValue('orange.500', 'orange.200');
-    const jobPostingSelectedBorderColor = useColorModeValue('orange.800', 'orange.300');
+    const jobPostingInitialBorderColor = useColorModeValue('orange.200', 'orange.200');
+    const jobPostingSelectedBorderColor = useColorModeValue('orange.500', 'orange.300');
     const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
@@ -347,8 +337,8 @@ function EmployerPage() {
                     >
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null} colorScheme={(selectedQuestion === null || selectedAnswer === null) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>
-                                <Text isTruncated>Add</Text>
+                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null} width='auto' colorScheme={(selectedQuestion === null || selectedAnswer === null) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>
+                                <Text p={1}>Add</Text>
                             </Button>
                         </HStack>
                         <QuestionBank
@@ -387,8 +377,8 @@ function EmployerPage() {
                                 onChange={e => handleLocationChange(e.target.value)}
                                 minHeight='15%'
                             />
-                            <Button isDisabled={!selectedJobPostingQuestion} colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'} size='md' onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>
-                                Remove
+                            <Button isDisabled={!selectedJobPostingQuestion} colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'} width='auto' onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>
+                                <Text p={4}>Remove</Text>
                             </Button>
                         </HStack>
                         <Box maxHeight='60vh' overflowY='auto' align='stretch' w='100%'>

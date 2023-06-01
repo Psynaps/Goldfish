@@ -1,7 +1,7 @@
 const csv = require('csv-parser');
 const fs = require('fs');
 
-let questionsData = [];
+let questionsDataFull = [];
 
 fs.createReadStream('questions.csv')
     .pipe(csv())
@@ -51,11 +51,24 @@ fs.createReadStream('questions.csv')
 
         // Add the processed question to the array
         // console.log(question);
-        questionsData.push(question);
+        questionsDataFull.push(question);
     })
     .on('end', () => {
         // fs.writeFile('questionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
-        fs.writeFile('../client/src/QuestionsData.js', 'export const questionsDataFull = ' + JSON.stringify(questionsData, null, 2), function (err) {
+        // questionsData = structuredClone(questionsDataFull);
+        let questionsData = questionsDataFull.map(function (obj) {
+            return {
+                questionID: obj.questionID,
+                category: obj.category,
+                tags: obj.tags,
+                question: (obj.employerQuestion ? obj.employerQuestion : obj.question),
+                answers: (obj.employerAnswers.length ? obj.employerAnswers : obj.answers),
+            };
+        });
+        fs.writeFile('../client/src/QuestionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
+            if (err) console.log('Error writing file:', err);
+        });
+        fs.writeFile('../server/QuestionsData.js', 'export const questionsDataFull = ' + JSON.stringify(questionsDataFull, null, 2), function (err) {
             if (err) console.log('Error writing file:', err);
         });
     });

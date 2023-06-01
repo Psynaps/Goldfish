@@ -1,4 +1,4 @@
-export const questionsDataFull = [
+export const questionsData = [
   {
     "questionID": "1",
     "category": "Industry Certifications",
@@ -8,7 +8,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Cisco Certified Internetwork Expert (CCIE)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -17,29 +16,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -52,7 +28,6 @@ export const questionsDataFull = [
       "Solutions Architect"
     ],
     "question": "Have you obtained the AWS Certified Solutions Architect - Associate certificate?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -61,29 +36,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -96,7 +48,6 @@ export const questionsDataFull = [
       "Information Security"
     ],
     "question": "Are you a Certified Information Systems Security Professional (CISSP)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -105,29 +56,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -140,7 +68,6 @@ export const questionsDataFull = [
       "Network Virtualization"
     ],
     "question": "Do you hold a VMware Certified Professional – Network Virtualization (VCP-NV) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -149,29 +76,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -184,7 +88,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Have you obtained AWS's Certified Solutions Architect (CSA) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -193,29 +96,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -228,7 +108,6 @@ export const questionsDataFull = [
       "Cloud Architect"
     ],
     "question": "Are you Google Cloud Certified as a Professional Cloud Architect?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -237,29 +116,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -273,7 +129,6 @@ export const questionsDataFull = [
       "Solutions Architect"
     ],
     "question": "Have you achieved Microsoft's Azure Solutions Architect Expert certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -282,29 +137,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -317,7 +149,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Do you hold the Certified Ethical Hacker (CEH) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -326,29 +157,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -361,7 +169,6 @@ export const questionsDataFull = [
       "Architecture Framework"
     ],
     "question": "Do you hold The Open Group Architecture Foundation (TOGAF) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -370,29 +177,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -405,7 +189,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Do you hold the Certified Information Systems Auditor (CISA) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -414,29 +197,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -450,7 +210,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Certified ScrumMaster (CSM)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -459,29 +218,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -494,7 +230,6 @@ export const questionsDataFull = [
       "IT Service Management"
     ],
     "question": "Have you obtained the ITIL certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -503,29 +238,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -538,7 +250,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Do you hold the Project Management Professional (PMP) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -547,29 +258,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -582,7 +270,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a certified Salesforce Administrator?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -591,29 +278,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -627,7 +291,6 @@ export const questionsDataFull = [
       "Programmer"
     ],
     "question": "Have you achieved the Oracle Certified Professional, Java SE 8 Programmer certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -636,29 +299,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -671,7 +311,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Cisco Certified Network Associate (CCNA)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -680,29 +319,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -715,7 +331,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Do you hold the CompTIA Security+ certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -724,29 +339,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -759,7 +351,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Certified Network Defense Architect (CNDA)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -768,29 +359,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -803,7 +371,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Do you have a Certified Information Security Manager (CISM) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -812,29 +379,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -848,7 +392,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you Certified in Risk and Information Systems Control (CRISC)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -857,29 +400,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -892,7 +412,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Do you hold a Certified Cloud Security Professional (CCSP) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -901,29 +420,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -936,7 +432,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Systems Security Certified Practitioner (SSCP)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -945,29 +440,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -978,7 +450,6 @@ export const questionsDataFull = [
       "Are you Certified in the Governance of Enterprise IT (CGEIT)?"
     ],
     "question": "Do you hold an Offensive Security Certified Professional (OSCP) certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -987,29 +458,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -1022,7 +470,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you Certified in the Governance of Enterprise IT (CGEIT)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1031,29 +478,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -1066,7 +490,6 @@ export const questionsDataFull = [
       "IT Service Management"
     ],
     "question": "Have you achieved the ITIL certification?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1075,29 +498,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -1110,7 +510,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Google Certified Professional – Cloud Network Engineer?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1119,29 +518,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -1154,7 +530,6 @@ export const questionsDataFull = [
       "Certification"
     ],
     "question": "Are you a Certified Wireless Network Professional (CWNP)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1163,29 +538,6 @@ export const questionsDataFull = [
       {
         "answerID": 2,
         "answer": "No"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
       }
     ]
   },
@@ -1199,7 +551,6 @@ export const questionsDataFull = [
       "Coding"
     ],
     "question": "Rate your proficiency in Python based on your project experience.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1217,89 +568,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with Python in complex projects, demonstrating deep understanding of libraries, frameworks, and performance optimization."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1313,7 +581,6 @@ export const questionsDataFull = [
       "Implementation"
     ],
     "question": "Rate your ability to design and implement RESTful APIs.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1331,89 +598,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience designing and implementing RESTful APIs, with deep knowledge of optimization and advanced features."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1425,7 +609,6 @@ export const questionsDataFull = [
       "Database"
     ],
     "question": "Describe your proficiency in data modeling and database design.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1443,89 +626,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with data modeling and database design, including proficiency in normalization, indexing, and performance optimization techniques."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1537,7 +637,6 @@ export const questionsDataFull = [
       "System Design"
     ],
     "question": "How familiar are you with microservices architecture?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1555,89 +654,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience designing and implementing microservices architectures, with deep knowledge of best practices, patterns, and inter-service communication."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1650,7 +666,6 @@ export const questionsDataFull = [
       "Jenkins"
     ],
     "question": "Rate your proficiency with DevOps practices (CI/CD, Docker, Jenkins).",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1668,89 +683,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Significant experience with DevOps practices, including automation, infrastructure as code (IaC), and monitoring and troubleshooting in a live environment."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1763,7 +695,6 @@ export const questionsDataFull = [
       "Google Cloud"
     ],
     "question": "Rate your expertise in cloud platforms (AWS, Azure, Google Cloud Platform).",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1781,89 +712,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge of multiple cloud platforms, proficient in managing large-scale applications, services, and cloud infrastructure."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1877,7 +725,6 @@ export const questionsDataFull = [
       "React"
     ],
     "question": "Rate your proficiency with front-end development technologies (HTML, CSS, JavaScript, React).",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -1895,89 +742,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Expertise in modern front-end development, including building complex web applications using JavaScript frameworks like React."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -1989,7 +753,6 @@ export const questionsDataFull = [
       "Predictive Modeling"
     ],
     "question": "Describe your proficiency using Machine Learning algorithms for predictive modeling.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2007,89 +770,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge of machine learning, experienced in feature engineering, model optimization, and deploying ML models"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2100,7 +780,6 @@ export const questionsDataFull = [
       "Git"
     ],
     "question": "Describe your experience with version control systems, particularly Git.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2118,89 +797,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Mastery of Git, comfortable with advanced operations such as rebase, cherry-pick, bisect, and can administer a Git server."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2212,7 +808,6 @@ export const questionsDataFull = [
       "Protocols"
     ],
     "question": "Rate your understanding of data security and encryption protocols.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2230,89 +825,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep understanding of various encryption protocols, hands-on experience with securing large-scale applications or infrastructure."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2324,7 +836,6 @@ export const questionsDataFull = [
       "Microsoft Dynamics 365"
     ],
     "question": "Rate your proficiency with CRM platforms like Salesforce or Microsoft Dynamics 365.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2342,89 +853,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Expertise with CRM platforms, capable of customizing and integrating the platform according to business needs."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2437,7 +865,6 @@ export const questionsDataFull = [
       "Data Analysis"
     ],
     "question": "Rate your proficiency managing and analyzing customer data for sales and marketing purposes.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2455,89 +882,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Expertise in managing large datasets, able to derive actionable insights for sales and marketing strategies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2549,7 +893,6 @@ export const questionsDataFull = [
       "Processes"
     ],
     "question": "How familiar are you with the concepts and processes of data integration?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2567,89 +910,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge of data integration, experienced with designing and implementing large-scale data integration solutions."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2660,7 +920,6 @@ export const questionsDataFull = [
       "Campaigns"
     ],
     "question": "Describe your proficiency developing and executing email marketing campaigns.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2678,89 +937,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep understanding of email marketing, able to strategize and execute complex campaigns for maximum conversion."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2772,7 +948,6 @@ export const questionsDataFull = [
       "Waterfall"
     ],
     "question": "Rate your proficiency in project management methodologies like Agile or Waterfall.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2790,89 +965,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep expertise in Agile or Waterfall, able to manage complex projects and train others in these methodologies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2883,7 +975,6 @@ export const questionsDataFull = [
       "Communication Protocols"
     ],
     "question": "Rate your expertise in network architecture and communication protocols.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -2901,89 +992,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge in network architecture and communication protocols, able to design and implement complex networks."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -2994,7 +1002,6 @@ export const questionsDataFull = [
       "Principles"
     ],
     "question": "Rate your understanding of cybersecurity principles.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3012,89 +1019,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Expert in cybersecurity principles, capable of developing and implementing security policies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3106,7 +1030,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in designing product configuration strategies?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3124,89 +1047,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Comprehensive understanding of product configuration strategies, including scalability and optimization"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3218,7 +1058,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "Rate your familiarity with cloud computing platforms.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3236,89 +1075,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with cloud computing platforms, able to architect and deploy complex applications."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3330,7 +1086,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in cybersecurity best practices?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3348,89 +1103,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge of cybersecurity best practices, can guide teams or organizations in adhering to them."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3442,7 +1114,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of network architecture and infrastructure.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3460,89 +1131,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge of network architecture, able to design, implement, and manage complex network infrastructure."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3555,7 +1143,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in interpreting and utilizing data analytics?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3573,89 +1160,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in data analytics, able to develop and execute data-driven strategies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3667,7 +1171,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of Machine Learning and Artificial Intelligence concepts.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3685,89 +1188,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Deep knowledge of ML and AI, capable of designing and implementing complex ML models."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3779,7 +1199,6 @@ export const questionsDataFull = [
       "Language Proficiency"
     ],
     "question": "How proficient are you with SQL or other database querying languages?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3797,89 +1216,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with SQL, capable of optimizing queries and managing complex database systems."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -3891,7 +1227,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "How well do you understand software testing methodologies?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -3909,89 +1244,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in software testing, capable of leading testing strategies and methodologies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4003,7 +1255,6 @@ export const questionsDataFull = [
       "Comfort Level"
     ],
     "question": "How comfortable are you with integrating different software systems using APIs?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4021,89 +1272,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in API design and implementation, capable of managing complex system integrations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4116,7 +1284,6 @@ export const questionsDataFull = [
       "Knowledge Level"
     ],
     "question": "Rate your knowledge in cryptography and its application in data security.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4134,89 +1301,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in cryptography, capable of designing and implementing secure systems using advanced cryptographic techniques."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4228,7 +1312,6 @@ export const questionsDataFull = [
       "Familiarity Level"
     ],
     "question": "How familiar are you with distributed systems architecture?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4246,89 +1329,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in distributed systems, able to design and implement complex distributed architectures for high scalability and performance."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4339,7 +1339,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "How well do you understand data warehousing?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4357,89 +1356,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in data warehousing, able to design, implement, and manage complex data warehouses with large data volumes."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4452,7 +1368,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "How well do you understand Internet of Things (IoT) protocols and technologies?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4470,89 +1385,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with IoT, able to design, implement, and manage complex IoT systems using various protocols and technologies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4565,7 +1397,6 @@ export const questionsDataFull = [
       "Knowledge Level"
     ],
     "question": "Rate your knowledge of DevOps methodologies and practices.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4583,89 +1414,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in a DevOps role, able to design, implement, and manage complex DevOps pipelines and practices."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4677,7 +1425,6 @@ export const questionsDataFull = [
       "Familiarity Level"
     ],
     "question": "How familiar are you with machine learning algorithms?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4695,89 +1442,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with machine learning, able to design, train, and evaluate complex machine learning models."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4791,7 +1455,6 @@ export const questionsDataFull = [
       "Comfort Level"
     ],
     "question": "Rate your comfort level with web development languages (HTML, CSS, JavaScript).",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4809,89 +1472,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience with web development, proficient in latest standards, able to optimize performance and usability."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -4904,7 +1484,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "How proficient are you in managing and interpreting large datasets?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -4922,89 +1501,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in data management and analysis, able to design and implement complex data pipelines, proficient in advanced statistical methods."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5017,7 +1513,6 @@ export const questionsDataFull = [
       "Professional Experience"
     ],
     "question": "Describe your experience with disaster recovery planning and strategies in a professional setting.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5035,89 +1530,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in disaster recovery planning and implementation, able to design, test, and optimize complex disaster recovery strategies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5130,7 +1542,6 @@ export const questionsDataFull = [
       "Comfort Level"
     ],
     "question": "Rate your comfort level with implementing or managing identity and access management",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5148,89 +1559,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in IAM, proficient in designing and implementing complex IAM strategies, experienced in working with various IAM platforms and tools."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5243,7 +1571,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "How well do you understand real-time data processing and analytics?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5261,89 +1588,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in real-time data processing, able to design and implement complex real-time analytics solutions."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5356,7 +1600,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of load balancing strategies and techniques",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5374,89 +1617,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in designing and implementing load balancing strategies, proficient in various load balancing techniques and technologies."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5469,7 +1629,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "How well do you understand machine learning algorithms and their implementation?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5487,89 +1646,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in designing and implementing complex machine learning models, proficient in a variety of machine learning algorithms and tools."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5582,7 +1658,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "Describe your experience with handling and managing Big Data solutions.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5600,89 +1675,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in managing complex Big Data solutions, able to design and implement Big Data strategies and architectures."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5695,7 +1687,6 @@ export const questionsDataFull = [
       "Understanding Level"
     ],
     "question": "Rate your understanding of the Secure Development Lifecycle (SDL) based on your experience.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5713,89 +1704,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive experience in SDL, able to design and implement secure development strategies, proficient in various security tools and techniques."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5808,7 +1716,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "How proficient are you with functional programming concepts and their application?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5826,89 +1733,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive professional experience with functional programming, able to apply functional programming concepts to complex software projects"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -5921,7 +1745,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "Describe your experience with responsive design and cross-platform compatibility in web development.",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -5939,89 +1762,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Extensive professional experience with responsive design and cross-platform compatibility, able to design and implement complex responsive designs and ensure cross-platform compatibility for large-scale projects."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6033,7 +1773,6 @@ export const questionsDataFull = [
       "Customer Engagement"
     ],
     "question": "What is your experience level in creating and delivering product demonstrations?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6051,89 +1790,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience creating and delivering product demonstrations in a variety of settings."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6145,7 +1801,6 @@ export const questionsDataFull = [
       "Solution Design"
     ],
     "question": "How proficient are you in collaborating with technical teams to design solutions that fulfill customer needs?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6163,89 +1818,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Collaborating with technical teams to design solutions is a significant part of my role."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6257,7 +1829,6 @@ export const questionsDataFull = [
       "Business Writing"
     ],
     "question": "How would you assess your proposal writing and bid management skills?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6275,89 +1846,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience in proposal writing and bid management, often leading the process."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6369,7 +1857,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "How often did you engage in the proposal writing process in your previous roles?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6387,89 +1874,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Always: I always participate in proposal writing processes, it is a central aspect of my role."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6481,7 +1885,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "Based on your experience, how skilled are you in leading sales presentations to diverse stakeholders?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6499,89 +1902,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I frequently lead sales presentations to a diverse set of stakeholders, including C-level executives."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6593,7 +1913,6 @@ export const questionsDataFull = [
       "Risk Management"
     ],
     "question": "How would you rate your ability to manage security reviews during procurement stages?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6611,89 +1930,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Handling security reviews during procurement cycles is a key part of my responsibilities."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6705,7 +1941,6 @@ export const questionsDataFull = [
       "Trial Process"
     ],
     "question": "What is your proficiency level in supporting Proof of Concept (POC) or trial processes for customers?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6723,89 +1958,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I regularly support POC or trial processes for clients and can manage them independently."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6817,7 +1969,6 @@ export const questionsDataFull = [
       "Response Management"
     ],
     "question": "How skilled are you in developing Request for Proposal (RFP) responses?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6835,89 +1986,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I routinely prepare RFP responses and have established a systematic approach to doing so."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -6929,7 +1997,6 @@ export const questionsDataFull = [
       "Client Requirements"
     ],
     "question": "Based on your experience, how proficient are you in demonstrating a product's technical capabilities to meet client needs during pre-sales calls?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -6947,89 +2014,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Led comprehensive product demonstrations during pre-sales calls for large-scale deals with complex client requirements."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7041,7 +2025,6 @@ export const questionsDataFull = [
       "Sales Process"
     ],
     "question": "How proficient are you in creating and delivering technical presentations to clients during the sales process?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7059,89 +2042,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Led the development and delivery of technical presentations for large-scale deals, tailoring content to client needs and concerns"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7153,7 +2053,6 @@ export const questionsDataFull = [
       "Government Contracts"
     ],
     "question": "Based on your experience, how well do you navigate the state and federal government procurement process in a pre-sales SE role?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7171,89 +2070,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced : Have independently managed the procurement process for large-scale government deals, handling complex requirements and scenarios"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7265,7 +2081,6 @@ export const questionsDataFull = [
       "Presentation Skills"
     ],
     "question": "How proficient are you in managing compliance and regulatory requirements specific to state and federal government contracts?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7283,89 +2098,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced - Have independently managed complex compliance and regulatory requirements for large-scale government deals"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7377,7 +2109,6 @@ export const questionsDataFull = [
       "Presentation Skills"
     ],
     "question": "How would you rate your skills in delivering presentations and proposals that adhere to government standards and formats?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7395,89 +2126,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: Delivering presentations and proposals compliant with government standards and formats is/ was a key part of my role."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7489,7 +2137,6 @@ export const questionsDataFull = [
       "Sales Team"
     ],
     "question": "What is your experience in presenting competitive differentiators to internal sales teams?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7507,89 +2154,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I regularly lead these presentations independently and am comfortable doing so."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7601,7 +2165,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience level with leading product feature trainings for sales teams?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7619,89 +2182,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced Leading training on specific product features for sales teams is/ was a key part of my role."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7713,7 +2193,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "How frequently did you collaborate with Product Management teams in your previous roles?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7731,89 +2210,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have a strong partnership with Product Management, regularly influencing product strategy based on customer insights."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7825,7 +2221,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience in working with an internal sales team?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7843,89 +2238,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have a strong track record of partnering with sales teams, contributing to strategy, and playing a key role in winning deals."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -7937,7 +2249,6 @@ export const questionsDataFull = [
       "Past Roles"
     ],
     "question": "What has been the average deal size you worked on in your previous roles?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -7955,89 +2266,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have worked on large deals ($200k+)."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8049,7 +2277,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What size of customer (employee count) are you most accustomed to dealing with in your sales engineering roles?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8067,89 +2294,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have worked with large enterprises (500+ employees)."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8161,7 +2305,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you with Salesforce CRM?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8179,89 +2322,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I've used Salesforce CRM extensively. I'm familiar with advanced features and have applied it to solve complex tasks."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8273,7 +2333,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "What is your proficiency level in using PowerPoint for sales presentations?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8291,89 +2350,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience creating sales presentations using PowerPoint, including using advanced features."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8386,7 +2362,6 @@ export const questionsDataFull = [
       "Virtual Communication"
     ],
     "question": "How proficient are you with Zoom or comparable platforms for sales meetings and demos?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8404,89 +2379,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Zoom or similar platforms for sales meetings and demos, including hosting and managing meetings."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8499,7 +2391,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "What is your experience with proposal and contract management platforms like PandaDoc?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8517,89 +2408,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "I'm proficient in PandaDoc, including automating document workflows and integrating with other tools."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8613,7 +2421,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How comfortable are you working with standard G Suite tools (Google Docs, Sheets, Slides)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8631,89 +2438,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with G Suite tools, including using advanced features like scripting in Google Sheets and collaborative features in Docs and Slides."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8725,7 +2449,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "What is your experience level with Microsoft Teams for internal collaboration?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8743,89 +2466,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Microsoft Teams, including managing teams, setting permissions, and utilizing integrations for increased productivity."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8838,7 +2478,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you with Slack for team communication and collaboration?\"",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8856,89 +2495,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Slack, including setting up integrations, managing channels, and using advanced features for team collaboration."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -8951,7 +2507,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "What is your experience with project management tools like Jira or Trello?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -8969,89 +2524,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with project management tools like Jira or Trello, including setting up complex projects, tracking and managing workflows, and utilizing advanced features and integrations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9063,7 +2535,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you with Tableau?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9081,89 +2552,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Tableau, including data integration, advanced data analysis, creating complex interactive dashboards, and utilizing scripting for more complex tasks."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9175,7 +2563,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "What is your experience with ZoomInfo for lead generation?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9193,89 +2580,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with ZoomInfo, including setting up and managing campaigns for lead generation, tracking and analyzing campaign results, and utilizing advanced features for targeted marketing."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9288,7 +2592,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "What's your proficiency level with GitHub for version control and code collaboration?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9306,89 +2609,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with GitHub, including managing large repositories, handling complex merges, setting up continuous integration/continuous deployment (CI/CD) workflows, and other advanced features."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9400,7 +2620,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you with HubSpot for marketing automation?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9418,89 +2637,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with HubSpot, including setting up and managing automated marketing campaigns, utilizing advanced analysis features, and integrating with other systems."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9513,7 +2649,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with LinkedIn for lead generation and networking?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9531,89 +2666,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with LinkedIn, including optimizing profiles for visibility, running LinkedIn ad campaigns, leveraging LinkedIn's Sales Navigator for advanced lead generation, and building a substantial network."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9625,7 +2677,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "What's your experience with Azure as a cloud computing service?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9643,89 +2694,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Azure, including architecting and managing complex service deployments, implementing advanced security measures, automation, and optimizing for cost and performance."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9738,7 +2706,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "What is your proficiency level with Snowflake BI for data warehousing and analysis?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9756,89 +2723,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Snowflake, including managing large data warehouses, implementing data security measures, complex data analysis, and optimizing queries for performance."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9851,7 +2735,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How comfortable are you with Virtualization tools like VMware or Hyper-V?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9869,89 +2752,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with virtualization tools, including managing large-scale virtual environments, implementing advanced network configurations, and optimizing for performance and security."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -9964,7 +2764,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your experience level with HCM tools like Workday or SAP SuccessFactors?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -9982,89 +2781,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with HCM tools, including managing complex HR processes, integrating with other systems, customizing workflows, and ensuring compliance with HR regulations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10077,7 +2793,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you with event management tools like Cvent or Eventbrite?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10095,89 +2810,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "dvanced: I have extensive experience with Event Management tools, including managing large-scale events, integrating with other systems for event promotion and data analysis, and customizing event experiences."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10189,7 +2821,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "What's your experience with Auth0 for identity management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10207,89 +2838,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Auth0, including managing large user bases, implementing advanced access control strategies, integrating with other systems, and ensuring compliance with identity management regulations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10302,7 +2850,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Tealium for customer data management and event tracking?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10320,89 +2867,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Tealium, including managing large-scale customer data, setting up advanced event tracking strategies, integrating with other systems for data analysis, and ensuring compliance with data management regulations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10414,7 +2878,6 @@ export const questionsDataFull = [
       "Comfort Level"
     ],
     "question": "How comfortable are you with Azure Active Directory for identity and access management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10432,89 +2895,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Azure Active Directory, including managing large user bases, implementing advanced access control strategies, integrating with other systems, and ensuring compliance with identity management regulations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10524,7 +2904,6 @@ export const questionsDataFull = [
       "What's your experience level with MuleSoft for building APIs and integrations?"
     ],
     "question": "What's your experience level with MuleSoft for building APIs and integrations?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10542,89 +2921,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with MuleSoft, including managing large-scale API integrations, designing complex data transformation workflows, and ensuring compliance with API design standards."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10636,7 +2932,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you with Seismic for sales enablement?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10654,89 +2949,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Seismic, including managing large content libraries, implementing advanced customer interaction strategies, integrating with other systems, and ensuring compliance with sales enablement best practices."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10748,7 +2960,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency with Highspot for sales enablement?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10766,89 +2977,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Highspot, including managing large content libraries, implementing advanced customer interaction strategies, integrating with other systems, and ensuring compliance with sales enablement best practices."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10860,7 +2988,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience level with Workday for human capital management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10878,89 +3005,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Workday, including managing large employee bases, implementing complex HR processes, integrating with other systems, and ensuring compliance with HR management best practices."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -10972,7 +3016,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Data Loss Prevention (DLP) systems?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -10990,89 +3033,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with DLP systems, including strategy design, system implementation and management, incident response, and ensuring regulatory compliance."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11084,7 +3044,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your experience level with Robotic Process Automation (RPA) tools?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11102,89 +3061,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with RPA, including process identification, bot design and management, and measuring automation impacts."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11196,7 +3072,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency with Selenium for web testing?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11214,89 +3089,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Selenium, including test planning, scripting complex test scenarios, integrating with CI/CD pipelines, and troubleshooting intricate issues."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11308,7 +3100,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your experience level with OutSystems for low-code development?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11326,89 +3117,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with OutSystems, including application planning, creating complex applications, performance optimization, and troubleshooting issues."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11420,7 +3128,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Appian for business process management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11438,89 +3145,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Appian, including process design, implementation, optimization, and advanced analytics."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11533,7 +3157,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "What's your familiarity with SharePoint for collaboration and document management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11551,89 +3174,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with SharePoint, including site design, administration, integrating with other systems, and implementing document management best practices."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11645,7 +3185,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you assess your proficiency with CrowdStrike for endpoint security?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11663,89 +3202,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with CrowdStrike, including strategy design, policy management, incident response, and advanced threat hunting."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11757,7 +3213,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience level with Sophos for cybersecurity?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11775,89 +3230,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Sophos, including strategy design, policy management, incident response, and advanced threat analysis."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11870,7 +3242,6 @@ export const questionsDataFull = [
       "Knowledge"
     ],
     "question": "How would you evaluate your knowledge of containerization technologies like Docker or Kubernetes?\"",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -11888,89 +3259,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Docker or Kubernetes, including complex deployment strategies, orchestration, scaling, and securing applications."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -11982,7 +3270,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Digital Twin technology for simulations?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12000,89 +3287,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Digital Twin technology, including advanced simulation models, performance tuning, and predictive analysis."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12094,7 +3298,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your level of experience with Process Simulation tools?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12112,89 +3315,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Process Simulation tools, including complex model development, optimization, and advanced analytics."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12206,7 +3326,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you describe your proficiency with Hadoop for big data processing?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12224,89 +3343,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Hadoop, including cluster management, performance tuning, and advanced data processing techniques."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12318,7 +3354,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Docker for containerization?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12336,89 +3371,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have extensive experience with Docker, including complex multi-container setups, Docker Compose, Docker Swarm, and best practices for container security and optimization."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12430,7 +3382,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your level of experience with Web Application Firewall (WAF) solutions?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12448,89 +3399,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have deep experience with WAF solutions, having overseen their implementation and management in large-scale environments."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12542,7 +3410,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency with Stripe for payment processing?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12560,89 +3427,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I have comprehensive knowledge and experience with Stripe, having integrated it into multiple complex online platforms."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12654,7 +3438,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your level of experience with Braintree for online payments?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12672,89 +3455,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm proficient with Braintree, having successfully integrated it into multiple complex e-commerce systems."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12767,7 +3467,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you describe your proficiency with Apache Kafka for real-time event streaming and processing?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12785,89 +3484,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with Apache Kafka, having used it to handle large-scale, real-time data streams."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12881,7 +3497,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you describe your proficiency with AWS Kinesis for real-time streaming data and analytics?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -12899,89 +3514,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with AWS Kinesis, having implemented it for large-scale, real-time data processing and analytics."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -12994,7 +3526,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your experience level with Google Cloud Pub/Sub for real-time messaging and event-driven services?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13012,89 +3543,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Google Cloud Pub/Sub, having implemented it in large-scale, real-time systems."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13107,7 +3555,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience level with Apache Storm for real-time computation and processing of large volumes of data?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13125,89 +3572,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm proficient in Apache Storm, including setting up and managing complex real-time computation and data processing projects, integrating with other tools, and training others."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13220,7 +3584,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you evaluate your proficiency with Looker for data exploration and business intelligence?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13238,89 +3601,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Looker, having used it extensively for data analysis, visualization, and business intelligence tasks."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13333,7 +3613,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What's your experience level with SAP BusinessObjects for business intelligence and reporting?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13351,89 +3630,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "I'm proficient in SAP BusinessObjects, including setting up and managing complex business intelligence projects, integrating with other tools, and training others."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13446,7 +3642,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you assess your proficiency with Domo for business intelligence and data visualization?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13464,89 +3659,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Domo, having used it extensively to create data visualizations and drive business intelligence initiatives."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13558,7 +3670,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How would you rate your proficiency in using Zoho CRM for managing customer relationships?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13576,89 +3687,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with Zoho CRM, having used it extensively for customer relationship management in a business context."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13670,7 +3698,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "How would you describe your experience with Asana as a project management tool?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13688,89 +3715,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Asana, having used it extensively for project management and team collaboration."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13782,7 +3726,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience level with MySQL as a database management system?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13800,89 +3743,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: capable of database architecture design, managing MySQL clusters and performance optimization"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -13895,7 +3755,6 @@ export const questionsDataFull = [
       "Proficiency"
     ],
     "question": "How proficient are you in using Jira for project management and issue tracking?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -13913,89 +3772,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with Jira, having used it extensively for project management, issue tracking, sprint planning, and reporting."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14008,7 +3784,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "Which statement best describes your experience with Confluence for collaboration and document management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14026,89 +3801,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Confluence, having used it extensively for documentation, collaboration, and knowledge sharing across teams."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14120,7 +3812,6 @@ export const questionsDataFull = [
       "Skills"
     ],
     "question": "How would you rate your skills with Postman for API testing?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14138,89 +3829,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Postman, having used it extensively for API testing, automation, and managing complex workflows."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14232,7 +3840,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience with Zapier for automation?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14250,89 +3857,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with Zapier, having used it extensively to automate complex multi-step workflows across multiple applications."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14344,7 +3868,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "What's your proficiency level with Trello for task management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14362,89 +3885,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Trello, having used it extensively for project management, workflow customization, and integration with other tools."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14456,7 +3896,6 @@ export const questionsDataFull = [
       "Proficiency Level"
     ],
     "question": "What is your proficiency level with Adobe Creative Suite for design tasks?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14474,89 +3913,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with Adobe Creative Suite, having used it extensively for graphic design, video editing, UX/UI design, and more."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14568,7 +3924,6 @@ export const questionsDataFull = [
       "Skills"
     ],
     "question": "How would you rate your skills with AWS as a cloud platform?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14586,89 +3941,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with AWS, having managed complex deployments, implemented advanced security measures, and optimized for performance and cost."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14680,7 +3952,6 @@ export const questionsDataFull = [
       "Experience"
     ],
     "question": "What's your experience with SolarWinds for network management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14698,89 +3969,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with SolarWinds, having used it extensively for network management, configuring alerts, automating tasks, and managing network configurations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14792,7 +3980,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Power BI for business intelligence?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14810,89 +3997,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Power BI, having used it extensively for data analysis, creating complex dashboards, and sharing insights with stakeholders."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -14905,7 +4009,6 @@ export const questionsDataFull = [
       "Familiarity"
     ],
     "question": "How familiar are you with Splunk for data analytics and log management?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -14923,89 +4026,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly experienced with Splunk, having used it extensively for data analytics, log management, incident investigation, and operational intelligence."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15017,7 +4037,6 @@ export const questionsDataFull = [
       "Skills"
     ],
     "question": "How would you rate your skills with Microsoft Dynamics 365 as a CRM system?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -15035,89 +4054,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with Microsoft Dynamics 365, having used it extensively for CRM, sales, marketing, service, and more."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15130,7 +4066,6 @@ export const questionsDataFull = [
       "Experience Level"
     ],
     "question": "What is your experience level with SharePoint for document management and collaboration?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -15148,89 +4083,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Advanced: I'm highly proficient with SharePoint, having used it extensively for document management, intranet portals, workflows, and integrations."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15242,27 +4094,8 @@ export const questionsDataFull = [
       "Insurance",
       "Availability"
     ],
-    "question": "How important is comprehensive health benefits (medical, dental, vision) to you?",
-    "employerQuestion": "To what extent do you offer comprehensive health benefits (medical, dental, vision)?",
+    "question": "To what extent do you offer comprehensive health benefits (medical, dental, vision)?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: Health benefits not required from the employer."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: Basic health benefits would be appreciated but are not mandatory."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: Expect comprehensive health benefits as part of employment."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: Comprehensive health benefits are a must-have in job consideration."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not at all: No health benefits offered."
@@ -15279,88 +4112,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "To a great extent: Extensive health benefits package, including comprehensive medical, dental, vision and additional health-related benefits, is offered."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15372,27 +4123,8 @@ export const questionsDataFull = [
       "Insurance",
       "Availability"
     ],
-    "question": "How important is dental and vision insurance to you?",
-    "employerQuestion": "To what extent does your company offer dental and vision insurance?",
+    "question": "To what extent does your company offer dental and vision insurance?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: I have no need or expectation for dental and vision insurance in my benefits package."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: Dental and vision insurance are nice to have, but they are not a deal-breaker in my decision."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: I consider dental and vision insurance a significant factor in my decision-making, but it's not the only factor."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: Dental and vision insurance are crucial for me. I expect them to be part of my benefits package."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not at all: Our company does not offer dental and vision insurance as part of our benefits package."
@@ -15409,88 +4141,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "To a great extent: Our company puts significant emphasis on dental and vision insurance, with premium coverage options available."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15501,27 +4151,8 @@ export const questionsDataFull = [
       "balance",
       "burnout"
     ],
-    "question": "How important is work-life balance to you?",
-    "employerQuestion": "How much does the company prioritize work-life balance?",
+    "question": "How much does the company prioritize work-life balance?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not important: Focus is primarily on work, even at the expense of personal time."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: Prepared to occasionally work long hours, but generally prefer a balance."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: Value a strong balance between work and personal life, aim to minimize the intrusion of work into personal time."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: Work-life balance is a top priority, striving to maintain a strict separation between work and personal time."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not at all: No specific policies supporting work-life balance, work demands regularly intrude into personal time."
@@ -15538,88 +4169,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "To a great extent: Strong support for work-life balance, policies ensure work doesn't intrude into personal time barring exceptional circumstances."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15630,27 +4179,8 @@ export const questionsDataFull = [
       "Size",
       "Preference"
     ],
-    "question": "What is your preferred company size?",
-    "employerQuestion": "Which most accurately describes your company size? ",
+    "question": "Which most accurately describes your company size? ",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Micro/SMEs: I prefer to work in small companies or startups where I can wear multiple hats and grow with the organization."
-      },
-      {
-        "answerID": 2,
-        "answer": "Mid-size: I prefer a balance between the close-knit environment of a small company and the resources of a larger one."
-      },
-      {
-        "answerID": 3,
-        "answer": "Large: I prefer large companies where there are clear structures, roles, and paths for career progression."
-      },
-      {
-        "answerID": 4,
-        "answer": "Very large/MNCs: I prefer multinational corporations where I can engage with a global team and potentially have overseas opportunities."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Micro: We are a small company or startup with a flexible and collaborative environment."
@@ -15667,88 +4197,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Very large: We are a multinational corporation with opportunities for global exposure and growth."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15759,27 +4207,8 @@ export const questionsDataFull = [
       "Relationship",
       "Type"
     ],
-    "question": "What is your ideal relationship with your manager?",
-    "employerQuestion": "How would you describe the management style at your company?",
+    "question": "How would you describe the management style at your company?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Hands-off: I prefer a manager who trusts me to work independently most of the time."
-      },
-      {
-        "answerID": 2,
-        "answer": "Balanced: I prefer a manager who offers guidance but also gives me space to work independently."
-      },
-      {
-        "answerID": 3,
-        "answer": "Collaborative: I prefer a manager who works closely with me, providing frequent feedback and guidance."
-      },
-      {
-        "answerID": 4,
-        "answer": "Directive: I prefer a manager who gives clear instructions and closely monitors my work."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Hands-off: Our management style is mostly hands-off, trusting employees to work independently."
@@ -15796,88 +4225,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Directive: Our managers provide clear instructions and closely monitor their team's work."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -15889,27 +4236,8 @@ export const questionsDataFull = [
       "Hours",
       "Importance"
     ],
-    "question": "How important are flexible working hours to you?",
-    "employerQuestion": "To what extent does your company offer flexible working hours?",
+    "question": "To what extent does your company offer flexible working hours?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: I'm comfortable with a standard, fixed work schedule."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: I appreciate some flexibility in my work schedule but it's not a primary concern."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: Flexible work hours are a significant factor in my decision-making, but they're not the only factor."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: Flexible work hours are crucial to me. I need to be able to adjust my work schedule."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not at all: Our company adheres to a standard, fixed work schedule."
@@ -15926,88 +4254,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "To a great extent: Our company has a strong emphasis on flexible work hours. We trust our employees to manage their own schedules."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16019,27 +4265,8 @@ export const questionsDataFull = [
       "Commitment",
       "Importance"
     ],
-    "question": "How important is a company's commitment to diversity and inclusion to you?",
-    "employerQuestion": "How committed is your company to diversity and inclusion?",
+    "question": "How committed is your company to diversity and inclusion?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: I don't consider a company's diversity and inclusion policies when deciding on a job."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: A company's commitment to diversity and inclusion is a positive factor but not a key decision point for me."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: A company's commitment to diversity and inclusion significantly influences my job decisions."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: I only consider companies that demonstrate a strong commitment to diversity and inclusion."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not at all: Our company doesn't have specific diversity and inclusion initiatives in place."
@@ -16056,88 +4283,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "To a great extent: Our company places a high emphasis on diversity and inclusion, and it's deeply ingrained in our culture and values."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16149,27 +4294,8 @@ export const questionsDataFull = [
       "Resources",
       "Importance"
     ],
-    "question": "How important are mental health resources and support from a prospective employer?",
-    "employerQuestion": "How comprehensive are the mental health resources and support your company offers?",
+    "question": "How comprehensive are the mental health resources and support your company offers?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: Mental health resources aren't a factor in my decision."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: I appreciate mental health resources, but they're not a primary concern."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: Mental health resources are a significant factor in my decision."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: The availability of robust mental health resources is a top priority for me."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "None: We currently do not offer mental health resources."
@@ -16186,88 +4312,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Excellent: We offer a wide range of mental health resources, including preventative programs and comprehensive coverage."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16279,27 +4323,8 @@ export const questionsDataFull = [
       "Layouts",
       "Preference"
     ],
-    "question": "How do you feel about open office layouts?",
-    "employerQuestion": "What is your company's office layout like?",
+    "question": "What is your company's office layout like?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Dislike: I find open office layouts distracting and prefer individual workspaces."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat like: I don't mind open office layouts but appreciate designated quiet areas."
-      },
-      {
-        "answerID": 3,
-        "answer": "Like: I enjoy the collaboration that open office layouts encourage."
-      },
-      {
-        "answerID": 4,
-        "answer": "Love: I thrive in open office layouts and highly value collaborative workspaces."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Traditional: We primarily have individual offices or cubicles."
@@ -16316,88 +4341,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Fully open: We have a completely open office layout that encourages collaboration."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16409,27 +4352,8 @@ export const questionsDataFull = [
       "Interaction",
       "Preference"
     ],
-    "question": "What level of social interaction do you prefer at work?",
-    "employerQuestion": "What is the level of social interaction in your work environment?",
+    "question": "What is the level of social interaction in your work environment?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Minimal: I prefer working independently with little social interaction."
-      },
-      {
-        "answerID": 2,
-        "answer": "Moderate: I enjoy occasional social interaction but also value focused, independent work time."
-      },
-      {
-        "answerID": 3,
-        "answer": "High: I enjoy regular social interaction and collaboration with my colleagues."
-      },
-      {
-        "answerID": 4,
-        "answer": "Very high: I thrive in a highly collaborative and social work environment."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Minimal: Our work environment favors independent work with little social interaction."
@@ -16446,88 +4370,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Very high: Our work environment is highly collaborative and social."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16538,27 +4380,8 @@ export const questionsDataFull = [
       "Travel",
       "Preference"
     ],
-    "question": "What is your preference for business travel in your role?",
-    "employerQuestion": "What level of business travel is required in this role?",
+    "question": "What level of business travel is required in this role?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "No travel: I prefer a role that requires no business travel."
-      },
-      {
-        "answerID": 2,
-        "answer": "Minimal travel: Occasional travel is acceptable, but it's not my preference."
-      },
-      {
-        "answerID": 3,
-        "answer": "Moderate travel: I'm open to some travel as part of my role."
-      },
-      {
-        "answerID": 4,
-        "answer": "Frequent travel: I enjoy traveling and am willing to do so frequently for my role."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No travel: This role does not require any business travel."
@@ -16575,88 +4398,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Frequent travel: This role requires frequent business travel."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16667,27 +4408,8 @@ export const questionsDataFull = [
       "Sustainability",
       "Importance"
     ],
-    "question": "How important is a company's sustainability and environmental impact to you?",
-    "employerQuestion": "How would you describe your company's commitment to sustainability and environmental impact?",
+    "question": "How would you describe your company's commitment to sustainability and environmental impact?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: A company's environmental policies aren't a factor in my decision."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: I appreciate companies that are environmentally conscious, but it's not a primary concern."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: A company's environmental policies are a significant factor in my decision."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: Working for an environmentally responsible company is a top priority for me."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not a focus: Environmental sustainability is currently not a primary focus."
@@ -16704,88 +4426,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Excellent: Environmental sustainability is a core part of our mission and operations."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16795,7 +4435,6 @@ export const questionsDataFull = [
       ""
     ],
     "question": "What is your preferred company size?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -16813,89 +4452,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Large: I prefer working in a company with over 500 employees."
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -16906,27 +4462,8 @@ export const questionsDataFull = [
       "Location",
       "Preference"
     ],
-    "question": "What is your preferred work location?",
-    "employerQuestion": "What work location options does this role offer?",
+    "question": "What work location options does this role offer?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Fully remote: I prefer to work completely remotely."
-      },
-      {
-        "answerID": 2,
-        "answer": "Mostly remote with occasional office visits: I prefer to work remotely most of the time, but I'm open to occasional office visits."
-      },
-      {
-        "answerID": 3,
-        "answer": "Hybrid (half remote, half office): I prefer a balance between remote work and office-based work."
-      },
-      {
-        "answerID": 4,
-        "answer": "Fully office-based: I prefer working in an office environment full-time."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Fully remote: This role is completely remote."
@@ -16943,88 +4480,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Fully office-based: This role requires working in the office full-time."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17035,27 +4490,8 @@ export const questionsDataFull = [
       "Mission",
       "Importance"
     ],
-    "question": "How important is the company's mission to you?",
-    "employerQuestion": "How central is your company's mission to its operations and culture?",
+    "question": "How central is your company's mission to its operations and culture?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: The company's mission isn't a factor in my decision."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: While I value a meaningful mission, it isn't my top priority."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: A compelling mission is a significant factor in my decision."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: The company's mission is a top priority in my decision."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Not central: Our company mission doesn't significantly influence our operations and culture."
@@ -17072,88 +4508,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Extremely central: Our mission is the driving force behind our operations and culture."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17164,27 +4518,8 @@ export const questionsDataFull = [
       "Occurrence",
       "Preference"
     ],
-    "question": "How do you feel about working overtime occasionally?",
-    "employerQuestion": "What is the likelihood of overtime in this role?",
+    "question": "What is the likelihood of overtime in this role?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Dislike: I strongly prefer a strict 40-hour workweek."
-      },
-      {
-        "answerID": 2,
-        "answer": "Acceptable: While not preferred, I'm open to occasional overtime."
-      },
-      {
-        "answerID": 3,
-        "answer": "Okay: I'm okay with working overtime as needed."
-      },
-      {
-        "answerID": 4,
-        "answer": "Comfortable: I'm comfortable with regular overtime as part of my role."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Rare: This role rarely requires overtime."
@@ -17201,88 +4536,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Very frequently: Overtime is a significant part of our work schedule."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17293,27 +4546,8 @@ export const questionsDataFull = [
       "Code",
       "Type"
     ],
-    "question": "What is your preference regarding the dress code at work?",
-    "employerQuestion": "What is the dress code at your workplace?",
+    "question": "What is the dress code at your workplace?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Casual: I prefer a workplace where casual attire is acceptable."
-      },
-      {
-        "answerID": 2,
-        "answer": "Business Casual: I prefer a business casual dress code."
-      },
-      {
-        "answerID": 3,
-        "answer": "Business Formal: I prefer a business formal dress code."
-      },
-      {
-        "answerID": 4,
-        "answer": "No preference: I don't have a strong preference regarding dress code."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Casual: Our workplace allows casual attire."
@@ -17330,88 +4564,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Flexible: Our dress code is flexible depending on the occasion."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17423,27 +4575,8 @@ export const questionsDataFull = [
       "Activities",
       "Importance"
     ],
-    "question": "How important are team-building activities to you?",
-    "employerQuestion": "How frequently does your company organize team-building activities?",
+    "question": "How frequently does your company organize team-building activities?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: Team-building activities aren't a factor in my decision."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: I appreciate team-building activities, but they're not a primary concern."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: Team-building activities are a significant factor in my decision."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: Regular team-building activities are a top priority for me."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Rarely: We rarely or never have organized team-building activities."
@@ -17460,88 +4593,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Very frequently: We prioritize regular team-building activities."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17553,27 +4604,8 @@ export const questionsDataFull = [
       "Opportunities",
       "Importance"
     ],
-    "question": "How important is the availability of professional development or continuous learning opportunities in a company to you?",
-    "employerQuestion": "How would you describe the professional development or continuous learning opportunities at your company?",
+    "question": "How would you describe the professional development or continuous learning opportunities at your company?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Not at all important: Professional development opportunities aren't a factor in my decision."
-      },
-      {
-        "answerID": 2,
-        "answer": "Somewhat important: I appreciate professional development opportunities, but they're not a primary concern."
-      },
-      {
-        "answerID": 3,
-        "answer": "Very important: Professional development opportunities are a significant factor in my decision."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extremely important: The availability of robust professional development opportunities is a top priority for me."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Minimal: We offer some professional development or continuous learning opportunities."
@@ -17590,88 +4622,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Comprehensive: We have a robust program for professional development or continuous learning."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17682,27 +4632,8 @@ export const questionsDataFull = [
       "Style",
       "Preference"
     ],
-    "question": "What is your preferred communication style at work?",
-    "employerQuestion": "What is the dominant communication style in your company?",
+    "question": "What is the dominant communication style in your company?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Written: I prefer communicating via written methods such as email or chat."
-      },
-      {
-        "answerID": 2,
-        "answer": "Verbal: I prefer face-to-face or voice communication."
-      },
-      {
-        "answerID": 3,
-        "answer": "Mixed: I prefer a mix of written and verbal communication."
-      },
-      {
-        "answerID": 4,
-        "answer": "No preference: I don't have a strong preference and can adapt to the team's communication style."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Written: Our company primarily relies on written communication such as email or chat."
@@ -17719,88 +4650,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Flexible: Our communication style is flexible and adapts to the needs of the team."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17812,27 +4661,8 @@ export const questionsDataFull = [
       "communication",
       "performance review"
     ],
-    "question": "What kind of feedback culture do you prefer at your workplace?",
-    "employerQuestion": "What type of feedback culture does your workplace have?",
+    "question": "What type of feedback culture does your workplace have?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "Regular, structured feedback: I appreciate regular, structured feedback that provides clarity on my performance and areas of improvement."
-      },
-      {
-        "answerID": 2,
-        "answer": "Spontaneous feedback: I prefer spontaneous feedback, as it feels more organic and in-the-moment."
-      },
-      {
-        "answerID": 3,
-        "answer": "Minimal feedback: I work best with minimal feedback, as long as my performance is on track."
-      },
-      {
-        "answerID": 4,
-        "answer": "I don't have a preference: I'm flexible and can adapt to any feedback culture."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Regular, structured feedback: We provide regular, structured feedback to our employees to ensure they understand their performance and areas for improvement."
@@ -17849,88 +4679,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "No specific feedback culture: We don't have a specific feedback culture; it varies depending on the team and the situation."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -17942,27 +4690,8 @@ export const questionsDataFull = [
       "job duties",
       "location"
     ],
-    "question": "How do you feel about travel requirements for work?",
-    "employerQuestion": "How often does your company require employees to travel for work?",
+    "question": "How often does your company require employees to travel for work?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "I don't mind frequent travel: I'm comfortable with a job that requires frequent travel."
-      },
-      {
-        "answerID": 2,
-        "answer": "I prefer occasional travel: I prefer a job that requires occasional travel, but not consistently."
-      },
-      {
-        "answerID": 3,
-        "answer": "I prefer minimal to no travel: I prefer a job that requires minimal to no travel."
-      },
-      {
-        "answerID": 4,
-        "answer": "I am unable to travel: I am unable to travel for work due to personal constraints."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Frequent travel: Our employees are frequently required to travel for work."
@@ -17979,88 +4708,6 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "No travel: Our roles do not require any travel."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
@@ -18072,27 +4719,8 @@ export const questionsDataFull = [
       "collaboration",
       "team structure"
     ],
-    "question": "How do you feel about working in cross-functional teams?",
-    "employerQuestion": "How often do your employees work in cross-functional teams?",
+    "question": "How often do your employees work in cross-functional teams?",
     "answers": [
-      {
-        "answerID": 1,
-        "answer": "I enjoy it: I enjoy working in cross-functional teams as it provides a diverse set of perspectives and skill sets."
-      },
-      {
-        "answerID": 2,
-        "answer": "I prefer it occasionally: I prefer occasional cross-functional collaboration, but also value working within my own team."
-      },
-      {
-        "answerID": 3,
-        "answer": "I prefer working in my own department: I prefer working within my own department or team."
-      },
-      {
-        "answerID": 4,
-        "answer": "No preference: I don't have a preference; I can adapt to either environment."
-      }
-    ],
-    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Often: Our employees often work in cross-functional teams."
@@ -18109,197 +4737,34 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Never: Our employees do not work in cross-functional teams."
       }
-    ],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
     "questionID": "176",
     "category": "Educational Background",
     "tags": [
-      ""
+      "Highest education level",
+      "Completed education",
+      "Degree",
+      "Diploma"
     ],
-    "question": "What is the highest level of education you have completed?",
-    "employerQuestion": "",
+    "question": "What's your highest completed level of education?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "High School / GED"
+        "answer": "High school diploma or equivalent"
       },
       {
         "answerID": 2,
-        "answer": "Some College"
+        "answer": "Some college or technical certification"
       },
       {
         "answerID": 3,
-        "answer": "Bachelor's Degree"
+        "answer": "Bachelor's degree"
       },
       {
         "answerID": 4,
-        "answer": "Postgraduate Degree"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Postgraduate degree"
       }
     ]
   },
@@ -18307,109 +4772,28 @@ export const questionsDataFull = [
     "questionID": "177",
     "category": "Educational Background",
     "tags": [
-      ""
+      "Technical boot camp",
+      "Training program",
+      "Specialized training",
+      "Skills enhancement"
     ],
-    "question": "Have you participated in any technical boot camps or intensive training programs?",
-    "employerQuestion": "",
+    "question": "Have you taken part in any specialized technical boot camps or concentrated training programs?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, multiple programs"
+        "answer": "Yes, I've completed one or more programs"
       },
       {
         "answerID": 2,
-        "answer": "Yes, one program"
+        "answer": "Currently enrolled in a program"
       },
       {
         "answerID": 3,
-        "answer": "Currently in a program"
+        "answer": "No, but I'm open to it"
       },
       {
         "answerID": 4,
-        "answer": "No programs"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "No, and I'm not currently considering it"
       }
     ]
   },
@@ -18417,109 +4801,28 @@ export const questionsDataFull = [
     "questionID": "178",
     "category": "Educational Background",
     "tags": [
-      ""
+      "Higher education",
+      "Primary study area",
+      "Major",
+      "Discipline"
     ],
-    "question": "If you attended a college or university, what was your major field of study?",
-    "employerQuestion": "",
+    "question": "If you've pursued higher education, what was your primary area of study?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Computer Science / Engineering"
+        "answer": "STEM (Science, Technology, Engineering, Mathematics)"
       },
       {
         "answerID": 2,
-        "answer": "Business / Management"
+        "answer": "Business or Social Sciences"
       },
       {
         "answerID": 3,
-        "answer": "Natural Sciences / Mathematics"
+        "answer": "Arts or Humanities"
       },
       {
         "answerID": 4,
-        "answer": "Humanities / Other"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Other/Not Applicable"
       }
     ]
   },
@@ -18527,124 +4830,217 @@ export const questionsDataFull = [
     "questionID": "179",
     "category": "Educational Background",
     "tags": [
-      ""
+      "Self-learning",
+      "Online learning",
+      "Technical skills",
+      "E-learning platform"
     ],
-    "question": "Have you done any self-paced online learning for technical skills (e.g., Coursera, Udemy, Khan Academy)?",
-    "employerQuestion": "",
+    "question": "Have you engaged in self-directed online learning for technical skills (for instance, through Coursera, Udemy, or Khan Academy)?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, extensively"
+        "answer": "Yes, I've completed one or more courses"
       },
       {
         "answerID": 2,
-        "answer": "Yes, occasionally"
+        "answer": "Currently enrolled in an online course"
       },
       {
         "answerID": 3,
-        "answer": "Starting soon"
+        "answer": "No, but I'm open to it"
       },
       {
         "answerID": 4,
-        "answer": "Never"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "No, and I'm not currently considering it"
       }
     ]
   },
   {
     "questionID": "180",
-    "category": "Work & Industry Experience",
+    "category": "Educational Background",
     "tags": [
-      ""
+      "Industry certification",
+      "Professional qualification",
+      "Field-relevant certification",
+      "Career certification"
     ],
-    "question": "How many years of experience do you have in a sales or solutions engineering role?",
-    "employerQuestion": "",
+    "question": "Have you completed any industry certifications relevant to your field?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "None"
+        "answer": "Yes, multiple certifications"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, one certification"
+      },
+      {
+        "answerID": 3,
+        "answer": "No, but planning to pursue"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, and not planning to pursue"
+      }
+    ]
+  },
+  {
+    "questionID": "181",
+    "category": "Educational Background",
+    "tags": [
+      "Internship",
+      "Co-op program",
+      "Field experience",
+      "Practical training"
+    ],
+    "question": "Have you participated in any internships or co-op programs in your field?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, multiple internships/co-ops"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, one internship/co-op"
+      },
+      {
+        "answerID": 3,
+        "answer": "No, but open to future opportunities"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, and not seeking internships/co-ops"
+      }
+    ]
+  },
+  {
+    "questionID": "182",
+    "category": "Educational Background",
+    "tags": [
+      "Research presentation",
+      "Published work",
+      "Academic research",
+      "Professional research"
+    ],
+    "question": "Have you presented or published any academic or professional research?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, multiple publications/presentations"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, one publication/presentation"
+      },
+      {
+        "answerID": 3,
+        "answer": "No, but planning to pursue"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, and not planning to pursue"
+      }
+    ]
+  },
+  {
+    "questionID": "183",
+    "category": "Educational Background",
+    "tags": [
+      "Academic honors",
+      "Field awards",
+      "Recognition",
+      "Academic achievement"
+    ],
+    "question": "Have you received any academic honors or awards in your field?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, multiple honors/awards"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, one honor/award"
+      },
+      {
+        "answerID": 3,
+        "answer": "No, but aiming for future recognitions"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, and not focused on honors/awards"
+      }
+    ]
+  },
+  {
+    "questionID": "184",
+    "category": "Educational Background",
+    "tags": [
+      "Patent holder",
+      "Invention contribution",
+      "Innovation",
+      "Intellectual property"
+    ],
+    "question": "Do you hold any patents or have you contributed to any inventions?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, multiple patents/inventions"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, one patent/invention"
+      },
+      {
+        "answerID": 3,
+        "answer": "No, but interested in future innovation"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, and not focused on patents/inventions"
+      }
+    ]
+  },
+  {
+    "questionID": "185",
+    "category": "Educational Background",
+    "tags": [
+      "Teaching experience",
+      "Tutoring role",
+      "Educational involvement",
+      "Mentorship"
+    ],
+    "question": "Have you participated in any teaching or tutoring roles in your field of study or profession?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, multiple teaching/tutoring roles"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, one teaching/tutoring role"
+      },
+      {
+        "answerID": 3,
+        "answer": "No, but open to future teaching/tutoring roles"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, and not seeking teaching/tutoring roles"
+      }
+    ]
+  },
+  {
+    "questionID": "186",
+    "category": "Work & Industry Experience",
+    "tags": [
+      "Sales Engineer experience",
+      "Years in role"
+    ],
+    "question": "How many years of experience do you have in a sales or solutions engineering role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than 1 year"
       },
       {
         "answerID": 2,
@@ -18652,109 +5048,80 @@ export const questionsDataFull = [
       },
       {
         "answerID": 3,
-        "answer": "4-6 years"
+        "answer": "3-5 years"
       },
       {
         "answerID": 4,
-        "answer": "More than 6 years"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Over 5 years"
       }
     ]
   },
   {
-    "questionID": "181",
+    "questionID": "187",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Deal value experience",
+      "High-value deals"
     ],
-    "question": "What industry sector do you have the most experience in?",
-    "employerQuestion": "",
+    "question": "What's the highest deal value you've worked on as a Sales Engineer?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Tech/IT Services"
+        "answer": "Less than $100,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "$100,000 - $500,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$500,000 - $1,000,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Over $1,000,000"
+      }
+    ]
+  },
+  {
+    "questionID": "188",
+    "category": "Work & Industry Experience",
+    "tags": [
+      "Regulated industries experience",
+      "Specific industry experience"
+    ],
+    "question": "Have you had experience selling into regulated industries? If so, which ones?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, healthcare industry"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, financial industry"
+      },
+      {
+        "answerID": 3,
+        "answer": "Yes, government sector"
+      },
+      {
+        "answerID": 4,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "189",
+    "category": "Work & Industry Experience",
+    "tags": [
+      "Industry experience",
+      "Sales Engineer role"
+    ],
+    "question": "In what industries have you worked as a Sales Engineer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Technology/Software"
       },
       {
         "answerID": 2,
@@ -18762,435 +5129,157 @@ export const questionsDataFull = [
       },
       {
         "answerID": 3,
-        "answer": "Finance/Banking"
+        "answer": "Manufacturing"
       },
       {
         "answerID": 4,
-        "answer": "Other Industries"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Other"
       }
     ]
   },
   {
-    "questionID": "182",
+    "questionID": "190",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Product/Service experience",
+      "Types of sales"
+    ],
+    "question": "What types of products or services have you primarily sold as a Sales Engineer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Software products"
+      },
+      {
+        "answerID": 2,
+        "answer": "Hardware products"
+      },
+      {
+        "answerID": 3,
+        "answer": "Consultancy services"
+      },
+      {
+        "answerID": 4,
+        "answer": "Other services"
+      }
+    ]
+  },
+  {
+    "questionID": "191",
+    "category": "Work & Industry Experience",
+    "tags": [
+      "Client interaction frequency",
+      "Direct client engagement"
+    ],
+    "question": "How often have you interacted directly with clients in your role as a Sales Engineer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Daily"
+      },
+      {
+        "answerID": 2,
+        "answer": "Weekly"
+      },
+      {
+        "answerID": 3,
+        "answer": "Monthly"
+      },
+      {
+        "answerID": 4,
+        "answer": "Rarely"
+      }
+    ]
+  },
+  {
+    "questionID": "192",
+    "category": "Work & Industry Experience",
+    "tags": [
+      "Startup experience",
+      "Startup environment"
     ],
     "question": "Have you worked in a startup environment?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, for many years"
+        "answer": "Yes, I have worked at a startup from its inception"
       },
       {
         "answerID": 2,
-        "answer": "Yes, for a few years"
+        "answer": "Yes, I have joined a startup after its initial phase"
       },
       {
         "answerID": 3,
-        "answer": "Briefly"
+        "answer": "No, but I have worked at small to medium-sized businesses"
       },
       {
         "answerID": 4,
-        "answer": "Never"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "No, I have only worked at large companies"
       }
     ]
   },
   {
-    "questionID": "183",
+    "questionID": "193",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Corporate experience",
+      "Large company environment"
     ],
     "question": "Have you worked in a large corporate environment (5000+ employees)?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, for many years"
+        "answer": "Yes, and it was my most recent job"
       },
       {
         "answerID": 2,
-        "answer": "Yes, for a few years"
+        "answer": "Yes, but not recently"
       },
       {
         "answerID": 3,
-        "answer": "Briefly"
+        "answer": "No, but I have worked at medium-sized companies (500-5000 employees)"
       },
       {
         "answerID": 4,
-        "answer": "Never"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "No, I have only worked at small businesses or startups"
       }
     ]
   },
   {
-    "questionID": "184",
+    "questionID": "194",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Management experience",
+      "Sales Engineers team"
     ],
-    "question": "Have you managed a team before?",
-    "employerQuestion": "",
+    "question": "Do you have experience managing a team of Sales Engineers?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, large teams (10+)"
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Yes, small teams (2-9)"
+        "answer": "Yes, teams of 1-5"
       },
       {
         "answerID": 3,
-        "answer": "Briefly / temporarily"
+        "answer": "Yes, teams of 6-10"
       },
       {
         "answerID": 4,
-        "answer": "No, never managed a team"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Yes, teams of more than 10"
       }
     ]
   },
   {
-    "questionID": "185",
+    "questionID": "195",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Deal size familiarity",
+      "Size of deals"
     ],
     "question": "What size of deals are you most familiar with handling?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19208,99 +5297,16 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Large deals ($1M+)"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
-    "questionID": "186",
+    "questionID": "196",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Team support experience",
+      "Large team support"
     ],
-    "question": "What's the largest team you have been a part of?",
-    "employerQuestion": "",
+    "question": "What's the largest team you have supported?",
     "answers": [
       {
         "answerID": 1,
@@ -19318,99 +5324,17 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Sole contributor"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
-    "questionID": "187",
+    "questionID": "197",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Product launches",
+      "leadership",
+      "Launch experience"
     ],
     "question": "Have you led any project or product launches?",
-    "employerQuestion": "",
     "answers": [
       {
         "answerID": 1,
@@ -19428,968 +5352,495 @@ export const questionsDataFull = [
         "answerID": 4,
         "answer": "Yes, multiple times"
       }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
     ]
   },
   {
-    "questionID": "188",
+    "questionID": "198",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Sales leadership experience",
+      "Leading sales team"
     ],
-    "question": "Have you supported sales for products specific to any industry regulations or standards (such as HIPAA for healthcare, PCI DSS for finance)?",
-    "employerQuestion": "",
+    "question": "Have you had experience leading a sales team or working in a sales leadership role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience with industry-specific regulations/standards"
+        "answer": "Never held a sales leadership role."
       },
       {
         "answerID": 2,
-        "answer": "No, but familiar with industry regulations/standards"
+        "answer": "Briefly led a team in a temporary or acting capacity."
       },
       {
         "answerID": 3,
-        "answer": "Yes, one specific regulation/standard"
+        "answer": "Led a small sales team for a significant period."
       },
       {
         "answerID": 4,
-        "answer": "Yes, multiple regulations/standards"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Extensive experience leading larger sales teams or multiple teams."
       }
     ]
   },
   {
-    "questionID": "189",
+    "questionID": "199",
     "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Long sales cycles management",
+      "Sales cycle experience",
+      "cycle"
     ],
-    "question": "Have you had experience selling into specific sectors (government, education, non-profit, etc.)?",
-    "employerQuestion": "",
+    "question": "What's the longest sales cycle you've managed?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, government sector"
+        "answer": "Up to 3 months."
       },
       {
         "answerID": 2,
-        "answer": "Yes, education sector"
+        "answer": "Between 3-6 months."
       },
       {
         "answerID": 3,
-        "answer": "Yes, healthcare sector"
+        "answer": "Between 6-12 months."
       },
       {
         "answerID": 4,
-        "answer": "No, primarily private sector experience"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "More than 1 year."
       }
     ]
   },
   {
-    "questionID": "190",
-    "category": "Career Goals ",
+    "questionID": "200",
+    "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Sales methodology experience",
+      "Specific methodology familiarity"
     ],
-    "question": "In the next 1-2 years, do you see yourself wanting to transition into a different role?",
-    "employerQuestion": "",
+    "question": "What has been your primary sales methodology (e.g., Challenger Sale, SPIN selling)?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, into a more specialized technical role"
+        "answer": "Challenger Sale."
       },
       {
         "answerID": 2,
-        "answer": "Yes, into a sales or account management role"
+        "answer": "SPIN Selling."
       },
       {
         "answerID": 3,
-        "answer": "Yes, into a product management or marketing role"
+        "answer": "Solution Selling."
       },
       {
         "answerID": 4,
-        "answer": "No, I'd like to continue growing as an SE"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Other sales methodology or a combination of multiple methodologies."
       }
     ]
   },
   {
-    "questionID": "191",
-    "category": "Career Goals ",
+    "questionID": "201",
+    "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Sales model familiarity",
+      "B2B",
+      "B2C",
+      "B2G experience"
     ],
-    "question": "What are your thoughts about transitioning into a management role in the future?",
-    "employerQuestion": "",
+    "question": "What type of sales model are you most familiar with (B2B, B2C, B2G)?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, I'm actively seeking a management role within the next 1-2 years"
+        "answer": "Predominantly B2B sales."
       },
       {
         "answerID": 2,
-        "answer": "Yes, I see myself in management within the next 3-5 years"
+        "answer": "Predominantly B2C sales."
       },
       {
         "answerID": 3,
-        "answer": "Possibly, but I'm not currently focused on management"
+        "answer": "Predominantly B2G sales."
       },
       {
         "answerID": 4,
-        "answer": "No, I prefer remaining in a hands-on role"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Mixed experience across B2B, B2C, and B2G."
       }
     ]
   },
   {
-    "questionID": "192",
-    "category": "Career Goals ",
+    "questionID": "202",
+    "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "Customer stakeholder engagement",
+      "Stakeholder level experience"
     ],
-    "question": "Do you have aspirations to become a subject matter expert in a particular technology or industry sector?",
-    "employerQuestion": "",
+    "question": "What level of customer stakeholders are you accustomed to engaging with",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, in a specific technology"
+        "answer": "Primarily engage with Manager-level or below stakeholders."
       },
       {
         "answerID": 2,
-        "answer": "Yes, in a specific industry sector"
+        "answer": "Frequently engage with Director-level stakeholders."
       },
       {
         "answerID": 3,
-        "answer": "Yes, in both a technology and industry sector"
+        "answer": "Regularly engage with VP-level stakeholders."
       },
       {
         "answerID": 4,
-        "answer": "No, I prefer a broader range of expertise"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Consistently engage with C-level stakeholders."
       }
     ]
   },
   {
-    "questionID": "193",
-    "category": "Career Goals ",
+    "questionID": "203",
+    "category": "Work & Industry Experience",
     "tags": [
-      ""
+      "eam sales quota experience",
+      "Sales quota familiarity",
+      "quota"
     ],
-    "question": "Are you interested in working in a startup environment to build and shape the SE function from the ground up?",
-    "employerQuestion": "",
+    "question": "What kind of sales quota was the team you were part of responsible for in the past?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, immediately"
+        "answer": "Up to $500K annually."
       },
       {
         "answerID": 2,
-        "answer": "Yes, in the next 1-2 years"
+        "answer": "Between $500K to $1M annually."
       },
       {
         "answerID": 3,
-        "answer": "Maybe in the future, but not right now"
+        "answer": "Between $1M to $5M annually."
       },
       {
         "answerID": 4,
-        "answer": "No, I prefer established organizations"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "Over $5M annually."
       }
     ]
   },
   {
-    "questionID": "194",
+    "questionID": "204",
     "category": "Career Goals ",
     "tags": [
-      ""
+      "Career advancement opportunities",
+      "2-5 year outlook"
     ],
-    "question": "How important is job stability to you?",
-    "employerQuestion": "",
+    "question": "What are the primary opportunities for career advancement within your organization over the next 2-5 years?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Extremely important - I prefer a long-term, stable position"
+        "answer": "We anticipate minimal changes and opportunities for advancement"
       },
       {
         "answerID": 2,
-        "answer": "Moderately important - I value stability but am open to change"
+        "answer": "We foresee some opportunities for career advancement"
       },
       {
         "answerID": 3,
-        "answer": "Less important - I'm open to taking risks for better opportunities"
+        "answer": "We anticipate significant growth and numerous opportunities for career advancement"
       },
       {
         "answerID": 4,
-        "answer": "Not important - I actively seek new challenges and changes in my career"
-      }
-    ],
-    "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answer": "We have a clear pathway and multiple opportunities for career advancement at all times"
       }
     ]
   },
   {
-    "questionID": "195",
+    "questionID": "205",
     "category": "Career Goals ",
     "tags": [
-      ""
+      "Management transition potential",
+      "Future leadership opportunities"
     ],
-    "question": "Do you see yourself wanting to influence product strategy and roadmap in your future role?",
-    "employerQuestion": "",
+    "question": "Is there potential for an employee in this role to transition into a management position in the future?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, that's a key goal for me"
+        "answer": "Unlikely, this role is more technical and specialized"
       },
       {
         "answerID": 2,
-        "answer": "Yes, I'd like that but it's not a top priority"
+        "answer": "Possibly, but it's not a guaranteed pathway"
       },
       {
         "answerID": 3,
-        "answer": "I'm open to it but it's not a current focus"
+        "answer": "Likely, this role is often a stepping stone to management positions"
       },
       {
         "answerID": 4,
-        "answer": "No, I'd rather focus on pre-sales"
+        "answer": "Very likely, we see this role as grooming for future management positions"
       }
+    ]
+  },
+  {
+    "questionID": "206",
+    "category": "Career Goals ",
+    "tags": [
+      "Subject matter expert opportunities",
+      "Specialized technology/industry sector"
     ],
-    "employerAnswers": [],
-    "matchScores": [
+    "question": "Does your company have opportunities to become a subject matter expert in a specific technology or industry sector?",
+    "answers": [
       {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
+        "answerID": 1,
+        "answer": "Limited opportunities, as we cover a broad range of technologies/sectors"
       },
       {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
+        "answerID": 2,
+        "answer": "Some opportunities, depending on the specific technology/sector"
       },
       {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
+        "answerID": 3,
+        "answer": "Yes, we often have opportunities to specialize in specific technologies/sectors"
       },
       {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
+        "answerID": 4,
+        "answer": "Yes, specialization is a key aspect of our organizational structure and growth"
+      }
+    ]
+  },
+  {
+    "questionID": "207",
+    "category": "Career Goals ",
+    "tags": [
+      "Startup-like environment",
+      "Sales Engineering function development"
+    ],
+    "question": "Does your company have a startup-like environment where an employee could help develop and shape the Sales Engineering function?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No, our Sales Engineering function is well established and unlikely to change significantly"
       },
       {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
+        "answerID": 2,
+        "answer": "Possibly, depending on the specific role and team"
       },
       {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
+        "answerID": 3,
+        "answer": "Yes, we value employee input and often implement suggested changes"
       },
       {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
+        "answerID": 4,
+        "answer": "Yes, employees at all levels actively participate in shaping their respective functions"
+      }
+    ]
+  },
+  {
+    "questionID": "208",
+    "category": "Career Goals ",
+    "tags": [
+      "Job stability description",
+      "Company stability"
+    ],
+    "question": "How would you describe job stability within your company?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "We have high turnover, as we're often innovating and pivoting"
       },
       {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
+        "answerID": 2,
+        "answer": "We have moderate turnover, and job stability can vary depending on role and team"
       },
       {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
+        "answerID": 3,
+        "answer": "We have low turnover, with most employees staying with us for several years"
       },
       {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
+        "answerID": 4,
+        "answer": "We have very low turnover and offer high job stability"
+      }
+    ]
+  },
+  {
+    "questionID": "209",
+    "category": "Career Goals ",
+    "tags": [
+      "Influence on product strategy",
+      "Role in roadmap shaping"
+    ],
+    "question": "How much influence can an employee in this role have on product strategy and roadmap?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Very little, our product strategy and roadmap are set by a specific team"
       },
       {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
+        "answerID": 2,
+        "answer": "Some, we often seek input from various roles but final decisions are made by a specific team"
       },
       {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
+        "answerID": 3,
+        "answer": "A fair amount, input from this role is highly valued in shaping product strategy and roadmap"
       },
       {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
+        "answerID": 4,
+        "answer": "A great deal, this role is a key influencer in product strategy and roadmap decisions"
+      }
+    ]
+  },
+  {
+    "questionID": "210",
+    "category": "Career Goals ",
+    "tags": [
+      "Role's customer success involvement",
+      "Account management component"
+    ],
+    "question": "Does this role involve a significant customer success or account management component?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No, the focus of this role is strictly on sales engineering"
       },
       {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
+        "answerID": 2,
+        "answer": "It might occasionally, but it's not a major part of the role"
       },
       {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
+        "answerID": 3,
+        "answer": "Yes, customer success and account management are important aspects of the role"
       },
       {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
+        "answerID": 4,
+        "answer": "Yes, this role is deeply involved in customer success and account management"
+      }
+    ]
+  },
+  {
+    "questionID": "211",
+    "category": "Career Goals ",
+    "tags": [
+      "Role's sales phase",
+      "Pre-sales or post-sales"
+    ],
+    "question": "Is this a pre-sales or post-sales role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Primarily pre-sales"
+      },
+      {
+        "answerID": 2,
+        "answer": "Primarily post-sales"
+      },
+      {
+        "answerID": 3,
+        "answer": "A balanced mix of pre-sales and post-sales"
+      },
+      {
+        "answerID": 4,
+        "answer": "It varies depending on projects and client needs"
+      }
+    ]
+  },
+  {
+    "questionID": "212",
+    "category": "Career Goals ",
+    "tags": [
+      "Transition opportunities",
+      "Different industry/sector within company"
+    ],
+    "question": "Are there opportunities for transition into a different industry or sector within the company?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Limited opportunities, as we operate within a specific industry/sector"
+      },
+      {
+        "answerID": 2,
+        "answer": "Some opportunities, depending on business needs and individual skill sets"
+      },
+      {
+        "answerID": 3,
+        "answer": "A fair amount of opportunities, we operate across multiple industries/sectors"
+      },
+      {
+        "answerID": 4,
+        "answer": "Numerous opportunities, we actively encourage cross-sector mobility"
+      }
+    ]
+  },
+  {
+    "questionID": "213",
+    "category": "Career Goals ",
+    "tags": [
+      "International relocation opportunities",
+      "Travel options"
+    ],
+    "question": "Does your company offer opportunities for international relocation or travel?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No, our operations are primarily local"
+      },
+      {
+        "answerID": 2,
+        "answer": "Occasionally, depending on project needs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Regularly, as part of the role's responsibilities"
+      },
+      {
+        "answerID": 4,
+        "answer": "Extensively, we have a strong international presence and mobility"
+      }
+    ]
+  },
+  {
+    "questionID": "214",
+    "category": "Career Goals ",
+    "tags": [
+      "Emphasis on continual learning",
+      "Professional development focus"
+    ],
+    "question": "How much emphasis does your company place on continual learning and professional development?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "It's encouraged but not a main focus"
+      },
+      {
+        "answerID": 2,
+        "answer": "We offer some resources and opportunities for professional development"
+      },
+      {
+        "answerID": 3,
+        "answer": "We have a strong culture of learning with numerous professional development opportunities"
+      },
+      {
+        "answerID": 4,
+        "answer": "Continuous learning and professional development are integral parts of our company culture"
+      }
+    ]
+  },
+  {
+    "questionID": "215",
+    "category": "Career Goals ",
+    "tags": [
+      "Role focus",
+      "Technical skills expansion vs sales capabilities."
+    ],
+    "question": "Is this role more focused on expanding technical skills or sales capabilities?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Primarily technical skills"
+      },
+      {
+        "answerID": 2,
+        "answer": "Primarily sales capabilities"
+      },
+      {
+        "answerID": 3,
+        "answer": "A balanced mix of both technical skills and sales capabilities"
+      },
+      {
+        "answerID": 4,
+        "answer": "It varies depending on projects and client needs"
       }
     ]
   }
