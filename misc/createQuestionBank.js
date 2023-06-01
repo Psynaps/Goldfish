@@ -46,7 +46,7 @@ fs.createReadStream('questions.csv')
     })
     .on('end', () => {
         // fs.writeFile('questionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
-        fs.writeFile('../client/src/questionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
+        fs.writeFile('../client/src/QuestionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
             if (err) console.log('Error writing file:', err);
         });
     });

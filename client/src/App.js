@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
 // import profilePic from './images/profile.png';
 import QuestionBank from './QuestionBank';
-import { questionsData } from './questionsData';
+import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';

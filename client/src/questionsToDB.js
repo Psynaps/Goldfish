@@ -1,4 +1,4 @@
-const { questionsData } = require('./questionsData');  // adjust the path as necessary
+const { questionsData } = require('./QuestionsData');  // adjust the path as necessary
 
 let psqlCommands = '';
 
