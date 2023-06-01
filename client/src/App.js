@@ -413,7 +413,7 @@ function EmployerPage() {
                                             onClick={e => e.stopPropagation()}
                                         >
                                             {item.originalQuestion?.answers?.map((answer, index) => (
-                                                <option key={index} value={answer.answer}>{(answer.answer.indexOf(':') != -1) ? answer.answer.substring(0, answer.answer.indexOf(':')) : answer.answer}</option>
+                                                <option key={index} value={answer.answer}>{(answer.answer.indexOf(':') !== -1) ? answer.answer.substring(0, answer.answer.indexOf(':')) : answer.answer}</option>
                                             ))}
                                         </Select>
                                     </HStack>
