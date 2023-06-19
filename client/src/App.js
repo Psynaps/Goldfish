@@ -167,9 +167,37 @@ function EmployerPage() {
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
 
+    const [message, setMessage] = useState(null);
+    const [isFetching, setIsFetching] = useState(false);
+    const isDev = process.env.NODE_ENV !== 'production';
+    const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+
+
+    const fetchData = useCallback(() => {
+        console.log('tried to fetch');
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`status ${response.status}`);
+                }
+                console.log('something1', response.json());
+                return response.json();
+            })
+            .then(json => {
+                console.log('something2', json.message);
+                setMessage(json.message);
+                setIsFetching(false);
+            }).catch(e => {
+                setMessage(`API call failed: ${e}`);
+                setIsFetching(false);
+            });
+    }, [url]);
+
 
     const handleFilterButtonClick = (category) => {
         setSelectedCategory(category === selectedCategory ? null : category);
+        setIsFetching(true);
+        fetchData();
     };
 
     const addQuestionToJobPosting = (question, answer) => {
