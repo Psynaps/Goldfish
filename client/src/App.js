@@ -167,37 +167,70 @@ function EmployerPage() {
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
 
-    const [message, setMessage] = useState(null);
-    const [isFetching, setIsFetching] = useState(false);
+    // const [message, setMessage] = useState(null);
+    const [isPosting, setIsPosting] = useState(false);
     const isDev = process.env.NODE_ENV !== 'production';
-    const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+    // const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+    const [url, setUrl] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
 
-    const fetchData = useCallback(() => {
-        console.log('tried to fetch');
-        fetch(url)
+    // const fetchData = useCallback(() => {
+    //     console.log('tried to fetch');
+    //     fetch(url)
+    //         .then(response => {
+    //             if (!response.ok) {
+    //                 throw new Error(`status ${response.status}`);
+    //             }
+    //             console.log('something1', response.json());
+    //             return response.json();
+    //         })
+    //         .then(json => {
+    //             console.log('something2', json.message);
+    //             setMessage(json.message);
+    //             setIsPosting(false);
+    //         }).catch(e => {
+    //             setMessage(`API call failed: ${e}`);
+    //             setIsPosting(false);
+    //         });
+    // }, [url]);
+
+    const postJob = useCallback(() => {
+        console.log('tried to post');
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                userID: user.sub,
+                company: 'myspace',
+                location: 'nowhere',
+                jobName: 'janitor',
+                jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
+                    acc[question.questionID] = question.selectedAnswer.answerID;
+                    return acc;
+                }, {}))
+            })
+        };
+        fetch(`${url}/postJob`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
                 }
-                console.log('something1', response.json());
+                console.log('Request error', response.json());
                 return response.json();
             })
             .then(json => {
-                console.log('something2', json.message);
-                setMessage(json.message);
-                setIsFetching(false);
+                setIsPosting(false);
             }).catch(e => {
-                setMessage(`API call failed: ${e}`);
-                setIsFetching(false);
+                // setMessage(`API call failed: ${e}`);
+                setIsPosting(false);
             });
-    }, [url]);
+    });
 
 
     const handleFilterButtonClick = (category) => {
         setSelectedCategory(category === selectedCategory ? null : category);
-        setIsFetching(true);
-        fetchData();
+        // setIsPosting(true);
+        // fetchData();
     };
 
     const addQuestionToJobPosting = (question, answer) => {
@@ -449,7 +482,12 @@ function EmployerPage() {
                                     </HStack>
                                 </Box>
                             ))}
-                            {jobPostingQuestions.length > 0 && <Button colorScheme='blue'>Publish</Button>}
+                            {(jobPostingQuestions.length > 0 && isAuthenticated) && <Button colorScheme='blue' width='auto' onClick={() => postJob()}>
+                                <Text p={4}>Save</Text>
+                            </Button>}
+                            {(jobPostingQuestions.length > 0 && !isAuthenticated) && <Button isDisabled colorScheme='blue' width='auto' onClick={() => postJob()}>
+                                <Text p={4}>Log in to Save</Text>
+                            </Button>}
                         </Box>
                     </VStack>
                 </Flex>
