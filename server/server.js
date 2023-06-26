@@ -46,7 +46,7 @@ app.get('/', (req, res) => { res.send('Hello from Express!'); });
 
 
 app.get('/db', async (req, res) => {
-    /*
+
     try {
         const client = await pool.connect();
         const query = {
@@ -65,20 +65,63 @@ app.get('/db', async (req, res) => {
         console.error(err);
         res.send("Error " + err);
     }
-    */
+
 });
 
-// Answer API requests.
-app.post('/api/postJob', function (req, res) {
-    console.error("postJob req received");
-    console.error(req.body);
-    res.set('Content-Type', 'application/json');
-    res.send('{"message":"Hello from the custom server!"}');
+app.post('/api/postJob', async (req, res) => {
+    try {
+        console.log("postJob req received");
+        // console.log(req.body);
+        const client = await pool.connect();
+
+        const { userID, company, location, jobName, jobData } = req.body;
+        let jobPostingID;
+
+        // Convert the jobData string to an object
+        const jobDataObj = JSON.parse(jobData);
+
+        // Upsert into job_profiles
+        let query = {
+            text: `INSERT INTO job_profiles (userID, company, location, jobName) 
+                   VALUES ($1, $2, $3, $4) 
+                   ON CONFLICT (userID) DO UPDATE 
+                   SET company = $2, location = $3, jobName = $4
+                   RETURNING jobPostingID`,
+            values: [userID, company, location, jobName],
+        };
+
+        let result = await client.query(query);
+        jobPostingID = result.rows[0].jobPostingID;  // Get the jobPostingID of the inserted/updated row
+
+        query = {
+            text: 'DELETE FROM job_profile_questions WHERE jobPostingID = $1',
+            values: [jobPostingID],
+        };
+        await client.query(query);
+
+        // Insert or update the questions
+        for (const questionID in jobDataObj) {
+            const answerID = jobDataObj[questionID];
+            query = {
+                text: 'INSERT INTO job_profile_questions (jobPostingID, questionID, answerID) VALUES ($1, $2, $3)',
+                values: [jobPostingID, questionID, answerID],
+            };
+            await client.query(query);
+        }
+
+        res.send({ success: true });
+        console.log("postJob req completed");
+        client.release();
+    } catch (err) {
+        console.error(err);
+        res.status(500).send({ error: err.message });
+    }
 });
+
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function (request, response) {
-    console.error('Other req received21212');
+    console.error('Other req received');
     response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
 });
 
