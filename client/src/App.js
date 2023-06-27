@@ -154,6 +154,7 @@ function EmployerPage() {
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [position, setPosition] = useState('');
     const [location, setLocation] = useState('');
+    const [company, setCompany] = useState('myspace');
     const { colorMode, toggleColorMode } = useColorMode();
 
     const initialBorderColor = useColorModeValue('blue.500', 'blue.200');
@@ -169,59 +170,43 @@ function EmployerPage() {
 
     // const [message, setMessage] = useState(null);
     const [isPosting, setIsPosting] = useState(false);
+    const [jobLoading, setJobLoading] = useState(false);
     const isDev = process.env.NODE_ENV !== 'production';
     // const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
     const [url, setUrl] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
-
-
-    // const fetchData = useCallback(() => {
-    //     console.log('tried to fetch');
-    //     fetch(url)
-    //         .then(response => {
-    //             if (!response.ok) {
-    //                 throw new Error(`status ${response.status}`);
-    //             }
-    //             console.log('something1', response.json());
-    //             return response.json();
-    //         })
-    //         .then(json => {
-    //             console.log('something2', json.message);
-    //             setMessage(json.message);
-    //             setIsPosting(false);
-    //         }).catch(e => {
-    //             setMessage(`API call failed: ${e}`);
-    //             setIsPosting(false);
-    //         });
-    // }, [url]);
+    const [jobPostingID, setJobPostingID] = useState(null);
 
     const postJob = useCallback(() => {
-        console.log('tried to post');
+        console.log('tried to post', jobPostingQuestions);
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 userID: user.sub,
-                company: 'myspace',
-                location: 'nowhere',
-                jobName: 'janitor',
+                company: company,
+                location: location,
+                jobName: position,
                 jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
-                    acc[question.questionID] = question.selectedAnswer.answerID;
+                    acc[question.questionID] = [question.selectedAnswer.answerID, parseInt(question.importance)];
                     return acc;
                 }, {}))
             })
+
         };
+        console.log(requestOptions.body);
         fetch(`${url}/postJob`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
                 }
-                console.log('Request error', response.json());
                 return response.json();
             })
             .then(json => {
+                jobPostingID = json.jobPostingID;
+                setJobPostingID(jobPostingID);
+                console.log("Set jobPostingID: ", jobPostingID);
                 setIsPosting(false);
             }).catch(e => {
-                // setMessage(`API call failed: ${e}`);
                 setIsPosting(false);
             });
     });
@@ -229,17 +214,86 @@ function EmployerPage() {
 
     const handleFilterButtonClick = (category) => {
         setSelectedCategory(category === selectedCategory ? null : category);
-        // setIsPosting(true);
-        // fetchData();
+        console.log(jobPostingQuestions);
+    };
+
+    // const loadJobPosting = (jobPostingID) => {
+
+    // };
+
+    const getAndLoadJobPosting = useCallback((jobPostingID) => {
+        console.log('tried to post');
+        const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+        fetch(`${url}/getJob?userID=${user.sub}&jobPostingID=${jobPostingID}`, requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`status ${response.status}`);
+                }
+                console.log('response', response);
+                return response.json();
+            })
+            .then(json => {
+                loadJobPosting(json);
+                setJobLoading(false);
+            }).catch(e => {
+                setJobLoading(false);
+            });
+    });
+
+    // A method to set the jobPostingQuestions state based on the jobData field in the fetched data
+    const loadJobPostingQuestions = (jobData) => {
+        // Assuming jobData is an object where the keys are questionIDs and the values are answerIDs
+        // Convert it to an array of question objects
+
+        // const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
+        const loadedQuestions = Object.keys(jobData).map(questionID => {
+            const matchingQuestion = questionBankQuestions.find(question => question.questionID === questionID);
+            return { ...matchingQuestion, originalQuestion: matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 3), selectedAnswer: (jobData[questionID][1] ? jobData[questionID][1] : jobData[questionID]) };
+
+        });
+
+        setJobPostingQuestions(loadedQuestions);
+    };
+
+    // A method to filter out the loaded job posting questions from the question bank
+    const filterQuestionBankOnLoad = (jobData) => {
+        // Get the questionIDs of the loaded job posting questions
+        const loadedQuestionIDs = Object.keys(jobData);
+
+        // Filter out these questions from the question bank
+        const filteredQuestionBank = questionBankQuestions.filter(question => {
+            return !loadedQuestionIDs.includes(String(question.questionID));
+        });
+
+        setQuestionBankQuestions(filteredQuestionBank);
+    };
+
+    // Modify loadJobPosting to call these methods
+    const loadJobPosting = (data) => {
+        console.log('data', data);
+        setCompany(data.company);
+        setLocation(data.location);
+        setPosition(data.jobName);
+
+        // Parse the jobData field into a JavaScript object
+        const jobData = JSON.parse(data.jobData);
+
+        loadJobPostingQuestions(jobData);
+        filterQuestionBankOnLoad(jobData);
     };
 
     const addQuestionToJobPosting = (question, answer) => {
-        const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
+        const newQuestion = { ...question, originalQuestion: question, importance: 3, selectedAnswer: answer };
         setJobPostingQuestions(prev => [...prev, newQuestion]);
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
         setSelectedAnswer(null);
-        console.log(user);
+        // console.log(question);
+        // console.log(questionBankQuestions);
+        // console.log(questionBankQuestions[0]);
     };
 
     const removeQuestionFromJobPosting = (question) => {
@@ -276,11 +330,13 @@ function EmployerPage() {
     const handleImportanceChange = (item, e) => {
         e.stopPropagation();
         setSelectedJobPostingQuestion(item);
+        // console.log(item, e.target.selectedIndex, e.target.value);
         setJobPostingQuestions(prev => prev.map(question =>
-            question.question.questionID === item.question.questionID
+            question.questionID === item.questionID
                 ? { ...question, importance: e.target.value }
                 : question
         ));
+        // console.log(jobPostingQuestions);
     };
 
     const handleQuestionSelect = (question) => {
@@ -475,9 +531,9 @@ function EmployerPage() {
                                             onChange={(e) => handleImportanceChange(item, e)}
                                             onClick={e => e.stopPropagation()}
                                         >
-                                            <option value='Required'>Required</option>
-                                            <option value='Important'>Important</option>
-                                            <option value='Optional'>Optional</option>
+                                            <option value='3'>Required</option>
+                                            <option value='2'>Important</option>
+                                            <option value='1'>Optional</option>
                                         </Select>
                                     </HStack>
                                 </Box>
