@@ -22,7 +22,7 @@ fs.createReadStream('questions.csv')
         }
 
         // Add any answers present in the row to the question object
-        for (let i = 1; i <= 4; i++) {
+        for (let i = 1; i <= 8; i++) {
             if (row[`Answer (${i})`]) {
                 question.answers.push({
                     answerID: i,

@@ -22861,5 +22861,1530 @@ export const questionsDataFull = [
         "matchValue": 100
       }
     ]
+  },
+  {
+    "questionID": "216",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "What type of work environment do you prefer?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "High-paced, startup environment"
+      },
+      {
+        "answerID": 2,
+        "answer": "Structured, corporate environment"
+      },
+      {
+        "answerID": 3,
+        "answer": "Client-facing, travel-intensive"
+      },
+      {
+        "answerID": 4,
+        "answer": "No preference."
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "217",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "What is your key strength in your current role? ",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Technical skills and product knowledge"
+      },
+      {
+        "answerID": 2,
+        "answer": "Client relations and communication"
+      },
+      {
+        "answerID": 3,
+        "answer": "Project management and organization"
+      },
+      {
+        "answerID": 4,
+        "answer": "Business strategy and development"
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "218",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "How many years of experience do you have in a sales or solutions engineering role?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "New to the field (Less than 1 year)"
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "219",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "Which skill area would be most fulfilling for you to develop in your next role? \r\n",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Deepening technical or subject matter expertise."
+      },
+      {
+        "answerID": 2,
+        "answer": "Enhancing pre-sales and deal-cycle abilities."
+      },
+      {
+        "answerID": 3,
+        "answer": "Developing managerial and leadership abilities"
+      },
+      {
+        "answerID": 4,
+        "answer": "Post-sales implementation and client management."
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "220",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "Which base salary range would meet your minimum expectations for a future role? \r\n",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "$80,000 to $100,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "$100,000 to $120,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$120,000 to $150,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$150,000+"
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "221",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "If you could choose, which of the following industries would you be most interested in representing as a Sales Engineer?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Software/Technology"
+      },
+      {
+        "answerID": 2,
+        "answer": "Telecommunications"
+      },
+      {
+        "answerID": 3,
+        "answer": "Healthcare/Medical Devices"
+      },
+      {
+        "answerID": 4,
+        "answer": "Industrial/Manufacturing"
+      },
+      {
+        "answerID": 5,
+        "answer": "Healthcare and Life Sciences"
+      },
+      {
+        "answerID": 6,
+        "answer": "Professional Services"
+      },
+      {
+        "answerID": 7,
+        "answer": "Government & Public Sector"
+      },
+      {
+        "answerID": 8,
+        "answer": "I don't have a specific preference."
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 5,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 6,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 7,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 8,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "222",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "On a scale of 1-4, how would you rate your current technical knowledge and skills related to sales engineering?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "1 - Beginner (I am still learning the basics)"
+      },
+      {
+        "answerID": 2,
+        "answer": "2 - Intermediate (I have a good grasp of the concepts and some practical experience)"
+      },
+      {
+        "answerID": 3,
+        "answer": "3 - Advanced (I have deep knowledge and extensive experience)"
+      },
+      {
+        "answerID": 4,
+        "answer": "4 - Expert (I am considered an authority in my domain)"
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "223",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "If you had to choose, would you prefer a role that focuses more on pre-sales (helping to secure the sale) or post-sales (ensuring customer satisfaction and retention)?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Pre-sales"
+      },
+      {
+        "answerID": 2,
+        "answer": "Post-sales"
+      },
+      {
+        "answerID": 3,
+        "answer": "I'm comfortable with either"
+      },
+      {
+        "answerID": 4,
+        "answer": "I don't have a specific preference."
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "224",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "In the last two years, what deal size would you say is most typical of those you've supported?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I have not supported deals."
+      },
+      {
+        "answerID": 2,
+        "answer": "Under $50K"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50K and $100k"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100k & $250K"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $250k and 500k"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between 500k and $750k"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $750k & $1m"
+      },
+      {
+        "answerID": 8,
+        "answer": "Over $1M"
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 5,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 6,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 7,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 8,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "225",
+    "category": "Intro Questions",
+    "tags": [
+      ""
+    ],
+    "question": "Which type of sales do you feel most comfortable supporting, based on your prior experience?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "High volume, low complexity deals (SMB focus)"
+      },
+      {
+        "answerID": 2,
+        "answer": "Mid-market deals (moderate volume and complexity)"
+      },
+      {
+        "answerID": 3,
+        "answer": "High-value, high complexity deals (Enterprise focus)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Not sure yet."
+      }
+    ],
+    "employerAnswers": [],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
   }
 ]
