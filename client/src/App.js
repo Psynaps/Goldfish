@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 // import Collapsible from 'react-collapsible';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
+import { Link as ChakraLink } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 // import { useNavigate } from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
@@ -154,10 +156,12 @@ function EmployerPage() {
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [position, setPosition] = useState('');
-    const [location, setLocation] = useState('');
+    const [jobLocation, setJobLocation] = useState('');
     const [company, setCompany] = useState('myspace');
     const { colorMode, toggleColorMode } = useColorMode();
     const [searchParams] = useSearchParams();
+    const navigate = useNavigate();
+    const location = useLocation();
 
     const initialBorderColor = useColorModeValue('blue.500', 'blue.200');
     const selectedBorderColor = useColorModeValue('blue.800', 'blue.300');
@@ -186,7 +190,7 @@ function EmployerPage() {
             body: JSON.stringify({
                 userID: user.sub,
                 company: company,
-                location: location,
+                location: jobLocation,
                 jobName: position,
                 jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
                     acc[question.questionID] = [question.selectedAnswer.answerID, parseInt(question.importance)];
@@ -210,7 +214,7 @@ function EmployerPage() {
                 console.error(e); // This will log any errors to the console.
                 setIsPosting(false);
             });
-    }, [user, company, location, position, jobPostingQuestions, url]);
+    }, [user, company, jobLocation, position, jobPostingQuestions, url]);
 
 
     const handleFilterButtonClick = (category) => {
@@ -223,7 +227,7 @@ function EmployerPage() {
     // };
 
     const getAndLoadJobPosting = useCallback((jobPostingID) => {
-        console.log('getting job', jobPostingID);
+        // console.log('getting job', jobPostingID);
         const requestOptions = {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
@@ -255,7 +259,8 @@ function EmployerPage() {
         // const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
         const loadedQuestions = Object.keys(jobData).map(questionID => {
             const matchingQuestion = questionBankQuestions.find(question => question.questionID === questionID);
-            return { ...matchingQuestion, originalQuestion: matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 3), selectedAnswer: (jobData[questionID][1] ? jobData[questionID][1] : jobData[questionID]) };
+            const matchingAnswer = matchingQuestion.answers.find(answer => answer.answerID === jobData[questionID][0]);
+            return { ...matchingQuestion, originalQuestion: matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 3), selectedAnswer: matchingAnswer };
 
         });
 
@@ -277,9 +282,9 @@ function EmployerPage() {
 
     // Modify loadJobPosting to call these methods
     const loadJobPosting = (data) => {
-        console.log('data', data);
+        // console.log('data', data);
         setCompany(data.company);
-        setLocation(data.location);
+        setJobLocation(data.location);
         setPosition(data.jobName);
 
         // Parse the jobData field into a JavaScript object
@@ -300,11 +305,16 @@ function EmployerPage() {
         // console.log(questionBankQuestions[0]);
     };
 
+    const sortQuestionBankQuestions = (bank) => {
+        const sortedQuestions = bank.sort((a, b) => a.questionID - b.questionID);
+        return sortedQuestions;
+    };
+
     const removeQuestionFromJobPosting = (question) => {
         setQuestionBankQuestions(prev => {
             const updatedList = [...prev, question.originalQuestion];
-            updatedList.sort((a, b) => a.questionID - b.questionID);
-            return updatedList;
+            // updatedList.sort((a, b) => a.questionID - b.questionID);
+            return sortQuestionBankQuestions(updatedList);
         });
         // console.log('job posting questions: ', jobPostingQuestions);
         // console.log('question: ', question);
@@ -357,14 +367,31 @@ function EmployerPage() {
     };
 
     const handleLocationChange = (value) => {
-        setLocation(value);
+        setJobLocation(value);
     };
 
 
     useEffect(() => {
-        const sortedQuestions = questionsData.sort((a, b) => a.questionID - b.questionID);
-        setQuestionBankQuestions(sortedQuestions);
+        // const sortedQuestions = questionsData.sort((a, b) => a.questionID - b.questionID);
+        setQuestionBankQuestions(sortQuestionBankQuestions(questionsData));
     }, []);
+
+    useEffect(() => {
+        if (location.pathname === "/employer") {
+            // Reset state here
+            setQuestionBankQuestions(sortQuestionBankQuestions(questionsData));
+            setJobPostingQuestions([]);
+            setJobLocation('');
+            setPosition('');
+            setCompany('myspace');
+            setSelectedAnswer(null);
+            setSelectedQuestion(null);
+            setSelectedJobPostingQuestion(null);
+            setSelectedCategory(null);
+            setSearchTerm('');
+            setJobPostingID(null);
+        }
+    }, [location]);
 
     // useEffect(() => {
     // }, [selectedAnswer, selectedQuestion]);
@@ -373,20 +400,20 @@ function EmployerPage() {
         const jobIdFromUrl = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
         if (jobIdFromUrl) { // if jobID exists in the URL
             console.log('loading job: ', jobIdFromUrl);
-            getAndLoadJobPosting(jobIdFromUrl); // get and load the job posting
+            setJobPostingID(jobIdFromUrl);
+            getAndLoadJobPosting(jobIdFromUrl);
         }
-        //  else if (jobPostingID) { // if there's a jobPostingID in the state
-        //     getAndLoadJobPosting(jobPostingID);
-        // }
     }, [user, jobPostingID]);
 
 
     return (
         <div className='Employer'>
             <Box bg='#1398ff' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem'>
-                <Box display='flex' alignItems='baseline' p={0}>
-                    <Text fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
-                    <Text ml={3} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
+                <Box display='flex' alignItems='baseline' p={0} onClick={() => navigate("/employer")}>
+                    <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
+                        <Text fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
+                        <Text ml={3} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
+                    </ChakraLink>
                 </Box>
                 <HStack spacing={5} alignItems='top'>
                     {isLoading ? <Spinner /> :
