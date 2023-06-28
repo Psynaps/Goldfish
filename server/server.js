@@ -86,13 +86,13 @@ app.post('/api/postJob', async (req, res) => {
                    VALUES ($1, $2, $3, $4) 
                    ON CONFLICT (userID) DO UPDATE 
                    SET company = $2, location = $3, jobName = $4
-                   RETURNING jobPostingID`,
+                   RETURNING jobPostingid`,
             values: [userID, company, location, jobName],
         };
 
         let result = await client.query(query);
-        jobPostingID = result.rows[0].jobPostingID;  // Get the jobPostingID of the inserted/updated row
-
+        // jobPostingID = result.rows[0].jobPostingid;  // Get the jobPostingID of the inserted/updated row
+        jobPostingID = result.rows[0]['jobpostingid'];
         query = {
             text: 'DELETE FROM job_profile_questions WHERE jobPostingID = $1',
             values: [jobPostingID],
@@ -119,9 +119,10 @@ app.post('/api/postJob', async (req, res) => {
     }
 });
 
-app.get('/getJob', async (req, res) => {
-    const jobPostingID = req.query.jobPostingID;
-    const userID = req.query.userID;
+app.get('/api/getJob', async (req, res) => {
+    const jobPostingID = req.query.jobid;
+    const userID = req.query.userid;
+    console.log("getJob req received", jobPostingID, userID);
     if (!jobPostingID) {
         return res.status(400).send({ error: 'Missing jobPostingID query parameter' });
     }
@@ -144,7 +145,7 @@ app.get('/getJob', async (req, res) => {
             return res.status(404).send({ error: 'Job posting not found' });
         }
 
-        if (jobProfileData.userID !== userID) {
+        if (jobProfileData.userid !== userID) {
             return res.status(401).send({ error: 'Job posting not owned by user' });
         }
 
@@ -167,7 +168,7 @@ app.get('/getJob', async (req, res) => {
             jobName: jobProfileData.jobname,
             jobData: JSON.stringify(jobQuestionsData),
         };
-
+        console.log(responseObject);
         res.send(responseObject);
         client.release();
     } catch (err) {

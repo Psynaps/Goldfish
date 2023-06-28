@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 // import Collapsible from 'react-collapsible';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useSearchParams } from "react-router-dom";
 // import { useNavigate } from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import goldfishLogo from './images/logo.png';
@@ -156,6 +157,7 @@ function EmployerPage() {
     const [location, setLocation] = useState('');
     const [company, setCompany] = useState('myspace');
     const { colorMode, toggleColorMode } = useColorMode();
+    const [searchParams] = useSearchParams();
 
     const initialBorderColor = useColorModeValue('blue.500', 'blue.200');
     const selectedBorderColor = useColorModeValue('blue.800', 'blue.300');
@@ -202,14 +204,13 @@ function EmployerPage() {
                 return response.json();
             })
             .then(json => {
-                jobPostingID = json.jobPostingID;
-                setJobPostingID(jobPostingID);
-                console.log("Set jobPostingID: ", jobPostingID);
+                setJobPostingID(json.jobPostingID);
                 setIsPosting(false);
             }).catch(e => {
+                console.error(e); // This will log any errors to the console.
                 setIsPosting(false);
             });
-    });
+    }, [user, company, location, position, jobPostingQuestions, url]);
 
 
     const handleFilterButtonClick = (category) => {
@@ -222,17 +223,20 @@ function EmployerPage() {
     // };
 
     const getAndLoadJobPosting = useCallback((jobPostingID) => {
-        console.log('tried to post');
+        console.log('getting job', jobPostingID);
         const requestOptions = {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         };
-        fetch(`${url}/getJob?userID=${user.sub}&jobPostingID=${jobPostingID}`, requestOptions)
+        if (!user) {
+            console.log('no user');
+            return;
+        }
+        fetch(`${url}/getJob?userid=${user?.sub}&jobid=${jobPostingID}`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
                 }
-                console.log('response', response);
                 return response.json();
             })
             .then(json => {
@@ -241,7 +245,7 @@ function EmployerPage() {
             }).catch(e => {
                 setJobLoading(false);
             });
-    });
+    }, [jobPostingID, user, url]);
 
     // A method to set the jobPostingQuestions state based on the jobData field in the fetched data
     const loadJobPostingQuestions = (jobData) => {
@@ -362,8 +366,18 @@ function EmployerPage() {
         setQuestionBankQuestions(sortedQuestions);
     }, []);
 
+    // useEffect(() => {
+    // }, [selectedAnswer, selectedQuestion]);
+
     useEffect(() => {
-    }, [selectedAnswer, selectedQuestion]);
+        const jobIdFromUrl = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
+        if (jobIdFromUrl) { // if jobID exists in the URL
+            console.log('loading job: ', jobIdFromUrl);
+            getAndLoadJobPosting(jobIdFromUrl); // get and load the job posting
+        } else if (jobPostingID) { // if there's a jobPostingID in the state
+            getAndLoadJobPosting(jobPostingID);
+        }
+    }, [user, jobPostingID]);
 
 
     return (
