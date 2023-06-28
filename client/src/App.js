@@ -374,9 +374,10 @@ function EmployerPage() {
         if (jobIdFromUrl) { // if jobID exists in the URL
             console.log('loading job: ', jobIdFromUrl);
             getAndLoadJobPosting(jobIdFromUrl); // get and load the job posting
-        } else if (jobPostingID) { // if there's a jobPostingID in the state
-            getAndLoadJobPosting(jobPostingID);
         }
+        //  else if (jobPostingID) { // if there's a jobPostingID in the state
+        //     getAndLoadJobPosting(jobPostingID);
+        // }
     }, [user, jobPostingID]);
 
 

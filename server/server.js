@@ -170,6 +170,7 @@ app.get('/api/getJob', async (req, res) => {
         };
         console.log(responseObject);
         res.send(responseObject);
+        // res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
         client.release();
     } catch (err) {
         console.error(err);
