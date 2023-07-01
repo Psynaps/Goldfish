@@ -7,25 +7,20 @@ const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen })
     // const [justSelected, setJustSelected] = useState(false);
 
     const handleClick = () => {
-        // If the question is already open but not selected, then select it and don't close it.
-        // Otherwise if the question is already open and selected, then close it and keep it selected.
-        // Otherwise if the question is closed, then open it and select it.
         if (isOpen && !isSelected) {
             onSelect();
-            console.log("case 1");
-        }
-        else if (isOpen && isSelected) {
+        } else if (isOpen && isSelected) {
             setIsOpen(false);
-            console.log("case 2");
-        }
-        else {
+        } else {
             onSelect();
             setIsOpen(true);
-            console.log("case 3");
         }
-
     };
 
+    const handleTriggerClick = (e) => {
+        e.stopPropagation(); // prevent event from bubbling up to the Box onClick
+        handleClick();
+    };
 
     return (
         <Box
@@ -38,9 +33,9 @@ const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen })
             cursor="pointer"
         >
             <Collapsible
-                trigger={question.question}
-                triggerWhenOpen={question.question}
-                triggerWhenClosed={question.question}
+                trigger={<div onClick={handleTriggerClick}>{question.question}</div>}
+                triggerWhenOpen={<div onClick={handleTriggerClick}>{question.question}</div>}
+                triggerWhenClosed={<div onClick={handleTriggerClick}>{question.question}</div>}
                 open={isOpen}
             >
                 {children}

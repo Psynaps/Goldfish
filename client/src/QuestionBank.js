@@ -41,18 +41,18 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}
                                     answer={answer}
-                                    question={question} // Pass the question object
+                                    question={question}
                                     selectedAnswers={question.selectedAnswers}
                                     selectedNonAnswers={question.selectedNonAnswers}
                                     onSelect={(answer, question, isSelected) => {
                                         setSelectedQuestion(question);
                                         onQuestionSelect(question);
-                                        onAnswerSelect(answer, question, isSelected); // Updated
+                                        onAnswerSelect(answer, question, isSelected);
                                     }}
                                     onNonSelect={(e, answer, question, isNonAnswer) => {
                                         setSelectedQuestion(question);
                                         onQuestionSelect(question);
-                                        onNonAnswerSelect(e, answer, question, isNonAnswer); // Updated
+                                        onNonAnswerSelect(e, answer, question, isNonAnswer);
                                     }}
                                 />
                             ))}

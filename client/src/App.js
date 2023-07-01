@@ -160,6 +160,7 @@ function EmployerPage() {
     const [position, setPosition] = useState('');
     const [jobLocation, setJobLocation] = useState('');
     const [company, setCompany] = useState('myspace');
+    const [canAddQuestion, setCanAddQuestion] = useState(false);
     const { colorMode, toggleColorMode } = useColorMode();
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
@@ -449,7 +450,7 @@ function EmployerPage() {
 
     const handlePositionChange = (value) => {
         setPosition(value);
-        // console.log(questionBankQuestions);
+        console.log(questionBankQuestions);
     };
 
     const handleLocationChange = (value) => {
@@ -482,6 +483,16 @@ function EmployerPage() {
 
     // useEffect(() => {
     // }, [selectedAnswer, selectedQuestion]);
+
+    useEffect(() => {
+        // if jobPostingQuestions contains a question with questionID matching selectedQuestion.questionID and the question's selectedAnswers is not empty
+        // then set a variable canAddQuestion to true
+        // otherwise set it to false
+        const canAddQuestion = questionBankQuestions.some(q => q.questionID === selectedQuestion?.questionID && q.selectedAnswers?.length > 0);
+        setCanAddQuestion(canAddQuestion);
+        // console.log('set canAddQuestion to', canAddQuestion);
+        // console.log('selectedQuestion', selectedQuestion);
+    }, [selectedQuestion, questionBankQuestions]);
 
     useEffect(() => {
         const jobIdFromUrl = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
@@ -583,7 +594,7 @@ function EmployerPage() {
                     >
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={selectedQuestion == null || questionBankQuestions[selectedQuestion.questionID]?.selectedAnswers?.length > 0} width='auto' colorScheme={(selectedQuestion == null || questionBankQuestions[selectedQuestion.questionID]?.selectedAnswers?.length > 0) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, selectedNonAnswers)}>
+                            <Button isDisabled={!canAddQuestion} width='auto' colorScheme={!canAddQuestion ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, selectedNonAnswers)}>
                                 <Text p={1}>Add</Text>
                             </Button>
                         </HStack>
