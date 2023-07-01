@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, VStack } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
-const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect, onNonAnswerSelect, selectedAnswers, selectedNonAnswers }) => {
+const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect, onNonAnswerSelect }) => {
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions[0]);
 
     let displayedQuestions = questionBankQuestions;
@@ -17,9 +17,9 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
         }
     }
 
-    useEffect(() => {
-        setSelectedQuestion(displayedQuestions[0]);
-    }, [questionBankQuestions, displayedQuestions]);
+    // useEffect(() => {
+    //     setSelectedQuestion(displayedQuestions[0]);
+    // }, [questionBankQuestions, displayedQuestions]);
 
     return (
         <VStack spacing={5} align='stretch' maxHeight='50vh' overflowY='auto' w='100%'>
@@ -28,7 +28,12 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                     <Question
                         question={question}
                         isSelected={selectedQuestion === question}
-                        onSelect={() => { setSelectedQuestion(question); onQuestionSelect(question); }}
+                        onSelect={() => {
+                            if (selectedQuestion !== question) {
+                                setSelectedQuestion(question);
+                                onQuestionSelect(question);
+                            }
+                        }}
                         isInitiallyOpen={index === 0}
                     >
                         <VStack align='stretch' mt={5} spacing={3}>
@@ -36,16 +41,22 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}
                                     answer={answer}
-                                    selectedAnswers={selectedAnswers}
-                                    selectedNonAnswers={selectedNonAnswers}
-                                    onSelect={(answer) => {
-                                        onAnswerSelect(answer, question);
+                                    question={question} // Pass the question object
+                                    selectedAnswers={question.selectedAnswers}
+                                    selectedNonAnswers={question.selectedNonAnswers}
+                                    onSelect={(answer, question, isSelected) => {
+                                        setSelectedQuestion(question);
+                                        onQuestionSelect(question);
+                                        onAnswerSelect(answer, question, isSelected); // Updated
                                     }}
-                                    onNonSelect={(e, answer) => {
-                                        onNonAnswerSelect(e, answer, question);
+                                    onNonSelect={(e, answer, question, isNonAnswer) => {
+                                        setSelectedQuestion(question);
+                                        onQuestionSelect(question);
+                                        onNonAnswerSelect(e, answer, question, isNonAnswer); // Updated
                                     }}
                                 />
                             ))}
+
                         </VStack>
                     </Question>
                 </Box>

@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Text } from "@chakra-ui/react";
 
-const Answer = ({ answer, selectedAnswers, selectedNonAnswers, onSelect, onNonSelect }) => {
-    const isSelected = selectedAnswers.includes(answer.answerID);
-    const isNonAnswer = selectedNonAnswers.includes(answer.answerID);
+const Answer = ({ answer, question, selectedAnswers, selectedNonAnswers, onSelect, onNonSelect }) => {
+    const isSelected = selectedAnswers?.includes(answer.answerID);
+    const isNonAnswer = selectedNonAnswers?.includes(answer.answerID);
 
     const handleClick = (event) => {
         event.stopPropagation();
-        onSelect(answer);
+        onSelect(answer, question, isSelected);
     };
 
     const handleRightClick = (event) => {
         event.preventDefault();
         event.stopPropagation();
-        onNonSelect(event, answer); // Pass event as the first argument
+        onNonSelect(event, answer, question, isNonAnswer);
     };
 
     return (
@@ -30,5 +30,7 @@ const Answer = ({ answer, selectedAnswers, selectedNonAnswers, onSelect, onNonSe
         </Button>
     );
 };
+
+
 
 export default Answer;

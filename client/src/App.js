@@ -311,18 +311,14 @@ function EmployerPage() {
             ...question,
             originalQuestion: question,
             importance: 3,
-            // selectedAnswers: selectedAnswers.map(id => getAnswerTextById(question, id)),
-            // selectedNonAnswers: selectedNonAnswers.map(id => getAnswerTextById(question, id)),
-            selectedAnswers: selectedAnswers,
-            selectedNonAnswers: selectedNonAnswers,
+            selectedAnswers: question.selectedAnswers,
+            selectedNonAnswers: question.selectedNonAnswers,
         };
         console.log('adding question: ', newQuestion);
 
         setJobPostingQuestions(prev => [...prev, newQuestion]);
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
-        setSelectedAnswers([]);
-        setSelectedNonAnswers([]);
     };
 
     const removeQuestionFromJobPosting = (question) => {
@@ -400,36 +396,60 @@ function EmployerPage() {
     //     setSelectedQuestion(question);
     // };
 
-    const handleAnswerSelect = (answer, question) => {
-        // If the answer is already selected, deselect it
-        if (selectedAnswers.includes(answer.answerID)) {
-            setSelectedAnswers(selectedAnswers.filter(id => id !== answer.answerID));
+    const handleAnswerSelect = (answer, question, isSelected) => {
+        // copy current state
+        let updatedQuestionBankQuestions = [...questionBankQuestions];
+        // find the right question
+        let q = updatedQuestionBankQuestions.find(q => q.questionID === question.questionID);
+
+        // initialize selectedAnswers and selectedNonAnswers arrays if they don't exist
+        q.selectedAnswers = q.selectedAnswers || [];
+        q.selectedNonAnswers = q.selectedNonAnswers || [];
+        // console.log('handleAnswerSelect isSelected', isSelected);
+
+        // if isSelected is true, remove the answer from the selectedAnswers list
+        // otherwise, add the answer to the selectedAnswers list
+        if (isSelected) {
+            q.selectedAnswers = q.selectedAnswers.filter(a => a !== answer.answerID);
         } else {
-            setSelectedAnswers([...selectedAnswers, answer.answerID]);
+            q.selectedAnswers.push(answer.answerID);
+            // if this answer was a non-answer before, remove it from non-answers
+            q.selectedNonAnswers = q.selectedNonAnswers.filter(a => a !== answer.answerID);
         }
 
-        // If this answer is a non-answer, remove it from the non-answers
-        setSelectedNonAnswers(selectedNonAnswers.filter(id => id !== answer.answerID));
-        setSelectedQuestion(question);
+        // setSelectedQuestion(q);
+        setQuestionBankQuestions(updatedQuestionBankQuestions);
     };
 
-    const handleNonAnswerSelect = (e, answer, question) => {
-        e.preventDefault(); // Prevent the context menu from appearing
+    const handleNonAnswerSelect = (event, answer, question, isNonAnswer) => {
+        // copy current state
+        let updatedQuestionBankQuestions = [...questionBankQuestions];
+        // find the right question
+        let q = updatedQuestionBankQuestions.find(q => q.questionID === question.questionID);
 
-        // If the answer is already a non-answer, remove it from the non-answers
-        if (selectedNonAnswers.includes(answer.answerID)) {
-            setSelectedNonAnswers(selectedNonAnswers.filter(id => id !== answer.answerID));
+        // initialize selectedAnswers and selectedNonAnswers arrays if they don't exist
+        q.selectedAnswers = q.selectedAnswers || [];
+        q.selectedNonAnswers = q.selectedNonAnswers || [];
+
+        // if isNonAnswer is true, remove the answer from the selectedNonAnswers list
+        // otherwise, add the answer to the selectedNonAnswers list
+        if (isNonAnswer) {
+            q.selectedNonAnswers = q.selectedNonAnswers.filter(a => a !== answer.answerID);
         } else {
-            setSelectedNonAnswers([...selectedNonAnswers, answer.answerID]);
+            q.selectedNonAnswers.push(answer.answerID);
+            // if this answer was a selected answer before, remove it from answers
+            q.selectedAnswers = q.selectedAnswers.filter(a => a !== answer.answerID);
         }
 
-        // If this non-answer is a selected answer, remove it from the selected answers
-        setSelectedAnswers(selectedAnswers.filter(id => id !== answer.answerID));
-        setSelectedQuestion(question);
+        // setSelectedQuestion(q);
+        setQuestionBankQuestions(updatedQuestionBankQuestions);
     };
+
+
 
     const handlePositionChange = (value) => {
         setPosition(value);
+        // console.log(questionBankQuestions);
     };
 
     const handleLocationChange = (value) => {
@@ -563,7 +583,7 @@ function EmployerPage() {
                     >
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={selectedQuestion === null || selectedAnswers.length === 0} width='auto' colorScheme={(selectedQuestion === null || selectedAnswers.length === 0) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, selectedNonAnswers)}>
+                            <Button isDisabled={selectedQuestion == null || questionBankQuestions[selectedQuestion.questionID]?.selectedAnswers?.length > 0} width='auto' colorScheme={(selectedQuestion == null || questionBankQuestions[selectedQuestion.questionID]?.selectedAnswers?.length > 0) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, selectedNonAnswers)}>
                                 <Text p={1}>Add</Text>
                             </Button>
                         </HStack>
@@ -571,13 +591,9 @@ function EmployerPage() {
                             selectedCategory={selectedCategory}
                             searchTerm={searchTerm}
                             onQuestionSelect={handleQuestionSelect}
-                            selectedAnswers={selectedAnswers}
-                            selectedNonAnswers={selectedNonAnswers}
                             onAnswerSelect={handleAnswerSelect}
                             onNonAnswerSelect={handleNonAnswerSelect}
-                            // questions={questionsData}
                             questionBankQuestions={questionBankQuestions}
-                        // onAddQuestionToJobPosting={addQuestionToJobPosting}
                         />
                     </VStack>
 
