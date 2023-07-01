@@ -50,7 +50,7 @@ app.get('/db', async (req, res) => {
     try {
         const client = await pool.connect();
         const query = {
-            text: 'SELECT * FROM user_answers WHERE user_id = $1',
+            text: 'SELECT * FROM user_answers WHERE userid = $1',
             values: ['*'],
         };
 
@@ -75,37 +75,45 @@ app.post('/api/postJob', async (req, res) => {
         const client = await pool.connect();
 
         const { userID, company, location, jobName, jobData } = req.body;
-        let jobPostingID;
+        let jobPostingID = req.body.jobPostingID;
 
         // Convert the jobData string to an object
         const jobDataObj = JSON.parse(jobData);
 
         // Upsert into job_profiles
-        let query = {
-            text: `INSERT INTO job_profiles (userID, company, location, jobName) 
-                   VALUES ($1, $2, $3, $4) 
-                   ON CONFLICT (userID) DO UPDATE 
-                   SET company = $2, location = $3, jobName = $4
-                   RETURNING jobPostingid`,
-            values: [userID, company, location, jobName],
-        };
-
-        let result = await client.query(query);
-        // jobPostingID = result.rows[0].jobPostingid;  // Get the jobPostingID of the inserted/updated row
+        let result;
+        let query;
+        if (!jobPostingID) {
+            query = {
+                text: `INSERT INTO job_profiles (userid, company, location, jobname) 
+            VALUES ($1, $2, $3, $4) 
+            RETURNING jobpostingid`,
+                values: [userID, company, location, jobName],
+            };
+        } else {
+            query = {
+                text: `UPDATE job_profiles SET company = $2, location = $3, jobname = $4
+            WHERE jobpostingid = $1
+            RETURNING jobpostingid`,
+                values: [jobPostingID, company, location, jobName],
+            };
+        }
+        result = await client.query(query);
         jobPostingID = result.rows[0]['jobpostingid'];
+
         query = {
-            text: 'DELETE FROM job_profile_questions WHERE jobPostingID = $1',
+            text: 'DELETE FROM job_profile_questions WHERE jobPostingid = $1',
             values: [jobPostingID],
         };
         await client.query(query);
 
         // Insert or update the questions
+        console.log(JSON.stringify(jobDataObj));
         for (const questionID in jobDataObj) {
-            const [answerID, importance] = jobDataObj[questionID];
-            // const importance = jobDataObj[questionID][1];
+            const [answerIDs, nonAnswerIDs, importance] = jobDataObj[questionID];
             query = {
-                text: 'INSERT INTO job_profile_questions (jobPostingID, questionID, answerID, importance) VALUES ($1, $2, $3, $4)',
-                values: [jobPostingID, questionID, answerID, importance],
+                text: 'INSERT INTO job_profile_questions (jobpostingid, questionid, answerids, nonanswerids, importance) VALUES ($1, $2, $3, $4, $5)',
+                values: [jobPostingID, questionID, answerIDs, nonAnswerIDs, importance],
             };
             await client.query(query);
         }
@@ -124,10 +132,10 @@ app.get('/api/getJob', async (req, res) => {
     const userID = req.query.userid;
     console.log("getJob req received", jobPostingID, userID);
     if (!jobPostingID) {
-        return res.status(400).send({ error: 'Missing jobPostingID query parameter' });
+        return res.status(400).send({ error: 'Missing jobPostingid query parameter' });
     }
     if (!userID) {
-        return res.status(400).send({ error: 'Missing userID query parameter, used for ownership authentication' });
+        return res.status(400).send({ error: 'Missing userid query parameter, used for ownership authentication' });
     }
 
     try {
@@ -135,7 +143,7 @@ app.get('/api/getJob', async (req, res) => {
 
         // Get job profile information
         const jobProfileQuery = {
-            text: 'SELECT * FROM job_profiles WHERE jobPostingID = $1',
+            text: 'SELECT * FROM job_profiles WHERE jobPostingid = $1',
             values: [jobPostingID],
         };
         const jobProfileResult = await client.query(jobProfileQuery);
@@ -151,12 +159,16 @@ app.get('/api/getJob', async (req, res) => {
 
         // Get question & answer pairs for this job posting
         const jobQuestionsQuery = {
-            text: 'SELECT questionID, answerID, importance FROM job_profile_questions WHERE jobPostingID = $1',
+            text: 'SELECT questionid, answerids, nonanswerids, importance FROM job_profile_questions WHERE jobpostingid = $1',
             values: [jobPostingID],
         };
         const jobQuestionsResult = await client.query(jobQuestionsQuery);
         const jobQuestionsData = jobQuestionsResult.rows.reduce((acc, curr) => {
-            acc[curr.questionid] = [curr.answerid, curr.importance];
+            acc[curr.questionid] = {
+                answerIDs: curr.answerids,
+                nonAnswerIDs: curr.nonanswerids,
+                importance: curr.importance
+            };
             return acc;
         }, {});
 
@@ -189,7 +201,7 @@ app.get('/getUserJobs', async (req, res) => {
 
         // Get job profile information
         const jobProfileQuery = {
-            text: 'SELECT jobPostingID FROM job_profiles WHERE userID = $1',
+            text: 'SELECT jobPostingid FROM job_profiles WHERE userid = $1',
             values: [userID],
         };
         const jobPostingIDsResult = await client.query(jobProfileQuery);

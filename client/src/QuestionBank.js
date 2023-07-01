@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Box, VStack } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
-const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect }) => {
+const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect, onNonAnswerSelect, selectedAnswers, selectedNonAnswers }) => {
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions[0]);
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
-
 
     let displayedQuestions = questionBankQuestions;
     if (selectedCategory) {
@@ -21,7 +19,7 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
 
     useEffect(() => {
         setSelectedQuestion(displayedQuestions[0]);
-    }, [questionBankQuestions]);
+    }, [questionBankQuestions, displayedQuestions]);
 
     return (
         <VStack spacing={5} align='stretch' maxHeight='50vh' overflowY='auto' w='100%'>
@@ -38,8 +36,14 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}
                                     answer={answer}
-                                    selectedAnswer={selectedAnswer}
-                                    onSelect={() => { setSelectedAnswer(answer); onAnswerSelect(answer, question); }} // Pass the question here
+                                    selectedAnswers={selectedAnswers}
+                                    selectedNonAnswers={selectedNonAnswers}
+                                    onSelect={(answer) => {
+                                        onAnswerSelect(answer, question);
+                                    }}
+                                    onNonSelect={(e, answer) => {
+                                        onNonAnswerSelect(e, answer, question);
+                                    }}
                                 />
                             ))}
                         </VStack>

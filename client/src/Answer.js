@@ -1,18 +1,26 @@
 import React from 'react';
 import { Button, Text } from "@chakra-ui/react";
 
-const Answer = ({ answer, selectedAnswer, onSelect }) => {
-    const isSelected = selectedAnswer === answer;
+const Answer = ({ answer, selectedAnswers, selectedNonAnswers, onSelect, onNonSelect }) => {
+    const isSelected = selectedAnswers.includes(answer.answerID);
+    const isNonAnswer = selectedNonAnswers.includes(answer.answerID);
 
     const handleClick = (event) => {
         event.stopPropagation();
         onSelect(answer);
     };
 
+    const handleRightClick = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        onNonSelect(event, answer); // Pass event as the first argument
+    };
+
     return (
         <Button
             onClick={handleClick}
-            colorScheme={isSelected ? "blue" : "gray"}
+            onContextMenu={handleRightClick}
+            colorScheme={isNonAnswer ? "red" : (isSelected ? "blue" : "gray")}
             height='auto'
             blockSize='auto'
             whiteSpace='normal'

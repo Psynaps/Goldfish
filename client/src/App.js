@@ -152,7 +152,9 @@ function EmployerPage() {
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
-    const [selectedAnswer, setSelectedAnswer] = useState(null);
+    // const [selectedAnswer, setSelectedAnswer] = useState(null);
+    const [selectedAnswers, setSelectedAnswers] = useState([]);
+    const [selectedNonAnswers, setSelectedNonAnswers] = useState([]);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [position, setPosition] = useState('');
@@ -177,9 +179,9 @@ function EmployerPage() {
     // const [message, setMessage] = useState(null);
     const [isPosting, setIsPosting] = useState(false);
     const [jobLoading, setJobLoading] = useState(false);
-    const isDev = process.env.NODE_ENV !== 'production';
+    // const isDev = process.env.NODE_ENV !== 'production';
     // const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
-    const [url, setUrl] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+    const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
     const [jobPostingID, setJobPostingID] = useState(null);
 
     const postJob = useCallback(() => {
@@ -192,15 +194,16 @@ function EmployerPage() {
                 company: company,
                 location: jobLocation,
                 jobName: position,
+                jobPostingID: jobPostingID,
                 jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
-                    acc[question.questionID] = [question.selectedAnswer.answerID, parseInt(question.importance)];
+                    acc[question.questionID] = [question.selectedAnswers, question.selectedNonAnswers, parseInt(question.importance)];
                     return acc;
                 }, {}))
             })
 
         };
         console.log(requestOptions.body);
-        fetch(`${url}/postJob`, requestOptions)
+        fetch(`${apiURL}/postJob`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
@@ -214,7 +217,7 @@ function EmployerPage() {
                 console.error(e); // This will log any errors to the console.
                 setIsPosting(false);
             });
-    }, [user, company, jobLocation, position, jobPostingQuestions, url]);
+    }, [user, jobPostingID, company, jobLocation, position, jobPostingQuestions, apiURL]);
 
 
     const handleFilterButtonClick = (category) => {
@@ -236,7 +239,7 @@ function EmployerPage() {
             console.log('no user');
             return;
         }
-        fetch(`${url}/getJob?userid=${user?.sub}&jobid=${jobPostingID}`, requestOptions)
+        fetch(`${apiURL}/getJob?userid=${user?.sub}&jobid=${jobPostingID}`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
@@ -249,9 +252,10 @@ function EmployerPage() {
             }).catch(e => {
                 setJobLoading(false);
             });
-    }, [jobPostingID, user, url]);
+    }, [user, apiURL]);
 
     // A method to set the jobPostingQuestions state based on the jobData field in the fetched data
+    // TODO: Change jobData[questionID] to jobData[questionID][0] and jobData[questionID][1]
     const loadJobPostingQuestions = (jobData) => {
         // Assuming jobData is an object where the keys are questionIDs and the values are answerIDs
         // Convert it to an array of question objects
@@ -259,8 +263,9 @@ function EmployerPage() {
         // const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
         const loadedQuestions = Object.keys(jobData).map(questionID => {
             const matchingQuestion = questionBankQuestions.find(question => question.questionID === questionID);
-            const matchingAnswer = matchingQuestion.answers.find(answer => answer.answerID === jobData[questionID][0]);
-            return { ...matchingQuestion, originalQuestion: matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 3), selectedAnswer: matchingAnswer };
+            const matchingAnswer = matchingQuestion.answers.find(answer => answer.answerID === jobData[questionID][0][0]); // Only handling one answer choice
+            const matchingNonAnswer = matchingQuestion.answers.find(answer => answer.answerID === jobData[questionID][1][0]); // Only handling one non-answer choice
+            return { ...matchingQuestion, originalQuestion: matchingQuestion, importance: (jobData[questionID][2] ? jobData[questionID][2] : 3), selectedAnswers: matchingAnswer, selectedNonAnswers: matchingNonAnswer };
 
         });
 
@@ -294,20 +299,30 @@ function EmployerPage() {
         filterQuestionBankOnLoad(jobData);
     };
 
-    const addQuestionToJobPosting = (question, answer) => {
-        const newQuestion = { ...question, originalQuestion: question, importance: 3, selectedAnswer: answer };
-        setJobPostingQuestions(prev => [...prev, newQuestion]);
-        setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
-        setSelectedQuestion(null);
-        setSelectedAnswer(null);
-        // console.log(question);
-        // console.log(questionBankQuestions);
-        // console.log(questionBankQuestions[0]);
-    };
+
 
     const sortQuestionBankQuestions = (bank) => {
         const sortedQuestions = bank.sort((a, b) => a.questionID - b.questionID);
         return sortedQuestions;
+    };
+
+    const addQuestionToJobPosting = (question) => {
+        const newQuestion = {
+            ...question,
+            originalQuestion: question,
+            importance: 3,
+            // selectedAnswers: selectedAnswers.map(id => getAnswerTextById(question, id)),
+            // selectedNonAnswers: selectedNonAnswers.map(id => getAnswerTextById(question, id)),
+            selectedAnswers: selectedAnswers,
+            selectedNonAnswers: selectedNonAnswers,
+        };
+        console.log('adding question: ', newQuestion);
+
+        setJobPostingQuestions(prev => [...prev, newQuestion]);
+        setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
+        setSelectedQuestion(null);
+        setSelectedAnswers([]);
+        setSelectedNonAnswers([]);
     };
 
     const removeQuestionFromJobPosting = (question) => {
@@ -323,6 +338,11 @@ function EmployerPage() {
         setSelectedQuestion(null); // Add this line
     };
 
+    // const getAnswerTextById = (question, answerId) => {
+    //     const answerObject = question.answers.find(answer => answer.answerID === answerId);
+    //     return answerObject ? answerObject.answer : '';
+    // };
+
     const handleJobPostingQuestionSelection = (question) => {
         if (selectedJobPostingQuestion === question) {
             setSelectedJobPostingQuestion(null);
@@ -333,12 +353,30 @@ function EmployerPage() {
 
     const handleAnswerChange = (item, e) => {
         e.stopPropagation();
-        setSelectedJobPostingQuestion(item);
-        setJobPostingQuestions(prev => prev.map(question =>
-            question.question.questionID === item.question.questionID
-                ? { ...question, selectedAnswer: question.answers.find(answer => answer.answer === e.target.value) }
-                : question
-        ));
+        const updatedQuestions = jobPostingQuestions.map((question) => {
+            if (question.originalQuestion.questionID === item.originalQuestion.questionID) {
+                const selectedAnswer = question.originalQuestion.answers.find(
+                    (answer) => answer.answer === e.target.value
+                );
+                return { ...question, selectedAnswers: [selectedAnswer.answerID] };
+            }
+            return question;
+        });
+        setJobPostingQuestions(updatedQuestions);
+    };
+
+    const handleNonAnswerChange = (item, e) => {
+        e.stopPropagation();
+        const updatedQuestions = jobPostingQuestions.map((question) => {
+            if (question.originalQuestion.questionID === item.originalQuestion.questionID) {
+                const selectedNonAnswer = question.originalQuestion.answers.find(
+                    (answer) => answer.answer === e.target.value
+                );
+                return { ...question, selectedNonAnswers: [selectedNonAnswer.answerID] };
+            }
+            return question;
+        });
+        setJobPostingQuestions(updatedQuestions);
     };
 
     const handleImportanceChange = (item, e) => {
@@ -357,8 +395,36 @@ function EmployerPage() {
         setSelectedQuestion(question);
     };
 
+    // const handleAnswerSelect = (answer, question) => {
+    //     setSelectedAnswer(answer);
+    //     setSelectedQuestion(question);
+    // };
+
     const handleAnswerSelect = (answer, question) => {
-        setSelectedAnswer(answer);
+        // If the answer is already selected, deselect it
+        if (selectedAnswers.includes(answer.answerID)) {
+            setSelectedAnswers(selectedAnswers.filter(id => id !== answer.answerID));
+        } else {
+            setSelectedAnswers([...selectedAnswers, answer.answerID]);
+        }
+
+        // If this answer is a non-answer, remove it from the non-answers
+        setSelectedNonAnswers(selectedNonAnswers.filter(id => id !== answer.answerID));
+        setSelectedQuestion(question);
+    };
+
+    const handleNonAnswerSelect = (e, answer, question) => {
+        e.preventDefault(); // Prevent the context menu from appearing
+
+        // If the answer is already a non-answer, remove it from the non-answers
+        if (selectedNonAnswers.includes(answer.answerID)) {
+            setSelectedNonAnswers(selectedNonAnswers.filter(id => id !== answer.answerID));
+        } else {
+            setSelectedNonAnswers([...selectedNonAnswers, answer.answerID]);
+        }
+
+        // If this non-answer is a selected answer, remove it from the selected answers
+        setSelectedAnswers(selectedAnswers.filter(id => id !== answer.answerID));
         setSelectedQuestion(question);
     };
 
@@ -384,7 +450,8 @@ function EmployerPage() {
             setJobLocation('');
             setPosition('');
             setCompany('myspace');
-            setSelectedAnswer(null);
+            setSelectedAnswers([]);
+            setSelectedNonAnswers([]);
             setSelectedQuestion(null);
             setSelectedJobPostingQuestion(null);
             setSelectedCategory(null);
@@ -496,7 +563,7 @@ function EmployerPage() {
                     >
                         <HStack justifyContent='space-between' w='100%'>
                             <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={selectedQuestion === null || selectedAnswer === null} width='auto' colorScheme={(selectedQuestion === null || selectedAnswer === null) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswer)}>
+                            <Button isDisabled={selectedQuestion === null || selectedAnswers.length === 0} width='auto' colorScheme={(selectedQuestion === null || selectedAnswers.length === 0) ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, selectedNonAnswers)}>
                                 <Text p={1}>Add</Text>
                             </Button>
                         </HStack>
@@ -504,12 +571,13 @@ function EmployerPage() {
                             selectedCategory={selectedCategory}
                             searchTerm={searchTerm}
                             onQuestionSelect={handleQuestionSelect}
+                            selectedAnswers={selectedAnswers}
+                            selectedNonAnswers={selectedNonAnswers}
                             onAnswerSelect={handleAnswerSelect}
-                            selectedQuestion={selectedQuestion || questionsData[0]}
-                            selectedAnswer={selectedAnswer}
-                            questions={questionsData}
+                            onNonAnswerSelect={handleNonAnswerSelect}
+                            // questions={questionsData}
                             questionBankQuestions={questionBankQuestions}
-                            onAddQuestionToJobPosting={addQuestionToJobPosting}
+                        // onAddQuestionToJobPosting={addQuestionToJobPosting}
                         />
                     </VStack>
 
@@ -541,45 +609,65 @@ function EmployerPage() {
                             </Button>
                         </HStack>
                         <Box maxHeight='60vh' overflowY='auto' align='stretch' w='100%'>
-                            {jobPostingQuestions.map((item, index) => (
-                                <Box
-                                    key={index}
-                                    bg={selectedJobPostingQuestion?.questionID === item?.questionID ? jobPostingSelectedBackground : 'white'}
-                                    borderColor={selectedJobPostingQuestion?.questionID === item?.questionID ? jobPostingSelectedBorderColor : jobPostingInitialBorderColor}
-                                    borderWidth={selectedJobPostingQuestion?.questionID === item?.questionID ? '4px' : '3px'}
-                                    onClick={() => handleJobPostingQuestionSelection(item)}
-                                    py={3}
-                                    px={5}
-                                    mb={3}
-                                    borderRadius="md"
-                                >
-                                    <Text>{item.originalQuestion.question}</Text>
-                                    <HStack mt={2}>
-                                        <Text>Answer:</Text>
-                                        <Select
-                                            value={item.selectedAnswer?.answer}
-                                            onChange={(e) => handleAnswerChange(item, e)}
-                                            onClick={e => e.stopPropagation()}
-                                        >
-                                            {item.originalQuestion?.answers?.map((answer, index) => (
-                                                <option key={index} value={answer.answer}>{(answer.answer.indexOf(':') !== -1) ? answer.answer.substring(0, answer.answer.indexOf(':')) : answer.answer}</option>
-                                            ))}
-                                        </Select>
-                                    </HStack>
-                                    <HStack mt={2}>
-                                        <Text>Importance:</Text>
-                                        <Select
-                                            defaultValue={item.importance}
-                                            onChange={(e) => handleImportanceChange(item, e)}
-                                            onClick={e => e.stopPropagation()}
-                                        >
-                                            <option value='3'>Required</option>
-                                            <option value='2'>Important</option>
-                                            <option value='1'>Optional</option>
-                                        </Select>
-                                    </HStack>
-                                </Box>
-                            ))}
+                            {jobPostingQuestions.map((item, index) => {
+                                const selectedAnswerText = item.originalQuestion.answers.find(answer => answer.answerID === item.selectedAnswers[0])?.answer;
+                                const selectedNonAnswerText = item.originalQuestion.answers.find(answer => answer.answerID === item.selectedNonAnswers[0])?.answer;
+                                console.log('t1', item);
+                                console.log('selectedAnswerText', selectedAnswerText);
+                                console.log('selectedNonAnswerText', selectedNonAnswerText);
+                                return (
+                                    <Box
+                                        key={index}
+                                        bg={selectedJobPostingQuestion?.questionID === item?.questionID ? jobPostingSelectedBackground : 'white'}
+                                        borderColor={selectedJobPostingQuestion?.questionID === item?.questionID ? jobPostingSelectedBorderColor : jobPostingInitialBorderColor}
+                                        borderWidth={selectedJobPostingQuestion?.questionID === item?.questionID ? '4px' : '3px'}
+                                        onClick={() => handleJobPostingQuestionSelection(item)}
+                                        py={3}
+                                        px={5}
+                                        mb={3}
+                                        borderRadius="md"
+                                    >
+                                        <Text>{item.originalQuestion.question}</Text>
+                                        <HStack mt={2}>
+                                            <Text>Answer:</Text>
+                                            <Select
+                                                value={selectedAnswerText}
+                                                onChange={(e) => handleAnswerChange(item, e)}
+                                                onClick={e => e.stopPropagation()}
+                                            >
+                                                {item.originalQuestion?.answers?.map((answer, index) => (
+                                                    <option key={index} value={answer.answer}>{(answer.answer.indexOf(':') !== -1) ? answer.answer.substring(0, answer.answer.indexOf(':')) : answer.answer}</option>
+                                                ))}
+                                            </Select>
+                                        </HStack>
+                                        <HStack mt={2}>
+                                            <Text>Non-Answer:</Text>
+                                            <Select
+                                                value={selectedNonAnswerText}
+                                                onChange={(e) => handleNonAnswerChange(item, e)}
+                                                onClick={e => e.stopPropagation()}
+                                            >
+                                                <option value=''>None</option>
+                                                {item.originalQuestion?.answers?.map((answer, index) => (
+                                                    <option key={index} value={answer.answer}>{(answer.answer.indexOf(':') !== -1) ? answer.answer.substring(0, answer.answer.indexOf(':')) : answer.answer}</option>
+                                                ))}
+                                            </Select>
+                                        </HStack>
+                                        <HStack mt={2}>
+                                            <Text>Importance:</Text>
+                                            <Select
+                                                defaultValue={item.importance}
+                                                onChange={(e) => handleImportanceChange(item, e)}
+                                                onClick={e => e.stopPropagation()}
+                                            >
+                                                <option value='3'>Required</option>
+                                                <option value='2'>Important</option>
+                                                <option value='1'>Optional</option>
+                                            </Select>
+                                        </HStack>
+                                    </Box>
+                                );
+                            })}
                             {(jobPostingQuestions.length > 0 && isAuthenticated) && <Button colorScheme='blue' width='auto' onClick={() => postJob()}>
                                 <Text p={4}>Save</Text>
                             </Button>}
