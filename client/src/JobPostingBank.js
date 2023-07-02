@@ -1,29 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Box, VStack } from "@chakra-ui/react";
+import { Box, VStack, HStack, Text, Select } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
-const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect, onNonAnswerSelect }) => {
-    const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions[0]);
 
-    let displayedQuestions = questionBankQuestions;
-    if (selectedCategory) {
-        displayedQuestions = displayedQuestions.filter(q => q.category === selectedCategory);
-    }
-
-    if (searchTerm) {
-        const searchWords = searchTerm.split(' ');
-        if (searchWords && searchWords.length > 0) {
-            displayedQuestions = displayedQuestions.filter(q => q.tags && Array.isArray(q.tags) && searchWords.some(word => q.tags.some(tag => tag.toLowerCase().includes(word.toLowerCase()))));
-        }
-    }
-
-    // useEffect(() => {
-    //     setSelectedQuestion(displayedQuestions[0]);
-    // }, [questionBankQuestions, displayedQuestions]);
+const JobPostingBank = ({ jobPostingQuestions, onQuestionSelect, onAnswerSelect, onNonAnswerSelect, onImportanceChange }) => {
+    const [selectedQuestion, setSelectedQuestion] = useState(jobPostingQuestions[0]);
 
     return (
         <VStack spacing={5} align='stretch' maxHeight='50vh' overflowY='auto' w='100%'>
-            {displayedQuestions.map((question, index) => (
+            {jobPostingQuestions.map((question, index) => (
                 <Box key={question.questionID} borderBottom='1px' borderColor='gray.200'>
                     <Question
                         question={question}
@@ -35,9 +20,21 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                             }
                         }}
                         isInitiallyOpen={index === 0}
-                        isQuestionBankQuestion={true}
+                        isQuestionBankQuestion={false}
                     >
                         <VStack align='stretch' mt={5} spacing={3}>
+                            <HStack mt={2}>
+                                <Text>Importance:</Text>
+                                <Select
+                                    defaultValue={question.importance}
+                                    onChange={(e) => onImportanceChange(e, question)}
+                                    onClick={e => e.stopPropagation()}
+                                >
+                                    <option value='3'>Required</option>
+                                    <option value='2'>Important</option>
+                                    <option value='1'>Optional</option>
+                                </Select>
+                            </HStack>
                             {question.answers?.map((answer) => (
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}
@@ -66,4 +63,4 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
     );
 };
 
-export default QuestionBank;
+export default JobPostingBank;
