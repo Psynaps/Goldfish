@@ -164,11 +164,12 @@ app.get('/api/getJob', async (req, res) => {
         };
         const jobQuestionsResult = await client.query(jobQuestionsQuery);
         const jobQuestionsData = jobQuestionsResult.rows.reduce((acc, curr) => {
-            acc[curr.questionid] = {
-                answerIDs: curr.answerids,
-                nonAnswerIDs: curr.nonanswerids,
-                importance: curr.importance
-            };
+            // acc[curr.questionid] = {
+            //     answerIDs: curr.answerids,
+            //     nonAnswerIDs: curr.nonanswerids,
+            //     importance: curr.importance
+            // };
+            acc[curr.questionid] = [curr.answerids, curr.nonanswerids, curr.importance];
             return acc;
         }, {});
 

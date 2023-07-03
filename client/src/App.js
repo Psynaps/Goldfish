@@ -12,7 +12,7 @@ import QuestionBank from './QuestionBank';
 import JobPostingBank from './JobPostingBank';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Select, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import './App.css';
 
@@ -256,17 +256,29 @@ function EmployerPage() {
             });
     }, [user, apiURL]);
 
+    const loadJobPosting = (data) => {
+        // console.log('data', data);
+        setCompany(data.company);
+        setJobLocation(data.location);
+        setPosition(data.jobName);
+
+        // Parse the jobData field into a JavaScript object
+        const jobData = JSON.parse(data.jobData);
+
+        loadJobPostingQuestions(jobData);
+        filterQuestionBankOnLoad(jobData);
+    };
+
     // A method to set the jobPostingQuestions state based on the jobData field in the fetched data
-    // TODO: Change jobData[questionID] to jobData[questionID][0] and jobData[questionID][1]
     const loadJobPostingQuestions = (jobData) => {
-        // Assuming jobData is an object where the keys are questionIDs and the values are answerIDs
-        // Convert it to an array of question objects
 
         // const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
         const loadedQuestions = Object.keys(jobData).map(questionID => {
             const matchingQuestion = questionBankQuestions.find(question => question.questionID === questionID);
             const jobMatchingAnswers = jobData[questionID][0];
             const jobMatchingNonAnswers = jobData[questionID][1];
+            console.log('jobMatchingAnswers', jobMatchingAnswers);
+            console.log('jobMatchingNonAnswers', jobMatchingNonAnswers);
             // const matchingAnswer = matchingQuestion.answers.find(answer => answer.answerID === jobData[questionID][0][0]); // Only handling one answer choice
             // const matchingNonAnswer = matchingQuestion.answers.find(answer => answer.answerID === jobData[questionID][1][0]); // Only handling one non-answer choice
             return { ...matchingQuestion, importance: (jobData[questionID][2] ? jobData[questionID][2] : 3), selectedAnswers: jobMatchingAnswers, selectedNonAnswers: jobMatchingNonAnswers };
@@ -289,22 +301,6 @@ function EmployerPage() {
         setQuestionBankQuestions(filteredQuestionBank);
     };
 
-    // Modify loadJobPosting to call these methods
-    const loadJobPosting = (data) => {
-        // console.log('data', data);
-        setCompany(data.company);
-        setJobLocation(data.location);
-        setPosition(data.jobName);
-
-        // Parse the jobData field into a JavaScript object
-        const jobData = JSON.parse(data.jobData);
-
-        loadJobPostingQuestions(jobData);
-        filterQuestionBankOnLoad(jobData);
-    };
-
-
-
     const sortQuestionBankQuestions = (bank) => {
         const sortedQuestions = bank.sort((a, b) => a.questionID - b.questionID);
         return sortedQuestions;
@@ -313,7 +309,6 @@ function EmployerPage() {
     const addQuestionToJobPosting = (question) => {
         const newQuestion = {
             ...question,
-            // originalQuestion: question,
             importance: 3,
             selectedAnswers: question.selectedAnswers,
             selectedNonAnswers: question.selectedNonAnswers,
@@ -332,17 +327,10 @@ function EmployerPage() {
             // updatedList.sort((a, b) => a.questionID - b.questionID);
             return sortQuestionBankQuestions(updatedList);
         });
-        // console.log('job posting questions: ', jobPostingQuestions);
-        // console.log('question: ', question);
         setJobPostingQuestions(prev => prev.filter(item => item?.questionID !== question?.questionID));
         setSelectedJobPostingQuestion(null);
         setSelectedQuestion(null); // Add this line
     };
-
-    // const getAnswerTextById = (question, answerId) => {
-    //     const answerObject = question.answers.find(answer => answer.answerID === answerId);
-    //     return answerObject ? answerObject.answer : '';
-    // };
 
     const handleJobPostingQuestionSelection = (question) => {
         console.log('selectedJobPostingQuestion', selectedJobPostingQuestion, question);
@@ -353,33 +341,33 @@ function EmployerPage() {
         }
     };
 
-    const handleAnswerChange = (item, e) => {
-        e.stopPropagation();
-        const updatedQuestions = jobPostingQuestions.map((question) => {
-            if (question.questionID === item.questionID) {
-                const selectedAnswer = question.answers.find(
-                    (answer) => answer.answer === e.target.value
-                );
-                return { ...question, selectedAnswers: [selectedAnswer.answerID] };
-            }
-            return question;
-        });
-        setJobPostingQuestions(updatedQuestions);
-    };
+    // const handleAnswerChange = (item, e) => {
+    //     e.stopPropagation();
+    //     const updatedQuestions = jobPostingQuestions.map((question) => {
+    //         if (question.questionID === item.questionID) {
+    //             const selectedAnswer = question.answers.find(
+    //                 (answer) => answer.answer === e.target.value
+    //             );
+    //             return { ...question, selectedAnswers: [selectedAnswer.answerID] };
+    //         }
+    //         return question;
+    //     });
+    //     setJobPostingQuestions(updatedQuestions);
+    // };
 
-    const handleNonAnswerChange = (item, e) => {
-        e.stopPropagation();
-        const updatedQuestions = jobPostingQuestions.map((question) => {
-            if (question.questionID === item.questionID) {
-                const selectedNonAnswer = question.answers.find(
-                    (answer) => answer.answer === e.target.value
-                );
-                return { ...question, selectedNonAnswers: [selectedNonAnswer.answerID] };
-            }
-            return question;
-        });
-        setJobPostingQuestions(updatedQuestions);
-    };
+    // const handleNonAnswerChange = (item, e) => {
+    //     e.stopPropagation();
+    //     const updatedQuestions = jobPostingQuestions.map((question) => {
+    //         if (question.questionID === item.questionID) {
+    //             const selectedNonAnswer = question.answers.find(
+    //                 (answer) => answer.answer === e.target.value
+    //             );
+    //             return { ...question, selectedNonAnswers: [selectedNonAnswer.answerID] };
+    //         }
+    //         return question;
+    //     });
+    //     setJobPostingQuestions(updatedQuestions);
+    // };
 
     const handleImportanceChange = (e, item) => {
         e.stopPropagation();
@@ -693,6 +681,12 @@ function EmployerPage() {
                             onImportanceChange={handleImportanceChange}
                             jobPostingQuestions={jobPostingQuestions}
                         />
+                        {(jobPostingQuestions.length > 0 && isAuthenticated) && <Button colorScheme='blue' width='auto' onClick={() => postJob()}>
+                            <Text p={4}>Save</Text>
+                        </Button>}
+                        {(jobPostingQuestions.length > 0 && !isAuthenticated) && <Button isDisabled colorScheme='blue' width='auto' onClick={() => postJob()}>
+                            <Text p={4}>Log in to Save</Text>
+                        </Button>}
                     </VStack>
 
 
