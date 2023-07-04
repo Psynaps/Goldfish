@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Collapsible from 'react-collapsible';
 import { Box } from "@chakra-ui/react";
 
-const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen }) => {
+const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen, isQuestionBankQuestion }) => {
     const [isOpen, setIsOpen] = useState(isInitiallyOpen);
     // const [justSelected, setJustSelected] = useState(false);
 
@@ -26,7 +26,7 @@ const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen })
         <Box
             onClick={handleClick}
             borderWidth={isSelected ? "4px" : "3px"}
-            borderColor={isSelected ? "blue.500" : "gray.200"}
+            borderColor={isSelected ? (isQuestionBankQuestion ? "blue.500" : 'orange.500') : "gray.200"}
             borderRadius="md"
             p={4}
             _hover={{ bg: "gray.100" }}
