@@ -4,19 +4,19 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import QuestionBank from './QuestionBank';
 import JobPostingBank from './JobPostingBank';
-import { LoginButton, LogoutButton } from './LoginOutButtons';
+import { LoginButton } from './LoginButton';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
-import './App.css';
+// import './App.css';
 
 const deployURL = 'https://goldfishai.netlify.app';
 
 
-function EmployerPage() {
+function EmployerPage(returnURL) {
     const [searchTerm, setSearchTerm] = useState('');
-    const { isAuthenticated, isLoading, user, logout, loginWithRedirect } = useAuth0();
+    const { isAuthenticated, isLoading, user, logout } = useAuth0();
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
@@ -38,9 +38,9 @@ function EmployerPage() {
     const initialColor = useColorModeValue('black', 'white');
     const selectedColor = useColorModeValue('white', 'black');
     const selectedBg = useColorModeValue('blue.200', 'blue.700');
-    const jobPostingInitialBorderColor = useColorModeValue('orange.200', 'orange.200');
-    const jobPostingSelectedBorderColor = useColorModeValue('orange.500', 'orange.300');
-    const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
+    // const jobPostingInitialBorderColor = useColorModeValue('orange.200', 'orange.200');
+    // const jobPostingSelectedBorderColor = useColorModeValue('orange.500', 'orange.300');
+    // const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
 
@@ -50,6 +50,7 @@ function EmployerPage() {
     // const isDev = process.env.NODE_ENV !== 'production';
     // const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+
     const [jobPostingID, setJobPostingID] = useState(null);
 
     const postJob = useCallback(() => {
@@ -405,7 +406,7 @@ function EmployerPage() {
                                     </MenuItem>
                                     <MenuItem onClick={() => logout({
                                         logoutParams: {
-                                            returnTo: `${deployURL}/employer`,
+                                            returnTo: returnURL
                                         }
                                     })}>
                                         Log out
