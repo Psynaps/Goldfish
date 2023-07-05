@@ -3,6 +3,7 @@ import goldfishLogo from './images/logo.png';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Text, SimpleGrid, Avatar, } from '@chakra-ui/react';
 import { LoginButton, LogoutButton } from './LoginButton';
+import './App.css';
 
 function Home() {
     const [isDropdownOpen, setDropdownOpen] = useState(false);

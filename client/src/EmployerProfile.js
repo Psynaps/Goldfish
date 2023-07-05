@@ -1,15 +1,23 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Box, Flex, HStack, Button, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode } from '@chakra-ui/react';
-
+import { Box, Flex, HStack, Button, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import { useForm } from "react-hook-form";
+// import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton } from './LoginButton';
 
 const deployURL = 'https://goldfishai.netlify.app';
 
+const subTabs = [
+    'Company Info',
+    'Office Locations',
+    'Company Logo',
+    'Medical Benefits',
+    'Other Benefits',
+];
 
 function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
     const SubTabButton = ({ title, secondaryText, tabName }) => (
@@ -51,22 +59,94 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
     );
 }
 
-function EmployerProfileBuilderRightContent({ selectedSubTab }) {
-    switch (selectedSubTab) {
-        case 'Company Info':
-            return <p>Company Info content goes here...</p>;
-        case 'Office Locations':
-            return <p>Office Locations content goes here...</p>;
-        case 'Company Logo':
-            return <p>Company Logo content goes here...</p>;
-        case 'Medical Benefits':
-            return <p>Medical Benefits content goes here...</p>;
-        case 'Other Benefits':
-            return <p>Other Benefits content goes here...</p>;
-        default:
-            return null;
+const EmployerProfileBuilderRightContent = ({
+    selectedSubTab,
+    setSelectedSubTab,
+    formData,
+    setFormData,
+    userInfo // assume this is passed from parent component
+}) => {
+    const defaultValues = {
+        name: userInfo?.name,
+        website: userInfo?.website,
+        linkedin: userInfo?.linkedin,
+        logo: userInfo?.logo,
+    };
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors, isSubmitting },
+        reset // reset method from useForm to update defaultValues
+    } = useForm({ defaultValues });
+
+    useEffect(() => {
+        reset(defaultValues);
+    }, [userInfo, reset]);
+
+    const currentIndex = subTabs.indexOf(selectedSubTab);
+    const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
+    const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
+
+    const onSubmit = (data) => {
+        setFormData(prev => ({ ...prev, [selectedSubTab]: data }));
+
+        // If the submission is successful
+        if (nextSubTab) {
+            setSelectedSubTab(nextSubTab);
+        }
+    };
+    if (selectedSubTab === 'Company Info') {
+        return (
+            <form onSubmit={handleSubmit(onSubmit)}>
+                <VStack align='start' spacing={4} p={4} color='white'>
+                    <Text fontSize='2xl' fontWeight='bold' mb={5}>Basic info</Text>
+                    <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                        <FormControl isInvalid={errors.name}>
+                            <FormLabel htmlFor="name">Company Name or DBA</FormLabel>
+                            <Input id="name" {...register("name", { required: "This is required" })} w='95%' alignSelf='center' />
+                            <FormErrorMessage>
+                                {errors.name && errors.name.message}
+                            </FormErrorMessage>
+                        </FormControl>
+                        <FormControl isInvalid={errors.website}>
+                            <FormLabel htmlFor="website">Website</FormLabel>
+                            <Input id="website" {...register("website", { required: "This is required" })} w='95%' alignSelf='center' />
+                            <FormErrorMessage>
+                                {errors.website && errors.website.message}
+                            </FormErrorMessage>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="linkedin">LinkedIn Profile (Optional)</FormLabel>
+                            <Input id="linkedin" {...register("linkedin")} w='95%' alignSelf='center' />
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="logo">Logo Upload</FormLabel>
+                            <Input type="file" id="logo" {...register("logo")} w='95%' alignSelf='center' />
+                        </FormControl>
+                        <HStack>
+                            <Button
+                                colorScheme="teal"
+                                isLoading={isSubmitting}
+                                type="submit"
+                            >
+                                <Text>Next</Text>
+                            </Button>
+                            <Button
+                                colorScheme="teal"
+                                disabled={!prevSubTab}
+                                onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                            >
+                                <Text>Back</Text>
+                            </Button>
+                        </HStack>
+                    </VStack>
+                </VStack>
+            </form>
+        );
     }
-}
+};
 
 function JobPostingsContent() {
     return <Box>Job Postings Content</Box>;
@@ -97,6 +177,7 @@ function EmployerProfile(returnURL) {
     const { colorMode, toggleColorMode, colorScheme } = useColorMode();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
+    const [formData, setFormData] = useState({});
 
 
     return (
@@ -154,7 +235,7 @@ function EmployerProfile(returnURL) {
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Employer Profile")}
                         >
-                            Employer Profile
+                            <Text isTruncated>Employer Profile</Text>
                         </Button>
                         <Button
                             w='80%'
@@ -162,7 +243,7 @@ function EmployerProfile(returnURL) {
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Job Postings")}
                         >
-                            Job Postings
+                            <Text isTruncated>Job Postings </Text>
                         </Button>
                         <Button
                             w='80%'
@@ -170,7 +251,7 @@ function EmployerProfile(returnURL) {
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Account Settings")}
                         >
-                            Account Settings
+                            <Text isTruncated> Account Settings</Text>
                         </Button>
                         <Button
                             w='80%'
@@ -178,7 +259,7 @@ function EmployerProfile(returnURL) {
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Matches")}
                         >
-                            Matches
+                            <Text isTruncated> Matches</Text>
                         </Button>
                     </VStack>
                 </Box>
@@ -191,7 +272,13 @@ function EmployerProfile(returnURL) {
                 </Box>
                 <Box w='1px' h='80vh' bg='gray' />
                 <Box w='60%' h='80vh' bg='#051672'>
-                    {selectedTab === 'Employer Profile' && <EmployerProfileBuilderRightContent />}
+                    <EmployerProfileBuilderRightContent
+                        selectedSubTab={selectedSubTab}
+                        setSelectedSubTab={setSelectedSubTab}
+                        formData={formData}
+                        setFormData={setFormData}
+                        userInfo={{ 'name': 'test' }}
+                    />
                     {selectedTab === 'Job Postings' && <JobPostingsRightContent />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
