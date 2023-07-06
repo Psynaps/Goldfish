@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Box, Flex, HStack, Button, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
+import { Box, Flex, Wrap, HStack, Button, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
@@ -9,12 +9,12 @@ import { useForm } from "react-hook-form";
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton } from './LoginButton';
 
-const deployURL = 'https://goldfishai.netlify.app';
+// const deployURL = 'https://goldfishai.netlify.app';
 
 const subTabs = [
     'Company Info',
     'Office Locations',
-    'Company Logo',
+    // 'Company Logo',
     'Medical Benefits',
     'Other Benefits',
 ];
@@ -32,19 +32,19 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
             _active={{ bg: 'none' }}
             color='white'
         >
-            <Flex justifyContent='space-between'>
-                <VStack alignItems='flex-start' spacing={1}>
-                    <Text fontWeight='bold'>{title}</Text>
-                    <Text fontSize='sm'>{secondaryText}</Text>
+            <HStack justifyContent='space-between' alignItems='center' >
+                <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
+                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md']}>{title}</Text>
+                    <Text fontSize={['2xs', 'xs']}>{secondaryText}</Text>
                 </VStack>
-                <Circle size="40px" border="2px" borderColor='green.400' bg={selectedSubTab === tabName ? 'green.400' : 'transparent'} />
-            </Flex>
-        </Box>
+                <Circle size={[6, 8]} border="2px" borderColor='green.400' bg={selectedSubTab === tabName ? 'green.400' : 'transparent'} />
+            </HStack>
+        </Box >
     );
 
     return (
         <VStack align='start' spacing={4} p={4} color='white'>
-            <Text fontSize='2xl' fontWeight='bold' mb={1}
+            <Text fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }} fontWeight='bold' mb={1}
             // alignSelf='center'
             >
                 Employer Profile Builder
@@ -52,7 +52,6 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
             <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
             <SubTabButton title='Company Info' secondaryText='Fill in' tabName='Company Info' />
             <SubTabButton title='Office Locations' secondaryText='Fill in' tabName='Office Locations' />
-            <SubTabButton title='Company Logo' secondaryText='Browse & Upload' tabName='Company Logo' />
             <SubTabButton title='Medical Benefits' secondaryText='Fill in' tabName='Medical Benefits' />
             <SubTabButton title='Other Benefits' secondaryText='Fill in' tabName='Other Benefits' />
         </VStack>
@@ -62,40 +61,40 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
 const EmployerProfileBuilderRightContent = ({
     selectedSubTab,
     setSelectedSubTab,
-    formData,
-    setFormData,
-    userInfo // assume this is passed from parent component
+    userInfo, // assume this is passed from parent component
+    setUserInfo
 }) => {
-    const defaultValues = {
-        name: userInfo?.name,
-        website: userInfo?.website,
-        linkedin: userInfo?.linkedin,
-        logo: userInfo?.logo,
-    };
 
     const {
         register,
         handleSubmit,
         formState: { errors, isSubmitting },
         reset // reset method from useForm to update defaultValues
-    } = useForm({ defaultValues });
+    } = useForm({ userInfo });
 
-    useEffect(() => {
-        reset(defaultValues);
-    }, [userInfo, reset]);
+
 
     const currentIndex = subTabs.indexOf(selectedSubTab);
     const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
     const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
 
+    console.log(currentIndex, nextSubTab, prevSubTab);
     const onSubmit = (data) => {
-        setFormData(prev => ({ ...prev, [selectedSubTab]: data }));
-
+        setUserInfo(prev => ({ ...prev, ...data }));
+        console.log(data);
         // If the submission is successful
         if (nextSubTab) {
             setSelectedSubTab(nextSubTab);
         }
+
     };
+
+    useEffect(() => {
+        console.log('userinfo', userInfo);
+        reset(userInfo);
+
+    }, [userInfo, reset]);
+
     if (selectedSubTab === 'Company Info') {
         return (
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -103,11 +102,11 @@ const EmployerProfileBuilderRightContent = ({
                     <Text fontSize='2xl' fontWeight='bold' mb={5}>Basic info</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={25} alignItems='start' w='100%'>
-                        <FormControl isInvalid={errors.name}>
-                            <FormLabel htmlFor="name">Company Name or DBA</FormLabel>
-                            <Input id="name" {...register("name", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormControl isInvalid={errors.companyName}>
+                            <FormLabel htmlFor="companyName">Company Name or DBA</FormLabel>
+                            <Input id="companyName" {...register("companyName", { required: "This is required" })} w='95%' alignSelf='center' />
                             <FormErrorMessage>
-                                {errors.name && errors.name.message}
+                                {errors.companyName && errors.companyName.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.website}>
@@ -123,9 +122,16 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="logo">Logo Upload</FormLabel>
-                            <Input type="file" id="logo" {...register("logo")} w='95%' alignSelf='center' />
+                            <Input type="file" id="logo" {...register("logo")} w='95%' p={2} alignSelf='center' />
                         </FormControl>
                         <HStack>
+                            <Button
+                                colorScheme="teal"
+                                isDisabled={currentIndex === 0}
+                                onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                            >
+                                <Text>Back</Text>
+                            </Button>
                             <Button
                                 colorScheme="teal"
                                 isLoading={isSubmitting}
@@ -133,18 +139,62 @@ const EmployerProfileBuilderRightContent = ({
                             >
                                 <Text>Next</Text>
                             </Button>
+                        </HStack>
+                    </VStack>
+                </VStack>
+            </form>
+        );
+    }
+    else if (selectedSubTab === 'Office Locations') {
+        return (
+            <form key="Office Locations" onSubmit={handleSubmit(onSubmit)}>
+                <VStack align='start' spacing={4} p={4} color='white'>
+                    <Text fontSize='2xl' fontWeight='bold' mb={5}>Geography</Text>
+                    <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                        <FormControl isInvalid={errors.office1}>
+                            <FormLabel htmlFor="office1">HQ (Main Office)</FormLabel>
+                            <Input id="office1" {...register("office1", { required: "This is required" })} w='95%' alignSelf='center' />
+                            <FormErrorMessage>
+                                {errors.office1 && errors.office1.message}
+                            </FormErrorMessage>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="office2">Office Hub 2 (Optional)</FormLabel>
+                            <Input id="office2" {...register("office2")} w='95%' alignSelf='center' />
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="office3">Office Hub 3 (Optional)</FormLabel>
+                            <Input id="office3" {...register("office3")} w='95%' alignSelf='center' />
+                        </FormControl>
+                        <HStack>
                             <Button
                                 colorScheme="teal"
-                                disabled={!prevSubTab}
+                                isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
                             >
                                 <Text>Back</Text>
+                            </Button>
+                            <Button
+                                colorScheme="teal"
+                                isLoading={isSubmitting}
+                                type="submit"
+                            >
+                                <Text>Next</Text>
                             </Button>
                         </HStack>
                     </VStack>
                 </VStack>
             </form>
         );
+    }
+    else if (selectedSubTab === 'Medical Benefits') {
+    }
+    else if (selectedSubTab === 'Other Benefits') {
+
+    }
+    else {
+        return <Box>Something went wrong. Try reloading</Box>;
     }
 };
 
@@ -174,10 +224,13 @@ function MatchesRightContent() {
 
 function EmployerProfile(returnURL) {
     const { isAuthenticated, isLoading, user, logout } = useAuth0();
-    const { colorMode, toggleColorMode, colorScheme } = useColorMode();
+    const { colorMode, toggleColorMode } = useColorMode();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
-    const [formData, setFormData] = useState({});
+    const [userInfo, setUserInfo] = useState({
+        'website': 'test', 'testItem'
+            : 'test123', 'name': 'abc'
+    });
 
 
     return (
@@ -227,58 +280,69 @@ function EmployerProfile(returnURL) {
                 </HStack>
             </Box>
             <HStack spacing={2} justifyContent='center' marginTop={5}>
-                <Box w='15%' h='80vh' bg='#051672'>
+                <Box w='15%' h='80vh' bg='#051672' minWidth='15%'>
                     <VStack spacing='6%' alignItems='center'>
                         <Button
                             w='80%'
                             variant={selectedTab === "Employer Profile" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Employer Profile")}
+                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            whiteSpace={'normal'}
+                            p={6}
                         >
-                            <Text isTruncated>Employer Profile</Text>
+                            <Text>Employer Profile</Text>
                         </Button>
                         <Button
+                            // Make the button text wrap
                             w='80%'
                             variant={selectedTab === "Job Postings" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Job Postings")}
+                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            whiteSpace={'normal'}
+                            p={6}
                         >
-                            <Text isTruncated>Job Postings </Text>
+                            <Text p={5}>Job Postings</Text>
                         </Button>
                         <Button
                             w='80%'
                             variant={selectedTab === "Account Settings" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Account Settings")}
+                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            whiteSpace={'normal'}
+                            p={6}
                         >
-                            <Text isTruncated> Account Settings</Text>
+                            <Text>Account Settings</Text>
                         </Button>
                         <Button
                             w='80%'
                             variant={selectedTab === "Matches" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Matches")}
+                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            p={6}
                         >
-                            <Text isTruncated> Matches</Text>
+                            <Text > Matches</Text>
                         </Button>
                     </VStack>
                 </Box>
-                <Box w='1px' h='80vh' bg='gray' />
-                <Box w='25%' h='80vh' bg='#051672'>
+                <Box w='1px' h='80vh' bg='gray' minWidth='.25%' />
+                <Box w='25%' h='80vh' bg='#051672' minWidth='25%'>
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderContent selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />}
                     {selectedTab === 'Job Postings' && <JobPostingsContent />}
                     {selectedTab === 'Account Settings' && <AccountSettingsContent />}
                     {selectedTab === 'Matches' && <MatchesContent />}
                 </Box>
-                <Box w='1px' h='80vh' bg='gray' />
+                <Box w='1px' h='80vh' bg='gray' minWidth='.25%' />
                 <Box w='60%' h='80vh' bg='#051672'>
-                    <EmployerProfileBuilderRightContent
+                    {selectedTab === 'Employer Profile' && <EmployerProfileBuilderRightContent
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
-                        formData={formData}
-                        setFormData={setFormData}
-                        userInfo={{ 'name': 'test' }}
-                    />
+                        userInfo={userInfo}
+                        setUserInfo={setUserInfo}
+                    />}
                     {selectedTab === 'Job Postings' && <JobPostingsRightContent />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
