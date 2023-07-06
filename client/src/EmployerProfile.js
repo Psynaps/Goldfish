@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Box, Flex, Wrap, HStack, Button, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
+import { Box, Flex, Wrap, HStack, Button, Select, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
@@ -15,8 +15,9 @@ const subTabs = [
     'Company Info',
     'Office Locations',
     // 'Company Logo',
-    'Medical Benefits',
-    'Other Benefits',
+    'Medical & Benefits',
+    'Paid Time Off',
+    '401k / Financial',
 ];
 
 function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
@@ -50,10 +51,7 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
                 Employer Profile Builder
             </Text>
             <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-            <SubTabButton title='Company Info' secondaryText='Fill in' tabName='Company Info' />
-            <SubTabButton title='Office Locations' secondaryText='Fill in' tabName='Office Locations' />
-            <SubTabButton title='Medical Benefits' secondaryText='Fill in' tabName='Medical Benefits' />
-            <SubTabButton title='Other Benefits' secondaryText='Fill in' tabName='Other Benefits' />
+            {subTabs.map((tabName) => <SubTabButton key={tabName} title={tabName} secondaryText='Fill in' tabName={tabName} />)}
         </VStack>
     );
 }
@@ -78,10 +76,10 @@ const EmployerProfileBuilderRightContent = ({
     const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
     const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
 
-    console.log(currentIndex, nextSubTab, prevSubTab);
+    // console.log(currentIndex, nextSubTab, prevSubTab);
     const onSubmit = (data) => {
         setUserInfo(prev => ({ ...prev, ...data }));
-        console.log(data);
+        console.log('formData:', data);
         // If the submission is successful
         if (nextSubTab) {
             setSelectedSubTab(nextSubTab);
@@ -95,9 +93,9 @@ const EmployerProfileBuilderRightContent = ({
 
     }, [userInfo, reset]);
 
-    if (selectedSubTab === 'Company Info') {
+    if (selectedSubTab === subTabs[0]) {
         return (
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form key={subTabs[0]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
                     <Text fontSize='2xl' fontWeight='bold' mb={5}>Basic info</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
@@ -145,9 +143,9 @@ const EmployerProfileBuilderRightContent = ({
             </form>
         );
     }
-    else if (selectedSubTab === 'Office Locations') {
+    else if (selectedSubTab === subTabs[1]) {
         return (
-            <form key="Office Locations" onSubmit={handleSubmit(onSubmit)}>
+            <form key={subTabs[1]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
                     <Text fontSize='2xl' fontWeight='bold' mb={5}>Geography</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
@@ -188,10 +186,230 @@ const EmployerProfileBuilderRightContent = ({
             </form>
         );
     }
-    else if (selectedSubTab === 'Medical Benefits') {
+    else if (selectedSubTab === subTabs[2]) {
+        return (
+            <form key={subTabs[2]} onSubmit={handleSubmit(onSubmit)}>
+                <VStack align='start' spacing={4} p={4} color='white'>
+                    <Text fontWeight='bold' mb={5} fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Medical Benefits</Text>
+                    <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                        <FormControl>
+                            <FormLabel htmlFor="medical1">What percentage of health insurance premium costs does your company cover for your employees?</FormLabel>
+                            {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
+                            <Select id="medical1" {...register("medical1")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="medical2">What percentage of dental insurance premium costs does your company cover for your employees?</FormLabel>
+                            <Select id="medical2" {...register("medical2")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="medical3">What percentage of vision insurance premium costs does your company cover for your employees?</FormLabel>
+                            <Select id="medical3" {...register("medical3")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="medical4">Does your company cover dependents (spouse, children) under its medical insurance plan?</FormLabel>
+                            <Select id="medical4" {...register("medical4")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>No</option>
+                                <option value='1' style={{ color: 'black' }}>Yes</option>
+                            </Select>
+                        </FormControl>
+                        <HStack>
+                            <Button
+                                colorScheme="teal"
+                                isDisabled={!prevSubTab}
+                                onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                            >
+                                <Text>Back</Text>
+                            </Button>
+                            <Button
+                                colorScheme="teal"
+                                isLoading={isSubmitting}
+                                type="submit"
+                            >
+                                <Text>Next</Text>
+                            </Button>
+                        </HStack>
+                    </VStack>
+                </VStack>
+            </form>
+        );
     }
-    else if (selectedSubTab === 'Other Benefits') {
-
+    else if (selectedSubTab === subTabs[3]) {
+        return (
+            <form key={subTabs[3]} onSubmit={handleSubmit(onSubmit)}>
+                <VStack align='start' spacing={4} p={4} color='white'>
+                    <Text fontWeight='bold' mb={5} fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Paid Time Off</Text>
+                    <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                        <FormControl>
+                            <FormLabel htmlFor="pto1">How many days of paid time off (PTO) are new employees entitled to annually?</FormLabel>
+                            {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
+                            <Select id="pto1" {...register("pto1")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="pto2">How is PTO accrued at you company?</FormLabel>
+                            <Select id="pto2" {...register("pto2")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="pto3">Are there any restrictions on when PTO can be taken?</FormLabel>
+                            <Select id="pto3" {...register("pto3")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="pto4">What is your company's maternity / paternity leave policy?</FormLabel>
+                            <Select id="pto4" {...register("pto4")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>No</option>
+                                <option value='1' style={{ color: 'black' }}>Yes</option>
+                            </Select>
+                        </FormControl>
+                        <HStack>
+                            <Button
+                                colorScheme="teal"
+                                isDisabled={!prevSubTab}
+                                onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                            >
+                                <Text>Back</Text>
+                            </Button>
+                            <Button
+                                colorScheme="teal"
+                                isLoading={isSubmitting}
+                                type="submit"
+                            >
+                                <Text>Next</Text>
+                            </Button>
+                        </HStack>
+                    </VStack>
+                </VStack>
+            </form>
+        );
+    }
+    else if (selectedSubTab === subTabs[4]) {
+        return (
+            <form key={subTabs[4]} onSubmit={handleSubmit(onSubmit)}>
+                <VStack align='start' spacing={4} p={4} color='white'>
+                    <Text fontWeight='bold' mb={5} fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>401k and Savings</Text>
+                    <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                        <FormControl>
+                            <FormLabel htmlFor="financial1">Does your company offer a 401k program for new employees?</FormLabel>
+                            {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
+                            <Select id="financial1" {...register("financial1")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="financial2">What is your company's 401(k) matching policy?</FormLabel>
+                            <Select id="financial2" {...register("financial2")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="financial3">Does your company offer any financial assistance or reimbursement programs (e.g., tuition, certification, student loan assistance)?</FormLabel>
+                            <Select id="financial3" {...register("financial3")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                            </Select>
+                        </FormControl>
+                        <FormControl>
+                            <FormLabel htmlFor="financial4">Does your company offer a learning and development allowance? If yes, how much is it annually?</FormLabel>
+                            <Select id="financial4" {...register("financial4")} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>No</option>
+                                <option value='1' style={{ color: 'black' }}>Yes</option>
+                            </Select>
+                        </FormControl>
+                        <HStack>
+                            <Button
+                                colorScheme="teal"
+                                isDisabled={!prevSubTab}
+                                onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                            >
+                                <Text>Back</Text>
+                            </Button>
+                            <Button
+                                colorScheme="teal"
+                                isLoading={isSubmitting}
+                                type="submit"
+                            >
+                                <Text>Next</Text>
+                            </Button>
+                        </HStack>
+                    </VStack>
+                </VStack>
+            </form>
+        );
     }
     else {
         return <Box>Something went wrong. Try reloading</Box>;
@@ -287,7 +505,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Employer Profile" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Employer Profile")}
-                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
                             whiteSpace={'normal'}
                             p={6}
                         >
@@ -299,7 +517,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Job Postings" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Job Postings")}
-                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
                             whiteSpace={'normal'}
                             p={6}
                         >
@@ -310,7 +528,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Account Settings" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Account Settings")}
-                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
                             whiteSpace={'normal'}
                             p={6}
                         >
@@ -321,7 +539,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Matches" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Matches")}
-                            fontSize={{ base: '2xs', md: 'md', lg: 'lg' }}
+                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
                             p={6}
                         >
                             <Text > Matches</Text>
