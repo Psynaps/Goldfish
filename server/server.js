@@ -192,7 +192,7 @@ app.get('/api/getJob', async (req, res) => {
 });
 
 
-app.get('/getUserJobs', async (req, res) => {
+app.get('/api/getUserJobs', async (req, res) => {
     const userID = req.query.userID;
     if (!userID) {
         return res.status(400).send({ error: 'Missing userID query parameter' });
@@ -231,7 +231,7 @@ app.get('/getUserJobs', async (req, res) => {
     }
 });
 
-app.get('/saveEmployerProfile', async (req, res) => {
+app.post('/api/saveEmployerProfile', async (req, res) => {
     try {
         console.log("saveEmployerProfile req received");
         console.log(req.body);
@@ -245,8 +245,6 @@ app.get('/saveEmployerProfile', async (req, res) => {
         } = req.body;
         let jobPostingID = req.body.jobPostingID;
 
-        // Convert the jobData string to an object
-        const jobDataObj = JSON.parse(jobData);
 
         // Upsert into job_profiles
         let result;
@@ -258,14 +256,13 @@ app.get('/saveEmployerProfile', async (req, res) => {
                 pto1, pto2, pto3, pto4,
                 financial1, financial2, financial3, financial4) 
             VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`,
-            values: [userid, companyName, website, linkedin, companySize, productType,
+            values: [userID, companyName, website, linkedin, companySize, productType,
                 office1, office2, office3,
                 medical1, medical2, medical3, medical4, medical5,
                 pto1, pto2, pto3, pto4,
                 financial1, financial2, financial3, financial4],
         };
         result = await client.query(query);
-
 
         res.send({ success: true });
         console.log("SaveEmployerProfile req completed");

@@ -395,9 +395,9 @@ function EmployerPage(returnURL) {
                             <Menu>
                                 <MenuButton as={IconButton} aria-label='Options' icon={<ChevronDownIcon />} variant='outline' />
                                 <MenuList>
-                                    {(isAuthenticated) ? <MenuItem>Profile</MenuItem> : <></>}
-                                    {(isAuthenticated) ? <MenuItem>Saved Jobs</MenuItem> : <></>}
-                                    <MenuItem>Settings</MenuItem>
+                                    {isAuthenticated && <MenuItem>Profile</MenuItem>}
+                                    {isAuthenticated && <MenuItem>Saved Jobs</MenuItem>}
+                                    {isAuthenticated && <MenuItem>Settings</MenuItem>}
                                     <MenuItem>About Us</MenuItem>
                                     <MenuItem>
                                         <SimpleGrid columns={2} spacing={3}>
@@ -405,13 +405,13 @@ function EmployerPage(returnURL) {
                                             <Switch colorScheme='blue' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
                                         </SimpleGrid>
                                     </MenuItem>
-                                    <MenuItem onClick={() => logout({
+                                    {isAuthenticated && <MenuItem onClick={() => logout({
                                         logoutParams: {
                                             returnTo: returnURL
                                         }
                                     })}>
                                         Log out
-                                    </MenuItem>
+                                    </MenuItem>}
                                 </MenuList>
                             </Menu>
                         </>

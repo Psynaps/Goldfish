@@ -110,7 +110,7 @@ const EmployerProfileBuilderRightContent = ({
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 userID: user.sub,
-                newUserInfo
+                ...newUserInfo
 
             })
 
@@ -142,14 +142,15 @@ const EmployerProfileBuilderRightContent = ({
         // from the form and check if they are filled in to userInfo.
         // If they are not then set canSubmit to false. Otherwise set it to true.
         console.log('checking canSubmit', canSubmit);
-        for (let i = 0; i < requiredFields.length; i++) {
+        for (let i = 0; i < requiredFields.length - 4; i++) {
             if (!hasFieldFilled(userInfo, requiredFields[i])) {
                 setCanSubmit(false);
+                console.log('set canSubmit: false');
                 return;
             }
         }
         setCanSubmit(true);
-        console.log('canSubmit:', canSubmit);
+        console.log('set canSubmit: true');
     }, [userInfo]);
 
     const hasFieldFilled = (userInfo, field) => {
@@ -411,7 +412,7 @@ const EmployerProfileBuilderRightContent = ({
                             <Select id="pto1" {...register("pto1", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>We do not offer PTO</option>
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
                                 <option value='0' style={{ color: 'black' }}>We do not offer PTO</option>
                                 <option value='1' style={{ color: 'black' }}>Less than 10 days</option>
                                 <option value='2' style={{ color: 'black' }}>10-15 days</option>
@@ -487,6 +488,7 @@ const EmployerProfileBuilderRightContent = ({
                                 colorScheme="teal"
                                 isLoading={isSubmitting}
                                 type="submit"
+                            // key={userInfo.length}
                             >
                                 <Text>Next</Text>
                             </Button>
@@ -504,7 +506,7 @@ const EmployerProfileBuilderRightContent = ({
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={25} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.financial1}>
-                            <FormLabel htmlFor="financial1">Does your company offer a 401k program for new employees?</FormLabel>
+                            <FormLabel htmlFor="financial1">Does your company offer a 401k program? </FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
                             <Select id="financial1" {...register("financial1", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
@@ -580,8 +582,9 @@ const EmployerProfileBuilderRightContent = ({
                             >
                                 <Text>Back</Text>
                             </Button>
-                            <Button //Shoudl redo this with disabled styling for the button instead of these conditionals
+                            {(isAuthenticated) && <Button //Shoudl redo this with disabled styling for the button instead of these conditionals
                                 // bg="#5DFC89"
+                                key={userInfo.length}
                                 bg={(canSubmit) ? '#5DFC89' : 'grey'}
                                 colorScheme={(canSubmit) ? 'teal' : 'grey'}
                                 isLoading={isSubmitting}
@@ -589,8 +592,12 @@ const EmployerProfileBuilderRightContent = ({
                                 isDisabled={!canSubmit}
                             // onClick={saveEmployerProfile}
                             >
+
                                 <Text>Complete Profile</Text>
-                            </Button>
+                            </Button>}
+                            {(!isAuthenticated) && <Button isDisabled colorScheme='teal' width='auto'>
+                                <Text p={4}>Log in to Save</Text>
+                            </Button>}
                         </HStack>
                     </VStack>
                 </VStack>
@@ -664,13 +671,13 @@ function EmployerProfile(returnURL) {
                                         <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
                                     </Box>
                                 </VStack>
-                                : <LoginButton />}
+                                : <LoginButton redirectURL={''} />}
                             <Menu>
                                 <MenuButton as={IconButton} aria-label='Options' icon={<ChevronDownIcon />} variant='outline' color='white' />
                                 <MenuList>
-                                    {(isAuthenticated) ? <MenuItem>Profile</MenuItem> : <></>}
-                                    {(isAuthenticated) ? <MenuItem>Saved Jobs</MenuItem> : <></>}
-                                    <MenuItem>Settings</MenuItem>
+                                    {isAuthenticated && <MenuItem>Profile</MenuItem>}
+                                    {isAuthenticated && <MenuItem>Saved Jobs</MenuItem>}
+                                    {isAuthenticated && <MenuItem>Settings</MenuItem>}
                                     <MenuItem>About Us</MenuItem>
                                     <MenuItem>
                                         <SimpleGrid columns={2} spacing={3}>
@@ -678,20 +685,20 @@ function EmployerProfile(returnURL) {
                                             <Switch colorScheme='blue' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
                                         </SimpleGrid>
                                     </MenuItem>
-                                    <MenuItem onClick={() => logout({
+                                    {isAuthenticated && <MenuItem onClick={() => logout({
                                         logoutParams: {
                                             returnTo: returnURL
                                         }
                                     })}>
                                         Log out
-                                    </MenuItem>
+                                    </MenuItem>}
                                 </MenuList>
                             </Menu>
                         </>
                     }
                 </HStack>
             </Box >
-            <Flex
+            {isAuthenticated && <Flex
                 as='main'
                 justifyContent='center'
                 mt={5}
@@ -767,7 +774,8 @@ function EmployerProfile(returnURL) {
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
                 </Box>
-            </Flex>
+            </Flex>}
+            {!isAuthenticated && <Flex p={4}><Text color='white' fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Please login to continue</Text></Flex>}
         </Box >
     );
 };
