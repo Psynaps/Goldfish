@@ -172,7 +172,7 @@ const EmployerProfileBuilderRightContent = ({
                 <VStack align='start' spacing={4} p={4} color='white'>
                     <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Basic info</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-                    <VStack spacing={4} pl={[5, 10, 15, 20, 25]} alignItems='start' w='100%'>
+                    <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.companyName}>
                             <FormLabel htmlFor="companyName">Company Name or DBA</FormLabel>
                             <Input id="companyName" {...register("companyName", { required: "This is required" })} w='95%' alignSelf='center' />
