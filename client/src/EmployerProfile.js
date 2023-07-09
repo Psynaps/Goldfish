@@ -644,10 +644,7 @@ function EmployerProfile(returnURL) {
     const { colorMode, toggleColorMode } = useColorMode();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
-    const [userInfo, setUserInfo] = useState({
-        'website': 'test', 'testItem'
-            : 'test123', 'name': 'abc'
-    });
+    const [userInfo, setUserInfo] = useState({});
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
