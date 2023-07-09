@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { Box, Flex, Wrap, HStack, Button, Spacer, Select, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
 import { ChevronDownIcon } from '@chakra-ui/icons';
@@ -60,7 +60,8 @@ const EmployerProfileBuilderRightContent = ({
     selectedSubTab,
     setSelectedSubTab,
     userInfo, // assume this is passed from parent component
-    setUserInfo
+    setUserInfo,
+    apiURL
 }) => {
 
     const {
@@ -69,14 +70,21 @@ const EmployerProfileBuilderRightContent = ({
         formState: { errors, isSubmitting },
         reset // reset method from useForm to update defaultValues
     } = useForm({ userInfo });
+    const [isSavingProfile, setIsSavingProfile] = useState(false);
+    const { isAuthenticated, isLoading, user } = useAuth0();
+    const [canSubmit, setCanSubmit] = useState(false);
 
 
 
     const currentIndex = subTabs.indexOf(selectedSubTab);
     const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
     const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
+    const requiredFields = ['companyName', 'website', 'companySize', 'productType',
+        'office1',
+        'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
+        'pto1', 'pto2', 'pto3', 'pto4',
+        'financial1', 'financial2', 'financial3', 'financial4'];
 
-    // console.log(currentIndex, nextSubTab, prevSubTab);
     const onSubmit = (data) => {
         setUserInfo(prev => ({ ...prev, ...data }));
         console.log('formData:', data);
@@ -84,24 +92,72 @@ const EmployerProfileBuilderRightContent = ({
         if (nextSubTab) {
             setSelectedSubTab(nextSubTab);
         }
-
     };
-
-
 
     const saveEmployerProfile = (data) => {
         const newUserInfo = { ...userInfo, ...data };
         setUserInfo(newUserInfo);
         console.log('saving employer profile...');
-        console.log('userInfo:', userInfo);
+        // console.log('userInfo:', userInfo);
+        sendSaveEmployerProfile(newUserInfo);
 
     };
+    const sendSaveEmployerProfile = useCallback((newUserInfo) => {
+        setIsSavingProfile(true);
+        console.log('tried to save employer profile', newUserInfo);
+        const requestOptions = {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                userID: user.sub,
+                newUserInfo
+
+            })
+
+        };
+        console.log(requestOptions.body);
+        fetch(`${apiURL}/saveEmployerProfile`, requestOptions)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`status ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(json => {
+                setIsSavingProfile(false);
+            }).catch(e => {
+                console.error(e); // This will log any errors to the console.
+                setIsSavingProfile(false);
+            });
+    }, [user, userInfo]);
 
     useEffect(() => {
-        console.log('userinfo', userInfo);
+        // console.log('userinfo', userInfo);
         reset(userInfo);
 
     }, [userInfo, reset]);
+
+    useEffect(() => {
+        // Loop through all required fields before the last page, so excluding financial1-4,
+        // from the form and check if they are filled in to userInfo.
+        // If they are not then set canSubmit to false. Otherwise set it to true.
+        console.log('checking canSubmit', canSubmit);
+        for (let i = 0; i < requiredFields.length; i++) {
+            if (!hasFieldFilled(userInfo, requiredFields[i])) {
+                setCanSubmit(false);
+                return;
+            }
+        }
+        setCanSubmit(true);
+        console.log('canSubmit:', canSubmit);
+    }, [userInfo]);
+
+    const hasFieldFilled = (userInfo, field) => {
+        if (userInfo[field] === undefined || userInfo[field] === null || userInfo[field] === '') {
+            return false;
+        }
+        return true;
+    };
 
     if (selectedSubTab === subTabs[0]) {
         return (
@@ -128,6 +184,40 @@ const EmployerProfileBuilderRightContent = ({
                             <FormLabel htmlFor="linkedin">LinkedIn Profile (Optional)</FormLabel>
                             <Input id="linkedin" {...register("linkedin")} w='95%' alignSelf='center' />
                         </FormControl>
+                        <FormControl isInvalid={errors.companySize}>
+                            <FormLabel htmlFor="companySize">Considering the continuum from early-stage startups to established corporations, how would you describe your organization?</FormLabel>
+                            <Select id="companySize" {...register("companySize", { required: "This is required" })} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>Early-Stage Startup: We're still in the process of setting up structures and processes, and innovation is our driving force</option>
+                                <option value='1' style={{ color: 'black' }}>Mid-Stage Startup: We have some established structures and processes, but we are still highly dynamic and focused on growth and innovation</option>
+                                <option value='2' style={{ color: 'black' }}>Growth Stage Company: We have a good balance between established processes and the agility needed for growth and adaptation</option>
+                                <option value='3' style={{ color: 'black' }}>Established Company: We have well-defined roles and processes, and value stability and predictability</option>
+                            </Select>
+                            <FormErrorMessage>
+                                {errors.companySize && errors.companySize.message}
+                            </FormErrorMessage>
+                        </FormControl>
+                        <FormControl isInvalid={errors.productType}>
+                            <FormLabel htmlFor="productType">Which most accurately describes the type of product your company sells?</FormLabel>
+                            <Select id="productType" {...register("productType", { required: "This is required" })} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='1' style={{ color: 'black' }}>Business Intelligence (BI)</option>
+                                <option value='2' style={{ color: 'black' }}>Cybersecurity</option>
+                                <option value='3' style={{ color: 'black' }}>Data Analytics / Big Data</option>
+                                <option value='4' style={{ color: 'black' }}>Customer Relationship Management (CRM)</option>
+                                <option value='5' style={{ color: 'black' }}>Advertising Technology</option>
+                                <option value='6' style={{ color: 'black' }}>DevOps and Cloud Infrastructure</option>
+                                <option value='7' style={{ color: 'black' }}>Human Resource Management (HRM)</option>
+                                <option value='0' style={{ color: 'black' }}>Other</option>
+                            </Select>
+                            <FormErrorMessage>
+                                {errors.productType && errors.productType.message}
+                            </FormErrorMessage>
+                        </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="logo">Logo Upload</FormLabel>
                             <Input type="file" id="logo" {...register("logo")} w='95%' p={2} alignSelf='center' />
@@ -137,10 +227,12 @@ const EmployerProfileBuilderRightContent = ({
                                 colorScheme="teal"
                                 isDisabled={currentIndex === 0}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                                variant='ghost'
                             >
                                 <Text>Back</Text>
                             </Button>
                             <Button
+                                bg="#5DFC89"
                                 colorScheme="teal"
                                 isLoading={isSubmitting}
                                 type="submit"
@@ -180,10 +272,12 @@ const EmployerProfileBuilderRightContent = ({
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                                variant='ghost'
                             >
                                 <Text>Back</Text>
                             </Button>
                             <Button
+                                bg="#5DFC89"
                                 colorScheme="teal"
                                 isLoading={isSubmitting}
                                 type="submit"
@@ -257,11 +351,28 @@ const EmployerProfileBuilderRightContent = ({
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>No</option>
-                                <option value='1' style={{ color: 'black' }}>Yes</option>
+                                <option value='0' style={{ color: 'black' }}>No, we do not offer coverage for dependents</option>
+                                <option value='1' style={{ color: 'black' }}>Yes, we offer dependent coverage, but the employee is responsible for 100% of the premium costs for dependents</option>
+                                <option value='1' style={{ color: 'black' }}>Yes, we cover a portion of the premium costs for dependents. The employee is responsible for the remainder</option>
+                                <option value='1' style={{ color: 'black' }}>Yes, we cover 100% of the premium costs for dependents</option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.medical4 && errors.medical4.message}
+                            </FormErrorMessage>
+                        </FormControl>
+                        <FormControl isInvalid={errors.medical5}>
+                            <FormLabel htmlFor="medical5"> Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?</FormLabel>
+                            <Select id="medical5" {...register("medical5", { required: "This is required" })} w='95%' alignSelf='center'
+                                defaultValue={""}
+                            >
+                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                <option value='0' style={{ color: 'black' }}>No Coverage: We do not offer life insurance benefits to our employees</option>
+                                <option value='1' style={{ color: 'black' }}>Basic Coverage: We offer life insurance that covers the employee for an amount equivalent to their annual salary</option>
+                                <option value='2' style={{ color: 'black' }}>Enhanced Coverage: We offer life insurance that covers the employee for an amount equivalent to double their annual salary</option>
+                                <option value='3' style={{ color: 'black' }}>Premium Coverage: We offer life insurance that covers the employee for an amount equivalent to triple their annual salary or more</option>
+                            </Select>
+                            <FormErrorMessage>
+                                {errors.medical5 && errors.medical5.message}
                             </FormErrorMessage>
                         </FormControl>
                         <HStack>
@@ -269,10 +380,12 @@ const EmployerProfileBuilderRightContent = ({
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                                variant='ghost'
                             >
                                 <Text>Back</Text>
                             </Button>
                             <Button
+                                bg="#5DFC89"
                                 colorScheme="teal"
                                 isLoading={isSubmitting}
                                 type="submit"
@@ -318,26 +431,26 @@ const EmployerProfileBuilderRightContent = ({
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>Provided in a lump sum at the start of the year</option>
-                                <option value='1' style={{ color: 'black' }}>Accrued on a monthly basis</option>
-                                <option value='2' style={{ color: 'black' }}>Accrued on a weekly basis</option>
-                                <option value='3' style={{ color: 'black' }}>Accrued based on hours worked</option>
+                                <option value='0' style={{ color: 'black' }}>Start from Zero: Employees start with zero PTO and earn more with each pay period</option>
+                                <option value='1' style={{ color: 'black' }}>Baseline Accrual: Employees start with a set amount of PTO and accrue more throughout their tenure </option>
+                                <option value='2' style={{ color: 'black' }}>All up front: Employees receive all PTO for the year at the start of their employment</option>
+                                <option value='3' style={{ color: 'black' }}>Unlimited: We have an unlimited PTO policy; this question does not apply</option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.pto2 && errors.pto2.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.pto3}>
-                            <FormLabel htmlFor="pto3">Are there any restrictions on when PTO can be taken?</FormLabel>
+                            <FormLabel htmlFor="pto3">What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?</FormLabel>
 
                             <Select id="pto3" {...register("pto3", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>No restrictions, PTO can be taken anytime</option>
-                                <option value='1' style={{ color: 'black' }}>Yes, certain periods are blackout dates for PTO</option>
-                                <option value='2' style={{ color: 'black' }}>Yes, PTO needs to be taken within specific periods</option>
-                                <option value='3' style={{ color: 'black' }}>Yes, approval of PTO depends on team availability and workload</option>
+                                <option value='0' style={{ color: 'black' }}>No Restrictions: New employees can take PTO at any time, without restrictions</option>
+                                <option value='1' style={{ color: 'black' }}>Holiday Blackout Dates: New employees cannot take PTO during major holidays</option>
+                                <option value='2' style={{ color: 'black' }}>Seasonal Peak Business Blackout Dates: New employees cannot take PTO during our peak business seasons</option>
+                                <option value='3' style={{ color: 'black' }}>Holiday and Peak Business Blackout Dates: New employees cannot take PTO during major holidays or our peak business seasons</option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.pto3 && errors.pto3.message}
@@ -349,12 +462,12 @@ const EmployerProfileBuilderRightContent = ({
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>No specific maternity/paternity leave policy, parental leave falls under general PTO</option>
-                                <option value='1' style={{ color: 'black' }}>1-6 weeks of paid leave</option>
-                                <option value='2' style={{ color: 'black' }}>7-12 weeks of paid leave</option>
-                                <option value='3' style={{ color: 'black' }}>13-18 weeks of paid leave</option>
-                                <option value='4' style={{ color: 'black' }}>More than 18 weeks of paid leave</option>
-                                <option value='5' style={{ color: 'black' }}>Unpaid leave options available</option>
+                                <option value='0' style={{ color: 'black' }}>No Paid Leave</option>
+                                <option value='1' style={{ color: 'black' }}>Up to 2 Weeks Paid Leave</option>
+                                <option value='2' style={{ color: 'black' }}>3-4 Weeks Paid Leave</option>
+                                <option value='3' style={{ color: 'black' }}>5-8 Weeks Paid Leave</option>
+                                <option value='4' style={{ color: 'black' }}>9-12 Weeks Paid Leave</option>
+                                <option value='5' style={{ color: 'black' }}>More than 12 Weeks Paid Leave</option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.pto4 && errors.pto4.message}
@@ -365,10 +478,12 @@ const EmployerProfileBuilderRightContent = ({
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                                variant='ghost'
                             >
                                 <Text>Back</Text>
                             </Button>
                             <Button
+                                bg="#5DFC89"
                                 colorScheme="teal"
                                 isLoading={isSubmitting}
                                 type="submit"
@@ -422,16 +537,18 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.financial3}>
-                            <FormLabel htmlFor="financial3">Does your company offer any financial assistance or reimbursement programs (e.g., tuition, certification, student loan assistance)?</FormLabel>
+                            <FormLabel htmlFor="financial3">What is the annual dollar amount of student loan reimbursement your company offers?</FormLabel>
 
                             <Select id="financial3" {...register("financial3", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='1' style={{ color: 'black' }}>No, we don't offer any of these financial assistance programs.</option>
-                                <option value='1' style={{ color: 'black' }}>Yes, we offer tuition reimbursement for job-related education</option>
-                                <option value='2' style={{ color: 'black' }}>Yes, we offer tuition reimbursement for job-related education</option>
-                                <option value='3' style={{ color: 'black' }}>Yes, we provide student loan assistance</option>
+                                <option value='0' style={{ color: 'black' }}>No Assistance</option>
+                                <option value='1' style={{ color: 'black' }}>$1 - $500</option>
+                                <option value='2' style={{ color: 'black' }}>$501 - $1,000</option>
+                                <option value='3' style={{ color: 'black' }}>$1,001 - $2,000</option>
+                                <option value='4' style={{ color: 'black' }}>$2,001 - $3,000</option>
+                                <option value='5' style={{ color: 'black' }}>$3000+ </option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.financial3 && errors.financial3.message}
@@ -443,11 +560,12 @@ const EmployerProfileBuilderRightContent = ({
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>No, we do not offer a learning and development allowance.</option>
-                                <option value='1' style={{ color: 'black' }}>Yes, up to $500 annually</option>
-                                <option value='2' style={{ color: 'black' }}>Yes, between $500 and $1,000 annually</option>
-                                <option value='3' style={{ color: 'black' }}>Yes, between $1,000 and $2,000 annually</option>
-                                <option value='3' style={{ color: 'black' }}>Yes, over $2,000 annually</option>
+                                <option value='0' style={{ color: 'black' }}>No Allowance</option>
+                                <option value='1' style={{ color: 'black' }}>$1 - $500</option>
+                                <option value='2' style={{ color: 'black' }}>$501 - $1,000</option>
+                                <option value='3' style={{ color: 'black' }}>$1,001 - $2,000</option>
+                                <option value='4' style={{ color: 'black' }}>$2,001 - $3,000</option>
+                                <option value='5' style={{ color: 'black' }}>$3000+ </option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.financial4 && errors.financial4.message}
@@ -458,16 +576,20 @@ const EmployerProfileBuilderRightContent = ({
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
+                                variant={(canSubmit) ? 'ghost' : 'solid'}
                             >
                                 <Text>Back</Text>
                             </Button>
-                            <Button
-                                colorScheme="teal"
+                            <Button //Shoudl redo this with disabled styling for the button instead of these conditionals
+                                // bg="#5DFC89"
+                                bg={(canSubmit) ? '#5DFC89' : 'grey'}
+                                colorScheme={(canSubmit) ? 'teal' : 'grey'}
                                 isLoading={isSubmitting}
                                 type="submit"
+                                isDisabled={!canSubmit}
                             // onClick={saveEmployerProfile}
                             >
-                                <Text>Save</Text>
+                                <Text>Complete Profile</Text>
                             </Button>
                         </HStack>
                     </VStack>
@@ -513,6 +635,10 @@ function EmployerProfile(returnURL) {
         'website': 'test', 'testItem'
             : 'test123', 'name': 'abc'
     });
+
+    const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+
+
 
 
     return (
@@ -620,20 +746,22 @@ function EmployerProfile(returnURL) {
                         </Button>
                     </VStack>
                 </Box>
-                <Spacer bg='gray' boxSize='1px' />
+                <Box w='1px' bg='gray' />
                 <Box flexBasis='25%' minWidth='25%'>
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderContent selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />}
                     {selectedTab === 'Job Postings' && <JobPostingsContent />}
                     {selectedTab === 'Account Settings' && <AccountSettingsContent />}
                     {selectedTab === 'Matches' && <MatchesContent />}
                 </Box>
-                <Spacer bg='gray' boxSize='1px' />
+                <Spacer bg='gray' boxSize='10px' />
+                <Box w='1px' bg='gray' />
                 <Box flexBasis='60%' >
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderRightContent
                         selectedSubTab={selectedSubTab}
                         setSelectedSubTab={setSelectedSubTab}
                         userInfo={userInfo}
                         setUserInfo={setUserInfo}
+                        apiURL={apiURL}
                     />}
                     {selectedTab === 'Job Postings' && <JobPostingsRightContent />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}

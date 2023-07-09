@@ -74,7 +74,7 @@ app.post('/api/postJob', async (req, res) => {
         // console.log(req.body);
         const client = await pool.connect();
 
-        const { userID, company, location, jobName, jobData } = req.body;
+        const { userID, location, jobName, jobData } = req.body;
         let jobPostingID = req.body.jobPostingID;
 
         // Convert the jobData string to an object
@@ -85,17 +85,17 @@ app.post('/api/postJob', async (req, res) => {
         let query;
         if (!jobPostingID) {
             query = {
-                text: `INSERT INTO job_profiles (userid, company, location, jobname) 
-            VALUES ($1, $2, $3, $4) 
+                text: `INSERT INTO job_profiles (userid, location, jobname) 
+            VALUES ($1, $2, $3) 
             RETURNING jobpostingid`,
-                values: [userID, company, location, jobName],
+                values: [userID, location, jobName],
             };
         } else {
             query = {
-                text: `UPDATE job_profiles SET company = $2, location = $3, jobname = $4
+                text: `UPDATE job_profiles SET location = $2, jobname = $3
             WHERE jobpostingid = $1
             RETURNING jobpostingid`,
-                values: [jobPostingID, company, location, jobName],
+                values: [jobPostingID, location, jobName],
             };
         }
         result = await client.query(query);
@@ -176,7 +176,7 @@ app.get('/api/getJob', async (req, res) => {
         // Construct the response object
         const responseObject = {
             userID: jobProfileData.userid,
-            company: jobProfileData.company,
+            // company: jobProfileData.company,
             location: jobProfileData.location,
             jobName: jobProfileData.jobname,
             jobData: JSON.stringify(jobQuestionsData),
@@ -190,6 +190,7 @@ app.get('/api/getJob', async (req, res) => {
         res.send("Error " + err);
     }
 });
+
 
 app.get('/getUserJobs', async (req, res) => {
     const userID = req.query.userID;
@@ -227,6 +228,51 @@ app.get('/getUserJobs', async (req, res) => {
     } catch (err) {
         console.error(err);
         res.send("Error " + err);
+    }
+});
+
+app.get('/saveEmployerProfile', async (req, res) => {
+    try {
+        console.log("saveEmployerProfile req received");
+        console.log(req.body);
+        const client = await pool.connect();
+
+        const { userID, companyName, website, linkedin, companySize, productType,
+            office1, office2, office3,
+            medical1, medical2, medical3, medical4, medical5,
+            pto1, pto2, pto3, pto4,
+            financial1, financial2, financial3, financial4,
+        } = req.body;
+        let jobPostingID = req.body.jobPostingID;
+
+        // Convert the jobData string to an object
+        const jobDataObj = JSON.parse(jobData);
+
+        // Upsert into job_profiles
+        let result;
+        let query;
+        query = {
+            text: `INSERT INTO employer_profiles (userid, companyName, website, linkedin, companySize, productType,
+                office1, office2, office3,
+                medical1, medical2, medical3, medical4, medical5,
+                pto1, pto2, pto3, pto4,
+                financial1, financial2, financial3, financial4) 
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`,
+            values: [userid, companyName, website, linkedin, companySize, productType,
+                office1, office2, office3,
+                medical1, medical2, medical3, medical4, medical5,
+                pto1, pto2, pto3, pto4,
+                financial1, financial2, financial3, financial4],
+        };
+        result = await client.query(query);
+
+
+        res.send({ success: true });
+        console.log("SaveEmployerProfile req completed");
+        client.release();
+    } catch (err) {
+        console.error(err);
+        res.status(500).send({ error: err.message });
     }
 });
 

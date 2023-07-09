@@ -26,7 +26,7 @@ function EmployerPage(returnURL) {
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [position, setPosition] = useState('');
     const [jobLocation, setJobLocation] = useState('');
-    const [company, setCompany] = useState('myspace');
+    // const [company, setCompany] = useState('myspace');
     const [canAddQuestion, setCanAddQuestion] = useState(false);
     const { colorMode, toggleColorMode } = useColorMode();
     const [searchParams] = useSearchParams();
@@ -54,13 +54,14 @@ function EmployerPage(returnURL) {
     const [jobPostingID, setJobPostingID] = useState(null);
 
     const postJob = useCallback(() => {
+        setIsPosting(true);
         console.log('tried to post', jobPostingQuestions);
         const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 userID: user.sub,
-                company: company,
+                // company: company,
                 location: jobLocation,
                 jobName: position,
                 jobPostingID: jobPostingID,
@@ -86,7 +87,7 @@ function EmployerPage(returnURL) {
                 console.error(e); // This will log any errors to the console.
                 setIsPosting(false);
             });
-    }, [user, jobPostingID, company, jobLocation, position, jobPostingQuestions, apiURL]);
+    }, [user, jobPostingID, jobLocation, position, jobPostingQuestions, apiURL]);
 
 
     const handleFilterButtonClick = (category) => {
@@ -120,7 +121,7 @@ function EmployerPage(returnURL) {
     }, [user, apiURL]);
 
     const loadJobPosting = (data) => {
-        setCompany(data.company);
+        // setCompany(data.company);
         setJobLocation(data.location);
         setPosition(data.jobName);
 
@@ -337,7 +338,7 @@ function EmployerPage(returnURL) {
             setJobPostingQuestions([]);
             setJobLocation('');
             setPosition('');
-            setCompany('myspace');
+            // setCompany('myspace');
             setSelectedAnswers([]);
             setSelectedNonAnswers([]);
             setSelectedQuestion(null);

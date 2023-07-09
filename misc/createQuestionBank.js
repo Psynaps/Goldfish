@@ -21,6 +21,9 @@ fs.createReadStream('questions.csv')
             return;
         }
 
+        if (question.category == 'Client Onboarding' || question.category == 'Intro Questions') { // These are in the question bank but shouldn't be addable 
+            return;
+        }
         // Add any answers present in the row to the question object
         for (let i = 1; i <= 8; i++) {
             if (row[`Answer (${i})`]) {
