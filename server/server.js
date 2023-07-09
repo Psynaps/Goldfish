@@ -264,14 +264,32 @@ app.post('/api/saveEmployerProfile', async (req, res) => {
         };
         result = await client.query(query);
 
-        res.send({ success: true });
-        console.log("SaveEmployerProfile req completed");
-        client.release();
-    } catch (err) {
-        console.error(err);
-        res.status(500).send({ error: err.message });
-    }
-});
+        //TODO: this should be an onconflict update
+
+        //If there was already an entry with this userID, update it
+        if (result.rowCount == 0) {
+            query = {
+                text: `UPDATE employer_profiles SET companyName = $2, website = $3, linkedin = $4, companySize = $5, productType = $6,
+                office1 = $7, office2 = $8, office3 = $9,
+                medical1 = $10, medical2 = $11, medical3 = $12, medical4 = $13, medical5 = $14,
+                pto1 = $15, pto2 = $16, pto3 = $17, pto4 = $18,
+                financial1 = $19, financial2 = $20, financial3 = $21, financial4 = $22
+                WHERE userid = $1`,
+                values: [userID, companyName, website, linkedin, companySize, productType,
+                    office1, office2, office3,
+                    medical1, medical2, medical3, medical4, medical5,
+                    pto1, pto2, pto3, pto4,
+                    financial1, financial2, financial3, financial4],
+            };
+
+            res.send({ success: true });
+            console.log("SaveEmployerProfile req completed");
+            client.release();
+        } catch (err) {
+            console.error(err);
+            res.status(500).send({ error: err.message });
+        }
+    });
 
 
 // All remaining requests return the React app, so it can handle routing.

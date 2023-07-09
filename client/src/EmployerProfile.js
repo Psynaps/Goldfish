@@ -25,6 +25,7 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
         <Box
             as="button"
             w='80%'
+            minWidth='80%'
             alignSelf='center'
             variant='unstyled'
             onClick={() => setSelectedSubTab(tabName)}
@@ -32,20 +33,25 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
             _hover={{ bg: 'none' }}
             _active={{ bg: 'none' }}
             color='white'
+        // flexBasis='80%'
         >
-            <HStack justifyContent='space-between' alignItems='center' >
+            <Flex
+                alignItems='center'
+                flexDirection={'row'}
+            >
                 <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
-                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md']}>{title}</Text>
-                    <Text fontSize={['2xs', 'xs']}>{secondaryText}</Text>
+                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md', 'lg']}>{title}</Text>
+                    <Text fontSize={['2xs', 'xs', 'sm']}>{secondaryText}</Text>
                 </VStack>
+                <Spacer />
                 <Circle size={[6, 8]} border="2px" borderColor='green.400' bg={selectedSubTab === tabName ? 'green.400' : 'transparent'} />
-            </HStack>
+            </Flex>
         </Box >
     );
 
     return (
         <VStack align='start' spacing={4} p={4} color='white'>
-            <Text fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }} fontWeight='bold' mb={1}
+            <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={1}
             // alignSelf='center'
             >
                 Employer Profile Builder
@@ -164,9 +170,9 @@ const EmployerProfileBuilderRightContent = ({
         return (
             <form key={subTabs[0]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
-                    <Text fontSize='2xl' fontWeight='bold' mb={5}>Basic info</Text>
+                    <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Basic info</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                    <VStack spacing={4} pl={[5, 10, 15, 20, 25]} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.companyName}>
                             <FormLabel htmlFor="companyName">Company Name or DBA</FormLabel>
                             <Input id="companyName" {...register("companyName", { required: "This is required" })} w='95%' alignSelf='center' />
@@ -712,7 +718,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Employer Profile" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Employer Profile")}
-                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
+                            fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
                             p={6}
                         >
@@ -724,7 +730,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Job Postings" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Job Postings")}
-                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
+                            fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
                             p={6}
                         >
@@ -735,7 +741,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Account Settings" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Account Settings")}
-                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
+                            fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
                             p={6}
                         >
@@ -746,7 +752,7 @@ function EmployerProfile(returnURL) {
                             variant={selectedTab === "Matches" ? "solid" : "outline"}
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Matches")}
-                            fontSize={{ base: 'xs', md: 'md', lg: 'lg' }}
+                            fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             p={6}
                         >
                             <Text > Matches</Text>
@@ -761,7 +767,7 @@ function EmployerProfile(returnURL) {
                     {selectedTab === 'Matches' && <MatchesContent />}
                 </Box>
                 <Spacer bg='gray' boxSize='10px' />
-                <Box w='1px' bg='gray' />
+                <Box w='1%' bg='gray' />
                 <Box flexBasis='60%' >
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderRightContent
                         selectedSubTab={selectedSubTab}
