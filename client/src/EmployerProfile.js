@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
-import { Box, Flex, Wrap, HStack, Button, Spacer, Select, VStack, Text, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, SimpleGrid, Switch, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Box, Flex, HStack, Button, Spacer, Select, VStack, Text, Avatar, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -10,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton } from './LoginButton';
 import './App.css';
+import DropdownMenu from './DropdownMenu';
 
 // const deployURL = 'https://goldfishai.netlify.app';
 
@@ -41,8 +40,8 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
                 flexDirection={'row'}
             >
                 <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
-                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md', 'lg']}>{title}</Text>
-                    <Text fontSize={['2xs', 'xs', 'sm']}>{secondaryText}</Text>
+                    <Text fontWeight='bold' fontSize={['2xs', 'xs', 'sm', 'md']}>{title}</Text>
+                    <Text fontSize={['3xs', '2xs', 'xs',]}>{secondaryText}</Text>
                 </VStack>
                 <Spacer />
                 <Circle size={[6, 8]} border="2px" borderColor='green.400' bg={selectedSubTab === tabName ? 'green.400' : 'transparent'} />
@@ -136,7 +135,7 @@ const EmployerProfileBuilderRightContent = ({
                 console.error(e); // This will log any errors to the console.
                 setIsSavingProfile(false);
             });
-    }, [user, userInfo]);
+    }, [user, userInfo, apiURL]);
 
     useEffect(() => {
         // console.log('userinfo', userInfo);
@@ -641,8 +640,8 @@ function MatchesRightContent() {
 }
 
 function EmployerProfile(returnURL) {
-    const { isAuthenticated, isLoading, user, logout } = useAuth0();
-    const { colorMode, toggleColorMode } = useColorMode();
+    const { isAuthenticated, isLoading, user } = useAuth0();
+    // const { colorMode, toggleColorMode } = useColorMode();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
     const [userInfo, setUserInfo] = useState({});
@@ -676,28 +675,7 @@ function EmployerProfile(returnURL) {
                                     </Box>
                                 </VStack>
                                 : <LoginButton redirectURL={''} />}
-                            <Menu>
-                                <MenuButton as={IconButton} aria-label='Options' icon={<ChevronDownIcon />} variant='outline' color='white' />
-                                <MenuList>
-                                    {isAuthenticated && <MenuItem>Profile</MenuItem>}
-                                    {isAuthenticated && <MenuItem>Saved Jobs</MenuItem>}
-                                    {isAuthenticated && <MenuItem>Settings</MenuItem>}
-                                    <MenuItem>About Us</MenuItem>
-                                    <MenuItem>
-                                        <SimpleGrid columns={2} spacing={3}>
-                                            <div>Dark Mode</div>
-                                            <Switch colorScheme='blue' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
-                                        </SimpleGrid>
-                                    </MenuItem>
-                                    {isAuthenticated && <MenuItem onClick={() => logout({
-                                        logoutParams: {
-                                            returnTo: returnURL
-                                        }
-                                    })}>
-                                        Log out
-                                    </MenuItem>}
-                                </MenuList>
-                            </Menu>
+                            <DropdownMenu returnURL={window.location.href.substring(0, window.location.href.indexOf('/profile'))} />
                         </>
                     }
                 </HStack>
@@ -710,7 +688,7 @@ function EmployerProfile(returnURL) {
                 flex='1 1 auto' // This allows the main content area to grow and shrink as necessary
             >
                 <Box flexBasis='15%' minWidth='15%'>
-                    <VStack spacing='6%' alignItems='center' pt={6}>
+                    <VStack spacing={[2, 4, 6]} alignItems='center' pt={[2, 4, 6]}>
                         <Button
                             w='80%'
                             variant={selectedTab === "Employer Profile" ? "solid" : "outline"}
@@ -718,7 +696,7 @@ function EmployerProfile(returnURL) {
                             onClick={() => setSelectedTab("Employer Profile")}
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
-                            p={6}
+                            p={[2, 4, 6]}
                         >
                             <Text>Employer Profile</Text>
                         </Button>
@@ -730,7 +708,7 @@ function EmployerProfile(returnURL) {
                             onClick={() => setSelectedTab("Job Postings")}
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
-                            p={6}
+                            p={[2, 4, 6]}
                         >
                             <Text p={5}>Job Postings</Text>
                         </Button>
@@ -741,7 +719,7 @@ function EmployerProfile(returnURL) {
                             onClick={() => setSelectedTab("Account Settings")}
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
-                            p={6}
+                            p={[2, 4, 6]}
                         >
                             <Text>Account Settings</Text>
                         </Button>
@@ -751,7 +729,7 @@ function EmployerProfile(returnURL) {
                             colorScheme="blue"
                             onClick={() => setSelectedTab("Matches")}
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
-                            p={6}
+                            p={[2, 4, 6]}
                         >
                             <Text > Matches</Text>
                         </Button>

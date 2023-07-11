@@ -54,7 +54,7 @@ function Home() {
                                     <SimpleGrid columns={1} spacing={3} >
                                         <button>Profile</button>
                                         <button>Settings</button>
-                                        <LogoutButton />
+                                        <LogoutButton returnURL={window.location.href} />
                                     </SimpleGrid>
                                 </div>
                             )}

@@ -4,19 +4,19 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import QuestionBank from './QuestionBank';
 import JobPostingBank from './JobPostingBank';
+import DropdownMenu from './DropdownMenu';
 import { LoginButton } from './LoginButton';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
-import { ChevronDownIcon } from '@chakra-ui/icons';
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, useColorMode, useColorModeValue } from '@chakra-ui/react';
 // import './App.css';
 
-const deployURL = 'https://goldfishai.netlify.app';
+// const deployURL = 'https://goldfishai.netlify.app';
 
 
 function EmployerPage(returnURL) {
     const [searchTerm, setSearchTerm] = useState('');
-    const { isAuthenticated, isLoading, user, logout } = useAuth0();
+    const { isAuthenticated, isLoading, user } = useAuth0();
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
@@ -28,7 +28,7 @@ function EmployerPage(returnURL) {
     const [jobLocation, setJobLocation] = useState('');
     // const [company, setCompany] = useState('myspace');
     const [canAddQuestion, setCanAddQuestion] = useState(false);
-    const { colorMode, toggleColorMode } = useColorMode();
+    // const { colorMode, toggleColorMode } = useColorMode();
     const [searchParams] = useSearchParams();
     const navigate = useNavigate();
     const location = useLocation();
@@ -392,28 +392,7 @@ function EmployerPage(returnURL) {
                                     </Box>
                                 </VStack>
                                 : <LoginButton />}
-                            <Menu>
-                                <MenuButton as={IconButton} aria-label='Options' icon={<ChevronDownIcon />} variant='outline' />
-                                <MenuList>
-                                    <MenuItem onClick={() => navigate("/employer/profile")}>Profile</MenuItem>
-                                    {isAuthenticated && <MenuItem>Saved Jobs</MenuItem>}
-                                    {isAuthenticated && <MenuItem>Settings</MenuItem>}
-                                    <MenuItem>About Us</MenuItem>
-                                    <MenuItem>
-                                        <SimpleGrid columns={2} spacing={3}>
-                                            <div>Dark Mode</div>
-                                            <Switch colorScheme='blue' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
-                                        </SimpleGrid>
-                                    </MenuItem>
-                                    {isAuthenticated && <MenuItem onClick={() => logout({
-                                        logoutParams: {
-                                            returnTo: returnURL
-                                        }
-                                    })}>
-                                        Log out
-                                    </MenuItem>}
-                                </MenuList>
-                            </Menu>
+                            <DropdownMenu returnURL={window.location.href} />
                         </>
                     }
                 </HStack>

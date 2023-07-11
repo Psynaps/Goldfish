@@ -12,10 +12,10 @@ function LoginButton() {
     );
 }
 
-function LogoutButton() {
+function LogoutButton({ returnURL }) {
     const { logout } = useAuth0();
 
-    return <button className='LogoutButton' onClick={() => logout({ returnTo: window.location.origin })}>Log Out</button>;
+    return <button className='LogoutButton' onClick={() => logout({ returnTo: returnURL })}>Log Out</button>;
 }
 
 export { LoginButton, LogoutButton };
