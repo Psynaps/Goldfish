@@ -375,7 +375,7 @@ function EmployerPage(returnURL) {
     return (
         <div className='Employer'>
             <Box bg='#1398ff' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem'>
-                <Box display='flex' alignItems='baseline' p={0} onClick={() => navigate("/employer")}>
+                <Box display='flex' alignItems='baseline' p={0} >
                     <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
                         <Text fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
                         <Text ml={3} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
@@ -395,7 +395,7 @@ function EmployerPage(returnURL) {
                             <Menu>
                                 <MenuButton as={IconButton} aria-label='Options' icon={<ChevronDownIcon />} variant='outline' />
                                 <MenuList>
-                                    {isAuthenticated && <MenuItem>Profile</MenuItem>}
+                                    <MenuItem onClick={() => navigate("/employer/profile")}>Profile</MenuItem>
                                     {isAuthenticated && <MenuItem>Saved Jobs</MenuItem>}
                                     {isAuthenticated && <MenuItem>Settings</MenuItem>}
                                     <MenuItem>About Us</MenuItem>

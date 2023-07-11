@@ -121,6 +121,7 @@ app.post('/api/postJob', async (req, res) => {
         res.send({ success: true, jobPostingID: jobPostingID });
         console.log("postJob req completed");
         client.release();
+
     } catch (err) {
         console.error(err);
         res.status(500).send({ error: err.message });
@@ -285,11 +286,12 @@ app.post('/api/saveEmployerProfile', async (req, res) => {
             res.send({ success: true });
             console.log("SaveEmployerProfile req completed");
             client.release();
-        } catch (err) {
-            console.error(err);
-            res.status(500).send({ error: err.message });
         }
-    });
+    } catch (err) {
+        console.error(err);
+        res.status(500).send({ error: err.message });
+    }
+});
 
 
 // All remaining requests return the React app, so it can handle routing.
