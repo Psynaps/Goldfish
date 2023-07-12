@@ -6,6 +6,12 @@ const PORT = process.env.PORT || 8080;
 const morgan = require('morgan');
 const multer = require('multer');
 const sharp = require('sharp');
+// const FileType = require('file-type');
+let fileTypeFromBuffer = null;
+import('file-type').then(fileTypeModule => {
+    fileTypeFromBuffer = fileTypeModule.fileTypeFromBuffer;
+    // use fileTypeFromBuffer here
+});
 // const db = require('./db');
 const { Pool } = require('pg');
 // require { Client } from 'pg';
@@ -257,6 +263,14 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
         let query;
 
         if (req.file) {
+            const fileContents = req.file.buffer;
+            if (fileTypeFromBuffer) {
+                const fileType = await fileTypeFromBuffer(fileContents);
+
+                if (!fileType || !['jpg', 'png', 'gif', 'webp'].includes(fileType.ext)) {
+                    return res.status(400).send({ error: 'Invalid file type. Only .jpg, .jpeg, .png, .gif, and .webp are accepted' });
+                }
+            }
             companyLogo = await sharp(req.file.buffer)
                 .resize({ width: 250, height: 250 }) // Resize image to 250x250 pixels
                 .png() // Convert to png format

@@ -161,6 +161,24 @@ const EmployerProfileBuilderRightContent = ({
             });
     }, [user, apiURL, setCompanyLogo]);
 
+    const imageValidationRule = {
+        validate: async (fileList) => {
+            const file = fileList[0];
+            if (file) {
+                if (file.size > 2097152) {
+                    return 'File size must be less than 2MB';
+                } else {
+                    const acceptableImageTypes = ["jpg", "jpeg", "png", "gif", "webp"];
+                    const extension = file.name.split('.').pop().toLowerCase();
+                    if (!acceptableImageTypes.includes(extension)) {
+                        return 'Invalid file type. Only .jpg, .jpeg, .png, .gif, and .webp are accepted';
+                    }
+                }
+            }
+            return true;
+        }
+    };
+
     useEffect(() => {
         // console.log('userinfo', userInfo);
         reset(userInfo);
@@ -185,8 +203,16 @@ const EmployerProfileBuilderRightContent = ({
 
     useEffect(() => {
         const file = watchLogo[0];
-        if (file && file.size > 2097152) { // File size less than 2MB
-            setError("logo", { type: "manual", message: "File size must be less than 2MB" });
+        if (file) {
+            if (file.size > 2097152) { // File size less than 2MB
+                setError("logo", { type: "manual", message: "File size must be less than 2MB" });
+            } else {
+                const acceptableImageTypes = ["jpg", "jpeg", "png", "gif", "webp"]; // you can add more types if needed
+                const extension = file.name.split('.').pop().toLowerCase();
+                if (!acceptableImageTypes.includes(extension)) {
+                    setError("logo", { type: "manual", message: "Invalid file type. Only .jpg, .jpeg, .png, .gif, and .webp are accepted" });
+                }
+            }
         }
     }, [watchLogo, setError]);
 
@@ -262,7 +288,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl isInvalid={errors.logo}>
                             <FormLabel htmlFor="logo">Logo Upload</FormLabel>
-                            <Input type="file" id="logo" {...register("logo")} w='95%' p={2} alignSelf='center' />
+                            <Input type="file" id="logo" accept="image/*" {...register("logo", imageValidationRule)} w='95%' p={2} alignSelf='center' />
                             {errors.logo && <FormErrorMessage>{errors.logo.message}</FormErrorMessage>}
                         </FormControl>
                         <HStack>
