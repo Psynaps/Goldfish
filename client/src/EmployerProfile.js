@@ -4,6 +4,7 @@ import { Box, Flex, HStack, Button, Spacer, Select, VStack, Text, Avatar, Spinne
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 // import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton } from './LoginButton';
@@ -67,25 +68,30 @@ const EmployerProfileBuilderRightContent = ({
     setSelectedSubTab,
     userInfo, // assume this is passed from parent component
     setUserInfo,
-    apiURL
+    apiURL,
+    companyLogo,
+    setCompanyLogo,
 }) => {
 
     const {
         register,
         handleSubmit,
+        watch,
+        setError,
         formState: { errors, isSubmitting },
         reset // reset method from useForm to update defaultValues
     } = useForm({ userInfo });
     const [isSavingProfile, setIsSavingProfile] = useState(false);
     const { isAuthenticated, isLoading, user } = useAuth0();
     const [canSubmit, setCanSubmit] = useState(false);
+    const watchLogo = watch('logo', []);
 
 
 
     const currentIndex = subTabs.indexOf(selectedSubTab);
     const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
     const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
-    const requiredFields = ['companyName', 'website', 'companySize', 'productType',
+    const requiredFields = ['companyname', 'website', 'companysize', 'producttype',
         'office1',
         'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
         'pto1', 'pto2', 'pto3', 'pto4',
@@ -103,26 +109,40 @@ const EmployerProfileBuilderRightContent = ({
     const saveEmployerProfile = (data) => {
         const newUserInfo = { ...userInfo, ...data };
         setUserInfo(newUserInfo);
-        console.log('saving employer profile...');
+        // console.log('saving employer profile...');
         // console.log('userInfo:', userInfo);
         sendSaveEmployerProfile(newUserInfo);
 
     };
     const sendSaveEmployerProfile = useCallback((newUserInfo) => {
         setIsSavingProfile(true);
-        console.log('tried to save employer profile', newUserInfo);
-        const requestOptions = {
+        console.log('trying to save employer profile', newUserInfo);
+
+        // Create FormData to send files
+        const formData = new FormData();
+
+        // If there's a file, add it to the FormData
+        if (newUserInfo.logo && newUserInfo.logo.length > 0) {
+            formData.append("logo", newUserInfo.logo[0]);
+        }
+
+        // Convert the rest of the userInfo into a JSON string and add it to the FormData
+        const userInfoWithoutLogo = { ...newUserInfo };
+        delete userInfoWithoutLogo.logo;
+        // formData.append("userInfo", JSON.stringify(userInfoWithoutLogo));
+
+        for (let key in userInfoWithoutLogo) {
+            formData.append(key, userInfoWithoutLogo[key]);
+        }
+
+        formData.append("userID", user.sub);
+
+        // console.log('formData:', formData);
+
+        fetch(`${apiURL}/saveEmployerProfile`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                userID: user.sub,
-                ...newUserInfo
-
-            })
-
-        };
-        console.log(requestOptions.body);
-        fetch(`${apiURL}/saveEmployerProfile`, requestOptions)
+            body: formData
+        })
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
@@ -130,12 +150,16 @@ const EmployerProfileBuilderRightContent = ({
                 return response.json();
             })
             .then(json => {
+                // setLogo(json.img);
+                // console.log('logo:', json.companyLogo);
+                setCompanyLogo(json.companyLogo);
+                // console.log('logo:', logo);
                 setIsSavingProfile(false);
             }).catch(e => {
                 console.error(e); // This will log any errors to the console.
                 setIsSavingProfile(false);
             });
-    }, [user, userInfo, apiURL]);
+    }, [user, apiURL, setCompanyLogo]);
 
     useEffect(() => {
         // console.log('userinfo', userInfo);
@@ -147,17 +171,27 @@ const EmployerProfileBuilderRightContent = ({
         // Loop through all required fields before the last page, so excluding financial1-4,
         // from the form and check if they are filled in to userInfo.
         // If they are not then set canSubmit to false. Otherwise set it to true.
-        console.log('checking canSubmit', canSubmit);
+        // console.log('checking canSubmit', canSubmit);
         for (let i = 0; i < requiredFields.length - 4; i++) {
             if (!hasFieldFilled(userInfo, requiredFields[i])) {
                 setCanSubmit(false);
-                console.log('set canSubmit: false');
+                // console.log('set canSubmit: false');
                 return;
             }
         }
         setCanSubmit(true);
-        console.log('set canSubmit: true');
+        // console.log('set canSubmit: true');
     }, [userInfo]);
+
+    useEffect(() => {
+        const file = watchLogo[0];
+        if (file && file.size > 2097152) { // File size less than 2MB
+            setError("logo", { type: "manual", message: "File size must be less than 2MB" });
+        }
+    }, [watchLogo, setError]);
+
+
+
 
     const hasFieldFilled = (userInfo, field) => {
         if (userInfo[field] === undefined || userInfo[field] === null || userInfo[field] === '') {
@@ -173,11 +207,12 @@ const EmployerProfileBuilderRightContent = ({
                     <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Basic info</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
-                        <FormControl isInvalid={errors.companyName}>
-                            <FormLabel htmlFor="companyName">Company Name or DBA</FormLabel>
-                            <Input id="companyName" {...register("companyName", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormControl isInvalid={errors.companyname}>
+                            {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
+                            <FormLabel htmlFor="companyname">Company Name or DBA</FormLabel>
+                            <Input id="companyname" {...register("companyname", { required: "This is required" })} w='95%' alignSelf='center' />
                             <FormErrorMessage>
-                                {errors.companyName && errors.companyName.message}
+                                {errors.companyname && errors.companyname.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.website}>
@@ -191,9 +226,9 @@ const EmployerProfileBuilderRightContent = ({
                             <FormLabel htmlFor="linkedin">LinkedIn Profile (Optional)</FormLabel>
                             <Input id="linkedin" {...register("linkedin")} w='95%' alignSelf='center' />
                         </FormControl>
-                        <FormControl isInvalid={errors.companySize}>
-                            <FormLabel htmlFor="companySize">Considering the continuum from early-stage startups to established corporations, how would you describe your organization?</FormLabel>
-                            <Select id="companySize" {...register("companySize", { required: "This is required" })} w='95%' alignSelf='center'
+                        <FormControl isInvalid={errors.companysize}>
+                            <FormLabel htmlFor="companysize">Considering the continuum from early-stage startups to established corporations, how would you describe your organization?</FormLabel>
+                            <Select id="companysize" {...register("companysize", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
@@ -203,12 +238,12 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='3' style={{ color: 'black' }}>Established Company: We have well-defined roles and processes, and value stability and predictability</option>
                             </Select>
                             <FormErrorMessage>
-                                {errors.companySize && errors.companySize.message}
+                                {errors.companysize && errors.companysize.message}
                             </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.productType}>
-                            <FormLabel htmlFor="productType">Which most accurately describes the type of product your company sells?</FormLabel>
-                            <Select id="productType" {...register("productType", { required: "This is required" })} w='95%' alignSelf='center'
+                        <FormControl isInvalid={errors.producttype}>
+                            <FormLabel htmlFor="producttype">Which most accurately describes the type of product your company sells?</FormLabel>
+                            <Select id="producttype" {...register("producttype", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
@@ -222,12 +257,13 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='0' style={{ color: 'black' }}>Other</option>
                             </Select>
                             <FormErrorMessage>
-                                {errors.productType && errors.productType.message}
+                                {errors.producttype && errors.producttype.message}
                             </FormErrorMessage>
                         </FormControl>
-                        <FormControl>
+                        <FormControl isInvalid={errors.logo}>
                             <FormLabel htmlFor="logo">Logo Upload</FormLabel>
                             <Input type="file" id="logo" {...register("logo")} w='95%' p={2} alignSelf='center' />
+                            {errors.logo && <FormErrorMessage>{errors.logo.message}</FormErrorMessage>}
                         </FormControl>
                         <HStack>
                             <Button
@@ -645,10 +681,40 @@ function EmployerProfile(returnURL) {
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
     const [userInfo, setUserInfo] = useState({});
+    const [companyLogo, setCompanyLogo] = useState(null);
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
+    // Function getEmployerProfile will be called when the component mounts and will retrieve the user's 
+    // employer profile from the database using an api call to /api/getEmployerProfile
+    // If the user does not have an employer profile, the function will return an empty object
+    // If it does return an employer profile, the function will set the userInfo state variable to the employer profile
+    // the function also sets the companyLogo state variable to the employer profile's logo
+    async function getEmployerProfile() {
+        if (!user) {
+            console.log('no user');
+            setUserInfo({}); //Maybe not wanted
+            return;
+        }
+        try {
+            const response = await axios.get(`${apiURL}/getEmployerProfile?userid=${user.sub}`);
+            if (response.data) {
+                const { companylogo, ...otherData } = response.data;
+                setUserInfo(otherData);
+                setCompanyLogo(companylogo);
+                // console.log('employer profile retrieved');
+                // console.log('userInfo: ', otherData);
+                // console.log('companyLogo: ', companyLogo);
+            }
+        } catch (err) {
+            console.error(err);
+        }
+    }
 
+
+    useEffect(() => {
+        getEmployerProfile();
+    }, [user]);
 
 
     return (
@@ -667,13 +733,16 @@ function EmployerProfile(returnURL) {
                 <HStack spacing={5} alignItems='top'>
                     {isLoading ? <Spinner /> :
                         <>
-                            {(isAuthenticated) ?
-                                <VStack spacing={1} alignItems='center'>
-                                    <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} />
-                                    <Box bg='#FAD156' borderRadius='full' px={2}>
-                                        <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
-                                    </Box>
-                                </VStack>
+                            {isAuthenticated ?
+                                <>
+                                    {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />}
+                                    <VStack spacing={1} alignItems='center'>
+                                        <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} />
+                                        <Box bg='#FAD156' borderRadius='full' px={2}>
+                                            <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
+                                        </Box>
+                                    </VStack>
+                                </>
                                 : <LoginButton redirectURL={''} />}
                             <DropdownMenu returnURL={window.location.href.substring(0, window.location.href.indexOf('/profile'))} />
                         </>
@@ -751,6 +820,8 @@ function EmployerProfile(returnURL) {
                         userInfo={userInfo}
                         setUserInfo={setUserInfo}
                         apiURL={apiURL}
+                        companyLogo={companyLogo}
+                        setCompanyLogo={setCompanyLogo}
                     />}
                     {selectedTab === 'Job Postings' && <JobPostingsRightContent />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}

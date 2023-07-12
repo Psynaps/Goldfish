@@ -4,6 +4,8 @@ const path = require('path');
 const PORT = process.env.PORT || 8080;
 // const PORT = process.env.PORT || 3000;
 const morgan = require('morgan');
+const multer = require('multer');
+const sharp = require('sharp');
 // const db = require('./db');
 const { Pool } = require('pg');
 // require { Client } from 'pg';
@@ -18,8 +20,6 @@ app.use(express.json());
 app.use(cors());
 
 app.use(express.static(path.resolve(__dirname, '../client/build'))); // Maybe add / to end of build
-
-
 const pool = (() => {
     if (process.env.NODE_ENV !== 'production') {
         return new Pool({
@@ -232,64 +232,142 @@ app.get('/api/getUserJobs', async (req, res) => {
     }
 });
 
-app.post('/api/saveEmployerProfile', async (req, res) => {
+const upload = multer({
+    limits: {
+        fileSize: 10000000, // limit file size to 10MB
+    },
+});
+
+app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => {
     try {
         console.log("saveEmployerProfile req received");
-        console.log(req.body);
+        // console.log(req.body);
         const client = await pool.connect();
 
-        const { userID, companyName, website, linkedin, companySize, productType,
+        const { userID, companyname, website, linkedin, companysize, producttype,
             office1, office2, office3,
             medical1, medical2, medical3, medical4, medical5,
             pto1, pto2, pto3, pto4,
             financial1, financial2, financial3, financial4,
         } = req.body;
-        let jobPostingID = req.body.jobPostingID;
 
+        // console.log('userID', userID, req.body?.userInfo);
 
-        // Upsert into job_profiles
-        let result;
+        let companyLogo;
         let query;
-        query = {
-            text: `INSERT INTO employer_profiles (userid, companyName, website, linkedin, companySize, productType,
-                office1, office2, office3,
-                medical1, medical2, medical3, medical4, medical5,
-                pto1, pto2, pto3, pto4,
-                financial1, financial2, financial3, financial4) 
-            VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)`,
-            values: [userID, companyName, website, linkedin, companySize, productType,
-                office1, office2, office3,
-                medical1, medical2, medical3, medical4, medical5,
-                pto1, pto2, pto3, pto4,
-                financial1, financial2, financial3, financial4],
-        };
-        result = await client.query(query);
 
-        //TODO: this should be an onconflict update
+        if (req.file) {
+            companyLogo = await sharp(req.file.buffer)
+                .resize({ width: 250, height: 250 }) // Resize image to 250x250 pixels
+                .png() // Convert to png format
+                .toBuffer();
 
-        //If there was already an entry with this userID, update it
-        if (result.rowCount == 0) {
+            // console.log('got logo:', companyLogo);
+
             query = {
-                text: `UPDATE employer_profiles SET companyName = $2, website = $3, linkedin = $4, companySize = $5, productType = $6,
-                office1 = $7, office2 = $8, office3 = $9,
-                medical1 = $10, medical2 = $11, medical3 = $12, medical4 = $13, medical5 = $14,
-                pto1 = $15, pto2 = $16, pto3 = $17, pto4 = $18,
-                financial1 = $19, financial2 = $20, financial3 = $21, financial4 = $22
-                WHERE userid = $1`,
-                values: [userID, companyName, website, linkedin, companySize, productType,
+                text: `
+                    INSERT INTO employer_profiles 
+                    (userid, companyname, website, linkedin, companysize, producttype, companylogo,
+                    office1, office2, office3,
+                    medical1, medical2, medical3, medical4, medical5,
+                    pto1, pto2, pto3, pto4,
+                    financial1, financial2, financial3, financial4) 
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23)
+                    ON CONFLICT (userid) 
+                    DO UPDATE SET 
+                    companyname = EXCLUDED.companyname, website = EXCLUDED.website, linkedin = EXCLUDED.linkedin, 
+                    companysize = EXCLUDED.companysize, producttype = EXCLUDED.producttype, companyLogo = EXCLUDED.companyLogo, 
+                    office1 = EXCLUDED.office1, office2 = EXCLUDED.office2, office3 = EXCLUDED.office3, 
+                    medical1 = EXCLUDED.medical1, medical2 = EXCLUDED.medical2, medical3 = EXCLUDED.medical3, 
+                    medical4 = EXCLUDED.medical4, medical5 = EXCLUDED.medical5, 
+                    pto1 = EXCLUDED.pto1, pto2 = EXCLUDED.pto2, pto3 = EXCLUDED.pto3, pto4 = EXCLUDED.pto4,
+                    financial1 = EXCLUDED.financial1, financial2 = EXCLUDED.financial2, financial3 = EXCLUDED.financial3, 
+                    financial4 = EXCLUDED.financial4`,
+                values: [userID, companyname, website, linkedin, companysize, producttype, companyLogo,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
                     financial1, financial2, financial3, financial4],
             };
-
-            res.send({ success: true });
-            console.log("SaveEmployerProfile req completed");
-            client.release();
+        } else {
+            query = {
+                text: `
+                    INSERT INTO employer_profiles 
+                    (userid, companyname, website, linkedin, companysize, producttype,
+                    office1, office2, office3,
+                    medical1, medical2, medical3, medical4, medical5,
+                    pto1, pto2, pto3, pto4,
+                    financial1, financial2, financial3, financial4) 
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
+                    ON CONFLICT (userid) 
+                    DO UPDATE SET 
+                    companyname = EXCLUDED.companyname, website = EXCLUDED.website, linkedin = EXCLUDED.linkedin, 
+                    companysize = EXCLUDED.companysize, producttype = EXCLUDED.producttype, 
+                    office1 = EXCLUDED.office1, office2 = EXCLUDED.office2, office3 = EXCLUDED.office3, 
+                    medical1 = EXCLUDED.medical1, medical2 = EXCLUDED.medical2, medical3 = EXCLUDED.medical3, 
+                    medical4 = EXCLUDED.medical4, medical5 = EXCLUDED.medical5, 
+                    pto1 = EXCLUDED.pto1, pto2 = EXCLUDED.pto2, pto3 = EXCLUDED.pto3, pto4 = EXCLUDED.pto4,
+                    financial1 = EXCLUDED.financial1, financial2 = EXCLUDED.financial2, financial3 = EXCLUDED.financial3, 
+                    financial4 = EXCLUDED.financial4`,
+                values: [userID, companyname, website, linkedin, companysize, producttype,
+                    office1, office2, office3,
+                    medical1, medical2, medical3, medical4, medical5,
+                    pto1, pto2, pto3, pto4,
+                    financial1, financial2, financial3, financial4],
+            };
         }
+
+        let result = await client.query(query);
+
+        // as long as there is no error in the query, send success: true
+        let companyLogoToSend = companyLogo ? companyLogo.toString('base64') : null;
+        res.send({ success: true, companyLogo: companyLogoToSend });
+        console.log("SaveEmployerProfile req completed");
+        client.release();
+    } catch (err) {
+        if (err.code === 'LIMIT_FILE_SIZE') {
+            console.error('File is too large');
+            return res.status(500).send({ error: 'File is too large. Maximum size is 10MB.' });
+        }
+
+        console.error(err);
+        // res.status(500).send({ error: 'Malformed request' });
+        res.status(500).send({ error: err.message });
+    }
+});
+
+app.get('/api/getEmployerProfile', async (req, res) => {
+    const userID = req.query.userid;
+
+    try {
+        const client = await pool.connect();
+
+        const employerProfileQuery = {
+            text: 'SELECT * FROM employer_profiles WHERE userid = $1',
+            values: [userID],
+        };
+
+        const employerProfileResult = await client.query(employerProfileQuery);
+        const employerProfileData = employerProfileResult.rows[0];
+
+        if (!employerProfileData) {
+            return res.status(404).send({ error: 'Employer profile not found' });
+        }
+
+        // If there's a companyLogo, convert it to base64 string
+        if (employerProfileData.companylogo) {
+            employerProfileData.companylogo = Buffer.from(employerProfileData.companylogo).toString('base64');
+        }
+
+        // Delete the keys you don't want to send back in the response
+        delete employerProfileData.userID;
+        // delete employerProfileData.companyLogo;
+
+        res.send(employerProfileData);
+        client.release();
     } catch (err) {
         console.error(err);
-        res.status(500).send({ error: err.message });
+        res.status(500).send({ message: "Internal Server Error" });
     }
 });
 
@@ -298,6 +376,11 @@ app.post('/api/saveEmployerProfile', async (req, res) => {
 app.get('*', function (request, response) {
     console.error('Other req received');
     response.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
+
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send({ message: "Internal Server Error" });
 });
 
 app.listen(PORT, function () {
