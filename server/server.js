@@ -198,6 +198,25 @@ app.get('/api/getJob', async (req, res) => {
     }
 });
 
+app.post('/api/postJobInfo', async (req, res) => {
+    const { userID, jobTitle, salaryBase, salaryOTE, oteValue, homeOfficeAddress, jobPostingID }
+        = req.body;
+    console.log("postJobInfo req received");
+    if (!userID) {
+        return res.status(400).send({ error: 'Missing userID query parameter' });
+    }
+    if (!jobTitle) {
+        return res.status(400).send({ error: 'Missing jobTitle query parameter' });
+    }
+    try {
+        if (jobPostingID === undefined) {
+
+        }
+        else {
+
+        }
+    }
+};
 
 app.get('/api/getUserJobs', async (req, res) => {
     const userID = req.query.userID;

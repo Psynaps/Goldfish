@@ -30,7 +30,7 @@ function EmployerPage(returnURL) {
     const [canAddQuestion, setCanAddQuestion] = useState(false);
     // const { colorMode, toggleColorMode } = useColorMode();
     const [searchParams] = useSearchParams();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
     const location = useLocation();
 
     const initialBorderColor = useColorModeValue('blue.500', 'blue.200');

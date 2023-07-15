@@ -82,7 +82,7 @@ const EmployerProfileBuilderRightContent = ({
         reset // reset method from useForm to update defaultValues
     } = useForm({ userInfo });
     const [isSavingProfile, setIsSavingProfile] = useState(false);
-    const { isAuthenticated, isLoading, user } = useAuth0();
+    const { isAuthenticated, user } = useAuth0();
     const [canSubmit, setCanSubmit] = useState(false);
     const watchLogo = watch('logo', []);
 
@@ -677,12 +677,163 @@ const EmployerProfileBuilderRightContent = ({
     }
 };
 
-function JobPostingsContent() {
-    return <Box>Job Postings Content</Box>;
+function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
+    const JobListingButton = ({ title, secondaryText, jobPostingID }) => (
+        <Box
+            as="button"
+            w='80%'
+            minWidth='80%'
+            alignSelf='center'
+            variant='unstyled'
+            onClick={() => setSelectedJobListing(jobPostingID)}
+            mb={2}
+            _hover={{ bg: 'none' }}
+            _active={{ bg: 'none' }}
+            color='white'
+        // flexBasis='80%'
+        >
+            <Flex
+                alignItems='center'
+                flexDirection={'row'}
+            >
+                <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
+                    <Text fontWeight='bold' fontSize={['2xs', 'xs', 'sm', 'md']}>{title}</Text>
+                    <Text fontSize={['3xs', '2xs', 'xs',]}>{secondaryText}</Text>
+                </VStack>
+                <Spacer />
+                <Circle size={[6, 8]} border={selectedJobListing == jobPostingID ? '3px' : 0} borderColor='black' bg={(jobs && jobs[jobPostingID]?.active) ? 'green' : 'orange'} />
+            </Flex>
+        </Box >
+    );
+
+    return (
+        <VStack align='start' spacing={4} p={4} color='white'>
+            <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={1}
+            // alignSelf='center'
+            >
+                Job Listings
+            </Text>
+            <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+            {jobs && jobs?.map((job) => <JobListingButton key={job.jobPostingID} title={job.title} secondaryText={job.dateCreated} tabName={job.jobPostingID} />)}
+            <JobListingButton key={-1} title={'+'} secondaryText={''} tabName={-1} />
+        </VStack>
+    );
 }
 
-function JobPostingsRightContent() {
-    return <Box>Job Postings Right Content</Box>;
+function JobPostingsRightContent(apiURL, selectedJobListing, jobs, setJobs) {
+    const {
+        register,
+        handleSubmit,
+        setError,
+        formState: { errors, isSubmitting },
+        reset // reset method from useForm to update defaultValues
+    } = useForm({});
+    const [isSaving, setIsSaving] = useState(false);
+    const { isAuthenticated, user } = useAuth0();
+
+    const onSubmit = (data) => {
+        setIsSaving(true);
+        const newj = {};
+        const newJob = (selectedJobListing == -1) ?
+            { jobPostingID: -1, dateCreated: new Date().toLocaleDateString(), ...data } :
+            { ...jobs[selectedJobListing], ...data };
+        // newJobs = jobs.map((job) => { job.jobPostingID == selectedJobListing ? newJob : job; });
+        let newJobs = { ...jobs };
+        newJobs[selectedJobListing] = newJob;
+        setJobs(newJobs);
+        console.log('formData:', data);
+        console.log('jobs:', jobs);
+        sendSaveJobPosting(newJob);
+
+    };
+
+    const sendSaveJobPosting = useCallback((newJob) => {
+        setIsSaving(true);
+        console.log('trying to post job info', newJob);
+
+        // Create FormData to send files
+        const formData = new FormData();
+
+        // Loop through all properties of newJob object and append to formData
+        for (const property in newJob) {
+            formData.append(property, newJob[property]);
+        }
+        formData.append("userID", user.sub);
+
+        // console.log('formData:', formData);
+
+        fetch(`${apiURL}/postJobInfo`, {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`status ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(json => {
+                setIsSaving(false);
+            }).catch(e => {
+                console.error(e); // This will log any errors to the console.
+                setIsSaving(false);
+            });
+    }, [user, apiURL, setIsSaving]);
+    return (
+        <form key={subTabs[0]} onSubmit={handleSubmit(onSubmit)}>
+            <VStack align='start' spacing={4} p={4} color='white'>
+                <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Core Information</Text>
+                <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+                <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
+                    <FormControl isInvalid={errors.jobTitle}>
+                        {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
+                        <FormLabel htmlFor="jobTitle">Job Title</FormLabel>
+                        <Input id="jobTitle" {...register("jobTitle", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormErrorMessage>
+                            {errors.jobTitle && errors.jobTitle.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.salaryBase}>
+                        <FormLabel htmlFor="salaryBase">Salary Base</FormLabel>
+                        <Input id="salaryBase" {...register("salaryBase", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormErrorMessage>
+                            {errors.salaryBase && errors.salaryBase.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.salaryOTE}>
+                        <FormLabel htmlFor="salaryOTE">Annual Salary at 100% OTE</FormLabel>
+                        <Input id="salaryOTE" {...register("salaryOTE", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormErrorMessage>
+                            {errors.salaryOTE && errors.salaryOTE.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.oteValue}>
+                        <FormLabel htmlFor="oteValue">$ Value of 100% OTE Attainment</FormLabel>
+                        <Input id="oteValue" {...register("oteValue", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormErrorMessage>
+                            {errors.oteValue && errors.oteValue.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.homeOfficeAddress}>
+                        <FormLabel htmlFor="homeOfficeAddress">Home Office Address</FormLabel>
+                        <Input id="homeOfficeAddress" {...register("homeOfficeAddress", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormErrorMessage>
+                            {errors.homeOfficeAddress && errors.homeOfficeAddress.message}
+                        </FormErrorMessage>
+                    </FormControl>
+
+                    <Button
+                        bg="#5DFC89"
+                        colorScheme="teal"
+                        isLoading={isSubmitting}
+                        type="submit"
+                    >
+                        <Text>Save</Text>
+                    </Button>
+                </VStack>
+            </VStack>
+        </form>
+    );
 }
 
 function AccountSettingsContent() {
@@ -708,6 +859,7 @@ function EmployerProfile(returnURL) {
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
+    const [jobs, setJobs] = useState({});
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
@@ -849,7 +1001,11 @@ function EmployerProfile(returnURL) {
                         companyLogo={companyLogo}
                         setCompanyLogo={setCompanyLogo}
                     />}
-                    {selectedTab === 'Job Postings' && <JobPostingsRightContent />}
+                    {selectedTab === 'Job Postings' && <JobPostingsRightContent
+                        apiURL={apiURL}
+                        jobs={jobs}
+                        setJobs={setJobs}
+                    />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
                 </Box>
