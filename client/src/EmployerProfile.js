@@ -21,6 +21,20 @@ const subTabs = [
     '401k / Financial',
 ];
 
+// const objectMap = (obj, fn) =>
+// Object.fromEntries(
+//     Object.entries(obj).map(
+//         ([k, v], i) => [k, fn(v, k, i)]
+//     )
+// );
+
+function isEmptyObj(obj) {
+    if (obj === undefined || obj === null) {
+        return true;
+    }
+    return Object.keys(obj).length === 0 && obj.constructor === Object;
+}
+
 function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
     const SubTabButton = ({ title, secondaryText, tabName }) => (
         <Box
@@ -678,14 +692,17 @@ const EmployerProfileBuilderRightContent = ({
 };
 
 function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
-    const JobListingButton = ({ title, secondaryText, jobPostingID }) => (
+    // console.log('jobs:', jobs);
+    const JobListingButton = ({ jobTitle, secondaryText, jobPostingID, jobActive }) => (
         <Box
+            key={jobPostingID}
             as="button"
             w='80%'
             minWidth='80%'
             alignSelf='center'
             variant='unstyled'
             onClick={() => setSelectedJobListing(jobPostingID)}
+            // onClick={() => test(jobPostingID)}
             mb={2}
             _hover={{ bg: 'none' }}
             _active={{ bg: 'none' }}
@@ -697,11 +714,11 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
                 flexDirection={'row'}
             >
                 <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
-                    <Text fontWeight='bold' fontSize={['2xs', 'xs', 'sm', 'md']}>{title}</Text>
+                    <Text fontWeight='bold' fontSize={['2xs', 'xs', 'sm', 'md']}>{jobTitle}</Text>
                     <Text fontSize={['3xs', '2xs', 'xs',]}>{secondaryText}</Text>
                 </VStack>
                 <Spacer />
-                <Circle size={[6, 8]} border={selectedJobListing == jobPostingID ? '3px' : 0} borderColor='black' bg={(jobs && jobs[jobPostingID]?.active) ? 'green' : 'orange'} />
+                <Circle size={[6, 8]} border={selectedJobListing === jobPostingID ? '3px' : 0} borderColor='black' bg={jobActive ? 'green' : 'orange'} />
             </Flex>
         </Box >
     );
@@ -714,28 +731,36 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
                 Job Listings
             </Text>
             <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-            {jobs && jobs?.map((job) => <JobListingButton key={job.jobPostingID} title={job.title} secondaryText={job.dateCreated} tabName={job.jobPostingID} />)}
-            <JobListingButton key={-1} title={'+'} secondaryText={''} tabName={-1} />
+            {Object.values(jobs).map(job => {
+                return <JobListingButton key={job.jobPostingID} jobTitle={job.jobTitle} secondaryText={job.dateCreated} jobPostingID={job.jobPostingID} jobActive={job.active} />;
+            })}
+            {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.dateCreated} tabName={job.jobPostingID} jobActive={job.active} />; })} */}
+            <Button w='80%' key={'-1'} alignSelf='center' color='white' variant='outline' onClick={() => setSelectedJobListing(-1)}>
+                <Text fontWeight='bold' fontSize={['sm', 'md', 'lg', 'xl']}>
+                    +
+                </Text>
+            </Button>
         </VStack>
     );
 }
 
-function JobPostingsRightContent(apiURL, selectedJobListing, jobs, setJobs) {
+function JobPostingsRightContent({ apiURL, selectedJobListing, jobs, setJobs }) {
     const {
         register,
         handleSubmit,
         setError,
         formState: { errors, isSubmitting },
         reset // reset method from useForm to update defaultValues
-    } = useForm({});
+    } = useForm((!isEmptyObj(jobs) && selectedJobListing) ? jobs[selectedJobListing] : {});
     const [isSaving, setIsSaving] = useState(false);
     const { isAuthenticated, user } = useAuth0();
+    // console.log('selectedJobListing***:', selectedJobListing);
 
     const onSubmit = (data) => {
         setIsSaving(true);
-        const newj = {};
-        const newJob = (selectedJobListing == -1) ?
+        const newJob = (selectedJobListing === -1) ?
             { jobPostingID: -1, dateCreated: new Date().toLocaleDateString(), ...data } :
+            // { ...(jobs.find(job => job.jobPostingID == selectedJobListing)), ...data };
             { ...jobs[selectedJobListing], ...data };
         // newJobs = jobs.map((job) => { job.jobPostingID == selectedJobListing ? newJob : job; });
         let newJobs = { ...jobs };
@@ -779,8 +804,21 @@ function JobPostingsRightContent(apiURL, selectedJobListing, jobs, setJobs) {
                 setIsSaving(false);
             });
     }, [user, apiURL, setIsSaving]);
+
+    useEffect(() => {
+        if (!isEmptyObj(jobs) && selectedJobListing) {
+            reset(jobs[selectedJobListing]);
+            // console.log('resetting form', jobs[selectedJobListing]);
+        }
+        else {
+            reset({});
+        }
+    }, [jobs, selectedJobListing, reset]);
+
+
+
     return (
-        <form key={subTabs[0]} onSubmit={handleSubmit(onSubmit)}>
+        <form key={selectedJobListing} onSubmit={handleSubmit(onSubmit)}>
             <VStack align='start' spacing={4} p={4} color='white'>
                 <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Core Information</Text>
                 <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
@@ -825,7 +863,8 @@ function JobPostingsRightContent(apiURL, selectedJobListing, jobs, setJobs) {
                     <Button
                         bg="#5DFC89"
                         colorScheme="teal"
-                        isLoading={isSubmitting}
+                        // isLoading={isSubmitting}
+                        isLoading={isSaving}
                         type="submit"
                     >
                         <Text>Save</Text>
@@ -852,14 +891,18 @@ function MatchesRightContent() {
     return <Box>Matches Right Content</Box>;
 }
 
-function EmployerProfile(returnURL) {
+function EmployerProfile({ returnURL }) {
     const { isAuthenticated, isLoading, user } = useAuth0();
     // const { colorMode, toggleColorMode } = useColorMode();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
+    const [selectedJobListing, setSelectedJobListing] = useState(-1);
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
-    const [jobs, setJobs] = useState({});
+    const [jobs, setJobs] = useState({
+        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': 'dateA', 'active': true },
+        3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': 'dateB', 'active': false }
+    });
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
@@ -893,6 +936,7 @@ function EmployerProfile(returnURL) {
     useEffect(() => {
         getEmployerProfile();
     }, [user]);
+
 
 
     return (
@@ -985,7 +1029,12 @@ function EmployerProfile(returnURL) {
                 <Box w='1px' bg='gray' />
                 <Box flexBasis='25%' minWidth='25%'>
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderContent selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />}
-                    {selectedTab === 'Job Postings' && <JobPostingsContent />}
+                    {selectedTab === 'Job Postings' && <JobPostingsContent
+                        selectedJobListing={selectedJobListing}
+                        setSelectedJobListing={setSelectedJobListing}
+                        jobs={jobs}
+                        setJobs={setJobs}
+                    />}
                     {selectedTab === 'Account Settings' && <AccountSettingsContent />}
                     {selectedTab === 'Matches' && <MatchesContent />}
                 </Box>
@@ -1005,6 +1054,8 @@ function EmployerProfile(returnURL) {
                         apiURL={apiURL}
                         jobs={jobs}
                         setJobs={setJobs}
+                        selectedJobListing={selectedJobListing}
+                        setSelectedJobListing={setSelectedJobListing}
                     />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
