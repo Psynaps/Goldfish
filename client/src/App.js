@@ -23,6 +23,7 @@ function App() {
                     <Route path='/' element={<Home />} />
                     <Route path='/employer' element={<EmployerPage returnURL={`${returnUrl}/employer`} />} />
                     <Route path='/employer/profile' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
+                    <Route path='/employer/jobs' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
                 </Routes>
             </Router>
         </div>

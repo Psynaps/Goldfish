@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { Box, Flex, HStack, Button, Spacer, Select, VStack, Text, Avatar, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, } from '@chakra-ui/react';
+import { useSearchParams } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 // import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
@@ -927,14 +929,15 @@ function MatchesRightContent() {
 function EmployerProfile({ returnURL }) {
     const { isAuthenticated, isLoading, user } = useAuth0();
     // const { colorMode, toggleColorMode } = useColorMode();
+    const [searchParams] = useSearchParams();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
     const [selectedJobListing, setSelectedJobListing] = useState(-1);
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
     const [jobs, setJobs] = useState({
-        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': new Date(0).toLocaleDateString(), 'active': true },
-        3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': new Date(8.64e15).toLocaleDateString(), 'active': false }
+        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': new Date('1 1 2020').toLocaleDateString(), 'active': true },
+        3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': new Date(1e12).toLocaleDateString(), 'active': false }
     });
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
@@ -968,9 +971,12 @@ function EmployerProfile({ returnURL }) {
 
     useEffect(() => {
         getEmployerProfile();
+        const tabFromURL = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
+        if (window.location.href.includes('/employer/jobs')) { // if jobID exists in the URL
+            console.log('loading jobs page from URL');
+            setSelectedTab('Job Postings');
+        }
     }, [user]);
-
-
 
     return (
         <Box className='EmployerProfile'
