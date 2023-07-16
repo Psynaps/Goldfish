@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Box, Flex, HStack, Button, Spacer, Select, VStack, Text, Avatar, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, } from '@chakra-ui/react';
+import { Box, Flex, HStack, Button, Spacer, Select, VStack, Text, Avatar, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, } from '@chakra-ui/react';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -693,7 +693,7 @@ const EmployerProfileBuilderRightContent = ({
 
 function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
     // console.log('jobs:', jobs);
-    console.log('selectedJobListing:', selectedJobListing);
+    // console.log('selectedJobListing:', selectedJobListing);
     const JobListingButton = ({ jobTitle, secondaryText, jobPostingID, jobActive }) => (
         <Box
             key={jobPostingID}
@@ -731,6 +731,11 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
         </Box >
     );
 
+    useEffect(() => {
+        setSelectedJobListing(jobs !== {} ? jobs[Object.keys(jobs)[0]]?.jobPostingID : -1);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <VStack align='start' p={4} color='white'>
             <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'
@@ -739,13 +744,17 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
                 Job Listings
             </Text>
             <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
-            <VStack spacing={1} w='100%'>
-                {Object.values(jobs).map(job => {
-                    return <JobListingButton key={job.jobPostingID} jobTitle={job.jobTitle} secondaryText={job.dateCreated} jobPostingID={job.jobPostingID} jobActive={job.active} />;
-                })}
+            <VStack spacing={1} w='100%' >
+                {/* // sort by date created */}
+                {Object.values(jobs).sort((a, b) =>
+                    (new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1)).map(job => {
+                        return <JobListingButton key={job.jobPostingID} jobTitle={job.jobTitle} secondaryText={job.dateCreated} jobPostingID={job.jobPostingID} jobActive={job.active} />;
+                    })}
             </VStack>
             {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.dateCreated} tabName={job.jobPostingID} jobActive={job.active} />; })} */}
-            <Button w='80%' key={'-1'} alignSelf='center' color='white' variant='outline' onClick={() => setSelectedJobListing(-1)}>
+            <Button w='80%' key={'-1'} alignSelf='center' color={selectedJobListing === -1 ? 'blue' : 'white'} variant={selectedJobListing === -1 ? 'solid' : 'outline'}
+                borderWidth={selectedJobListing === -1 ? '4px' : '1px'}
+                onClick={() => setSelectedJobListing(-1)}>
                 <Text fontWeight='bold' fontSize={['md', 'lg', 'xl']}>
                     +
                 </Text>
@@ -754,30 +763,32 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
     );
 }
 
-function JobPostingsRightContent({ apiURL, selectedJobListing, jobs, setJobs }) {
+function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
     const {
         register,
         handleSubmit,
         setError,
         formState: { errors, isSubmitting },
         reset // reset method from useForm to update defaultValues
-    } = useForm((!isEmptyObj(jobs) && selectedJobListing) ? jobs[selectedJobListing] : {});
+    } = useForm({});
     const [isSaving, setIsSaving] = useState(false);
-    const { isAuthenticated, user } = useAuth0();
+    const { user } = useAuth0();
     // console.log('selectedJobListing***:', selectedJobListing);
 
     const onSubmit = (data) => {
         setIsSaving(true);
-        const newJob = (selectedJobListing === -1) ?
-            { jobPostingID: -1, dateCreated: new Date().toLocaleDateString(), ...data } :
-            // { ...(jobs.find(job => job.jobPostingID == selectedJobListing)), ...data };
-            { ...jobs[selectedJobListing], ...data };
-        // newJobs = jobs.map((job) => { job.jobPostingID == selectedJobListing ? newJob : job; });
-        let newJobs = { ...jobs };
-        newJobs[selectedJobListing] = newJob;
-        setJobs(newJobs);
-        console.log('formData:', data);
-        console.log('jobs:', jobs);
+        let newJob;
+        if (selectedJobListing === -1) {
+            newJob = { jobPostingID: -1, dateCreated: new Date().toLocaleDateString(), ...data };
+        }
+        else {
+            newJob = { ...jobs[selectedJobListing], ...data };
+            let newJobs = { ...jobs };
+            newJobs[selectedJobListing] = newJob;
+            setJobs(newJobs);
+        }
+        // console.log('formData:', data);
+        // console.log('jobs:', jobs);
         sendSaveJobPosting(newJob);
 
     };
@@ -788,14 +799,13 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, jobs, setJobs }) 
 
         // Create FormData to send files
         const formData = new FormData();
-
-        // Loop through all properties of newJob object and append to formData
-        for (const property in newJob) {
-            formData.append(property, newJob[property]);
-        }
         formData.append("userID", user.sub);
 
-        // console.log('formData:', formData);
+        // Loop through all properties of newJob object and append to formData
+        for (let property in newJob) {
+            // console.log(property, newJob[property]);
+            formData.append(property, newJob[property]);
+        }
 
         fetch(`${apiURL}/postJobInfo`, {
             method: 'POST',
@@ -809,19 +819,28 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, jobs, setJobs }) 
             })
             .then(json => {
                 setIsSaving(false);
+                if (newJob.jobPostingID === -1) {
+                    console.log('new job posting created:', json);
+                    newJob.jobPostingID = json.jobPostingID;
+                    let newJobs = { ...jobs };
+                    newJobs[json.jobPostingID] = newJob;
+                    setJobs(newJobs);
+                    setSelectedJobListing(json.jobPostingID);
+                }
             }).catch(e => {
-                console.error(e); // This will log any errors to the console.
+                console.error(e);
                 setIsSaving(false);
             });
     }, [user, apiURL, setIsSaving]);
 
     useEffect(() => {
-        if (!isEmptyObj(jobs) && selectedJobListing) {
+        if (!isEmptyObj(jobs) && selectedJobListing >= 0 && jobs[selectedJobListing]) {
             reset(jobs[selectedJobListing]);
             // console.log('resetting form', jobs[selectedJobListing]);
         }
         else {
-            reset({});
+            reset({ jobTitle: '', salaryBase: '', salaryOTE: '', oteValue: '', homeOfficeAddress: '' });
+            // console.log('full form reset');
         }
     }, [jobs, selectedJobListing, reset]);
 
@@ -869,12 +888,16 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, jobs, setJobs }) 
                             {errors.homeOfficeAddress && errors.homeOfficeAddress.message}
                         </FormErrorMessage>
                     </FormControl>
+                    <FormControl >
+                        <FormLabel htmlFor="active">Active</FormLabel>
+                        <Switch id="active" {...register("active")} size='lg' alignSelf='center' colorScheme='green' defaultChecked={selectedJobListing === -1 ? false : jobs[selectedJobListing]?.active} />
+                    </FormControl>
 
                     <Button
                         bg="#5DFC89"
                         colorScheme="teal"
                         // isLoading={isSubmitting}
-                        isLoading={isSaving}
+                        isLoading={isSaving || isSubmitting}
                         type="submit"
                     >
                         <Text>Save</Text>
@@ -910,8 +933,8 @@ function EmployerProfile({ returnURL }) {
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
     const [jobs, setJobs] = useState({
-        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': new Date().toLocaleDateString(), 'active': true },
-        3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': 'dateB', 'active': false }
+        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': new Date(0).toLocaleDateString(), 'active': true },
+        3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': new Date(8.64e15).toLocaleDateString(), 'active': false }
     });
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');

@@ -24,6 +24,11 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cors());
+const upload = multer({
+    limits: {
+        fileSize: 10000000, // limit file size to 10MB
+    },
+});
 
 app.use(express.static(path.resolve(__dirname, '../client/build'))); // Maybe add / to end of build
 const pool = (() => {
@@ -198,27 +203,31 @@ app.get('/api/getJob', async (req, res) => {
     }
 });
 
-app.post('/api/postJobInfo', async (req, res) => {
-    const { userID, jobTitle, salaryBase, salaryOTE, oteValue, homeOfficeAddress, jobPostingID }
-        = req.body;
-    console.log("postJobInfo req received");
-    if (!userID) {
-        return res.status(400).send({ error: 'Missing userID query parameter' });
-    }
-    if (!jobTitle) {
-        return res.status(400).send({ error: 'Missing jobTitle query parameter' });
-    }
+app.post('/api/postJobInfo', upload.none(), async (req, res) => {
     try {
+
+        const { userID, jobTitle, salaryBase, salaryOTE, oteValue, homeOfficeAddress, jobPostingID }
+            = req.body;
+        console.log("postJobInfo req received");
+        console.log(req.body);
+        // console.log('userID', userID, 'jobTitle', jobTitle, 'salaryBase', salaryBase, 'salaryOTE', salaryOTE, 'oteValue', oteValue, 'homeOfficeAddress', homeOfficeAddress, 'jobPostingID', jobPostingID);
+        if (!userID) {
+            return res.status(400).send({ error: 'Missing userID query parameter' });
+        }
+        if (!jobTitle) {
+            return res.status(400).send({ error: 'Missing jobTitle query parameter' });
+        }
         if (jobPostingID === -1) {
 
         }
         else {
 
         }
+        res.send({ success: true, jobPostingID: 0 });
     }
     catch (err) {
         console.error(err);
-        res.send("Error " + err);
+        res.send({ error: err.message });
     }
 
 });
@@ -262,11 +271,6 @@ app.get('/api/getUserJobs', async (req, res) => {
     }
 });
 
-const upload = multer({
-    limits: {
-        fileSize: 10000000, // limit file size to 10MB
-    },
-});
 
 app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => {
     try {
