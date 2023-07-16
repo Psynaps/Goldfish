@@ -55,7 +55,7 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
                 flexDirection={'row'}
             >
                 <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
-                    <Text fontWeight='bold' fontSize={['2xs', 'xs', 'sm', 'md']}>{title}</Text>
+                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md']}>{title}</Text>
                     <Text fontSize={['3xs', '2xs', 'xs',]}>{secondaryText}</Text>
                 </VStack>
                 <Spacer />
@@ -66,12 +66,12 @@ function EmployerProfileBuilderContent({ selectedSubTab, setSelectedSubTab }) {
 
     return (
         <VStack align='start' spacing={4} p={4} color='white'>
-            <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={1}
+            <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'
             // alignSelf='center'
             >
                 Employer Profile Builder
             </Text>
-            <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+            <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
             {subTabs.map((tabName) => <SubTabButton key={tabName} title={tabName} secondaryText='Fill in' tabName={tabName} />)}
         </VStack>
     );
@@ -244,7 +244,7 @@ const EmployerProfileBuilderRightContent = ({
         return (
             <form key={subTabs[0]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
-                    <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Basic info</Text>
+                    <Text fontWeight='bold' mb={[3, 4, 5]} fontSize={['lg', 'xl', '2xl']}>Basic info</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.companyname}>
@@ -332,9 +332,9 @@ const EmployerProfileBuilderRightContent = ({
         return (
             <form key={subTabs[1]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
-                    <Text fontSize='2xl' fontWeight='bold' mb={5}>Geography</Text>
+                    <Text fontWeight='bold' mb={[3, 4, 5]} fontSize={['lg', 'xl', '2xl']}>Geography</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                    <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.office1}>
                             <FormLabel htmlFor="office1">HQ (Main Office)</FormLabel>
                             <Input id="office1" {...register("office1", { required: "This is required" })} w='95%' alignSelf='center' />
@@ -377,9 +377,9 @@ const EmployerProfileBuilderRightContent = ({
         return (
             <form key={subTabs[2]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
-                    <Text fontWeight='bold' mb={5} fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Medical Benefits</Text>
+                    <Text fontWeight='bold' mb={[3, 4, 5]} fontSize={['lg', 'xl', '2xl']}>Medical Benefits</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                    <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.medical1}>
                             <FormLabel htmlFor="medical1">What percentage of health insurance premium costs does your company cover for your employees?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
@@ -485,9 +485,9 @@ const EmployerProfileBuilderRightContent = ({
         return (
             <form key={subTabs[3]} onSubmit={handleSubmit(onSubmit)}>
                 <VStack align='start' spacing={4} p={4} color='white'>
-                    <Text fontWeight='bold' mb={5} fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Paid Time Off</Text>
+                    <Text fontWeight='bold' mb={[3, 4, 5]} fontSize={['lg', 'xl', '2xl']}>Paid Time Off</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                    <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.pto1}>
                             <FormLabel htmlFor="pto1">How many days of paid time off (PTO) are new employees entitled to annually?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
@@ -584,9 +584,9 @@ const EmployerProfileBuilderRightContent = ({
         return (
             <form key={subTabs[4]} onSubmit={handleSubmit(saveEmployerProfile)}>
                 <VStack align='start' spacing={4} p={4} color='white' >
-                    <Text fontWeight='bold' mb={5} fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>401k and Savings</Text>
-                    <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-                    <VStack spacing={4} pl={25} alignItems='start' w='100%'>
+                    <Text fontWeight='bold' fontSize={['lg', 'xl', '2xl']}>401k and Savings</Text>
+                    <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
+                    <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.financial1}>
                             <FormLabel htmlFor="financial1">Does your company offer a 401k program? </FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
@@ -693,6 +693,7 @@ const EmployerProfileBuilderRightContent = ({
 
 function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
     // console.log('jobs:', jobs);
+    console.log('selectedJobListing:', selectedJobListing);
     const JobListingButton = ({ jobTitle, secondaryText, jobPostingID, jobActive }) => (
         <Box
             key={jobPostingID}
@@ -700,10 +701,17 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
             w='80%'
             minWidth='80%'
             alignSelf='center'
+            // variant={selectedJobListing === jobPostingID ? 'solid' : 'outline'}
             variant='unstyled'
+            border={selectedJobListing === jobPostingID ? '3px ' : '0'}
+            // border='5px'
+            borderColor='black'
+            borderStyle='solid'
+            borderRadius={['md', 'lg']}
             onClick={() => setSelectedJobListing(jobPostingID)}
             // onClick={() => test(jobPostingID)}
-            mb={2}
+            my={1}
+            p={[1, 2, 3]}
             _hover={{ bg: 'none' }}
             _active={{ bg: 'none' }}
             color='white'
@@ -713,30 +721,32 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
                 alignItems='center'
                 flexDirection={'row'}
             >
-                <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'} >
-                    <Text fontWeight='bold' fontSize={['2xs', 'xs', 'sm', 'md']}>{jobTitle}</Text>
+                <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'}>
+                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md']}>{jobTitle}</Text>
                     <Text fontSize={['3xs', '2xs', 'xs',]}>{secondaryText}</Text>
                 </VStack>
                 <Spacer />
-                <Circle size={[6, 8]} border={selectedJobListing === jobPostingID ? '3px' : 0} borderColor='black' bg={jobActive ? 'green' : 'orange'} />
+                <Circle size={[6, 7, 8]} bg={jobActive ? 'green' : 'orange'} />
             </Flex>
         </Box >
     );
 
     return (
-        <VStack align='start' spacing={4} p={4} color='white'>
-            <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={1}
+        <VStack align='start' p={4} color='white'>
+            <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'
             // alignSelf='center'
             >
                 Job Listings
             </Text>
-            <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
-            {Object.values(jobs).map(job => {
-                return <JobListingButton key={job.jobPostingID} jobTitle={job.jobTitle} secondaryText={job.dateCreated} jobPostingID={job.jobPostingID} jobActive={job.active} />;
-            })}
+            <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
+            <VStack spacing={1} w='100%'>
+                {Object.values(jobs).map(job => {
+                    return <JobListingButton key={job.jobPostingID} jobTitle={job.jobTitle} secondaryText={job.dateCreated} jobPostingID={job.jobPostingID} jobActive={job.active} />;
+                })}
+            </VStack>
             {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.dateCreated} tabName={job.jobPostingID} jobActive={job.active} />; })} */}
             <Button w='80%' key={'-1'} alignSelf='center' color='white' variant='outline' onClick={() => setSelectedJobListing(-1)}>
-                <Text fontWeight='bold' fontSize={['sm', 'md', 'lg', 'xl']}>
+                <Text fontWeight='bold' fontSize={['md', 'lg', 'xl']}>
                     +
                 </Text>
             </Button>
@@ -819,9 +829,9 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, jobs, setJobs }) 
 
     return (
         <form key={selectedJobListing} onSubmit={handleSubmit(onSubmit)}>
-            <VStack align='start' spacing={4} p={4} color='white'>
-                <Text fontSize={['md', 'lg', 'xl', '2xl']} fontWeight='bold' mb={5}>Core Information</Text>
-                <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
+            <VStack align='start' p={4} color='white'>
+                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold' >Core Information</Text>
+                <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
                 <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                     <FormControl isInvalid={errors.jobTitle}>
                         {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
@@ -900,7 +910,7 @@ function EmployerProfile({ returnURL }) {
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
     const [jobs, setJobs] = useState({
-        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': 'dateA', 'active': true },
+        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': new Date().toLocaleDateString(), 'active': true },
         3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': 'dateB', 'active': false }
     });
 
@@ -1039,7 +1049,7 @@ function EmployerProfile({ returnURL }) {
                     {selectedTab === 'Matches' && <MatchesContent />}
                 </Box>
                 <Spacer bg='gray' boxSize='10px' />
-                <Box w='1%' bg='gray' />
+                <Box w='1px' bg='gray' />
                 <Box flexBasis='60%' >
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderRightContent
                         selectedSubTab={selectedSubTab}

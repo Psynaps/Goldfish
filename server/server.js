@@ -209,14 +209,19 @@ app.post('/api/postJobInfo', async (req, res) => {
         return res.status(400).send({ error: 'Missing jobTitle query parameter' });
     }
     try {
-        if (jobPostingID === undefined) {
+        if (jobPostingID === -1) {
 
         }
         else {
 
         }
     }
-};
+    catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+    }
+
+});
 
 app.get('/api/getUserJobs', async (req, res) => {
     const userID = req.query.userID;
