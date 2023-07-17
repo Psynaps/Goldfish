@@ -151,7 +151,7 @@ const EmployerProfileBuilderRightContent = ({
             formData.append(key, userInfoWithoutLogo[key]);
         }
 
-        formData.append("userID", user.sub);
+        formData.append("user_id", user.sub);
 
         // console.log('formData:', formData);
 
@@ -696,22 +696,22 @@ const EmployerProfileBuilderRightContent = ({
 function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
     // console.log('jobs:', jobs);
     // console.log('selectedJobListing:', selectedJobListing);
-    const JobListingButton = ({ jobTitle, secondaryText, jobPostingID, jobActive }) => (
+    const JobListingButton = ({ job_title, secondaryText, job_posting_id, jobActive }) => (
         <Box
-            key={jobPostingID}
+            key={job_posting_id}
             as="button"
             w='80%'
             minWidth='80%'
             alignSelf='center'
-            // variant={selectedJobListing === jobPostingID ? 'solid' : 'outline'}
+            // variant={selectedJobListing === job_posting_id ? 'solid' : 'outline'}
             variant='unstyled'
-            border={selectedJobListing === jobPostingID ? '3px ' : '0'}
+            border={selectedJobListing === job_posting_id ? '3px ' : '0'}
             // border='5px'
             borderColor='black'
             borderStyle='solid'
-            borderRadius={['md', 'lg']}
-            onClick={() => setSelectedJobListing(jobPostingID)}
-            // onClick={() => test(jobPostingID)}
+            borderRadius={['md', 'lg', 'lg']}
+            onClick={() => setSelectedJobListing(job_posting_id)}
+            // onClick={() => test(job_posting_id)}
             my={1}
             p={[1, 2, 3]}
             _hover={{ bg: 'none' }}
@@ -724,7 +724,7 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
                 flexDirection={'row'}
             >
                 <VStack alignItems='flex-start' textAlign={'left'} spacing={1} whiteSpace={'normal'}>
-                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md']}>{jobTitle}</Text>
+                    <Text fontWeight='bold' fontSize={['xs', 'sm', 'md']}>{job_title}</Text>
                     <Text fontSize={['3xs', '2xs', 'xs',]}>{secondaryText}</Text>
                 </VStack>
                 <Spacer />
@@ -734,7 +734,7 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
     );
 
     useEffect(() => {
-        setSelectedJobListing(jobs !== {} ? jobs[Object.keys(jobs)[0]]?.jobPostingID : -1);
+        setSelectedJobListing(jobs !== {} ? jobs[Object.keys(jobs)[0]]?.job_posting_id : -1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
@@ -749,11 +749,11 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
             <VStack spacing={1} w='100%' >
                 {/* // sort by date created */}
                 {Object.values(jobs).sort((a, b) =>
-                    (new Date(a.dateCreated) > new Date(b.dateCreated) ? -1 : 1)).map(job => {
-                        return <JobListingButton key={job.jobPostingID} jobTitle={job.jobTitle} secondaryText={job.dateCreated} jobPostingID={job.jobPostingID} jobActive={job.active} />;
+                    (new Date(a.date_created) > new Date(b.date_created) ? -1 : 1)).map(job => {
+                        return <JobListingButton key={job.job_posting_id} job_title={job.job_title} secondaryText={new Date(job.date_created).toLocaleDateString()} job_posting_id={job.job_posting_id} jobActive={job.active} />;
                     })}
             </VStack>
-            {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.dateCreated} tabName={job.jobPostingID} jobActive={job.active} />; })} */}
+            {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.date_created} tabName={job.job_posting_id} jobActive={job.active} />; })} */}
             <Button w='80%' key={'-1'} alignSelf='center' color={selectedJobListing === -1 ? 'blue' : 'white'} variant={selectedJobListing === -1 ? 'solid' : 'outline'}
                 borderWidth={selectedJobListing === -1 ? '4px' : '1px'}
                 onClick={() => setSelectedJobListing(-1)}>
@@ -781,7 +781,7 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
         setIsSaving(true);
         let newJob;
         if (selectedJobListing === -1) {
-            newJob = { jobPostingID: -1, dateCreated: new Date().toLocaleDateString(), ...data };
+            newJob = { job_posting_id: -1, ...data };
         }
         else {
             newJob = { ...jobs[selectedJobListing], ...data };
@@ -801,7 +801,7 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
 
         // Create FormData to send files
         const formData = new FormData();
-        formData.append("userID", user.sub);
+        formData.append("user_id", user.sub);
 
         // Loop through all properties of newJob object and append to formData
         for (let property in newJob) {
@@ -821,13 +821,19 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
             })
             .then(json => {
                 setIsSaving(false);
-                if (newJob.jobPostingID === -1) {
-                    console.log('new job posting created:', json);
-                    newJob.jobPostingID = json.jobPostingID;
-                    let newJobs = { ...jobs };
-                    newJobs[json.jobPostingID] = newJob;
-                    setJobs(newJobs);
-                    setSelectedJobListing(json.jobPostingID);
+                if (json.success) {
+                    if (newJob.job_posting_id === -1) {
+                        console.log('new job posting created:', json);
+                        newJob.job_posting_id = json.job_posting_id;
+                        newJob.date_created = json.date_created;
+                        let newJobs = { ...jobs };
+                        newJobs[json.job_posting_id] = newJob;
+                        setJobs(newJobs);
+                        setSelectedJobListing(json.job_posting_id);
+                    }
+                }
+                else {
+                    console.log('error saving job posting:', json);
                 }
             }).catch(e => {
                 console.error(e);
@@ -836,12 +842,12 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
     }, [user, apiURL, setIsSaving]);
 
     useEffect(() => {
-        if (!isEmptyObj(jobs) && selectedJobListing >= 0 && jobs[selectedJobListing]) {
+        if (!isEmptyObj(jobs) && selectedJobListing !== -1 && jobs[selectedJobListing]) {
             reset(jobs[selectedJobListing]);
             // console.log('resetting form', jobs[selectedJobListing]);
         }
         else {
-            reset({ jobTitle: '', salaryBase: '', salaryOTE: '', oteValue: '', homeOfficeAddress: '' });
+            reset({ job_title: '', salary_base: '', salary_ote: '', ote_value: '', home_office_address: '' });
             // console.log('full form reset');
         }
     }, [jobs, selectedJobListing, reset]);
@@ -854,45 +860,45 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
                 <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold' >Core Information</Text>
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
                 <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
-                    <FormControl isInvalid={errors.jobTitle}>
+                    <FormControl isInvalid={errors.job_title}>
                         {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
-                        <FormLabel htmlFor="jobTitle">Job Title</FormLabel>
-                        <Input id="jobTitle" {...register("jobTitle", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormLabel htmlFor="job_title">Job Title</FormLabel>
+                        <Input id="job_title" {...register("job_title", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
-                            {errors.jobTitle && errors.jobTitle.message}
+                            {errors.job_title && errors.job_title.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.salaryBase}>
-                        <FormLabel htmlFor="salaryBase">Salary Base</FormLabel>
-                        <Input id="salaryBase" {...register("salaryBase", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.salary_base}>
+                        <FormLabel htmlFor="salary_base">Salary Base</FormLabel>
+                        <Input id="salary_base" {...register("salary_base", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
-                            {errors.salaryBase && errors.salaryBase.message}
+                            {errors.salary_base && errors.salary_base.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.salaryOTE}>
-                        <FormLabel htmlFor="salaryOTE">Annual Salary at 100% OTE</FormLabel>
-                        <Input id="salaryOTE" {...register("salaryOTE", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.salary_ote}>
+                        <FormLabel htmlFor="salary_ote">Annual Salary at 100% OTE</FormLabel>
+                        <Input id="salary_ote" {...register("salary_ote", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
-                            {errors.salaryOTE && errors.salaryOTE.message}
+                            {errors.salary_ote && errors.salary_ote.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.oteValue}>
-                        <FormLabel htmlFor="oteValue">$ Value of 100% OTE Attainment</FormLabel>
-                        <Input id="oteValue" {...register("oteValue", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.ote_value}>
+                        <FormLabel htmlFor="ote_value">$ Value of 100% OTE Attainment</FormLabel>
+                        <Input id="ote_value" {...register("ote_value", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
-                            {errors.oteValue && errors.oteValue.message}
+                            {errors.ote_value && errors.ote_value.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.homeOfficeAddress}>
-                        <FormLabel htmlFor="homeOfficeAddress">Home Office Address</FormLabel>
-                        <Input id="homeOfficeAddress" {...register("homeOfficeAddress", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.home_office_address}>
+                        <FormLabel htmlFor="home_office_address">Home Office Address</FormLabel>
+                        <Input id="home_office_address" {...register("home_office_address", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
-                            {errors.homeOfficeAddress && errors.homeOfficeAddress.message}
+                            {errors.home_office_address && errors.home_office_address.message}
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl >
                         <FormLabel htmlFor="active">Active</FormLabel>
-                        <Switch id="active" {...register("active")} size='lg' alignSelf='center' colorScheme='green' defaultChecked={selectedJobListing === -1 ? false : jobs[selectedJobListing]?.active} />
+                        <Switch id="active" {...register("active")} size='lg' alignSelf='center' colorScheme='green' defaultChecked={selectedJobListing === -1 ? false : (jobs[selectedJobListing]?.active ? jobs[selectedJobListing]?.active : false)} />
                     </FormControl>
 
                     <Button
@@ -936,8 +942,8 @@ function EmployerProfile({ returnURL }) {
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
     const [jobs, setJobs] = useState({
-        2: { 'jobPostingID': 2, 'jobTitle': 'titleA', 'dateCreated': new Date('1 1 2020').toLocaleDateString(), 'active': true },
-        3: { 'jobPostingID': 3, 'jobTitle': 'titleB', 'dateCreated': new Date(1e12).toLocaleDateString(), 'active': false }
+        2: { 'job_posting_id': 100, 'job_title': 'titleA', 'date_created': new Date('1 1 2020').toLocaleDateString(), 'active': true },
+        3: { 'job_posting_id': 101, 'job_title': 'titleB', 'date_created': new Date(1e12).toLocaleDateString(), 'active': false }
     });
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
@@ -954,7 +960,7 @@ function EmployerProfile({ returnURL }) {
             return;
         }
         try {
-            const response = await axios.get(`${apiURL}/getEmployerProfile?userid=${user.sub}`);
+            const response = await axios.get(`${apiURL}/getEmployerProfile?user_id=${user.sub}`);
             if (response.data) {
                 const { companylogo, ...otherData } = response.data;
                 setUserInfo(otherData);
@@ -964,14 +970,37 @@ function EmployerProfile({ returnURL }) {
                 // console.log('companyLogo: ', companyLogo);
             }
         } catch (err) {
-            console.error(err);
+            console.error('No employer profile found');
+        }
+    }
+
+    // Function getUserJobPostings will call the /api/getUserJobPostings api endpoint to retrieve the user's job postings
+    // If the user has no job postings, the function will set jobs to an empty object
+    // If the user has job postings, the function will set the jobs state variable to the user's job postings
+    async function getUserJobPostings() {
+        if (!user) {
+            console.log('no user');
+            setJobs({});
+            return;
+        }
+        try {
+            const response = await axios.get(`${apiURL}/getUserJobPostings?user_id=${user.sub}`);
+            if (response.data) {
+                let newJobs = {};
+                response.data.forEach(job => { newJobs[job.job_posting_id] = job; });
+                setJobs(newJobs);
+                console.log('jobs retrieved', newJobs);
+                // console.log('jobs: ', response.data);
+            }
+        } catch (err) {
+            console.error('No jobs found');
         }
     }
 
 
     useEffect(() => {
         getEmployerProfile();
-        const tabFromURL = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
+        getUserJobPostings();
         if (window.location.href.includes('/employer/jobs')) { // if jobID exists in the URL
             console.log('loading jobs page from URL');
             setSelectedTab('Job Postings');

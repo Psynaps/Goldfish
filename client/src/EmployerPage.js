@@ -24,7 +24,7 @@ function EmployerPage(returnURL) {
     const [selectedNonAnswers, setSelectedNonAnswers] = useState([]);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
-    const [position, setPosition] = useState('');
+    const [job_title, setjob_title] = useState('');
     const [jobLocation, setJobLocation] = useState('');
     // const [company, setCompany] = useState('myspace');
     const [canAddQuestion, setCanAddQuestion] = useState(false);
@@ -51,7 +51,7 @@ function EmployerPage(returnURL) {
     // const [url, setUrl] = useState((isDev) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
-    const [jobPostingID, setJobPostingID] = useState(null);
+    const [job_posting_id, setjob_posting_id] = useState(null);
 
     const postJob = useCallback(() => {
         setIsPosting(true);
@@ -60,11 +60,11 @@ function EmployerPage(returnURL) {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                userID: user.sub,
+                user_id: user.sub,
                 // company: company,
-                location: jobLocation,
-                jobName: position,
-                jobPostingID: jobPostingID,
+                home_office_address: jobLocation,
+                job_title: job_title,
+                job_posting_id: job_posting_id,
                 jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
                     acc[question.questionID] = [question.selectedAnswers, question.selectedNonAnswers, parseInt(question.importance)];
                     return acc;
@@ -81,13 +81,13 @@ function EmployerPage(returnURL) {
                 return response.json();
             })
             .then(json => {
-                setJobPostingID(json.jobPostingID);
+                setjob_posting_id(json.job_posting_id);
                 setIsPosting(false);
             }).catch(e => {
                 console.error(e); // This will log any errors to the console.
                 setIsPosting(false);
             });
-    }, [user, jobPostingID, jobLocation, position, jobPostingQuestions, apiURL]);
+    }, [user, job_posting_id, jobLocation, job_title, jobPostingQuestions, apiURL]);
 
 
     const handleFilterButtonClick = (category) => {
@@ -95,8 +95,8 @@ function EmployerPage(returnURL) {
         console.log(jobPostingQuestions);
     };
 
-    const getAndLoadJobPosting = useCallback((jobPostingID) => {
-        // console.log('getting job', jobPostingID);
+    const getAndLoadJobPosting = useCallback((job_posting_id) => {
+        // console.log('getting job', job_posting_id);
         const requestOptions = {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
@@ -105,7 +105,7 @@ function EmployerPage(returnURL) {
             console.log('no user');
             return;
         }
-        fetch(`${apiURL}/getJob?userid=${user?.sub}&jobid=${jobPostingID}`, requestOptions)
+        fetch(`${apiURL}/getJob?userid=${user?.sub}&jobid=${job_posting_id}`, requestOptions)
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
@@ -123,7 +123,7 @@ function EmployerPage(returnURL) {
     const loadJobPosting = (data) => {
         // setCompany(data.company);
         setJobLocation(data.location);
-        setPosition(data.jobName);
+        setjob_title(data.job_title);
 
         // Parse the jobData field into a JavaScript object
         const jobData = JSON.parse(data.jobData);
@@ -315,8 +315,8 @@ function EmployerPage(returnURL) {
 
 
 
-    const handlePositionChange = (value) => {
-        setPosition(value);
+    const handlejob_titleChange = (value) => {
+        setjob_title(value);
         // console.log(questionBankQuestions);
         console.log('jobpostingquestions:', jobPostingQuestions);
     };
@@ -337,7 +337,7 @@ function EmployerPage(returnURL) {
             setQuestionBankQuestions(sortQuestionBankQuestions(questionsData));
             setJobPostingQuestions([]);
             setJobLocation('');
-            setPosition('');
+            setjob_title('');
             // setCompany('myspace');
             setSelectedAnswers([]);
             setSelectedNonAnswers([]);
@@ -345,7 +345,7 @@ function EmployerPage(returnURL) {
             setSelectedJobPostingQuestion(null);
             setSelectedCategory(null);
             setSearchTerm('');
-            setJobPostingID(null);
+            setjob_posting_id(null);
         }
     }, [location]);
 
@@ -366,10 +366,10 @@ function EmployerPage(returnURL) {
         const jobIdFromUrl = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
         if (jobIdFromUrl) { // if jobID exists in the URL
             console.log('loading job: ', jobIdFromUrl);
-            setJobPostingID(jobIdFromUrl);
+            setjob_posting_id(jobIdFromUrl);
             getAndLoadJobPosting(jobIdFromUrl);
         }
-    }, [user, jobPostingID]);
+    }, [user, job_posting_id]);
 
 
     return (
@@ -469,8 +469,8 @@ function EmployerPage(returnURL) {
                         <HStack justifyContent='space-between' w='100%'>
                             {/* <Text fontSize='2xl'>Job Posting Builder</Text> */}
                             <Textarea
-                                placeholder='Position'
-                                onChange={e => handlePositionChange(e.target.value)}
+                                placeholder='Job Title'
+                                onChange={e => handlejob_titleChange(e.target.value)}
                                 minHeight='15%'
                             />
                             <Textarea

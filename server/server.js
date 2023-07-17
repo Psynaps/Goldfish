@@ -61,7 +61,7 @@ app.get('/db', async (req, res) => {
     try {
         const client = await pool.connect();
         const query = {
-            text: 'SELECT * FROM user_answers WHERE userid = $1',
+            text: 'SELECT * FROM user_answers WHERE user_id = $1',
             values: ['*'],
         };
 
@@ -85,51 +85,51 @@ app.post('/api/postJob', async (req, res) => {
         // console.log(req.body);
         const client = await pool.connect();
 
-        const { userID, location, jobName, jobData } = req.body;
-        let jobPostingID = req.body.jobPostingID;
+        const { user_id, home_office_address, job_title, jobData } = req.body;
+        let job_posting_id = req.body.job_posting_id;
 
         // Convert the jobData string to an object
         const jobDataObj = JSON.parse(jobData);
 
-        // Upsert into job_profiles
+        // Upsert into job_postings
         let result;
         let query;
-        if (!jobPostingID) {
+        if (!job_posting_id) {
             query = {
-                text: `INSERT INTO job_profiles (userid, location, jobname) 
+                text: `INSERT INTO job_postings (user_id, home_office_address, job_title) 
             VALUES ($1, $2, $3) 
-            RETURNING jobpostingid`,
-                values: [userID, location, jobName],
+            RETURNING job_posting_id`,
+                values: [user_id, home_office_address, job_title],
             };
         } else {
             query = {
-                text: `UPDATE job_profiles SET location = $2, jobname = $3
-            WHERE jobpostingid = $1
-            RETURNING jobpostingid`,
-                values: [jobPostingID, location, jobName],
+                text: `UPDATE job_postings SET home_office_address = $2, job_title = $3
+            WHERE job_posting_id = $1
+            RETURNING job_posting_id`,
+                values: [job_posting_id, home_office_address, job_title],
             };
         }
         result = await client.query(query);
-        jobPostingID = result.rows[0]['jobpostingid'];
+        job_posting_id = result.rows[0]['job_posting_id'];
 
         query = {
-            text: 'DELETE FROM job_profile_questions WHERE jobPostingid = $1',
-            values: [jobPostingID],
+            text: 'DELETE FROM job_posting_questions WHERE job_posting_id = $1',
+            values: [job_posting_id],
         };
         await client.query(query);
 
         // Insert or update the questions
         console.log(JSON.stringify(jobDataObj));
-        for (const questionID in jobDataObj) {
-            const [answerIDs, nonAnswerIDs, importance] = jobDataObj[questionID];
+        for (const question_id in jobDataObj) {
+            const [answer_ids, nonanswer_ids, importance] = jobDataObj[question_id];
             query = {
-                text: 'INSERT INTO job_profile_questions (jobpostingid, questionid, answerids, nonanswerids, importance) VALUES ($1, $2, $3, $4, $5)',
-                values: [jobPostingID, questionID, answerIDs, nonAnswerIDs, importance],
+                text: 'INSERT INTO job_posting_questions (job_posting_id, question_id, answer_ids, nonanswer_ids, importance) VALUES ($1, $2, $3, $4, $5)',
+                values: [job_posting_id, question_id, answer_ids, nonanswer_ids, importance],
             };
             await client.query(query);
         }
 
-        res.send({ success: true, jobPostingID: jobPostingID });
+        res.send({ success: true, job_posting_id: job_posting_id });
         console.log("postJob req completed");
         client.release();
 
@@ -140,14 +140,14 @@ app.post('/api/postJob', async (req, res) => {
 });
 
 app.get('/api/getJob', async (req, res) => {
-    const jobPostingID = req.query.jobid;
-    const userID = req.query.userid;
-    console.log("getJob req received", jobPostingID, userID);
-    if (!jobPostingID) {
-        return res.status(400).send({ error: 'Missing jobPostingid query parameter' });
+    const job_posting_id = req.query.jobid;
+    const user_id = req.query.userid;
+    console.log("getJob req received", job_posting_id, user_id);
+    if (!job_posting_id) {
+        return res.status(400).send({ error: 'Missing job_posting_id query parameter' });
     }
-    if (!userID) {
-        return res.status(400).send({ error: 'Missing userid query parameter, used for ownership authentication' });
+    if (!user_id) {
+        return res.status(400).send({ error: 'Missing user_id query parameter, used for ownership authentication' });
     }
 
     try {
@@ -155,8 +155,8 @@ app.get('/api/getJob', async (req, res) => {
 
         // Get job profile information
         const jobProfileQuery = {
-            text: 'SELECT * FROM job_profiles WHERE jobPostingid = $1',
-            values: [jobPostingID],
+            text: 'SELECT * FROM job_postings WHERE job_posting_id = $1',
+            values: [job_posting_id],
         };
         const jobProfileResult = await client.query(jobProfileQuery);
         const jobProfileData = jobProfileResult.rows[0];
@@ -165,32 +165,32 @@ app.get('/api/getJob', async (req, res) => {
             return res.status(404).send({ error: 'Job posting not found' });
         }
 
-        if (jobProfileData.userid !== userID) {
+        if (jobProfileData.user_id !== user_id) {
             return res.status(401).send({ error: 'Job posting not owned by user' });
         }
 
         // Get question & answer pairs for this job posting
         const jobQuestionsQuery = {
-            text: 'SELECT questionid, answerids, nonanswerids, importance FROM job_profile_questions WHERE jobpostingid = $1',
-            values: [jobPostingID],
+            text: 'SELECT question_id, answer_ids, nonanswer_ids, importance FROM job_posting_questions WHERE job_posting_id = $1',
+            values: [job_posting_id],
         };
         const jobQuestionsResult = await client.query(jobQuestionsQuery);
         const jobQuestionsData = jobQuestionsResult.rows.reduce((acc, curr) => {
-            // acc[curr.questionid] = {
-            //     answerIDs: curr.answerids,
-            //     nonAnswerIDs: curr.nonanswerids,
+            // acc[curr.question_id] = {
+            //     answer_ids: curr.answer_ids,
+            //     nonanswer_ids: curr.nonanswer_ids,
             //     importance: curr.importance
             // };
-            acc[curr.questionid] = [curr.answerids, curr.nonanswerids, curr.importance];
+            acc[curr.question_id] = [curr.answer_ids, curr.nonanswer_ids, curr.importance];
             return acc;
         }, {});
 
         // Construct the response object
         const responseObject = {
-            userID: jobProfileData.userid,
+            user_id: jobProfileData.user_id,
             // company: jobProfileData.company,
-            location: jobProfileData.location,
-            jobName: jobProfileData.jobname,
+            home_office_address: jobProfileData.home_office_address,
+            job_title: jobProfileData.job_title,
             jobData: JSON.stringify(jobQuestionsData),
         };
         console.log(responseObject);
@@ -205,37 +205,49 @@ app.get('/api/getJob', async (req, res) => {
 
 app.post('/api/postJobInfo', upload.none(), async (req, res) => {
     try {
-
-        const { userID, jobTitle, salaryBase, salaryOTE, oteValue, homeOfficeAddress, jobPostingID }
-            = req.body;
+        const { user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active, job_posting_id } = req.body;
         console.log("postJobInfo req received");
-        console.log(req.body);
-        // console.log('userID', userID, 'jobTitle', jobTitle, 'salaryBase', salaryBase, 'salaryOTE', salaryOTE, 'oteValue', oteValue, 'homeOfficeAddress', homeOfficeAddress, 'jobPostingID', jobPostingID);
-        if (!userID) {
-            return res.status(400).send({ error: 'Missing userID query parameter' });
-        }
-        if (!jobTitle) {
-            return res.status(400).send({ error: 'Missing jobTitle query parameter' });
-        }
-        if (jobPostingID === -1) {
+        // console.log(req.body);
 
+        if (!user_id) {
+            return res.status(400).send({ error: 'Missing user_id query parameter' });
         }
-        else {
+        if (!job_title) {
+            return res.status(400).send({ error: 'Missing job_title query parameter' });
+        }
+        if (!job_posting_id) {
+            return res.status(400).send({ error: 'Missing job_posting_id query parameter' });
+        }
+        if (job_posting_id == -1) {
+            const queryText = `INSERT INTO job_postings(user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active)
+                                VALUES($1, $2, $3, $4, $5, $6, $7) 
+                                RETURNING job_posting_id, date_created;`;
+            const queryValues = [user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active];
 
+            const { rows } = await pool.query(queryText, queryValues);
+            res.send({ success: true, job_posting_id: rows[0].job_posting_id, date_created: rows[0].date_created });
+
+        } else {
+            const queryText = `UPDATE job_postings SET user_id = $1, job_title = $2, salary_base = $3, salary_ote = $4, 
+                                ote_value = $5, home_office_address = $6, active = $7 
+                                WHERE job_posting_id = $8 
+                                RETURNING job_posting_id;`;
+            const queryValues = [user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active, job_posting_id];
+
+            const { rows } = await pool.query(queryText, queryValues);
+            res.send({ success: true, job_posting_id: rows[0].job_posting_id });
         }
-        res.send({ success: true, jobPostingID: 0 });
     }
     catch (err) {
         console.error(err);
         res.send({ error: err.message });
     }
-
 });
 
-app.get('/api/getUserJobs', async (req, res) => {
-    const userID = req.query.userID;
-    if (!userID) {
-        return res.status(400).send({ error: 'Missing userID query parameter' });
+app.get('/api/getUserJobPostings', async (req, res) => {
+    const user_id = req.query.user_id;
+    if (!user_id) {
+        return res.status(400).send({ error: 'Missing user_id query parameter' });
     }
 
     try {
@@ -243,26 +255,19 @@ app.get('/api/getUserJobs', async (req, res) => {
 
         // Get job profile information
         const jobProfileQuery = {
-            text: 'SELECT jobPostingid FROM job_profiles WHERE userid = $1',
-            values: [userID],
+            text: 'SELECT job_posting_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active, date_created FROM job_postings WHERE user_id = $1',
+            values: [user_id],
         };
-        const jobPostingIDsResult = await client.query(jobProfileQuery);
-        console.log("result: " + jobPostingIDsResult.jobPostingIDsResult.rows);
-        // const jobPostingIDs = jobProfileResult.rows[0];
-        // const jobQuestionsData = jobQuestionsResult.rows.reduce((acc, curr) => {
-        //     acc[curr.questionid] = curr.answerid;
-        //     return acc;
-        // }, {});
+        const result = await client.query(jobProfileQuery);
 
-        if (!jobPostingIDsResult) {
+        if (!result) {
             return res.status(404).send({ error: 'Job postings not found' });
         }
 
         // Construct the response object
-        const responseObject = {
-            jobs: JSON.stringify(jobPostingIDsResult)
-        };
-
+        const responseObject = result.rows.map((row) => { return { job_posting_id: row.job_posting_id, job_title: row.job_title, salary_base: row.salary_base, salary_ote: row.salary_ote, ote_value: row.ote_value, home_office_address: row.home_office_address, active: row.active, date_created: row.date_created }; });
+        console.log(responseObject);
+        console.log(JSON.stringify(responseObject));
         res.send(responseObject);
         client.release();
     } catch (err) {
@@ -278,14 +283,14 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
         // console.log(req.body);
         const client = await pool.connect();
 
-        const { userID, companyname, website, linkedin, companysize, producttype,
+        const { user_id, companyname, website, linkedin, companysize, producttype,
             office1, office2, office3,
             medical1, medical2, medical3, medical4, medical5,
             pto1, pto2, pto3, pto4,
             financial1, financial2, financial3, financial4,
         } = req.body;
 
-        // console.log('userID', userID, req.body?.userInfo);
+        // console.log('user_id', user_id, req.body?.userInfo);
 
         let companyLogo;
         let query;
@@ -309,13 +314,13 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
             query = {
                 text: `
                     INSERT INTO employer_profiles 
-                    (userid, companyname, website, linkedin, companysize, producttype, companylogo,
+                    (user_id, companyname, website, linkedin, companysize, producttype, companylogo,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
                     financial1, financial2, financial3, financial4) 
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23)
-                    ON CONFLICT (userid) 
+                    ON CONFLICT (user_id) 
                     DO UPDATE SET 
                     companyname = EXCLUDED.companyname, website = EXCLUDED.website, linkedin = EXCLUDED.linkedin, 
                     companysize = EXCLUDED.companysize, producttype = EXCLUDED.producttype, companyLogo = EXCLUDED.companyLogo, 
@@ -325,7 +330,7 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
                     pto1 = EXCLUDED.pto1, pto2 = EXCLUDED.pto2, pto3 = EXCLUDED.pto3, pto4 = EXCLUDED.pto4,
                     financial1 = EXCLUDED.financial1, financial2 = EXCLUDED.financial2, financial3 = EXCLUDED.financial3, 
                     financial4 = EXCLUDED.financial4`,
-                values: [userID, companyname, website, linkedin, companysize, producttype, companyLogo,
+                values: [user_id, companyname, website, linkedin, companysize, producttype, companyLogo,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
@@ -335,13 +340,13 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
             query = {
                 text: `
                     INSERT INTO employer_profiles 
-                    (userid, companyname, website, linkedin, companysize, producttype,
+                    (user_id, companyname, website, linkedin, companysize, producttype,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
                     financial1, financial2, financial3, financial4) 
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
-                    ON CONFLICT (userid) 
+                    ON CONFLICT (user_id) 
                     DO UPDATE SET 
                     companyname = EXCLUDED.companyname, website = EXCLUDED.website, linkedin = EXCLUDED.linkedin, 
                     companysize = EXCLUDED.companysize, producttype = EXCLUDED.producttype, 
@@ -351,7 +356,7 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
                     pto1 = EXCLUDED.pto1, pto2 = EXCLUDED.pto2, pto3 = EXCLUDED.pto3, pto4 = EXCLUDED.pto4,
                     financial1 = EXCLUDED.financial1, financial2 = EXCLUDED.financial2, financial3 = EXCLUDED.financial3, 
                     financial4 = EXCLUDED.financial4`,
-                values: [userID, companyname, website, linkedin, companysize, producttype,
+                values: [user_id, companyname, website, linkedin, companysize, producttype,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
@@ -379,14 +384,14 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
 });
 
 app.get('/api/getEmployerProfile', async (req, res) => {
-    const userID = req.query.userid;
+    const user_id = req.query.user_id;
 
     try {
         const client = await pool.connect();
 
         const employerProfileQuery = {
-            text: 'SELECT * FROM employer_profiles WHERE userid = $1',
-            values: [userID],
+            text: 'SELECT * FROM employer_profiles WHERE user_id = $1',
+            values: [user_id],
         };
 
         const employerProfileResult = await client.query(employerProfileQuery);
@@ -402,7 +407,7 @@ app.get('/api/getEmployerProfile', async (req, res) => {
         }
 
         // Delete the keys you don't want to send back in the response
-        delete employerProfileData.userID;
+        delete employerProfileData.user_id;
         // delete employerProfileData.companyLogo;
 
         res.send(employerProfileData);
