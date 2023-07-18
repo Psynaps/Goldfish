@@ -1,6 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
-import { Box, Flex, HStack, Button, Spacer, Select, VStack, Text, Avatar, Spinner, Circle, Divider, useColorMode, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, } from '@chakra-ui/react';
+import {
+    Box, Flex, HStack, Button, Spacer, Select, VStack, IconButton, Text, Avatar, Spinner, Circle, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
+    AlertDialogBody,
+    AlertDialogFooter,
+    AlertDialogHeader,
+    AlertDialogContent,
+    AlertDialogOverlay,
+    AlertDialogCloseButton,
+} from '@chakra-ui/react';
+// import { DeleteIcon } from 'react-icons/md';
 import { useSearchParams } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
@@ -12,6 +21,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton } from './LoginButton';
 import './App.css';
 import DropdownMenu from './DropdownMenu';
+import { DeleteIcon } from '@chakra-ui/icons';
 
 // const deployURL = 'https://goldfishai.netlify.app';
 
@@ -693,9 +703,9 @@ const EmployerProfileBuilderRightContent = ({
     }
 };
 
-function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
+function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, setJobs }) {
     // console.log('jobs:', jobs);
-    // console.log('selectedJobListing:', selectedJobListing);
+    // console.log('selectedJobPosting:', selectedJobPosting);
     const JobListingButton = ({ job_title, secondaryText, job_posting_id, jobActive }) => (
         <Box
             key={job_posting_id}
@@ -703,9 +713,9 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
             w='80%'
             minWidth='80%'
             alignSelf='center'
-            // variant={selectedJobListing === job_posting_id ? 'solid' : 'outline'}
+            // variant={selectedJobPosting === job_posting_id ? 'solid' : 'outline'}
             variant='unstyled'
-            border={selectedJobListing === job_posting_id ? '3px ' : '0'}
+            border={selectedJobPosting === job_posting_id ? '3px ' : '0'}
             // border='5px'
             borderColor='black'
             borderStyle='solid'
@@ -754,8 +764,8 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
                     })}
             </VStack>
             {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.date_created} tabName={job.job_posting_id} jobActive={job.active} />; })} */}
-            <Button w='80%' key={'-1'} alignSelf='center' color={selectedJobListing === -1 ? 'blue' : 'white'} variant={selectedJobListing === -1 ? 'solid' : 'outline'}
-                borderWidth={selectedJobListing === -1 ? '4px' : '1px'}
+            <Button w='80%' key={'-1'} alignSelf='center' color={selectedJobPosting === -1 ? 'blue' : 'white'} variant={selectedJobPosting === -1 ? 'solid' : 'outline'}
+                borderWidth={selectedJobPosting === -1 ? '4px' : '1px'}
                 onClick={() => setSelectedJobListing(-1)}>
                 <Text fontWeight='bold' fontSize={['md', 'lg', 'xl']}>
                     +
@@ -765,7 +775,7 @@ function JobPostingsContent({ selectedJobListing, setSelectedJobListing, jobs, s
     );
 }
 
-function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobListing, jobs, setJobs }) {
+function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobListing, jobs, setJobs }) {
     const {
         register,
         handleSubmit,
@@ -775,18 +785,20 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
     } = useForm({});
     const [isSaving, setIsSaving] = useState(false);
     const { user } = useAuth0();
-    // console.log('selectedJobListing***:', selectedJobListing);
+    const { isOpen, onOpen, onClose } = useDisclosure();
+    const cancelRef = React.useRef();
+    // console.log('selectedJobPosting***:', selectedJobPosting);
 
     const onSubmit = (data) => {
         setIsSaving(true);
         let newJob;
-        if (selectedJobListing === -1) {
+        if (selectedJobPosting === -1) {
             newJob = { job_posting_id: -1, ...data };
         }
         else {
-            newJob = { ...jobs[selectedJobListing], ...data };
+            newJob = { ...jobs[selectedJobPosting], ...data };
             let newJobs = { ...jobs };
-            newJobs[selectedJobListing] = newJob;
+            newJobs[selectedJobPosting] = newJob;
             setJobs(newJobs);
         }
         // console.log('formData:', data);
@@ -841,21 +853,54 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
             });
     }, [user, apiURL, setIsSaving]);
 
+    // Delete job posting selectedJobPosting
+    const deleteJobPosting = useCallback(() => {
+        setIsSaving(true);
+        console.log('trying to delete job posting', selectedJobPosting);
+        fetch(`${apiURL}/deleteJobPosting`, {
+            method: 'POST',
+            body: { job_posting_id: selectedJobPosting, user_id: user.sub }
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`status ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(json => {
+                setIsSaving(false);
+                if (json.success) {
+                    console.log('job posting deleted:', selectedJobPosting);
+                    let newJobs = { ...jobs };
+                    delete newJobs[selectedJobPosting];
+                    setJobs(newJobs);
+                    setSelectedJobListing(-1);
+                }
+                else {
+                    console.log('error deleting job posting:', json);
+                }
+            }).catch(e => {
+                console.error(e);
+                setIsSaving(false);
+            });
+    }, [user, apiURL, setIsSaving, selectedJobPosting]);
+
+
     useEffect(() => {
-        if (!isEmptyObj(jobs) && selectedJobListing !== -1 && jobs[selectedJobListing]) {
-            reset(jobs[selectedJobListing]);
-            // console.log('resetting form', jobs[selectedJobListing]);
+        if (!isEmptyObj(jobs) && selectedJobPosting !== -1 && jobs[selectedJobPosting]) {
+            reset(jobs[selectedJobPosting]);
+            // console.log('resetting form', jobs[selectedJobPosting]);
         }
         else {
             reset({ job_title: '', salary_base: '', salary_ote: '', ote_value: '', home_office_address: '' });
             // console.log('full form reset');
         }
-    }, [jobs, selectedJobListing, reset]);
+    }, [jobs, selectedJobPosting, reset]);
 
 
 
     return (
-        <form key={selectedJobListing} onSubmit={handleSubmit(onSubmit)}>
+        <form key={selectedJobPosting} onSubmit={handleSubmit(onSubmit)}>
             <VStack align='start' p={4} color='white'>
                 <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold' >Core Information</Text>
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
@@ -898,7 +943,7 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
                     </FormControl>
                     <FormControl >
                         <FormLabel htmlFor="active">Active</FormLabel>
-                        <Switch id="active" {...register("active")} size='lg' alignSelf='center' colorScheme='green' defaultChecked={selectedJobListing === -1 ? false : (jobs[selectedJobListing]?.active ? jobs[selectedJobListing]?.active : false)} />
+                        <Switch id="active" {...register("active")} size='lg' alignSelf='center' colorScheme='green' defaultChecked={selectedJobPosting === -1 ? false : (jobs[selectedJobPosting]?.active ? jobs[selectedJobPosting]?.active : false)} />
                     </FormControl>
 
                     <Button
@@ -911,10 +956,57 @@ function JobPostingsRightContent({ apiURL, selectedJobListing, setSelectedJobLis
                         <Text>Save</Text>
                     </Button>
                 </VStack>
+                <Text fontSize={['lg', 'xl', '2xl']} mt={3} fontWeight='bold' >Edit Job Criteria</Text>
+                <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
+                \\ Button "Go to job builder" which is a link to /employer/
+                <Button as={RouterLink} to={`/employer?jobID=${selectedJobPosting}`} width={36} colorScheme='teal' bgGradient='linear(to-l, teal.400, yellow.400)' alignSelf='flex-end' >
+                    <Text>Go to Job Builder</Text>
+                </Button>
+                <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
+                <>
+                    <IconButton
+                        _hover={{ bg: "red.700" }}
+                        bg='red.500'
+                        aria-label='Delete Job Posting'
+                        icon={<DeleteIcon />}
+                        size='lg'
+                        width={36}
+                        alignSelf='flex-end'
+                        onClick={onOpen}
+                    />
+                    <AlertDialog
+                        isOpen={isOpen}
+                        leastDestructiveRef={cancelRef}
+                        onClose={onClose}
+                        isCentered
+                    >
+                        <AlertDialogOverlay>
+                            <AlertDialogContent>
+                                <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                                    Delete Job Posting
+                                </AlertDialogHeader>
+
+                                <AlertDialogBody>
+                                    Are you sure? You can't undo this action afterwards.
+                                </AlertDialogBody>
+
+                                <AlertDialogFooter>
+                                    <Button ref={cancelRef} onClick={onClose}>
+                                        Cancel
+                                    </Button>
+                                    <Button colorScheme='red' onClick={deleteJobPosting} ml={3}>
+                                        Delete
+                                    </Button>
+                                </AlertDialogFooter>
+                            </AlertDialogContent>
+                        </AlertDialogOverlay>
+                    </AlertDialog>
+                </>
             </VStack>
-        </form>
+        </form >
     );
 }
+
 
 function AccountSettingsContent() {
     return <Box>Account Settings Content</Box>;
@@ -938,7 +1030,7 @@ function EmployerProfile({ returnURL }) {
     const [searchParams] = useSearchParams();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
-    const [selectedJobListing, setSelectedJobListing] = useState(-1);
+    const [selectedJobPosting, setSelectedJobListing] = useState(-1);
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
     const [jobs, setJobs] = useState({
@@ -1098,7 +1190,7 @@ function EmployerProfile({ returnURL }) {
                 <Box flexBasis='25%' minWidth='25%'>
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderContent selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />}
                     {selectedTab === 'Job Postings' && <JobPostingsContent
-                        selectedJobListing={selectedJobListing}
+                        selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobListing}
                         jobs={jobs}
                         setJobs={setJobs}
@@ -1122,7 +1214,7 @@ function EmployerProfile({ returnURL }) {
                         apiURL={apiURL}
                         jobs={jobs}
                         setJobs={setJobs}
-                        selectedJobListing={selectedJobListing}
+                        selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobListing}
                     />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}

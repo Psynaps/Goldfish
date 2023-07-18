@@ -105,6 +105,8 @@ function EmployerPage(returnURL) {
             console.log('no user');
             return;
         }
+        setJobLoading(true);
+        console.log('getting job', job_posting_id);
         fetch(`${apiURL}/getJob?userid=${user?.sub}&jobid=${job_posting_id}`, requestOptions)
             .then(response => {
                 if (!response.ok) {
@@ -113,7 +115,8 @@ function EmployerPage(returnURL) {
                 return response.json();
             })
             .then(json => {
-                loadJobPosting(json);
+                if (json.jobData !== "{}")
+                    loadJobPosting(json.jobData);
                 setJobLoading(false);
             }).catch(e => {
                 setJobLoading(false);
@@ -122,7 +125,7 @@ function EmployerPage(returnURL) {
 
     const loadJobPosting = (data) => {
         // setCompany(data.company);
-        setJobLocation(data.location);
+        setJobLocation(data.home_office_address);
         setjob_title(data.job_title);
 
         // Parse the jobData field into a JavaScript object
@@ -154,10 +157,11 @@ function EmployerPage(returnURL) {
         const loadedQuestionIDs = Object.keys(jobData);
 
         // Filter out these questions from the question bank
+        console.log('unfiltered questionBankQuestions', questionBankQuestions);
         const filteredQuestionBank = questionBankQuestions.filter(question => {
             return !loadedQuestionIDs.includes(String(question.questionID));
         });
-
+        console.log('setting question bank questions to', filteredQuestionBank);
         setQuestionBankQuestions(filteredQuestionBank);
     };
 
@@ -328,6 +332,7 @@ function EmployerPage(returnURL) {
 
     useEffect(() => {
         // const sortedQuestions = questionsData.sort((a, b) => a.questionID - b.questionID);
+        console.log('initial set questionsData', questionsData);
         setQuestionBankQuestions(sortQuestionBankQuestions(questionsData));
     }, []);
 
@@ -369,7 +374,7 @@ function EmployerPage(returnURL) {
             setjob_posting_id(jobIdFromUrl);
             getAndLoadJobPosting(jobIdFromUrl);
         }
-    }, [user, job_posting_id]);
+    }, [user, getAndLoadJobPosting, searchParams]);
 
 
     return (
@@ -398,7 +403,7 @@ function EmployerPage(returnURL) {
                 </HStack>
             </Box>
             <VStack spacing='1vh' align='stretch'>
-                <Box p='20px' w='100%' bg='#f5f5f5'>
+                <Box p='20px' w='100%' bg='#f5f5f5' background='#1a202c' >
                     <Text fontSize='20px' as='b'>Question Bank Filters</Text>
                     <Input
                         type='text'
@@ -406,6 +411,7 @@ function EmployerPage(returnURL) {
                         value={searchTerm}
                         onChange={e => setSearchTerm(e.target.value)}
                         bg='white'
+                        color='black'
                     />
                     <SimpleGrid columns={4} spacing={2} my='15px'>
                         {categories.map(category => (
@@ -413,7 +419,8 @@ function EmployerPage(returnURL) {
                                 key={category}
                                 onClick={() => handleFilterButtonClick(category)}
                                 bg={selectedCategory === category ? selectedBg : 'white'}
-                                color={selectedCategory === category ? selectedColor : initialColor}
+                                // color={selectedCategory === category ? selectedColor : initialColor}
+                                color='black'
                                 borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
                                 borderWidth={selectedCategory === category ? '5px' : '3px'}
                                 // minW={'200px'} // Add this line
