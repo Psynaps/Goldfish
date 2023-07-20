@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import EmployerPage from './EmployerPage';
 import Home from './Home';
 import EmployerProfile from './EmployerProfile';
+import CandidatePage from './CandidatePage';
 // import { useAuth0 } from '@auth0/auth0-react';
 // import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
 // import './App.css';
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/employer' element={<EmployerPage returnURL={`${returnUrl}/employer`} />} />
                     <Route path='/employer/profile' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
                     <Route path='/employer/jobs' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
+                    <Route path='/candidate' element={<CandidatePage returnURL={`${returnUrl}/candidate`} />} />
                 </Routes>
             </Router>
         </div>

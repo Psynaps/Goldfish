@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 function DropdownMenu({ returnURL }) {
     const { isAuthenticated, logout } = useAuth0();
     const { colorMode, toggleColorMode } = useColorMode();
+    console.log('colorMode: ' + colorMode);
     const navigate = useNavigate();
     return (
         <Menu>

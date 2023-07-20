@@ -418,6 +418,39 @@ app.get('/api/getEmployerProfile', async (req, res) => {
     }
 });
 
+//Delete job_posting entry with the corresponding job_posting_id and user_id as is contained in the request body
+app.delete('/api/deleteJobPosting', async (req, res) => {
+    try {
+        console.log("deleteJob req received");
+        const { user_id, job_posting_id } = req.body;
+        if (!user_id) {
+            return res.status(400).send({ error: 'Missing user_id query parameter' });
+        }
+        if (!job_posting_id) {
+            return res.status(400).send({ error: 'Missing job_posting_id query parameter' });
+        }
+        const client = await pool.connect();
+        const deleteJobQuery = {
+            text: 'DELETE FROM job_postings WHERE job_posting_id = $1 AND user_id = $2 RETURNING *',
+            values: [job_posting_id, user_id],
+        };
+        const result = await client.query(deleteJobQuery);
+
+        if (result.rowCount === 0) {
+            return res.status(409).send({ error: 'Job posting not found. Please refresh the jobs list.' });
+        }
+
+        console.log('Delete successful');
+        res.send({ success: true });
+        client.release();
+    } catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+    }
+});
+
+
+
 
 // All remaining requests return the React app, so it can handle routing.
 app.get('*', function (request, response) {

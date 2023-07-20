@@ -10,18 +10,21 @@ CREATE TABLE job_postings (
     ote_value DECIMAL,
     home_office_address VARCHAR(255),
     active BOOLEAN
-    date_created VARCHAR(255),
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 );
 CREATE UNIQUE INDEX job_postings_unique ON job_postings (job_posting_id, user_id);
 
 
 CREATE TABLE job_posting_questions (
-  job_posting_id INTEGER REFERENCES job_postings(job_posting_id),
+  job_posting_id INTEGER REFERENCES job_postings(job_posting_id) ON DELETE CASCADE,
   question_id INTEGER,
   answer_ids INTEGER[],
   nonanswer_ids INTEGER[],
   importance INTEGER
 );
+ALTER TABLE job_posting_questions 
+ADD CONSTRAINT job_posting_questions_unique 
+UNIQUE(job_posting_id, question_id);
 
 CREATE TABLE employer_profiles (
   user_id VARCHAR(255) PRIMARY KEY,

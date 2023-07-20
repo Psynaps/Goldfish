@@ -775,7 +775,7 @@ function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, s
     );
 }
 
-function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobListing, jobs, setJobs }) {
+function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobListing, jobs, setJobs, getUserJobPostings }) {
     const {
         register,
         handleSubmit,
@@ -857,33 +857,34 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
     const deleteJobPosting = useCallback(() => {
         setIsSaving(true);
         console.log('trying to delete job posting', selectedJobPosting);
-        fetch(`${apiURL}/deleteJobPosting`, {
-            method: 'POST',
-            body: { job_posting_id: selectedJobPosting, user_id: user.sub }
+        axios.delete(`${apiURL}/deleteJobPosting`, {
+            data: { job_posting_id: selectedJobPosting, user_id: user.sub }
         })
             .then(response => {
-                if (!response.ok) {
-                    throw new Error(`status ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(json => {
                 setIsSaving(false);
-                if (json.success) {
+                if (response.data.success) {
                     console.log('job posting deleted:', selectedJobPosting);
+
                     let newJobs = { ...jobs };
                     delete newJobs[selectedJobPosting];
                     setJobs(newJobs);
                     setSelectedJobListing(-1);
+                    onClose();
                 }
                 else {
-                    console.log('error deleting job posting:', json);
+                    console.log('error deleting job posting:', response.data);
                 }
             }).catch(e => {
                 console.error(e);
                 setIsSaving(false);
+                if (e.response && e.response.status === 409) {
+                    // Conflict detected, refresh the jobs list
+                    console.log('Refreshing the jobs list...');
+                    getUserJobPostings();
+                }
             });
-    }, [user, apiURL, setIsSaving, selectedJobPosting]);
+    }, [user, apiURL, setIsSaving, selectedJobPosting, getUserJobPostings]);
+
 
 
     useEffect(() => {
@@ -958,50 +959,52 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                 </VStack>
                 <Text fontSize={['lg', 'xl', '2xl']} mt={3} fontWeight='bold' >Edit Job Criteria</Text>
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
-                \\ Button "Go to job builder" which is a link to /employer/
                 <Button as={RouterLink} to={`/employer?jobID=${selectedJobPosting}`} width={36} colorScheme='teal' bgGradient='linear(to-l, teal.400, yellow.400)' alignSelf='flex-end' >
                     <Text>Go to Job Builder</Text>
                 </Button>
+
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
-                <>
-                    <IconButton
-                        _hover={{ bg: "red.700" }}
-                        bg='red.500'
-                        aria-label='Delete Job Posting'
-                        icon={<DeleteIcon />}
-                        size='lg'
-                        width={36}
-                        alignSelf='flex-end'
-                        onClick={onOpen}
-                    />
-                    <AlertDialog
-                        isOpen={isOpen}
-                        leastDestructiveRef={cancelRef}
-                        onClose={onClose}
-                        isCentered
-                    >
-                        <AlertDialogOverlay>
-                            <AlertDialogContent>
-                                <AlertDialogHeader fontSize='lg' fontWeight='bold'>
-                                    Delete Job Posting
-                                </AlertDialogHeader>
+                {selectedJobPosting !== -1 &&
+                    <>
+                        <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold' >Delete Job Posting</Text>
+                        <IconButton
+                            _hover={{ bg: "red.700" }}
+                            bg='red.500'
+                            aria-label='Delete Job Posting'
+                            icon={<DeleteIcon />}
+                            size='lg'
+                            width={36}
+                            alignSelf='flex-end'
+                            onClick={onOpen}
+                        />
+                        <AlertDialog
+                            isOpen={isOpen}
+                            leastDestructiveRef={cancelRef}
+                            onClose={onClose}
+                            isCentered
+                        >
+                            <AlertDialogOverlay>
+                                <AlertDialogContent>
+                                    <AlertDialogHeader fontSize='lg' fontWeight='bold'>
+                                        Delete Job Posting
+                                    </AlertDialogHeader>
 
-                                <AlertDialogBody>
-                                    Are you sure? You can't undo this action afterwards.
-                                </AlertDialogBody>
+                                    <AlertDialogBody>
+                                        Are you sure? You can't undo this action afterwards.
+                                    </AlertDialogBody>
 
-                                <AlertDialogFooter>
-                                    <Button ref={cancelRef} onClick={onClose}>
-                                        Cancel
-                                    </Button>
-                                    <Button colorScheme='red' onClick={deleteJobPosting} ml={3}>
-                                        Delete
-                                    </Button>
-                                </AlertDialogFooter>
-                            </AlertDialogContent>
-                        </AlertDialogOverlay>
-                    </AlertDialog>
-                </>
+                                    <AlertDialogFooter>
+                                        <Button ref={cancelRef} onClick={onClose}>
+                                            Cancel
+                                        </Button>
+                                        <Button colorScheme='red' onClick={deleteJobPosting} ml={3}>
+                                            Delete
+                                        </Button>
+                                    </AlertDialogFooter>
+                                </AlertDialogContent>
+                            </AlertDialogOverlay>
+                        </AlertDialog>
+                    </>}
             </VStack>
         </form >
     );
@@ -1216,6 +1219,7 @@ function EmployerProfile({ returnURL }) {
                         setJobs={setJobs}
                         selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobListing}
+                        getUserJobPostings={getUserJobPostings}
                     />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
                     {selectedTab === 'Matches' && <MatchesRightContent />}

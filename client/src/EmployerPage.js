@@ -24,7 +24,7 @@ function EmployerPage(returnURL) {
     const [selectedNonAnswers, setSelectedNonAnswers] = useState([]);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
-    const [job_title, setjob_title] = useState('');
+    const [job_title, setjob_title] = useState('Job Title');
     const [jobLocation, setJobLocation] = useState('');
     // const [company, setCompany] = useState('myspace');
     const [canAddQuestion, setCanAddQuestion] = useState(false);
@@ -109,15 +109,25 @@ function EmployerPage(returnURL) {
         console.log('getting job', job_posting_id);
         fetch(`${apiURL}/getJob?userid=${user?.sub}&jobid=${job_posting_id}`, requestOptions)
             .then(response => {
+                console.log('response', response);
                 if (!response.ok) {
                     throw new Error(`status ${response.status}`);
                 }
                 return response.json();
             })
             .then(json => {
-                if (json.jobData !== "{}")
-                    loadJobPosting(json.jobData);
-                setJobLoading(false);
+                console.log('json', json);
+                if (json.job_title) {
+                    setjob_title(json.job_title);
+                }
+                if (json.home_office_address) {
+                    setJobLocation(json.home_office_address);
+                }
+                if (json.jobData && json.jobData !== "{}") {
+                    console.log('calling load job posting');
+                    loadJobPosting(json);
+                    setJobLoading(false);
+                }
             }).catch(e => {
                 setJobLoading(false);
             });
@@ -125,11 +135,18 @@ function EmployerPage(returnURL) {
 
     const loadJobPosting = (data) => {
         // setCompany(data.company);
-        setJobLocation(data.home_office_address);
-        setjob_title(data.job_title);
-
+        console.log('inside load job posting', data, data.job_title);
+        let jobData;
         // Parse the jobData field into a JavaScript object
-        const jobData = JSON.parse(data.jobData);
+        try {
+            jobData = JSON.parse(data["jobData"]);
+            console.log('setting jobData', jobData);
+        } catch (e) {
+            console.log('error parsing jobData', e);
+            return;
+        }
+        console.log('test2');
+        console.log('jobData', jobData);
 
         loadJobPostingQuestions(jobData);
         filterQuestionBankOnLoad(jobData);
@@ -138,16 +155,18 @@ function EmployerPage(returnURL) {
     // A method to set the jobPostingQuestions state based on the jobData field in the fetched data
     const loadJobPostingQuestions = (jobData) => {
 
+        // if jobData
         // const newQuestion = { ...question, originalQuestion: question, importance: 'Required', selectedAnswer: answer };
         const loadedQuestions = Object.keys(jobData).map(questionID => {
-            const matchingQuestion = questionBankQuestions.find(question => question.questionID === questionID);
+            const matchingQuestion = questionsData.find(question => question.questionID === questionID);
             const jobMatchingAnswers = jobData[questionID][0];
             const jobMatchingNonAnswers = jobData[questionID][1];
-            console.log('jobMatchingAnswers', jobMatchingAnswers);
-            console.log('jobMatchingNonAnswers', jobMatchingNonAnswers);
+            // console.log('matchingQuestion', matchingQuestion);
+            // console.log('jobMatchingAnswers', jobMatchingAnswers);
+            // console.log('jobMatchingNonAnswers', jobMatchingNonAnswers);
             return { ...matchingQuestion, importance: (jobData[questionID][2] ? jobData[questionID][2] : 3), selectedAnswers: jobMatchingAnswers, selectedNonAnswers: jobMatchingNonAnswers };
         });
-
+        // console.log('loadedQuestions', loadedQuestions);
         setJobPostingQuestions(loadedQuestions);
     };
 
@@ -157,8 +176,8 @@ function EmployerPage(returnURL) {
         const loadedQuestionIDs = Object.keys(jobData);
 
         // Filter out these questions from the question bank
-        console.log('unfiltered questionBankQuestions', questionBankQuestions);
-        const filteredQuestionBank = questionBankQuestions.filter(question => {
+        // console.log('unfiltered questionBankQuestions', questionBankQuestions);
+        const filteredQuestionBank = questionsData.filter(question => {
             return !loadedQuestionIDs.includes(String(question.questionID));
         });
         console.log('setting question bank questions to', filteredQuestionBank);
@@ -179,6 +198,7 @@ function EmployerPage(returnURL) {
         };
         console.log('adding question: ', newQuestion);
 
+        console.log('prev jobPostingQuestions', jobPostingQuestions);
         setJobPostingQuestions(prev => [...prev, newQuestion]);
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
@@ -321,8 +341,9 @@ function EmployerPage(returnURL) {
 
     const handlejob_titleChange = (value) => {
         setjob_title(value);
+        console.log('job_title', job_title, value);
         // console.log(questionBankQuestions);
-        console.log('jobpostingquestions:', jobPostingQuestions);
+        // console.log('jobpostingquestions:', jobPostingQuestions);
     };
 
     const handleLocationChange = (value) => {
@@ -440,7 +461,7 @@ function EmployerPage(returnURL) {
                         alignItems='start'
                         w={{ base: '100%', md: '48%' }}
                         mx='2vw'
-                        mb='2vw'
+                        // mb='2vw'
                         border='1px'
                         borderColor='lightblue'
                         borderRadius='md'
@@ -467,27 +488,30 @@ function EmployerPage(returnURL) {
                         alignItems='start'
                         w={{ base: '100%', md: '48%' }}
                         mx='2vw'
-                        mb='2vw'
+                        // mb='2vw'
                         border='1px'
                         borderColor='lightblue'
                         borderRadius='md'
                         p={5}
                     >
-                        <HStack justifyContent='space-between' w='100%'>
+                        <HStack justifyContent='flex-end' w='100%'>
+                            {/* <Flex w='100%' direction='row' alignItems={'flex-end'}> */}
                             {/* <Text fontSize='2xl'>Job Posting Builder</Text> */}
                             <Textarea
-                                placeholder='Job Title'
+                                // placeholder={job_title}
+                                value={job_title}
                                 onChange={e => handlejob_titleChange(e.target.value)}
                                 minHeight='15%'
                             />
-                            <Textarea
+                            {/* <Textarea
                                 placeholder='Location'
                                 onChange={e => handleLocationChange(e.target.value)}
                                 minHeight='15%'
-                            />
-                            <Button isDisabled={!selectedJobPostingQuestion} colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'} width='auto' onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>
+                            /> */}
+                            <Button alignSelf='flex-end' isDisabled={!selectedJobPostingQuestion} colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'} width='auto' onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>
                                 <Text p={12}>Remove</Text>
                             </Button>
+                            {/* </Flex> */}
                         </HStack>
                         <JobPostingBank
                             onQuestionSelect={handleJobPostingQuestionSelection}
@@ -496,10 +520,13 @@ function EmployerPage(returnURL) {
                             onImportanceChange={handleImportanceChange}
                             jobPostingQuestions={jobPostingQuestions}
                         />
-                        {(jobPostingQuestions.length > 0 && isAuthenticated) && <Button colorScheme='blue' width='auto' onClick={() => postJob()}>
+                        {(jobPostingQuestions.length > 0 && isAuthenticated && job_title === '') && <Button isDisabled colorScheme='blue' width='auto'>
+                            <Text p={4}>Set job title to save</Text>
+                        </Button>}
+                        {(jobPostingQuestions.length > 0 && isAuthenticated && job_title !== '') && <Button colorScheme='blue' width='auto' onClick={() => postJob()}>
                             <Text p={4}>Save</Text>
                         </Button>}
-                        {(jobPostingQuestions.length > 0 && !isAuthenticated) && <Button isDisabled colorScheme='blue' width='auto' onClick={() => postJob()}>
+                        {(jobPostingQuestions.length > 0 && !isAuthenticated) && <Button isDisabled colorScheme='blue' width='auto' >
                             <Text p={4}>Log in to Save</Text>
                         </Button>}
                     </VStack>
