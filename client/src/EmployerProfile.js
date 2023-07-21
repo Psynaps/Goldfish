@@ -915,22 +915,22 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={errors.salary_base}>
-                        <FormLabel htmlFor="salary_base">Salary Base</FormLabel>
-                        <Input id="salary_base" {...register("salary_base", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormLabel htmlFor="salary_base">Salary Base ($)</FormLabel>
+                        <Input id="salary_base" type="number" {...register("salary_base", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
                             {errors.salary_base && errors.salary_base.message}
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={errors.salary_ote}>
-                        <FormLabel htmlFor="salary_ote">Annual Salary at 100% OTE</FormLabel>
-                        <Input id="salary_ote" {...register("salary_ote", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormLabel htmlFor="salary_ote">Annual Salary at 100% OTE ($)</FormLabel>
+                        <Input id="salary_ote" type="number"{...register("salary_ote", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
                             {errors.salary_ote && errors.salary_ote.message}
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={errors.ote_value}>
-                        <FormLabel htmlFor="ote_value">$ Value of 100% OTE Attainment</FormLabel>
-                        <Input id="ote_value" {...register("ote_value", { required: "This is required" })} w='95%' alignSelf='center' />
+                        <FormLabel htmlFor="ote_value">Value of 100% OTE Attainment ($)</FormLabel>
+                        <Input id="ote_value" type="number" {...register("ote_value", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
                             {errors.ote_value && errors.ote_value.message}
                         </FormErrorMessage>
@@ -1140,9 +1140,10 @@ function EmployerProfile({ returnURL }) {
                 mt={5}
                 bg='#051672'
                 flex='1 1 auto' // This allows the main content area to grow and shrink as necessary
+                color='white'
             >
                 <Box flexBasis='15%' minWidth='15%'>
-                    <VStack spacing={[2, 4, 6]} alignItems='center' pt={[2, 4, 6]}>
+                    <VStack spacing={[2, 4, 6]} alignItems='center' pt={[2, 4, 6]} color='white'>
                         <Button
                             w='80%'
                             variant={selectedTab === "Employer Profile" ? "solid" : "outline"}
@@ -1163,6 +1164,7 @@ function EmployerProfile({ returnURL }) {
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
                             p={[2, 4, 6]}
+                            color='white'
                         >
                             <Text p={5}>Job Postings</Text>
                         </Button>
@@ -1174,6 +1176,7 @@ function EmployerProfile({ returnURL }) {
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
                             p={[2, 4, 6]}
+                            color='white'
                         >
                             <Text>Account Settings</Text>
                         </Button>
@@ -1184,8 +1187,9 @@ function EmployerProfile({ returnURL }) {
                             onClick={() => setSelectedTab("Matches")}
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             p={[2, 4, 6]}
+                            color='white'
                         >
-                            <Text > Matches</Text>
+                            <Text >Matches</Text>
                         </Button>
                     </VStack>
                 </Box>

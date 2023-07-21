@@ -7,11 +7,12 @@ import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import './index.css';
+import theme from './theme';
 
 // console.log('redir: ' + window.location.origin);
 // console.log('href1: ' + window.location.href);
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const rootElement = document.getElementById('root');
+ReactDOM.createRoot(rootElement).render(
   <Auth0Provider
     domain='dev-zk5m1bwyoje0vcbj.us.auth0.com'
     clientId='WzugzMdTqCYYGtoKmoxUhgRYuND6gASj'
@@ -22,8 +23,8 @@ root.render(
     }}
   >
     <React.StrictMode>
-      <ChakraProvider>
-        <ColorModeScript initialColorMode='dark' />
+      <ChakraProvider theme={theme}>
+        <ColorModeScript initialColorMode={theme.config.initialColorMode} />
 
         <App />
       </ChakraProvider>

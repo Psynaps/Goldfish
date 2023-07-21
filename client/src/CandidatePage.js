@@ -1,7 +1,15 @@
-import { Stack, Box, Text, Circle, Button, Icon } from '@chakra-ui/react';
-import { ArrowUpIcon } from '@chakra-ui/icons';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image } from '@chakra-ui/react';
+import { ArrowUpIcon, EmailIcon } from '@chakra-ui/icons';
+import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
+import { LoginButton } from './LoginButton';
+import { Link as ChakraLink } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
+import { useAuth0 } from '@auth0/auth0-react';
+import DropdownMenu from './DropdownMenu';
 
 function CandidatePage(returnURL) {
+    const { isAuthenticated, isLoading, user } = useAuth0();
     return (
         <Stack
             justify="flex-start"
@@ -13,86 +21,49 @@ function CandidatePage(returnURL) {
             background="linear-gradient(142deg, #1f35a4 0%, #1c2b73 36.23%, #080e28 82.12%)"
             boxShadow="base"
         >
-            <Box />
-            <Stack
+            <Flex
                 paddingX="64px"
-                paddingY="8px"
+                paddingY="72px"
                 direction="row"
                 justify="flex-start"
                 align="flex-end"
                 overflow="hidden"
-                height="390px"
+                height='35%'
                 alignSelf="stretch"
+                width='100%'
+                justifyContent='space-between'
+                alignItems='baseline'
             >
-                <Stack
-                    direction="row"
-                    justify="space-between"
-                    align="flex-start"
-                    flex="1"
-                >
-                    <Stack
-                        paddingEnd="70px"
-                        direction="row"
-                        justify="flex-start"
-                        align="flex-end"
-                        spacing="16px"
-                    >
-                        <Stack direction="row" justify="flex-start" align="flex-start">
-                            <Box
-                                borderRadius="20px"
-                                width="80px"
-                                height="80.16px"
-                                borderColor="#FFFFFF"
-                                borderStartWidth="3px"
-                                borderEndWidth="3px"
-                                borderTopWidth="3px"
-                                borderBottomWidth="3px"
-                            />
-                        </Stack>
-                        <Stack direction="row" justify="flex-start" align="flex-start">
-                            <Text
-                                fontFamily="Inter"
-                                lineHeight="1.2"
-                                fontWeight="bold"
-                                fontSize="20px"
-                                color="#FFFFFF"
-                            >
-                                Goldfish AI
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack
-                        direction="row"
-                        justify="flex-start"
-                        align="center"
-                        spacing="16px"
-                    >
-                        <Stack
-                            direction="row"
-                            justify="flex-end"
-                            align="flex-end"
-                            spacing="16px"
-                            width="173px"
-                            height="80px"
-                        >
-                            <Stack direction="row" justify="flex-end" align="flex-end">
-                                <Circle size="74px" />
-                            </Stack>
-                            <Stack direction="row" justify="flex-end" align="flex-end">
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1.2"
-                                    fontWeight="bold"
-                                    fontSize="20px"
-                                    color="#FFFFFF"
-                                >
-                                    Peter G.{' '}
-                                </Text>
-                            </Stack>
-                        </Stack>
-                    </Stack>
-                </Stack>
-            </Stack>
+
+                <HStack alignItems='baseline' p={0} >
+                    <Image
+                        borderRadius='25%'
+                        boxSize='64px'
+                        borderColor='white'
+                        borderWidth='5px'
+                        src='/android-chrome-192x192.png'
+                        alt='Goldfish Ai Logo'
+                    />
+                    <ChakraLink as={RouterLink} to="/candidate" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
+                        <Heading as='h2' size='lg' fontFamily='Poppins' color='white'>Goldfish AI</Heading>
+                    </ChakraLink>
+                </HStack>
+                <HStack spacing={5} alignItems='top'>
+                    {isLoading ? <Spinner /> :
+                        <>
+                            {(isAuthenticated) ?
+                                <VStack spacing={1} alignItems='center'>
+                                    <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} />
+                                    <Box bg='#FAD156' borderRadius='full' px={2}>
+                                        <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
+                                    </Box>
+                                </VStack>
+                                : <LoginButton />}
+                            <DropdownMenu returnURL={window.location.href} />
+                        </>
+                    }
+                </HStack>
+            </Flex>
             <Stack
                 padding="80px"
                 justify="flex-start"
@@ -125,7 +96,7 @@ function CandidatePage(returnURL) {
                                 maxWidth="100%"
                             >
                                 <span>We make it </span>
-                                <Box as="span" color="#F0940B">
+                                <Box as="span" color="orange.300">
                                     easy
                                 </Box>
                                 <Box as="span"> to swim in the job market. </Box>
@@ -158,12 +129,10 @@ function CandidatePage(returnURL) {
                                 float to you.{' '}
                             </Text>
                         </Stack>
-                        <Button>
-                            <Stack direction="row" justify="center" align="center">
-                                <Button textAlign="center">Start Cruising </Button>
-                                <Icon name="mail-fill" />
-                            </Stack>
-                        </Button>
+                        <Stack direction="row" justify="center" align="center">
+                            <Button textAlign="center">Start Cruising </Button>
+                            <Icon name="mail-fill" />
+                        </Stack>
                     </Stack>
                 </Stack>
                 <Stack
@@ -184,6 +153,15 @@ function CandidatePage(returnURL) {
                         height="306px"
                     >
                         <Box opacity="0.5">
+
+                            <Circle
+                                size="49.39px"
+                                borderColor="#FFFFFF"
+                                borderStartWidth="0.59px"
+                                borderEndWidth="0.59px"
+                                borderTopWidth="0.59px"
+                                borderBottomWidth="0.59px"
+                            />
                             <Circle
                                 size="34.57px"
                                 borderColor="#FFFFFF"
@@ -193,14 +171,16 @@ function CandidatePage(returnURL) {
                                 borderBottomWidth="0.59px"
                             />
                             <Circle
-                                size="49.39px"
+                                size="25px"
                                 borderColor="#FFFFFF"
                                 borderStartWidth="0.59px"
                                 borderEndWidth="0.59px"
                                 borderTopWidth="0.59px"
                                 borderBottomWidth="0.59px"
                             />
+
                         </Box>
+                        {/* {Goldfish} */}
                         <Box
                             borderRadius="137.25px"
                             width="254.62px"
@@ -565,12 +545,10 @@ function CandidatePage(returnURL) {
                                         </Stack>
                                     </Stack>
                                 </Stack>
-                                <Button height="64px">
-                                    <Stack direction="row" justify="center" align="center">
-                                        <Button textAlign="center">See Matches</Button>
-                                        <Icon name="mail-fill" />
-                                    </Stack>
-                                </Button>
+                                <Stack direction="row" justify="center" align="center">
+                                    <Button textAlign="center" size='lg'>See Matches</Button>
+                                    <Icon name="mail-fill" />
+                                </Stack>
                             </Stack>
                         </Stack>
                     </Stack>
@@ -679,12 +657,9 @@ function CandidatePage(returnURL) {
                                         <Box as="span">. </Box>
                                     </Text>
                                 </Stack>
-                                <Button height="64px">
-                                    <Stack direction="row" justify="center" align="center">
-                                        <Button textAlign="center">Join the new school</Button>
-                                        <Icon name="mail-fill" />
-                                    </Stack>
-                                </Button>
+                                <Stack direction="row" justify="center" align="center">
+                                    <Button size='lg' textAlign="center" rightIcon={<EmailIcon />}>Join the new school</Button>
+                                </Stack>
                                 <Stack
                                     paddingX="8px"
                                     paddingTop="208px"
@@ -732,7 +707,7 @@ function CandidatePage(returnURL) {
                                             lineHeight="1.5"
                                             fontWeight="regular"
                                             fontSize="24px"
-                                            color="#F0940B"
+                                            color="orange.300"
                                             flex="1"
                                             textAlign="center"
                                         >
@@ -1229,7 +1204,7 @@ function CandidatePage(returnURL) {
                                             fontSize="48px"
                                             color="#FFFFFF"
                                         >
-                                            Our Bedrock Principles.{' '}
+                                            Our Bedrock Principles.
                                         </Text>
                                     </Stack>
                                     <Stack
@@ -1243,7 +1218,7 @@ function CandidatePage(returnURL) {
                                             lineHeight="1.2"
                                             fontWeight="bold"
                                             fontSize="36px"
-                                            color="#F2A5FF"
+                                            color="pink.300"
                                         >
                                             TLDR: We put job seekers first.{' '}
                                         </Text>
@@ -1260,12 +1235,10 @@ function CandidatePage(returnURL) {
                                 alignSelf="stretch"
                                 maxWidth="100%"
                             >
-                                <Button height="64px">
-                                    <Stack direction="row" justify="center" align="center">
-                                        <Button textAlign="center">Return to questions</Button>
-                                        <Icon name="more-line" />
-                                    </Stack>
-                                </Button>
+                                <Stack direction="row" justify="center" align="center">
+                                    <Button size='lg' textAlign="center" colorScheme='pink' variant='outline' color='pink.300'>
+                                        <Heading as='h2' size='sm'>Return to questions</Heading></Button>
+                                </Stack>
                             </Stack>
                         </Stack>
                         <Stack
@@ -1289,7 +1262,7 @@ function CandidatePage(returnURL) {
                                     align="center"
                                     spacing="16px"
                                 >
-                                    <Stack
+                                    <Box
                                         paddingX="14.56px"
                                         paddingY="7.28px"
                                         borderRadius="7.28px"
@@ -1304,11 +1277,12 @@ function CandidatePage(returnURL) {
                                             fontWeight="bold"
                                             fontSize="32.15px"
                                             color="#FFFFFF"
+                                            textAlign='left'
                                         >
                                             Neutrality Always.{' '}
                                         </Text>
-                                    </Stack>
-                                    <Stack
+                                    </Box>
+                                    <Box
                                         paddingX="5.82px"
                                         borderRadius="7.28px"
                                         justify="center"
@@ -1325,12 +1299,13 @@ function CandidatePage(returnURL) {
                                             width="471.77px"
                                             height="296.31px"
                                             maxWidth="100%"
+                                            textAlign='left'
                                         >
                                             We make recommendations based on best fit scores, never the
                                             subscription status of companies in our network. Creating
                                             meaningful matches is always our top priority.{' '}
                                         </Text>
-                                    </Stack>
+                                    </Box>
                                 </Stack>
                             </Stack>
                             <Stack
@@ -1349,7 +1324,7 @@ function CandidatePage(returnURL) {
                                     width="503.04px"
                                     maxWidth="100%"
                                 >
-                                    <Stack
+                                    <Box
                                         paddingX="14.29px"
                                         paddingY="7.15px"
                                         borderRadius="7.15px"
@@ -1368,8 +1343,8 @@ function CandidatePage(returnURL) {
                                         >
                                             Your data is private.{' '}
                                         </Text>
-                                    </Stack>
-                                    <Stack
+                                    </Box>
+                                    <Box
                                         paddingX="5.72px"
                                         borderRadius="7.15px"
                                         direction="row"
@@ -1387,12 +1362,13 @@ function CandidatePage(returnURL) {
                                             width="463px"
                                             height="288px"
                                             maxWidth="100%"
+                                            textAlign='left'
                                         >
                                             Opening up about your career is sensitive. Your data is
                                             private to you by default. We’ve built the tool so you
                                             always initiate any sharing of your data with employers.{' '}
                                         </Text>
-                                    </Stack>
+                                    </Box>
                                 </Stack>
                             </Stack>
                         </Stack>
@@ -1507,11 +1483,10 @@ function CandidatePage(returnURL) {
                                                 width="794px"
                                                 maxWidth="100%"
                                             >
-                                                <Button>
-                                                    <Stack direction="row" justify="center" align="center">
-                                                        <Button textAlign="center">Email</Button>
-                                                    </Stack>
-                                                </Button>
+                                                <Stack direction="row" justify="center" align="center">
+                                                    <Button size='lg' textAlign="center" rightIcon={<EmailIcon />}>Email</Button>
+                                                </Stack>
+                                                {/* // TODO: Turn into input email */}
                                                 <Stack
                                                     paddingX="20px"
                                                     borderRadius="10px"
@@ -1548,13 +1523,13 @@ function CandidatePage(returnURL) {
                                 fontSize="30px"
                                 color="#FFFFFF"
                             >
-                                GoldfishAI L.L.C., 2023
+                                Goldfish AI L.L.C., 2023
                             </Text>
                         </Stack>
                     </Stack>
                 </Stack>
             </Stack>
-        </Stack>
+        </Stack >
     );
 }
 export default CandidatePage;
