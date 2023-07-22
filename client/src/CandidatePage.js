@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image } from '@chakra-ui/react';
+import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image, Input } from '@chakra-ui/react';
 import { ArrowUpIcon, EmailIcon } from '@chakra-ui/icons';
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { LoginButton } from './LoginButton';
@@ -7,6 +7,8 @@ import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 import DropdownMenu from './DropdownMenu';
+import jellyfishImg from './images/jellyfish.svg';
+// import jellyfishImg from './images/jellyfish-test.png';
 
 function CandidatePage(returnURL) {
     const { isAuthenticated, isLoading, user } = useAuth0();
@@ -732,7 +734,10 @@ function CandidatePage(returnURL) {
                 borderBottomWidth="1px"
                 borderStyle="dashed"
                 alignSelf="stretch"
-                background="linear-gradient(172deg, #0a1553 0%, #090f29 100%)"
+                backgroundImage={jellyfishImg}
+                backgroundSize={'2400px 1440px'}
+                backgroundRepeat={'no-repeat'}
+            // background="linear-gradient(172deg, #0a1553 0%, #090f29 100%)"
             >
                 <Stack
                     justify="flex-start"
@@ -741,7 +746,8 @@ function CandidatePage(returnURL) {
                     width="2388px"
                     height="1440px"
                     maxWidth="100%"
-                    background="#FFFFFF"
+                    border='0'
+                // background="#FFFFFF"
                 >
                     <Box>
                         <Box>
@@ -768,28 +774,14 @@ function CandidatePage(returnURL) {
                         </Box>
                         <Stack
                             paddingX="0.2px"
-                            borderRadius="20px"
                             justify="flex-start"
                             align="flex-start"
                             spacing="62px"
-                            borderColor="white"
-                            borderStartWidth="1px"
-                            borderEndWidth="1px"
-                            borderTopWidth="1px"
-                            borderBottomWidth="1px"
                         >
                             <Stack
                                 padding="10px"
-                                borderRadius="20px"
                                 justify="flex-start"
                                 align="flex-start"
-                                borderColor="white"
-                                borderStartWidth="1px"
-                                borderEndWidth="1px"
-                                borderTopWidth="1px"
-                                borderBottomWidth="1px"
-                                background="linear-gradient(155deg, #ffffff1a 0%, #ffffff05 100%)"
-                                backdropFilter="blur(30px)"
                             >
                                 <Stack
                                     paddingX="28px"
@@ -904,28 +896,14 @@ function CandidatePage(returnURL) {
                         >
                             <Stack
                                 paddingX="0.2px"
-                                borderRadius="20px"
                                 justify="flex-start"
                                 align="flex-start"
                                 spacing="62px"
-                                borderColor="white"
-                                borderStartWidth="1px"
-                                borderEndWidth="1px"
-                                borderTopWidth="1px"
-                                borderBottomWidth="1px"
                             >
                                 <Stack
                                     padding="10px"
-                                    borderRadius="20px"
                                     justify="flex-start"
                                     align="flex-start"
-                                    borderColor="white"
-                                    borderStartWidth="1px"
-                                    borderEndWidth="1px"
-                                    borderTopWidth="1px"
-                                    borderBottomWidth="1px"
-                                    background="linear-gradient(155deg, #ffffff1a 0%, #ffffff05 100%)"
-                                    backdropFilter="blur(30px)"
                                 >
                                     <Stack
                                         paddingX="28px"
@@ -1032,28 +1010,14 @@ function CandidatePage(returnURL) {
                             </Stack>
                             <Stack
                                 paddingX="0.2px"
-                                borderRadius="20px"
                                 justify="flex-start"
                                 align="flex-start"
                                 spacing="62px"
-                                borderColor="white"
-                                borderStartWidth="1px"
-                                borderEndWidth="1px"
-                                borderTopWidth="1px"
-                                borderBottomWidth="1px"
                             >
                                 <Stack
                                     padding="10px"
-                                    borderRadius="20px"
                                     justify="flex-start"
                                     align="flex-start"
-                                    borderColor="white"
-                                    borderStartWidth="1px"
-                                    borderEndWidth="1px"
-                                    borderTopWidth="1px"
-                                    borderBottomWidth="1px"
-                                    background="linear-gradient(155deg, #ffffff1a 0%, #ffffff05 100%)"
-                                    backdropFilter="blur(30px)"
                                 >
                                     <Stack
                                         paddingX="28px"
@@ -1078,8 +1042,9 @@ function CandidatePage(returnURL) {
                                         paddingEnd="16px"
                                         justify="flex-start"
                                         align="flex-start"
+
                                     >
-                                        <Stack
+                                        <Box
                                             paddingX="28px"
                                             paddingY="20px"
                                             borderRadius="10px"
@@ -1097,7 +1062,7 @@ function CandidatePage(returnURL) {
                                             >
                                                 Coverage Needs
                                             </Text>
-                                        </Stack>
+                                        </Box>
                                         <Stack
                                             paddingX="28px"
                                             paddingY="20px"
@@ -1241,9 +1206,8 @@ function CandidatePage(returnURL) {
                                 </Stack>
                             </Stack>
                         </Stack>
-                        <Stack
-                            direction="row"
-                            justify="center"
+                        <Flex
+                            direction={{ base: "column", lg: "row" }}
                             align="center"
                             spacing="-50px"
                             alignSelf="stretch"
@@ -1253,6 +1217,7 @@ function CandidatePage(returnURL) {
                                 justify="center"
                                 align="center"
                                 spacing="6.58px"
+                                flexBasis={{ base: "100%", lg: "50%" }}
                             >
                                 <Stack
                                     paddingX="14.56px"
@@ -1298,7 +1263,7 @@ function CandidatePage(returnURL) {
                                             color="#FFFFFF"
                                             width="471.77px"
                                             height="296.31px"
-                                            maxWidth="100%"
+                                            maxWidth="95%"
                                             textAlign='left'
                                         >
                                             We make recommendations based on best fit scores, never the
@@ -1314,6 +1279,7 @@ function CandidatePage(returnURL) {
                                 align="center"
                                 spacing="6.47px"
                                 height="480px"
+                                flexBasis={{ base: "100%", lg: "50%" }}
                             >
                                 <Stack
                                     paddingX="14.29px"
@@ -1371,7 +1337,7 @@ function CandidatePage(returnURL) {
                                     </Box>
                                 </Stack>
                             </Stack>
-                        </Stack>
+                        </Flex>
                     </Stack>
                 </Stack>
             </Stack>
@@ -1487,7 +1453,8 @@ function CandidatePage(returnURL) {
                                                     <Button size='lg' textAlign="center" rightIcon={<EmailIcon />}>Email</Button>
                                                 </Stack>
                                                 {/* // TODO: Turn into input email */}
-                                                <Stack
+                                                <Input id='email' placeholder="example@domain.com" type='email' color='white' />
+                                                {/* <Stack
                                                     paddingX="20px"
                                                     borderRadius="10px"
                                                     direction="row"
@@ -1500,7 +1467,8 @@ function CandidatePage(returnURL) {
                                                     borderBottomWidth="2px"
                                                     flex="1"
                                                     alignSelf="stretch"
-                                                />
+                                                /> */}
+
                                             </Stack>
                                         </Stack>
                                     </Stack>
