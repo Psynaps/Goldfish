@@ -6,9 +6,11 @@ import { LoginButton } from './LoginButton';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
+import goldfishLogo from './images/logo.png';
 import DropdownMenu from './DropdownMenu';
 import jellyfishImg from './images/jellyfish.svg';
 import netImg from './images/net.svg';
+import goldfishImg from './images/goldfish-swimming.png';
 // import jellyfishImg from './images/jellyfish-test.png';
 
 function CandidatePage(returnURL) {
@@ -43,8 +45,10 @@ function CandidatePage(returnURL) {
                         borderRadius='25%'
                         boxSize='64px'
                         borderColor='white'
-                        borderWidth='5px'
-                        src='/android-chrome-192x192.png'
+                        borderWidth='3px'
+                        // border='10px solid white'
+                        borderStyle='solid'
+                        src={goldfishLogo}
                         alt='Goldfish Ai Logo'
                     />
                     <ChakraLink as={RouterLink} to="/candidate" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
@@ -68,7 +72,9 @@ function CandidatePage(returnURL) {
                 </HStack>
             </Flex>
             <Stack
-                padding="80px"
+                // padding="80px"
+                p={20}
+                pb={0}
                 justify="flex-start"
                 align="flex-start"
                 alignSelf="stretch"
@@ -133,13 +139,13 @@ function CandidatePage(returnURL) {
                             </Text>
                         </Stack>
                         <Stack direction="row" justify="center" align="center">
-                            <Button textAlign="center">Start Cruising </Button>
+                            <Button textAlign="center" colorScheme='pink'>Start Cruising </Button>
                         </Stack>
                     </Stack>
                 </Stack>
                 <Stack
                     paddingStart="320px"
-                    paddingEnd="384px"
+                    paddingEnd="275px"
                     paddingY="8px"
                     direction="row"
                     justify="flex-end"
@@ -183,8 +189,9 @@ function CandidatePage(returnURL) {
 
                         </Box>
                         {/* {Goldfish} */}
+                        <Image src={goldfishImg} alt='Goldfish' />
                         <Box
-                            borderRadius="137.25px"
+                            // borderRadius="137.25px"
                             width="254.62px"
                             height="267.67px"
                             maxWidth="100%"
@@ -728,177 +735,64 @@ function CandidatePage(returnURL) {
                     </Stack>
                 </Stack>
             </Stack>
-            <Stack
-                padding="64px"
-                direction="row"
-                justify="flex-start"
-                align="flex-start"
-                spacing="0px"
-                borderColor="#FFFFFF"
-                borderTopWidth="1px"
-                borderBottomWidth="1px"
-                borderStyle="dashed"
-                alignSelf="stretch"
+            <Box
                 backgroundImage={jellyfishImg}
                 backgroundSize={'2400px 1440px'}
                 backgroundRepeat={'no-repeat'}
-            // background="linear-gradient(172deg, #0a1553 0%, #090f29 100%)"
+                backgroundOrigin='padding-box'
+                backgroundPosition='35% 20%'
+
             >
                 <Stack
+                    padding="64px"
+                    direction="row"
                     justify="flex-start"
                     align="flex-start"
-                    overflow="hidden"
-                    width="2388px"
-                    height="1440px"
-                    maxWidth="100%"
-                    border='0'
-                // background="#FFFFFF"
+                    spacing="0px"
+                    borderColor="#FFFFFF"
+                    borderTopWidth="1px"
+                    borderBottomWidth="1px"
+                    borderStyle="dashed"
+                    alignSelf="stretch"
+                // backgroundImage={jellyfishImg}
+                // backgroundSize={'2400px 1440px'}
+                // backgroundRepeat={'no-repeat'}
+                // backgroundOrigin='padding-box'
+                // background="linear-gradient(172deg, #0a1553 0%, #090f29 100%)"
                 >
-                    <Box>
+                    <Stack
+                        justify="flex-start"
+                        align="flex-start"
+                        overflow="hidden"
+                        width="2388px"
+                        height="1440px"
+                        maxWidth="100%"
+                        border='0'
+                    // background="#FFFFFF"
+                    >
                         <Box>
-                            <Stack
-                                padding="8px"
-                                direction="row"
-                                justify="center"
-                                align="center"
-                                width="461px"
-                                maxWidth="100%"
-                            >
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1"
-                                    fontWeight="bold"
-                                    fontSize="72px"
-                                    color="pink.500"
-                                    width="445px"
-                                    maxWidth="100%"
-                                >
-                                    How we match candidates.{' '}
-                                </Text>
-                            </Stack>
-                        </Box>
-                        <Stack
-                            paddingX="0.2px"
-                            justify="flex-start"
-                            align="flex-start"
-                            spacing="62px"
-                        >
-                            <Stack
-                                padding="10px"
-                                justify="flex-start"
-                                align="flex-start"
-                            >
+                            <Box>
                                 <Stack
-                                    paddingX="28px"
-                                    paddingY="20px"
-                                    borderRadius="10px"
+                                    padding="8px"
+                                    direction="row"
                                     justify="center"
                                     align="center"
-                                    background="pink.500"
+                                    width="461px"
+                                    maxWidth="100%"
                                 >
                                     <Text
                                         fontFamily="Inter"
-                                        lineHeight="1.33"
+                                        lineHeight="1"
                                         fontWeight="bold"
-                                        fontSize="30px"
-                                        color="white"
+                                        fontSize="72px"
+                                        color="pink.500"
+                                        width="445px"
+                                        maxWidth="100%"
                                     >
-                                        Your Career Goals{' '}
+                                        How we match candidates.{' '}
                                     </Text>
                                 </Stack>
-                                <Stack
-                                    paddingStart="20px"
-                                    paddingEnd="16px"
-                                    justify="flex-start"
-                                    align="flex-start"
-                                >
-                                    <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        spacing="16px"
-                                        background="cyan.300"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="30px"
-                                            color="white"
-                                        >
-                                            Management Track
-                                        </Text>
-                                    </Stack>
-                                    <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        spacing="16px"
-                                        background="cyan.300"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="30px"
-                                            color="white"
-                                        >
-                                            ME Specialization
-                                        </Text>
-                                    </Stack>
-                                    <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        spacing="16px"
-                                        background="cyan.300"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="30px"
-                                            color="white"
-                                        >
-                                            Industry Niche{' '}
-                                        </Text>
-                                    </Stack>
-                                    <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        spacing="16px"
-                                        background="cyan.300"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="30px"
-                                            color="white"
-                                        >
-                                            Mission Focus
-                                        </Text>
-                                    </Stack>
-                                </Stack>
-                            </Stack>
-                        </Stack>
-                    </Box>
-                    <Box>
-                        <Stack
-                            direction="row"
-                            justify="flex-start"
-                            align="flex-start"
-                            spacing="64px"
-                        >
+                            </Box>
                             <Stack
                                 paddingX="0.2px"
                                 justify="flex-start"
@@ -920,12 +814,12 @@ function CandidatePage(returnURL) {
                                     >
                                         <Text
                                             fontFamily="Inter"
-                                            lineHeight="1.2"
+                                            lineHeight="1.33"
                                             fontWeight="bold"
-                                            fontSize="36px"
+                                            fontSize="30px"
                                             color="white"
                                         >
-                                            Your Skill Background
+                                            Your Career Goals{' '}
                                         </Text>
                                     </Stack>
                                     <Stack
@@ -950,7 +844,7 @@ function CandidatePage(returnURL) {
                                                 fontSize="30px"
                                                 color="white"
                                             >
-                                                Industry Certs
+                                                Management Track
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -969,7 +863,7 @@ function CandidatePage(returnURL) {
                                                 fontSize="30px"
                                                 color="white"
                                             >
-                                                Technical Skills
+                                                ME Specialization
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -988,7 +882,7 @@ function CandidatePage(returnURL) {
                                                 fontSize="30px"
                                                 color="white"
                                             >
-                                                Deal Experience
+                                                Industry Niche{' '}
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -1007,131 +901,254 @@ function CandidatePage(returnURL) {
                                                 fontSize="30px"
                                                 color="white"
                                             >
-                                                Tool Familiarity
+                                                Mission Focus
                                             </Text>
                                         </Stack>
                                     </Stack>
                                 </Stack>
                             </Stack>
+                        </Box>
+                        <Box>
                             <Stack
-                                paddingX="0.2px"
+                                direction="row"
                                 justify="flex-start"
                                 align="flex-start"
-                                spacing="62px"
+                                spacing="64px"
                             >
                                 <Stack
-                                    padding="10px"
+                                    paddingX="0.2px"
                                     justify="flex-start"
                                     align="flex-start"
+                                    spacing="62px"
                                 >
                                     <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        background="pink.500"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="36px"
-                                            color="white"
-                                        >
-                                            Your HR Preferences
-                                        </Text>
-                                    </Stack>
-                                    <Stack
-                                        paddingStart="20px"
-                                        paddingEnd="16px"
+                                        padding="10px"
                                         justify="flex-start"
                                         align="flex-start"
+                                    >
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            background="pink.500"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="36px"
+                                                color="white"
+                                            >
+                                                Your Skill Background
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingStart="20px"
+                                            paddingEnd="16px"
+                                            justify="flex-start"
+                                            align="flex-start"
+                                        >
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
+                                            >
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Industry Certs
+                                                </Text>
+                                            </Stack>
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
+                                            >
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Technical Skills
+                                                </Text>
+                                            </Stack>
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
+                                            >
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Deal Experience
+                                                </Text>
+                                            </Stack>
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
+                                            >
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Tool Familiarity
+                                                </Text>
+                                            </Stack>
+                                        </Stack>
+                                    </Stack>
+                                </Stack>
+                                <Stack
+                                    paddingX="0.2px"
+                                    justify="flex-start"
+                                    align="flex-start"
+                                    spacing="62px"
+                                >
+                                    <Stack
+                                        padding="10px"
+                                        justify="flex-start"
+                                        align="flex-start"
+                                    >
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            background="pink.500"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="36px"
+                                                color="white"
+                                            >
+                                                Your HR Preferences
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingStart="20px"
+                                            paddingEnd="16px"
+                                            justify="flex-start"
+                                            align="flex-start"
 
-                                    >
-                                        <Box
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            background="cyan.300"
                                         >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="30px"
-                                                color="white"
+                                            <Box
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
                                             >
-                                                Coverage Needs
-                                            </Text>
-                                        </Box>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            background="cyan.300"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="30px"
-                                                color="white"
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Coverage Needs
+                                                </Text>
+                                            </Box>
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
                                             >
-                                                401k Benchmark
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            background="cyan.300"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="30px"
-                                                color="white"
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    401k Benchmark
+                                                </Text>
+                                            </Stack>
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
                                             >
-                                                Flexibility Needs
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            background="cyan.300"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="30px"
-                                                color="white"
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Flexibility Needs
+                                                </Text>
+                                            </Stack>
+                                            <Stack
+                                                paddingX="28px"
+                                                paddingY="20px"
+                                                borderRadius="10px"
+                                                justify="center"
+                                                align="center"
+                                                spacing="16px"
+                                                background="cyan.300"
                                             >
-                                                Wellness Benefits
-                                            </Text>
+                                                <Text
+                                                    fontFamily="Inter"
+                                                    lineHeight="1.2"
+                                                    fontWeight="bold"
+                                                    fontSize="30px"
+                                                    color="white"
+                                                >
+                                                    Wellness Benefits
+                                                </Text>
+                                            </Stack>
                                         </Stack>
                                     </Stack>
                                 </Stack>
                             </Stack>
-                        </Stack>
-                    </Box>
+                        </Box>
+                    </Stack>
                 </Stack>
-            </Stack>
+            </Box>
             <Stack
                 direction="row"
                 justify="center"
