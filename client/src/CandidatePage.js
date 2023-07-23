@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image, Input } from '@chakra-ui/react';
-import { ArrowUpIcon, EmailIcon } from '@chakra-ui/icons';
+import { ArrowUpIcon, ArrowRightIcon, ArrowDownIcon, EmailIcon } from '@chakra-ui/icons';
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import { LoginButton } from './LoginButton';
 import { Link as ChakraLink } from "@chakra-ui/react";
@@ -8,6 +8,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 import DropdownMenu from './DropdownMenu';
 import jellyfishImg from './images/jellyfish.svg';
+import netImg from './images/net.svg';
 // import jellyfishImg from './images/jellyfish-test.png';
 
 function CandidatePage(returnURL) {
@@ -133,7 +134,6 @@ function CandidatePage(returnURL) {
                         </Stack>
                         <Stack direction="row" justify="center" align="center">
                             <Button textAlign="center">Start Cruising </Button>
-                            <Icon name="mail-fill" />
                         </Stack>
                     </Stack>
                 </Stack>
@@ -660,7 +660,7 @@ function CandidatePage(returnURL) {
                                     </Text>
                                 </Stack>
                                 <Stack direction="row" justify="center" align="center">
-                                    <Button size='lg' textAlign="center" rightIcon={<EmailIcon />}>Join the new school</Button>
+                                    <Button size='lg' textAlign="center" colorScheme='pink' bg='pink.300' _hover={{ bg: 'pink.400' }} _active={{ bg: 'pink.500' }} rightIcon={<EmailIcon />}>Joins the new school</Button>
                                 </Stack>
                                 <Stack
                                     paddingX="8px"
@@ -715,8 +715,13 @@ function CandidatePage(returnURL) {
                                         >
                                             Bringing candidates to the center of searching...
                                         </Text>
-                                        <ArrowUpIcon data-icon="CkArrowUp" />
+                                        <ArrowDownIcon data-icon="CkArrowDown" />
                                     </Stack>
+                                    <VStack alignItems='center'>
+                                        <Circle size='12px' bg='white' mb='-10px' />
+                                        <Box bg='white' w='3px' h={40} mb='-10px' justifySelf={'center'}></Box>
+                                        <Image src={netImg} alt='Fishing Net' />
+                                    </VStack>
                                 </Stack>
                             </Stack>
                         </Stack>

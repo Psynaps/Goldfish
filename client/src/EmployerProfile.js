@@ -883,7 +883,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                     getUserJobPostings();
                 }
             });
-    }, [user, apiURL, setIsSaving, selectedJobPosting, getUserJobPostings]);
+    }, [user, apiURL, setIsSaving, selectedJobPosting, getUserJobPostings, jobs, setJobs, setSelectedJobListing, onClose]);
 
 
 
@@ -1033,7 +1033,7 @@ function EmployerProfile({ returnURL }) {
     const [searchParams] = useSearchParams();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
-    const [selectedJobPosting, setSelectedJobListing] = useState(-1);
+    const [selectedJobPosting, setSelectedJobPosting] = useState(-1);
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
     const [jobs, setJobs] = useState({
@@ -1198,7 +1198,7 @@ function EmployerProfile({ returnURL }) {
                     {selectedTab === 'Employer Profile' && <EmployerProfileBuilderContent selectedSubTab={selectedSubTab} setSelectedSubTab={setSelectedSubTab} />}
                     {selectedTab === 'Job Postings' && <JobPostingsContent
                         selectedJobPosting={selectedJobPosting}
-                        setSelectedJobListing={setSelectedJobListing}
+                        setSelectedJobListing={setSelectedJobPosting}
                         jobs={jobs}
                         setJobs={setJobs}
                     />}
@@ -1222,7 +1222,7 @@ function EmployerProfile({ returnURL }) {
                         jobs={jobs}
                         setJobs={setJobs}
                         selectedJobPosting={selectedJobPosting}
-                        setSelectedJobListing={setSelectedJobListing}
+                        setSelectedJobListing={setSelectedJobPosting}
                         getUserJobPostings={getUserJobPostings}
                     />}
                     {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
