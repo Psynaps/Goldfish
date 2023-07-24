@@ -764,7 +764,7 @@ function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, s
                     })}
             </VStack>
             {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.date_created} tabName={job.job_posting_id} jobActive={job.active} />; })} */}
-            <Button w='80%' key={'-1'} alignSelf='center' color={selectedJobPosting === -1 ? 'blue' : 'white'} variant={selectedJobPosting === -1 ? 'solid' : 'outline'}
+            <Button w='80%' key={'-1'} alignSelf='center' color='white' variant={selectedJobPosting === -1 ? 'solid' : 'outline'}
                 borderWidth={selectedJobPosting === -1 ? '4px' : '1px'}
                 onClick={() => setSelectedJobListing(-1)}>
                 <Text fontWeight='bold' fontSize={['md', 'lg', 'xl']}>
@@ -802,14 +802,13 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
             setJobs(newJobs);
         }
         // console.log('formData:', data);
-        // console.log('jobs:', jobs);
         sendSaveJobPosting(newJob);
 
     };
 
     const sendSaveJobPosting = useCallback((newJob) => {
         setIsSaving(true);
-        console.log('trying to post job info', newJob);
+        console.log('trying to post job info', newJob, jobs);
 
         // Create FormData to send files
         const formData = new FormData();
@@ -835,7 +834,6 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                 setIsSaving(false);
                 if (json.success) {
                     if (newJob.job_posting_id === -1) {
-                        console.log('new job posting created:', json);
                         newJob.job_posting_id = json.job_posting_id;
                         newJob.date_created = json.date_created;
                         let newJobs = { ...jobs };
@@ -851,7 +849,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                 console.error(e);
                 setIsSaving(false);
             });
-    }, [user, apiURL, setIsSaving]);
+    }, [user, apiURL, setIsSaving, jobs, setJobs, setSelectedJobListing]);
 
     // Delete job posting selectedJobPosting
     const deleteJobPosting = useCallback(() => {

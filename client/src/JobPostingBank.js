@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Box, VStack, HStack, Text, Select } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
