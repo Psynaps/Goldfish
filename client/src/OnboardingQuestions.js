@@ -65,29 +65,6 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const timeoutId = useRef(null); // Keep reference to the timeout
-    // const [selectedAnswers, setSelectedAnswers] = useState({});
-
-    // const handleAnswerSelect = async (question_id, answer_id) => {
-    //     setSelectedAnswers(prevState => ({
-    //         ...prevState,
-    //         [question_id]: answer_id,
-    //     }));
-
-    //     // After setting state, make request to the server
-    //     try {
-    //         await axios.post(`${apiURL}/setUserAnswer`, {
-    //             user_id: user.sub,
-    //             question_id,
-    //             answer_id
-    //         });
-    //     } catch (err) {
-    //         console.error(err);
-    //     }
-
-    //     if (currentQuestionIndex < questions.length - 1) {
-    //         setCurrentQuestionIndex(currentQuestionIndex + 1);
-    //     }
-    // };
     const handleAnswerSelect = async (question_id, answer_id) => {
         setSelectedAnswers(prevState => ({
             ...prevState,
@@ -129,7 +106,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
         };
     }, []);
 
-    //useEffect to set the currentQuestionIndex to the index of the first unanswered question when
+    // useEffect to set the currentQuestionIndex to the index of the first unanswered question when
     // hasLoaded is true, and make this effect dependent on hasLoaded
     useEffect(() => {
         if (hasLoaded) {

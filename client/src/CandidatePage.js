@@ -237,7 +237,10 @@ function CandidatePage(returnURL) {
                 align="flex-start"
                 alignSelf="stretch"
             >
-                <OnboardingQuestions apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} />
+                {isAuthenticated ?
+                    <OnboardingQuestions apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} /> :
+                    <Heading as='h1' >Please log in to see and answer questions.</Heading>
+                }
             </Stack>
             <Stack
                 paddingX="80px"
