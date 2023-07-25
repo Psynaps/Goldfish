@@ -54,31 +54,6 @@ app.get('/', (req, res) => { res.send('Hello from Express!'); });
 
 
 
-
-
-app.get('/db', async (req, res) => {
-
-    try {
-        const client = await pool.connect();
-        const query = {
-            text: 'SELECT * FROM user_answers WHERE user_id = $1',
-            values: ['*'],
-        };
-
-        const result = await client.query(query);
-        const results = { 'results': (result) ? result.rows : null };
-        res.send(results);
-        client.release();
-
-
-
-    } catch (err) {
-        console.error(err);
-        res.send("Error " + err);
-    }
-
-});
-
 app.post('/api/postJob', async (req, res) => {
     try {
         console.log("postJob req received");
@@ -448,6 +423,53 @@ app.delete('/api/deleteJobPosting', async (req, res) => {
         res.send("Error " + err);
     }
 });
+
+
+app.post('/api/setUserAnswer', async (req, res) => {
+    const { user_id, question_id, answer_id } = req.body;
+
+    try {
+        const query = `
+            INSERT INTO user_answers (user_id, question_id, answer_id) 
+            VALUES ($1, $2, $3) 
+            ON CONFLICT (user_id, question_id) 
+            DO UPDATE SET answer_id = EXCLUDED.answer_id;
+        `;
+
+        await pool.query(query, [user_id, question_id, answer_id]);
+
+        res.json({ success: true });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false });
+    }
+});
+
+app.get('/api/getUserAnswers', async (req, res) => {
+    const user_id = req.query.user_id;
+    console.log('getUserAnswers req received', user_id);
+
+    try {
+        const query = `
+            SELECT question_id, answer_id
+            FROM user_answers
+            WHERE user_id = $1;
+        `;
+
+        const { rows } = await pool.query(query, [user_id]);
+
+        const answers = rows.reduce((acc, row) => {
+            acc[row.question_id] = row.answer_id;
+            return acc;
+        }, {});
+
+        res.json({ success: true, answers });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false });
+    }
+});
+
 
 
 

@@ -25,8 +25,6 @@ const theme = extendTheme({
             400: '#1EFA7A',
             500: '#1EDF78',
             600: '#57E899',
-
-
         },
         cyan: {
             // 200: '#A0B0FF',
@@ -57,6 +55,24 @@ const theme = extendTheme({
             success: "#00ff00",
         }
         // ...
+    },
+    components: {
+        Button: {
+            baseStyle: {
+                borderRadius: 'md',
+                // shadow: 'md',
+                whiteSpace: 'normal',
+                // wordBreak: 'break-word',
+                // textAlign: 'left',
+                // blockSize: 'auto',
+                fontSize: ['2xl', null, 'xl'],
+                height: 'auto',
+                p: 2,
+                // py: '3',
+                // px: '6',
+
+            }
+        }
     },
 }
 );

@@ -51,3 +51,10 @@ CREATE TABLE employer_profiles (
   financial3 INTEGER,
   financial4 INTEGER
 );
+
+CREATE TABLE user_answers (
+    user_id VARCHAR(255) NOT NULL,
+    question_id INT NOT NULL,
+    answer_id INT NOT NULL,
+    PRIMARY KEY (user_id, question_id)
+);

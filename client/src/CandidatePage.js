@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image, Input } from '@chakra-ui/react';
 import { ArrowUpIcon, ArrowRightIcon, ArrowDownIcon, EmailIcon } from '@chakra-ui/icons';
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
+import axios from 'axios';
 import { LoginButton } from './LoginButton';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
@@ -14,10 +15,46 @@ import goldfishImg from './images/goldfish-swimming.png';
 import lightRaysImg from './images/lightrays.png';
 import rock1Img from './images/rock1.svg';
 import rock2Img from './images/rock2.svg';
+import OnboardingQuestions from './OnboardingQuestions';
 // import jellyfishImg from './images/jellyfish-test.png';
 
 function CandidatePage(returnURL) {
     const { isAuthenticated, isLoading, user } = useAuth0();
+    const [selectedAnswers, setSelectedAnswers] = useState({});
+    const [hasLoaded, setHasLoaded] = useState(false);
+
+    const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+
+    //useCallback function which runs on page load to check if the user has already
+    // answered the onboarding questions by querying the server calling getUserAnswers and setting 
+    // the selectedAnswers state to the response. Then it sets the hasLoaded state to true
+    // so that the OnboardingQuestions component can render
+    const fetchUserAnswers = useCallback(async () => {
+        if (isAuthenticated) {
+            try {
+                const response = await axios.get(`${apiURL}/getUserAnswers?user_id=${user.sub}`);
+
+                if (response.data.success) {
+                    console.log('successfully retrieved user answers:', response.data);
+                    setSelectedAnswers(response.data.answers);
+                    setHasLoaded(true);
+                }
+                else {
+                    console.log('error retrieving user answers:', response.data);
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+    }, [isAuthenticated, user, apiURL]);
+
+    //useEffect to call fetchUserAnswers on page load
+    useEffect(() => {
+        fetchUserAnswers();
+    }, [fetchUserAnswers]);
+
+
+
     return (
         <Stack
             justify="flex-start"
@@ -200,360 +237,7 @@ function CandidatePage(returnURL) {
                 align="flex-start"
                 alignSelf="stretch"
             >
-                <Stack
-                    paddingX="64px"
-                    justify="flex-start"
-                    align="flex-start"
-                    spacing="48px"
-                    alignSelf="stretch"
-                >
-                    <Stack
-                        justify="flex-start"
-                        align="flex-start"
-                        spacing="0px"
-                        overflow="hidden"
-                        alignSelf="stretch"
-                    >
-                        <Stack
-                            justify="flex-start"
-                            align="center"
-                            spacing="0px"
-                            alignSelf="stretch"
-                        >
-                            <Stack
-                                justify="flex-start"
-                                align="center"
-                                spacing="25px"
-                                alignSelf="stretch"
-                            >
-                                <Stack
-                                    paddingY="16px"
-                                    justify="flex-start"
-                                    align="flex-start"
-                                    alignSelf="stretch"
-                                >
-                                    <Stack
-                                        padding="36px"
-                                        borderRadius="20px"
-                                        direction="row"
-                                        justify="flex-start"
-                                        align="center"
-                                        borderColor="#FFFFFF"
-                                        borderStartWidth="1px"
-                                        borderEndWidth="1px"
-                                        borderTopWidth="1px"
-                                        borderBottomWidth="1px"
-                                        alignSelf="stretch"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="30px"
-                                            color="#FFFFFF"
-                                            flex="1"
-                                        >
-                                            What level of experience do you have in implementing APIs on
-                                            behalf of prospective customers?
-                                        </Text>
-                                    </Stack>
-                                </Stack>
-                                <Stack
-                                    justify="flex-start"
-                                    align="center"
-                                    spacing="60px"
-                                    alignSelf="stretch"
-                                >
-                                    <Stack
-                                        paddingStart="40px"
-                                        paddingTop="10px"
-                                        justify="center"
-                                        align="flex-start"
-                                        spacing="24px"
-                                        alignSelf="stretch"
-                                    >
-                                        <Stack
-                                            padding="36px"
-                                            borderRadius="10px"
-                                            direction="row"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="green.500"
-                                            borderStartWidth="1px"
-                                            borderEndWidth="1px"
-                                            borderTopWidth="1px"
-                                            borderBottomWidth="1px"
-                                            alignSelf="stretch"
-                                            background="rgba(255, 255, 255, 0.2)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.5"
-                                                fontWeight="regular"
-                                                fontSize="24px"
-                                                color="white"
-                                                flex="1"
-                                            >
-                                                No experience
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            padding="36px"
-                                            borderRadius="10px"
-                                            direction="row"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="white"
-                                            borderStartWidth="1px"
-                                            borderEndWidth="1px"
-                                            borderTopWidth="1px"
-                                            borderBottomWidth="1px"
-                                            alignSelf="stretch"
-                                            background="rgba(255, 255, 255, 0.2)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.5"
-                                                fontWeight="regular"
-                                                fontSize="24px"
-                                                color="white"
-                                                flex="1"
-                                            >
-                                                Beginner: Have participated in API implementation for
-                                                customers with support from a team, but have not led the
-                                                process.
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            padding="36px"
-                                            borderRadius="10px"
-                                            direction="row"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="white"
-                                            borderStartWidth="1px"
-                                            borderEndWidth="1px"
-                                            borderTopWidth="1px"
-                                            borderBottomWidth="1px"
-                                            alignSelf="stretch"
-                                            background="rgba(255, 255, 255, 0.2)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.5"
-                                                fontWeight="regular"
-                                                fontSize="24px"
-                                                color="white"
-                                                flex="1"
-                                            >
-                                                Intermediate: Have regularly led the process of
-                                                implementing APIs for customers, with an understanding of
-                                                the associated practices and protocols.
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            padding="36px"
-                                            borderRadius="10px"
-                                            direction="row"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="white"
-                                            borderStartWidth="1px"
-                                            borderEndWidth="1px"
-                                            borderTopWidth="1px"
-                                            borderBottomWidth="1px"
-                                            alignSelf="stretch"
-                                            background="rgba(255, 255, 255, 0.2)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.5"
-                                                fontWeight="regular"
-                                                fontSize="24px"
-                                                color="white"
-                                                flex="1"
-                                            >
-                                                Advanced: Have extensive experience in independently
-                                                leading the process of API implementation for a variety of
-                                                customers, with the ability to troubleshoot issues and
-                                                optimize the process.
-                                            </Text>
-                                        </Stack>
-                                    </Stack>
-                                </Stack>
-                            </Stack>
-                        </Stack>
-                        <Stack
-                            paddingTop="80px"
-                            paddingBottom="16px"
-                            direction="row"
-                            justify="center"
-                            align="center"
-                            spacing="40px"
-                            overflow="hidden"
-                            alignSelf="stretch"
-                        >
-                            <Stack justify="center" align="center" spacing="56px" flex="1">
-                                <Stack
-                                    direction="row"
-                                    justify="center"
-                                    align="flex-start"
-                                    spacing="9.44px"
-                                >
-                                    <Stack
-                                        direction="row"
-                                        justify="flex-start"
-                                        align="flex-start"
-                                        spacing="36px"
-                                    >
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="green.500"
-                                                borderStartWidth="3.54px"
-                                                borderEndWidth="3.54px"
-                                                borderTopWidth="3.54px"
-                                                borderBottomWidth="3.54px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                        <Stack
-                                            direction="row"
-                                            justify="flex-start"
-                                            align="flex-start"
-                                            spacing="0px"
-                                        >
-                                            <Circle
-                                                size="80px"
-                                                borderColor="white"
-                                                borderStartWidth="1.18px"
-                                                borderEndWidth="1.18px"
-                                                borderTopWidth="1.18px"
-                                                borderBottomWidth="1.18px"
-                                            />
-                                        </Stack>
-                                    </Stack>
-                                </Stack>
-                                <Stack direction="row" justify="center" align="center">
-                                    <Button textAlign="center" size='lg' colorScheme='orange' rightIcon={<ArrowRightIcon />}>See Matches</Button>
-                                </Stack>
-                            </Stack>
-                        </Stack>
-                    </Stack>
-                </Stack>
+                <OnboardingQuestions apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} />
             </Stack>
             <Stack
                 paddingX="80px"
@@ -731,7 +415,7 @@ function CandidatePage(returnURL) {
                 backgroundImage={jellyfishImg}
                 backgroundSize={'2388px 1440px'}
                 backgroundRepeat={'no-repeat'}
-                backgroundOrigin='padding-box'
+                // backgroundOrigin='padding-box'
                 backgroundPosition='75% 20%'
 
             >

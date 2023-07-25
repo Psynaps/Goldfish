@@ -8,7 +8,7 @@ import DropdownMenu from './DropdownMenu';
 import { LoginButton } from './LoginButton';
 import { questionsData } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Spacer, useColorMode, useColorModeValue } from '@chakra-ui/react';
 // import './App.css';
 
 // const deployURL = 'https://goldfishai.netlify.app';
@@ -494,7 +494,7 @@ function EmployerPage(returnURL) {
                         borderRadius='md'
                         p={5}
                     >
-                        <HStack justifyContent='flex-end' w='100%'>
+                        <Flex direction='row' justifyContent='flex-end' w='100%'>
                             {/* <Flex w='100%' direction='row' alignItems={'flex-end'}> */}
                             {/* <Text fontSize='2xl'>Job Posting Builder</Text> */}
                             <Textarea
@@ -508,11 +508,17 @@ function EmployerPage(returnURL) {
                                 onChange={e => handleLocationChange(e.target.value)}
                                 minHeight='15%'
                             /> */}
-                            <Button alignSelf='flex-end' isDisabled={!selectedJobPostingQuestion} colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'} width='auto' onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}>
-                                <Text p={12}>Remove</Text>
+                            <Spacer p={2} />
+                            <Button alignSelf='flex-end' isDisabled={!selectedJobPostingQuestion}
+                                colorScheme={(selectedJobPostingQuestion) ? 'blue' : 'gray'}
+                                w='125px'
+                                p={2}
+                                onClick={() => { removeQuestionFromJobPosting(selectedJobPostingQuestion); }}
+                            >
+                                <Text>Remove</Text>
                             </Button>
                             {/* </Flex> */}
-                        </HStack>
+                        </Flex>
                         <JobPostingBank
                             onQuestionSelect={handleJobPostingQuestionSelection}
                             onAnswerSelect={handleJobPostingAnswerSelect}
