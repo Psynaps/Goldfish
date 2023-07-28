@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image, Input } from '@chakra-ui/react';
 import { ArrowUpIcon, ArrowRightIcon, ArrowDownIcon, EmailIcon } from '@chakra-ui/icons';
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
@@ -19,9 +19,11 @@ import OnboardingQuestions from './OnboardingQuestions';
 // import jellyfishImg from './images/jellyfish-test.png';
 
 function CandidatePage(returnURL) {
-    const { isAuthenticated, isLoading, user } = useAuth0();
+    const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [hasLoaded, setHasLoaded] = useState(false);
+    const questionsRef = useRef(null);
+    const [searchParams] = useSearchParams();
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
@@ -48,12 +50,20 @@ function CandidatePage(returnURL) {
         }
     }, [isAuthenticated, user, apiURL]);
 
+    const scrollToQuestions = () => window.scrollTo({ behavior: 'smooth', top: questionsRef.current.offsetTop - 50 });
+
+
     //useEffect to call fetchUserAnswers on page load
     useEffect(() => {
         fetchUserAnswers();
     }, [fetchUserAnswers]);
 
-
+    useEffect(() => {
+        const refFromURL = searchParams.get('ref') || searchParams.get('Ref'); // get jobID from the query string, either case
+        if (refFromURL) { // if jobID exists in the URL
+            console.log('jumping back to ref');
+        }
+    }, [user, searchParams]);
 
     return (
         <Stack
@@ -180,7 +190,7 @@ function CandidatePage(returnURL) {
                                 </Text>
                             </Stack>
                             <Stack direction="row" justify="center" align="center">
-                                <Button textAlign="center" colorScheme='pink'>Start Cruising </Button>
+                                <Button textAlign="center" colorScheme='pink' onClick={scrollToQuestions}>Start Cruising </Button>
                             </Stack>
                         </Stack>
                     </Stack>
@@ -238,8 +248,8 @@ function CandidatePage(returnURL) {
                 alignSelf="stretch"
             >
                 {isAuthenticated ?
-                    <OnboardingQuestions apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} /> :
-                    <Heading as='h1' >Please log in to see and answer questions.</Heading>
+                    <OnboardingQuestions innerRef={questionsRef} apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} /> :
+                    <Heading as='h1' ref={questionsRef} >Please log in to see and answer questions.</Heading>
                 }
             </Stack>
             <Stack
@@ -346,7 +356,9 @@ function CandidatePage(returnURL) {
                                     </Text>
                                 </Stack>
                                 <Stack direction="row" justify="center" align="center">
-                                    <Button size='lg' textAlign="center" colorScheme='pink' rightIcon={<EmailIcon />}>Joins the new school</Button>
+                                    <Button size='lg' textAlign="center" colorScheme='pink' rightIcon={<EmailIcon />}
+                                        onClick={() => { loginWithRedirect({ returnTo: `${window.location.origin}?ref=` }); }}
+                                    >Join the new school</Button>
                                 </Stack>
                                 <Stack
                                     paddingX="8px"
@@ -972,7 +984,7 @@ function CandidatePage(returnURL) {
                                 maxWidth="100%"
                             >
                                 <Stack direction="row" justify="center" align="center">
-                                    <Button size='lg' textAlign="center" colorScheme='pink' variant='outline'>
+                                    <Button size='lg' textAlign="center" colorScheme='pink' variant='outline' onClick={scrollToQuestions}>
                                         <Heading as='h2' size='sm'>Return to questions</Heading></Button>
                                 </Stack>
                             </Stack>
@@ -980,28 +992,29 @@ function CandidatePage(returnURL) {
                         <Flex
                             direction={{ base: "column", lg: "row" }}
                             align="center"
-                            // spacing="-50px"
-                            alignSelf="stretch"
+                        // spacing="-50px"
+                        // alignSelf="stretch"
                         >
                             <Stack
-                                padding="6.58px"
+                                // padding="6.47px"
                                 justify="center"
                                 align="center"
-                                spacing="6.58px"
+                                // spacing="6.47px"
                                 height="480px"
                                 flexBasis={{ base: "100%", lg: "50%" }}
-                                // bg='red'
                                 backgroundImage={rock1Img}
                                 backgroundSize='contain'
                                 backgroundRepeat='no-repeat'
                             >
                                 <Stack
-                                    paddingX="14.56px"
-                                    paddingBottom="5.82px"
-                                    borderRadius="14.56px"
+                                    paddingX="14.29px"
+                                    pt={12}
+                                    borderRadius="14.29px"
                                     justify="center"
                                     align="center"
                                     spacing="16px"
+                                    width="503.04px"
+                                    maxWidth="100%"
                                 >
                                     <Box
                                         paddingX="14.56px"
@@ -1050,11 +1063,11 @@ function CandidatePage(returnURL) {
                                 </Stack>
                             </Stack>
                             <Stack
-                                padding="6.47px"
+                                // padding="6.47px"
                                 // pl='-50ox'
                                 justify="center"
                                 align="center"
-                                spacing="6.47px"
+                                // spacing="6.47px"
                                 height="480px"
                                 flexBasis={{ base: "100%", lg: "50%" }}
                                 backgroundImage={rock2Img}
@@ -1062,7 +1075,7 @@ function CandidatePage(returnURL) {
                                 backgroundRepeat='no-repeat'
                             >
                                 <Stack
-                                    paddingX="14.29px"
+                                    // paddingX="14.29px"
                                     pt={12}
                                     borderRadius="14.29px"
                                     justify="center"

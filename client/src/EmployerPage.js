@@ -42,7 +42,10 @@ function EmployerPage(returnURL) {
     // const jobPostingSelectedBorderColor = useColorModeValue('orange.500', 'orange.300');
     // const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
-    const categories = ['Industry Certifications', 'Technical Knowledge', 'Tools & Platforms', 'Sales & Marketing Skills', 'Educational Background', 'Work & Industry Experience', 'HR / Work-Life Balance', 'Career Goals'];
+    const categories = ['Industry Certifications', 'Technical Knowledge', 'Deal Experience', 'Tools & Platforms', 'HR Preferences',
+        'Educational Background',
+        'Work & Industry Experience',
+        'Career Goals'];
 
     // const [message, setMessage] = useState(null);
     const [isPosting, setIsPosting] = useState(false);
@@ -441,7 +444,11 @@ function EmployerPage(returnURL) {
                                 onClick={() => handleFilterButtonClick(category)}
                                 bg={selectedCategory === category ? selectedBg : 'white'}
                                 // color={selectedCategory === category ? selectedColor : initialColor}
-                                color='black'
+                                color={selectedCategory === category ? 'white' : 'black'}
+                                _hover={{
+                                    color: 'white',
+                                    bg: selectedCategory == category ? selectedBg : 'blue.600'
+                                }}
                                 borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
                                 borderWidth={selectedCategory === category ? '5px' : '3px'}
                                 // minW={'200px'} // Add this line

@@ -60,7 +60,7 @@ const questions = [
     // Add more questions as needed...
 ];
 
-const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasLoaded }) => {
+const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasLoaded, innerRef }) => {
     const { user, isAuthenticated } = useAuth0();
 
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -118,7 +118,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
     }, [hasLoaded]);
 
     return (
-        <VStack spacing={4} w='100%'>
+        <VStack spacing={4} w='100%' ref={innerRef}>
             <Box w='80%'>
                 <Box borderRadius='md' color='white' borderColor='white' borderWidth={2} p={2}>
                     <Heading as='h2' size='lg' >

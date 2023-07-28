@@ -2,12 +2,12 @@ import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Button, useColorModeValue } from '@chakra-ui/react';
 
-function LoginButton() {
+function LoginButton({ buttonText = 'Log In/Sign Up' }) {
     const { loginWithRedirect } = useAuth0();
 
     return (
         <Button onClick={() => loginWithRedirect({ returnTo: window.location.origin })} background='blue' borderRadius={15} color={useColorModeValue('white', 'white')}>
-            Log In/Sign Up
+            {buttonText}
         </Button>
     );
 }

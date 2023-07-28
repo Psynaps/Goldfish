@@ -67,7 +67,7 @@ export const questionsData = [
       "VMware",
       "Network Virtualization"
     ],
-    "question": "Do you hold a VMware Certified Professional – Network Virtualization (VCP-NV) certification?",
+    "question": "Do you hold a VMware Certified Professional certification?",
     "answers": [
       {
         "answerID": 1,
@@ -81,26 +81,6 @@ export const questionsData = [
   },
   {
     "questionID": "5",
-    "category": "Industry Certifications",
-    "tags": [
-      "CSA",
-      "AWS",
-      "Certification"
-    ],
-    "question": "Have you obtained AWS's Certified Solutions Architect (CSA) certification?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes"
-      },
-      {
-        "answerID": 2,
-        "answer": "No"
-      }
-    ]
-  },
-  {
-    "questionID": "6",
     "category": "Industry Certifications",
     "tags": [
       "Google Cloud",
@@ -120,7 +100,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "7",
+    "questionID": "6",
     "category": "Industry Certifications",
     "tags": [
       "Azure",
@@ -141,7 +121,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "8",
+    "questionID": "7",
     "category": "Industry Certifications",
     "tags": [
       "CEH",
@@ -161,14 +141,14 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "9",
+    "questionID": "8",
     "category": "Industry Certifications",
     "tags": [
       "TOGAF",
       "Certification",
       "Architecture Framework"
     ],
-    "question": "Do you hold The Open Group Architecture Foundation (TOGAF) certification?",
+    "question": "ITIL, Certification, IT Service Management, Foundation",
     "answers": [
       {
         "answerID": 1,
@@ -181,7 +161,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "10",
+    "questionID": "9",
     "category": "Industry Certifications",
     "tags": [
       "CISA",
@@ -201,7 +181,79 @@ export const questionsData = [
     ]
   },
   {
+    "questionID": "10",
+    "category": "Industry Certifications",
+    "tags": [
+      "CISM"
+    ],
+    "question": "Do you hold the Certified Information Security Manager (CISM) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
     "questionID": "11",
+    "category": "Industry Certifications",
+    "tags": [
+      "CRISC"
+    ],
+    "question": "Do you hold the Certified in Risk and Information Systems Control (CRISC) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "12",
+    "category": "Industry Certifications",
+    "tags": [
+      "CDPSE"
+    ],
+    "question": "Do you hold the Certified Data Privacy Solutions Engineer (CDPSE) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "13",
+    "category": "Industry Certifications",
+    "tags": [
+      "CGEIT"
+    ],
+    "question": "Do you hold the Certified in Governance of Enterprise IT (CGEIT) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "14",
     "category": "Industry Certifications",
     "tags": [
       "CSM",
@@ -222,14 +274,14 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "12",
+    "questionID": "15",
     "category": "Industry Certifications",
     "tags": [
       "ITIL",
       "Certification",
       "IT Service Management"
     ],
-    "question": "Have you obtained the ITIL certification?",
+    "question": "Have you obtained the ITIL 4 (Information Technology Infrastructure Library) Foundation certification?",
     "answers": [
       {
         "answerID": 1,
@@ -242,7 +294,70 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "13",
+    "questionID": "16",
+    "category": "Industry Certifications",
+    "tags": [
+      "ITIL",
+      "Certification",
+      "IT Service Management",
+      "Foundation Bridge"
+    ],
+    "question": "Have you obtained the ITIL 4 (Information Technology Infrastructure Library) Foundation Bridge certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "17",
+    "category": "Industry Certifications",
+    "tags": [
+      "ITIL",
+      "Certification",
+      "IT Service Management",
+      "Strategist"
+    ],
+    "question": "Have you obtained the ITIL 4 (Information Technology Infrastructure Library) Strategist certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "18",
+    "category": "Industry Certifications",
+    "tags": [
+      "ITIL",
+      "Certification",
+      "IT Service Management",
+      "Awareness"
+    ],
+    "question": "Have you obtained the ITIL 4 (Information Technology Infrastructure Library) Awareness certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "19",
     "category": "Industry Certifications",
     "tags": [
       "PMP",
@@ -262,14 +377,14 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "14",
+    "questionID": "20",
     "category": "Industry Certifications",
     "tags": [
       "Salesforce",
       "Administrator",
       "Certification"
     ],
-    "question": "Are you a certified Salesforce Administrator?",
+    "question": "Have you obtained the Salesforce Certified Sales Cloud Consultant (SCCC) certification?",
     "answers": [
       {
         "answerID": 1,
@@ -282,7 +397,216 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "15",
+    "questionID": "21",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCSCC",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Service Cloud Consultant (SCSCC) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "22",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCCPS",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified CPQ Specialist (SCCPS) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "23",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCA",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Administrator (SCA) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "24",
+    "category": "Industry Certifications",
+    "tags": [
+      "SAA",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Advanced Administrator (SAA) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "25",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCCCC",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Community Cloud Consultant (SCCCC) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "26",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCFSLC",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Field Service Lightning Consultant (SCFSLC) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "27",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCMCC",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Marketing Cloud Consultant (SCMCC) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "28",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCDAMD",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Data Architecture and Management Designer (SCDAMD) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "29",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCPD I",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Platform Developer I (SCPD I) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "30",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCPD II",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified Platform Developer II (SCPD II) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "31",
+    "category": "Industry Certifications",
+    "tags": [
+      "SCAB",
+      "Salesforce"
+    ],
+    "question": "Have you obtained the Salesforce Certified App Builder (SCAB) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "32",
     "category": "Industry Certifications",
     "tags": [
       "Oracle",
@@ -303,14 +627,14 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "16",
+    "questionID": "33",
     "category": "Industry Certifications",
     "tags": [
       "CCNA",
       "Cisco",
       "Certification"
     ],
-    "question": "Are you a Cisco Certified Network Associate (CCNA)?",
+    "question": "Have you obtained the Cisco Certified Network Associate (CCNA) certification?",
     "answers": [
       {
         "answerID": 1,
@@ -323,7 +647,161 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "17",
+    "questionID": "34",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCDA"
+    ],
+    "question": "Have you obtained the Cisco Certified Design Associate (CCDA) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "35",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCNA"
+    ],
+    "question": "Have you obtained the Cisco Certified Network Associate (CCNA) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "36",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCDP"
+    ],
+    "question": "Have you obtained the Cisco Certified Design Professional (CCDP) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "37",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCNP"
+    ],
+    "question": "Have you obtained the Cisco Certified Network Professional (CCNP) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "38",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCIE"
+    ],
+    "question": "Have you obtained the Cisco Certified Internetwork Expert (CCIE) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "39",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCAr"
+    ],
+    "question": "Have you obtained the Cisco Certified Architect (CCAr) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "40",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCS-EAII",
+      "CCS"
+    ],
+    "question": "Have you obtained the Cisco Certified Specialist - Enterprise Advanced Infrastructure Implementation (CCS-EAII) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "41",
+    "category": "Industry Certifications",
+    "tags": [
+      "Cisco",
+      "CCS-CSA",
+      "CCS"
+    ],
+    "question": "Have you obtained the Cisco Certified Specialist - Collaboration Solutions Architecture (CCS-CSA) certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "42",
     "category": "Industry Certifications",
     "tags": [
       "CompTIA",
@@ -343,12 +821,12 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "18",
+    "questionID": "43",
     "category": "Industry Certifications",
     "tags": [
       "CNDA",
       "Network Defense",
-      "Certification"
+      "Government"
     ],
     "question": "Are you a Certified Network Defense Architect (CNDA)?",
     "answers": [
@@ -363,55 +841,14 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "19",
-    "category": "Industry Certifications",
-    "tags": [
-      "CISM",
-      "Information Security",
-      "Certification"
-    ],
-    "question": "Do you have a Certified Information Security Manager (CISM) certification?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes"
-      },
-      {
-        "answerID": 2,
-        "answer": "No"
-      }
-    ]
-  },
-  {
-    "questionID": "20",
-    "category": "Industry Certifications",
-    "tags": [
-      "CRISC",
-      "Risk",
-      "Information Systems Control",
-      "Certification"
-    ],
-    "question": "Are you Certified in Risk and Information Systems Control (CRISC)?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes"
-      },
-      {
-        "answerID": 2,
-        "answer": "No"
-      }
-    ]
-  },
-  {
-    "questionID": "21",
+    "questionID": "44",
     "category": "Industry Certifications",
     "tags": [
       "CCSP",
       "Cloud Security",
       "Certification"
     ],
-    "question": "Do you hold a Certified Cloud Security Professional (CCSP) certification?",
+    "question": "Have you obtained the Certified Cloud Security Professional (CCSP) certification from ISC²?",
     "answers": [
       {
         "answerID": 1,
@@ -424,14 +861,14 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "22",
+    "questionID": "45",
     "category": "Industry Certifications",
     "tags": [
       "SSCP",
       "Systems Security",
       "Certification"
     ],
-    "question": "Are you a Systems Security Certified Practitioner (SSCP)?",
+    "question": "Have you obtained the Systems Security Certified Practitioner (SSCP) certification from ISC²?",
     "answers": [
       {
         "answerID": 1,
@@ -444,7 +881,83 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "23",
+    "questionID": "46",
+    "category": "Industry Certifications",
+    "tags": [
+      "ISC2",
+      "CISSP"
+    ],
+    "question": "Have you obtained the Certified Information Systems Security Professional (CISSP) certification from ISC²?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "47",
+    "category": "Industry Certifications",
+    "tags": [
+      "ISC2",
+      "Cybersecurity"
+    ],
+    "question": "Have you obtained the Certified in Cybersecurity (CC) certification from ISC²?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "48",
+    "category": "Industry Certifications",
+    "tags": [
+      "ISC2",
+      "CGRC"
+    ],
+    "question": "Have you obtained the Certified in Governance, Risk and Compliance (CGRC) certification from ISC²?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "49",
+    "category": "Industry Certifications",
+    "tags": [
+      "ISC2",
+      "HCISPP"
+    ],
+    "question": "Have you obtained the HealthCare Information Security and Privacy Practitioner (HCISPP) certification from ISC²?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "50",
     "category": "Industry Certifications",
     "tags": [
       "Are you Certified in the Governance of Enterprise IT (CGEIT)?"
@@ -462,7 +975,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "24",
+    "questionID": "51",
     "category": "Industry Certifications",
     "tags": [
       "CGEIT",
@@ -482,27 +995,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "25",
-    "category": "Industry Certifications",
-    "tags": [
-      "ITIL",
-      "Certification",
-      "IT Service Management"
-    ],
-    "question": "Have you achieved the ITIL certification?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes"
-      },
-      {
-        "answerID": 2,
-        "answer": "No"
-      }
-    ]
-  },
-  {
-    "questionID": "26",
+    "questionID": "52",
     "category": "Industry Certifications",
     "tags": [
       "Google Cloud",
@@ -522,7 +1015,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "27",
+    "questionID": "53",
     "category": "Industry Certifications",
     "tags": [
       "CWNP",
@@ -542,807 +1035,1356 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "28",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Python",
-      "Programming",
-      "Language",
-      "Coding"
-    ],
-    "question": "Rate your proficiency in Python based on your project experience.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiarity with basic Python syntax and structures from limited project experience or coursework."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular use of Python in multiple projects, including comfort with advanced syntax, error handling, and data structures."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience with Python in complex projects, demonstrating deep understanding of libraries, frameworks, and performance optimization."
-      }
-    ]
-  },
-  {
-    "questionID": "29",
-    "category": "Technical Knowledge",
-    "tags": [
-      "RESTful",
-      "APIs",
-      "Web Services",
-      "Design",
-      "Implementation"
-    ],
-    "question": "Rate your ability to design and implement RESTful APIs.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with the concept of RESTful APIs, with limited hands-on design and implementation experience."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly design and implement RESTful APIs, with a solid understanding of best practices and protocols."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience designing and implementing RESTful APIs, with deep knowledge of optimization and advanced features."
-      }
-    ]
-  },
-  {
-    "questionID": "30",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Data Modeling",
-      "Database Design",
-      "Database"
-    ],
-    "question": "Describe your proficiency in data modeling and database design.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with basic data modeling concepts and database design, possibly from coursework or limited hands-on experience."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular use of data modeling and database design in projects, with a good understanding of relational and/or non-relational database systems."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience with data modeling and database design, including proficiency in normalization, indexing, and performance optimization techniques."
-      }
-    ]
-  },
-  {
-    "questionID": "31",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Microservices",
-      "Architecture",
-      "System Design"
-    ],
-    "question": "How familiar are you with microservices architecture?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Aware of microservices architecture principles, with little to no hands-on experience in a project setting."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Have worked on projects involving microservices architecture, with an understanding of related technologies like Docker and Kubernetes."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience designing and implementing microservices architectures, with deep knowledge of best practices, patterns, and inter-service communication."
-      }
-    ]
-  },
-  {
-    "questionID": "32",
-    "category": "Technical Knowledge",
-    "tags": [
-      "DevOps",
-      "CI/CD",
-      "Docker",
-      "Jenkins"
-    ],
-    "question": "Rate your proficiency with DevOps practices (CI/CD, Docker, Jenkins).",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Understand the concept of DevOps, and have used tools like Docker and Jenkins at a basic level."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular involvement in implementing DevOps practices, including building CI/CD pipelines, containerization, and orchestration."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Significant experience with DevOps practices, including automation, infrastructure as code (IaC), and monitoring and troubleshooting in a live environment."
-      }
-    ]
-  },
-  {
-    "questionID": "33",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Cloud Platforms",
-      "AWS",
-      "Azure",
-      "Google Cloud"
-    ],
-    "question": "Rate your expertise in cloud platforms (AWS, Azure, Google Cloud Platform).",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Aware of cloud concepts, have used one or more cloud platforms on a basic level or for learning purposes."
-      },
-      {
-        "answerID": 3,
-        "answer": "Regularly use cloud platforms in a professional context, familiar with deploying and managing applications or services."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge of multiple cloud platforms, proficient in managing large-scale applications, services, and cloud infrastructure."
-      }
-    ]
-  },
-  {
-    "questionID": "34",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Front-End Development",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React"
-    ],
-    "question": "Rate your proficiency with front-end development technologies (HTML, CSS, JavaScript, React).",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Understand the basics of HTML, CSS, and JavaScript, and have used them in simple web projects or coursework."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular use of front-end technologies in professional work, familiar with a front-end framework/library like React."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Expertise in modern front-end development, including building complex web applications using JavaScript frameworks like React."
-      }
-    ]
-  },
-  {
-    "questionID": "35",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Machine Learning",
-      "Algorithms",
-      "Predictive Modeling"
-    ],
-    "question": "Describe your proficiency using Machine Learning algorithms for predictive modeling.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with basic machine learning concepts, have used algorithms in a learning or academic context."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular use of machine learning algorithms for predictive modeling in professional projects, with experience in model selection and evaluation."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge of machine learning, experienced in feature engineering, model optimization, and deploying ML models"
-      }
-    ]
-  },
-  {
-    "questionID": "36",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Version Control",
-      "Git"
-    ],
-    "question": "Describe your experience with version control systems, particularly Git.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with basic version control concepts, have used Git for simple projects or coursework."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular use of Git in professional context, proficient with branching, merging, and resolving conflicts."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Mastery of Git, comfortable with advanced operations such as rebase, cherry-pick, bisect, and can administer a Git server."
-      }
-    ]
-  },
-  {
-    "questionID": "37",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Data Security",
-      "Encryption",
-      "Protocols"
-    ],
-    "question": "Rate your understanding of data security and encryption protocols.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of data security concepts and encryption protocols, but limited hands-on experience."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly work with data security and encryption protocols in a professional setting, knowledgeable about implementing secure communication."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep understanding of various encryption protocols, hands-on experience with securing large-scale applications or infrastructure."
-      }
-    ]
-  },
-  {
-    "questionID": "38",
-    "category": "Technical Knowledge",
-    "tags": [
-      "CRM",
-      "Salesforce",
-      "Microsoft Dynamics 365"
-    ],
-    "question": "Rate your proficiency with CRM platforms like Salesforce or Microsoft Dynamics 365.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of CRM concepts, have used platforms like Salesforce or Dynamics 365 for learning or basic tasks."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly use a CRM platform in professional work, experienced with managing contacts, leads, and opportunities."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Expertise with CRM platforms, capable of customizing and integrating the platform according to business needs."
-      }
-    ]
-  },
-  {
-    "questionID": "39",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Customer Data",
-      "Sales",
-      "Marketing",
-      "Data Analysis"
-    ],
-    "question": "Rate your proficiency managing and analyzing customer data for sales and marketing purposes.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of sales and marketing data, used analytics tools for rudimentary data management and analysis."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly manage and analyze customer data for sales and marketing, proficient in using advanced analytics tools."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Expertise in managing large datasets, able to derive actionable insights for sales and marketing strategies."
-      }
-    ]
-  },
-  {
-    "questionID": "40",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Data Integration",
-      "Concepts",
-      "Processes"
-    ],
-    "question": "How familiar are you with the concepts and processes of data integration?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of data integration concepts and processes, have used integration tools or platforms for learning purposes."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly perform data integration tasks in professional setting, able to handle diverse data sources and formats."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge of data integration, experienced with designing and implementing large-scale data integration solutions."
-      }
-    ]
-  },
-  {
-    "questionID": "41",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Email Marketing",
-      "Campaigns"
-    ],
-    "question": "Describe your proficiency developing and executing email marketing campaigns.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of email marketing, have used email marketing tools for learning or simple campaigns."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly execute email marketing campaigns, capable of segmenting audiences and analyzing results."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep understanding of email marketing, able to strategize and execute complex campaigns for maximum conversion."
-      }
-    ]
-  },
-  {
-    "questionID": "42",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Project Management",
-      "Agile",
-      "Waterfall"
-    ],
-    "question": "Rate your proficiency in project management methodologies like Agile or Waterfall.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of Agile or Waterfall methodologies, have participated in projects using these methodologies."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly use Agile or Waterfall methodologies in professional setting, able to manage project stages effectively."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep expertise in Agile or Waterfall, able to manage complex projects and train others in these methodologies."
-      }
-    ]
-  },
-  {
-    "questionID": "43",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Network Architecture",
-      "Communication Protocols"
-    ],
-    "question": "Rate your expertise in network architecture and communication protocols.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Basic understanding of network architecture and communication protocols, have configured networks or used protocols for learning."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly work with network architecture and communication protocols, able to troubleshoot network issues."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge in network architecture and communication protocols, able to design and implement complex networks."
-      }
-    ]
-  },
-  {
-    "questionID": "44",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Cybersecurity",
-      "Principles"
-    ],
-    "question": "Rate your understanding of cybersecurity principles.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of cybersecurity principles, have followed best practices for security."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly deal with cybersecurity-related tasks, capable of identifying potential vulnerabilities."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Expert in cybersecurity principles, capable of developing and implementing security policies."
-      }
-    ]
-  },
-  {
-    "questionID": "45",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Product Configuration",
-      "Design Strategies",
-      "Proficiency Level"
-    ],
-    "question": "How proficient are you in designing product configuration strategies?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of product configuration strategies, have participated in product design or configuration."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly work with product configuration strategies, capable of designing product configurations for simple products."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Comprehensive understanding of product configuration strategies, including scalability and optimization"
-      }
-    ]
-  },
-  {
-    "questionID": "46",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Cloud Computing",
-      "Familiarity",
-      "Proficiency Level"
-    ],
-    "question": "Rate your familiarity with cloud computing platforms.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of cloud computing, have used cloud platforms like AWS, Azure or GCP."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular experience with cloud computing platforms, able to manage resources and services."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience with cloud computing platforms, able to architect and deploy complex applications."
-      }
-    ]
-  },
-  {
-    "questionID": "47",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Cybersecurity",
-      "Best Practices",
-      "Proficiency Level"
-    ],
-    "question": "How proficient are you in cybersecurity best practices?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of cybersecurity best practices, have followed them in personal or professional projects."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly apply cybersecurity best practices, capable of identifying potential security issues."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge of cybersecurity best practices, can guide teams or organizations in adhering to them."
-      }
-    ]
-  },
-  {
-    "questionID": "48",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Network Architecture",
-      "Infrastructure",
-      "Understanding Level"
-    ],
-    "question": "Rate your understanding of network architecture and infrastructure.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of network architecture and infrastructure, familiar with terms like IP, DNS, VPN."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Comfortable with designing and maintaining a network, experience with network troubleshooting."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge of network architecture, able to design, implement, and manage complex network infrastructure."
-      }
-    ]
-  },
-  {
-    "questionID": "49",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Data Analytics",
-      "Interpretation",
-      "Utilization",
-      "Proficiency Level"
-    ],
-    "question": "How proficient are you in interpreting and utilizing data analytics?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of data analytics concepts, familiarity with data visualization tools."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly interpret data to derive insights, capable of using analytics tools like Google Analytics, Tableau."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in data analytics, able to develop and execute data-driven strategies."
-      }
-    ]
-  },
-  {
-    "questionID": "50",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Machine Learning",
-      "Artificial Intelligence",
-      "Understanding Level"
-    ],
-    "question": "Rate your understanding of Machine Learning and Artificial Intelligence concepts.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of ML and AI concepts, familiar with common algorithms and frameworks."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular experience applying ML and AI principles, able to develop basic predictive models."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Deep knowledge of ML and AI, capable of designing and implementing complex ML models."
-      }
-    ]
-  },
-  {
-    "questionID": "51",
-    "category": "Technical Knowledge",
-    "tags": [
-      "SQL",
-      "Database Querying",
-      "Language Proficiency"
-    ],
-    "question": "How proficient are you with SQL or other database querying languages?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of SQL or similar languages, can write simple queries."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Comfortable with SQL, able to create, manipulate, and manage databases."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience with SQL, capable of optimizing queries and managing complex database systems."
-      }
-    ]
-  },
-  {
-    "questionID": "52",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Software Testing",
-      "Methodologies",
-      "Understanding Level"
-    ],
-    "question": "How well do you understand software testing methodologies?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of software testing concepts and methodologies, such as unit testing and integration testing."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular involvement in software testing, able to design and implement test cases and scripts."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in software testing, capable of leading testing strategies and methodologies."
-      }
-    ]
-  },
-  {
-    "questionID": "53",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Software Integration",
-      "APIs",
-      "Comfort Level"
-    ],
-    "question": "How comfortable are you with integrating different software systems using APIs?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of APIs and their uses in software integration."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regularly use APIs for software integration, able to design basic APIs."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in API design and implementation, capable of managing complex system integrations."
-      }
-    ]
-  },
-  {
     "questionID": "54",
-    "category": "Technical Knowledge",
+    "category": "Industry Certifications",
     "tags": [
-      "Cryptography",
-      "Data Security",
-      "Application",
-      "Knowledge Level"
+      "Snowflake"
     ],
-    "question": "Rate your knowledge in cryptography and its application in data security.",
+    "question": "Have you obtained the SnowPro Core Certification from Snowflake?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "Yes"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic understanding of cryptographic principles and common algorithms used in data security"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular use of cryptographic techniques, able to apply encryption and decryption for data security."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in cryptography, capable of designing and implementing secure systems using advanced cryptographic techniques."
+        "answer": "No"
       }
     ]
   },
   {
     "questionID": "55",
-    "category": "Technical Knowledge",
+    "category": "Industry Certifications",
     "tags": [
-      "Distributed Systems",
-      "Architecture",
-      "Familiarity Level"
+      "GitHub"
     ],
-    "question": "How familiar are you with distributed systems architecture?",
+    "question": "Have you obtained the GitHub Certified Campus Advisors certification?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "Yes"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic understanding of distributed systems, familiar with concepts like horizontal scaling and fault tolerance."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Regular work with distributed systems, capable of designing simple distributed architectures."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in distributed systems, able to design and implement complex distributed architectures for high scalability and performance."
+        "answer": "No"
       }
     ]
   },
   {
     "questionID": "56",
+    "category": "Industry Certifications",
+    "tags": [
+      "Atlassian"
+    ],
+    "question": "Have you obtained the Atlassian Certified Professional Jira Software Administrator certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "57",
+    "category": "Industry Certifications",
+    "tags": [
+      "Zoho"
+    ],
+    "question": "Have you obtained the Zoho CRM Certified Consultant certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "58",
+    "category": "Industry Certifications",
+    "tags": [
+      "Hubspot"
+    ],
+    "question": "Have you obtained the HubSpot Sales Software Certification?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "59",
+    "category": "Technical Knowledge",
+    "tags": [
+      "SOAP APIs",
+      "REST",
+      "API"
+    ],
+    "question": "What level of experience and understanding of REST and SOAP APIs is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "The role requires a basic understanding of REST and SOAP APIs, with practical experience not essential but beneficial."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with REST and SOAP APIs, including constructing API requests and understanding the core differences between REST and SOAP."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role necessitates a deep understanding and hands-on experience in designing, developing, and maintaining REST and SOAP APIs, with knowledge in error handling and security measures as well."
+      }
+    ]
+  },
+  {
+    "questionID": "60",
+    "category": "Technical Knowledge",
+    "tags": [
+      "GraphQL",
+      "API"
+    ],
+    "question": "What level of experience and understanding of GraphQL is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires a basic understanding of GraphQL concepts like schemas, queries, and mutations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires hands-on experience with GraphQL, including creating and working with GraphQL queries and mutations, and understanding of resolvers, schema stitching, and error handling."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires comprehensive experience in GraphQL, including creating GraphQL APIs, understanding advanced concepts like schema delegation, and handling performance optimization and security."
+      }
+    ]
+  },
+  {
+    "questionID": "61",
+    "category": "Technical Knowledge",
+    "tags": [
+      "API Authentication",
+      "API"
+    ],
+    "question": "What level of experience and understanding of API Authentication Methods is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of API authentication methods."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with implementing various API authentication methods."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience with API authentication methods, including understanding the security implications and best practices."
+      }
+    ]
+  },
+  {
+    "questionID": "62",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Webhooks",
+      "API"
+    ],
+    "question": "What level of experience and understanding of Webhooks is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of the theoretical concept of webhooks."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with setting up and understanding the interaction of webhooks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role necessitates a deep understanding and experience in designing, implementing, and troubleshooting webhooks, with knowledge in payload, retries, security, and performance."
+      }
+    ]
+  },
+  {
+    "questionID": "63",
+    "category": "Technical Knowledge",
+    "tags": [
+      "API",
+      "RESTful"
+    ],
+    "question": "What level of experience and understanding of designing and implementing RESTful APIs is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of the principles of RESTful APIs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience in designing and implementing RESTful APIs, understanding how to use HTTP methods, status codes, and URL paths effectively."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role necessitates deep understanding and experience in designing, implementing, and maintaining RESTful APIs. Experience with advanced concepts such as HATEOAS and versioning would be beneficial."
+      }
+    ]
+  },
+  {
+    "questionID": "64",
+    "category": "Technical Knowledge",
+    "tags": [
+      "OpenID",
+      "OIDC",
+      "OAuth 2.0",
+      "API"
+    ],
+    "question": "What level of experience with OAuth 2.0 and OpenID Connect (OIDC) protocols is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of the principles of OAuth 2.0 and OpenID Connect protocols."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience in implementing OAuth 2.0 and OpenID Connect protocols, setting up authorization servers and handling tokens."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires a deep understanding and extensive experience in using OAuth 2.0 and OpenID Connect protocols, including advanced concepts such as grant types, claims, scopes, and PKCE."
+      }
+    ]
+  },
+  {
+    "questionID": "65",
+    "category": "Technical Knowledge",
+    "tags": [
+      "SOAP",
+      "Object Access",
+      "API"
+    ],
+    "question": "What level of experience with SOAP (Simple Object Access Protocol) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of the principles of SOAP."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience in implementing SOAP, constructing and parsing SOAP messages."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires a deep understanding and extensive experience in using SOAP, including advanced concepts such as SOAP faults, headers, and RPC calls."
+      }
+    ]
+  },
+  {
+    "questionID": "66",
+    "category": "Technical Knowledge",
+    "tags": [
+      "REST",
+      "API"
+    ],
+    "question": "What level of experience is required of REST principles and conventions for this role? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires a basic understanding of REST principles and conventions."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires experience with implementing REST APIs and understanding their structure."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience in designing and building RESTful services, including handling errors and security."
+      }
+    ]
+  },
+  {
+    "questionID": "67",
+    "category": "Technical Knowledge",
+    "tags": [
+      "API",
+      "debugging"
+    ],
+    "question": "What level of experience with API testing and debugging is required for this role? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires some familiarity with basic API testing and debugging."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires regular experience in detailed API testing and debugging, including error handling and load testing."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience in API testing and debugging, including performance testing, security testing, and automation of tests."
+      }
+    ]
+  },
+  {
+    "questionID": "68",
+    "category": "Technical Knowledge",
+    "tags": [
+      "JSON",
+      "XML",
+      "API",
+      "data export",
+      "data formats"
+    ],
+    "question": "How experienced should the candidate be with JSON and XML data formats?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires basic understanding of JSON and XML data formats."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires experience with JSON and XML data formats in various projects or job roles."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience with JSON and XML data formats, including parsing, manipulation, and creation of complex structures."
+      }
+    ]
+  },
+  {
+    "questionID": "69",
+    "category": "Technical Knowledge",
+    "tags": [
+      "API",
+      "integration",
+      "system integration"
+    ],
+    "question": "How experienced should the candidate be in integrating various systems and platforms using APIs?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires basic understanding and ability to conduct simple integrations using APIs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires experience integrating various systems and platforms using APIs."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience in integrating complex systems and platforms using APIs, including handling issues like data mapping, error handling, and security."
+      }
+    ]
+  },
+  {
+    "questionID": "70",
+    "category": "Technical Knowledge",
+    "tags": [
+      "real time API",
+      "API"
+    ],
+    "question": "How experienced should the candidate be with real-time APIs?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires some familiarity with the concepts of real-time APIs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires regular experience in working with real-time APIs."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience with real-time APIs, including designing, implementing, and troubleshooting them."
+      }
+    ]
+  },
+  {
+    "questionID": "71",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Python",
+      "coding language"
+    ],
+    "question": "What proficiency level in Python is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to write simple scripts and understand Python code."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with Python libraries and web frameworks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expected to create complex applications. Familiarity with advanced topics and frameworks is necessary."
+      }
+    ]
+  },
+  {
+    "questionID": "72",
+    "category": "Technical Knowledge",
+    "tags": [
+      "JavaScript",
+      "coding language"
+    ],
+    "question": "What proficiency level in JavaScript is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of JavaScript's basics and DOM manipulation."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with modern JavaScript features and front-end frameworks or libraries."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of JavaScript, including backend development with Node.js."
+      }
+    ]
+  },
+  {
+    "questionID": "73",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Java",
+      "coding language",
+      "programming"
+    ],
+    "question": "What proficiency level in Java is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of Java's basics and the ability to write simple programs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in Java and experience with Java libraries or frameworks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of Java, including multithreading and JVM internals."
+      }
+    ]
+  },
+  {
+    "questionID": "74",
+    "category": "Technical Knowledge",
+    "tags": [
+      "C#",
+      "coding language",
+      "programming"
+    ],
+    "question": "What proficiency level in C# is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of C#'s basics and the ability to write simple programs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in C# and experience with .NET Framework or .NET Core."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of C#, including multithreading and .NET internals."
+      }
+    ]
+  },
+  {
+    "questionID": "75",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Bash",
+      "Shell",
+      "scripting"
+    ],
+    "question": "What proficiency level in Bash/Shell scripting is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires the ability to write simple scripts and perform basic command-line operations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with control flow, parameter expansion, and process management in shell scripting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires the ability to write complex scripts for system administration tasks and optimization."
+      }
+    ]
+  },
+  {
+    "questionID": "76",
+    "category": "Technical Knowledge",
+    "tags": [
+      "PowerShell",
+      "programming",
+      "coding",
+      "languages"
+    ],
+    "question": "What proficiency level in PowerShell is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic PowerShell commands and script writing."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with PowerShell's cmdlets, pipeline, objects, and experience in Windows systems administration."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires the ability to develop complex scripts and modules, and proficiency in PowerShell DSC and remote management."
+      }
+    ]
+  },
+  {
+    "questionID": "77",
+    "category": "Technical Knowledge",
+    "tags": [
+      "SQL",
+      "querying",
+      "programming",
+      "languages"
+    ],
+    "question": "What proficiency level in SQL is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic SQL commands and the ability to perform simple data retrieval and updates."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with complex SQL operations and database design."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in database administration, SQL performance optimization, and writing stored procedures."
+      }
+    ]
+  },
+  {
+    "questionID": "78",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Ruby",
+      "programming",
+      "languages"
+    ],
+    "question": "What proficiency level in Ruby is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic Ruby syntax and the ability to write simple scripts."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in Ruby, error handling, and testing. Experience with Ruby on Rails is preferred."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of Ruby metaprogramming, concurrency, and RubyGems ecosystem. Experience in designing and maintaining complex Ruby applications is a must."
+      }
+    ]
+  },
+  {
+    "questionID": "79",
+    "category": "Technical Knowledge",
+    "tags": [
+      "PHP",
+      "coding",
+      "languages"
+    ],
+    "question": "What proficiency level in PHP is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic PHP syntax and the ability to write simple scripts."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in PHP, error handling, and PHP libraries and frameworks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in PHP best practices, secure coding, and performance optimization. Experience in developing and maintaining complex PHP applications is needed."
+      }
+    ]
+  },
+  {
+    "questionID": "80",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Go",
+      "Golang",
+      "programming",
+      "coding",
+      "languages"
+    ],
+    "question": "What proficiency level in Go (Golang) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic Go syntax and the ability to write simple programs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with Go's concurrency model, interfaces, and error handling. Experience in developing web services using Go is preferred."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in Go's standard library, testing frameworks, and performance optimization. Experience in developing and maintaining complex Go applications is a must."
+      }
+    ]
+  },
+  {
+    "questionID": "81",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Rust",
+      "programming",
+      "coding"
+    ],
+    "question": "What proficiency level in Rust is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic Rust syntax and the ability to write simple programs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with Rust's ownership model, concurrency, and error handling. Experience in developing system-level applications using Rust is preferred."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in Rust's standard library, testing frameworks, and performance optimization. Experience in developing and maintaining complex Rust applications is a must."
+      }
+    ]
+  },
+  {
+    "questionID": "82",
+    "category": "Technical Knowledge",
+    "tags": [
+      "HTTPS",
+      "network protocols"
+    ],
+    "question": "What level of proficiency with network protocols like TCP/IP, HTTP/HTTPS, FTP, DNS, DHCP, SNMP is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires basic understanding and recognition of these protocols."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires ability to configure network settings and perform basic network troubleshooting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires deep understanding of these protocols, ability to optimize network performance and solve complex network protocol related issues."
+      }
+    ]
+  },
+  {
+    "questionID": "83",
+    "category": "Technical Knowledge",
+    "tags": [
+      "TCP/IP",
+      "HTTP/HTTPS",
+      "FTP",
+      "DNS",
+      "DHCP",
+      "SNMP",
+      "network"
+    ],
+    "question": "What level of proficiency with network hardware like routers, switches, firewalls, and load balancers is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires understanding of device functionality and ability to perform basic setup and configuration."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires ability to configure these devices for different network topologies, manage security settings, and troubleshoot common hardware issues."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires proficiency in complex network architecture design and optimization using these devices, and the ability to solve complex network hardware issues."
+      }
+    ]
+  },
+  {
+    "questionID": "84",
+    "category": "Technical Knowledge",
+    "tags": [
+      "network architectures",
+      "network"
+    ],
+    "question": "What level of understanding and experience in designing and implementing network architectures is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the concept of network architectures and its fundamental components."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires experience in designing and implementing small to medium scale network architectures using standard topologies."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires proficiency in designing, implementing, and optimizing large-scale and complex network architectures."
+      }
+    ]
+  },
+  {
+    "questionID": "85",
+    "category": "Technical Knowledge",
+    "tags": [
+      "network",
+      "security",
+      "firewalls",
+      "VPN",
+      "encryption",
+      "IDS/IPS"
+    ],
+    "question": "What level of proficiency with network security principles and technologies (firewalls, VPN, encryption, IDS/IPS, etc.) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the concept of network security and fundamental technologies."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires experience in setting up and managing network security tools."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires expertise in designing and managing network security infrastructures and proficiency in advanced security technologies."
+      }
+    ]
+  },
+  {
+    "questionID": "86",
+    "category": "Technical Knowledge",
+    "tags": [
+      "network",
+      "netowrk troubleshooting"
+    ],
+    "question": "What level of proficiency with network troubleshooting (ping, traceroute, netstat, etc.) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the concept of network troubleshooting and basic tools."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires experience in diagnosing and resolving common network issues."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires expertise in network troubleshooting and the ability to diagnose and resolve complex network issues."
+      }
+    ]
+  },
+  {
+    "questionID": "87",
+    "category": "Technical Knowledge",
+    "tags": [
+      "SDN",
+      "networks"
+    ],
+    "question": "What level of experience with software-defined networking (SDN) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires basic understanding of the concept of SDN."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires experience implementing or working with SDN in a practical setting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires comprehensive experience with SDN, including developing and optimizing SDN strategies."
+      }
+    ]
+  },
+  {
+    "questionID": "88",
+    "category": "Technical Knowledge",
+    "tags": [
+      "networks",
+      "network automation"
+    ],
+    "question": "What level of understanding and experience with network automation concepts and tasks is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires basic understanding of the concept of network automation."
+      },
+      {
+        "answerID": 3,
+        "answer": "ntermediate: Requires proficient understanding of network automation and experience with automating complex network tasks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires comprehensive understanding of network automation and extensive experience automating a wide range of network tasks."
+      }
+    ]
+  },
+  {
+    "questionID": "89",
+    "category": "Technical Knowledge",
+    "tags": [
+      "networks",
+      "cloud networking"
+    ],
+    "question": "What level of understanding and experience with cloud networking is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the basic concept of cloud networking and simple implementations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires a solid understanding of cloud networking concepts and experience with complex cloud networking tasks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires a comprehensive understanding of advanced cloud networking concepts and extensive experience managing and troubleshooting cloud networks."
+      }
+    ]
+  },
+  {
+    "questionID": "90",
+    "category": "Technical Knowledge",
+    "tags": [
+      "VOIP",
+      "voice",
+      "networks",
+      "protocols"
+    ],
+    "question": "What level of understanding and experience with VoIP (Voice over Internet Protocol) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the basic concept of VoIP and experience setting up simple VoIP systems."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires a solid understanding of VoIP technologies and experience managing and troubleshooting VoIP systems."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires a comprehensive understanding of VoIP technologies and extensive experience designing, implementing, and managing complex VoIP systems."
+      }
+    ]
+  },
+  {
+    "questionID": "91",
+    "category": "Technical Knowledge",
+    "tags": [
+      "IPV6"
+    ],
+    "question": "What level of expertise in IPv6 implementation and troubleshooting is required for this position?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of IPv6."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires experience with implementing and troubleshooting IPv6 in a controlled environment."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires experience with implementing and troubleshooting IPv6 in a live, production environment."
+      }
+    ]
+  },
+  {
+    "questionID": "92",
+    "category": "Technical Knowledge",
+    "tags": [
+      "performance tuning",
+      "networks"
+    ],
+    "question": "What level of expertise in network performance tuning is required for this position?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of network performance concepts."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires experience with implementing network performance enhancements."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires experience with implementing network performance enhancements in a live, production environment."
+      }
+    ]
+  },
+  {
+    "questionID": "93",
+    "category": "Technical Knowledge",
+    "tags": [
+      "WiFi",
+      "networks"
+    ],
+    "question": "What level of expertise in wireless networking is required for this position?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of wireless networking."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires experience with setting up and securing a wireless network."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires experience with designing and deploying secure, efficient wireless networks in a commercial setting."
+      }
+    ]
+  },
+  {
+    "questionID": "94",
+    "category": "Technical Knowledge",
+    "tags": [
+      "IT",
+      "risk assessments",
+      "security"
+    ],
+    "question": "What level of experience in performing IT risk assessments do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to assist in risk assessments and understand the basic concepts of identifying, analyzing, and evaluating potential IT threats and vulnerabilities."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of directly contributing to the risk assessment process and has a good understanding of the techniques and methodologies used."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can lead risk assessments, design mitigation strategies, and is adept at using professional risk assessment tools and methodologies."
+      }
+    ]
+  },
+  {
+    "questionID": "95",
+    "category": "Technical Knowledge",
+    "tags": [
+      "security",
+      "incident response"
+    ],
+    "question": "What degree of familiarity with incident response planning do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands the basic steps in an incident response plan but may not have put them into practice."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has been involved in developing and implementing incident response plans, and participated in incident response simulations."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can lead the design, implementation, and testing of incident response plans, and handle actual incidents."
+      }
+    ]
+  },
+  {
+    "questionID": "96",
+    "category": "Technical Knowledge",
+    "tags": [
+      "security",
+      "secure coding"
+    ],
+    "question": "What degree of knowledge and application of secure coding practices do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands the principles of secure coding but may not have much practical experience."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has applied secure coding practices in projects and is familiar with common security vulnerabilities like XSS, SQL Injection, etc."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can lead secure coding initiatives, conduct code reviews for security, and is proficient in mitigation techniques for security risks in code."
+      }
+    ]
+  },
+  {
+    "questionID": "97",
+    "category": "Technical Knowledge",
+    "tags": [
+      "security",
+      "cloud security"
+    ],
+    "question": "What degree of expertise in cloud security do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands basic cloud security concepts, such as the shared responsibility model and basic security controls."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has implemented security measures in a cloud environment and is familiar with concepts like IAM, security groups, and encryption."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can secure cloud environments extensively, including configuring advanced services for intrusion detection, data protection, and threat management."
+      }
+    ]
+  },
+  {
+    "questionID": "98",
+    "category": "Technical Knowledge",
+    "tags": [
+      "security",
+      "web apps"
+    ],
+    "question": "What level of experience in web application security do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with common web application vulnerabilities such as XSS, SQL Injection, and CSRF."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Experience identifying and mitigating common web application vulnerabilities. Familiar with security headers, secure cookies, and Content Security Policy (CSP)."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Extensive experience with web application security, including designing secure web architectures, penetration testing, and vulnerability management."
+      }
+    ]
+  },
+  {
+    "questionID": "99",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Security",
+      "encryption",
+      "cryptography"
+    ],
+    "question": "What level of knowledge and experience with encryption and cryptography do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Has a fundamental understanding of the principles of encryption and cryptography, such as symmetric and asymmetric encryption, hashes, and digital signatures."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has implemented secure encryption protocols and has experience with key management."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has in-depth knowledge of cryptographic protocols, has designed secure cryptographic systems, and has managed key infrastructures."
+      }
+    ]
+  },
+  {
+    "questionID": "100",
+    "category": "Technical Knowledge",
+    "tags": [
+      "IAM",
+      "identity access",
+      "secuity"
+    ],
+    "question": "What level of experience with identity and access management (IAM) do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Has basic understanding of IAM concepts such as authentication, authorization, and accounting."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has worked with IAM solutions, implemented access controls and managed user identities."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has extensive experience designing and implementing IAM strategies, setting up Single Sign-On (SSO), and working with Identity Providers (IdPs)."
+      }
+    ]
+  },
+  {
+    "questionID": "101",
+    "category": "Technical Knowledge",
+    "tags": [
+      "secuity",
+      "assesments",
+      "audits"
+    ],
+    "question": "What level of experience with security assessments and audits do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands the basic principles of security assessments and has a basic knowledge of common security standards."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has participated in security assessments or audits and is familiar with standards like ISO 27001, NIST, and SOC2."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has led security assessments or audits, understands a broad range of security standards, and can interpret and apply them to organizational practices."
+      }
+    ]
+  },
+  {
+    "questionID": "102",
+    "category": "Technical Knowledge",
+    "tags": [
+      "security",
+      "vulnerability management"
+    ],
+    "question": "What level of knowledge and experience with vulnerability management do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands the basic principles of vulnerability management, including identifying and categorizing vulnerabilities."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has experience in tracking, reporting, and overseeing the remediation of vulnerabilities."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has been responsible for the vulnerability management process, including the use of vulnerability scanning tools, risk assessment, and remediation strategies."
+      }
+    ]
+  },
+  {
+    "questionID": "103",
+    "category": "Technical Knowledge",
+    "tags": [
+      "security"
+    ],
+    "question": "What level of knowledge and experience with data security and privacy do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands the basic principles of data security and has a basic knowledge of privacy laws and regulations like GDPR and CCPA."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has participated in data protection initiatives and has experience with encryption, anonymization, and other data protection mechanisms."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has led data security initiatives, has a comprehensive understanding of data privacy regulations, and can implement and oversee data protection strategies."
+      }
+    ]
+  },
+  {
+    "questionID": "104",
     "category": "Technical Knowledge",
     "tags": [
       "Data Warehousing",
       "Understanding Level"
     ],
-    "question": "How well do you understand data warehousing?",
+    "question": "What level of understanding of data warehousing do you expect from candidate? ",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
@@ -1359,7 +2401,116 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "57",
+    "questionID": "105",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Data modeling",
+      "dimensional"
+    ],
+    "question": "What level of familiarity with relational and dimensional data modeling concepts do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of concepts like entities, attributes, relationships, facts, and dimensions."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable designing both relational and dimensional models for simple to moderately complex databases."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in designing and implementing both relational and dimensional models for complex databases, including handling of complex business rules, hierarchical relationships, and many-to-many relationships"
+      }
+    ]
+  },
+  {
+    "questionID": "106",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Statistics",
+      "data"
+    ],
+    "question": "What level of expertise in statistical analysis do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands fundamental statistical concepts like mean, median, mode, variance, and standard deviation."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of performing statistical tests, regression analysis, and understands probability distributions."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in employing advanced statistical methodologies like hypothesis testing, ANOVA, chi-squared tests, and can interpret the results for data-driven decision making."
+      }
+    ]
+  },
+  {
+    "questionID": "107",
+    "category": "Technical Knowledge",
+    "tags": [
+      "machine learning",
+      "algorithms"
+    ],
+    "question": "What level of understanding of machine learning principles do you expect from the candidate? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands basic machine learning concepts and familiar with common algorithms like linear regression and decision trees."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has hands-on experience in building, validating, and tuning predictive models, understands advanced concepts like feature engineering and the bias-variance trade-off."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Highly skilled in a broad range of machine learning techniques. Comfortable with complex concepts like ensemble methods and neural networks, and proficient in interpreting model performance metrics."
+      }
+    ]
+  },
+  {
+    "questionID": "108",
+    "category": "Technical Knowledge",
+    "tags": [
+      "Data Integration",
+      "Concepts",
+      "Processes"
+    ],
+    "question": "How familiar should a candidate be with the concepts and processes of data integration?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Has a basic understanding of data integration concepts and processes, has used integration tools or platforms for learning purposes."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Regularly performs data integration tasks in a professional setting, able to handle diverse data sources and formats."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has deep knowledge of data integration, experienced with designing and implementing large-scale data integration solutions."
+      }
+    ]
+  },
+  {
+    "questionID": "109",
     "category": "Technical Knowledge",
     "tags": [
       "IoT",
@@ -1367,910 +2518,110 @@ export const questionsData = [
       "Technologies",
       "Understanding Level"
     ],
-    "question": "How well do you understand Internet of Things (IoT) protocols and technologies?",
+    "question": "How well should a candidate understand Internet of Things (IoT) protocols and technologies?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic knowledge of IoT concepts and some common protocols like MQTT, CoAP."
+        "answer": "Beginner: Understands the basic principles of IoT, knows about common protocols like MQTT and CoAP."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Practical experience with IoT devices and platforms, capable of developing simple IoT applications."
+        "answer": "Intermediate: Has experience in using IoT technologies in projects, is familiar with different protocols and IoT platforms."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Extensive experience with IoT, able to design, implement, and manage complex IoT systems using various protocols and technologies."
+        "answer": "Advanced: Has extensive experience in implementing IoT solutions, deep knowledge of IoT protocols, edge computing, and IoT security."
       }
     ]
   },
   {
-    "questionID": "58",
+    "questionID": "110",
     "category": "Technical Knowledge",
     "tags": [
-      "DevOps",
-      "Methodologies",
-      "Practices",
-      "Knowledge Level"
+      "supervised",
+      "machine learning"
     ],
-    "question": "Rate your knowledge of DevOps methodologies and practices.",
+    "question": "How familiar should a candidate be with the concepts and processes of supervised machine learning?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic understanding of DevOps concepts, principles, and tools such as Jenkins, Docker, Kubernetes."
+        "answer": "Beginner: Knows the fundamental principles of supervised machine learning, such as training and testing datasets, and simple algorithms like linear regression."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Regular involvement in a DevOps environment, capable of setting up simple CI/CD pipelines."
+        "answer": "Intermediate: Has implemented supervised machine learning models using various algorithms, understands the concept of overfitting and regularization."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Extensive experience in a DevOps role, able to design, implement, and manage complex DevOps pipelines and practices."
+        "answer": "Advanced: Has extensive experience with supervised learning, can tune complex models, understands intricacies like bias-variance trade-off and model validation techniques."
       }
     ]
   },
   {
-    "questionID": "59",
+    "questionID": "111",
     "category": "Technical Knowledge",
     "tags": [
-      "Machine Learning",
-      "Algorithms",
-      "Familiarity Level"
+      "unsupervised",
+      "machine learning"
     ],
-    "question": "How familiar are you with machine learning algorithms?",
+    "question": "How familiar should a candidate be with the concepts and processes of unsupervised machine learning?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic understanding of machine learning concepts and some common algorithms."
+        "answer": "Beginner: Understands the fundamental principles of unsupervised learning and knows about simple algorithms like k-means clustering."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Practical experience with machine learning tools and libraries, capable of developing simple predictive models."
+        "answer": "Intermediate: Has implemented unsupervised learning algorithms to uncover insights from the data, understands concepts like dimensionality reduction."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Extensive experience with machine learning, able to design, train, and evaluate complex machine learning models."
+        "answer": "Advanced: Has extensive experience with unsupervised learning, can implement complex algorithms, and understands advanced concepts like hierarchical clustering and deep autoencoders."
       }
     ]
   },
   {
-    "questionID": "60",
+    "questionID": "112",
     "category": "Technical Knowledge",
     "tags": [
-      "Web Development",
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Comfort Level"
+      "machine learning",
+      "reinforcement"
     ],
-    "question": "Rate your comfort level with web development languages (HTML, CSS, JavaScript).",
+    "question": "How familiar should a candidate be with the concepts and processes of reinforcement learning?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic understanding and use of HTML, CSS, JavaScript, able to build simple web pages."
+        "answer": "Beginner: Understands the basic principles of reinforcement learning, such as the concepts of agents, environments, states, and rewards."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Regularly codes in these languages, able to design and implement interactive websites."
+        "answer": "Intermediate: Has used reinforcement learning in projects, understands model-free methods like Q-learning."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Extensive experience with web development, proficient in latest standards, able to optimize performance and usability."
+        "answer": "Advanced: Has extensive experience in implementing reinforcement learning solutions, understands complex concepts like policy gradients and deep reinforcement learning."
       }
     ]
   },
   {
-    "questionID": "61",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Large Datasets",
-      "Management",
-      "Interpretation",
-      "Proficiency Level"
-    ],
-    "question": "How proficient are you in managing and interpreting large datasets?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of data management principles, able to perform simple data analysis."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Experience in handling sizable datasets, proficient in data cleaning, transformation, and basic statistical analysis."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in data management and analysis, able to design and implement complex data pipelines, proficient in advanced statistical methods."
-      }
-    ]
-  },
-  {
-    "questionID": "62",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Disaster Recovery",
-      "Planning",
-      "Strategies",
-      "Professional Experience"
-    ],
-    "question": "Describe your experience with disaster recovery planning and strategies in a professional setting.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding of disaster recovery concepts and best practices."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Practical experience in creating and executing disaster recovery plans in a professional setting."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in disaster recovery planning and implementation, able to design, test, and optimize complex disaster recovery strategies."
-      }
-    ]
-  },
-  {
-    "questionID": "63",
-    "category": "Technical Knowledge",
-    "tags": [
-      "IAM",
-      "Implementation",
-      "Management",
-      "Comfort Level"
-    ],
-    "question": "Rate your comfort level with implementing or managing identity and access management",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with the concept of IAM, able to manage basic user and group permissions."
-      },
-      {
-        "answerID": 3,
-        "answer": "ntermediate: Experience in implementing and managing IAM in a professional setting, able to set up roles, policies, and permissions."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in IAM, proficient in designing and implementing complex IAM strategies, experienced in working with various IAM platforms and tools."
-      }
-    ]
-  },
-  {
-    "questionID": "64",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Real-Time Data",
-      "Processing",
-      "Analytics",
-      "Understanding Level"
-    ],
-    "question": "How well do you understand real-time data processing and analytics?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Understands the concept of real-time data processing and analytics, able to perform simple real-time data analysis."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has experience in implementing real-time data processing and analytics in a professional setting, familiar with tools and platforms for real-time analytics."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in real-time data processing, able to design and implement complex real-time analytics solutions."
-      }
-    ]
-  },
-  {
-    "questionID": "65",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Load Balancing",
-      "Strategies",
-      "Techniques",
-      "Understanding Level"
-    ],
-    "question": "Rate your understanding of load balancing strategies and techniques",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with the concept of load balancing, understands its importance in managing network traffic."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Experience in implementing load balancing in a professional setting, able to set up and configure load balancers."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in designing and implementing load balancing strategies, proficient in various load balancing techniques and technologies."
-      }
-    ]
-  },
-  {
-    "questionID": "66",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Machine Learning",
-      "Algorithms",
-      "Implementation",
-      "Understanding Level"
-    ],
-    "question": "How well do you understand machine learning algorithms and their implementation?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with the concept of machine learning, understands basic algorithms and their applications."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Experience in implementing machine learning algorithms in a professional setting, able to design simple machine learning models."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in designing and implementing complex machine learning models, proficient in a variety of machine learning algorithms and tools."
-      }
-    ]
-  },
-  {
-    "questionID": "67",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Big Data",
-      "Handling",
-      "Management",
-      "Experience"
-    ],
-    "question": "Describe your experience with handling and managing Big Data solutions.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Understands the concept of Big Data, familiar with basic Big Data tools and platforms."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has experience in managing Big Data solutions in a professional setting, capable of setting up and maintaining Big Data platforms."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in managing complex Big Data solutions, able to design and implement Big Data strategies and architectures."
-      }
-    ]
-  },
-  {
-    "questionID": "68",
-    "category": "Technical Knowledge",
-    "tags": [
-      "SDL",
-      "Secure Development",
-      "Lifecycle",
-      "Understanding Level"
-    ],
-    "question": "Rate your understanding of the Secure Development Lifecycle (SDL) based on your experience.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with the concept of SDL, understands the importance of security in the development process."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Experience in implementing SDL in a professional setting, able to incorporate security practices into development workflows."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive experience in SDL, able to design and implement secure development strategies, proficient in various security tools and techniques."
-      }
-    ]
-  },
-  {
-    "questionID": "69",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Functional Programming",
-      "Concepts",
-      "Application",
-      "Proficiency Level"
-    ],
-    "question": "How proficient are you with functional programming concepts and their application?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Understands the basics of functional programming, has written simple functional code."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has professional experience with functional programming, able to write complex functional code and apply functional programming concepts."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive professional experience with functional programming, able to apply functional programming concepts to complex software projects"
-      }
-    ]
-  },
-  {
-    "questionID": "70",
-    "category": "Technical Knowledge",
-    "tags": [
-      "Responsive Design",
-      "Cross-Platform Compatibility",
-      "Web Development",
-      "Experience"
-    ],
-    "question": "Describe your experience with responsive design and cross-platform compatibility in web development.",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Familiar with the concepts of responsive design and cross-platform compatibility, able to design simple responsive web pages."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has professional experience with responsive web design and cross-platform development, able to create complex responsive web designs and ensure cross-platform compatibility."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Extensive professional experience with responsive design and cross-platform compatibility, able to design and implement complex responsive designs and ensure cross-platform compatibility for large-scale projects."
-      }
-    ]
-  },
-  {
-    "questionID": "71",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Product Demonstrations",
-      "Presentation Skills",
-      "Customer Engagement"
-    ],
-    "question": "What is your experience level in creating and delivering product demonstrations?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have created and delivered product demonstrations a few times."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I regularly create and deliver product demonstrations."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience creating and delivering product demonstrations in a variety of settings."
-      }
-    ]
-  },
-  {
-    "questionID": "72",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Technical Teams",
-      "Collaboration",
-      "Solution Design"
-    ],
-    "question": "How proficient are you in collaborating with technical teams to design solutions that fulfill customer needs?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have collaborated with technical teams on a few occasions to design solutions."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I often collaborate with technical teams to design solutions."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Collaborating with technical teams to design solutions is a significant part of my role."
-      }
-    ]
-  },
-  {
-    "questionID": "73",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Proposal Writing",
-      "Bid Management",
-      "Business Writing"
-    ],
-    "question": "How would you assess your proposal writing and bid management skills?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have helped in proposal writing or bid management a few times."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I regularly engage in proposal writing or bid management."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience in proposal writing and bid management, often leading the process."
-      }
-    ]
-  },
-  {
-    "questionID": "74",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Proposal Writing",
-      "Business Communication",
-      "Experience Level"
-    ],
-    "question": "How often did you engage in the proposal writing process in your previous roles?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Occasionally: I have occasionally participated in proposal writing processes."
-      },
-      {
-        "answerID": 3,
-        "answer": "Regularly: Participating in proposal writing processes has been a regular part of my previous roles."
-      },
-      {
-        "answerID": 4,
-        "answer": "Always: I always participate in proposal writing processes, it is a central aspect of my role."
-      }
-    ]
-  },
-  {
-    "questionID": "75",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Proposal Writing",
-      "Business Communication",
-      "Experience Level"
-    ],
-    "question": "Based on your experience, how skilled are you in leading sales presentations to diverse stakeholders?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have led a few sales presentations."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I often lead sales presentations in my role."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I frequently lead sales presentations to a diverse set of stakeholders, including C-level executives."
-      }
-    ]
-  },
-  {
-    "questionID": "76",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Security Reviews",
-      "Procurement Cycle",
-      "Risk Management"
-    ],
-    "question": "How would you rate your ability to manage security reviews during procurement stages?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have some experience managing security reviews during procurement cycles."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I regularly handle security reviews during procurement cycles."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Handling security reviews during procurement cycles is a key part of my responsibilities."
-      }
-    ]
-  },
-  {
-    "questionID": "77",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Proof of Concept (POC)",
-      "Client Support",
-      "Trial Process"
-    ],
-    "question": "What is your proficiency level in supporting Proof of Concept (POC) or trial processes for customers?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have occasionally supported POC or trial processes for clients."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I frequently support POC or trial processes for clients."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I regularly support POC or trial processes for clients and can manage them independently."
-      }
-    ]
-  },
-  {
-    "questionID": "78",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Request for Proposal (RFP)",
-      "Business Writing",
-      "Response Management"
-    ],
-    "question": "How skilled are you in developing Request for Proposal (RFP) responses?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have prepared a few RFP responses under supervision."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I have prepared numerous RFP responses independently."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I routinely prepare RFP responses and have established a systematic approach to doing so."
-      }
-    ]
-  },
-  {
-    "questionID": "79",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Pre-sales",
-      "Technical Demonstrations",
-      "Client Requirements"
-    ],
-    "question": "Based on your experience, how proficient are you in demonstrating a product's technical capabilities to meet client needs during pre-sales calls?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have occasionally demonstrated a product's technical capabilities during pre-sales calls."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Independently conducted product demonstrations for small to medium-sized deals during pre-sales calls"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Led comprehensive product demonstrations during pre-sales calls for large-scale deals with complex client requirements."
-      }
-    ]
-  },
-  {
-    "questionID": "80",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Technical Presentations",
-      "Client Engagement",
-      "Sales Process"
-    ],
-    "question": "How proficient are you in creating and delivering technical presentations to clients during the sales process?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Assisted in developing and delivering technical presentations under supervision"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Independently developed and delivered technical presentations for small to medium-sized deals"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Led the development and delivery of technical presentations for large-scale deals, tailoring content to client needs and concerns"
-      }
-    ]
-  },
-  {
-    "questionID": "81",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Compliance",
-      "Regulatory Requirements",
-      "Government Contracts"
-    ],
-    "question": "Based on your experience, how well do you navigate the state and federal government procurement process in a pre-sales SE role?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Basic understanding, but have not directly handled a government deal"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Have assisted or handled parts of the procurement process for government deals"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced : Have independently managed the procurement process for large-scale government deals, handling complex requirements and scenarios"
-      }
-    ]
-  },
-  {
-    "questionID": "82",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Government Standards",
-      "Proposal Delivery",
-      "Presentation Skills"
-    ],
-    "question": "How proficient are you in managing compliance and regulatory requirements specific to state and federal government contracts?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: basic understanding, but have not directly managed compliance in deals"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Have assisted or handled parts of compliance and regulatory requirements for government deals"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced - Have independently managed complex compliance and regulatory requirements for large-scale government deals"
-      }
-    ]
-  },
-  {
-    "questionID": "83",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Government Standards",
-      "Proposal Delivery",
-      "Presentation Skills"
-    ],
-    "question": "How would you rate your skills in delivering presentations and proposals that adhere to government standards and formats?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have delivered a few presentations or proposals compliant with government standards and formats."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I regularly deliver presentations and proposals compliant with government standards and formats."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Delivering presentations and proposals compliant with government standards and formats is/ was a key part of my role."
-      }
-    ]
-  },
-  {
-    "questionID": "84",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Training",
-      "Product Features",
-      "Sales Team"
-    ],
-    "question": "What is your experience in presenting competitive differentiators to internal sales teams?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I've participated in, but not led, such presentations"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've led a few of these presentations, with guidance"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I regularly lead these presentations independently and am comfortable doing so."
-      }
-    ]
-  },
-  {
-    "questionID": "85",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Product Management",
-      "Collaboration",
-      "Experience Level"
-    ],
-    "question": "What is your experience level with leading product feature trainings for sales teams?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I've participated in, but not led, such trainings"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I regularly lead training on specific product features for sales teams."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced Leading training on specific product features for sales teams is/ was a key part of my role."
-      }
-    ]
-  },
-  {
-    "questionID": "86",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Product Management",
-      "Collaboration",
-      "Experience Level"
-    ],
-    "question": "How frequently did you collaborate with Product Management teams in your previous roles?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have collaborated with Product Management teams on a few occasions."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I often collaborate with Product Management to communicate customer needs and assist in roadmap planning."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have a strong partnership with Product Management, regularly influencing product strategy based on customer insights."
-      }
-    ]
-  },
-  {
-    "questionID": "87",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Internal Sales Team",
-      "Collaboration",
-      "Experience Level"
-    ],
-    "question": "What is your experience in working with an internal sales team?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure to sales teams."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have collaborated with an internal sales team on a few deals / projects."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I regularly collaborate with an internal sales team."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have a strong track record of partnering with sales teams, contributing to strategy, and playing a key role in winning deals."
-      }
-    ]
-  },
-  {
-    "questionID": "88",
-    "category": "Sales & Marketing Skills",
-    "tags": [
-      "Deal Size",
-      "Sales Experience",
-      "Past Roles"
-    ],
-    "question": "What has been the average deal size you worked on in your previous roles?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience: I have not supported deals in my past roles."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have worked on small deals (less than $50k)."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I have worked on mid-sized deals ($50k-$200k)."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have worked on large deals ($200k+)."
-      }
-    ]
-  },
-  {
-    "questionID": "89",
-    "category": "Sales & Marketing Skills",
+    "questionID": "113",
+    "category": "Deal Experience",
     "tags": [
       "Customer Size",
       "Sales Engineering",
@@ -2297,967 +2648,282 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "90",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Salesforce CRM",
-      "Customer Relationship Management",
-      "Proficiency"
-    ],
-    "question": "How proficient are you with Salesforce CRM?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have limited experience with Salesforce CRM. I've used it in some capacity, but not extensively."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've used Salesforce CRM regularly and I'm comfortable with its basic features and functionalities."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I've used Salesforce CRM extensively. I'm familiar with advanced features and have applied it to solve complex tasks."
-      }
-    ]
-  },
-  {
-    "questionID": "91",
-    "category": "Tools & Platforms",
-    "tags": [
-      "PowerPoint",
-      "Sales Presentations",
-      "Proficiency Level"
-    ],
-    "question": "What is your proficiency level in using PowerPoint for sales presentations?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have created a few sales presentations using PowerPoint, but need further practice."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly created sales presentations using PowerPoint and I'm comfortable with its basic functionalities."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience creating sales presentations using PowerPoint, including using advanced features."
-      }
-    ]
-  },
-  {
-    "questionID": "92",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Zoom",
-      "Sales Meetings",
-      "Demonstrations",
-      "Virtual Communication"
-    ],
-    "question": "How proficient are you with Zoom or comparable platforms for sales meetings and demos?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Zoom or similar platforms a few times for sales meetings and demos."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Zoom or similar platforms for sales meetings and demos and am comfortable with its basic functionalities."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Zoom or similar platforms for sales meetings and demos, including hosting and managing meetings."
-      }
-    ]
-  },
-  {
-    "questionID": "93",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Proposal Management",
-      "Contract Management",
-      "PandaDoc",
-      "Experience"
-    ],
-    "question": "What is your experience with proposal and contract management platforms like PandaDoc?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I've used PandaDoc or similar platforms for basic tasks, like sending and tracking documents."
-      },
-      {
-        "answerID": 3,
-        "answer": "Inetermidiate: I'm comfortable with using PandaDoc, including creating and customizing proposal templates and managing contracts."
-      },
-      {
-        "answerID": 4,
-        "answer": "I'm proficient in PandaDoc, including automating document workflows and integrating with other tools."
-      }
-    ]
-  },
-  {
-    "questionID": "94",
-    "category": "Tools & Platforms",
-    "tags": [
-      "G Suite",
-      "Google Docs",
-      "Google Sheets",
-      "Google Slides",
-      "Proficiency"
-    ],
-    "question": "How comfortable are you working with standard G Suite tools (Google Docs, Sheets, Slides)?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have some experience with G Suite tools, including creating and editing documents, but my experience is limited."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used G Suite tools for various tasks, such as creating reports and presentations, and I'm comfortable with the main functionalities."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with G Suite tools, including using advanced features like scripting in Google Sheets and collaborative features in Docs and Slides."
-      }
-    ]
-  },
-  {
-    "questionID": "95",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Microsoft Teams",
-      "Collaboration",
-      "Proficiency Level"
-    ],
-    "question": "What is your experience level with Microsoft Teams for internal collaboration?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have some experience with Microsoft Teams, mainly for participating in meetings or chats."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Microsoft Teams for a variety of collaboration tasks, including file sharing, meeting organization, and team chats."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Microsoft Teams, including managing teams, setting permissions, and utilizing integrations for increased productivity."
-      }
-    ]
-  },
-  {
-    "questionID": "96",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Slack",
-      "Team Communication",
-      "Collaboration",
-      "Proficiency"
-    ],
-    "question": "How proficient are you with Slack for team communication and collaboration?\"",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Slack before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have some experience with Slack, primarily for direct communication or participating in channel discussions."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Slack for team communication, including using features like channels, direct messages, and file sharing."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Slack, including setting up integrations, managing channels, and using advanced features for team collaboration."
-      }
-    ]
-  },
-  {
-    "questionID": "97",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Project Management",
-      "Jira",
-      "Trello",
-      "Experience"
-    ],
-    "question": "What is your experience with project management tools like Jira or Trello?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used project management tools like Jira or Trello for basic tasks, such as tracking task completion."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used project management tools like Jira or Trello, including setting up and managing tasks, monitoring progress, and collaborating with team members."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with project management tools like Jira or Trello, including setting up complex projects, tracking and managing workflows, and utilizing advanced features and integrations."
-      }
-    ]
-  },
-  {
-    "questionID": "98",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Tableau",
-      "Data Visualization",
-      "Proficiency"
-    ],
-    "question": "How proficient are you with Tableau?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Tableau before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Tableau for basic tasks, such as creating simple charts and visualizations."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Tableau, including creating dashboards, interactive visualizations, and using basic features for data analytics."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Tableau, including data integration, advanced data analysis, creating complex interactive dashboards, and utilizing scripting for more complex tasks."
-      }
-    ]
-  },
-  {
-    "questionID": "99",
-    "category": "Tools & Platforms",
-    "tags": [
-      "ZoomInfo",
-      "Lead Generation",
-      "Experience"
-    ],
-    "question": "What is your experience with ZoomInfo for lead generation?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used ZoomInfo before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used ZoomInfo for basic tasks, primarily for looking up contacts or companies."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used ZoomInfo, including for targeted lead generation and list building, and have used some of the advanced search features."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with ZoomInfo, including setting up and managing campaigns for lead generation, tracking and analyzing campaign results, and utilizing advanced features for targeted marketing."
-      }
-    ]
-  },
-  {
-    "questionID": "100",
-    "category": "Tools & Platforms",
-    "tags": [
-      "GitHub",
-      "Version Control",
-      "Code Collaboration",
-      "Proficiency Level"
-    ],
-    "question": "What's your proficiency level with GitHub for version control and code collaboration?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used GitHub before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used GitHub for basic tasks, such as cloning repositories and making commits."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used GitHub, including managing branches, handling merges, and addressing merge conflicts."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with GitHub, including managing large repositories, handling complex merges, setting up continuous integration/continuous deployment (CI/CD) workflows, and other advanced features."
-      }
-    ]
-  },
-  {
-    "questionID": "101",
-    "category": "Tools & Platforms",
-    "tags": [
-      "HubSpot",
-      "Marketing Automation",
-      "Proficiency"
-    ],
-    "question": "How proficient are you with HubSpot for marketing automation?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used HubSpot before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used HubSpot for basic tasks, such as email marketing and CRM management."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used HubSpot, including managing marketing campaigns, segmenting audiences, analyzing results, and some automation."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with HubSpot, including setting up and managing automated marketing campaigns, utilizing advanced analysis features, and integrating with other systems."
-      }
-    ]
-  },
-  {
-    "questionID": "102",
-    "category": "Tools & Platforms",
-    "tags": [
-      "LinkedIn",
-      "Lead Generation",
-      "Networking",
-      "Familiarity"
-    ],
-    "question": "How familiar are you with LinkedIn for lead generation and networking?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used LinkedIn for lead generation or networking."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used LinkedIn for networking and to a lesser extent, lead generation, like sending connection requests and messages."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used LinkedIn for lead generation and networking,"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with LinkedIn, including optimizing profiles for visibility, running LinkedIn ad campaigns, leveraging LinkedIn's Sales Navigator for advanced lead generation, and building a substantial network."
-      }
-    ]
-  },
-  {
-    "questionID": "103",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Azure",
-      "Cloud Computing",
-      "Experience"
-    ],
-    "question": "What's your experience with Azure as a cloud computing service?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Azure before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Azure for basic tasks, such as setting up virtual machines or using simple Azure services."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Azure, including setting up and managing different services, implementing security measures, and handling basic troubleshooting."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Azure, including architecting and managing complex service deployments, implementing advanced security measures, automation, and optimizing for cost and performance."
-      }
-    ]
-  },
-  {
-    "questionID": "104",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Snowflake BI",
-      "Data Warehousing",
-      "Data Analysis",
-      "Proficiency Level"
-    ],
-    "question": "What is your proficiency level with Snowflake BI for data warehousing and analysis?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Snowflake BI before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Snowflake for basic tasks, such as setting up databases and running simple queries."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Snowflake, including setting up and managing data warehouses, creating and optimizing queries, and handling basic data analysis tasks."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Snowflake, including managing large data warehouses, implementing data security measures, complex data analysis, and optimizing queries for performance."
-      }
-    ]
-  },
-  {
-    "questionID": "105",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Virtualization Tools",
-      "VMware",
-      "Hyper-V",
-      "Proficiency"
-    ],
-    "question": "How comfortable are you with Virtualization tools like VMware or Hyper-V?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I have no experience with virtualization tools like VMware or Hyper-V."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used virtualization tools like VMware or Hyper-V for basic tasks, such as setting up and running virtual machines."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used virtualization tools, including managing multiple virtual machines, setting up virtual networks, and handling basic troubleshooting."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with virtualization tools, including managing large-scale virtual environments, implementing advanced network configurations, and optimizing for performance and security."
-      }
-    ]
-  },
-  {
-    "questionID": "106",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Tags: HCM Tools",
-      "Workday",
-      "SAP SuccessFactors",
-      "Experience Level"
-    ],
-    "question": "What's your experience level with HCM tools like Workday or SAP SuccessFactors?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used HCM tools before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used HCM tools for basic tasks, such as employee onboarding, basic report generation, and data entry."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used HCM tools, including handling personnel data, managing employee lifecycle events, and generating detailed reports."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with HCM tools, including managing complex HR processes, integrating with other systems, customizing workflows, and ensuring compliance with HR regulations."
-      }
-    ]
-  },
-  {
-    "questionID": "107",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Event Management Tools",
-      "Cvent",
-      "Eventbrite",
-      "Proficiency"
-    ],
-    "question": "How proficient are you with event management tools like Cvent or Eventbrite?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Event Management tools before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Event Management tools for basic tasks, such as creating an event and managing registrations."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Event Management tools, including setting up complex event schedules, managing ticketing and payment systems, and promoting events."
-      },
-      {
-        "answerID": 4,
-        "answer": "dvanced: I have extensive experience with Event Management tools, including managing large-scale events, integrating with other systems for event promotion and data analysis, and customizing event experiences."
-      }
-    ]
-  },
-  {
-    "questionID": "108",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Auth0",
-      "Identity Management",
-      "Experience"
-    ],
-    "question": "What's your experience with Auth0 for identity management?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Auth0 before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Auth0 for basic tasks, such as user authentication and basic authorization."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Auth0, including managing user identities, implementing role-based access control, and handling basic troubleshooting."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Auth0, including managing large user bases, implementing advanced access control strategies, integrating with other systems, and ensuring compliance with identity management regulations."
-      }
-    ]
-  },
-  {
-    "questionID": "109",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Tealium",
-      "Customer Data Management",
-      "Event Tracking",
-      "Familiarity"
-    ],
-    "question": "How familiar are you with Tealium for customer data management and event tracking?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Tealium before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Tealium for basic tasks, such as tracking user events and managing basic customer data."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Tealium, including setting up and managing complex event tracking, managing customer data, and generating basic reports."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Tealium, including managing large-scale customer data, setting up advanced event tracking strategies, integrating with other systems for data analysis, and ensuring compliance with data management regulations."
-      }
-    ]
-  },
-  {
-    "questionID": "110",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Azure Active Directory",
-      "Identity and Access Management",
-      "Comfort Level"
-    ],
-    "question": "How comfortable are you with Azure Active Directory for identity and access management?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Azure Active Directory before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Azure Active Directory for basic tasks, such as user creation and managing basic access controls."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Azure Active Directory, including managing users and groups, implementing role-based access control, and handling troubleshooting."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Azure Active Directory, including managing large user bases, implementing advanced access control strategies, integrating with other systems, and ensuring compliance with identity management regulations."
-      }
-    ]
-  },
-  {
-    "questionID": "111",
-    "category": "Tools & Platforms",
-    "tags": [
-      "What's your experience level with MuleSoft for building APIs and integrations?"
-    ],
-    "question": "What's your experience level with MuleSoft for building APIs and integrations?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used MuleSoft before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used MuleSoft for basic tasks, such as creating simple APIs and basic data integrations."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used MuleSoft, including developing complex APIs, managing data integrations, and troubleshooting issues."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with MuleSoft, including managing large-scale API integrations, designing complex data transformation workflows, and ensuring compliance with API design standards."
-      }
-    ]
-  },
-  {
-    "questionID": "112",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Seismic",
-      "Sales Enablement",
-      "Proficiency"
-    ],
-    "question": "How proficient are you with Seismic for sales enablement?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Seismic before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Seismic for basic tasks, such as uploading content and managing basic customer interactions."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Seismic, including managing content libraries, tracking customer interactions, and generating basic reports."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Seismic, including managing large content libraries, implementing advanced customer interaction strategies, integrating with other systems, and ensuring compliance with sales enablement best practices."
-      }
-    ]
-  },
-  {
-    "questionID": "113",
-    "category": "Tools & Platforms",
-    "tags": [
-      "Highspot",
-      "Sales Enablement",
-      "Proficiency"
-    ],
-    "question": "How would you rate your proficiency with Highspot for sales enablement?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I haven't used Highspot before."
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Highspot for basic tasks, such as uploading content and managing basic customer interactions."
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've regularly used Highspot, including managing content libraries, tracking customer interactions, and generating basic reports."
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Highspot, including managing large content libraries, implementing advanced customer interaction strategies, integrating with other systems, and ensuring compliance with sales enablement best practices."
-      }
-    ]
-  },
-  {
     "questionID": "114",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Workday",
-      "Human Capital Management",
-      "Experience Level"
+      "Security Reviews",
+      "Procurement Cycle",
+      "Risk Management"
     ],
-    "question": "What is your experience level with Workday for human capital management?",
+    "question": "How would you rate your experience supporting security reviews during procurement stages?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Workday before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have used Workday for basic tasks, such as managing employee records and running basic reports."
+        "answer": "Beginner: I have some experience managing security reviews during procurement cycles."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used Workday, including managing various human resources processes and generating complex reports."
+        "answer": "Intermediate: I regularly handle security reviews during procurement cycles."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Workday, including managing large employee bases, implementing complex HR processes, integrating with other systems, and ensuring compliance with HR management best practices."
+        "answer": "Advanced: Handling security reviews during procurement cycles is a key part of my responsibilities."
       }
     ]
   },
   {
     "questionID": "115",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Data Loss Prevention",
-      "DLP",
-      "Familiarity"
+      "Proposal Writing",
+      "Business Communication",
+      "Experience Level"
     ],
-    "question": "How familiar are you with Data Loss Prevention (DLP) systems?",
+    "question": "How often did you engage in the proposal writing process in your previous roles?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used DLP systems before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of DLP systems and their role in preventing data leaks."
+        "answer": "Occasionally: I have occasionally participated in proposal writing processes."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've been involved in implementing and managing DLP systems, including policy configuration and incident response."
+        "answer": "Regularly: Participating in proposal writing processes has been a regular part of my previous roles."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with DLP systems, including strategy design, system implementation and management, incident response, and ensuring regulatory compliance."
+        "answer": "Always: I always participate in proposal writing processes, it is a central aspect of my role."
       }
     ]
   },
   {
     "questionID": "116",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Robotic Process Automation",
-      "RPA",
-      "Experience Level"
+      "Proof of Concept (POC)",
+      "Client Support",
+      "Trial Process"
     ],
-    "question": "What's your experience level with Robotic Process Automation (RPA) tools?",
+    "question": "What is your proficiency level in supporting Proof of Concept (POC) or trial processes for customers?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used RPA tools before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of RPA and have tinkered with RPA tools."
+        "answer": "Beginner: I have occasionally supported POC or trial processes for clients."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used RPA tools to automate processes and manage bots."
+        "answer": "Intermediate: I frequently support POC or trial processes for clients."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with RPA, including process identification, bot design and management, and measuring automation impacts."
+        "answer": "Advanced: I regularly support POC or trial processes for clients and can manage them independently."
       }
     ]
   },
   {
     "questionID": "117",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Selenium",
-      "Web Testing",
-      "Proficiency"
+      "Request for Proposal (RFP)",
+      "Business Writing",
+      "Response Management"
     ],
-    "question": "How would you rate your proficiency with Selenium for web testing?",
+    "question": "How skilled are you in developing Request for Proposal (RFP) responses?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Selenium before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic experience with Selenium, such as scripting simple tests and running them."
+        "answer": "Beginner: I have prepared a few RFP responses under supervision."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used Selenium, including scripting complex tests, running them, and troubleshooting issues."
+        "answer": "Intermediate: I have prepared numerous RFP responses independently."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Selenium, including test planning, scripting complex test scenarios, integrating with CI/CD pipelines, and troubleshooting intricate issues."
+        "answer": "Advanced: I routinely prepare RFP responses and have established a systematic approach to doing so."
       }
     ]
   },
   {
     "questionID": "118",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "OutSystems",
-      "Low-Code Development",
-      "Experience Level"
+      "Technical Presentations",
+      "Client Engagement",
+      "Sales Process"
     ],
-    "question": "What's your experience level with OutSystems for low-code development?",
+    "question": "How proficient are you in creating and delivering technical presentations to clients during the sales process?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used OutSystems before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic experience with OutSystems, such as setting up simple applications."
+        "answer": "Beginner: Assisted in developing and delivering technical presentations under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used OutSystems, including creating and maintaining applications with moderate complexity."
+        "answer": "Intermediate: Independently developed and delivered technical presentations for small to medium-sized deals"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with OutSystems, including application planning, creating complex applications, performance optimization, and troubleshooting issues."
+        "answer": "Advanced: Led the development and delivery of technical presentations for large-scale deals, tailoring content to client needs and concerns"
       }
     ]
   },
   {
     "questionID": "119",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Appian",
-      "Business Process Management",
-      "Familiarity"
+      "Government Standards",
+      "Proposal Delivery",
+      "Presentation Skills"
     ],
-    "question": "How familiar are you with Appian for business process management?",
+    "question": "How would you rate your skills in delivering presentations and proposals that adhere to government standards and formats?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Appian before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic experience with Appian, such as defining simple processes."
+        "answer": "Beginner: I have delivered a few presentations or proposals compliant with government standards and formats."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used Appian, including defining complex processes, managing tasks, and analyzing process metrics."
+        "answer": "Intermediate: I regularly deliver presentations and proposals compliant with government standards and formats."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Appian, including process design, implementation, optimization, and advanced analytics."
+        "answer": "Advanced: Delivering presentations and proposals compliant with government standards and formats is/ was a key part of my role."
       }
     ]
   },
   {
     "questionID": "120",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "SharePoint",
-      "Collaboration",
-      "Document Management",
-      "Familiarity"
+      "Government Standards",
+      "Proposal Delivery",
+      "Presentation Skills"
     ],
-    "question": "What's your familiarity with SharePoint for collaboration and document management?",
+    "question": "How proficient are you in managing compliance and regulatory requirements specific to state and federal government contracts?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used SharePoint before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic experience with SharePoint, such as sharing documents and collaborating on files."
+        "answer": "Beginner: basic understanding, but have not directly managed compliance in deals"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used SharePoint, including managing team sites, setting permissions, and organizing content."
+        "answer": "Intermediate: Have assisted or handled parts of compliance and regulatory requirements for government deals"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with SharePoint, including site design, administration, integrating with other systems, and implementing document management best practices."
+        "answer": "Advanced - Have independently managed complex compliance and regulatory requirements for large-scale government deals"
       }
     ]
   },
   {
     "questionID": "121",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "CrowdStrike",
-      "Endpoint Security",
-      "Proficiency"
+      "Product Management",
+      "Collaboration",
+      "Experience Level"
     ],
-    "question": "How would you assess your proficiency with CrowdStrike for endpoint security?",
+    "question": "What is your experience level with leading product feature trainings for sales teams?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used CrowdStrike before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of CrowdStrike and its role in endpoint security."
+        "answer": "Beginner: I've participated in, but not led, such trainings"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've been involved in managing CrowdStrike, including setting policies, responding to alerts, and generating reports."
+        "answer": "Intermediate: I regularly lead training on specific product features for sales teams."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with CrowdStrike, including strategy design, policy management, incident response, and advanced threat hunting."
+        "answer": "Advanced Leading training on specific product features for sales teams is/ was a key part of my role."
       }
     ]
   },
   {
     "questionID": "122",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Sophos",
-      "Cybersecurity",
+      "Product Management",
+      "Collaboration",
       "Experience Level"
     ],
-    "question": "What is your experience level with Sophos for cybersecurity?",
+    "question": "How frequently did you collaborate with Product Management teams in your previous roles?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Sophos before."
+        "answer": "No experience"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of Sophos and its role in cybersecurity."
+        "answer": "Beginner: I have collaborated with Product Management teams on a few occasions."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've been involved in managing Sophos solutions, including setting policies, managing alerts, and conducting basic threat analysis."
+        "answer": "Intermediate: I often collaborate with Product Management to communicate customer needs and assist in roadmap planning."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Sophos, including strategy design, policy management, incident response, and advanced threat analysis."
+        "answer": "Advanced: I have a strong partnership with Product Management, regularly influencing product strategy based on customer insights."
       }
     ]
   },
   {
     "questionID": "123",
-    "category": "Tools & Platforms",
+    "category": "Deal Experience",
     "tags": [
-      "Docker",
-      "Kubernetes",
-      "Containerization",
-      "Knowledge"
+      "Deal Size",
+      "Sales Experience",
+      "Past Roles"
     ],
-    "question": "How would you evaluate your knowledge of containerization technologies like Docker or Kubernetes?\"",
+    "question": "What has been the average deal size you worked on in your previous roles?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No knowledge of Docker or Kubernetes"
+        "answer": "No experience: I have not supported deals in my past roles."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic experience setting up containers and pods using Docker or Kubernetes."
+        "answer": "Beginner: I have worked on small deals (less than $50k)."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used Docker or Kubernetes, including deploying and managing applications and services."
+        "answer": "Intermediate: I have worked on mid-sized deals ($50k-$200k)."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Docker or Kubernetes, including complex deployment strategies, orchestration, scaling, and securing applications."
+        "answer": "Advanced: I have worked on large deals ($200k+)."
       }
     ]
   },
@@ -3265,27 +2931,27 @@ export const questionsData = [
     "questionID": "124",
     "category": "Tools & Platforms",
     "tags": [
-      "Digital Twin",
-      "Simulations",
-      "Familiarity"
+      "Salesforce CRM",
+      "Customer Relationship Management",
+      "Proficiency"
     ],
-    "question": "How familiar are you with Digital Twin technology for simulations?",
+    "question": "Which statement best describes the level of experience a candidate should have with using Salesforce for data entry and reporting?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Digital Twin technology before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic understanding of Digital Twin concepts and its use for simulations."
+        "answer": "Beginner: The candidate should have used Salesforce for basic tasks like data entry and generating simple reports."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've been involved in implementing Digital Twin technology, including setting up basic simulations and analyzing results."
+        "answer": "Intermediate: The candidate should have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Digital Twin technology, including advanced simulation models, performance tuning, and predictive analysis."
+        "answer": "Advanced: The candidate should be proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making."
       }
     ]
   },
@@ -3293,27 +2959,27 @@ export const questionsData = [
     "questionID": "125",
     "category": "Tools & Platforms",
     "tags": [
-      "Process Simulation",
-      "Tools",
-      "Experience Level"
+      "CRN",
+      "Dynamics",
+      "Microsoft Dynamics"
     ],
-    "question": "What's your level of experience with Process Simulation tools?",
+    "question": "Which statement best describes the level of experience a candidate should have with using Microsoft Dynamics 365 for customer relationship management?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Process Simulation tools before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic understanding of Process Simulation concepts and have used simple simulation tools."
+        "answer": "Beginner: The candidate should have used Microsoft Dynamics 365 for basic tasks like tracking contacts and leads."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've been involved in implementing Process Simulations, including setting up models, running simulations, and analyzing results."
+        "answer": "Intermediate: The candidate should be able to use Microsoft Dynamics 365 for more complex tasks such as creating customer journeys, managing marketing campaigns, and utilizing sales insights."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Process Simulation tools, including complex model development, optimization, and advanced analytics."
+        "answer": "Advanced: The candidate should be proficient in using Microsoft Dynamics 365 to manage customer relationships, automate marketing processes, and analyze sales data."
       }
     ]
   },
@@ -3321,27 +2987,26 @@ export const questionsData = [
     "questionID": "126",
     "category": "Tools & Platforms",
     "tags": [
-      "Hadoop",
-      "Big Data Processing",
-      "Proficiency"
+      "Salesforce",
+      "CRM"
     ],
-    "question": "How would you describe your proficiency with Hadoop for big data processing?",
+    "question": "Which statement best describes the level of experience a candidate should have with customizing Salesforce to meet business requirements?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Hadoop before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic understanding of Hadoop and its use in big data processing."
+        "answer": "Beginner: The candidate should have some experience in customizing Salesforce; they can create and modify fields, layouts, and simple automations like email alerts."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Hadoop for data processing, including setting up jobs, managing data, and interpreting results."
+        "answer": "Intermediate: The candidate should have customized Salesforce in a professional setting; they can create custom objects, complex automations using Process Builder, and utilize validation rules."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Hadoop, including cluster management, performance tuning, and advanced data processing techniques."
+        "answer": "Advanced: The candidate should be proficient in customizing Salesforce; they can design and implement complex automations, build custom applications, and effectively manage user roles and profiles."
       }
     ]
   },
@@ -3349,27 +3014,26 @@ export const questionsData = [
     "questionID": "127",
     "category": "Tools & Platforms",
     "tags": [
-      "Docker",
-      "Containerization",
-      "Familiarity"
+      "Salesforce",
+      "CRM"
     ],
-    "question": "How familiar are you with Docker for containerization?",
+    "question": "Which statement best describes the level of experience a candidate should have with importing data into Salesforce?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Docker before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic experience with Docker, including creating and managing Docker containers."
+        "answer": "Beginner: The candidate should have used built-in tools like Data Import Wizard for basic data imports."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've regularly used Docker for containerization, including building images, managing containers, and handling volumes and networks."
+        "answer": "Intermediate: The candidate should have regularly performed data imports into Salesforce in a professional setting."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have extensive experience with Docker, including complex multi-container setups, Docker Compose, Docker Swarm, and best practices for container security and optimization."
+        "answer": "Advanced: The candidate should be proficient with data import in Salesforce and can handle large data volumes and complex data mappings."
       }
     ]
   },
@@ -3377,27 +3041,26 @@ export const questionsData = [
     "questionID": "128",
     "category": "Tools & Platforms",
     "tags": [
-      "Web Application Firewall",
-      "WAF",
-      "Experience Level"
+      "Salesforce",
+      "CRM"
     ],
-    "question": "What's your level of experience with Web Application Firewall (WAF) solutions?",
+    "question": "Which statement best describes the level of experience a candidate should have with using Salesforce APIs?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used WAF solutions before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the concept and purpose of WAF solutions, but my practical experience is limited."
+        "answer": "Beginner: The candidate should understand the basic concept of Salesforce APIs."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've implemented and managed WAF solutions in a professional setting, contributing to the security of web applications."
+        "answer": "Intermediate: The candidate should have used Salesforce APIs for basic integrations."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have deep experience with WAF solutions, having overseen their implementation and management in large-scale environments."
+        "answer": "Advanced: The candidate should be able to use Salesforce APIs for complex integrations, including SOAP and REST APIs."
       }
     ]
   },
@@ -3405,27 +3068,26 @@ export const questionsData = [
     "questionID": "129",
     "category": "Tools & Platforms",
     "tags": [
-      "Stripe",
-      "Payment Processing",
-      "Proficiency"
+      "Tableau",
+      "Data Visualization"
     ],
-    "question": "How would you rate your proficiency with Stripe for payment processing?",
+    "question": "Which statement best describes the level of experience a candidate should have with Tableau for data visualization?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Stripe before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the basics of Stripe for payment processing, but haven't used it extensively in a professional setting."
+        "answer": "Beginner: The candidate should have created basic charts and graphs in Tableau."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've integrated and managed Stripe for payment processing in a professional setting, supporting online transactions."
+        "answer": "Intermediate: The candidate should be able to build interactive dashboards and perform data blending in Tableau."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I have comprehensive knowledge and experience with Stripe, having integrated it into multiple complex online platforms."
+        "answer": "Advanced: The candidate should be able to create complex data visualizations, use Tableau’s scripting language to create calculated fields, and optimize performance."
       }
     ]
   },
@@ -3433,27 +3095,26 @@ export const questionsData = [
     "questionID": "130",
     "category": "Tools & Platforms",
     "tags": [
-      "Braintree",
-      "Online Payments",
-      "Experience Level"
+      "Zoho",
+      "CRM"
     ],
-    "question": "What is your level of experience with Braintree for online payments?",
+    "question": "Which statement best describes the level of experience a candidate should have with Zoho CRM?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Braintree."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Braintree for online payments, but haven't used it extensively in a professional setting."
+        "answer": "Beginner: The candidate should have used Zoho CRM for basic contact and lead management."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've worked with Braintree in a professional setting, integrating it for online payments and managing transactions."
+        "answer": "Intermediate: The candidate should have configured Zoho CRM modules and created reports and dashboards."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm proficient with Braintree, having successfully integrated it into multiple complex e-commerce systems."
+        "answer": "Advanced: The candidate should be able to customize Zoho CRM, automate processes using workflows, and integrate it with other systems."
       }
     ]
   },
@@ -3461,28 +3122,26 @@ export const questionsData = [
     "questionID": "131",
     "category": "Tools & Platforms",
     "tags": [
-      "Apache Kafka",
-      "Event Streaming",
-      "Processing",
-      "Proficiency"
+      "HubSpot",
+      "CRM"
     ],
-    "question": "How would you describe your proficiency with Apache Kafka for real-time event streaming and processing?",
+    "question": "Which statement best describes the level of experience a candidate should have with HubSpot's marketing automation capabilities?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Apache Kafka."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Apache Kafka and its use in real-time event streaming and processing."
+        "answer": "Beginner: The candidate should have used HubSpot for simple email campaigns."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Apache Kafka in a professional setting, setting up streams and managing real-time data processing."
+        "answer": "Intermediate: The candidate should have used HubSpot to design and implement comprehensive marketing campaigns including emails, social media, and landing pages."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with Apache Kafka, having used it to handle large-scale, real-time data streams."
+        "answer": "Advanced: The candidate should be able to use HubSpot to create complex, multi-channel marketing automation campaigns, including personalized content and A/B testing."
       }
     ]
   },
@@ -3490,29 +3149,26 @@ export const questionsData = [
     "questionID": "132",
     "category": "Tools & Platforms",
     "tags": [
-      "AWS Kinesis",
-      "Real-time Streaming",
-      "Data",
-      "Analytics",
-      "Proficiency"
+      "HubSpot",
+      "CRM"
     ],
-    "question": "How would you describe your proficiency with AWS Kinesis for real-time streaming data and analytics?",
+    "question": "Which statement best describes the level of experience a candidate should have with HubSpot's Service Hub?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used AWS Kinesis before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the basics of AWS Kinesis and its role in real-time data streaming and analytics."
+        "answer": "Beginner: The candidate should have used Service Hub for basic ticket management."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used AWS Kinesis in a professional setting, setting up data streams and managing real-time analytics."
+        "answer": "Intermediate: The candidate should have used Service Hub to manage customer issues, implement service automation, and report on service metrics."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with AWS Kinesis, having implemented it for large-scale, real-time data processing and analytics."
+        "answer": "Advanced: The candidate should be proficient with all aspects of Service Hub, including customer feedback and knowledge management tools, and advanced service analytics."
       }
     ]
   },
@@ -3520,28 +3176,26 @@ export const questionsData = [
     "questionID": "133",
     "category": "Tools & Platforms",
     "tags": [
-      "Google Cloud Pub/Sub",
-      "Real-time Messaging",
-      "Event-Driven Services",
-      "Experience Level"
+      "HubSpot",
+      "CRM"
     ],
-    "question": "What's your experience level with Google Cloud Pub/Sub for real-time messaging and event-driven services?",
+    "question": "Which statement best describes the level of experience a candidate should have with HubSpot CRM's Sales Hub?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Google Cloud Pub/Sub before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the basics of Google Cloud Pub/Sub and its use for real-time messaging and event-driven services."
+        "answer": "Beginner: The candidate should have used HubSpot for basic contact management and deal tracking."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Google Cloud Pub/Sub in a professional setting, managing real-time messaging and event-driven services."
+        "answer": "Intermediate: The candidate should have configured HubSpot CRM for sales processes and created custom reports and dashboards."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Google Cloud Pub/Sub, having implemented it in large-scale, real-time systems."
+        "answer": "Advanced: The candidate should be able to customize HubSpot CRM and Sales Hub, create automation with workflows, and handle integrations with other systems."
       }
     ]
   },
@@ -3549,28 +3203,26 @@ export const questionsData = [
     "questionID": "134",
     "category": "Tools & Platforms",
     "tags": [
-      "Apache Storm",
-      "Real-time Computation",
-      "Large Volume Processing",
-      "Experience Level"
+      "Pipedrive",
+      "CRM"
     ],
-    "question": "What is your experience level with Apache Storm for real-time computation and processing of large volumes of data?",
+    "question": "Which statement best describes the level of experience a candidate should have in managing and optimizing sales pipelines in Pipedrive CRM?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Apache Storm before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I've used Apache Storm for basic tasks, like setting up topologies or processing real-time data."
+        "answer": "Beginner: The candidate should have used Pipedrive CRM for tracking deals and should have a basic understanding of sales pipeline stages."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I'm comfortable with using Apache Storm for managing comprehensive real-time computation and data processing projects."
+        "answer": "Intermediate: The candidate should have used Pipedrive CRM to manage the sales pipeline, including creating and customizing pipeline stages, managing deals, and analyzing pipeline metrics."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm proficient in Apache Storm, including setting up and managing complex real-time computation and data processing projects, integrating with other tools, and training others."
+        "answer": "Advanced: The candidate should have used Pipedrive CRM extensively to manage and optimize sales pipelines, including creating multiple customized pipelines, analyzing sales metrics for forecasting, and implementing strategies for pipeline efficiency."
       }
     ]
   },
@@ -3578,28 +3230,26 @@ export const questionsData = [
     "questionID": "135",
     "category": "Tools & Platforms",
     "tags": [
-      "Looker",
-      "Data Exploration",
-      "Business Intelligence",
-      "Proficiency"
+      "project management",
+      "Trello"
     ],
-    "question": "How would you evaluate your proficiency with Looker for data exploration and business intelligence?",
+    "question": "Which statement best describes the level of experience a candidate should have with Trello's board and card system for project management?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Looker before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I've used Looker for basic tasks, like creating dashboards or exploring datasets."
+        "answer": "Beginner: The candidate should have used Trello for personal projects or in a learning environment, primarily for creating basic lists and cards."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I'm comfortable with using Looker for managing comprehensive business intelligence projects and creating complex data models."
+        "answer": "Intermediate: The candidate should have used Trello in a professional setting, using features like labels, checklists, due dates, and attachments to manage tasks and projects."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Looker, having used it extensively for data analysis, visualization, and business intelligence tasks."
+        "answer": "Advanced: The candidate should have extensive experience with Trello, using advanced features like power-ups, automation (Butler), and integrations with other tools."
       }
     ]
   },
@@ -3607,28 +3257,26 @@ export const questionsData = [
     "questionID": "136",
     "category": "Tools & Platforms",
     "tags": [
-      "SAP BusinessObjects",
-      "Business Intelligence",
-      "Reporting",
-      "Experience Level"
+      "project management.",
+      "Asana"
     ],
-    "question": "What's your experience level with SAP BusinessObjects for business intelligence and reporting?",
+    "question": "Which statement best describes the level of experience a candidate should have with Asana for project management and task tracking?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used SAP BusinessObjects before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "I've used SAP BusinessObjects for basic tasks, like creating reports or managing business intelligence tasks."
+        "answer": "Beginner: The candidate should have used Asana for personal projects or in a learning environment, primarily for creating tasks and subtasks."
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with using SAP BusinessObjects for managing comprehensive business intelligence projects and creating complex reports."
+        "answer": "Intermediate: The candidate should have used Asana in a professional setting, creating and managing projects, using features like dependencies, tags, and custom fields."
       },
       {
         "answerID": 4,
-        "answer": "I'm proficient in SAP BusinessObjects, including setting up and managing complex business intelligence projects, integrating with other tools, and training others."
+        "answer": "Advanced: The candidate should have extensive experience with Asana, creating complex projects with sections and columns, using advanced features like timeline view, reports, and automations."
       }
     ]
   },
@@ -3636,28 +3284,26 @@ export const questionsData = [
     "questionID": "137",
     "category": "Tools & Platforms",
     "tags": [
-      "Domo",
-      "Business Intelligence",
-      "Data Visualization",
-      "Proficiency"
+      "project management",
+      "JIRA"
     ],
-    "question": "How would you assess your proficiency with Domo for business intelligence and data visualization?",
+    "question": "Which statement best describes the level of experience a candidate should have with JIRA for issue and project tracking?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I haven't used Domo before."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I've used Domo for basic tasks, like creating dashboards or visualizing data."
+        "answer": "Beginner: The candidate should have used JIRA for basic task tracking or in a learning environment, and understand the concept of issues and the basic workflow."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I'm comfortable with using Domo for managing comprehensive business intelligence projects and creating complex data visualizations."
+        "answer": "Intermediate: The candidate should have used JIRA in a professional setting for project tracking, and have experience with features like setting priorities, assigning issues, and updating workflows."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Domo, having used it extensively to create data visualizations and drive business intelligence initiatives."
+        "answer": "Advanced: The candidate should have extensive experience with JIRA, and have managed complex projects using features like advanced search, custom fields, workflow configuration, and reporting."
       }
     ]
   },
@@ -3665,27 +3311,26 @@ export const questionsData = [
     "questionID": "138",
     "category": "Tools & Platforms",
     "tags": [
-      "Zoho CRM",
-      "Customer Relationship Management",
-      "Proficiency"
+      "project management",
+      "basecamp"
     ],
-    "question": "How would you rate your proficiency in using Zoho CRM for managing customer relationships?",
+    "question": "Which statement best describes your experience with Basecamp for project management and team collaboration?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a fundamental understanding of Zoho CRM and its functions for managing customer relationships."
+        "answer": "Beginner: I have used Basecamp for basic project management or in a learning environment, and am familiar with features like to-do lists and message boards."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Zoho CRM in a professional setting, managing customer data and interactions."
+        "answer": "Intermediate: I have used Basecamp in a professional setting for project management, and have experience with features like creating projects, assigning tasks, and managing deadlines."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with Zoho CRM, having used it extensively for customer relationship management in a business context."
+        "answer": "Advanced: I have extensive experience with Basecamp, and have managed team collaborations using features like Hill Charts, direct messages, and automatic check-ins."
       }
     ]
   },
@@ -3693,27 +3338,26 @@ export const questionsData = [
     "questionID": "139",
     "category": "Tools & Platforms",
     "tags": [
-      "Asana",
-      "Project Management",
-      "Experience Level"
+      "project management",
+      "Monday"
     ],
-    "question": "How would you describe your experience with Asana as a project management tool?",
+    "question": "Which statement best describes the level of experience a candidate should have with Monday.com for project management and team collaboration?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of Asana and its functions for project management."
+        "answer": "Beginner: The candidate should have used Monday.com for basic project management or in a learning environment, and be familiar with features like creating boards and tasks."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Asana in a professional setting, managing projects and tasks."
+        "answer": "Intermediate: The candidate should have used Monday.com in a professional setting for project management, and have experience with features like automations, integrations, and managing deadlines."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Asana, having used it extensively for project management and team collaboration."
+        "answer": "Advanced: The candidate should have extensive experience with Monday.com, and have managed team collaborations using features like workload management, time tracking, and advanced reporting."
       }
     ]
   },
@@ -3721,27 +3365,26 @@ export const questionsData = [
     "questionID": "140",
     "category": "Tools & Platforms",
     "tags": [
-      "MySQL",
-      "Database Management System",
-      "Experience Level"
+      "project management",
+      "Wrike"
     ],
-    "question": "What is your experience level with MySQL as a database management system?",
+    "question": "Which statement best describes the level of experience a candidate should have with Wrike for project management?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: used MySQL for creating databases and running simple queries"
+        "answer": "Beginner: The candidate should have used Wrike for basic task management or in a learning environment, and be familiar with creating projects and tasks."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: experienced in indexing, performance tuning, and setting up replication"
+        "answer": "Intermediate: The candidate should have used Wrike in a professional setting, using features like time tracking, reporting, and task dependencies."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: capable of database architecture design, managing MySQL clusters and performance optimization"
+        "answer": "Advanced: The candidate should have extensive experience with Wrike, using advanced features like Gantt charts, custom workflows, and workload view."
       }
     ]
   },
@@ -3749,28 +3392,26 @@ export const questionsData = [
     "questionID": "141",
     "category": "Tools & Platforms",
     "tags": [
-      "Jira",
-      "Project Management",
-      "Issue Tracking",
-      "Proficiency"
+      "Oracle",
+      "Database"
     ],
-    "question": "How proficient are you in using Jira for project management and issue tracking?",
+    "question": "Which statement best describes the level of experience a candidate should have with Oracle Database for data management and operations?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Jira, including creating tasks and simple issue tracking."
+        "answer": "Beginner: The candidate should have used Oracle Database for basic data management or in a learning environment, and be familiar with SQL queries and basic database operations."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Jira in a professional setting, managing projects, assigning tasks, and tracking issues across sprints."
+        "answer": "ntermediate: The candidate should have used Oracle Database in a professional setting for data management, and have experience with features like PL/SQL, data backup, and performance tuning."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with Jira, having used it extensively for project management, issue tracking, sprint planning, and reporting."
+        "answer": "Advanced: The candidate should have extensive experience with Oracle Database, and have managed large data volumes using features like Real Application Clusters (RAC), Data Guard, and Oracle Exadata."
       }
     ]
   },
@@ -3778,28 +3419,26 @@ export const questionsData = [
     "questionID": "142",
     "category": "Tools & Platforms",
     "tags": [
-      "Confluence",
-      "Collaboration",
-      "Document Management",
-      "Experience Level"
+      "Oracle",
+      "Database"
     ],
-    "question": "Which statement best describes your experience with Confluence for collaboration and document management?",
+    "question": "Which statement best describes the level of experience a candidate should have with performance optimization and tuning in Oracle Database?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Confluence."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Confluence, including creating and editing pages."
+        "answer": "Beginner: The candidate should understand the basic concepts of performance optimization and tuning in Oracle Database, such as using indexes effectively and managing optimizer statistics."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Confluence in a professional setting, managing content, integrating with Jira, and collaborating with teams."
+        "answer": "Intermediate: The candidate should have experience in performance optimization and tuning in a professional setting, including using execution plans, database configuration settings, and Oracle's Automatic Database Diagnostic Monitor (ADDM)."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Confluence, having used it extensively for documentation, collaboration, and knowledge sharing across teams."
+        "answer": "Advanced: The candidate should have extensive experience in performance optimization and tuning in Oracle Database, and be skilled in areas such as SQL Tuning Advisor, SQL Access Advisor, and Real Application Testing (RAT)."
       }
     ]
   },
@@ -3807,27 +3446,27 @@ export const questionsData = [
     "questionID": "143",
     "category": "Tools & Platforms",
     "tags": [
-      "Tags: Postman",
-      "API Testing",
-      "Skills"
+      "Microsoft SQL",
+      "SQL server",
+      "Database"
     ],
-    "question": "How would you rate your skills with Postman for API testing?",
+    "question": "Which statement best describes the level of experience a candidate should have with Microsoft SQL Server for data management and operations?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Postman."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Postman, including creating requests and reading responses."
+        "answer": "Beginner: The candidate should have used Microsoft SQL Server for basic data management or in a learning environment, and be familiar with T-SQL queries and basic database operations."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Postman in a professional setting, testing APIs, using collections, and working with environments."
+        "answer": "Intermediate: The candidate should have used Microsoft SQL Server in a professional setting for data management, and have experience with features like stored procedures, data backup, and performance tuning."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Postman, having used it extensively for API testing, automation, and managing complex workflows."
+        "answer": "Advanced: The candidate should have extensive experience with Microsoft SQL Server, and have managed large data volumes using features like Always On Availability Groups, SQL Server Integration Services (SSIS), and SQL Server Analysis Services (SSAS)."
       }
     ]
   },
@@ -3835,27 +3474,25 @@ export const questionsData = [
     "questionID": "144",
     "category": "Tools & Platforms",
     "tags": [
-      "Zapier",
-      "Automation",
-      "Experience Level"
+      "PostgreSQL"
     ],
-    "question": "What is your experience with Zapier for automation?",
+    "question": "Which statement best describes the level of experience a candidate should have with PostgreSQL for data management and operations?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Zapier."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the basics of Zapier, including setting up simple 'Zaps'."
+        "answer": "Beginner: The candidate should have used PostgreSQL for basic data management or in a learning environment, and be familiar with SQL queries and basic database operations."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Zapier in a professional setting, setting up automated workflows between different applications."
+        "answer": "Intermediate: The candidate should have used PostgreSQL in a professional setting for data management, and have experience with features like stored procedures, JSONB data type, and MVCC (Multi-Version Concurrency Control)."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with Zapier, having used it extensively to automate complex multi-step workflows across multiple applications."
+        "answer": "Advanced: The candidate should have extensive experience with PostgreSQL, and have managed large data volumes using features like partitioning, PostGIS for spatial data, and advanced indexing strategies."
       }
     ]
   },
@@ -3863,27 +3500,27 @@ export const questionsData = [
     "questionID": "145",
     "category": "Tools & Platforms",
     "tags": [
-      "Trello",
-      "Task Management",
-      "Proficiency Level"
+      "MySQL",
+      "database",
+      "SQL"
     ],
-    "question": "What's your proficiency level with Trello for task management?",
+    "question": "Which statement best describes the level of experience a candidate should have with MySQL for data management and operations?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Trello."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of Trello, including creating boards, lists, and cards."
+        "answer": "Beginner: The candidate should have used MySQL for basic data management or in a learning environment, and be familiar with SQL queries and basic database operations."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Trello in a professional setting, managing tasks, collaborating with teams, and tracking project progress."
+        "answer": "Intermediate: The candidate should have used MySQL in a professional setting for data management, and have experience with features like stored procedures, triggers, and InnoDB storage engine."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Trello, having used it extensively for project management, workflow customization, and integration with other tools."
+        "answer": "Advanced: The candidate should have extensive experience with MySQL, and have managed large data volumes using features like MySQL replication, performance schema, and query optimization techniques."
       }
     ]
   },
@@ -3891,27 +3528,26 @@ export const questionsData = [
     "questionID": "146",
     "category": "Tools & Platforms",
     "tags": [
-      "Adobe Creative Suite",
-      "Design Tasks",
-      "Proficiency Level"
+      "MonogDB",
+      "databasem NoSQL"
     ],
-    "question": "What is your proficiency level with Adobe Creative Suite for design tasks?",
+    "question": "Which statement best describes the level of experience a candidate should have with MongoDB for NoSQL data management?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Adobe Creative Suite."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of Adobe Creative Suite, including using Photoshop for image editing or Illustrator for vector graphics."
+        "answer": "Beginner: The candidate should have used MongoDB for basic NoSQL data management or in a learning environment, and be familiar with BSON data format and basic CRUD operations."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Adobe Creative Suite in a professional setting, creating designs and working with tools like Photoshop, Illustrator, and InDesign."
+        "answer": "Intermediate: The candidate should have used MongoDB in a professional setting for NoSQL data management, and have experience with features like indexing, replication, and the Aggregation Pipeline."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with Adobe Creative Suite, having used it extensively for graphic design, video editing, UX/UI design, and more."
+        "answer": "Advanced: The candidate should have extensive experience with MongoDB, and have managed large data volumes using features like sharding, GridFS for storing large files, and advanced query optimization techniques."
       }
     ]
   },
@@ -3919,27 +3555,27 @@ export const questionsData = [
     "questionID": "147",
     "category": "Tools & Platforms",
     "tags": [
-      "AWS",
-      "Cloud Platform",
-      "Skills"
+      "SQLite",
+      "SQL",
+      "database"
     ],
-    "question": "How would you rate your skills with AWS as a cloud platform?",
+    "question": "Which statement best describes the level of experience a candidate should have with SQLite for lightweight data management?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with AWS."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of AWS, including the purpose of key services like EC2, S3, and IAM."
+        "answer": "Beginner: The candidate should have used SQLite for basic data management or in a learning environment, and be familiar with SQL queries and basic database operations."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used AWS in a professional setting, setting up instances, managing storage, and implementing security measures."
+        "answer": "Intermediate: The candidate should have used SQLite in a professional setting for lightweight data management, and have experience with features like user-defined functions, transactions, and views."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with AWS, having managed complex deployments, implemented advanced security measures, and optimized for performance and cost."
+        "answer": "Advanced: The candidate should have extensive experience with SQLite, and have managed local databases in applications using features like Full-Text Search (FTS), Recursive Queries, and the SQLite Shell."
       }
     ]
   },
@@ -3947,27 +3583,27 @@ export const questionsData = [
     "questionID": "148",
     "category": "Tools & Platforms",
     "tags": [
-      "SolarWinds",
-      "Network Management",
-      "Experience"
+      "BigQuery",
+      "big data",
+      "data warehousing"
     ],
-    "question": "What's your experience with SolarWinds for network management?",
+    "question": "Which statement best describes the level of experience a candidate should have with Google BigQuery for big data analysis?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with SolarWinds."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the basics of SolarWinds, including network performance monitoring and fault management."
+        "answer": "Beginner: The candidate should have used Google BigQuery for basic big data analysis or in a learning environment, and be familiar with SQL queries and simple data loads."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used SolarWinds in a professional setting, monitoring network performance, troubleshooting issues, and creating reports."
+        "answer": "Intermediate: The candidate should have used Google BigQuery in a professional setting for big data analysis, and have experience with managing datasets, partitioning and clustering tables, and query optimization."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with SolarWinds, having used it extensively for network management, configuring alerts, automating tasks, and managing network configurations."
+        "answer": "Advanced: The candidate should have extensive experience with Google BigQuery, and have managed large data volumes using features like BigQuery ML for machine learning, BigQuery GIS for geospatial analysis, and BigQuery BI Engine for fast, in-memory analysis."
       }
     ]
   },
@@ -3975,27 +3611,27 @@ export const questionsData = [
     "questionID": "149",
     "category": "Tools & Platforms",
     "tags": [
-      "Power BI",
-      "Business Intelligence",
-      "Familiarity"
+      "big data",
+      "data warehousing",
+      "redshift"
     ],
-    "question": "How familiar are you with Power BI for business intelligence?",
+    "question": "Which statement best describes the level of experience a candidate should have with Amazon Redshift for data warehousing?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Power BI."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Power BI, including creating simple visualizations and dashboards."
+        "answer": "Beginner: The candidate should have used Amazon Redshift for basic data warehousing or in a learning environment, and be familiar with loading data and simple SQL queries."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Power BI in a professional setting, creating complex visualizations, reports, and dashboards, and integrating with various data sources."
+        "answer": "Intermediate: The candidate should have used Amazon Redshift in a professional setting for data warehousing, and have experience with managing clusters, designing tables, and performance tuning."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Power BI, having used it extensively for data analysis, creating complex dashboards, and sharing insights with stakeholders."
+        "answer": "Advanced: The candidate should have extensive experience with Amazon Redshift, and have managed large data volumes using features like Redshift Spectrum for querying external data, columnar storage for fast query performance, and advanced data compression techniques."
       }
     ]
   },
@@ -4003,28 +3639,27 @@ export const questionsData = [
     "questionID": "150",
     "category": "Tools & Platforms",
     "tags": [
-      "Splunk",
-      "Data Analytics",
-      "Log Management",
-      "Familiarity"
+      "big data",
+      "data warehousing",
+      "snowflake"
     ],
-    "question": "How familiar are you with Splunk for data analytics and log management?",
+    "question": "Which statement best describes the level of experience a candidate should have with Snowflake's cloud data platform?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Splunk."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I understand the basics of Splunk, including log ingestion and basic search functionality."
+        "answer": "Beginner: The candidate should have used Snowflake in a learning environment or for basic data tasks, familiar with concepts like virtual warehouses and loading data."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Splunk in a professional setting, managing logs, creating reports, and setting up alerts."
+        "answer": "Intermediate: The candidate should have used Snowflake in a professional setting for data tasks, and have experience with managing and querying data, utilizing Snowflake's unique architecture, and optimizing performance."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly experienced with Splunk, having used it extensively for data analytics, log management, incident investigation, and operational intelligence."
+        "answer": "Advanced: The candidate should have extensive experience with Snowflake, capable of designing and implementing complex data solutions, managing security and access controls, and maximizing the platform's efficiency and cost-effectiveness."
       }
     ]
   },
@@ -4032,27 +3667,28 @@ export const questionsData = [
     "questionID": "151",
     "category": "Tools & Platforms",
     "tags": [
-      "Microsoft Dynamics 365",
-      "CRM System",
-      "Skills"
+      "big data",
+      "data warehousing",
+      "azure",
+      "azure data warehouse"
     ],
-    "question": "How would you rate your skills with Microsoft Dynamics 365 as a CRM system?",
+    "question": "Which statement best describes the level of experience a candidate should have with Microsoft Azure Data Warehouse (Azure Synapse Analytics)?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with Microsoft Dynamics 365."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have a basic understanding of Microsoft Dynamics 365, including navigating the interface and managing customer data."
+        "answer": "Beginner: The candidate should have used Azure Data Warehouse in a learning environment or for basic data tasks, familiar with concepts like data loading and simple SQL queries."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used Microsoft Dynamics 365 in a professional setting, managing customer relationships, sales pipelines, and generating reports."
+        "answer": "Intermediate: The candidate should have used Azure Data Warehouse in a professional setting for data tasks, and have experience with data management, scaling compute resources, and optimizing query performance."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with Microsoft Dynamics 365, having used it extensively for CRM, sales, marketing, service, and more."
+        "answer": "Advanced: The candidate should have extensive experience with Azure Data Warehouse, capable of designing and implementing complex data solutions, managing security and access controls, and integrating with other Azure services for comprehensive data analytics solutions."
       }
     ]
   },
@@ -4060,92 +3696,1884 @@ export const questionsData = [
     "questionID": "152",
     "category": "Tools & Platforms",
     "tags": [
-      "SharePoint",
-      "Document Management",
-      "Collaboration",
-      "Experience Level"
+      "TeraData",
+      "big data",
+      "data warehousing"
     ],
-    "question": "What is your experience level with SharePoint for document management and collaboration?",
+    "question": "Which statement best describes the level of experience a candidate should have with Teradata's data warehousing solutions?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "I have no experience with SharePoint."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I have basic knowledge of SharePoint, including uploading documents and basic collaboration features."
+        "answer": "Beginner: The candidate should have used Teradata in a learning environment, understanding basic concepts such as data loading and basic SQL queries."
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've used SharePoint in a professional setting, managing documents, setting permissions, and collaborating with teams."
+        "answer": "Intermediate: The candidate should have used Teradata in a professional setting, being able to manage data, implement performance optimization strategies, and handle Teradata utilities like FastLoad and MultiLoad."
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I'm highly proficient with SharePoint, having used it extensively for document management, intranet portals, workflows, and integrations."
+        "answer": "Advanced: The candidate should have extensive experience with Teradata, capable of designing and managing complex data warehousing solutions, handling large datasets, and integrating Teradata with other analytics tools."
       }
     ]
   },
   {
     "questionID": "153",
-    "category": "HR / Work-Life Balance",
+    "category": "Tools & Platforms",
     "tags": [
-      "Dental",
-      "Vision",
-      "Insurance",
-      "Availability"
+      "big data",
+      "data warehousing",
+      "IBM Db2"
     ],
-    "question": "To what extent do you offer comprehensive health benefits (medical, dental, vision)?",
+    "question": "Which statement best describes the level of experience a candidate should have with IBM Db2?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not at all: No health benefits offered."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat: Basic health benefits are offered."
+        "answer": "Beginner: The candidate should have used IBM Db2 in a learning environment, familiar with basic data operations and SQL queries."
       },
       {
         "answerID": 3,
-        "answer": "Very much: Comprehensive health benefits package is offered, covering medical, dental, and vision."
+        "answer": "Intermediate: The candidate should have used IBM Db2 in a professional setting, capable of managing data, implementing security measures, and optimizing database performance."
       },
       {
         "answerID": 4,
-        "answer": "To a great extent: Extensive health benefits package, including comprehensive medical, dental, vision and additional health-related benefits, is offered."
+        "answer": "Advanced: The candidate should have extensive experience with IBM Db2, proficient in designing and managing complex data solutions, handling large datasets, and tuning the performance of Db2 environments."
       }
     ]
   },
   {
     "questionID": "154",
-    "category": "HR / Work-Life Balance",
+    "category": "Tools & Platforms",
     "tags": [
-      "Dental",
-      "Vision",
-      "Insurance",
-      "Availability"
+      "Apache Hadoop",
+      "big data"
     ],
-    "question": "To what extent does your company offer dental and vision insurance?",
+    "question": "Which statement best describes the level of experience a candidate should have with Apache Hadoop?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Not at all: Our company does not offer dental and vision insurance as part of our benefits package."
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
-        "answer": "Somewhat: Our company offers basic dental and vision insurance, but it's not our primary benefits focus."
+        "answer": "Beginner: The candidate should have used Apache Hadoop in a learning environment, familiar with its file system (HDFS), and can perform basic data operations."
       },
       {
         "answerID": 3,
-        "answer": "Very much: Our company offers comprehensive dental and vision insurance as part of our benefits package, along with other benefits."
+        "answer": "Intermediate: The candidate should have used Apache Hadoop in a professional setting, capable of implementing MapReduce jobs, managing Hadoop clusters, and understanding YARN."
       },
       {
         "answerID": 4,
-        "answer": "To a great extent: Our company puts significant emphasis on dental and vision insurance, with premium coverage options available."
+        "answer": "Advanced: The candidate should have extensive experience with Apache Hadoop, proficient in designing and managing complex data processing tasks, implementing data-intensive applications, and optimizing Hadoop's performance."
       }
     ]
   },
   {
     "questionID": "155",
-    "category": "HR / Work-Life Balance",
+    "category": "Tools & Platforms",
+    "tags": [
+      "big data",
+      "apache spark"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Apache Spark?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Apache Spark in a learning environment, familiar with basic concepts like Resilient Distributed Datasets (RDDs) and Spark SQL."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Apache Spark in a professional setting, able to handle data processing tasks, work with Spark Streaming, and perform data analysis with Spark MLlib."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Apache Spark, capable of developing scalable Spark applications, optimizing Spark's performance, and integrating Spark with other big data technologies."
+      }
+    ]
+  },
+  {
+    "questionID": "156",
+    "category": "Tools & Platforms",
+    "tags": [
+      "big data",
+      "apache",
+      "Flink"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Apache Flink?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Apache Flink in a learning environment, familiar with its architecture and basic APIs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Apache Flink in a professional setting, can implement real-time data processing tasks and understand concepts like Event Time and Watermarks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Apache Flink, capable of designing complex streaming applications, optimizing Flink's performance, and integrating Flink with other big data technologies."
+      }
+    ]
+  },
+  {
+    "questionID": "157",
+    "category": "Tools & Platforms",
+    "tags": [
+      "big data",
+      "apache",
+      "Beam"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Apache Beam?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Apache Beam in a learning environment, familiar with its programming model and basic transformations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Apache Beam in a professional setting, able to develop basic Beam pipelines and understand concepts like Windowing and Watermarks."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Apache Beam, capable of designing complex Beam pipelines, optimizing Beam's performance, and integrating Beam with different data processing engines."
+      }
+    ]
+  },
+  {
+    "questionID": "158",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Apache",
+      "big data",
+      "Kafka"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Apache Kafka?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Apache Kafka in a learning environment, familiar with its basic concepts and components like Topics, Producers, and Consumers."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Apache Kafka in a professional setting, able to design Kafka-based messaging systems and have some understanding of Kafka Streams and Kafka Connect."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Apache Kafka, can design and optimize large-scale Kafka-based real-time data processing systems, including deep knowledge of Kafka Streams, Connect, and KSQL."
+      }
+    ]
+  },
+  {
+    "questionID": "159",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Google Cloud ML Engine",
+      "ML",
+      "machine learning"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Google Cloud ML Engine?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Google Cloud ML Engine in a learning environment, familiar with its basic functionality and able to train and deploy basic ML models."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Google Cloud ML Engine in a professional setting, able to use its advanced features like hyperparameter tuning, and understand its integration with other Google Cloud services."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Google Cloud ML Engine, capable of designing and implementing complex ML workflows, optimizing model training and prediction performance, and managing large-scale ML projects."
+      }
+    ]
+  },
+  {
+    "questionID": "160",
+    "category": "Tools & Platforms",
+    "tags": [
+      "ML",
+      "machine learning",
+      "SageMaker"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Amazon SageMaker?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Amazon SageMaker in a learning environment, familiar with its basic functionality like model building, training, and deployment."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Amazon SageMaker in a professional setting, capable of utilizing its features like Automatic Model Tuning and SageMaker Studio, and can integrate it with other AWS services."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Amazon SageMaker, can design, implement, and optimize end-to-end ML workflows, manage large-scale ML projects, and is knowledgeable about its latest features and best practices."
+      }
+    ]
+  },
+  {
+    "questionID": "161",
+    "category": "Tools & Platforms",
+    "tags": [
+      "ML",
+      "machine learning",
+      "Azure"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Microsoft Azure Machine Learning?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Microsoft Azure Machine Learning in a learning environment, familiar with creating and managing resources with Azure Machine Learning Studio."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Microsoft Azure Machine Learning in a professional setting, proficient in building, training, and deploying machine learning models, and using the Azure ML Python SDK."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Microsoft Azure Machine Learning, able to use advanced features like AutoML and HyperDrive for optimization, and managing and deploying machine learning pipelines at scale."
+      }
+    ]
+  },
+  {
+    "questionID": "162",
+    "category": "Tools & Platforms",
+    "tags": [
+      "ML",
+      "machine learning",
+      "IBM Watson",
+      "Watson"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with IBM Watson?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used IBM Watson in a learning environment, familiar with its basic functionality, including Watson Assistant and Watson Discovery."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used IBM Watson in a professional setting, proficient in using its features like Watson Studio, Watson Machine Learning, and Watson Visual Recognition."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with IBM Watson, capable of designing and implementing complex AI applications using multiple Watson services, and optimizing their performance."
+      }
+    ]
+  },
+  {
+    "questionID": "163",
+    "category": "Tools & Platforms",
+    "tags": [
+      "ML",
+      "machine learning",
+      "Databricks"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Databricks?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Databricks in a learning environment, familiar with basic functionalities, including setting up Databricks workspace and running Spark jobs."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Databricks in a professional setting, proficient in managing clusters, developing notebooks, and using Databricks MLflow for machine learning workflows."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Databricks, capable of optimizing Spark jobs, using advanced features of Databricks Delta Lake, and integrating Databricks with other services for end-to-end data solutions."
+      }
+    ]
+  },
+  {
+    "questionID": "164",
+    "category": "Tools & Platforms",
+    "tags": [
+      "TensorFlow",
+      "ML",
+      "machine learning"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with TensorFlow?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used TensorFlow in a learning environment, familiar with basic functionalities like defining, training, and executing simple machine learning models."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used TensorFlow in a professional setting, proficient in using TensorFlow's advanced features like Keras API, TensorFlow Data and TensorFlow Estimators."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with TensorFlow, capable of designing and implementing complex machine learning models, using TensorFlow Extended (TFX) for end-to-end machine learning workflows, and optimizing model performance using TensorFlow Profiler."
+      }
+    ]
+  },
+  {
+    "questionID": "165",
+    "category": "Tools & Platforms",
+    "tags": [
+      "ML",
+      "machine learning",
+      "pytorch"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with PyTorch?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used PyTorch in a learning environment, familiar with creating basic neural networks and performing simple tensor operations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used PyTorch in a professional setting, proficient in designing and implementing complex models, using advanced features like autograd for automatic differentiation, and PyTorch Lightning for model training."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with PyTorch, capable of optimizing models for production, integrating PyTorch with other services for end-to-end machine learning workflows, and using PyTorch's ecosystem tools like TorchServe and TorchElastic."
+      }
+    ]
+  },
+  {
+    "questionID": "166",
+    "category": "Tools & Platforms",
+    "tags": [
+      "ML",
+      "machine learning",
+      "weights and biases",
+      "W&B"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Weights & Biases?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Weights & Biases in a learning environment, familiar with tracking experiments and visualizing results."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Weights & Biases in a professional setting, proficient in using its advanced features like Sweeps for hyperparameter optimization and Artifacts for dataset and model versioning."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Weights & Biases, capable of integrating it with other ML tools for end-to-end ML workflows, and utilizing its capabilities for team collaboration and production monitoring."
+      }
+    ]
+  },
+  {
+    "questionID": "167",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Talend",
+      "Data Integration"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Talend?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Talend for simple data integration tasks, familiar with its graphical interface and basic components."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Talend in a professional setting, proficient in creating complex jobs, handling errors, and integrating it with various data sources and targets."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Talend, capable of optimizing its performance, using its advanced features like Talend Data Quality and Talend Data Stewardship, and implementing Talend in large-scale projects."
+      }
+    ]
+  },
+  {
+    "questionID": "168",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Data Integration",
+      "Informatica"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Informatica PowerCenter?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Informatica PowerCenter for simple data integration tasks, familiar with its Designer, Workflow Manager, and Workflow Monitor tools."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Informatica PowerCenter in a professional setting, proficient in creating mappings, sessions, workflows, and handling various transformations."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Informatica PowerCenter, capable of optimizing its performance, managing repositories, and implementing complex ETL processes."
+      }
+    ]
+  },
+  {
+    "questionID": "169",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Data Integration",
+      "IBM",
+      "InfoSphere",
+      "DataStage"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with IBM InfoSphere DataStage?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used IBM InfoSphere DataStage for simple data integration tasks, familiar with its basic components and stages."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used IBM InfoSphere DataStage in a professional setting, proficient in designing parallel jobs, handling various transformations, and integrating it with different data sources and targets."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with IBM InfoSphere DataStage, capable of optimizing its performance, implementing complex ETL processes, and managing IBM InfoSphere DataStage projects in large-scale environments."
+      }
+    ]
+  },
+  {
+    "questionID": "170",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Data Integration",
+      "Microsoft SQL",
+      "SSIS",
+      "server integration services"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Microsoft SQL Server Integration Services (SSIS)?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used SSIS for simple data integration tasks, familiar with the basic tasks and transformations, as well as the control flow and data flow design interfaces."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used SSIS in a professional setting, capable of creating complex SSIS packages, handling errors, and integrating it with various data sources and targets."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with SSIS, proficient in performance tuning, deploying and managing SSIS packages, and implementing complex ETL solutions with SSIS."
+      }
+    ]
+  },
+  {
+    "questionID": "171",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Data Integration",
+      "Oracle",
+      "Oracle Data Integrator"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Oracle Data Integrator?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Oracle Data Integrator for simple data integration tasks, familiar with its components like projects, models, and knowledge modules."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Oracle Data Integrator in a professional setting, capable of designing mappings, procedures, packages, and handling diverse data sources and targets."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Oracle Data Integrator, able to optimize its performance, handle complex transformations, and manage large-scale data integration projects."
+      }
+    ]
+  },
+  {
+    "questionID": "172",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Stitch Data",
+      "ETL"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Stitch Data?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Stitch Data for simple ETL tasks, familiar with setting up data sources and destinations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Stitch Data in a professional setting, capable of managing and troubleshooting data replication pipelines."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Stitch Data, capable of handling complex ETL processes, optimizing data replication, and managing Stitch projects in a large-scale environment."
+      }
+    ]
+  },
+  {
+    "questionID": "173",
+    "category": "Tools & Platforms",
+    "tags": [
+      "FiveTran",
+      "ETL"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Fivetran?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Fivetran for basic data integration tasks, familiar with setting up connectors and configuring destinations."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Fivetran in a professional setting, capable of handling diverse data sources, managing syncs, and troubleshooting pipeline issues."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Fivetran, capable of optimizing its performance, handling complex transformations, and managing Fivetran in large-scale data integration projects."
+      }
+    ]
+  },
+  {
+    "questionID": "174",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Matillion",
+      "ETL"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Matillion?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Matillion for simple ETL tasks, familiar with basic data transformations and job creation."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Matillion in a professional setting, capable of designing and maintaining ETL pipelines, handling data from various sources."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Matillion, capable of optimizing its performance, managing complex transformations, and handling Matillion deployments in large-scale data projects."
+      }
+    ]
+  },
+  {
+    "questionID": "175",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Google Cloud Dataflow",
+      "ETL"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with Google Cloud Dataflow?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Google Cloud Dataflow for simple data processing tasks, familiar with basic pipeline creation and job execution."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Google Cloud Dataflow in a professional setting, capable of designing, deploying, and monitoring data pipelines."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with Google Cloud Dataflow, capable of optimizing its performance, managing complex data processing tasks, and handling large-scale data processing projects."
+      }
+    ]
+  },
+  {
+    "questionID": "176",
+    "category": "Tools & Platforms",
+    "tags": [
+      "AWS Glue",
+      "Glue",
+      "cloud platform"
+    ],
+    "question": "Which statement best describes the level of experience a candidate should have with AWS Glue?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used AWS Glue for simple ETL tasks, familiar with basic functionalities like creating jobs and crawlers."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used AWS Glue in a professional setting, capable of designing, deploying, and monitoring ETL jobs and handling data from various AWS services."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should have extensive experience with AWS Glue, capable of optimizing its performance, managing complex ETL workflows, and handling large-scale data projects in the AWS ecosystem."
+      }
+    ]
+  },
+  {
+    "questionID": "177",
+    "category": "Tools & Platforms",
+    "tags": [
+      "AWS. cloud platform"
+    ],
+    "question": "What level of AWS proficiency are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used AWS for simple tasks, such as launching an EC2 instance or setting up an S3 bucket."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate regularly uses a variety of AWS services for more complex tasks, such as setting up a VPC, using Lambda functions, or managing RDS databases."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate can design, deploy, and manage complex infrastructures on AWS, including cost optimization and security management."
+      }
+    ]
+  },
+  {
+    "questionID": "178",
+    "category": "Tools & Platforms",
+    "tags": [
+      "AWS",
+      "Serverless",
+      "Lambda",
+      "Gateway",
+      "cloud platform"
+    ],
+    "question": "What level of experience with AWS' serverless technologies (like AWS Lambda and API Gateway) are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has a basic understanding of serverless concepts and has used AWS Lambda and/or API Gateway for learning purposes."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate has experience designing and deploying applications using AWS' serverless technologies in a professional setting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with AWS' serverless technologies and can design, deploy, and manage complex serverless applications."
+      }
+    ]
+  },
+  {
+    "questionID": "179",
+    "category": "Tools & Platforms",
+    "tags": [
+      "GCP",
+      "google cloud platform",
+      "cloud platform"
+    ],
+    "question": "What level of GCP (Google Cloud Platform) proficiency are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used GCP for simple tasks, such as creating a VM instance or using Cloud Storage."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate regularly uses a variety of GCP services for more complex tasks, such as managing data with BigQuery or using Cloud Functions."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate can design, deploy, and manage complex infrastructures on GCP, including cost optimization and security management."
+      }
+    ]
+  },
+  {
+    "questionID": "180",
+    "category": "Tools & Platforms",
+    "tags": [
+      "azure",
+      "cloud platform"
+    ],
+    "question": "What level of Microsoft Azure proficiency are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Azure for simple tasks, like deploying a web app or managing Azure Storage."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate regularly uses various Azure services, like Azure Functions, Logic Apps, or Cosmos DB, in a professional setting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate is highly proficient in designing, deploying, and managing complex applications and infrastructures on Azure, including cost optimization and security management."
+      }
+    ]
+  },
+  {
+    "questionID": "181",
+    "category": "Tools & Platforms",
+    "tags": [
+      "cloud platform",
+      "IBM",
+      "IBM cloud"
+    ],
+    "question": "What level of IBM Cloud proficiency are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used IBM Cloud for simple tasks, such as creating a VM instance or utilizing cloud storage."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate frequently uses a variety of IBM Cloud services for more intricate tasks, such as managing data with Db2 or using Watson services."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate can design, deploy, and manage complex infrastructures on IBM Cloud, including cost optimization and security management."
+      }
+    ]
+  },
+  {
+    "questionID": "182",
+    "category": "Tools & Platforms",
+    "tags": [
+      "software development"
+    ],
+    "question": "What level of GitHub proficiency are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate understands the basic principles of version control, has used GitHub for simple tasks like forking a repository and making pull requests."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate uses GitHub frequently for collaborative projects, familiar with concepts like branches, merges, and resolving conflicts."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate is proficient in managing large-scale projects on GitHub, including setting up CI/CD pipelines, code reviews, and advanced repository management."
+      }
+    ]
+  },
+  {
+    "questionID": "183",
+    "category": "Tools & Platforms",
+    "tags": [
+      "software development"
+    ],
+    "question": "What level of proficiency with using Jira from a software development perspective are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Jira to track and manage bugs, new features, and improvements."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is comfortable with integrating Jira with version control systems like Git, and can leverage Jira's features for release management and deployment tracking."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate is proficient with using Jira for continuous integration and delivery, utilizing features like automatic issue transitions and release hub."
+      }
+    ]
+  },
+  {
+    "questionID": "184",
+    "category": "Tools & Platforms",
+    "tags": [
+      "software development"
+    ],
+    "question": "What level of proficiency with Subversion (SVN) are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Subversion for basic version control tasks such as commits, updates, and checkouts."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate can comfortably branch and merge projects, resolve conflicts, and understand SVN's repository architecture."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has deep expertise with Subversion, including setting up and managing SVN repositories, applying advanced branching strategies, and integrating SVN with other tools."
+      }
+    ]
+  },
+  {
+    "questionID": "185",
+    "category": "Tools & Platforms",
+    "tags": [
+      "software development"
+    ],
+    "question": "What level of proficiency with Bitbucket are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Bitbucket for basic repository management and version control with Git."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate can comfortably use Bitbucket's pull requests, code reviews, and branching model, and integrate with Jira and other Atlassian tools."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has deep expertise with Bitbucket, including setting up and managing Bitbucket pipelines for CI/CD, integrating Bitbucket with other development tools, and managing team permissions and workflows."
+      }
+    ]
+  },
+  {
+    "questionID": "186",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales outreach",
+      "outreach"
+    ],
+    "question": "What level of proficiency with Outreach are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Outreach for basic sales engagement activities, such as sending emails and making calls."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate can comfortably create sequences, analyze performance metrics, and understand how to use the platform for multi-channel sales communication."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has deep expertise with Outreach, including setting up and optimizing complex sequences, automating tasks, and integrating Outreach with other CRM and sales tools."
+      }
+    ]
+  },
+  {
+    "questionID": "187",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales outreach",
+      "SalesLoft"
+    ],
+    "question": "What level of proficiency with Salesloft are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Salesloft for basic sales engagement tasks like sending emails and tracking responses."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate can confidently create and manage cadences, use Salesloft's dialer and social selling features, and analyze sales engagement metrics."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with Salesloft, including setting up and managing team workflows, automating sales tasks, and integrating Salesloft with other sales and marketing tools."
+      }
+    ]
+  },
+  {
+    "questionID": "188",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales outreach",
+      "YesWare"
+    ],
+    "question": "What level of proficiency with Yesware are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Yesware for basic email tracking and template creation."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is comfortable with using advanced features of Yesware, including click-to-call, meeting scheduling, and team reporting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has deep expertise with Yesware, able to set up custom reports, automate follow-ups, and integrate Yesware with CRM systems."
+      }
+    ]
+  },
+  {
+    "questionID": "189",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales outreach",
+      "Groove"
+    ],
+    "question": "What level of proficiency with Groove are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Groove for basic sales outreach tasks such as email tracking and meeting scheduling."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate can confidently use Groove's advanced features like setting up multi-step campaigns, automating follow-ups, and analyzing sales metrics."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with Groove, including using its data analytics tools, managing team workflows, and integrating Groove with other sales tools and CRM systems."
+      }
+    ]
+  },
+  {
+    "questionID": "190",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales intelligence",
+      "Gong"
+    ],
+    "question": "What level of proficiency with Gong are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Gong to listen to call recordings and read transcripts."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate can confidently use Gong's features like deal tracking, identifying talk patterns, and generating insights from sales conversations."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with Gong, including utilizing advanced analytics for sales coaching, trend identification, and integrating Gong with other sales tools and CRM systems."
+      }
+    ]
+  },
+  {
+    "questionID": "191",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Chorus AI",
+      "sales intelligence"
+    ],
+    "question": "What level of proficiency with Chorus AI are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Chorus AI for basic call recording and note-taking."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is proficient with Chorus AI's features like conversation intelligence, deal scoring, and analyzing call metrics."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with Chorus AI, capable of setting up team performance metrics, coaching insights, and integrating Chorus AI with other sales and CRM tools."
+      }
+    ]
+  },
+  {
+    "questionID": "192",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales intelligence",
+      "Clearbit"
+    ],
+    "question": "What level of proficiency with Clearbit are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Clearbit for basic features like lead enrichment and prospect discovery."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is adept at using Clearbit for detailed prospect profiling, using APIs for enrichment, and integrating Clearbit with CRM systems."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with Clearbit, including using advanced features for automation, personalization, and data analysis."
+      }
+    ]
+  },
+  {
+    "questionID": "193",
+    "category": "Tools & Platforms",
+    "tags": [
+      "sales intelligence",
+      "wingman"
+    ],
+    "question": "What level of proficiency with Wingman are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used Wingman for basic call recording and review."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is proficient in using Wingman for real-time conversation analysis and capturing action items."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience with Wingman, including utilizing it for sales coaching, competitive intelligence, and CRM integration."
+      }
+    ]
+  },
+  {
+    "questionID": "194",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Tableau",
+      "Data Visualization",
+      "Proficiency"
+    ],
+    "question": "Which statement best describes your proficiency with Tableau?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      }
+    ]
+  },
+  {
+    "questionID": "195",
+    "category": "Tools & Platforms",
+    "tags": [
+      "BI",
+      "Business Intelligence",
+      "Power BI"
+    ],
+    "question": "Which of these best describes the level of Microsoft Power BI experience you are looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate basic visualizations and reports in Microsoft Power BI."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of creating complex visualizations, dashboards, and manipulating data models. Familiar with DAX formulas and Power Query."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can design and implement complex reports and dashboards, integrate Power BI with other Microsoft products, and optimize performance. Utilizes advanced features like quick measures, conditional columns, and hierarchy creation."
+      }
+    ]
+  },
+  {
+    "questionID": "196",
+    "category": "Tools & Platforms",
+    "tags": [
+      "BI",
+      "Business Intelligence",
+      "Looker"
+    ],
+    "question": "Which of these best describes the level of Looker experience you are looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can create basic explores and visualizations in Looker."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of creating complex explores, dashboards, and LookML models."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert level, can create complex data models, optimize LookML performance, and automate reporting."
+      }
+    ]
+  },
+  {
+    "questionID": "197",
+    "category": "Tools & Platforms",
+    "tags": [
+      "BI",
+      "Business Intelligence",
+      "QlikView"
+    ],
+    "question": "Which level of QlikView experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate basic visualizations and reports in QlikView."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of creating complex dashboards, set analysis, and scripting."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert level, can design and implement complex data models, troubleshoot performance issues, and deploy QlikView applications."
+      }
+    ]
+  },
+  {
+    "questionID": "198",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Visual Analytics",
+      "Domo"
+    ],
+    "question": "Which level of Domo experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate basic cards, datasets and perform simple ETL tasks."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Proficient in Domo's Beast Mode functions, capable of creating complex dashboards, and utilizing Domo's APIs for data integrations."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can handle advanced ETL tasks, develop complex calculations, and manage user permissions and security settings."
+      }
+    ]
+  },
+  {
+    "questionID": "199",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Visual Analytics",
+      "Sisense"
+    ],
+    "question": "Which level of Sisense experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate basic visualizations and dashboards in Sisense."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of utilizing its ElastiCube technology and managing data models."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can perform complex data transformations, create advanced dashboards, and optimize Sisense's performance."
+      }
+    ]
+  },
+  {
+    "questionID": "200",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Visual Analytics",
+      "SAP Business Objects"
+    ],
+    "question": "Which level of SAP BusinessObjects experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate simple reports."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can create complex reports, and manage data universes."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert level, capable of developing and optimizing data universes, and performing advanced administration tasks."
+      }
+    ]
+  },
+  {
+    "questionID": "201",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Visual Analytics",
+      "MicroStrategy"
+    ],
+    "question": "Which level of MicroStrategy experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can create basic reports and dashboards in MicroStrategy."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can develop complex reports and manage user security."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Is capable of implementing advanced analytics solutions, optimizing platform performance, and performing administrative tasks."
+      }
+    ]
+  },
+  {
+    "questionID": "202",
+    "category": "Tools & Platforms",
+    "tags": [
+      "e-commerce",
+      "Shopify"
+    ],
+    "question": "Which level of Shopify expertise are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can set up a store, add products, and manage orders."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can customize themes, install and configure apps, and handle SEO."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can develop custom apps, handle advanced SEO, and troubleshoot complex issues."
+      }
+    ]
+  },
+  {
+    "questionID": "203",
+    "category": "Tools & Platforms",
+    "tags": [
+      "e-commerce",
+      "woocommerce"
+    ],
+    "question": "Which level of WooCommerce experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can set up a store, add products, and manage orders."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can customize themes, install and configure plugins, and handle SEO."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Capable of developing custom plugins, handling advanced SEO, and troubleshooting complex issues."
+      }
+    ]
+  },
+  {
+    "questionID": "204",
+    "category": "Tools & Platforms",
+    "tags": [
+      "e-commerce",
+      "magento"
+    ],
+    "question": "Which level of Magento expertise are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can set up a store, add products, and manage orders."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can customize themes, install and configure extensions, and handle SEO."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can develop custom modules, handle advanced SEO, and troubleshoot complex issues."
+      }
+    ]
+  },
+  {
+    "questionID": "205",
+    "category": "Tools & Platforms",
+    "tags": [
+      "e-commerce",
+      "BigCommerce"
+    ],
+    "question": "Which level of BigCommerce experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can set up a store, add products, and manage orders."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can customize themes, install and configure apps, and handle SEO."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Capable of developing custom apps, handling advanced SEO, and troubleshooting complex issues."
+      }
+    ]
+  },
+  {
+    "questionID": "206",
+    "category": "Tools & Platforms",
+    "tags": [
+      "IoT",
+      "Azure"
+    ],
+    "question": "Which level of Azure IoT Suite experience are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Candidate can deploy IoT devices and collect data using the Azure IoT Suite."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Candidate can analyze IoT data, manage devices, and secure the IoT network using Azure IoT Suite."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Candidate can architect and deploy end-to-end IoT solutions using Azure IoT Suite, including IoT Edge, IoT Central, and Time Series Insights."
+      }
+    ]
+  },
+  {
+    "questionID": "207",
+    "category": "Tools & Platforms",
+    "tags": [
+      "IoT",
+      "Internet of Things",
+      "AWS IoT Core"
+    ],
+    "question": "What level of AWS IoT Core expertise are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Candidate can connect and manage IoT devices using AWS IoT Core."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Candidate can analyze IoT data, secure the IoT network, and utilize AWS IoT services such as Device Defender and IoT Analytics."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Candidate can design and deploy comprehensive IoT solutions using AWS IoT Core, including edge computing and real-time analytics."
+      }
+    ]
+  },
+  {
+    "questionID": "208",
+    "category": "Tools & Platforms",
+    "tags": [
+      "IoT",
+      "IBM Watson"
+    ],
+    "question": "What level of expertise with IBM Watson IoT are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Candidate has used IBM Watson IoT to connect and manage devices."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Candidate has analyzed data from IoT devices, used device management, and applied security measures using IBM Watson IoT."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Candidate has designed and deployed full-scale IoT solutions using IBM Watson IoT, integrating IoT data with AI capabilities."
+      }
+    ]
+  },
+  {
+    "questionID": "209",
+    "category": "Tools & Platforms",
+    "tags": [
+      "IoT",
+      "Google Cloud IoT"
+    ],
+    "question": "What level of experience with Google Cloud IoT are you looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Candidate has used Google Cloud IoT to connect and manage devices."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Candidate has used Google Cloud IoT Core to ingest data from devices, and has experience with Google Cloud IoT services like IoT Edge and IoT Pub/Sub."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Candidate has designed and deployed comprehensive IoT solutions using Google Cloud IoT, including advanced data analytics and machine learning integration."
+      }
+    ]
+  },
+  {
+    "questionID": "210",
+    "category": "Tools & Platforms",
+    "tags": [
+      "WordPress",
+      "CMS"
+    ],
+    "question": "What level of WordPress experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has built and customized basic websites using WordPress."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate has developed and managed WordPress sites, integrated with plugins, and handled WordPress security."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has developed custom themes, plugins, and worked with advanced functionalities like multi-site installation."
+      }
+    ]
+  },
+  {
+    "questionID": "211",
+    "category": "Tools & Platforms",
+    "tags": [
+      "CMS",
+      "Joomla"
+    ],
+    "question": "What level of Joomla experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has some experience with Joomla, including basic site setup and configuration."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate has developed and managed Joomla sites, integrated with extensions, and handled Joomla security."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience in Joomla, having developed custom templates, extensions, and worked with advanced functionalities like multi-language sites."
+      }
+    ]
+  },
+  {
+    "questionID": "212",
+    "category": "Tools & Platforms",
+    "tags": [
+      "CMS",
+      "Drupal"
+    ],
+    "question": "What level of Drupal experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has some experience with Drupal, including basic site setup and configuration."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate has developed and managed Drupal sites, integrated with modules, and handled Drupal security."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience in Drupal, having developed custom themes, modules, and worked with advanced functionalities like multi-site installation."
+      }
+    ]
+  },
+  {
+    "questionID": "213",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Communication",
+      "Slack"
+    ],
+    "question": "What level of Slack experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate uses Slack for basic communication and can navigate through channels and direct messages."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is comfortable using advanced features in Slack, like pinning messages, creating user groups, and integrating apps."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has worked with Slack's API, built integrations, and has managed a workspace, including user permissions and security."
+      }
+    ]
+  },
+  {
+    "questionID": "214",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Communication",
+      "Microsoft Teams",
+      "Teams"
+    ],
+    "question": "What level of Microsoft Teams experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate uses Microsoft Teams for basic communication and can navigate through channels and direct messages."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is comfortable using advanced features in Teams, like scheduling meetings, sharing files, and using apps within Teams."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has worked with Microsoft Teams' API, built integrations, and has managed a team, including user permissions and security."
+      }
+    ]
+  },
+  {
+    "questionID": "215",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Communication",
+      "Cisco Webex",
+      "Webex"
+    ],
+    "question": "What level of Cisco Webex experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate uses Cisco Webex for basic communication, scheduling, and attending meetings."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is comfortable using advanced features in Cisco Webex, like recording meetings, using virtual backgrounds, and integrating apps."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has worked with Cisco Webex's API, built integrations, and has managed a team, including user permissions and security."
+      }
+    ]
+  },
+  {
+    "questionID": "216",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Communication",
+      "Zoom"
+    ],
+    "question": "What level of Zoom experience are you seeking in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate uses Zoom for basic communication, scheduling, and attending meetings."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate is comfortable using advanced features in Zoom, like recording meetings, breakout rooms, and using virtual backgrounds."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has worked with Zoom's API, built integrations, and has managed a team, including user permissions and security."
+      }
+    ]
+  },
+  {
+    "questionID": "217",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Containerization",
+      "Docker"
+    ],
+    "question": "What is the desired level of Docker experience for your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Candidate is expected to pull and run Docker images, build new images using Dockerfile, and understand the principles of containerization."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Candidate should create and manage Docker images, use Docker Compose for multi-container applications, and have some understanding of container orchestration."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Candidate is expected to manage complex multi-container applications, optimize Docker images for production, and troubleshoot Docker-related issues. They should have a deep understanding of containerization principles and best practices."
+      }
+    ]
+  },
+  {
+    "questionID": "218",
+    "category": "Tools & Platforms",
+    "tags": [
+      "Containerization",
+      "Kubernetes"
+    ],
+    "question": "What is the desired level of Kubernetes experience for your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Candidate can deploy simple applications, manage pods, and services in Kubernetes."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Candidate has deployed and scaled applications, managed network configuration, and persistent storage in Kubernetes. They understand the principles of Kubernetes architecture."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Candidate has managed production-grade applications, performed advanced network configuration and storage management, fine-tuned resource usage, and troubleshooted Kubernetes clusters."
+      }
+    ]
+  },
+  {
+    "questionID": "219",
+    "category": "Tools & Platforms",
+    "tags": [
+      "API Testing",
+      "Postman"
+    ],
+    "question": "What level of experience and proficiency with Postman would you like your candidate to have?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have basic knowledge about using Postman for sending requests and testing API endpoints."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should be comfortable with Postman's advanced features, like writing tests using Chai assertion library, managing collections, and environments."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be proficient in using advanced Postman features such as creating mock servers, running collections using Newman, and building workflows."
+      }
+    ]
+  },
+  {
+    "questionID": "220",
+    "category": "Tools & Platforms",
+    "tags": [
+      "API Testing",
+      "Apigee"
+    ],
+    "question": "What level of experience and proficiency with Apigee would you like your candidate to have?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required."
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have basic knowledge about using Apigee for API design and deployment."
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should be comfortable with Apigee's advanced features, like managing API lifecycle, implementing API policies, and analyzing API performance."
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be proficient in using advanced Apigee features such as creating custom reports, setting up developer portals, and managing app developer relationships."
+      }
+    ]
+  },
+  {
+    "questionID": "221",
+    "category": "HR Preferences",
     "tags": [
       "work-life",
       "balance",
@@ -4172,36 +5600,35 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "156",
-    "category": "HR / Work-Life Balance",
+    "questionID": "222",
+    "category": "HR Preferences",
     "tags": [
-      "Company",
-      "Size",
-      "Preference"
+      "International relocation opportunities",
+      "Travel options"
     ],
-    "question": "Which most accurately describes your company size? ",
+    "question": "Does your company offer opportunities for international relocation or travel?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Micro: We are a small company or startup with a flexible and collaborative environment."
+        "answer": "No, our operations are primarily local"
       },
       {
         "answerID": 2,
-        "answer": "Mid-size: We are a mid-size company that offers a balance of small company culture and large company resources."
+        "answer": "Occasionally, depending on project needs"
       },
       {
         "answerID": 3,
-        "answer": "Large: We are a large company with established structures, roles, and clear paths for career progression."
+        "answer": "Regularly, as part of the role's responsibilities"
       },
       {
         "answerID": 4,
-        "answer": "Very large: We are a multinational corporation with opportunities for global exposure and growth."
+        "answer": "Extensively, we have a strong international presence and mobility"
       }
     ]
   },
   {
-    "questionID": "157",
-    "category": "HR / Work-Life Balance",
+    "questionID": "223",
+    "category": "HR Preferences",
     "tags": [
       "Manager",
       "Relationship",
@@ -4228,8 +5655,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "158",
-    "category": "HR / Work-Life Balance",
+    "questionID": "224",
+    "category": "HR Preferences",
     "tags": [
       "Flexible",
       "Working",
@@ -4257,8 +5684,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "159",
-    "category": "HR / Work-Life Balance",
+    "questionID": "225",
+    "category": "HR Preferences",
     "tags": [
       "Diversity",
       "Inclusion",
@@ -4286,95 +5713,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "160",
-    "category": "HR / Work-Life Balance",
-    "tags": [
-      "Mental",
-      "Health",
-      "Resources",
-      "Importance"
-    ],
-    "question": "How comprehensive are the mental health resources and support your company offers?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "None: We currently do not offer mental health resources."
-      },
-      {
-        "answerID": 2,
-        "answer": "Basic: We offer some mental health resources like an EAP."
-      },
-      {
-        "answerID": 3,
-        "answer": "Good: We offer multiple mental health resources including coverage for therapy."
-      },
-      {
-        "answerID": 4,
-        "answer": "Excellent: We offer a wide range of mental health resources, including preventative programs and comprehensive coverage."
-      }
-    ]
-  },
-  {
-    "questionID": "161",
-    "category": "HR / Work-Life Balance",
-    "tags": [
-      "Open",
-      "Office",
-      "Layouts",
-      "Preference"
-    ],
-    "question": "What is your company's office layout like?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Traditional: We primarily have individual offices or cubicles."
-      },
-      {
-        "answerID": 2,
-        "answer": "Mixed: We have a mix of open spaces and individual offices or cubicles."
-      },
-      {
-        "answerID": 3,
-        "answer": "Mostly open: Our office is mainly open space with some individual offices."
-      },
-      {
-        "answerID": 4,
-        "answer": "Fully open: We have a completely open office layout that encourages collaboration."
-      }
-    ]
-  },
-  {
-    "questionID": "162",
-    "category": "HR / Work-Life Balance",
-    "tags": [
-      "Work",
-      "Social",
-      "Interaction",
-      "Preference"
-    ],
-    "question": "What is the level of social interaction in your work environment?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Minimal: Our work environment favors independent work with little social interaction."
-      },
-      {
-        "answerID": 2,
-        "answer": "Moderate: Our work environment balances social interaction with independent work."
-      },
-      {
-        "answerID": 3,
-        "answer": "High: Our work environment encourages regular social interaction and collaboration."
-      },
-      {
-        "answerID": 4,
-        "answer": "Very high: Our work environment is highly collaborative and social."
-      }
-    ]
-  },
-  {
-    "questionID": "163",
-    "category": "HR / Work-Life Balance",
+    "questionID": "226",
+    "category": "HR Preferences",
     "tags": [
       "Business",
       "Travel",
@@ -4401,8 +5741,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "164",
-    "category": "HR / Work-Life Balance",
+    "questionID": "227",
+    "category": "HR Preferences",
     "tags": [
       "Environmental",
       "Sustainability",
@@ -4429,34 +5769,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "165",
-    "category": "HR / Work-Life Balance",
-    "tags": [
-      ""
-    ],
-    "question": "What is your preferred company size?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Small: I prefer working in a company with less than 100 employees."
-      },
-      {
-        "answerID": 2,
-        "answer": "Medium: I prefer working in a company with 100-500 employees."
-      },
-      {
-        "answerID": 3,
-        "answer": "Large: I prefer working in a company with over 500 employees."
-      },
-      {
-        "answerID": 4,
-        "answer": "Large: I prefer working in a company with over 500 employees."
-      }
-    ]
-  },
-  {
-    "questionID": "166",
-    "category": "HR / Work-Life Balance",
+    "questionID": "228",
+    "category": "HR Preferences",
     "tags": [
       "Work",
       "Location",
@@ -4483,8 +5797,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "167",
-    "category": "HR / Work-Life Balance",
+    "questionID": "229",
+    "category": "HR Preferences",
     "tags": [
       "Company",
       "Mission",
@@ -4511,8 +5825,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "168",
-    "category": "HR / Work-Life Balance",
+    "questionID": "230",
+    "category": "HR Preferences",
     "tags": [
       "Overtime",
       "Occurrence",
@@ -4539,8 +5853,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "169",
-    "category": "HR / Work-Life Balance",
+    "questionID": "231",
+    "category": "HR Preferences",
     "tags": [
       "Dress",
       "Code",
@@ -4567,8 +5881,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "170",
-    "category": "HR / Work-Life Balance",
+    "questionID": "232",
+    "category": "HR Preferences",
     "tags": [
       "Team",
       "Building",
@@ -4596,8 +5910,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "171",
-    "category": "HR / Work-Life Balance",
+    "questionID": "233",
+    "category": "HR Preferences",
     "tags": [
       "Professional",
       "Development",
@@ -4625,8 +5939,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "172",
-    "category": "HR / Work-Life Balance",
+    "questionID": "234",
+    "category": "HR Preferences",
     "tags": [
       "Communication",
       "Style",
@@ -4653,8 +5967,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "173",
-    "category": "HR / Work-Life Balance",
+    "questionID": "235",
+    "category": "HR Preferences",
     "tags": [
       "Feedback culture",
       "work culture",
@@ -4682,8 +5996,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "174",
-    "category": "HR / Work-Life Balance",
+    "questionID": "236",
+    "category": "HR Preferences",
     "tags": [
       "Travel",
       "work requirements",
@@ -4711,8 +6025,8 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "175",
-    "category": "HR / Work-Life Balance",
+    "questionID": "237",
+    "category": "HR Preferences",
     "tags": [
       "Cross-functional teams",
       "teamwork",
@@ -4740,7 +6054,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "176",
+    "questionID": "238",
     "category": "Educational Background",
     "tags": [
       "Highest education level",
@@ -4748,380 +6062,97 @@ export const questionsData = [
       "Degree",
       "Diploma"
     ],
-    "question": "What's your highest completed level of education?",
+    "question": "What's the minimum level of education you expect in a candidate?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "High school diploma or equivalent"
+        "answer": "High School Diploma"
       },
       {
         "answerID": 2,
-        "answer": "Some college or technical certification"
+        "answer": "Associate Degree:"
       },
       {
         "answerID": 3,
-        "answer": "Bachelor's degree"
+        "answer": "Bachelor's Degree"
       },
       {
         "answerID": 4,
-        "answer": "Postgraduate degree"
+        "answer": "Master's Degree"
+      },
+      {
+        "answerID": 5,
+        "answer": "PhD"
+      },
+      {
+        "answerID": 6,
+        "answer": "Professional Certification"
+      },
+      {
+        "answerID": 7,
+        "answer": "No Formal Education: We don't have a strict education requirement but prioritize industry experience."
+      },
+      {
+        "answerID": 8,
+        "answer": "We don't have expectations around a candidate's formal education."
       }
     ]
   },
   {
-    "questionID": "177",
-    "category": "Educational Background",
-    "tags": [
-      "Technical boot camp",
-      "Training program",
-      "Specialized training",
-      "Skills enhancement"
-    ],
-    "question": "Have you taken part in any specialized technical boot camps or concentrated training programs?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, I've completed one or more programs"
-      },
-      {
-        "answerID": 2,
-        "answer": "Currently enrolled in a program"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but I'm open to it"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and I'm not currently considering it"
-      }
-    ]
-  },
-  {
-    "questionID": "178",
-    "category": "Educational Background",
-    "tags": [
-      "Higher education",
-      "Primary study area",
-      "Major",
-      "Discipline"
-    ],
-    "question": "If you've pursued higher education, what was your primary area of study?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "STEM (Science, Technology, Engineering, Mathematics)"
-      },
-      {
-        "answerID": 2,
-        "answer": "Business or Social Sciences"
-      },
-      {
-        "answerID": 3,
-        "answer": "Arts or Humanities"
-      },
-      {
-        "answerID": 4,
-        "answer": "Other/Not Applicable"
-      }
-    ]
-  },
-  {
-    "questionID": "179",
-    "category": "Educational Background",
-    "tags": [
-      "Self-learning",
-      "Online learning",
-      "Technical skills",
-      "E-learning platform"
-    ],
-    "question": "Have you engaged in self-directed online learning for technical skills (for instance, through Coursera, Udemy, or Khan Academy)?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, I've completed one or more courses"
-      },
-      {
-        "answerID": 2,
-        "answer": "Currently enrolled in an online course"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but I'm open to it"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and I'm not currently considering it"
-      }
-    ]
-  },
-  {
-    "questionID": "180",
-    "category": "Educational Background",
-    "tags": [
-      "Industry certification",
-      "Professional qualification",
-      "Field-relevant certification",
-      "Career certification"
-    ],
-    "question": "Have you completed any industry certifications relevant to your field?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, multiple certifications"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, one certification"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but planning to pursue"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and not planning to pursue"
-      }
-    ]
-  },
-  {
-    "questionID": "181",
-    "category": "Educational Background",
-    "tags": [
-      "Internship",
-      "Co-op program",
-      "Field experience",
-      "Practical training"
-    ],
-    "question": "Have you participated in any internships or co-op programs in your field?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, multiple internships/co-ops"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, one internship/co-op"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but open to future opportunities"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and not seeking internships/co-ops"
-      }
-    ]
-  },
-  {
-    "questionID": "182",
-    "category": "Educational Background",
-    "tags": [
-      "Research presentation",
-      "Published work",
-      "Academic research",
-      "Professional research"
-    ],
-    "question": "Have you presented or published any academic or professional research?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, multiple publications/presentations"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, one publication/presentation"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but planning to pursue"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and not planning to pursue"
-      }
-    ]
-  },
-  {
-    "questionID": "183",
-    "category": "Educational Background",
-    "tags": [
-      "Academic honors",
-      "Field awards",
-      "Recognition",
-      "Academic achievement"
-    ],
-    "question": "Have you received any academic honors or awards in your field?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, multiple honors/awards"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, one honor/award"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but aiming for future recognitions"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and not focused on honors/awards"
-      }
-    ]
-  },
-  {
-    "questionID": "184",
-    "category": "Educational Background",
-    "tags": [
-      "Patent holder",
-      "Invention contribution",
-      "Innovation",
-      "Intellectual property"
-    ],
-    "question": "Do you hold any patents or have you contributed to any inventions?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, multiple patents/inventions"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, one patent/invention"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but interested in future innovation"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and not focused on patents/inventions"
-      }
-    ]
-  },
-  {
-    "questionID": "185",
-    "category": "Educational Background",
-    "tags": [
-      "Teaching experience",
-      "Tutoring role",
-      "Educational involvement",
-      "Mentorship"
-    ],
-    "question": "Have you participated in any teaching or tutoring roles in your field of study or profession?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, multiple teaching/tutoring roles"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, one teaching/tutoring role"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but open to future teaching/tutoring roles"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, and not seeking teaching/tutoring roles"
-      }
-    ]
-  },
-  {
-    "questionID": "186",
-    "category": "Work & Industry Experience",
-    "tags": [
-      "Sales Engineer experience",
-      "Years in role"
-    ],
-    "question": "How many years of experience do you have in a sales or solutions engineering role?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Less than 1 year"
-      },
-      {
-        "answerID": 2,
-        "answer": "1-3 years"
-      },
-      {
-        "answerID": 3,
-        "answer": "3-5 years"
-      },
-      {
-        "answerID": 4,
-        "answer": "Over 5 years"
-      }
-    ]
-  },
-  {
-    "questionID": "187",
+    "questionID": "239",
     "category": "Work & Industry Experience",
     "tags": [
       "Deal value experience",
       "High-value deals"
     ],
-    "question": "What's the highest deal value you've worked on as a Sales Engineer?",
+    "question": "What is the range of the highest deal value that you expect your Sales Engineer candidate to have successfully helped close?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Less than $100,000"
+        "answer": "Under $25,000"
       },
       {
         "answerID": 2,
-        "answer": "$100,000 - $500,000"
+        "answer": "$25,000 - $50,000"
       },
       {
         "answerID": 3,
-        "answer": "$500,000 - $1,000,000"
+        "answer": "$50,000 - $100,000"
       },
       {
         "answerID": 4,
-        "answer": "Over $1,000,000"
+        "answer": "$100,000 - $150,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$150,000 - $200,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$250,000 - $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "$500,000 - $750,000"
+      },
+      {
+        "answerID": 8,
+        "answer": "$750,000 - $1M+"
       }
     ]
   },
   {
-    "questionID": "188",
+    "questionID": "240",
     "category": "Work & Industry Experience",
     "tags": [
       "Regulated industries experience",
       "Specific industry experience"
     ],
-    "question": "Have you had experience selling into regulated industries? If so, which ones?",
+    "question": "What regulated industry do you prefer your Sales Engineer candidate to have experience selling into?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Yes, healthcare industry"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, financial industry"
-      },
-      {
-        "answerID": 3,
-        "answer": "Yes, government sector"
-      },
-      {
-        "answerID": 4,
-        "answer": "No"
-      }
-    ]
-  },
-  {
-    "questionID": "189",
-    "category": "Work & Industry Experience",
-    "tags": [
-      "Industry experience",
-      "Sales Engineer role"
-    ],
-    "question": "In what industries have you worked as a Sales Engineer?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Technology/Software"
+        "answer": "No experience required."
       },
       {
         "answerID": 2,
@@ -5129,49 +6160,124 @@ export const questionsData = [
       },
       {
         "answerID": 3,
-        "answer": "Manufacturing"
+        "answer": "Finance"
       },
       {
         "answerID": 4,
-        "answer": "Other"
+        "answer": "Energy"
+      },
+      {
+        "answerID": 5,
+        "answer": "Pharmaceuticals"
+      },
+      {
+        "answerID": 6,
+        "answer": "Telecommunications"
+      },
+      {
+        "answerID": 7,
+        "answer": "Education"
+      },
+      {
+        "answerID": 8,
+        "answer": "Government"
       }
     ]
   },
   {
-    "questionID": "190",
+    "questionID": "241",
+    "category": "Work & Industry Experience",
+    "tags": [
+      "Industry experience",
+      "Sales Engineer role"
+    ],
+    "question": "In what industry do you prefer your Sales Engineer candidate to have the most experience?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No preference"
+      },
+      {
+        "answerID": 2,
+        "answer": "Tech/Software"
+      },
+      {
+        "answerID": 3,
+        "answer": "Healthcare"
+      },
+      {
+        "answerID": 4,
+        "answer": "Finance"
+      },
+      {
+        "answerID": 5,
+        "answer": "Manufacturing"
+      },
+      {
+        "answerID": 6,
+        "answer": "Telecommunications"
+      },
+      {
+        "answerID": 7,
+        "answer": "Energy"
+      },
+      {
+        "answerID": 8,
+        "answer": "Logistics/Supply Chain"
+      }
+    ]
+  },
+  {
+    "questionID": "242",
     "category": "Work & Industry Experience",
     "tags": [
       "Product/Service experience",
       "Types of sales"
     ],
-    "question": "What types of products or services have you primarily sold as a Sales Engineer?",
+    "question": "What types of products or services do you need a Sales Engineer to have experience selling?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Software products"
+        "answer": "Software as a Service (SaaS) products."
       },
       {
         "answerID": 2,
-        "answer": "Hardware products"
+        "answer": "Platform as a Service (PaaS) products."
       },
       {
         "answerID": 3,
-        "answer": "Consultancy services"
+        "answer": "Infrastructure as a Service (IaaS) products."
       },
       {
         "answerID": 4,
-        "answer": "Other services"
+        "answer": "On-premise software products."
+      },
+      {
+        "answerID": 5,
+        "answer": "Professional consulting services"
+      },
+      {
+        "answerID": 6,
+        "answer": "Managed IT services"
+      },
+      {
+        "answerID": 7,
+        "answer": "Hardware technology products"
+      },
+      {
+        "answerID": 8,
+        "answer": "Custom solutions or integrations."
       }
     ]
   },
   {
-    "questionID": "191",
+    "questionID": "243",
     "category": "Work & Industry Experience",
     "tags": [
       "Client interaction frequency",
       "Direct client engagement"
     ],
-    "question": "How often have you interacted directly with clients in your role as a Sales Engineer?",
+    "question": "How frequently do you expect a Sales Engineer in this role to interact directly with prospective clients?",
     "answers": [
       {
         "answerID": 1,
@@ -5179,244 +6285,176 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Weekly"
+        "answer": "Several times a week"
       },
       {
         "answerID": 3,
-        "answer": "Monthly"
+        "answer": "Once a week"
       },
       {
         "answerID": 4,
+        "answer": "A few times a month"
+      },
+      {
+        "answerID": 5,
+        "answer": "Once a month"
+      },
+      {
+        "answerID": 6,
+        "answer": "Less than once a month"
+      },
+      {
+        "answerID": 7,
         "answer": "Rarely"
+      },
+      {
+        "answerID": 8,
+        "answer": "Never"
       }
     ]
   },
   {
-    "questionID": "192",
-    "category": "Work & Industry Experience",
-    "tags": [
-      "Startup experience",
-      "Startup environment"
-    ],
-    "question": "Have you worked in a startup environment?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, I have worked at a startup from its inception"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, I have joined a startup after its initial phase"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but I have worked at small to medium-sized businesses"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, I have only worked at large companies"
-      }
-    ]
-  },
-  {
-    "questionID": "193",
-    "category": "Work & Industry Experience",
-    "tags": [
-      "Corporate experience",
-      "Large company environment"
-    ],
-    "question": "Have you worked in a large corporate environment (5000+ employees)?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Yes, and it was my most recent job"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, but not recently"
-      },
-      {
-        "answerID": 3,
-        "answer": "No, but I have worked at medium-sized companies (500-5000 employees)"
-      },
-      {
-        "answerID": 4,
-        "answer": "No, I have only worked at small businesses or startups"
-      }
-    ]
-  },
-  {
-    "questionID": "194",
+    "questionID": "244",
     "category": "Work & Industry Experience",
     "tags": [
       "Management experience",
       "Sales Engineers team"
     ],
-    "question": "Do you have experience managing a team of Sales Engineers?",
+    "question": "Is managing a team of Sales Engineers a part of this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No experience"
+        "answer": "Yes, the role involves managing a large team (10+ members)"
       },
       {
         "answerID": 2,
-        "answer": "Yes, teams of 1-5"
+        "answer": "Yes, the role involves managing a small to medium team (3-9 members)"
       },
       {
         "answerID": 3,
-        "answer": "Yes, teams of 6-10"
+        "answer": "Yes, the role involves managing a small team (1-2 members)"
       },
       {
         "answerID": 4,
-        "answer": "Yes, teams of more than 10"
+        "answer": "Yes, but only in a temporary or acting capacity"
+      },
+      {
+        "answerID": 5,
+        "answer": "No, but mentorship or training responsibilities are included"
+      },
+      {
+        "answerID": 6,
+        "answer": "No, this role is primarily for an individual contributor"
       }
     ]
   },
   {
-    "questionID": "195",
-    "category": "Work & Industry Experience",
-    "tags": [
-      "Deal size familiarity",
-      "Size of deals"
-    ],
-    "question": "What size of deals are you most familiar with handling?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No direct deal experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Small deals (under $100K)"
-      },
-      {
-        "answerID": 3,
-        "answer": "Mid-sized deals ($100K - $1M)"
-      },
-      {
-        "answerID": 4,
-        "answer": "Large deals ($1M+)"
-      }
-    ]
-  },
-  {
-    "questionID": "196",
+    "questionID": "245",
     "category": "Work & Industry Experience",
     "tags": [
       "Team support experience",
       "Large team support"
     ],
-    "question": "What's the largest team you have supported?",
+    "question": "What's the size of the Account Executive team that this Sales Engineer role will be directly supporting on deals?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "50+ members"
+        "answer": "A large team of over 50 Account Executives"
       },
       {
         "answerID": 2,
-        "answer": "20-49 members"
+        "answer": "A medium-sized team of 30-50 Account Executives"
       },
       {
         "answerID": 3,
-        "answer": "2-19 members"
+        "answer": "A small to medium-large team of 10-30 members"
       },
       {
         "answerID": 4,
-        "answer": "Sole contributor"
+        "answer": "A medium-sized team of 10-30 Account Executives"
+      },
+      {
+        "answerID": 5,
+        "answer": "A smaller team of 6-10 Account Executives"
+      },
+      {
+        "answerID": 6,
+        "answer": "A small team of 5 or less Account Executives"
       }
     ]
   },
   {
-    "questionID": "197",
+    "questionID": "246",
     "category": "Work & Industry Experience",
     "tags": [
       "Product launches",
       "leadership",
       "Launch experience"
     ],
-    "question": "Have you led any project or product launches?",
+    "question": "What level of involvement in product launches is expected from the Sales Engineer in this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Never involved in a launch"
+        "answer": "No involvement: The Sales Engineer is not expected to be involved in product launches."
       },
       {
         "answerID": 2,
-        "answer": "Assisted but never led"
+        "answer": "Contributor: The Sales Engineer is expected to observe and provide minor support for product launches, but deep involvement is not required."
       },
       {
         "answerID": 3,
-        "answer": "Yes, once or twice"
+        "answer": "Coordinator: The Sales Engineer is expected to contribute in product launches, providing technical support and preparing for client inquiries."
       },
       {
         "answerID": 4,
-        "answer": "Yes, multiple times"
+        "answer": "Leader: The Sales Engineer is expected to play a substantial role in product launches, coordinating technical aspects and preparing the sales team for client engagement."
       }
     ]
   },
   {
-    "questionID": "198",
-    "category": "Work & Industry Experience",
-    "tags": [
-      "Sales leadership experience",
-      "Leading sales team"
-    ],
-    "question": "Have you had experience leading a sales team or working in a sales leadership role?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Never held a sales leadership role."
-      },
-      {
-        "answerID": 2,
-        "answer": "Briefly led a team in a temporary or acting capacity."
-      },
-      {
-        "answerID": 3,
-        "answer": "Led a small sales team for a significant period."
-      },
-      {
-        "answerID": 4,
-        "answer": "Extensive experience leading larger sales teams or multiple teams."
-      }
-    ]
-  },
-  {
-    "questionID": "199",
+    "questionID": "247",
     "category": "Work & Industry Experience",
     "tags": [
       "Long sales cycles management",
       "Sales cycle experience",
       "cycle"
     ],
-    "question": "What's the longest sales cycle you've managed?",
+    "question": "What's the typical length of the sales cycle the Sales Engineer would be managing in this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Up to 3 months."
+        "answer": "Less than a month"
       },
       {
         "answerID": 2,
-        "answer": "Between 3-6 months."
+        "answer": "1-3 months"
       },
       {
         "answerID": 3,
-        "answer": "Between 6-12 months."
+        "answer": "3-6 months"
       },
       {
         "answerID": 4,
-        "answer": "More than 1 year."
+        "answer": "6-9 months"
+      },
+      {
+        "answerID": 5,
+        "answer": "9-12 months"
+      },
+      {
+        "answerID": 6,
+        "answer": "1+ years"
       }
     ]
   },
   {
-    "questionID": "200",
+    "questionID": "248",
     "category": "Work & Industry Experience",
     "tags": [
       "Sales methodology experience",
       "Specific methodology familiarity"
     ],
-    "question": "What has been your primary sales methodology (e.g., Challenger Sale, SPIN selling)?",
+    "question": "Which sales methodology does your team primarily use?",
     "answers": [
       {
         "answerID": 1,
@@ -5432,12 +6470,28 @@ export const questionsData = [
       },
       {
         "answerID": 4,
-        "answer": "Other sales methodology or a combination of multiple methodologies."
+        "answer": "Value Selling"
+      },
+      {
+        "answerID": 5,
+        "answer": "Conceptual Selling"
+      },
+      {
+        "answerID": 6,
+        "answer": "Sandler Selling System"
+      },
+      {
+        "answerID": 7,
+        "answer": "Consultative Selling"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
       }
     ]
   },
   {
-    "questionID": "201",
+    "questionID": "249",
     "category": "Work & Industry Experience",
     "tags": [
       "Sales model familiarity",
@@ -5445,93 +6499,124 @@ export const questionsData = [
       "B2C",
       "B2G experience"
     ],
-    "question": "What type of sales model are you most familiar with (B2B, B2C, B2G)?",
+    "question": "What type of sales model does your business primarily operate under (B2B, B2C, B2G)?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Predominantly B2B sales."
+        "answer": "B2B (Business-to-Business)"
       },
       {
         "answerID": 2,
-        "answer": "Predominantly B2C sales."
+        "answer": "B2C (Business-to-Consumer)"
       },
       {
         "answerID": 3,
-        "answer": "Predominantly B2G sales."
+        "answer": "B2G (Business-to-Government)"
       },
       {
         "answerID": 4,
-        "answer": "Mixed experience across B2B, B2C, and B2G."
+        "answer": "A combination of B2B and B2C"
+      },
+      {
+        "answerID": 5,
+        "answer": "A combination of B2B and B2G"
+      },
+      {
+        "answerID": 6,
+        "answer": "A combination of B2C and B2G"
+      },
+      {
+        "answerID": 7,
+        "answer": "All three (B2B, B2C, and B2G)"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
       }
     ]
   },
   {
-    "questionID": "202",
+    "questionID": "250",
     "category": "Work & Industry Experience",
     "tags": [
       "Customer stakeholder engagement",
       "Stakeholder level experience"
     ],
-    "question": "What level of customer stakeholders are you accustomed to engaging with",
+    "question": "What level of customer stakeholders will the Sales Engineer be expected to engage with in this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Primarily engage with Manager-level or below stakeholders."
+        "answer": "Executive (CEO, CFO, CTO)"
       },
       {
         "answerID": 2,
-        "answer": "Frequently engage with Director-level stakeholders."
+        "answer": "Vice Presidents"
       },
       {
         "answerID": 3,
-        "answer": "Regularly engage with VP-level stakeholders."
+        "answer": "Directors"
       },
       {
         "answerID": 4,
-        "answer": "Consistently engage with C-level stakeholders."
+        "answer": "Managers"
+      },
+      {
+        "answerID": 5,
+        "answer": "Technical Specialists/Experts"
+      },
+      {
+        "answerID": 6,
+        "answer": "Other"
       }
     ]
   },
   {
-    "questionID": "203",
+    "questionID": "251",
     "category": "Work & Industry Experience",
     "tags": [
-      "eam sales quota experience",
+      "team sales quota experience",
       "Sales quota familiarity",
       "quota"
     ],
-    "question": "What kind of sales quota was the team you were part of responsible for in the past?",
+    "question": "What kind of annual team sales quota should an SE feel comfortable supporting in this role?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Up to $500K annually."
+        "answer": "Less than $1M"
       },
       {
         "answerID": 2,
-        "answer": "Between $500K to $1M annually."
+        "answer": "$1M - $5M"
       },
       {
         "answerID": 3,
-        "answer": "Between $1M to $5M annually."
+        "answer": "$5M - $10M"
       },
       {
         "answerID": 4,
-        "answer": "Over $5M annually."
+        "answer": "$10M - $25M"
+      },
+      {
+        "answerID": 5,
+        "answer": "$25M - $50M"
+      },
+      {
+        "answerID": 6,
+        "answer": "More than $50M"
       }
     ]
   },
   {
-    "questionID": "204",
+    "questionID": "252",
     "category": "Career Goals ",
     "tags": [
-      "Career advancement opportunities",
-      "2-5 year outlook"
+      "Career advancement opportunities"
     ],
-    "question": "What are the primary opportunities for career advancement within your organization over the next 2-5 years?",
+    "question": "What are the primary opportunities for career advancement in this role over the next 2 years?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "We anticipate minimal changes and opportunities for advancement"
+        "answer": "We anticipate minimal opportunities for advancement"
       },
       {
         "answerID": 2,
@@ -5548,7 +6633,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "205",
+    "questionID": "253",
     "category": "Career Goals ",
     "tags": [
       "Management transition potential",
@@ -5575,7 +6660,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "206",
+    "questionID": "254",
     "category": "Career Goals ",
     "tags": [
       "Subject matter expert opportunities",
@@ -5602,7 +6687,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "207",
+    "questionID": "255",
     "category": "Career Goals ",
     "tags": [
       "Startup-like environment",
@@ -5629,7 +6714,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "208",
+    "questionID": "256",
     "category": "Career Goals ",
     "tags": [
       "Job stability description",
@@ -5656,34 +6741,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "209",
-    "category": "Career Goals ",
-    "tags": [
-      "Influence on product strategy",
-      "Role in roadmap shaping"
-    ],
-    "question": "How much influence can an employee in this role have on product strategy and roadmap?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Very little, our product strategy and roadmap are set by a specific team"
-      },
-      {
-        "answerID": 2,
-        "answer": "Some, we often seek input from various roles but final decisions are made by a specific team"
-      },
-      {
-        "answerID": 3,
-        "answer": "A fair amount, input from this role is highly valued in shaping product strategy and roadmap"
-      },
-      {
-        "answerID": 4,
-        "answer": "A great deal, this role is a key influencer in product strategy and roadmap decisions"
-      }
-    ]
-  },
-  {
-    "questionID": "210",
+    "questionID": "257",
     "category": "Career Goals ",
     "tags": [
       "Role's customer success involvement",
@@ -5710,88 +6768,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "211",
-    "category": "Career Goals ",
-    "tags": [
-      "Role's sales phase",
-      "Pre-sales or post-sales"
-    ],
-    "question": "Is this a pre-sales or post-sales role?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Primarily pre-sales"
-      },
-      {
-        "answerID": 2,
-        "answer": "Primarily post-sales"
-      },
-      {
-        "answerID": 3,
-        "answer": "A balanced mix of pre-sales and post-sales"
-      },
-      {
-        "answerID": 4,
-        "answer": "It varies depending on projects and client needs"
-      }
-    ]
-  },
-  {
-    "questionID": "212",
+    "questionID": "258",
     "category": "Career Goals ",
     "tags": [
       "Transition opportunities",
       "Different industry/sector within company"
     ],
-    "question": "Are there opportunities for transition into a different industry or sector within the company?",
+    "question": "How open are you to accepting a Sales Engineer who comes from outside of your company's primary industry?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Limited opportunities, as we operate within a specific industry/sector"
+        "answer": "Very open - Industry experience is not important."
       },
       {
         "answerID": 2,
-        "answer": "Some opportunities, depending on business needs and individual skill sets"
+        "answer": "Somewhat open - Relevant industry experience is a plus, but not a requirement."
       },
       {
         "answerID": 3,
-        "answer": "A fair amount of opportunities, we operate across multiple industries/sectors"
+        "answer": "Neutral - The candidate's skills and experience are more important than their industry background."
       },
       {
         "answerID": 4,
-        "answer": "Numerous opportunities, we actively encourage cross-sector mobility"
+        "answer": "Not open - We require Sales Engineers to have experience in our specific industry."
       }
     ]
   },
   {
-    "questionID": "213",
-    "category": "Career Goals ",
-    "tags": [
-      "International relocation opportunities",
-      "Travel options"
-    ],
-    "question": "Does your company offer opportunities for international relocation or travel?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No, our operations are primarily local"
-      },
-      {
-        "answerID": 2,
-        "answer": "Occasionally, depending on project needs"
-      },
-      {
-        "answerID": 3,
-        "answer": "Regularly, as part of the role's responsibilities"
-      },
-      {
-        "answerID": 4,
-        "answer": "Extensively, we have a strong international presence and mobility"
-      }
-    ]
-  },
-  {
-    "questionID": "214",
+    "questionID": "259",
     "category": "Career Goals ",
     "tags": [
       "Emphasis on continual learning",
@@ -5818,7 +6822,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "215",
+    "questionID": "260",
     "category": "Career Goals ",
     "tags": [
       "Role focus",
@@ -5845,282 +6849,480 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "216",
-    "category": "Intro Questions",
+    "questionID": "278",
+    "category": "Client Onboarding ",
     "tags": [
       ""
     ],
-    "question": "What type of work environment do you prefer?",
+    "question": "Which most accurately describes the type of product your company sells?  ",
     "answers": [
       {
         "answerID": 1,
-        "answer": "High-paced, startup environment"
+        "answer": "Business Intelligence (BI)"
       },
       {
         "answerID": 2,
-        "answer": "Structured, corporate environment"
+        "answer": "Cybersecurity"
       },
       {
         "answerID": 3,
-        "answer": "Client-facing, travel-intensive"
+        "answer": "Data Analytics / Big Data"
       },
       {
         "answerID": 4,
-        "answer": "No preference."
-      }
-    ]
-  },
-  {
-    "questionID": "217",
-    "category": "Intro Questions",
-    "tags": [
-      ""
-    ],
-    "question": "What is your key strength in your current role? ",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Technical skills and product knowledge"
-      },
-      {
-        "answerID": 2,
-        "answer": "Client relations and communication"
-      },
-      {
-        "answerID": 3,
-        "answer": "Project management and organization"
-      },
-      {
-        "answerID": 4,
-        "answer": "Business strategy and development"
-      }
-    ]
-  },
-  {
-    "questionID": "218",
-    "category": "Intro Questions",
-    "tags": [
-      ""
-    ],
-    "question": "How many years of experience do you have in a sales or solutions engineering role?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "New to the field (Less than 1 year)"
-      }
-    ]
-  },
-  {
-    "questionID": "219",
-    "category": "Intro Questions",
-    "tags": [
-      ""
-    ],
-    "question": "Which skill area would be most fulfilling for you to develop in your next role? \r\n",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Deepening technical or subject matter expertise."
-      },
-      {
-        "answerID": 2,
-        "answer": "Enhancing pre-sales and deal-cycle abilities."
-      },
-      {
-        "answerID": 3,
-        "answer": "Developing managerial and leadership abilities"
-      },
-      {
-        "answerID": 4,
-        "answer": "Post-sales implementation and client management."
-      }
-    ]
-  },
-  {
-    "questionID": "220",
-    "category": "Intro Questions",
-    "tags": [
-      ""
-    ],
-    "question": "Which base salary range would meet your minimum expectations for a future role? \r\n",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "$80,000 to $100,000"
-      },
-      {
-        "answerID": 2,
-        "answer": "$100,000 to $120,000"
-      },
-      {
-        "answerID": 3,
-        "answer": "$120,000 to $150,000"
-      },
-      {
-        "answerID": 4,
-        "answer": "$150,000+"
-      }
-    ]
-  },
-  {
-    "questionID": "221",
-    "category": "Intro Questions",
-    "tags": [
-      ""
-    ],
-    "question": "If you could choose, which of the following industries would you be most interested in representing as a Sales Engineer?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Software/Technology"
-      },
-      {
-        "answerID": 2,
-        "answer": "Telecommunications"
-      },
-      {
-        "answerID": 3,
-        "answer": "Healthcare/Medical Devices"
-      },
-      {
-        "answerID": 4,
-        "answer": "Industrial/Manufacturing"
+        "answer": "Customer Relationship Management (CRM)"
       },
       {
         "answerID": 5,
-        "answer": "Healthcare and Life Sciences"
+        "answer": "Advertising Technology"
       },
       {
         "answerID": 6,
-        "answer": "Professional Services"
+        "answer": "DevOps and Cloud Infrastructure"
       },
       {
         "answerID": 7,
-        "answer": "Government & Public Sector"
+        "answer": "Human Resource Management (HRM)"
       },
       {
         "answerID": 8,
-        "answer": "I don't have a specific preference."
+        "answer": "Other"
       }
     ]
   },
   {
-    "questionID": "222",
-    "category": "Intro Questions",
+    "questionID": "279",
+    "category": "Client Onboarding ",
     "tags": [
       ""
     ],
-    "question": "On a scale of 1-4, how would you rate your current technical knowledge and skills related to sales engineering?",
+    "question": "Considering the continuum from early-stage startups to established corporations, how would you describe your organization? ",
     "answers": [
       {
         "answerID": 1,
-        "answer": "1 - Beginner (I am still learning the basics)"
+        "answer": "Early-Stage Startup: We're still in the process of setting up structures and processes, and innovation is our driving force."
       },
       {
         "answerID": 2,
-        "answer": "2 - Intermediate (I have a good grasp of the concepts and some practical experience)"
+        "answer": "Mid-Stage Startup: We have some established structures and processes, but we are still highly dynamic and focused on growth and innovation."
       },
       {
         "answerID": 3,
-        "answer": "3 - Advanced (I have deep knowledge and extensive experience)"
+        "answer": "Growth Stage Company: We have a good balance between established processes and the agility needed for growth and adaptation."
       },
       {
         "answerID": 4,
-        "answer": "4 - Expert (I am considered an authority in my domain)"
+        "answer": "Established Company: We have well-defined roles and processes, and value stability and predictability."
       }
     ]
   },
   {
-    "questionID": "223",
-    "category": "Intro Questions",
+    "questionID": "280",
+    "category": "Client Onboarding ",
     "tags": [
       ""
     ],
-    "question": "If you had to choose, would you prefer a role that focuses more on pre-sales (helping to secure the sale) or post-sales (ensuring customer satisfaction and retention)?",
+    "question": "What percentage of health insurance premium costs does your company cover for your employees?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "Pre-sales"
+        "answer": "We do not cover health insurance premium costs"
       },
       {
         "answerID": 2,
-        "answer": "Post-sales"
+        "answer": "Less than 25%"
       },
       {
         "answerID": 3,
-        "answer": "I'm comfortable with either"
+        "answer": "Between 25% and 50%"
       },
       {
         "answerID": 4,
-        "answer": "I don't have a specific preference."
-      }
-    ]
-  },
-  {
-    "questionID": "224",
-    "category": "Intro Questions",
-    "tags": [
-      ""
-    ],
-    "question": "In the last two years, what deal size would you say is most typical of those you've supported?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I have not supported deals."
-      },
-      {
-        "answerID": 2,
-        "answer": "Under $50K"
-      },
-      {
-        "answerID": 3,
-        "answer": "Between $50K and $100k"
-      },
-      {
-        "answerID": 4,
-        "answer": "Between $100k & $250K"
+        "answer": "Between 50% and 75%"
       },
       {
         "answerID": 5,
-        "answer": "Between $250k and 500k"
+        "answer": "More than 75% but less than 100%"
       },
       {
         "answerID": 6,
-        "answer": "Between 500k and $750k"
-      },
-      {
-        "answerID": 7,
-        "answer": "Between $750k & $1m"
-      },
-      {
-        "answerID": 8,
-        "answer": "Over $1M"
+        "answer": "100%"
       }
     ]
   },
   {
-    "questionID": "225",
-    "category": "Intro Questions",
+    "questionID": "281",
+    "category": "Client Onboarding ",
     "tags": [
       ""
     ],
-    "question": "Which type of sales do you feel most comfortable supporting, based on your prior experience?",
+    "question": "How many days of paid time off (PTO) are new employees entitled to annually?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "High volume, low complexity deals (SMB focus)"
+        "answer": "We do not offer PTO"
       },
       {
         "answerID": 2,
-        "answer": "Mid-market deals (moderate volume and complexity)"
+        "answer": "Less than 10 days"
       },
       {
         "answerID": 3,
-        "answer": "High-value, high complexity deals (Enterprise focus)"
+        "answer": "10-15 days"
       },
       {
         "answerID": 4,
-        "answer": "Not sure yet."
+        "answer": "16-20 days"
+      },
+      {
+        "answerID": 5,
+        "answer": "21-25 days"
+      },
+      {
+        "answerID": 6,
+        "answer": "26-30 days"
+      },
+      {
+        "answerID": 7,
+        "answer": "30-35 days"
+      },
+      {
+        "answerID": 8,
+        "answer": "Unlimited; practically accceptable to take more than 35 days."
+      }
+    ]
+  },
+  {
+    "questionID": "282",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "What percentage does your company match for employee 401k contributions?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "We do not offer a 401k match"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 1%"
+      },
+      {
+        "answerID": 3,
+        "answer": "1% - 2%"
+      },
+      {
+        "answerID": 4,
+        "answer": "3% - 4%"
+      },
+      {
+        "answerID": 5,
+        "answer": "5% - 6%"
+      },
+      {
+        "answerID": 6,
+        "answer": "7% - 8%"
+      },
+      {
+        "answerID": 7,
+        "answer": "More than 8%"
+      },
+      {
+        "answerID": 8,
+        "answer": "We offer a full (100%) match"
+      }
+    ]
+  },
+  {
+    "questionID": "283",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "What percentage of dental insurance premium costs does your company cover for your employees?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "We do not cover dental insurance premium costs"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ]
+  },
+  {
+    "questionID": "284",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "What percentage of vision insurance premium costs does your company cover for your employees?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "We do not cover vision insurance premium costs"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ]
+  },
+  {
+    "questionID": "285",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "Does your company cover dependents (spouse, children) under its medical insurance plan?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No, we do not offer coverage for dependents."
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, we offer dependent coverage, but the employee is responsible for 100% of the premium costs for dependents."
+      },
+      {
+        "answerID": 3,
+        "answer": "Yes, we cover a portion of the premium costs for dependents. The employee is responsible for the remainder."
+      },
+      {
+        "answerID": 4,
+        "answer": "Yes, we cover 100% of the premium costs for dependents."
+      }
+    ]
+  },
+  {
+    "questionID": "286",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "How is PTO (Paid Time Off) accrued in your company?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Start from Zero: Employees start with zero PTO and earn more with each pay period."
+      },
+      {
+        "answerID": 2,
+        "answer": "Baseline Accrual: Employees start with a set amount of PTO and accrue more throughout their tenure."
+      },
+      {
+        "answerID": 3,
+        "answer": "All up front: Employees receive all PTO for the year at the start of their employment."
+      },
+      {
+        "answerID": 4,
+        "answer": "Unlimited: We have an unlimited PTO policy; this question does not apply."
+      }
+    ]
+  },
+  {
+    "questionID": "287",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "What is your company's paid maternity/paternity leave policy?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Paid Leave"
+      },
+      {
+        "answerID": 2,
+        "answer": "Up to 2 Weeks Paid Leave"
+      },
+      {
+        "answerID": 3,
+        "answer": "3-4 Weeks Paid Leave"
+      },
+      {
+        "answerID": 4,
+        "answer": "5-8 Weeks Paid Leave"
+      },
+      {
+        "answerID": 5,
+        "answer": "9-12 Weeks Paid Leave"
+      },
+      {
+        "answerID": 6,
+        "answer": "More than 12 Weeks Paid Leave"
+      }
+    ]
+  },
+  {
+    "questionID": "288",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Restrictions: New employees can take PTO at any time, without restrictions."
+      },
+      {
+        "answerID": 2,
+        "answer": "Holiday Blackout Dates: New employees cannot take PTO during major holidays."
+      },
+      {
+        "answerID": 3,
+        "answer": "Seasonal Peak Business Blackout Dates: New employees cannot take PTO during our peak business seasons."
+      },
+      {
+        "answerID": 4,
+        "answer": "Holiday and Peak Business Blackout Dates: New employees cannot take PTO during major holidays or our peak business seasons."
+      }
+    ]
+  },
+  {
+    "questionID": "289",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "Does your company offer a 401k program?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes"
+      }
+    ]
+  },
+  {
+    "questionID": "290",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "What is the annual dollar amount of student loan reimbursement your company offers?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Assistance"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1 - $1,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$1,001 - $2,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$2,001 - $3,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$3,001 - $4,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$4,001 - $5,250"
+      }
+    ]
+  },
+  {
+    "questionID": "291",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "Does your company offer a learning and development allowance? If yes, how much is it annually?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Allowance"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1 - $500"
+      },
+      {
+        "answerID": 3,
+        "answer": "$501 - $1,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$1,001 - $2,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$2,001 - $3,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$3000+"
+      }
+    ]
+  },
+  {
+    "questionID": "292",
+    "category": "Client Onboarding ",
+    "tags": [
+      ""
+    ],
+    "question": "Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Coverage: We do not offer life insurance benefits to our employees."
+      },
+      {
+        "answerID": 2,
+        "answer": "Basic Coverage: We offer life insurance that covers the employee for an amount equivalent to their annual salary."
+      },
+      {
+        "answerID": 3,
+        "answer": "Enhanced Coverage: We offer life insurance that covers the employee for an amount equivalent to double their annual salary."
+      },
+      {
+        "answerID": 4,
+        "answer": "Premium Coverage: We offer life insurance that covers the employee for an amount equivalent to triple their annual salary or more."
       }
     ]
   }
