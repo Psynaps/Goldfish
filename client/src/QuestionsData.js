@@ -6608,7 +6608,7 @@ export const questionsData = [
   },
   {
     "questionID": "252",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Career advancement opportunities"
     ],
@@ -6634,7 +6634,7 @@ export const questionsData = [
   },
   {
     "questionID": "253",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Management transition potential",
       "Future leadership opportunities"
@@ -6661,7 +6661,7 @@ export const questionsData = [
   },
   {
     "questionID": "254",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Subject matter expert opportunities",
       "Specialized technology/industry sector"
@@ -6688,7 +6688,7 @@ export const questionsData = [
   },
   {
     "questionID": "255",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Startup-like environment",
       "Sales Engineering function development"
@@ -6715,7 +6715,7 @@ export const questionsData = [
   },
   {
     "questionID": "256",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Job stability description",
       "Company stability"
@@ -6742,7 +6742,7 @@ export const questionsData = [
   },
   {
     "questionID": "257",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Role's customer success involvement",
       "Account management component"
@@ -6769,7 +6769,7 @@ export const questionsData = [
   },
   {
     "questionID": "258",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Transition opportunities",
       "Different industry/sector within company"
@@ -6796,7 +6796,7 @@ export const questionsData = [
   },
   {
     "questionID": "259",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Emphasis on continual learning",
       "Professional development focus"
@@ -6823,7 +6823,7 @@ export const questionsData = [
   },
   {
     "questionID": "260",
-    "category": "Career Goals ",
+    "category": "Career Goals",
     "tags": [
       "Role focus",
       "Technical skills expansion vs sales capabilities."
@@ -6845,484 +6845,6 @@ export const questionsData = [
       {
         "answerID": 4,
         "answer": "It varies depending on projects and client needs"
-      }
-    ]
-  },
-  {
-    "questionID": "278",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "Which most accurately describes the type of product your company sells?  ",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Business Intelligence (BI)"
-      },
-      {
-        "answerID": 2,
-        "answer": "Cybersecurity"
-      },
-      {
-        "answerID": 3,
-        "answer": "Data Analytics / Big Data"
-      },
-      {
-        "answerID": 4,
-        "answer": "Customer Relationship Management (CRM)"
-      },
-      {
-        "answerID": 5,
-        "answer": "Advertising Technology"
-      },
-      {
-        "answerID": 6,
-        "answer": "DevOps and Cloud Infrastructure"
-      },
-      {
-        "answerID": 7,
-        "answer": "Human Resource Management (HRM)"
-      },
-      {
-        "answerID": 8,
-        "answer": "Other"
-      }
-    ]
-  },
-  {
-    "questionID": "279",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "Considering the continuum from early-stage startups to established corporations, how would you describe your organization? ",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Early-Stage Startup: We're still in the process of setting up structures and processes, and innovation is our driving force."
-      },
-      {
-        "answerID": 2,
-        "answer": "Mid-Stage Startup: We have some established structures and processes, but we are still highly dynamic and focused on growth and innovation."
-      },
-      {
-        "answerID": 3,
-        "answer": "Growth Stage Company: We have a good balance between established processes and the agility needed for growth and adaptation."
-      },
-      {
-        "answerID": 4,
-        "answer": "Established Company: We have well-defined roles and processes, and value stability and predictability."
-      }
-    ]
-  },
-  {
-    "questionID": "280",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What percentage of health insurance premium costs does your company cover for your employees?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "We do not cover health insurance premium costs"
-      },
-      {
-        "answerID": 2,
-        "answer": "Less than 25%"
-      },
-      {
-        "answerID": 3,
-        "answer": "Between 25% and 50%"
-      },
-      {
-        "answerID": 4,
-        "answer": "Between 50% and 75%"
-      },
-      {
-        "answerID": 5,
-        "answer": "More than 75% but less than 100%"
-      },
-      {
-        "answerID": 6,
-        "answer": "100%"
-      }
-    ]
-  },
-  {
-    "questionID": "281",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "How many days of paid time off (PTO) are new employees entitled to annually?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "We do not offer PTO"
-      },
-      {
-        "answerID": 2,
-        "answer": "Less than 10 days"
-      },
-      {
-        "answerID": 3,
-        "answer": "10-15 days"
-      },
-      {
-        "answerID": 4,
-        "answer": "16-20 days"
-      },
-      {
-        "answerID": 5,
-        "answer": "21-25 days"
-      },
-      {
-        "answerID": 6,
-        "answer": "26-30 days"
-      },
-      {
-        "answerID": 7,
-        "answer": "30-35 days"
-      },
-      {
-        "answerID": 8,
-        "answer": "Unlimited; practically accceptable to take more than 35 days."
-      }
-    ]
-  },
-  {
-    "questionID": "282",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What percentage does your company match for employee 401k contributions?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "We do not offer a 401k match"
-      },
-      {
-        "answerID": 2,
-        "answer": "Less than 1%"
-      },
-      {
-        "answerID": 3,
-        "answer": "1% - 2%"
-      },
-      {
-        "answerID": 4,
-        "answer": "3% - 4%"
-      },
-      {
-        "answerID": 5,
-        "answer": "5% - 6%"
-      },
-      {
-        "answerID": 6,
-        "answer": "7% - 8%"
-      },
-      {
-        "answerID": 7,
-        "answer": "More than 8%"
-      },
-      {
-        "answerID": 8,
-        "answer": "We offer a full (100%) match"
-      }
-    ]
-  },
-  {
-    "questionID": "283",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What percentage of dental insurance premium costs does your company cover for your employees?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "We do not cover dental insurance premium costs"
-      },
-      {
-        "answerID": 2,
-        "answer": "Less than 25%"
-      },
-      {
-        "answerID": 3,
-        "answer": "Between 25% and 50%"
-      },
-      {
-        "answerID": 4,
-        "answer": "Between 50% and 75%"
-      },
-      {
-        "answerID": 5,
-        "answer": "More than 75% but less than 100%"
-      },
-      {
-        "answerID": 6,
-        "answer": "100%"
-      }
-    ]
-  },
-  {
-    "questionID": "284",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What percentage of vision insurance premium costs does your company cover for your employees?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "We do not cover vision insurance premium costs"
-      },
-      {
-        "answerID": 2,
-        "answer": "Less than 25%"
-      },
-      {
-        "answerID": 3,
-        "answer": "Between 25% and 50%"
-      },
-      {
-        "answerID": 4,
-        "answer": "Between 50% and 75%"
-      },
-      {
-        "answerID": 5,
-        "answer": "More than 75% but less than 100%"
-      },
-      {
-        "answerID": 6,
-        "answer": "100%"
-      }
-    ]
-  },
-  {
-    "questionID": "285",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "Does your company cover dependents (spouse, children) under its medical insurance plan?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No, we do not offer coverage for dependents."
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes, we offer dependent coverage, but the employee is responsible for 100% of the premium costs for dependents."
-      },
-      {
-        "answerID": 3,
-        "answer": "Yes, we cover a portion of the premium costs for dependents. The employee is responsible for the remainder."
-      },
-      {
-        "answerID": 4,
-        "answer": "Yes, we cover 100% of the premium costs for dependents."
-      }
-    ]
-  },
-  {
-    "questionID": "286",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "How is PTO (Paid Time Off) accrued in your company?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "Start from Zero: Employees start with zero PTO and earn more with each pay period."
-      },
-      {
-        "answerID": 2,
-        "answer": "Baseline Accrual: Employees start with a set amount of PTO and accrue more throughout their tenure."
-      },
-      {
-        "answerID": 3,
-        "answer": "All up front: Employees receive all PTO for the year at the start of their employment."
-      },
-      {
-        "answerID": 4,
-        "answer": "Unlimited: We have an unlimited PTO policy; this question does not apply."
-      }
-    ]
-  },
-  {
-    "questionID": "287",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What is your company's paid maternity/paternity leave policy?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Paid Leave"
-      },
-      {
-        "answerID": 2,
-        "answer": "Up to 2 Weeks Paid Leave"
-      },
-      {
-        "answerID": 3,
-        "answer": "3-4 Weeks Paid Leave"
-      },
-      {
-        "answerID": 4,
-        "answer": "5-8 Weeks Paid Leave"
-      },
-      {
-        "answerID": 5,
-        "answer": "9-12 Weeks Paid Leave"
-      },
-      {
-        "answerID": 6,
-        "answer": "More than 12 Weeks Paid Leave"
-      }
-    ]
-  },
-  {
-    "questionID": "288",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Restrictions: New employees can take PTO at any time, without restrictions."
-      },
-      {
-        "answerID": 2,
-        "answer": "Holiday Blackout Dates: New employees cannot take PTO during major holidays."
-      },
-      {
-        "answerID": 3,
-        "answer": "Seasonal Peak Business Blackout Dates: New employees cannot take PTO during our peak business seasons."
-      },
-      {
-        "answerID": 4,
-        "answer": "Holiday and Peak Business Blackout Dates: New employees cannot take PTO during major holidays or our peak business seasons."
-      }
-    ]
-  },
-  {
-    "questionID": "289",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "Does your company offer a 401k program?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No"
-      },
-      {
-        "answerID": 2,
-        "answer": "Yes"
-      }
-    ]
-  },
-  {
-    "questionID": "290",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "What is the annual dollar amount of student loan reimbursement your company offers?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Assistance"
-      },
-      {
-        "answerID": 2,
-        "answer": "$1 - $1,000"
-      },
-      {
-        "answerID": 3,
-        "answer": "$1,001 - $2,000"
-      },
-      {
-        "answerID": 4,
-        "answer": "$2,001 - $3,000"
-      },
-      {
-        "answerID": 5,
-        "answer": "$3,001 - $4,000"
-      },
-      {
-        "answerID": 6,
-        "answer": "$4,001 - $5,250"
-      }
-    ]
-  },
-  {
-    "questionID": "291",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "Does your company offer a learning and development allowance? If yes, how much is it annually?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Allowance"
-      },
-      {
-        "answerID": 2,
-        "answer": "$1 - $500"
-      },
-      {
-        "answerID": 3,
-        "answer": "$501 - $1,000"
-      },
-      {
-        "answerID": 4,
-        "answer": "$1,001 - $2,000"
-      },
-      {
-        "answerID": 5,
-        "answer": "$2,001 - $3,000"
-      },
-      {
-        "answerID": 6,
-        "answer": "$3000+"
-      }
-    ]
-  },
-  {
-    "questionID": "292",
-    "category": "Client Onboarding ",
-    "tags": [
-      ""
-    ],
-    "question": "Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Coverage: We do not offer life insurance benefits to our employees."
-      },
-      {
-        "answerID": 2,
-        "answer": "Basic Coverage: We offer life insurance that covers the employee for an amount equivalent to their annual salary."
-      },
-      {
-        "answerID": 3,
-        "answer": "Enhanced Coverage: We offer life insurance that covers the employee for an amount equivalent to double their annual salary."
-      },
-      {
-        "answerID": 4,
-        "answer": "Premium Coverage: We offer life insurance that covers the employee for an amount equivalent to triple their annual salary or more."
       }
     ]
   }
