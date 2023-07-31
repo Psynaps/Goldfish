@@ -240,8 +240,8 @@ function CandidatePage(returnURL) {
                 </Stack>
             </Box>
             <Stack
-                paddingStart="80px"
-                paddingEnd="64px"
+                // paddingStart="80px"
+                // paddingEnd="64px"
                 paddingTop="80px"
                 justify="flex-start"
                 align="flex-start"
@@ -459,6 +459,7 @@ function CandidatePage(returnURL) {
                         height="1440px"
                         maxWidth="100%"
                         border='0'
+                        p='80px'
                     // pb={30}
                     // background="#FFFFFF"
                     >
@@ -929,8 +930,9 @@ function CandidatePage(returnURL) {
                 >
                     <Stack justify="center" align="flex-start" alignSelf="stretch">
                         <Stack
-                            paddingX="80px"
-                            paddingY="64px"
+                            paddingX="70px"
+                            pb="64px"
+                            pt='104px'
                             direction="row"
                             justify="flex-start"
                             align="flex-start"
@@ -939,7 +941,7 @@ function CandidatePage(returnURL) {
                         >
                             <Stack paddingEnd="90px" justify="flex-start" align="flex-start">
                                 <Stack
-                                    padding="8px"
+                                    // padding="8px"
                                     justify="center"
                                     align="center"
                                     spacing="48px"
@@ -992,6 +994,7 @@ function CandidatePage(returnURL) {
                         <Flex
                             direction={{ base: "column", lg: "row" }}
                             align="center"
+                            pl={14}
                         // spacing="-50px"
                         // alignSelf="stretch"
                         >
@@ -1007,8 +1010,8 @@ function CandidatePage(returnURL) {
                                 backgroundRepeat='no-repeat'
                             >
                                 <Stack
-                                    paddingX="14.29px"
-                                    pt={12}
+                                    // paddingX="14.29px"
+                                    // pt={1}
                                     borderRadius="14.29px"
                                     justify="center"
                                     align="center"
@@ -1047,13 +1050,14 @@ function CandidatePage(returnURL) {
                                         <Text
                                             fontFamily="Inter"
                                             lineHeight="1.33"
-                                            fontWeight="bold"
+                                            // fontWeight="bold"
                                             fontSize="24px"
                                             color="#FFFFFF"
                                             width="471.77px"
                                             height="296.31px"
                                             maxWidth="95%"
-                                            textAlign='left'
+                                            px={4}
+                                            textAlign='center'
                                         >
                                             We make recommendations based on best fit scores, never the
                                             subscription status of companies in our network. Creating
@@ -1076,7 +1080,7 @@ function CandidatePage(returnURL) {
                             >
                                 <Stack
                                     // paddingX="14.29px"
-                                    pt={12}
+                                    // pt={1}
                                     borderRadius="14.29px"
                                     justify="center"
                                     align="center"
@@ -1100,6 +1104,7 @@ function CandidatePage(returnURL) {
                                             fontWeight="bold"
                                             fontSize="32.03px"
                                             color="#FFFFFF"
+                                            align='center'
                                         >
                                             Your data is private.{' '}
                                         </Text>
@@ -1116,13 +1121,14 @@ function CandidatePage(returnURL) {
                                         <Text
                                             fontFamily="Inter"
                                             lineHeight="1.33"
-                                            fontWeight="bold"
+                                            // fontWeight="bold"
                                             fontSize="24px"
                                             color="#FFFFFF"
-                                            width="463px"
-                                            height="288px"
-                                            maxWidth="100%"
-                                            textAlign='left'
+                                            width="471.77px"
+                                            height="296.31px"
+                                            maxWidth="95%"
+                                            px={4}
+                                            textAlign='center'
                                         >
                                             Opening up about your career is sensitive. Your data is
                                             private to you by default. We’ve built the tool so you
@@ -1145,7 +1151,7 @@ function CandidatePage(returnURL) {
                 alignSelf="stretch"
             >
                 <Stack
-                    paddingX="80px"
+                    paddingX="70px"
                     paddingTop="64px"
                     justify="flex-end"
                     align="flex-start"
@@ -1168,7 +1174,7 @@ function CandidatePage(returnURL) {
                                     alignSelf="stretch"
                                 >
                                     <Stack
-                                        padding="8px"
+                                        // padding="8px"
                                         justify="center"
                                         align="flex-start"
                                         spacing="48px"

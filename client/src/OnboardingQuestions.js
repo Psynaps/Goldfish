@@ -19,7 +19,7 @@ const questions = [
     },
     {
         question_id: 2,
-        question: 'Question 2?',
+        question: 'Which statement best describes your proficiency with AWS (Amazon Web Services)?',
         answers: {
             1: 'Answer 11',
             2: 'Answer 22',
@@ -120,13 +120,13 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
     return (
         <VStack spacing={4} w='100%' ref={innerRef}>
             <Box w='80%'>
-                <Box borderRadius='md' color='white' borderColor='white' borderWidth={2} p={2}>
-                    <Heading as='h2' size='lg' >
+                <Box borderRadius='md' color='white' borderColor='white' borderWidth={2} p={4}>
+                    <Heading as='h2' size='18px' >
                         {questions[currentQuestionIndex] ? questions[currentQuestionIndex].question : null}
                     </Heading>
                 </Box>
-                <ButtonGroup variant='outline' isAttached w='100%' p={19} pl={35} >
-                    <VStack w='100%'>
+                <ButtonGroup variant='outline' isAttached w='100%' p='30px' pl={35} >
+                    <VStack w='100%' spacing={4}>
                         {questions[currentQuestionIndex] && Object.entries(questions[currentQuestionIndex].answers).map(([answer_id, answer]) => (
                             <Button
                                 key={answer_id}
@@ -134,7 +134,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                                 minWidth='100%'
                                 textAlign='left'
                                 justifyContent='flex-start'
-                                p={3}
+                                p={4}
                                 h='auto'
                                 sx={{
                                     whiteSpace: 'normal',
@@ -148,7 +148,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                                 borderWidth={selectedAnswers[questions[currentQuestionIndex].question_id] === parseInt(answer_id) ? 2 : 1}
                                 borderColor={selectedAnswers[questions[currentQuestionIndex].question_id] === parseInt(answer_id) ? 'green.300' : 'white'}
                             >
-                                <Text> {answer} </Text>
+                                <Text fontSize='14px'> {answer} </Text>
                             </Button>
                         ))}
                     </VStack>
