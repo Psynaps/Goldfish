@@ -23,6 +23,7 @@ function CandidatePage(returnURL) {
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [hasLoaded, setHasLoaded] = useState(false);
     const questionsRef = useRef(null);
+    const joinRef = useRef(null);
     const [searchParams] = useSearchParams();
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
@@ -52,6 +53,7 @@ function CandidatePage(returnURL) {
 
     const scrollToQuestions = () => window.scrollTo({ behavior: 'smooth', top: questionsRef.current.offsetTop - 50 });
 
+    const scrollToJoin = () => window.scrollTo({ behavior: 'smooth', top: joinRef.current.offsetTop - 50 });
 
     //useEffect to call fetchUserAnswers on page load
     useEffect(() => {
@@ -60,8 +62,9 @@ function CandidatePage(returnURL) {
 
     useEffect(() => {
         const refFromURL = searchParams.get('ref') || searchParams.get('Ref'); // get jobID from the query string, either case
-        if (refFromURL) { // if jobID exists in the URL
+        if (refFromURL === 'join') { // if jobID exists in the URL
             console.log('jumping back to ref');
+            scrollToJoin();
         }
     }, [user, searchParams]);
 
@@ -242,14 +245,14 @@ function CandidatePage(returnURL) {
             <Stack
                 // paddingStart="80px"
                 // paddingEnd="64px"
-                paddingTop="80px"
+                paddingTop="30px"
                 justify="flex-start"
                 align="flex-start"
                 alignSelf="stretch"
             >
                 {isAuthenticated ?
                     <OnboardingQuestions innerRef={questionsRef} apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} /> :
-                    <Heading as='h1' ref={questionsRef} >Please log in to see and answer questions.</Heading>
+                    <Heading as='h1' pl={[16, 32]} ref={questionsRef} noOfLines={2} >Please log in to see and answer questions.</Heading>
                 }
             </Stack>
             <Stack
@@ -356,8 +359,8 @@ function CandidatePage(returnURL) {
                                     </Text>
                                 </Stack>
                                 <Stack direction="row" justify="center" align="center">
-                                    <Button size='lg' textAlign="center" colorScheme='pink' rightIcon={<EmailIcon />}
-                                        onClick={() => { loginWithRedirect({ returnTo: `${window.location.origin}?ref=` }); }}
+                                    <Button ref={joinRef} size='lg' textAlign="center" colorScheme='pink' rightIcon={<EmailIcon />}
+                                        onClick={() => { loginWithRedirect({ returnTo: `${window.location.origin}?ref=join` }); }}
                                     >Join the new school</Button>
                                 </Stack>
                                 <Stack
