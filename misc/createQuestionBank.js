@@ -14,6 +14,7 @@ fs.createReadStream('questions.csv')
             employerQuestion: row['Employer Question Phrasing'],
             answers: [],
             employerAnswers: []
+
         };
         // console.log(row);
         if (!question.question || !question.questionID || !question.answers) { // Catch invalid question rows
@@ -25,6 +26,11 @@ fs.createReadStream('questions.csv')
             return;
         }
 
+        if (question.questionID <= 100 || row['Onboarding Index' !== '']) { // These are the onboarding questions
+            return;
+        }
+
+
         // if (!question.isOnboarding) {
         //     return;
         // }
@@ -35,15 +41,23 @@ fs.createReadStream('questions.csv')
         // Add any answers present in the row to the question object
         for (let i = 1; i <= 8; i++) {
             if (row[`Answer (${i})`]) {
+                let ans = row[`Answer (${i})`].trim();
+                if (ans.charAt(ans.length - 1) === '.') {
+                    ans = ans.slice(0, -1);
+                }
                 question.answers.push({
                     answerID: i,
-                    answer: row[`Answer (${i})`].trim()
+                    answer: ans
                 });
             }
             if (row[`Employer Answer ${i}`]) {
+                let ans = row[`Employer Answer ${i}`].trim();
+                if (ans.charAt(ans.length - 1) === '.') {
+                    ans = ans.slice(0, -1);
+                }
                 question.employerAnswers.push({
                     answerID: i,
-                    answer: row[`Employer Answer ${i}`].trim()
+                    answer: ans
                 });
             }
         }

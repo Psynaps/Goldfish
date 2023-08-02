@@ -43,9 +43,7 @@ function EmployerPage(returnURL) {
     // const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
     const categories = ['Industry Certifications', 'Technical Knowledge', 'Deal Experience', 'Tools & Platforms', 'HR Preferences',
-        'Educational Background',
-        'Work & Industry Experience',
-        'Career Goals'];
+        'Job Specific HR',];
 
     // const [message, setMessage] = useState(null);
     const [isPosting, setIsPosting] = useState(false);
@@ -437,7 +435,7 @@ function EmployerPage(returnURL) {
                         bg='white'
                         color='black'
                     />
-                    <SimpleGrid columns={4} spacing={2} my='15px'>
+                    <SimpleGrid columns={3} spacing={2} my='15px'>
                         {categories.map(category => (
                             <Button
                                 key={category}
