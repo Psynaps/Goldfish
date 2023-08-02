@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image, Input } from '@chakra-ui/react';
+import { Stack, Box, Text, Circle, Button, Icon, Flex, HStack, VStack, Spinner, Avatar, Heading, Image, Input, Switch } from '@chakra-ui/react';
 import { ArrowUpIcon, ArrowRightIcon, ArrowDownIcon, EmailIcon } from '@chakra-ui/icons';
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';
@@ -24,6 +24,8 @@ function CandidatePage(returnURL) {
     const [hasLoaded, setHasLoaded] = useState(false);
     const questionsRef = useRef(null);
     const joinRef = useRef(null);
+    const [subscribed, setSubscribed] = useState(false);
+    const [email, setEmail] = useState("");
     const [searchParams] = useSearchParams();
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
@@ -51,6 +53,51 @@ function CandidatePage(returnURL) {
         }
     }, [isAuthenticated, user, apiURL]);
 
+    const changeNewsletterSubscription = async (user, email, subscribing) => {
+        try {
+            const payload = {
+                user_id: user ? user.sub : null,
+                email: email ? email : '',
+                subscribing: subscribing,
+            };
+
+            const response = await axios.post(`${apiURL}/changeNewsletterSubscription`, payload);
+
+            if (response.data.success) {
+                console.log('Subscription status updated');
+            }
+        } catch (error) {
+            console.error('Error updating subscription:', error);
+        }
+    };
+
+
+
+    const getUserProfile = async (user_id) => {
+        try {
+            const response = await axios.get('/api/getUserProfile', {
+                params: { user_id }
+            });
+            if (response.data.success) {
+                setSubscribed(response.data.profile.subscribed_newsletter);
+            }
+        } catch (error) {
+            console.error('An error occurred while fetching user profile:', error);
+        }
+    };
+
+    const handleEmailClick = () => {
+        changeNewsletterSubscription(null, email, true);
+    };
+
+    const handleSubscribedChange = (event) => {
+        if (user && isAuthenticated) {
+            setSubscribed(event.target.checked);
+            changeNewsletterSubscription(user, user.email, event.target.checked);
+        }
+    };
+
+
     const scrollToQuestions = () => window.scrollTo({ behavior: 'smooth', top: questionsRef.current.offsetTop - 50 });
 
     const scrollToJoin = () => window.scrollTo({ behavior: 'smooth', top: joinRef.current.offsetTop - 50 });
@@ -59,6 +106,14 @@ function CandidatePage(returnURL) {
     useEffect(() => {
         fetchUserAnswers();
     }, [fetchUserAnswers]);
+
+    useEffect(() => {
+        if (user && isAuthenticated) {
+            getUserProfile(user.user_id);
+        }
+    }, [user, isAuthenticated]);
+
+
 
     useEffect(() => {
         const refFromURL = searchParams.get('ref') || searchParams.get('Ref'); // get jobID from the query string, either case
@@ -252,7 +307,7 @@ function CandidatePage(returnURL) {
             >
                 {isAuthenticated ?
                     <OnboardingQuestions innerRef={questionsRef} apiURL={apiURL} selectedAnswers={selectedAnswers} setSelectedAnswers={setSelectedAnswers} hasLoaded={hasLoaded} /> :
-                    <Heading as='h1' pl={[16, 32]} ref={questionsRef} noOfLines={2} >Please log in to see and answer questions.</Heading>
+                    <Heading as='h1' pl={[16, 32]} ref={questionsRef} >Please log in to see and answer questions.</Heading>
                 }
             </Stack>
             <Stack
@@ -1247,31 +1302,23 @@ function CandidatePage(returnURL) {
                                             </Stack>
                                             <Stack
                                                 direction="row"
-                                                justify="center"
+                                                justify="left"
                                                 align="center"
                                                 width="794px"
                                                 maxWidth="100%"
                                             >
-                                                <Stack direction="row" justify="center" align="center">
-                                                    <Button size='lg' textAlign="center" rightIcon={<EmailIcon />}>Email</Button>
-                                                </Stack>
-                                                {/* // TODO: Turn into input email */}
-                                                <Input id='email' placeholder="example@domain.com" type='email' color='white' />
-                                                {/* <Stack
-                                                    paddingX="20px"
-                                                    borderRadius="10px"
-                                                    direction="row"
-                                                    justify="center"
-                                                    align="center"
-                                                    borderColor="#FFFFFF"
-                                                    borderStartWidth="2px"
-                                                    borderEndWidth="2px"
-                                                    borderTopWidth="2px"
-                                                    borderBottomWidth="2px"
-                                                    flex="1"
-                                                    alignSelf="stretch"
-                                                /> */}
+                                                {user ? (
+                                                    <>
+                                                        <Text fontSize='lg' color='white'>Subscribed:</Text>
+                                                        <Switch isChecked={subscribed} size='lg' onChange={(e) => handleSubscribedChange(e)} />
+                                                    </>
+                                                ) : (
+                                                    <Stack direction="row" justify="center" align="center">
+                                                        <Button size='lg' textAlign="center" onClick={handleEmailClick}>Email</Button>
+                                                        <Input id='email' placeholder="example@domain.com" type='email' color='white' value={email} onChange={(e) => setEmail(e.target.value)} />
 
+                                                    </Stack>
+                                                )}
                                             </Stack>
                                         </Stack>
                                     </Stack>

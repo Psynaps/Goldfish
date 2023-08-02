@@ -470,6 +470,48 @@ app.get('/api/getUserAnswers', async (req, res) => {
     }
 });
 
+app.post('/api/changeNewsletterSubscription', async (req, res) => {
+    let { email, user_id, subscribing = true } = req.body;
+
+
+    if (!email) {
+        return res.status(400).json({ success: false, message: 'Email is required.' });
+    }
+    user_id = user_id || '';
+    try {
+        const queryText = `
+            INSERT INTO user_profiles (user_id, email, subscribed_newsletter)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (user_id, email)
+            DO UPDATE SET subscribed_newsletter = $3
+        `;
+        const values = [user_id, email, subscribing];
+        await pool.query(queryText, values);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while updating subscription.' });
+    }
+});
+
+app.get('/api/getUserProfile', async (req, res) => {
+    const { user_id } = req.query;
+
+    if (!user_id) {
+        return res.status(400).json({ success: false, message: 'User ID is required.' });
+    }
+
+    try {
+        const queryText = `SELECT * FROM user_profiles WHERE user_id = $1`;
+        const values = [user_id];
+        const result = await pool.query(queryText, values);
+        res.json({ success: true, profile: result.rows[0] });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while fetching user profile.' });
+    }
+});
+
 
 
 

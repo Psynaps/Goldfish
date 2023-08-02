@@ -58,3 +58,10 @@ CREATE TABLE user_answers (
     answer_id INT NOT NULL,
     PRIMARY KEY (user_id, question_id)
 );
+
+CREATE TABLE user_profiles (
+    user_id VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    subscribed_newsletter BOOLEAN DEFAULT FALSE,
+    PRIMARY KEY (user_id, email)
+);

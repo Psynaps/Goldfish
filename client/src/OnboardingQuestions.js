@@ -6,7 +6,8 @@ import axios from 'axios';
 // Mock data
 const questions = [
     {
-        question_id: 220,
+        question_id: 1,
+        index: 1,
         question: 'How many years of work experience do you have in a sales or solutions engineering role?',
         answers: {
             1: `I don't have direct experience, but I have relevant experience in related fields`,
@@ -22,6 +23,7 @@ const questions = [
     },
     {
         question_id: 221,
+        index: 1,
         question: 'Which base salary range most closely alligns with your expectations for a future role?',
         answers: {
             1: `$80,000 to $90,000`,
@@ -36,6 +38,7 @@ const questions = [
     },
     {
         question_id: 222,
+        index: 1,
         question: 'Would you require a a company sponsored work visa to work in the United States?',
         answers: {
             1: `Yes`,
@@ -44,6 +47,7 @@ const questions = [
     },
     {
         question_id: 223,
+        index: 1,
         question: 'Which of the following metropolitan areas are you currently located in?',
         answers: {
             1: `San Francisco Bay Area, CA`,
@@ -58,6 +62,7 @@ const questions = [
     },
     {
         question_id: 224,
+        index: 1,
         question: 'How strongly do you prefer remote vs. in-office work?',
         answers: {
             1: `Strong preference for in-office work`,
@@ -68,6 +73,7 @@ const questions = [
     },
     {
         question_id: 225,
+        index: 1,
         question: 'What is your comfort level with frequent travel for client meetings, events, etc.?',
         answers: {
             1: `I am not able or willing to travel for work`,
@@ -80,6 +86,7 @@ const questions = [
     },
     {
         question_id: 226,
+        index: 1,
         question: 'Would you prefer a role that focuses more on pre-sales (helping to secure the sale) or post-sales (onboarding and client consulting)?',
         answers: {
             1: `Pre-sales`,
@@ -90,6 +97,7 @@ const questions = [
     },
     {
         question_id: 227,
+        index: 1,
         question: `What's your highest completed level of education?`,
         answers: {
             1: `High School Diploma`,
@@ -105,6 +113,7 @@ const questions = [
     },
     {
         question_id: 228,
+        index: 1,
         question: `If you've pursued higher education, which of the following best describes your primary area of study?`,
         answers: {
             1: `Computer Science/Software Engineering`,
@@ -119,6 +128,7 @@ const questions = [
     },
     {
         question_id: 184,
+        index: 1,
         question: 'Which statement best describes your proficiency with AWS (Amazon Web Services)?',
         answers: {
             1: 'No experience',
@@ -130,6 +140,7 @@ const questions = [
     },
     {
         question_id: 229,
+        index: 1,
         question: 'Over the last 2 years, what level of seniority have you most often engaged with in your role as a Sales Engineer?',
         answers: {
             1: `C-Level Executives`,
@@ -144,6 +155,7 @@ const questions = [
     },
     {
         question_id: 230,
+        index: 1,
         question: 'Over the last 2 years, what industry verticals or market segments do you have the most experience selling into as a Sales Engineer?',
         answers: {
             1: `Information Technology and Services`,
@@ -158,6 +170,7 @@ const questions = [
     },
     {
         question_id: 231,
+        index: 1,
         question: `Over the last 2 years, have you primarily sold to SMBs, Mid-Market companies, or Enterprise-level companies as a Sales Engineer?`,
         answers: {
             1: `Primarily SMBs`,
@@ -170,6 +183,7 @@ const questions = [
     },
     {
         question_id: 232,
+        index: 1,
         question: `Over the last 2 years, what has been the average size of the customers (in terms of employee count) you have been dealing with in your Sales Engineer role?`,
         answers: {
             1: `Less than 50 employees`,
@@ -184,6 +198,7 @@ const questions = [
     },
     {
         question_id: 233,
+        index: 1,
         question: `What level of experience do you have in implementing APIs on behalf of prospective customers?`,
         answers: {
             1: `No experience`,
@@ -194,6 +209,7 @@ const questions = [
     },
     {
         question_id: 234,
+        index: 1,
         question: `What would you say has been the average deal size you've worked on, in conjunction with AE's, over the last 2 years?`,
         answers: {
             1: `Less than $25,000`,
@@ -208,6 +224,7 @@ const questions = [
     },
     {
         question_id: 235,
+        index: 1,
         question: `How would you rate your experience and understanding of REST and SOAP APIs?`,
         answers: {
             1: `No experience`,
@@ -218,6 +235,7 @@ const questions = [
     },
     {
         question_id: 236,
+        index: 1,
         question: `Which best describes your understanding of API Authentication Methods?`,
         answers: {
             1: `No experience`,
@@ -228,6 +246,7 @@ const questions = [
     },
     {
         question_id: 237,
+        index: 1,
         question: `Do you hold any industry certifications? `,
         answers: {
             1: `Yes`,
@@ -236,6 +255,7 @@ const questions = [
     },
     {
         question_id: 238,
+        index: 1,
         question: `If you could choose, which of the following industries would you be most interested in representing as a Sales Engineer?`,
         answers: {
             1: `Business Intelligence (BI)`,
@@ -251,6 +271,7 @@ const questions = [
     },
     {
         question_id: 239,
+        index: 1,
         question: `What type of company do you naturally gravitate towards? `,
         answers: {
             1: `Early Stage Startup: Less structure, high risk/high reward, wear multiple hats`,
@@ -261,6 +282,9 @@ const questions = [
     },
     // Add more questions as needed...
 ];
+
+questions.sort((a, b) => a.index - b.index);
+console.log('sorted');
 
 const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasLoaded, innerRef }) => {
     const { user, isAuthenticated } = useAuth0();
@@ -332,7 +356,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
             setShowFollowingEllipsis(true);
         }
         setVisibleIndexes(newVisibleIndexes);
-    }, [currentQuestionIndex, questions.length, breakpoint]);
+    }, [currentQuestionIndex, breakpoint]); //depends on questions.length but that isn't a react state var. Can make one
 
     // When the component unmounts, clear the timeout
     useEffect(() => {
