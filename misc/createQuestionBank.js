@@ -8,6 +8,7 @@ fs.createReadStream('questions.csv')
     .on('data', (row) => {
         let question = {
             questionID: row['QuestionID'],
+            order: row['Importance Index'] ? row['Importance Index'] : 0,
             category: row['Domain Tags'].trim(),
             tags: row['Search Tags'].split(', ').map(tag => tag.trim()),
             question: row['Question'],
@@ -84,6 +85,7 @@ fs.createReadStream('questions.csv')
         let questionsData = questionsDataFull.map(function (obj) {
             return {
                 questionID: obj.questionID,
+                order: obj.order,
                 category: obj.category,
                 tags: obj.tags,
                 question: (obj.employerQuestion ? obj.employerQuestion : obj.question),

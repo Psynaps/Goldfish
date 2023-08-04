@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { VStack, HStack, Button, ButtonGroup, Box, Text, Heading, Center, AbsoluteCenter, useBreakpoint } from '@chakra-ui/react';
+import { VStack, HStack, Button, ButtonGroup, Box, Text, Heading, useBreakpoint } from '@chakra-ui/react';
 import { useAuth0 } from '@auth0/auth0-react';
 import axios from 'axios';
+import { ArrowRightIcon } from '@chakra-ui/icons';
+// import { Link as ChakraLink } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 
 // Mock data
 const questions = [
@@ -11,19 +14,17 @@ const questions = [
         question: 'How many years of work experience do you have in a sales or solutions engineering role?',
         answers: {
             1: `I don't have direct experience, but I have relevant experience in related fields`,
-            2: 'Less than 1 year (Beginner)',
-            3: '1 - 2 years (Junior)',
-            4: '3 - 5 years (Intermediate)',
-            5: '6 - 8 years (Senior)',
-            6: '9 - 11 years (Expert)',
-            7: '12 - 15 years (Master)',
-            8: 'More than 15 years (Veteran)'
+            2: `1 - 2 years`,
+            3: `3 - 4 years`,
+            4: `5 - 6 years`,
+            5: '7 - 10 years',
+            6: '10+ years',
         },
         helperText: `Answer 20 questions to begin to see your matches`
     },
     {
-        question_id: 221,
-        index: 1,
+        question_id: 2,
+        index: 2,
         question: 'Which base salary range most closely alligns with your expectations for a future role?',
         answers: {
             1: `$80,000 to $90,000`,
@@ -37,17 +38,49 @@ const questions = [
         },
     },
     {
-        question_id: 222,
-        index: 1,
-        question: 'Would you require a a company sponsored work visa to work in the United States?',
+        question_id: 3,
+        index: 3,
+        question: `What minimum annual OTE (on track earnings) would you require to consider a company?`,
         answers: {
-            1: `Yes`,
-            2: `No`,
+            1: `Less than $25,000`,
+            2: `$25,000 - $50,000`,
+            3: `$50,000 - $75,000`,
+            4: `$75,000 - $100,000`,
+            5: `$100,000 - $125,000`,
+            6: `$125,000 - $150,000`,
+            7: `$150,000 - $200,000`,
+            8: `$200,000+`,
         },
     },
     {
-        question_id: 223,
-        index: 1,
+        question_id: 4,
+        index: 4,
+        question: 'Do you have any preferences on how OTE is measured? ',
+        answers: {
+            1: `Product specific, net-new revenue`,
+            2: `Multi-product, net-new revenue`,
+            3: `New logos / units sold`,
+            4: `Upsell / x-sell revenue`,
+            5: `Client renewals or retention`,
+            6: `Customer satisfaction`,
+            7: `Qualified leads / business development`,
+            8: `No preference`,
+        },
+    },
+    {
+        question_id: 5,
+        index: 5,
+        question: 'Do you have a preference on the organizational unit at which OTE is evaluated? ',
+        answers: {
+            1: `Based on the performance of a single Account Executive`,
+            2: `Based on the performance of a small group of Account Executives (manager level, <6)`,
+            3: `Based on the performance of a larger group (director level, <30)`,
+            4: `No preference`
+        },
+    },
+    {
+        question_id: 6,
+        index: 6,
         question: 'Which of the following metropolitan areas are you currently located in?',
         answers: {
             1: `San Francisco Bay Area, CA`,
@@ -61,19 +94,83 @@ const questions = [
         },
     },
     {
-        question_id: 224,
-        index: 1,
-        question: 'How strongly do you prefer remote vs. in-office work?',
+        question_id: 7,
+        index: 7,
+        question: 'What is your work from home preferences?',
         answers: {
-            1: `Strong preference for in-office work`,
-            2: `Mild preference for in-office work`,
-            3: `Mild preference for remote work`,
-            4: `Strong preference for remote work`,
+            1: `Strong preference for remote work`,
+            2: `Mostly prefer remote work, but open to occasional office visits`,
+            3: `Balanced preference, equally comfortable with remote and in-office`,
+            4: `Mostly prefer in-office work, but open to occasional remote work`,
+            5: `Strong preference for in-office work`,
+            6: `No strong preference, adaptable to both remote and in-office work`
         },
     },
     {
-        question_id: 225,
-        index: 1,
+        question_id: 8,
+        index: 8,
+        question: 'Would you require a company sponsored work visa to work in the United States?',
+        answers: {
+            1: `Yes`,
+            2: `No`
+        },
+    },
+    {
+        question_id: 9,
+        index: 11,
+        question: 'Would you prefer a role that focuses more on pre-sales (helping to secure the sale) or post-sales (onboarding and client consulting)?',
+        answers: {
+            1: `Pre-sales`,
+            2: `Post-sales`,
+            3: `I prefer a 50/50 mix`,
+            4: `I don't have a specific preference`,
+        },
+    },
+    {
+        question_id: 10,
+        index: 12,
+        question: 'Which of the following types of B2B products would you most like to sell?',
+        answers: {
+            1: `Business Intelligence (BI)`,
+            2: `Cybersecurity`,
+            3: `Data Analytics / Big Data`,
+            4: `Customer Relationship Management (CRM)`,
+            5: `Advertising Technology`,
+            6: `DevOps and Cloud Infrastructure`,
+            7: `Human Resource Management (HRM)`,
+            8: `Other`,
+        },
+    },
+    {
+        question_id: 11,
+        index: 13,
+        question: `What type of company do you naturally gravitate towards? `,
+        answers: {
+            1: `Early Stage Startup: Less structure, high risk/high reward, wear multiple hats`,
+            2: `Mid-Stage Startups: Enjoy a bit of structure, but still crave the dynamic environment of startups`,
+            3: `Growth Stage Companies: Prefer a balance between structure and agility`,
+            4: `Established Company: High structure, consistent reward, more rigid roles`,
+        },
+    },
+    {
+        question_id: 12,
+        index: 14,
+        question: 'Do you have an industry that your work experience is primarily associatied with? ',
+        answers: {
+            1: `Software (SaaS/PaaS)`,
+            2: `Manufacturing and Industrial`,
+            3: `Telecom`,
+            4: `Security`,
+            5: `Healthcare & Pharmaceuticals `,
+            6: `FinTech`,
+            7: `Energy & Utilities `,
+            8: `Other`,
+        },
+    },
+
+    {
+        question_id: 13,
+        index: 15,
         question: 'What is your comfort level with frequent travel for client meetings, events, etc.?',
         answers: {
             1: `I am not able or willing to travel for work`,
@@ -85,35 +182,50 @@ const questions = [
         },
     },
     {
-        question_id: 226,
-        index: 1,
-        question: 'Would you prefer a role that focuses more on pre-sales (helping to secure the sale) or post-sales (onboarding and client consulting)?',
+        question_id: 14,
+        index: 16,
+        question: 'How many years of sales engineering experience do you have in your industry area of specialization?',
         answers: {
-            1: `Pre-sales`,
-            2: `Post-sales`,
-            3: `I prefer a 50/50 mix`,
-            4: `I don't have a specific preference`,
+            1: `Not applicable`,
+            2: `1 - 2 years`,
+            3: `3 - 4 years`,
+            4: `5 - 6 years`,
+            5: '7 - 10 years',
+            6: '10+ years',
         },
     },
     {
-        question_id: 227,
-        index: 1,
+        question_id: 15,
+        index: 17,
+        question: `What would you say has been the average deal size you've worked on, in conjunction with AE's, over the last 3 years?`,
+        answers: {
+            1: `Less than $25,000`,
+            2: `Between $25,000 and $50,000`,
+            3: `Between $50,000 and $100,000`,
+            4: `Between $100,000 and $200,000`,
+            5: `Between $200,000 and $300,000`,
+            6: `Between $300,000 and $500,000`,
+            7: `Between $500,000 and $1M`,
+            8: `More than $1M`,
+        },
+    },
+
+    {
+        question_id: 16,
+        index: 9,
         question: `What's your highest completed level of education?`,
         answers: {
-            1: `High School Diploma`,
-            2: `Associate Degree`,
-            3: `Bachelor's Degree`,
-            4: `Master's Degree`,
-            5: 'Doctorate Degree',
-            6: 'Professional Certification',
-            7: `No Formal Education: I have not completed a formal education but have industry experience`,
-            8: `Other: My educational background does not fit into the provided options, but i'm happy to discuss it in detail`,
-
+            1: `No Formal Education`,
+            2: `High School Diploma`,
+            3: `Associate Degree`,
+            4: `Bachelor's Degree`,
+            5: `Master's Degree`,
+            6: 'Doctorate Degree',
         },
     },
     {
-        question_id: 228,
-        index: 1,
+        question_id: 17,
+        index: 10,
         question: `If you've pursued higher education, which of the following best describes your primary area of study?`,
         answers: {
             1: `Computer Science/Software Engineering`,
@@ -127,126 +239,8 @@ const questions = [
         },
     },
     {
-        question_id: 184,
-        index: 1,
-        question: 'Which statement best describes your proficiency with AWS (Amazon Web Services)?',
-        answers: {
-            1: 'No experience',
-            2: `Beginner: I have used AWS for simple tasks, such as launching an EC2 instance or setting up an S3 bucket.`,
-            3: 'Intermediate: I regularly use a variety of AWS services for more complex tasks, such as setting up a VPC, using Lambda functions, or managing RDS databases.',
-            4: 'Advanced: I can design, deploy, and manage complex infrastructures on AWS, including cost optimization and security management.',
-        },
-        helperText: `This is an example of a technical skills question. You can add all your technical skills by answering questions like this one later.`
-    },
-    {
-        question_id: 229,
-        index: 1,
-        question: 'Over the last 2 years, what level of seniority have you most often engaged with in your role as a Sales Engineer?',
-        answers: {
-            1: `C-Level Executives`,
-            2: `Senior Management (VP, Director)`,
-            3: `Mid-level Management (Manager, Team Lead)`,
-            4: `Individual Contributors`,
-            5: 'Non-managerial staff',
-            6: 'Consultants or external advisors',
-            7: 'Technicians or end users',
-            8: 'Other',
-        },
-    },
-    {
-        question_id: 230,
-        index: 1,
-        question: 'Over the last 2 years, what industry verticals or market segments do you have the most experience selling into as a Sales Engineer?',
-        answers: {
-            1: `Information Technology and Services`,
-            2: `Manufacturing`,
-            3: `Financial Services`,
-            4: `Health Care`,
-            5: `Retail`,
-            6: `Government`,
-            7: `Telecommunications`,
-            8: `Education`,
-        },
-    },
-    {
-        question_id: 231,
-        index: 1,
-        question: `Over the last 2 years, have you primarily sold to SMBs, Mid-Market companies, or Enterprise-level companies as a Sales Engineer?`,
-        answers: {
-            1: `Primarily SMBs`,
-            2: `Primarily Mid-Market companies`,
-            3: `Primarily Enterprise-level companies`,
-            4: `A mix, with a focus on SMBs`,
-            5: `A mix, with a focus on Mid-Market companies`,
-            6: `A mix, with a focus on Enterprise-level companies`,
-        },
-    },
-    {
-        question_id: 232,
-        index: 1,
-        question: `Over the last 2 years, what has been the average size of the customers (in terms of employee count) you have been dealing with in your Sales Engineer role?`,
-        answers: {
-            1: `Less than 50 employees`,
-            2: `51 - 200 employees`,
-            3: `201 - 500 employees`,
-            4: `501 - 1,000 employees`,
-            5: `1,001 - 5,000 employees`,
-            6: `5,001 - 10,000 employees`,
-            7: `10,001 - 50,000 employees`,
-            8: `More than 50,000 employees`,
-        },
-    },
-    {
-        question_id: 233,
-        index: 1,
-        question: `What level of experience do you have in implementing APIs on behalf of prospective customers?`,
-        answers: {
-            1: `No experience`,
-            2: `Beginner: Have participated in API implementation for customers with support from a team, but have not led the process`,
-            3: `Intermediate: Have regularly led the process of implementing APIs for customers, with an understanding of the associated practices and protocols`,
-            4: `Advanced: Have extensive experience in independently leading the process of API implementation for a variety of customers, with the ability to troubleshoot issues and optimize the process`,
-        },
-    },
-    {
-        question_id: 234,
-        index: 1,
-        question: `What would you say has been the average deal size you've worked on, in conjunction with AE's, over the last 2 years?`,
-        answers: {
-            1: `Less than $25,000`,
-            2: `Between $25,000 and $50,000`,
-            3: `Between $50,000 and $100,000`,
-            4: `Between $100,000 and $200,000`,
-            5: `Between $200,000 and $300,000`,
-            6: `Between $300,000 and $500,000`,
-            7: `Between $500,000 and $1M`,
-            8: `More than $1M`,
-        },
-    },
-    {
-        question_id: 235,
-        index: 1,
-        question: `How would you rate your experience and understanding of REST and SOAP APIs?`,
-        answers: {
-            1: `No experience`,
-            2: `Beginner: I understand the theoretical concepts of REST and SOAP, such as HTTP methods (GET, POST, PUT, DELETE) or XML messaging but have little to no practical experience`,
-            3: `Intermediate: I have experience constructing API requests, working with endpoints, and understand the differences between stateless (REST) and stateful (SOAP) APIs from practical project work`,
-            4: `Advanced: I have deep experience working with REST and SOAP APIs in a professional context. I've designed, developed, and maintained APIs and understand concepts like resources, collections, namespaces, error handling, and security concerns`,
-        },
-    },
-    {
-        question_id: 236,
-        index: 1,
-        question: `Which best describes your understanding of API Authentication Methods?`,
-        answers: {
-            1: `No experience`,
-            2: `Beginner: I am familiar with the basics of API authentication methods like Basic Auth, API keys, OAuth but have limited practical application`,
-            3: `Intermediate: I have implemented API authentication methods in my projects. I understand the differences between them and know when to use which`,
-            4: `Advanced: I have extensive experience implementing various API authentication methods, including sophisticated ones like OAuth2.0 and JWT, in a professional context. I understand the security implications and best practices`,
-        },
-    },
-    {
-        question_id: 237,
-        index: 1,
+        question_id: 18,
+        index: 18,
         question: `Do you hold any industry certifications? `,
         answers: {
             1: `Yes`,
@@ -254,33 +248,203 @@ const questions = [
         },
     },
     {
-        question_id: 238,
-        index: 1,
-        question: `If you could choose, which of the following industries would you be most interested in representing as a Sales Engineer?`,
+        question_id: 19,
+        index: 18,
+        question: `What is the typical size of the companies (based on number of employees) that you have the most experience supporting on deals?`,
         answers: {
-            1: `Business Intelligence (BI)`,
-            2: `Cybersecurity`,
-            3: `Data Analytics / Big Data`,
-            4: `Customer Relationship Management (CRM)`,
-            5: `Advertising Technology`,
-            6: `DevOps and Cloud Infrastructure`,
-            7: `Human Resource Management (HRM)`,
-            8: `Other`,
+            1: `Under 100 employees (Small Businesses)`,
+            2: `100-500 employees (Small to Medium-sized Businesses)`,
+            3: `500-1,000 employees (Medium-sized Businesses)`,
+            4: `1,000-5,000 employees (Large Businesses)`,
+            5: `5,000-10,000 employees (Large to Enterprise Businesses)`,
+            6: `10,000-50,000 employees (Enterprise Businesses)`,
+            7: `50,000-100,000 employees (Large Enterprise Businesses)`,
+            8: `100,000+ employees (Very Large Enterprise Businesses)`,
         },
-
     },
     {
-        question_id: 239,
-        index: 1,
-        question: `What type of company do you naturally gravitate towards? `,
+        question_id: 20,
+        index: 19,
+        question: `How often have you been involved in running proof of concept (POC) or trial processes with prospects in the last 3 years?`,
         answers: {
-            1: `Early Stage Startup: Less structure, high risk/high reward, wear multiple hats`,
-            2: `Mid-Stage Startups: Enjoy a bit of structure, but still crave the dynamic environment of startups`,
-            3: `Growth Stage Companies: Prefer a balance between structure and agility`,
-            4: `Established Company: High structure, consistent reward, more rigid roles`,
+            1: `Never: Not involved in running proof of concepts or trials in the last 2 years`,
+            2: `Rarely: Involved a few times over the past 2 years`,
+            3: `Occasionally: Involved several times a year`,
+            4: `Frequently: Regular involvement on a monthly or more frequent basis`
         },
     },
-    // Add more questions as needed...
+    {
+        question_id: 21,
+        index: 20,
+        question: `What is the minimum percentage of health insurance premium coverage provided by a company that would still make a job offer appealing to you?`,
+        answers: {
+            1: `I have other means of health coverage and do not require it from a job`,
+            2: `Less than 25%`,
+            3: `Between 25% and 50%`,
+            4: `Between 50% and 75%`,
+            5: `More than 75% but less than 100%`,
+            6: `100%`
+        },
+    },
+    {
+        question_id: 22,
+        index: 21,
+        question: `Are you seeking a position where the company covers dependents (spouse, children) under its medical insurance plan?`,
+        answers: {
+            1: `No, dependent coverage is not a crucial factor for me`,
+            2: `Yes, I'm looking for a company that offers dependent coverage, even if I have to cover a significant portion`,
+            3: `Yes, I'm looking for a company that covers a majority of the premium costs for dependents. I'm comfortable with paying the remainder`,
+            4: `Yes, I'm looking for a company that covers 100% of the premium costs for dependents`,
+        },
+    },
+    {
+        question_id: 23,
+        index: 23,
+        question: `What is the minimum number of paid time off (PTO) days provided by a company that would still make a job appealing to you?`,
+        answers: {
+            1: `No PTO required`,
+            2: `Less than 10 days`,
+            3: `10-15 days`,
+            4: `16-20 days`,
+            5: `21-25 days`,
+            6: `26-30 days`,
+            7: `More than 30 days`,
+            8: `I'm not sure`
+        },
+    },
+    {
+        question_id: 24,
+        index: 24,
+        question: `What is the most restrictive PTO accrual structure you would accept in a potential job?`,
+        answers: {
+            1: `Start from Zero: I would accept starting with zero PTO and earning more with each pay period`,
+            2: `Baseline Accrual: I would accept starting with a set amount of PTO (not all) and accruing more throughout my tenure`,
+            3: `All Up Front: I would need to receive my full annual PTO allotment at the start of each year`,
+            4: `Unlimited: I would only consider a company with an unlimited PTO policy`,
+        },
+    },
+    {
+        question_id: 25,
+        index: 25,
+        question: `Would you be willing to work for a company that does not have a 401K program? `,
+        answers: {
+            1: `No`,
+            2: `Yes`,
+        },
+    },
+    {
+        question_id: 26,
+        index: 26,
+        question: `What is the minimum percentage of 401k match offered by a company that would still make a job appealing to you?`,
+        answers: {
+            1: `I would be willing to work for a company that has no 401k program`,
+            2: `Less than 1%`,
+            3: `1% - 2%`,
+            4: `3% - 4%`,
+            5: `5% - 6%`,
+            6: `7% - 8%`,
+            7: `More than 8%`,
+            8: `Only a full (100%) match would be appealing`
+        },
+    },
+    {
+        question_id: 26,
+        index: 26,
+        question: `What is the minimum percentage of dental insurance premium coverage provided by a company that would still make a job offer appealing to you?`,
+        answers: {
+            1: `I have other means of dental coverage and do not require it from a job`,
+            2: `Less than 25%`,
+            3: `Between 25% and 50%`,
+            4: `Between 50% and 75%`,
+            5: `More than 75% but less than 100%`,
+            6: `100%`
+        },
+    },
+    {
+        question_id: 27,
+        index: 27,
+        question: `What is the minimum percentage of vision insurance premium coverage provided by a company that would still make a job offer appealing to you?`,
+        answers: {
+            1: `I have other means of vision coverage and do not require it from a job`,
+            2: `Less than 25%`,
+            3: `Between 25% and 50%`,
+            4: `Between 50% and 75%`,
+            5: `More than 75% but less than 100%`,
+            6: `100%`
+        },
+    },
+    {
+        question_id: 28,
+        index: 28,
+        question: `What minimum amount of paid maternity/paternity leave would be acceptable to you in a potential job?`,
+        answers: {
+            1: `No paid leave`,
+            2: `Up to 2 weeks paid leave`,
+            3: `3-4 weeks paid leave`,
+            4: `5-8 weeks paid leave`,
+            5: `9-12 weeks paid leave`,
+            6: `More than 12 weeks paid leave`,
+        },
+    },
+    {
+        question_id: 29,
+        index: 29,
+        question: `As a new employee, what is the maximum level of restrictiveness on Paid Time Off (PTO) that you would you find acceptable?`,
+        answers: {
+            1: `No Restrictions: I prefer a role where, as a new employee, I can take PTO at any time, without restrictions`,
+            2: `Holiday Blackout Dates: I can accept a role where new employees cannot take PTO during major holidays`,
+            3: `Seasonal Peak Business Blackout Dates: I can accept a role where new employees cannot take PTO during the company's peak business seasons`,
+            4: `Holiday and Peak Business Blackout Dates: I can accept a role where new employees cannot take PTO during major holidays or the company's peak business seasons`,
+        },
+    },
+    {
+        question_id: 30,
+        index: 30,
+        question: `What is the minimum annual dollar amount of student loan reimbursement that would make a potential employer attractive?`,
+        answers: {
+            1: `No Assistance Needed`,
+            2: `$1 - $1,000`,
+            3: `$1,001 - $2,000`,
+            4: `$2,001 - $3,000`,
+            5: `$3,001 - $4,000`,
+            6: `$4,000+`
+        },
+    },
+    {
+        question_id: 31,
+        index: 31,
+        question: `What is the minimum annual learning and development allowance that would make a potential employer attractive?`,
+        answers: {
+            1: `No Assistance Needed`,
+            2: `$1 - $500`,
+            3: `$501 - $1,000`,
+            4: `$1,001 - $2,000`,
+            5: `$2,001 - $3,000`,
+            6: `$3,000+`
+        },
+    },
+    {
+        question_id: 32,
+        index: 32,
+        question: `I do not require life insurance benefits from an employer`,
+        answers: {
+            1: `I do not require life insurance benefits from an employer`,
+            2: `Basic Coverage: I expect life insurance that covers an amount equivalent to my annual salary`,
+            3: `Enhanced Coverage: I expect life insurance that covers an amount equivalent to double my annual salary`,
+            4: `Premium Coverage: I expect life insurance that covers an amount equivalent to triple my annual salary or more`,
+        },
+    },
+    // {
+    //     question_id: 21,
+    //     index: 21,
+    //     question: ``,
+    //     answers: {
+    //         1: ``,
+    //         2: ``,
+    //         3: ``,
+    //         4: ``,
+    //     },
+    // },
 ];
 
 questions.sort((a, b) => a.index - b.index);
@@ -379,7 +543,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
     }, [hasLoaded]);
 
     return (
-        <VStack spacing={0} w='100%' ref={innerRef}>
+        <VStack spacing={4} w='100%' ref={innerRef}>
             <VStack w='80%' align='left'>
                 <Box minHeight={16}>
                     {questions[currentQuestionIndex]?.helperText && (
@@ -453,6 +617,11 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                         ...
                     </Heading>}
             </HStack>
+            {(Object.keys(selectedAnswers).length >= 2) &&
+                <Button colorScheme='orange' rightIcon={<ArrowRightIcon />}
+                    as={RouterLink} to={`/candidate/account`} size='lg' mt={5}>
+                    See Matches
+                </Button>}
         </VStack >
     );
 };

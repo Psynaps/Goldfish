@@ -957,8 +957,8 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                 </VStack>
                 <Text fontSize={['lg', 'xl', '2xl']} mt={3} fontWeight='bold' >Edit Job Criteria</Text>
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
-                <Button as={RouterLink} to={`/employer?jobID=${selectedJobPosting}`} width={36} colorScheme='teal' bgGradient='linear(to-l, teal.400, yellow.400)' alignSelf='flex-end' >
-                    <Text>Go to Job Builder</Text>
+                <Button as={RouterLink} to={`/employer?jobID=${selectedJobPosting}`} size='lg' w={36} colorScheme='teal' bgGradient='linear(to-l, teal.400, yellow.400)' alignSelf='flex-end' >
+                    <Text align='center' color='white'>Go to Job Builder</Text>
                 </Button>
 
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
@@ -995,7 +995,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                                         <Button ref={cancelRef} onClick={onClose}>
                                             Cancel
                                         </Button>
-                                        <Button colorScheme='red' onClick={deleteJobPosting} ml={3}>
+                                        <Button colorScheme='red' onClick={deleteJobPosting} >
                                             Delete
                                         </Button>
                                     </AlertDialogFooter>

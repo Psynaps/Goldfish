@@ -6,6 +6,8 @@ import App from './App';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import './index.css';
+import './App.css';
+
 import theme from './theme';
 
 // console.log('redir: ' + window.location.origin);
@@ -22,7 +24,7 @@ ReactDOM.createRoot(rootElement).render(
     }}
   >
     <React.StrictMode>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme} style={{ minHeight: '100%' }}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
 
         <App />

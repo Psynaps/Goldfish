@@ -505,6 +505,8 @@ app.get('/api/getUserProfile', async (req, res) => {
         const queryText = `SELECT * FROM user_profiles WHERE user_id = $1`;
         const values = [user_id];
         const result = await pool.query(queryText, values);
+        console.log(result.rows[0]);
+        console.log(...result.rows[0]);
         res.json({ success: true, profile: result.rows[0] });
     } catch (error) {
         console.error('Database error:', error);
