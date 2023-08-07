@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { switchAnatomy } from '@chakra-ui/anatomy';
+// import { createMultiStyleConfigHelpers } from '@chakra-ui/react';
 // import { useNavigate } from 'react-router-dom';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 // import goldfishLogo from './images/logo.png';
@@ -19,6 +21,17 @@ function App() {
     const returnUrl = window.location.href.includes('localhost') ?
         (window.location.href.includes('3000') ? 'http://localhost:3000' : 'http://localhost:8080')
         : deployURL;
+
+
+    // const boxy = definePartsStyle({
+    //     track: {
+    //         borderRadius: 'sm',
+    //         p: 1,
+    //     }
+    // });
+
+    // export const switchTheme = defineMultiStyleConfig({ variants: { boxy } });
+
     return (
         <div className='App' style={{ minHeight: '100%', left: '0px', width: '100%' }} >
             <Router>

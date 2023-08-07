@@ -10,6 +10,7 @@ import { useAuth0 } from '@auth0/auth0-react';
 import goldfishLogo from './images/logo.png';
 import DropdownMenu from './DropdownMenu';
 import CandidateAccountPage from './CandidateAccountPage';
+import CandidateAnswerPage from './CandidateAnswersPage';
 
 function CandidatePage(returnURL) {
     const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
@@ -20,6 +21,7 @@ function CandidatePage(returnURL) {
     const [searchParams] = useSearchParams();
     const [userProfile, setUserProfile] = useState(null);
     const [hasLoadedProfile, setHasLoadedProfile] = useState(false);
+    const [selectedTab, setSelectedTab] = useState('Home');
 
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
@@ -54,6 +56,24 @@ function CandidatePage(returnURL) {
         }
     }, [user, searchParams]);
 
+    const selectedPageContent = useCallback(() => {
+        switch (selectedTab) {
+            case 'Account':
+                return <CandidateAccountPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
+            case 'Matches':
+                console.log('matches selected');
+                break;
+            case 'Answer':
+                console.log('answer selected');
+                return <CandidateAnswerPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
+            default:
+                return <Box p={16}>
+                    <Heading as='h1' w='100%' h='100%'>
+                        No Content Selected
+                    </Heading>
+                </Box>;
+        }
+    }, [selectedTab, userProfile, hasLoadedProfile, apiURL]);
 
     return (
         <Flex minHeight='100vh' minWidth='100%' flex='1 1 auto' direction='column'>
@@ -69,10 +89,11 @@ function CandidatePage(returnURL) {
             > */}
 
 
-            <Box w='100%' background="linear-gradient(90deg, rgba(26, 41, 128, 0.6) 0%, rgba(38, 208, 206, 0.3) 80.0%)">
+            <Box w='100%' background="linear-gradient(270deg, rgba(26, 41, 128, 0.6) 50%, rgba(38, 208, 206, 0.3) 90.0%)"
+                borderBottomWidth="1px" borderStyle='solid' borderColor='white'>
                 <Flex
                     paddingX="64px"
-                    paddingY="72px"
+                    paddingY="32px"
                     direction="row"
                     justify="flex-start"
                     align="flex-end"
@@ -82,6 +103,7 @@ function CandidatePage(returnURL) {
                     width='100%'
                     justifyContent='space-between'
                     alignItems='baseline'
+
                 >
 
                     <HStack alignItems='baseline' p={0} >
@@ -135,167 +157,57 @@ function CandidatePage(returnURL) {
                     overflow="hidden"
                     borderColor="#FFFFFF"
                     borderEndWidth="1px"
-                    borderStyle="dashed"
-                    width="250px"
+                    // borderStyle="dashed"
+                    width="200px"
+                    minWidth='136px'
+                    // maxWidth='200px'
+                    // flex='1'
+                    // maxWidth='50%'
                     alignSelf="stretch"
-                    maxWidth="100%"
-                    background="linear-gradient(153deg, #1a298099 0%, #26d0ce4d 100%)"
+                    // maxWidth="100%"
+                    background="linear-gradient(333deg, #1a298099 60%, #26d0ce4d 90%)"
                 >
-                    <Stack
-                        padding="36px"
-                        direction="row"
-                        justify="flex-start"
-                        align="center"
-                        alignSelf="stretch"
-                    >
-                        <Stack
-                            direction="row"
-                            justify="center"
-                            align="center"
-                            spacing="20px"
-                            height="36px"
-                        >
-                            <Stack
-                                justify="center"
-                                align="flex-end"
-                                width="36px"
-                                height="36px"
-                            />
-                            <Text>
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1.2"
-                                    fontWeight="bold"
-                                    fontSize="20px"
-                                    color="#FFFFFF"
-                                >
-                                    Home
-                                </Text>
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack
-                        padding="36px"
-                        direction="row"
-                        justify="flex-start"
-                        align="center"
-                        alignSelf="stretch"
-                    >
-                        <Stack
-                            direction="row"
-                            justify="center"
-                            align="center"
-                            spacing="20px"
-                            height="35px"
-                        >
-                            <Box />
-                            <Text>
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1.2"
-                                    fontWeight="bold"
-                                    fontSize="20px"
-                                    color="#FFFFFF"
-                                >
-                                    Matches
-                                </Text>
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack
-                        padding="36px"
-                        direction="row"
-                        justify="flex-start"
-                        align="center"
-                        alignSelf="stretch"
-                    >
-                        <Stack
-                            direction="row"
-                            justify="flex-start"
-                            align="center"
-                            spacing="20px"
-                            width="171px"
-                            height="36px"
-                        >
-                            <Stack direction="row" justify="center" align="center" />
-                            <Text>
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1.2"
-                                    fontWeight="bold"
-                                    fontSize="20px"
-                                    color="#FFFFFF"
-                                >
-                                    Answer
-                                </Text>
-                            </Text>
-                        </Stack>
-                    </Stack>
-                    <Stack
-                        padding="36px"
-                        direction="row"
-                        justify="flex-start"
-                        align="center"
-                        alignSelf="stretch"
-                        background="rgba(255, 255, 255, 0.1)"
-                    >
-                        <Stack
-                            direction="row"
-                            justify="center"
-                            align="center"
-                            spacing="20px"
-                            height="35px"
-                        >
-                            <Box />
-                            <Text>
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1.2"
-                                    fontWeight="bold"
-                                    fontSize="20px"
-                                    color="#FFFFFF"
-                                >
-                                    Profile
-                                </Text>
-                            </Text>
-                            <Stack
-                                direction="row"
-                                justify="center"
-                                align="center"
-                                spacing="6.33px"
-                            >
-                                <Circle size="19px" background="#0AFF68" />
-                            </Stack>
-                        </Stack>
-                    </Stack>
-                    <Stack
-                        padding="36px"
-                        direction="row"
-                        justify="flex-start"
-                        align="center"
-                        alignSelf="stretch"
-                    >
-                        <Stack
-                            direction="row"
-                            justify="center"
-                            align="center"
-                            spacing="20px"
-                            height="35px"
-                        >
-                            <Box />
-                            <Text>
-                                <Text
-                                    fontFamily="Inter"
-                                    lineHeight="1.2"
-                                    fontWeight="bold"
-                                    fontSize="20px"
-                                    color="#FFFFFF"
-                                >
-                                    Account
-                                </Text>
-                            </Text>
-                        </Stack>
-                    </Stack>
+                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Home'); }}>
+                        <Text fontFamily="Inter"
+                            lineHeight="1.2"
+                            fontWeight="bold"
+                            fontSize="20px">
+                            Home
+                        </Text>
+                    </Button>
+                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Matches'); }}>
+                        <Text fontFamily="Inter"
+                            lineHeight="1.2"
+                            fontWeight="bold"
+                            fontSize="20px">
+                            Matches
+                        </Text>
+                    </Button>
+                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Answer'); }}>
+                        <Text fontFamily="Inter"
+                            lineHeight="1.2"
+                            fontWeight="bold"
+                            fontSize="20px">
+                            Answer
+                        </Text>
+                    </Button>
+                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Profile'); }}>
+                        <Text fontFamily="Inter"
+                            lineHeight="1.2"
+                            fontWeight="bold"
+                            fontSize="20px">
+                            Profile
+                        </Text>
+                    </Button>
+                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Account'); }}>
+                        <Text fontFamily="Inter"
+                            lineHeight="1.2"
+                            fontWeight="bold"
+                            fontSize="20px">
+                            Account
+                        </Text>
+                    </Button>
+
                 </Stack>
                 <Stack
                     // paddingStart="64px"
@@ -304,31 +216,18 @@ function CandidatePage(returnURL) {
                     justify="flex-start"
                     align="flex-start"
                     // spacing="80px"
-                    flex="1"
-                    alignSelf="stretch"
+                    // flex="1"
+                    // alignSelf="stretch"
+                    w='100%'
                 >
 
-                    <CandidateAccountPage userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />
+
+                    {selectedPageContent()}
                 </Stack>
             </Stack>
-            <Stack justify="flex-end" alignSelf='flex-end' align="flex-start" w='100%' h='full' bg='blue.600' flex='1 1 auto' p={5}>
-                <Stack
-                    direction="row"
-                    justify="flex-start"
-                    align="flex-start"
-                    overflow="hidden"
-                >
-                    <Text
-                        fontFamily="Inter"
-                        fontWeight="regular"
-                        fontSize="30px"
-                        color="#FFFFFF"
-                    >
-                        Goldfish AI L.L.C., 2023
-                    </Text>
-                </Stack>
-            </Stack>
-        </Flex>
+            {/* <Stack justify="flex-end" alignSelf='flex-end' align="flex-start" w='100%' h='full' bg='blue.600' flex='1 1 auto' px={5}> */}
+
+        </Flex >
     );
 }
 export default CandidatePage;;

@@ -63,5 +63,7 @@ CREATE TABLE user_profiles (
     user_id VARCHAR(255),
     email VARCHAR(255) NOT NULL,
     subscribed_newsletter BOOLEAN DEFAULT FALSE,
+    subscribed_new_job_recs BOOLEAN DEFAULT FALSE,
+    suspended BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (user_id, email)
 );

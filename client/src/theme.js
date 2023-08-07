@@ -7,8 +7,11 @@ const theme = extendTheme({
     colors: {
         transparent: 'transparent',
         red: {
+            200: '#FF6B6B',
+            400: '#FF6B6B',
             500: '#FF6B6B',
-            600: '#FF9C9C',
+            // 500: '#FF6B6B',
+            // 600: '#FF9C9C',
 
         },
         orange: {

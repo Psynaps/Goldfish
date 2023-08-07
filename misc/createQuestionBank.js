@@ -8,14 +8,13 @@ fs.createReadStream('questions.csv')
     .on('data', (row) => {
         let question = {
             questionID: row['QuestionID'],
-            order: row['Importance Index'] ? row['Importance Index'] : 0,
+            order: row['Importance Index'] ? row['Importance Index'] : -1,
             category: row['Domain Tags'].trim(),
             tags: row['Search Tags'].split(', ').map(tag => tag.trim()),
             question: row['Question'],
             employerQuestion: row['Employer Question Phrasing'],
             answers: [],
-            employerAnswers: []
-
+            employerAnswers: [],
         };
         // console.log(row);
         if (!question.question || !question.questionID || !question.answers) { // Catch invalid question rows

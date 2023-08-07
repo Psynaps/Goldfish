@@ -404,12 +404,11 @@ app.delete('/api/deleteJobPosting', async (req, res) => {
         if (!job_posting_id) {
             return res.status(400).send({ error: 'Missing job_posting_id query parameter' });
         }
-        const client = await pool.connect();
         const deleteJobQuery = {
             text: 'DELETE FROM job_postings WHERE job_posting_id = $1 AND user_id = $2 RETURNING *',
             values: [job_posting_id, user_id],
         };
-        const result = await client.query(deleteJobQuery);
+        const result = await pool.query(deleteJobQuery);
 
         if (result.rowCount === 0) {
             return res.status(409).send({ error: 'Job posting not found. Please refresh the jobs list.' });
@@ -417,7 +416,6 @@ app.delete('/api/deleteJobPosting', async (req, res) => {
 
         console.log('Delete successful');
         res.send({ success: true });
-        client.release();
     } catch (err) {
         console.error(err);
         res.send("Error " + err);
@@ -494,6 +492,100 @@ app.post('/api/changeNewsletterSubscription', async (req, res) => {
     }
 });
 
+app.post('/api/changeNewsletterSubscription', async (req, res) => {
+    let { email, user_id, subscribing = true } = req.body;
+
+
+    if (!email) {
+        return res.status(400).json({ success: false, message: 'Email is required.' });
+    }
+    user_id = user_id || '';
+    try {
+        const queryText = `
+            INSERT INTO user_profiles (user_id, email, subscribed_newsletter)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (user_id, email)
+            DO UPDATE SET subscribed_newsletter = $3
+        `;
+        const values = [user_id, email, subscribing];
+        await pool.query(queryText, values);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while updating subscription.' });
+    }
+});
+
+app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
+    let { email, user_id, subscribing = true } = req.body;
+
+
+    if (!email || !user_id) {
+        return res.status(400).json({ success: false, message: 'Email and user_id required.' });
+    }
+    user_id = user_id || '';
+    try {
+        const queryText = `
+            INSERT INTO user_profiles (user_id, email, subscribed_new_job_recs)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (user_id, email)
+            DO UPDATE SET subscribed_new_job_recs = $3
+        `;
+        const values = [user_id, email, subscribing];
+        await pool.query(queryText, values);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while updating subscription.' });
+    }
+});
+
+app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
+    let { email, user_id, subscribing = true } = req.body;
+
+
+    if (!email || !user_id) {
+        return res.status(400).json({ success: false, message: 'Email and user_id required.' });
+    }
+    try {
+        const queryText = `
+            INSERT INTO user_profiles (user_id, email, subscribed_new_job_recs)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (user_id, email)
+            DO UPDATE SET subscribed_new_job_recs = $3
+        `;
+        const values = [user_id, email, subscribing];
+        await pool.query(queryText, values);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Database error:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while updating subscription.' });
+    }
+});
+
+app.post('/api/changeSuspendedStatus', async (req, res) => {
+    let { email, user_id, suspended = true } = req.body;
+
+
+    if (!email || !user_id) {
+        return res.status(400).json({ success: false, message: 'Email and user_id required.' });
+    }
+    try {
+        const queryText = `
+            INSERT INTO user_profiles (user_id, email, suspended)
+            VALUES ($1, $2, $3)
+            ON CONFLICT (user_id, email)
+            DO UPDATE SET suspended = $3
+        `;
+        const values = [user_id, email, suspended];
+        await pool.query(queryText, values);
+        res.json({ success: true });
+    } catch (error) {
+        console.error('Database error while deleting account:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while Suspending account.' });
+    }
+});
+
 app.get('/api/getUserProfile', async (req, res) => {
     const { user_id } = req.query;
 
@@ -514,8 +606,31 @@ app.get('/api/getUserProfile', async (req, res) => {
     }
 });
 
+// api endpoint deleteUserAccount which deletes all rows in user_profiles with user_id matching
+// the one specified in the post request body user_id field. Send success: true json or error if applicable.
+app.post('/api/deleteUserAccount', async (req, res) => {
+    try {
+        const { user_id } = req.body;
+        if (!user_id) {
+            return res.status(400).send({ error: 'Missing user_id parameter' });
+        }
+        const deleteAccountQuery = {
+            text: 'DELETE FROM user_profiles WHERE user_id = $1 returning *',
+            values: [user_id],
+        };
+        const result = await pool.query(deleteAccountQuery);
 
+        if (result.rowCount === 0) {
+            return res.status(409).send({ error: 'Error deleting account, user_id not found:', error });
+        }
 
+        console.log('Delete successful');
+        res.send({ success: true });
+    } catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+    }
+});
 
 
 // All remaining requests return the React app, so it can handle routing.

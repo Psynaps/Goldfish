@@ -1,6 +1,7 @@
 export const questionsData = [
   {
     "questionID": "101",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "CCSP",
@@ -21,6 +22,7 @@ export const questionsData = [
   },
   {
     "questionID": "102",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "SSCP",
@@ -41,6 +43,7 @@ export const questionsData = [
   },
   {
     "questionID": "103",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "ISC2",
@@ -60,6 +63,7 @@ export const questionsData = [
   },
   {
     "questionID": "104",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "ISC2",
@@ -79,6 +83,7 @@ export const questionsData = [
   },
   {
     "questionID": "105",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "ISC2",
@@ -98,6 +103,7 @@ export const questionsData = [
   },
   {
     "questionID": "106",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "ISC2",
@@ -117,6 +123,7 @@ export const questionsData = [
   },
   {
     "questionID": "107",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "Are you Certified in the Governance of Enterprise IT (CGEIT)?"
@@ -135,6 +142,7 @@ export const questionsData = [
   },
   {
     "questionID": "108",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "CGEIT",
@@ -155,6 +163,7 @@ export const questionsData = [
   },
   {
     "questionID": "109",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "Google Cloud",
@@ -175,6 +184,7 @@ export const questionsData = [
   },
   {
     "questionID": "110",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "CWNP",
@@ -195,6 +205,7 @@ export const questionsData = [
   },
   {
     "questionID": "111",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "Snowflake"
@@ -213,6 +224,7 @@ export const questionsData = [
   },
   {
     "questionID": "112",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "GitHub"
@@ -231,6 +243,7 @@ export const questionsData = [
   },
   {
     "questionID": "113",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "Atlassian"
@@ -249,6 +262,7 @@ export const questionsData = [
   },
   {
     "questionID": "114",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "Zoho"
@@ -267,6 +281,7 @@ export const questionsData = [
   },
   {
     "questionID": "115",
+    "order": -1,
     "category": "Industry Certifications",
     "tags": [
       "Hubspot"
@@ -285,6 +300,7 @@ export const questionsData = [
   },
   {
     "questionID": "116",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "GraphQL",
@@ -312,6 +328,7 @@ export const questionsData = [
   },
   {
     "questionID": "117",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Webhooks",
@@ -339,6 +356,7 @@ export const questionsData = [
   },
   {
     "questionID": "118",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "API",
@@ -366,6 +384,7 @@ export const questionsData = [
   },
   {
     "questionID": "119",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "OpenID",
@@ -395,6 +414,7 @@ export const questionsData = [
   },
   {
     "questionID": "120",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "SOAP",
@@ -423,6 +443,7 @@ export const questionsData = [
   },
   {
     "questionID": "121",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "REST",
@@ -450,6 +471,7 @@ export const questionsData = [
   },
   {
     "questionID": "122",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "API",
@@ -477,6 +499,7 @@ export const questionsData = [
   },
   {
     "questionID": "123",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "JSON",
@@ -507,6 +530,7 @@ export const questionsData = [
   },
   {
     "questionID": "124",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "real time API",
@@ -534,6 +558,7 @@ export const questionsData = [
   },
   {
     "questionID": "125",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "C#",
@@ -562,6 +587,7 @@ export const questionsData = [
   },
   {
     "questionID": "126",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Bash",
@@ -590,6 +616,7 @@ export const questionsData = [
   },
   {
     "questionID": "127",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "PowerShell",
@@ -619,6 +646,7 @@ export const questionsData = [
   },
   {
     "questionID": "128",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Ruby",
@@ -647,6 +675,7 @@ export const questionsData = [
   },
   {
     "questionID": "129",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Go",
@@ -677,6 +706,7 @@ export const questionsData = [
   },
   {
     "questionID": "130",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Rust",
@@ -705,6 +735,7 @@ export const questionsData = [
   },
   {
     "questionID": "131",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "HTTPS",
@@ -732,6 +763,7 @@ export const questionsData = [
   },
   {
     "questionID": "132",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "TCP/IP",
@@ -764,6 +796,7 @@ export const questionsData = [
   },
   {
     "questionID": "133",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "network architectures",
@@ -791,6 +824,7 @@ export const questionsData = [
   },
   {
     "questionID": "134",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "RASP"
@@ -817,6 +851,7 @@ export const questionsData = [
   },
   {
     "questionID": "135",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "network",
@@ -844,6 +879,7 @@ export const questionsData = [
   },
   {
     "questionID": "136",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "SDN",
@@ -871,6 +907,7 @@ export const questionsData = [
   },
   {
     "questionID": "137",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "networks",
@@ -898,6 +935,7 @@ export const questionsData = [
   },
   {
     "questionID": "138",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "networks",
@@ -925,6 +963,7 @@ export const questionsData = [
   },
   {
     "questionID": "139",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "VOIP",
@@ -954,6 +993,7 @@ export const questionsData = [
   },
   {
     "questionID": "140",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "IPV6"
@@ -980,6 +1020,7 @@ export const questionsData = [
   },
   {
     "questionID": "141",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "performance tuning",
@@ -1007,6 +1048,7 @@ export const questionsData = [
   },
   {
     "questionID": "142",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "WiFi",
@@ -1034,6 +1076,7 @@ export const questionsData = [
   },
   {
     "questionID": "143",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
@@ -1061,6 +1104,7 @@ export const questionsData = [
   },
   {
     "questionID": "144",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
@@ -1088,6 +1132,7 @@ export const questionsData = [
   },
   {
     "questionID": "145",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
@@ -1115,6 +1160,7 @@ export const questionsData = [
   },
   {
     "questionID": "146",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
@@ -1142,6 +1188,7 @@ export const questionsData = [
   },
   {
     "questionID": "147",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Security",
@@ -1170,6 +1217,7 @@ export const questionsData = [
   },
   {
     "questionID": "148",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "IAM",
@@ -1198,6 +1246,7 @@ export const questionsData = [
   },
   {
     "questionID": "149",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "secuity",
@@ -1226,6 +1275,7 @@ export const questionsData = [
   },
   {
     "questionID": "150",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
@@ -1253,6 +1303,7 @@ export const questionsData = [
   },
   {
     "questionID": "151",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security"
@@ -1279,6 +1330,7 @@ export const questionsData = [
   },
   {
     "questionID": "152",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Data Warehousing",
@@ -1306,6 +1358,7 @@ export const questionsData = [
   },
   {
     "questionID": "153",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Data modeling",
@@ -1333,6 +1386,7 @@ export const questionsData = [
   },
   {
     "questionID": "154",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Statistics",
@@ -1360,6 +1414,7 @@ export const questionsData = [
   },
   {
     "questionID": "155",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "machine learning",
@@ -1387,6 +1442,7 @@ export const questionsData = [
   },
   {
     "questionID": "156",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Data Integration",
@@ -1415,6 +1471,7 @@ export const questionsData = [
   },
   {
     "questionID": "157",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "IoT",
@@ -1444,6 +1501,7 @@ export const questionsData = [
   },
   {
     "questionID": "158",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "supervised",
@@ -1471,6 +1529,7 @@ export const questionsData = [
   },
   {
     "questionID": "159",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "unsupervised",
@@ -1498,6 +1557,7 @@ export const questionsData = [
   },
   {
     "questionID": "160",
+    "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "machine learning",
@@ -1525,6 +1585,7 @@ export const questionsData = [
   },
   {
     "questionID": "161",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "proposal writing",
@@ -1552,6 +1613,7 @@ export const questionsData = [
   },
   {
     "questionID": "162",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "gov",
@@ -1579,6 +1641,7 @@ export const questionsData = [
   },
   {
     "questionID": "163",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "government",
@@ -1606,6 +1669,7 @@ export const questionsData = [
   },
   {
     "questionID": "164",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Product Management",
@@ -1634,6 +1698,7 @@ export const questionsData = [
   },
   {
     "questionID": "165",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Sales strategy",
@@ -1669,6 +1734,7 @@ export const questionsData = [
   },
   {
     "questionID": "166",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Product Management",
@@ -1697,6 +1763,7 @@ export const questionsData = [
   },
   {
     "questionID": "167",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Product launches",
@@ -1725,6 +1792,7 @@ export const questionsData = [
   },
   {
     "questionID": "168",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "industry focus",
@@ -1768,6 +1836,7 @@ export const questionsData = [
   },
   {
     "questionID": "169",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Product/Service experience",
@@ -1811,6 +1880,7 @@ export const questionsData = [
   },
   {
     "questionID": "170",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Client interaction frequency",
@@ -1854,6 +1924,7 @@ export const questionsData = [
   },
   {
     "questionID": "171",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Management experience",
@@ -1889,6 +1960,7 @@ export const questionsData = [
   },
   {
     "questionID": "172",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Team support experience",
@@ -1924,6 +1996,7 @@ export const questionsData = [
   },
   {
     "questionID": "173",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Long sales cycles management",
@@ -1960,6 +2033,7 @@ export const questionsData = [
   },
   {
     "questionID": "174",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Sales methodology experience",
@@ -2003,6 +2077,7 @@ export const questionsData = [
   },
   {
     "questionID": "175",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Sales model familiarity",
@@ -2048,6 +2123,7 @@ export const questionsData = [
   },
   {
     "questionID": "176",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "team sales quota experience",
@@ -2084,6 +2160,7 @@ export const questionsData = [
   },
   {
     "questionID": "177",
+    "order": -1,
     "category": "Deal Experience",
     "tags": [
       "product management"
@@ -2110,6 +2187,7 @@ export const questionsData = [
   },
   {
     "questionID": "178",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "CRN",
@@ -2138,6 +2216,7 @@ export const questionsData = [
   },
   {
     "questionID": "179",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Salesforce",
@@ -2165,6 +2244,7 @@ export const questionsData = [
   },
   {
     "questionID": "180",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Salesforce",
@@ -2192,6 +2272,7 @@ export const questionsData = [
   },
   {
     "questionID": "181",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
@@ -2219,6 +2300,7 @@ export const questionsData = [
   },
   {
     "questionID": "182",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Tableau",
@@ -2246,6 +2328,7 @@ export const questionsData = [
   },
   {
     "questionID": "183",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Zoho",
@@ -2273,6 +2356,7 @@ export const questionsData = [
   },
   {
     "questionID": "184",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "HubSpot",
@@ -2300,6 +2384,7 @@ export const questionsData = [
   },
   {
     "questionID": "185",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "HubSpot",
@@ -2327,6 +2412,7 @@ export const questionsData = [
   },
   {
     "questionID": "186",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Pipedrive",
@@ -2354,6 +2440,7 @@ export const questionsData = [
   },
   {
     "questionID": "187",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
@@ -2381,6 +2468,7 @@ export const questionsData = [
   },
   {
     "questionID": "188",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management.",
@@ -2408,6 +2496,7 @@ export const questionsData = [
   },
   {
     "questionID": "189",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
@@ -2435,6 +2524,7 @@ export const questionsData = [
   },
   {
     "questionID": "190",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
@@ -2462,6 +2552,7 @@ export const questionsData = [
   },
   {
     "questionID": "191",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
@@ -2489,6 +2580,7 @@ export const questionsData = [
   },
   {
     "questionID": "192",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Oracle",
@@ -2516,6 +2608,7 @@ export const questionsData = [
   },
   {
     "questionID": "193",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Oracle",
@@ -2543,6 +2636,7 @@ export const questionsData = [
   },
   {
     "questionID": "194",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Microsoft SQL",
@@ -2571,6 +2665,7 @@ export const questionsData = [
   },
   {
     "questionID": "195",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "PostgreSQL"
@@ -2597,6 +2692,7 @@ export const questionsData = [
   },
   {
     "questionID": "196",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "MySQL",
@@ -2625,6 +2721,7 @@ export const questionsData = [
   },
   {
     "questionID": "197",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "MonogDB",
@@ -2652,6 +2749,7 @@ export const questionsData = [
   },
   {
     "questionID": "198",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "SQLite",
@@ -2680,6 +2778,7 @@ export const questionsData = [
   },
   {
     "questionID": "199",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "BigQuery",
@@ -2708,6 +2807,7 @@ export const questionsData = [
   },
   {
     "questionID": "200",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2736,6 +2836,7 @@ export const questionsData = [
   },
   {
     "questionID": "201",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2764,6 +2865,7 @@ export const questionsData = [
   },
   {
     "questionID": "202",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2793,6 +2895,7 @@ export const questionsData = [
   },
   {
     "questionID": "203",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "TeraData",
@@ -2821,6 +2924,7 @@ export const questionsData = [
   },
   {
     "questionID": "204",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2849,6 +2953,7 @@ export const questionsData = [
   },
   {
     "questionID": "205",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Apache Hadoop",
@@ -2876,6 +2981,7 @@ export const questionsData = [
   },
   {
     "questionID": "206",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2903,6 +3009,7 @@ export const questionsData = [
   },
   {
     "questionID": "207",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2931,6 +3038,7 @@ export const questionsData = [
   },
   {
     "questionID": "208",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
@@ -2959,6 +3067,7 @@ export const questionsData = [
   },
   {
     "questionID": "209",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Apache",
@@ -2987,6 +3096,7 @@ export const questionsData = [
   },
   {
     "questionID": "210",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Google Cloud ML Engine",
@@ -3015,6 +3125,7 @@ export const questionsData = [
   },
   {
     "questionID": "211",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "ML",
@@ -3043,6 +3154,7 @@ export const questionsData = [
   },
   {
     "questionID": "212",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "ML",
@@ -3071,6 +3183,7 @@ export const questionsData = [
   },
   {
     "questionID": "213",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "ML",
@@ -3100,6 +3213,7 @@ export const questionsData = [
   },
   {
     "questionID": "214",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "ML",
@@ -3128,6 +3242,7 @@ export const questionsData = [
   },
   {
     "questionID": "215",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "TensorFlow",
@@ -3156,6 +3271,7 @@ export const questionsData = [
   },
   {
     "questionID": "216",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "ML",
@@ -3184,6 +3300,7 @@ export const questionsData = [
   },
   {
     "questionID": "217",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "ML",
@@ -3213,6 +3330,7 @@ export const questionsData = [
   },
   {
     "questionID": "218",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Talend",
@@ -3240,6 +3358,7 @@ export const questionsData = [
   },
   {
     "questionID": "219",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Data Integration",
@@ -3267,6 +3386,7 @@ export const questionsData = [
   },
   {
     "questionID": "220",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Data Integration",
@@ -3296,6 +3416,7 @@ export const questionsData = [
   },
   {
     "questionID": "221",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Data Integration",
@@ -3325,6 +3446,7 @@ export const questionsData = [
   },
   {
     "questionID": "222",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Data Integration",
@@ -3353,6 +3475,7 @@ export const questionsData = [
   },
   {
     "questionID": "223",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Stitch Data",
@@ -3380,6 +3503,7 @@ export const questionsData = [
   },
   {
     "questionID": "224",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "FiveTran",
@@ -3407,6 +3531,7 @@ export const questionsData = [
   },
   {
     "questionID": "225",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Matillion",
@@ -3434,6 +3559,7 @@ export const questionsData = [
   },
   {
     "questionID": "226",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Google Cloud Dataflow",
@@ -3461,6 +3587,7 @@ export const questionsData = [
   },
   {
     "questionID": "227",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "AWS Glue",
@@ -3489,6 +3616,7 @@ export const questionsData = [
   },
   {
     "questionID": "228",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "AWS",
@@ -3519,6 +3647,7 @@ export const questionsData = [
   },
   {
     "questionID": "229",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "GCP",
@@ -3547,6 +3676,7 @@ export const questionsData = [
   },
   {
     "questionID": "230",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "azure",
@@ -3574,6 +3704,7 @@ export const questionsData = [
   },
   {
     "questionID": "231",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "cloud platform",
@@ -3602,6 +3733,7 @@ export const questionsData = [
   },
   {
     "questionID": "232",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
@@ -3628,6 +3760,7 @@ export const questionsData = [
   },
   {
     "questionID": "233",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
@@ -3654,6 +3787,7 @@ export const questionsData = [
   },
   {
     "questionID": "234",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
@@ -3680,6 +3814,7 @@ export const questionsData = [
   },
   {
     "questionID": "235",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
@@ -3706,6 +3841,7 @@ export const questionsData = [
   },
   {
     "questionID": "236",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
@@ -3733,6 +3869,7 @@ export const questionsData = [
   },
   {
     "questionID": "237",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
@@ -3760,6 +3897,7 @@ export const questionsData = [
   },
   {
     "questionID": "238",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
@@ -3787,6 +3925,7 @@ export const questionsData = [
   },
   {
     "questionID": "239",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
@@ -3814,6 +3953,7 @@ export const questionsData = [
   },
   {
     "questionID": "240",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales intelligence",
@@ -3841,6 +3981,7 @@ export const questionsData = [
   },
   {
     "questionID": "241",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Chorus AI",
@@ -3868,6 +4009,7 @@ export const questionsData = [
   },
   {
     "questionID": "242",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales intelligence",
@@ -3895,6 +4037,7 @@ export const questionsData = [
   },
   {
     "questionID": "243",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales intelligence",
@@ -3922,6 +4065,7 @@ export const questionsData = [
   },
   {
     "questionID": "244",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "BI",
@@ -3950,6 +4094,7 @@ export const questionsData = [
   },
   {
     "questionID": "245",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "BI",
@@ -3978,6 +4123,7 @@ export const questionsData = [
   },
   {
     "questionID": "246",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
@@ -4005,6 +4151,7 @@ export const questionsData = [
   },
   {
     "questionID": "247",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
@@ -4032,6 +4179,7 @@ export const questionsData = [
   },
   {
     "questionID": "248",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
@@ -4059,6 +4207,7 @@ export const questionsData = [
   },
   {
     "questionID": "249",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
@@ -4086,6 +4235,7 @@ export const questionsData = [
   },
   {
     "questionID": "250",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
@@ -4113,6 +4263,7 @@ export const questionsData = [
   },
   {
     "questionID": "251",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
@@ -4140,6 +4291,7 @@ export const questionsData = [
   },
   {
     "questionID": "252",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
@@ -4167,6 +4319,7 @@ export const questionsData = [
   },
   {
     "questionID": "253",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
@@ -4194,6 +4347,7 @@ export const questionsData = [
   },
   {
     "questionID": "254",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
@@ -4221,6 +4375,7 @@ export const questionsData = [
   },
   {
     "questionID": "255",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
@@ -4249,6 +4404,7 @@ export const questionsData = [
   },
   {
     "questionID": "256",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
@@ -4276,6 +4432,7 @@ export const questionsData = [
   },
   {
     "questionID": "257",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
@@ -4303,6 +4460,7 @@ export const questionsData = [
   },
   {
     "questionID": "258",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "WordPress",
@@ -4330,6 +4488,7 @@ export const questionsData = [
   },
   {
     "questionID": "259",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "CMS",
@@ -4357,6 +4516,7 @@ export const questionsData = [
   },
   {
     "questionID": "260",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "CMS",
@@ -4384,6 +4544,7 @@ export const questionsData = [
   },
   {
     "questionID": "261",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Communication",
@@ -4411,6 +4572,7 @@ export const questionsData = [
   },
   {
     "questionID": "262",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Communication",
@@ -4439,6 +4601,7 @@ export const questionsData = [
   },
   {
     "questionID": "263",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Communication",
@@ -4467,6 +4630,7 @@ export const questionsData = [
   },
   {
     "questionID": "264",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Communication",
@@ -4494,6 +4658,7 @@ export const questionsData = [
   },
   {
     "questionID": "265",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Containerization",
@@ -4521,6 +4686,7 @@ export const questionsData = [
   },
   {
     "questionID": "266",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Containerization",
@@ -4548,6 +4714,7 @@ export const questionsData = [
   },
   {
     "questionID": "267",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "API Testing",
@@ -4575,6 +4742,7 @@ export const questionsData = [
   },
   {
     "questionID": "268",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "API Testing",
@@ -4602,6 +4770,7 @@ export const questionsData = [
   },
   {
     "questionID": "269",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Business",
@@ -4630,6 +4799,7 @@ export const questionsData = [
   },
   {
     "questionID": "270",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Work",
@@ -4658,6 +4828,7 @@ export const questionsData = [
   },
   {
     "questionID": "271",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Diversity",
@@ -4687,6 +4858,7 @@ export const questionsData = [
   },
   {
     "questionID": "272",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Travel",
@@ -4716,6 +4888,7 @@ export const questionsData = [
   },
   {
     "questionID": "273",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Career advancement opportunities"
@@ -4742,6 +4915,7 @@ export const questionsData = [
   },
   {
     "questionID": "274",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Management transition potential",
@@ -4769,6 +4943,7 @@ export const questionsData = [
   },
   {
     "questionID": "275",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       "Transition opportunities",
@@ -4796,6 +4971,7 @@ export const questionsData = [
   },
   {
     "questionID": "276",
+    "order": -1,
     "category": "Job Specific HR",
     "tags": [
       ""
@@ -4822,6 +4998,7 @@ export const questionsData = [
   },
   {
     "questionID": "277",
+    "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Salesforce CRM",
