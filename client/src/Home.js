@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, } from 'react';
-import goldfishLogo from './images/logo.png';
+import goldfishLogo from './images/logo.svg';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Text, SimpleGrid, Avatar, } from '@chakra-ui/react';
 import { LoginButton, LogoutButton } from './LoginButton';

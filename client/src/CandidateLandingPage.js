@@ -7,7 +7,7 @@ import { LoginButton } from './LoginButton';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
-import goldfishLogo from './images/logo.png';
+import goldfishLogo from './images/logo.svg';
 import DropdownMenu from './DropdownMenu';
 import jellyfishImg from './images/jellyfish.svg';
 import netImg from './images/net.svg';

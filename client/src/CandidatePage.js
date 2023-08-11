@@ -7,7 +7,7 @@ import { LoginButton } from './LoginButton';
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
-import goldfishLogo from './images/logo.png';
+import goldfishLogo from './images/logo.svg';
 import DropdownMenu from './DropdownMenu';
 import CandidateAccountPage from './CandidateAccountPage';
 import CandidateAnswerPage from './CandidateAnswersPage';
@@ -61,10 +61,10 @@ function CandidatePage(returnURL) {
             case 'Account':
                 return <CandidateAccountPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
             case 'Matches':
-                console.log('matches selected');
+                console.log('matches page selected');
                 break;
             case 'Answer':
-                console.log('answer selected');
+                console.log('answer page selected');
                 return <CandidateAnswerPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
             default:
                 return <Box p={16}>
