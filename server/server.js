@@ -424,6 +424,8 @@ app.delete('/api/deleteJobPosting', async (req, res) => {
 
 
 app.post('/api/setUserAnswer', async (req, res) => {
+    console.log(req.body);
+
     const { user_id, question_id, answer_id } = req.body;
 
     try {
@@ -587,19 +589,40 @@ app.post('/api/changeSuspendedStatus', async (req, res) => {
 });
 
 app.get('/api/getUserProfile', async (req, res) => {
-    const { user_id } = req.query;
+    const { user_id, email } = req.query;
+
+
 
     if (!user_id) {
         return res.status(400).json({ success: false, message: 'User ID is required.' });
     }
 
     try {
-        const queryText = `SELECT * FROM user_profiles WHERE user_id = $1`;
+        let queryText = `SELECT * FROM user_profiles WHERE user_id = $1`;
         const values = [user_id];
         const result = await pool.query(queryText, values);
         console.log(result.rows[0]);
-        console.log(...result.rows[0]);
-        res.json({ success: true, profile: result.rows[0] });
+
+        // If there is no result for this query then the user hasn't been added to the user_profiles table yet,
+        // so add them with default values
+        if (result.rowCount === 0) {
+            const insertQueryText = `INSERT INTO user_profiles (user_id, email, subscribed_newsletter, subscribed_new_job_recs, suspended)
+            VALUES ($1, $2, $3, $4, $5)`;
+            const insertValues = [user_id, email, false, false, false];
+            const result2 = await pool.query(insertQueryText, insertValues);
+        }
+
+        // Query for the users answers in user_answers table, and make answered object with question_id as key and answer_id as value
+        queryText = `SELECT question_id, answer_id FROM user_answers WHERE user_id = $1`;
+        const result3 = await pool.query(queryText, values);
+        const answered = result3.rows.reduce((acc, curr) => {
+            acc[curr.question_id] = curr.answer_id;
+            return acc;
+        }, {});
+        res.json({ success: true, profile: result.rows[0], answers: answered });
+
+        // console.log(...result.rows[0]);
+        // res.json({ success: true, profile: result.rows[0] });
     } catch (error) {
         console.error('Database error:', error);
         res.status(500).json({ success: false, message: 'An error occurred while fetching user profile.' });

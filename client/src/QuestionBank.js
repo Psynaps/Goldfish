@@ -38,7 +38,7 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                         isQuestionBankQuestion={true}
                     >
                         <VStack align='stretch' mt={5} spacing={3}>
-                            {question.answers?.map((answer) => (
+                            {question.employerAnswers?.map((answer) => (
                                 <Answer
                                     key={`${question.questionID}-${answer.answerID}`}
                                     answer={answer}

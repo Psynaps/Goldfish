@@ -1,6 +1,418 @@
 export const questionsData = [
   {
-    "questionID": "101",
+    "questionID": "115",
+    "order": "1",
+    "category": "Deal Experience",
+    "tags": [
+      "deal size",
+      "deal experience",
+      "money"
+    ],
+    "question": "What is the largest deal size you've been personally responsible for closing, either independently or with an AE?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $25,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "Between $25,000 and $50,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50,000 and $100,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100,000 and $200,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $200,000 and $300,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between $300,000 and $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $500,000 and $1M"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than $1M"
+      }
+    ],
+    "employerQuestion": "What is the largest deal you would expect a sales engineer to have closed, either independently or with an AE?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $25,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "Between $25,000 and $50,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50,000 and $100,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100,000 and $200,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $200,000 and $300,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between $300,000 and $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $500,000 and $1M"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than $1M"
+      }
+    ]
+  },
+  {
+    "questionID": "116",
+    "order": "2",
+    "category": "Deal Experience",
+    "tags": [
+      "sniority level"
+    ],
+    "question": "What level of experience do you have in implementing APIs on behalf of prospective customers?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have participated in API implementation for customers with support from a team, but have not led the process"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have regularly led the process of implementing APIs for customers, with an understanding of the associated practices and protocols"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Have extensive experience in independently leading the process of API implementation for a variety of customers, with the ability to troubleshoot issues and optimize the process"
+      }
+    ],
+    "employerQuestion": "What level of experience in implementing APIs on behalf of prospective customers do you expect from a Sales Engineer candidate in this role, on day 1?\"",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience necessary"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has participated in API implementation for customers with support from a team, but may not have led the process"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate has regularly led the process of implementing APIs for customers, with an understanding of the associated practices and protocols"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience in independently leading the process of API implementation for a variety of customers, with the ability to troubleshoot issues and optimize the process"
+      }
+    ]
+  },
+  {
+    "questionID": "117",
+    "order": "3",
+    "category": "Deal Experience",
+    "tags": [
+      "seniority",
+      "sales"
+    ],
+    "question": "Over the last 2 years, what level of seniority have you most often engaged with in your role as a Sales Engineer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "C-Level Executives"
+      },
+      {
+        "answerID": 2,
+        "answer": "Senior Management (VP, Director)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Mid-level Management (Manager, Team Lead)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Individual Contributors"
+      },
+      {
+        "answerID": 5,
+        "answer": "Non-managerial staff"
+      },
+      {
+        "answerID": 6,
+        "answer": "Consultants or external advisors"
+      },
+      {
+        "answerID": 7,
+        "answer": "Technicians or end users"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "employerQuestion": "What level of seniority should the Sales Engineer candidate have the most experience engaging with?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "C-Level Executives"
+      },
+      {
+        "answerID": 2,
+        "answer": "Senior Management (VP, Director)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Mid-level Management (Manager, Team Lead)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Individual Contributors"
+      },
+      {
+        "answerID": 5,
+        "answer": "Non-managerial staff"
+      },
+      {
+        "answerID": 6,
+        "answer": "Consultants or external advisors"
+      },
+      {
+        "answerID": 7,
+        "answer": "Technicians or end users"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "118",
+    "order": "4",
+    "category": "Deal Experience",
+    "tags": [
+      "Customer Size",
+      "Sales Engineering",
+      "Experience Level"
+    ],
+    "question": "Over the last 2 years, what has been the average size of the customers (in terms of employee count) you have been dealing with in your Sales Engineer role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than 50 employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "51 - 200 employees"
+      },
+      {
+        "answerID": 3,
+        "answer": "201 - 500 employees"
+      },
+      {
+        "answerID": 4,
+        "answer": "501 - 1,000 employees"
+      },
+      {
+        "answerID": 5,
+        "answer": "1,001 - 5,000 employees"
+      },
+      {
+        "answerID": 6,
+        "answer": "5,001 - 10,000 employees"
+      },
+      {
+        "answerID": 7,
+        "answer": "10,001 - 50,000 employees"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than 50,000 employees"
+      }
+    ],
+    "employerQuestion": "What is the average size (in terms of employee count) of the customers your ideal Sales Engineer candidate would be accustomed to dealing with?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Less than 50 employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "51 - 200 employees"
+      },
+      {
+        "answerID": 3,
+        "answer": "201 - 500 employees"
+      },
+      {
+        "answerID": 4,
+        "answer": "501 - 1,000 employees"
+      },
+      {
+        "answerID": 5,
+        "answer": "1,001 - 5,000 employees"
+      },
+      {
+        "answerID": 6,
+        "answer": "5,001 - 10,000 employees"
+      },
+      {
+        "answerID": 7,
+        "answer": "10,001 - 50,000 employees"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than 50,000 employees"
+      }
+    ]
+  },
+  {
+    "questionID": "119",
+    "order": "5",
+    "category": "Deal Experience",
+    "tags": [
+      "Security Reviews",
+      "Procurement Cycle",
+      "Risk Management"
+    ],
+    "question": "How would you rate your experience in conducting security reviews as a Sales Engineer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have assisted in conducting security reviews, but I am not the main person responsible"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have independently conducted security reviews, but they are not a regular part of my duties"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Conducting security reviews is a regular part of my duties, and I am confident in my abilities"
+      }
+    ],
+    "employerQuestion": "What level of experience conducting security reviews do you require for this Sales Engineer role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Experience: Security reviews will not be a part of this role's duties"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role will require some assistance in conducting security reviews, but it won't be the main responsibility"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: We require a Sales Engineer who can independently conduct security reviews when necessary"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Regularly conducting security reviews is an important part of this role, and we require someone who is experienced and confident in this area"
+      }
+    ]
+  },
+  {
+    "questionID": "120",
+    "order": "6",
+    "category": "Deal Experience",
+    "tags": [
+      "functional role",
+      "prospect type"
+    ],
+    "question": "In your role as a Sales Engineer over the last 2 years, which functional role have you most commonly engaged with?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Information Technology"
+      },
+      {
+        "answerID": 2,
+        "answer": "Operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Marketing"
+      },
+      {
+        "answerID": 4,
+        "answer": "Engineering"
+      },
+      {
+        "answerID": 5,
+        "answer": "Finance"
+      },
+      {
+        "answerID": 6,
+        "answer": "Human Resources"
+      },
+      {
+        "answerID": 7,
+        "answer": "Sales"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "employerQuestion": "Which functional roles should the Sales Engineer candidate have the most experience engaging with?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Information Technology"
+      },
+      {
+        "answerID": 2,
+        "answer": "Operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Marketing"
+      },
+      {
+        "answerID": 4,
+        "answer": "Engineering"
+      },
+      {
+        "answerID": 5,
+        "answer": "Finance"
+      },
+      {
+        "answerID": 6,
+        "answer": "Human Resources"
+      },
+      {
+        "answerID": 7,
+        "answer": "Sales"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "122",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -18,10 +430,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "102",
+    "questionID": "123",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -39,10 +453,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "103",
+    "questionID": "124",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -59,10 +475,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "104",
+    "questionID": "125",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -79,10 +497,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "105",
+    "questionID": "126",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -99,10 +519,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "106",
+    "questionID": "127",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -119,10 +541,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "107",
+    "questionID": "128",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -138,10 +562,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "108",
+    "questionID": "129",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -159,10 +585,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "109",
+    "questionID": "130",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -180,10 +608,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "110",
+    "questionID": "131",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -201,10 +631,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "111",
+    "questionID": "132",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -220,10 +652,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "112",
+    "questionID": "133",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -239,10 +673,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "113",
+    "questionID": "134",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -258,10 +694,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "114",
+    "questionID": "135",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -277,10 +715,12 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
-    ]
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
   },
   {
-    "questionID": "115",
+    "questionID": "136",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -296,18 +736,520 @@ export const questionsData = [
         "answerID": 2,
         "answer": "No"
       }
+    ],
+    "employerQuestion": "",
+    "employerAnswers": []
+  },
+  {
+    "questionID": "121",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "IT",
+      "risk assessments",
+      "security"
+    ],
+    "question": "Which statement best describes your experience in performing IT risk assessments?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've assisted in risk assessments and understand the basic concepts of identifying, analyzing, and evaluating potential IT threats and vulnerabilities"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've directly contributed to the risk assessment process and have a good understanding of the techniques and methodologies used"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've led risk assessments, designed mitigation strategies, and I'm adept at using professional risk assessment tools and methodologies"
+      }
+    ],
+    "employerQuestion": "What level of experience in performing IT risk assessments do you expect from a candidate?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to assist in risk assessments and understand the basic concepts of identifying, analyzing, and evaluating potential IT threats and vulnerabilities"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of directly contributing to the risk assessment process and has a good understanding of the techniques and methodologies used"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can lead risk assessments, design mitigation strategies, and is adept at using professional risk assessment tools and methodologies"
+      }
     ]
   },
   {
-    "questionID": "116",
+    "questionID": "106",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "API",
+      "integration",
+      "system integration"
+    ],
+    "question": "How experienced are you in integrating various systems and platforms using APIs?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concepts and have conducted simple integrations using APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience integrating various systems and platforms using APIs in a professional context"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in integrating complex systems and platforms using APIs, including handling issues like data mapping, error handling, and security"
+      }
+    ],
+    "employerQuestion": "How experienced should the candidate be in integrating various systems and platforms using APIs?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires basic understanding and ability to conduct simple integrations using APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires experience integrating various systems and platforms using APIs"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience in integrating complex systems and platforms using APIs, including handling issues like data mapping, error handling, and security"
+      }
+    ]
+  },
+  {
+    "questionID": "107",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "SQL",
+      "querying",
+      "programming",
+      "languages"
+    ],
+    "question": "What is your proficiency level in SQL?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic SQL commands and can perform simple data retrieval and updates"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with more complex operations like joins, subqueries, and database design"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in database administration, performance optimization, and writing stored procedures"
+      }
+    ],
+    "employerQuestion": "What proficiency level in SQL is required for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic SQL commands and the ability to perform simple data retrieval and updates"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with complex SQL operations and database design"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in database administration, SQL performance optimization, and writing stored procedures"
+      }
+    ]
+  },
+  {
+    "questionID": "108",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "Python",
+      "coding language"
+    ],
+    "question": "Which best describes your proficiency level in Python?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Able to write simple Python scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with Python libraries like Pandas, NumPy, or Matplotlib. Experience with web frameworks like Django or Flask"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient with advanced topics like decorators, generators, and metaclasses. Can develop, test, and debug complex applications, including using frameworks like Django or Flask"
+      }
+    ],
+    "employerQuestion": "What proficiency level in Python is required for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to write simple scripts and understand Python code"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with Python libraries and web frameworks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expected to create complex applications. Familiarity with advanced topics and frameworks is necessary"
+      }
+    ]
+  },
+  {
+    "questionID": "109",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "SOAP APIs",
+      "REST",
+      "API"
+    ],
+    "question": "How would you rate your experience and understanding of REST and SOAP APIs?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the theoretical concepts of REST and SOAP, such as HTTP methods (GET, POST, PUT, DELETE) or XML messaging but have little to no practical experience"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience constructing API requests, working with endpoints, and understand the differences between stateless (REST) and stateful (SOAP) APIs from practical project work"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep experience working with REST and SOAP APIs in a professional context. I've designed, developed, and maintained APIs and understand concepts like resources, collections, namespaces, error handling, and security concerns"
+      }
+    ],
+    "employerQuestion": "What level of experience and understanding of REST and SOAP APIs is necessary for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "The role requires a basic understanding of REST and SOAP APIs, with practical experience not essential but beneficial"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with REST and SOAP APIs, including constructing API requests and understanding the core differences between REST and SOAP"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role necessitates a deep understanding and hands-on experience in designing, developing, and maintaining REST and SOAP APIs, with knowledge in error handling and security measures as well"
+      }
+    ]
+  },
+  {
+    "questionID": "110",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "API Authentication",
+      "API"
+    ],
+    "question": "Which best describes your understanding of API Authentication Methods?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I am familiar with the basics of API authentication methods like Basic Auth, API keys, OAuth but have limited practical application"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have implemented API authentication methods in my projects. I understand the differences between them and know when to use which"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience implementing various API authentication methods, including sophisticated ones like OAuth2.0 and JWT, in a professional context. I understand the security implications and best practices"
+      }
+    ],
+    "employerQuestion": "What level of experience and understanding of API Authentication Methods is necessary for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of API authentication methods"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with implementing various API authentication methods"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience with API authentication methods, including understanding the security implications and best practices"
+      }
+    ]
+  },
+  {
+    "questionID": "111",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "Java",
+      "coding language",
+      "programming"
+    ],
+    "question": "What is your proficiency level in Java?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Able to write simple Java programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with OOP concepts, error handling, and file operations in Java. Experience with Java libraries and frameworks like Spring or Hibernate"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient with multithreading, networking, and JVM internals. Can develop, test, and debug complex Java applications"
+      }
+    ],
+    "employerQuestion": "What proficiency level in Java is required for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of Java's basics and the ability to write simple programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in Java and experience with Java libraries or frameworks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of Java, including multithreading and JVM internals"
+      }
+    ]
+  },
+  {
+    "questionID": "112",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "PHP",
+      "coding",
+      "languages"
+    ],
+    "question": "What is your proficiency level in PHP?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, and control structures. Can write simple PHP scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with OOP in PHP, error handling, and PHP libraries and frameworks like Laravel or Symfony"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in PHP best practices, secure coding, and performance optimization. Experienced in developing and maintaining complex PHP applications"
+      }
+    ],
+    "employerQuestion": "What proficiency level in PHP is required for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic PHP syntax and the ability to write simple scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in PHP, error handling, and PHP libraries and frameworks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in PHP best practices, secure coding, and performance optimization. Experience in developing and maintaining complex PHP applications is needed"
+      }
+    ]
+  },
+  {
+    "questionID": "113",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "JavaScript",
+      "coding language"
+    ],
+    "question": "What is your proficiency level in JavaScript?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Understanding of DOM manipulation and events"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with ES6 features, asynchronous JavaScript, and AJAX. Experience using front-end libraries or frameworks like React, Angular, or Vue"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Deep understanding of the JavaScript engine, prototypical inheritance, closures, and the event loop. Proficiency in Node.js and backend JavaScript development"
+      }
+    ],
+    "employerQuestion": "What proficiency level in JavaScript is required for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of JavaScript's basics and DOM manipulation"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with modern JavaScript features and front-end frameworks or libraries"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of JavaScript, including backend development with Node.js"
+      }
+    ]
+  },
+  {
+    "questionID": "114",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "network",
+      "security",
+      "firewalls",
+      "VPN",
+      "encryption",
+      "IDS/IPS"
+    ],
+    "question": "What is your level of proficiency with network security principles and technologies (firewalls, VPN, encryption, IDS/IPS, etc.)?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiarity with the concept of network security, basic principles, and fundamental technologies like firewalls and VPN"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Experience in setting up and managing network security tools. Familiarity with encryption and intrusion detection/prevention systems"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expertise in designing and managing network security infrastructures. Ability to detect and respond to security incidents, and proficiency in advanced security technologies"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with network security principles and technologies (firewalls, VPN, encryption, IDS/IPS, etc.) is required for this role?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the concept of network security and fundamental technologies"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires experience in setting up and managing network security tools"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires expertise in designing and managing network security infrastructures and proficiency in advanced security technologies"
+      }
+    ]
+  },
+  {
+    "questionID": "137",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "GraphQL",
       "API"
     ],
-    "question": "What level of experience and understanding of GraphQL is necessary for this role?",
+    "question": "Which best describes your understanding of GraphQL?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concepts of GraphQL, such as schemas, queries, mutations, and resolvers, but have limited hands-on experience"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used GraphQL in projects and can construct GraphQL queries and mutations, as well as understand concepts like resolvers, schema stitching, and error handling"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have comprehensive experience with GraphQL in a professional setting. I have created GraphQL APIs, understand advanced concepts like schema delegation, query batching and caching, and can handle performance optimization and security concerns"
+      }
+    ],
+    "employerQuestion": "What level of experience and understanding of GraphQL is necessary for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -327,15 +1269,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "117",
+    "questionID": "138",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Webhooks",
       "API"
     ],
-    "question": "What level of experience and understanding of Webhooks is necessary for this role?",
+    "question": "Which best describes your understanding of Webhooks?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic theoretical concept of webhooks as \"user-defined HTTP callbacks\", but have little to no practical experience"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have practical experience setting up webhooks and understand the interaction between the sender and receiver applications"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep experience using webhooks in a professional context. I can design, implement, and troubleshoot webhooks, and understand concepts like payload, retries, security concerns, and performance implications"
+      }
+    ],
+    "employerQuestion": "What level of experience and understanding of Webhooks is necessary for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -355,15 +1316,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "118",
+    "questionID": "139",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "API",
       "RESTful"
     ],
-    "question": "What level of experience and understanding of designing and implementing RESTful APIs is necessary for this role?",
+    "question": "Which best describes your understanding of how to design and implement RESTful APIs?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basics of RESTful APIs, including concepts such as HTTP"
+      },
+      {
+        "answerID": 3,
+        "answer": "ntermediate: I have designed and implemented RESTful APIs, adhering to the best practices of using HTTP methods, status codes, and URL paths effectively"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience designing, implementing, and maintaining RESTful APIs, following REST principles rigorously. I understand advanced concepts such as HATEOAS and versioning, and have handled complex API-related problems in a professional context"
+      }
+    ],
+    "employerQuestion": "What level of experience and understanding of designing and implementing RESTful APIs is necessary for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -383,7 +1363,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "119",
+    "questionID": "140",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -392,8 +1372,27 @@ export const questionsData = [
       "OAuth 2.0",
       "API"
     ],
-    "question": "What level of experience with OAuth 2.0 and OpenID Connect (OIDC) protocols is necessary for this role?",
+    "question": "How would you rate your understanding and experience with OAuth 2.0 and OpenID Connect (OIDC) protocols?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of OAuth 2.0 and OpenID Connect protocols, including concepts such as Access Tokens, ID Tokens, and Refresh Tokens, but haven't implemented these in a project"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience in implementing OAuth 2.0 and OpenID Connect protocols in a project, and can set up authorization servers and handle tokens effectively"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in using OAuth 2.0 and OpenID Connect protocols in various projects. I understand advanced concepts such as grant types, claims, scopes, PKCE, and have tackled complex issues regarding API security"
+      }
+    ],
+    "employerQuestion": "What level of experience with OAuth 2.0 and OpenID Connect (OIDC) protocols is necessary for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -413,7 +1412,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "120",
+    "questionID": "141",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -421,8 +1420,27 @@ export const questionsData = [
       "Object Access",
       "API"
     ],
-    "question": "What level of experience with SOAP (Simple Object Access Protocol) is required for this role?",
+    "question": "Which best describes your experience with SOAP (Simple Object Access Protocol)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of SOAP, including the structure of SOAP messages, but have not implemented these in a project"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience in implementing SOAP in a project, and can construct and parse SOAP messages effectively"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in using SOAP in various projects. I understand advanced concepts such as SOAP faults, headers, and RPC calls, and have tackled complex issues regarding web services communication"
+      }
+    ],
+    "employerQuestion": "What level of experience with SOAP (Simple Object Access Protocol) is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -442,15 +1460,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "121",
+    "questionID": "142",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "REST",
       "API"
     ],
-    "question": "What level of experience is required of REST principles and conventions for this role? ",
+    "question": "How would you rate your understanding of REST principles and conventions?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have a basic understanding of RESTful services and their methods"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used REST APIs in a project setting and understand status codes, methods, and URL structure"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience designing and building RESTful services, including handling errors and security"
+      }
+    ],
+    "employerQuestion": "What level of experience is required of REST principles and conventions for this role? ",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -470,15 +1507,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "122",
+    "questionID": "143",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "API",
       "debugging"
     ],
-    "question": "What level of experience with API testing and debugging is required for this role? ",
+    "question": "How would you describe your skill level in API testing and debugging?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have performed basic API testing and debugging, such as checking status codes and response bodies"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have performed detailed API testing and debugging, including testing endpoints, error handling, and load testing"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in API testing and debugging, including performance testing, security testing, and automation of tests"
+      }
+    ],
+    "employerQuestion": "What level of experience with API testing and debugging is required for this role? ",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -498,7 +1554,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "123",
+    "questionID": "144",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -508,8 +1564,27 @@ export const questionsData = [
       "data export",
       "data formats"
     ],
-    "question": "How experienced should the candidate be with JSON and XML data formats?",
+    "question": "How experienced are you with JSON and XML data formats?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concepts and structure of JSON and XML data formats"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used JSON and XML data formats in various projects or job roles"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with JSON and XML data formats, including parsing, manipulation, and creation of complex structures"
+      }
+    ],
+    "employerQuestion": "How experienced should the candidate be with JSON and XML data formats?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -529,15 +1604,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "124",
+    "questionID": "145",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "real time API",
       "API"
     ],
-    "question": "How experienced should the candidate be with real-time APIs?",
+    "question": "How experienced are you with real-time APIs?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concepts of real-time APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have worked with real-time APIs in a project setting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience working with real-time APIs, including designing, implementing, and troubleshooting them"
+      }
+    ],
+    "employerQuestion": "How experienced should the candidate be with real-time APIs?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -557,7 +1651,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "125",
+    "questionID": "146",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -565,8 +1659,27 @@ export const questionsData = [
       "coding language",
       "programming"
     ],
-    "question": "What proficiency level in C# is required for this role?",
+    "question": "What is your proficiency level in C#?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Able to write simple C# programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with OOP concepts, error handling, and file operations in C#. Experience with .NET Framework or .NET Core"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient with multithreading, LINQ, and .NET internals. Can develop, test, and debug complex C# applications"
+      }
+    ],
+    "employerQuestion": "What proficiency level in C# is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -586,7 +1699,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "126",
+    "questionID": "147",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -594,8 +1707,27 @@ export const questionsData = [
       "Shell",
       "scripting"
     ],
-    "question": "What proficiency level in Bash/Shell scripting is required for this role?",
+    "question": "What is your proficiency level in Bash/Shell scripting?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to write simple scripts for task automation, familiar with basic commands and operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with more advanced features such as control flow, parameter expansion, and process management"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can write complex scripts, including those for system administration tasks. Familiar with shell script debugging and performance optimization"
+      }
+    ],
+    "employerQuestion": "What proficiency level in Bash/Shell scripting is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -615,7 +1747,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "127",
+    "questionID": "148",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -624,8 +1756,27 @@ export const questionsData = [
       "coding",
       "languages"
     ],
-    "question": "What proficiency level in PowerShell is required for this role?",
+    "question": "What is your proficiency level in PowerShell?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic commands and can write simple PowerShell scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with PowerShell's cmdlets, pipeline, and objects. Experience in administrating Windows systems using PowerShell"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can develop complex scripts and modules. Proficient in PowerShell DSC and remote management"
+      }
+    ],
+    "employerQuestion": "What proficiency level in PowerShell is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -645,7 +1796,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "128",
+    "questionID": "149",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -653,8 +1804,27 @@ export const questionsData = [
       "programming",
       "languages"
     ],
-    "question": "What proficiency level in Ruby is required for this role?",
+    "question": "What is your proficiency level in Ruby?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, data structures, and control structures. Can write simple Ruby scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with OOP in Ruby, error handling, and testing. Experience with Ruby on Rails and building simple applications"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient with metaprogramming, concurrency, and the RubyGems ecosystem. Capable of designing, implementing, and maintaining complex Ruby applications"
+      }
+    ],
+    "employerQuestion": "What proficiency level in Ruby is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -674,7 +1844,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "129",
+    "questionID": "150",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -684,8 +1854,27 @@ export const questionsData = [
       "coding",
       "languages"
     ],
-    "question": "What proficiency level in Go (Golang) is required for this role?",
+    "question": "What is your proficiency level in Go (Golang)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, data structures, and control structures. Can write simple Go programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with Go's concurrency model, interfaces, and error handling. Experience in developing web services using Go"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in Go's standard library, testing frameworks, and performance optimization. Experienced in developing and maintaining complex Go applications"
+      }
+    ],
+    "employerQuestion": "What proficiency level in Go (Golang) is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -705,7 +1894,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "130",
+    "questionID": "151",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -713,8 +1902,27 @@ export const questionsData = [
       "programming",
       "coding"
     ],
-    "question": "What proficiency level in Rust is required for this role?",
+    "question": "What is your proficiency level in Rust?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, data structures, and control structures. Can write simple Rust programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with Rust's ownership model, concurrency, and error handling. Experience in developing system-level applications using Rust"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in Rust's standard library, testing frameworks, and performance optimization. Experienced in developing and maintaining complex Rust applications"
+      }
+    ],
+    "employerQuestion": "What proficiency level in Rust is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -734,15 +1942,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "131",
+    "questionID": "152",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "HTTPS",
       "network protocols"
     ],
-    "question": "What level of proficiency with network protocols like TCP/IP, HTTP/HTTPS, FTP, DNS, DHCP, SNMP is required for this role?",
+    "question": "What is your level of proficiency with network protocols like TCP/IP, HTTP/HTTPS, FTP, DNS, DHCP, SNMP?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Knows the purpose and basic functionality of these protocols. Can recognize when and where these protocols are being used"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can configure network settings using these protocols, diagnose connectivity issues, and perform basic network troubleshooting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Understands detailed functioning of these protocols, can optimize network performance, and resolve complex network protocol related issues"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with network protocols like TCP/IP, HTTP/HTTPS, FTP, DNS, DHCP, SNMP is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -762,7 +1989,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "132",
+    "questionID": "153",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -774,8 +2001,27 @@ export const questionsData = [
       "SNMP",
       "network"
     ],
-    "question": "What level of proficiency with network hardware like routers, switches, firewalls, and load balancers is required for this role?",
+    "question": "What is your level of proficiency with network hardware like routers, switches, firewalls, and load balancers?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understands the purpose and functionality of these devices. Can perform basic setup and configuration"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can configure these devices for different network topologies, manage security settings, and troubleshoot common hardware issues"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in complex network architecture design and optimization using these devices. Can diagnose and resolve complex network hardware issues"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with network hardware like routers, switches, firewalls, and load balancers is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -795,15 +2041,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "133",
+    "questionID": "154",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "network architectures",
       "network"
     ],
-    "question": "What level of understanding and experience in designing and implementing network architectures is required for this role?",
+    "question": "What is your level of understanding and experience in designing and implementing network architectures?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiarity with the concept of network architectures and its fundamental components. Understanding of basic network topologies like star, bus, and ring"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Experience in designing and implementing small to medium scale network architectures using standard topologies. Familiarity with subnets and virtual networks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in designing, implementing, and optimizing large-scale and complex network architectures. Strong understanding of subnetting, virtual networks, and advanced topologies"
+      }
+    ],
+    "employerQuestion": "What level of understanding and experience in designing and implementing network architectures is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -823,14 +2088,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "134",
+    "questionID": "155",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "RASP"
     ],
-    "question": "What is the desired level of experience with RASP (Runtime Application Self-Protection) and mobile app security for the Sales Engineer role?",
+    "question": "What is your experience level with RASP (Runtime Application Self-Protection) and mobile app security?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have a basic understanding and limited hands-on experience with RASP and mobile app security"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have worked with RASP and mobile app security with some regularity, but not on a daily basis"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive hands-on experience with RASP and mobile app security, and use these tools regularly"
+      }
+    ],
+    "employerQuestion": "What is the desired level of experience with RASP (Runtime Application Self-Protection) and mobile app security for the Sales Engineer role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -850,15 +2134,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "135",
+    "questionID": "156",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "network",
       "netowrk troubleshooting"
     ],
-    "question": "What level of proficiency with network troubleshooting (ping, traceroute, netstat, etc.) is required for this role?",
+    "question": "What is your level of proficiency with network troubleshooting (ping, traceroute, netstat, etc.)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiarity with the concept of network troubleshooting and basic tools like ping"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Experience in diagnosing and resolving common network issues using tools like traceroute and netstat"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expertise in network troubleshooting, capable of diagnosing and resolving complex network issues using a variety of tools and techniques"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with network troubleshooting (ping, traceroute, netstat, etc.) is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -878,15 +2181,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "136",
+    "questionID": "157",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "SDN",
       "networks"
     ],
-    "question": "What level of experience with software-defined networking (SDN) is required for this role?",
+    "question": "What is your level of experience with software-defined networking (SDN)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of the concept of SDN, its uses, and benefits"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Experience implementing or working with SDN in a practical setting. Able to design, configure, and manage SDN environments"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Comprehensive experience with SDN, capable of developing and optimizing SDN strategies, and troubleshooting complex SDN environments"
+      }
+    ],
+    "employerQuestion": "What level of experience with software-defined networking (SDN) is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -906,15 +2228,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "137",
+    "questionID": "158",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "networks",
       "network automation"
     ],
-    "question": "What level of understanding and experience with network automation concepts and tasks is required for this role?",
+    "question": "What is your level of understanding and experience with network automation concepts and tasks?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of the concept of network automation. Experience automating simple network tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Proficient understanding of network automation. Experience with automating complex network tasks and using scripts to automate tasks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Comprehensive understanding of network automation. Extensive experience automating a wide range of network tasks, creating automation scripts, and optimizing network performance through automation"
+      }
+    ],
+    "employerQuestion": "What level of understanding and experience with network automation concepts and tasks is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -934,15 +2275,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "138",
+    "questionID": "159",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "networks",
       "cloud networking"
     ],
-    "question": "What level of understanding and experience with cloud networking is required for this role?",
+    "question": "What is your level of understanding and experience with cloud networking?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiarity with the basic concept of cloud networking and simple implementations. Experience with basic tasks such as configuring VPCs or virtual networks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Solid understanding of cloud networking concepts, including load balancing, network security in the cloud, and scaling. Experience with complex cloud networking tasks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Comprehensive understanding of advanced cloud networking concepts, including hybrid and multi-cloud networking, network architecture design for cloud-based applications"
+      }
+    ],
+    "employerQuestion": "What level of understanding and experience with cloud networking is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -962,7 +2322,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "139",
+    "questionID": "160",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -971,8 +2331,27 @@ export const questionsData = [
       "networks",
       "protocols"
     ],
-    "question": "What level of understanding and experience with VoIP (Voice over Internet Protocol) is required for this role?",
+    "question": "What is your level of understanding and experience with VoIP (Voice over Internet Protocol)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiarity with the basic concept of VoIP and experience setting up simple VoIP systems"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Solid understanding of VoIP technologies, including SIP, and experience managing and troubleshooting VoIP systems"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Comprehensive understanding of VoIP technologies, including advanced features and protocols. Extensive experience designing, implementing, and managing complex VoIP systems"
+      }
+    ],
+    "employerQuestion": "What level of understanding and experience with VoIP (Voice over Internet Protocol) is required for this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -992,14 +2371,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "140",
+    "questionID": "161",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "IPV6"
     ],
-    "question": "What level of expertise in IPv6 implementation and troubleshooting is required for this position?",
+    "question": "What is your experience with IPv6 implementation and troubleshooting?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of IPv6, its structure, and advantages over IPv4 but have not implemented or troubleshooted it"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have implemented and troubleshooted IPv6 in a controlled environment, familiar with address allocation and routing"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Have implemented and troubleshooted IPv6 in a live production environment, have a deep understanding of address allocation, routing, and security aspects of IPv6"
+      }
+    ],
+    "employerQuestion": "What level of expertise in IPv6 implementation and troubleshooting is required for this position?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1019,15 +2417,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "141",
+    "questionID": "162",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "performance tuning",
       "networks"
     ],
-    "question": "What level of expertise in network performance tuning is required for this position?",
+    "question": "What is your level of expertise in network performance tuning?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of network performance concepts like latency, bandwidth, and QoS but have not performed network tuning"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have implemented QoS and other network performance enhancements in a controlled or non-critical environment"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Have implemented QoS, bandwidth management, and other network performance enhancements in a live, production environment"
+      }
+    ],
+    "employerQuestion": "What level of expertise in network performance tuning is required for this position?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1047,15 +2464,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "142",
+    "questionID": "163",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "WiFi",
       "networks"
     ],
-    "question": "What level of expertise in wireless networking is required for this position?",
+    "question": "How would you rate your experience with wireless networking including WiFi standards, security, and deployment?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of wireless networking, including different WiFi standards and basic security protocols"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have set up and secured a wireless network, including configuring wireless routers and implementing basic security protocols"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Have designed and deployed secure, efficient wireless networks in a commercial setting, including experience with various WiFi standards and advanced security protocols"
+      }
+    ],
+    "employerQuestion": "What level of expertise in wireless networking is required for this position?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1075,15 +2511,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "143",
+    "questionID": "164",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
       "incident response"
     ],
-    "question": "What degree of familiarity with incident response planning do you expect from a candidate?",
+    "question": "Which statement best describes your familiarity with incident response planning?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic steps in an incident response plan but haven't had the chance to put them into practice"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've been involved in developing and implementing incident response plans, and participated in incident response simulations"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've led the design, implementation, and testing of incident response plans, and handled actual incidents"
+      }
+    ],
+    "employerQuestion": "What degree of familiarity with incident response planning do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1103,15 +2558,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "144",
+    "questionID": "165",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
       "secure coding"
     ],
-    "question": "What degree of knowledge and application of secure coding practices do you expect from a candidate?",
+    "question": "Which best describes your knowledge and application of secure coding practices?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the principles of secure coding but haven't had much practical experience"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've applied secure coding practices in projects and am familiar with common security vulnerabilities like XSS, SQL Injection, etc"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've led secure coding initiatives, conducted code reviews for security, and am proficient in mitigation techniques for security risks in code"
+      }
+    ],
+    "employerQuestion": "What degree of knowledge and application of secure coding practices do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1131,15 +2605,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "145",
+    "questionID": "166",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
       "cloud security"
     ],
-    "question": "What degree of expertise in cloud security do you expect from a candidate?",
+    "question": "Which statement best describes your expertise in cloud security?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand basic cloud security concepts, such as the shared responsibility model and basic security controls"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've implemented security measures in a cloud environment and am familiar with concepts like IAM, security groups, and encryption"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience securing cloud environments, including configuring advanced services for intrusion detection, data protection, and threat management"
+      }
+    ],
+    "employerQuestion": "What degree of expertise in cloud security do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1159,15 +2652,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "146",
+    "questionID": "167",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
       "web apps"
     ],
-    "question": "What level of experience in web application security do you expect from a candidate?",
+    "question": "Which statement best describes your expertise in web application security?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I am aware of common web application vulnerabilities such as XSS, SQL Injection, and CSRF"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience identifying and mitigating common web application vulnerabilities. I am familiar with security headers, secure cookies, and Content Security Policy (CSP)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with web application security, including designing secure web architectures, penetration testing, and vulnerability management"
+      }
+    ],
+    "employerQuestion": "What level of experience in web application security do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1187,7 +2699,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "147",
+    "questionID": "168",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1195,8 +2707,27 @@ export const questionsData = [
       "encryption",
       "cryptography"
     ],
-    "question": "What level of knowledge and experience with encryption and cryptography do you expect from a candidate?",
+    "question": "Which statement best describes your knowledge and experience with encryption and cryptography?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have a fundamental understanding of the principles of encryption and cryptography, such as symmetric and asymmetric encryption, hashes, and digital signatures"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have implemented secure encryption protocols and have experience with key management"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have in-depth knowledge of cryptographic protocols, have designed secure cryptographic systems, and have managed key infrastructures"
+      }
+    ],
+    "employerQuestion": "What level of knowledge and experience with encryption and cryptography do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1216,7 +2747,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "148",
+    "questionID": "169",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1224,8 +2755,27 @@ export const questionsData = [
       "identity access",
       "secuity"
     ],
-    "question": "What level of experience with identity and access management (IAM) do you expect from a candidate?",
+    "question": "Which statement best describes your experience with identity and access management (IAM)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have basic understanding of IAM concepts such as authentication, authorization, and accounting"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have worked with IAM solutions, implemented access controls and managed user identities"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience designing and implementing IAM strategies, setting up Single Sign-On (SSO), and working with Identity Providers (IdPs)"
+      }
+    ],
+    "employerQuestion": "What level of experience with identity and access management (IAM) do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1245,7 +2795,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "149",
+    "questionID": "170",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1253,8 +2803,27 @@ export const questionsData = [
       "assesments",
       "audits"
     ],
-    "question": "What level of experience with security assessments and audits do you expect from a candidate?",
+    "question": "Which statement best describes your experience with security assessments and audits?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of security assessments and have a basic knowledge of common security standards"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have participated in security assessments or audits and am familiar with standards like ISO 27001, NIST, and SOC2"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have led security assessments or audits, understand a broad range of security standards, and can interpret and apply them to organizational practices"
+      }
+    ],
+    "employerQuestion": "What level of experience with security assessments and audits do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1274,15 +2843,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "150",
+    "questionID": "171",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security",
       "vulnerability management"
     ],
-    "question": "What level of knowledge and experience with vulnerability management do you expect from a candidate?",
+    "question": "Which statement best describes your knowledge and experience with vulnerability management?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of vulnerability management, including identifying and categorizing vulnerabilities"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience in tracking, reporting, and overseeing the remediation of vulnerabilities"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have been responsible for the vulnerability management process, including the use of vulnerability scanning tools, risk assessment, and remediation strategies"
+      }
+    ],
+    "employerQuestion": "What level of knowledge and experience with vulnerability management do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1302,14 +2890,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "151",
+    "questionID": "172",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "security"
     ],
-    "question": "What level of knowledge and experience with data security and privacy do you expect from a candidate?",
+    "question": "Which statement best describes your knowledge and experience with data security and privacy?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of data security and have a basic knowledge of privacy laws and regulations like GDPR and CCPA"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have participated in data protection initiatives and have experience with encryption, anonymization, and other data protection mechanisms"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have led data security initiatives, have a comprehensive understanding of data privacy regulations, and can implement and oversee data protection strategies"
+      }
+    ],
+    "employerQuestion": "What level of knowledge and experience with data security and privacy do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1329,15 +2936,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "152",
+    "questionID": "173",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Data Warehousing",
       "Understanding Level"
     ],
-    "question": "What level of understanding of data warehousing do you expect from candidate? ",
+    "question": "Which statement best describes your understanding of data warehousing?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of data warehousing concepts, familiar with concepts like ETL (Extract, Transform, Load) and OLAP (Online Analytical Processing)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Regular involvement in data warehousing projects, capable of designing and managing simple data warehouses"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Extensive experience in data warehousing, able to design, implement, and manage complex data warehouses with large data volumes"
+      }
+    ],
+    "employerQuestion": "What level of understanding of data warehousing do you expect from candidate? ",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1357,15 +2983,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "153",
+    "questionID": "174",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Data modeling",
       "dimensional"
     ],
-    "question": "What level of familiarity with relational and dimensional data modeling concepts do you expect from a candidate?",
+    "question": "Which statement best describes your understanding of dimensional data modeling concepts?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of concepts like entities, attributes, relationships, facts, and dimensions"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable designing both relational and dimensional models for simple to moderately complex databases"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in designing and implementing both relational and dimensional models for complex databases, including handling of complex business rules, hierarchical relationships, and many-to-many relationships"
+      }
+    ],
+    "employerQuestion": "What level of familiarity with relational and dimensional data modeling concepts do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1385,15 +3030,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "154",
+    "questionID": "175",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "Statistics",
       "data"
     ],
-    "question": "What level of expertise in statistical analysis do you expect from a candidate?",
+    "question": "How do you rate your expertise in statistical analysis and its applications in data interpretation?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I know fundamental statistical concepts like mean, median, mode, variance, and standard deviation"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of performing statistical tests, regression analysis, and has a working understanding of probability distributions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in employing advanced statistical methodologies like hypothesis testing, ANOVA, chi-squared tests, and can interpret the results for data-driven decision making"
+      }
+    ],
+    "employerQuestion": "What level of expertise in statistical analysis do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1413,15 +3077,30 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "155",
+    "questionID": "176",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "machine learning",
       "algorithms"
     ],
-    "question": "What level of understanding of machine learning principles do you expect from the candidate? ",
+    "question": "How do you rate your understanding of machine learning principles and algorithms?",
     "answers": [
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have a basic understanding of machine learning concepts and familiar with common algorithms like linear regression and decision trees"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Hands-on experience in building, validating, and tuning predictive models, understands advanced concepts like feature engineering and the bias-variance trade-off"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Highly skilled in a broad range of machine learning techniques. Comfortable with complex concepts like ensemble methods and neural networks, and proficient in interpreting model performance metrics"
+      }
+    ],
+    "employerQuestion": "What level of understanding of machine learning principles do you expect from the candidate? ",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1441,7 +3120,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "156",
+    "questionID": "177",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1449,8 +3128,27 @@ export const questionsData = [
       "Concepts",
       "Processes"
     ],
-    "question": "How familiar should a candidate be with the concepts and processes of data integration?",
+    "question": "How familiar are you with the concepts and processes of data integration?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have a basic understanding of data integration concepts and processes, have used integration tools or platforms for learning purposes"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Regularly perform data integration tasks in professional setting, able to handle diverse data sources and formats"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Deep knowledge of data integration, experienced with designing and implementing large-scale data integration solutions"
+      }
+    ],
+    "employerQuestion": "How familiar should a candidate be with the concepts and processes of data integration?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1470,7 +3168,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "157",
+    "questionID": "178",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1479,8 +3177,27 @@ export const questionsData = [
       "Technologies",
       "Understanding Level"
     ],
-    "question": "How well should a candidate understand Internet of Things (IoT) protocols and technologies?",
+    "question": "How well do you understand Internet of Things (IoT) protocols and technologies?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of IoT, knows about common protocols like MQTT and CoAP"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has experience in using IoT technologies in projects, is familiar with different protocols and IoT platforms"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has extensive experience in implementing IoT solutions, deep knowledge of IoT protocols, edge computing, and IoT security"
+      }
+    ],
+    "employerQuestion": "How well should a candidate understand Internet of Things (IoT) protocols and technologies?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1500,15 +3217,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "158",
+    "questionID": "179",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "supervised",
       "machine learning"
     ],
-    "question": "How familiar should a candidate be with the concepts and processes of supervised machine learning?",
+    "question": "How familiar are you with the concepts and processes of supervised machine learning?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the fundamental principles of supervised machine learning, such as training and testing datasets, and simple algorithms like linear regression"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has implemented supervised machine learning models using various algorithms, understands the concept of overfitting and regularization"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Has extensive experience with supervised learning, can tune complex models, understands intricacies like bias-variance trade-off and model validation techniques"
+      }
+    ],
+    "employerQuestion": "How familiar should a candidate be with the concepts and processes of supervised machine learning?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1528,15 +3264,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "159",
+    "questionID": "180",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "unsupervised",
       "machine learning"
     ],
-    "question": "How familiar should a candidate be with the concepts and processes of unsupervised machine learning?",
+    "question": "How familiar are you with the concepts and processes of unsupervised machine learning?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the fundamental principles of unsupervised learning and knows about simple algorithms like k-means clustering"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've implemented unsupervised learning algorithms to uncover insights from the data, understands concepts like dimensionality reduction"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with unsupervised learning, can implement complex algorithms, and understands advanced concepts like hierarchical clustering and deep autoencoders"
+      }
+    ],
+    "employerQuestion": "How familiar should a candidate be with the concepts and processes of unsupervised machine learning?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1556,15 +3311,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "160",
+    "questionID": "181",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
       "machine learning",
       "reinforcement"
     ],
-    "question": "How familiar should a candidate be with the concepts and processes of reinforcement learning?",
+    "question": "How familiar are you with the concepts and processes of reinforcement learning?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of reinforcement learning, such as the concepts of agents, environments, states, and rewards"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've used reinforcement learning in projects, understands model-free methods like Q-learning"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in implementing reinforcement learning solutions, understands complex concepts like policy gradients and deep reinforcement learning"
+      }
+    ],
+    "employerQuestion": "How familiar should a candidate be with the concepts and processes of reinforcement learning?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -1584,15 +3358,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "161",
+    "questionID": "182",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "proposal writing",
       "proposals"
     ],
-    "question": "How often do you expect the candidate to engage in the proposal writing process?",
+    "question": "How often have you engaged in the proposal writing process in the last 2 years?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Never"
+      },
+      {
+        "answerID": 2,
+        "answer": "Rarely: Involved a few times over the past 2 years"
+      },
+      {
+        "answerID": 3,
+        "answer": "Occasionally: Involved several times a year"
+      },
+      {
+        "answerID": 4,
+        "answer": "Frequently: Regular involvement on a monthly or more frequent basis"
+      }
+    ],
+    "employerQuestion": "How often do you expect the candidate to engage in the proposal writing process?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Never: Role doesn't involve proposal writing"
@@ -1612,15 +3405,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "162",
+    "questionID": "183",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "gov",
       "government"
     ],
-    "question": "How frequently do you expect the candidate to interact with government entities in their deal cycles?",
+    "question": "How frequently have you interacted with government entities over the last 2 years?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Rarely (few times a year)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Occasionally (monthly)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Regularly (weekly)"
+      }
+    ],
+    "employerQuestion": "How frequently do you expect the candidate to interact with government entities in their deal cycles?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Never: Role doesn't involve government prospects"
@@ -1640,15 +3452,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "163",
+    "questionID": "184",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "government",
       "gov"
     ],
-    "question": "What type of government entities do you expect the Sales Engineer to have the most experience dealing with, if any?",
+    "question": "What type of government entities have you dealt with most frequently over the last 2 years, if any?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No specific type"
+      },
+      {
+        "answerID": 2,
+        "answer": "Local government entities"
+      },
+      {
+        "answerID": 3,
+        "answer": "State government entities"
+      },
+      {
+        "answerID": 4,
+        "answer": "Federal government entities"
+      }
+    ],
+    "employerQuestion": "What type of government entities do you expect the Sales Engineer to have the most experience dealing with, if any?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No specific type"
@@ -1668,7 +3499,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "164",
+    "questionID": "185",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -1676,8 +3507,27 @@ export const questionsData = [
       "Collaboration",
       "Experience Level"
     ],
-    "question": "What level of experience leading product feature trainings for sales teams do you expect from a candidate?",
+    "question": "What is your experience level with leading product feature trainings for sales teams?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner - Led a few sessions"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate - Led several sessions, familiar with best practices"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced - Regularly lead sessions, expert in training methodologies"
+      }
+    ],
+    "employerQuestion": "What level of experience leading product feature trainings for sales teams do you expect from a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience"
@@ -1697,15 +3547,42 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "165",
+    "questionID": "186",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Sales strategy",
       "sales experience"
     ],
-    "question": "What type of sales strategy should your prospective Sales Engineer have experience in?",
+    "question": "What type of sales strategy have you been primarily involved with as a Sales Engineer?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Direct sales - working directly with prospects on a one-to-one basis"
+      },
+      {
+        "answerID": 2,
+        "answer": "Channel sales - working with partners or resellers to sell to customers"
+      },
+      {
+        "answerID": 3,
+        "answer": "OEM sales - working with companies that incorporate our products into their offerings"
+      },
+      {
+        "answerID": 4,
+        "answer": "Retail sales - working with retail outlets that sell our products"
+      },
+      {
+        "answerID": 5,
+        "answer": "Wholesale - selling products in large quantities, typically to be retailed by others"
+      },
+      {
+        "answerID": 6,
+        "answer": "Other - please specify"
+      }
+    ],
+    "employerQuestion": "What type of sales strategy should your prospective Sales Engineer have experience in?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Direct sales - working directly with prospects on a one-to-one basis"
@@ -1733,7 +3610,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "166",
+    "questionID": "187",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -1741,8 +3618,27 @@ export const questionsData = [
       "Collaboration",
       "Experience Level"
     ],
-    "question": "What frequency of collaboration with Product Management teams do you expect from the Sales Engineer role?",
+    "question": "How frequently have you collaborated with Product Management teams in the last 2 years as a Sales Engineer?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Never collaborated"
+      },
+      {
+        "answerID": 2,
+        "answer": "Rarely - Only on specific projects or issues"
+      },
+      {
+        "answerID": 3,
+        "answer": "Occasionally - Regular touch points, but not weekly"
+      },
+      {
+        "answerID": 4,
+        "answer": "Frequently - Regular, weekly or more frequent interactions"
+      }
+    ],
+    "employerQuestion": "What frequency of collaboration with Product Management teams do you expect from the Sales Engineer role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No collaboration expected"
@@ -1762,7 +3658,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "167",
+    "questionID": "188",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -1770,8 +3666,27 @@ export const questionsData = [
       "leadership",
       "Launch experience"
     ],
-    "question": "What level of involvement in product launches is expected from the Sales Engineer in this role?",
+    "question": "Have you been involved in a product launch?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Experience: I have not had the opportunity to be involved in a product launch"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've observed and provided minor support for a product launch, but I was not deeply involved"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've had some involvement in product launches, typically providing technical support and preparing for client inquiries"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've played a substantial role in a product launch, coordinating technical aspects and preparing the sales team for client engagement"
+      }
+    ],
+    "employerQuestion": "What level of involvement in product launches is expected from the Sales Engineer in this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No involvement: The Sales Engineer is not expected to be involved in product launches"
@@ -1791,15 +3706,50 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "168",
+    "questionID": "189",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "industry focus",
       "industry"
     ],
-    "question": "Would it be beneficial if a candidate had a specific industy niche that they've primarily supported in deal cycles?",
+    "question": "What would most accurately describe the industry focus of prospects you've most frequently interacted with in the last 2 years? ",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No specific focus"
+      },
+      {
+        "answerID": 2,
+        "answer": "Tech/Software"
+      },
+      {
+        "answerID": 3,
+        "answer": "Healthcare"
+      },
+      {
+        "answerID": 4,
+        "answer": "Finance"
+      },
+      {
+        "answerID": 5,
+        "answer": "Manufacturing"
+      },
+      {
+        "answerID": 6,
+        "answer": "Telecommunications"
+      },
+      {
+        "answerID": 7,
+        "answer": "Energy"
+      },
+      {
+        "answerID": 8,
+        "answer": "Logistics/Supply Chain"
+      }
+    ],
+    "employerQuestion": "Would it be beneficial if a candidate had a specific industy niche that they've primarily supported in deal cycles?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No industry niche required"
@@ -1835,15 +3785,50 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "169",
+    "questionID": "190",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Product/Service experience",
       "Types of sales"
     ],
-    "question": "What types of products or services do you need a Sales Engineer to have experience selling?",
+    "question": "What types of products or services have you primarily supported the sale of as a Sales Engineer?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Software as a Service (SaaS) products"
+      },
+      {
+        "answerID": 2,
+        "answer": "Platform as a Service (PaaS) products"
+      },
+      {
+        "answerID": 3,
+        "answer": "Infrastructure as a Service (IaaS) products"
+      },
+      {
+        "answerID": 4,
+        "answer": "On-premise software products"
+      },
+      {
+        "answerID": 5,
+        "answer": "Professional consulting services"
+      },
+      {
+        "answerID": 6,
+        "answer": "Managed IT services"
+      },
+      {
+        "answerID": 7,
+        "answer": "Hardware technology products"
+      },
+      {
+        "answerID": 8,
+        "answer": "Custom solutions or integrations"
+      }
+    ],
+    "employerQuestion": "What types of products or services do you need a Sales Engineer to have experience selling?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Software as a Service (SaaS) products"
@@ -1879,15 +3864,50 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "170",
+    "questionID": "191",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Client interaction frequency",
       "Direct client engagement"
     ],
-    "question": "How frequently do you expect a Sales Engineer in this role to interact directly with prospective clients?",
+    "question": "How often do you interact directly with prospective clients in your most recent SE role? ",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Daily"
+      },
+      {
+        "answerID": 2,
+        "answer": "Several times a week"
+      },
+      {
+        "answerID": 3,
+        "answer": "Once a week"
+      },
+      {
+        "answerID": 4,
+        "answer": "A few times a month"
+      },
+      {
+        "answerID": 5,
+        "answer": "Once a month"
+      },
+      {
+        "answerID": 6,
+        "answer": "Less than once a month"
+      },
+      {
+        "answerID": 7,
+        "answer": "Rarely"
+      },
+      {
+        "answerID": 8,
+        "answer": "Never"
+      }
+    ],
+    "employerQuestion": "How frequently do you expect a Sales Engineer in this role to interact directly with prospective clients?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Daily"
@@ -1923,15 +3943,42 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "171",
+    "questionID": "192",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Management experience",
       "Sales Engineers team"
     ],
-    "question": "Is managing a team of Sales Engineers a part of this role?",
+    "question": "Do you have experience managing a team of Sales Engineers?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, I have managed a large team (10+ members)"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, I have managed a small to medium team (3-9 members)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Yes, I have managed a small team (1-2 members)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Yes, but only in a temporary or acting capacity"
+      },
+      {
+        "answerID": 5,
+        "answer": "No, but I have experience in mentorship or training Sales Engineers"
+      },
+      {
+        "answerID": 6,
+        "answer": "No, but I have had leadership roles in other areas"
+      }
+    ],
+    "employerQuestion": "Is managing a team of Sales Engineers a part of this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Yes, the role involves managing a large team (10+ members)"
@@ -1959,15 +4006,42 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "172",
+    "questionID": "193",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Team support experience",
       "Large team support"
     ],
-    "question": "What's the size of the Account Executive team that this Sales Engineer role will be directly supporting on deals?",
+    "question": "What's the size of the Account Executive team you have the most experience directly supporting on deals as an SE? ",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "A large team of over 50 Account Executives"
+      },
+      {
+        "answerID": 2,
+        "answer": "A medium-sized team of 30-50 Account Executives"
+      },
+      {
+        "answerID": 3,
+        "answer": "A small to medium-large team of 10-30 members"
+      },
+      {
+        "answerID": 4,
+        "answer": "A medium-sized team of 10-30 Account Executives"
+      },
+      {
+        "answerID": 5,
+        "answer": "A smaller team of 6-10 Account Executives"
+      },
+      {
+        "answerID": 6,
+        "answer": "A small team of 5 or less Account Executives"
+      }
+    ],
+    "employerQuestion": "What's the size of the Account Executive team that this Sales Engineer role will be directly supporting on deals?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "A large team of over 50 Account Executives"
@@ -1995,7 +4069,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "173",
+    "questionID": "194",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -2003,8 +4077,35 @@ export const questionsData = [
       "Sales cycle experience",
       "cycle"
     ],
-    "question": "What's the typical length of the sales cycle the Sales Engineer would be managing in this role?",
+    "question": "What's the longest sales cycle you've directly supported?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than a month"
+      },
+      {
+        "answerID": 2,
+        "answer": "1-3 months"
+      },
+      {
+        "answerID": 3,
+        "answer": "3-6 months"
+      },
+      {
+        "answerID": 4,
+        "answer": "6-9 months"
+      },
+      {
+        "answerID": 5,
+        "answer": "9-12 months"
+      },
+      {
+        "answerID": 6,
+        "answer": "1+ years"
+      }
+    ],
+    "employerQuestion": "What's the typical length of the sales cycle the Sales Engineer would be managing in this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Less than a month"
@@ -2032,15 +4133,50 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "174",
+    "questionID": "195",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "Sales methodology experience",
       "Specific methodology familiarity"
     ],
-    "question": "Which sales methodology does your team primarily use?",
+    "question": "What has been your primary sales methodology (e.g., Challenger Sale, SPIN selling)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Challenger Sale"
+      },
+      {
+        "answerID": 2,
+        "answer": "SPIN Selling"
+      },
+      {
+        "answerID": 3,
+        "answer": "Solution Selling"
+      },
+      {
+        "answerID": 4,
+        "answer": "Value Selling"
+      },
+      {
+        "answerID": 5,
+        "answer": "Conceptual Selling"
+      },
+      {
+        "answerID": 6,
+        "answer": "Sandler Selling System"
+      },
+      {
+        "answerID": 7,
+        "answer": "Consultative Selling"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "employerQuestion": "Which sales methodology does your team primarily use?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Challenger Sale"
@@ -2076,7 +4212,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "175",
+    "questionID": "196",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -2085,8 +4221,43 @@ export const questionsData = [
       "B2C",
       "B2G experience"
     ],
-    "question": "What type of sales model does your business primarily operate under (B2B, B2C, B2G)?",
+    "question": "What type of sales model are you most familiar with as a Sales Engineer (B2B, B2C, B2G)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "B2B (Business-to-Business)"
+      },
+      {
+        "answerID": 2,
+        "answer": "B2C (Business-to-Consumer)"
+      },
+      {
+        "answerID": 3,
+        "answer": "B2G (Business-to-Government)"
+      },
+      {
+        "answerID": 4,
+        "answer": "A combination of B2B and B2C"
+      },
+      {
+        "answerID": 5,
+        "answer": "A combination of B2B and B2G"
+      },
+      {
+        "answerID": 6,
+        "answer": "A combination of B2C and B2G"
+      },
+      {
+        "answerID": 7,
+        "answer": "All three (B2B, B2C, and B2G)"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "employerQuestion": "What type of sales model does your business primarily operate under (B2B, B2C, B2G)?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "B2B (Business-to-Business)"
@@ -2122,7 +4293,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "176",
+    "questionID": "197",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -2130,8 +4301,35 @@ export const questionsData = [
       "Sales quota familiarity",
       "quota"
     ],
-    "question": "What kind of annual team sales quota should an SE feel comfortable supporting in this role?",
+    "question": "What kind of annual sales quota was the team you were directly supporting responsible to meet? ",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $1M"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1M - $5M"
+      },
+      {
+        "answerID": 3,
+        "answer": "$5M - $10M"
+      },
+      {
+        "answerID": 4,
+        "answer": "$10M - $25M"
+      },
+      {
+        "answerID": 5,
+        "answer": "$25M - $50M"
+      },
+      {
+        "answerID": 6,
+        "answer": "More than $50M"
+      }
+    ],
+    "employerQuestion": "What kind of annual team sales quota should an SE feel comfortable supporting in this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Less than $1M"
@@ -2159,14 +4357,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "177",
+    "questionID": "198",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
       "product management"
     ],
-    "question": "What level of experience do you expect from a Sales Engineer candidate in this role, on day 1, in terms of communicating and collaborating with Engineering and Product Management teams?",
+    "question": "How would you rate your experience in communicating and collaborating with Product Management teams?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Experience: I have no prior experience in technical collaboration with Product Management teams"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have some basic experience or knowledge in this area and may need some additional guidance"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can confidently collaborate with Product Management teams, translating customer feedback into actionable product features"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in this area, often acting as the bridge between customer requirements and product design"
+      }
+    ],
+    "employerQuestion": "What level of experience do you expect from a Sales Engineer candidate in this role, on day 1, in terms of communicating and collaborating with Engineering and Product Management teams?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No Experience: The candidate doesn't necessarily need any prior experience in this area"
@@ -2186,7 +4403,232 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "178",
+    "questionID": "101",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "Salesforce",
+      "CRM"
+    ],
+    "question": "Which statement best describes your experience with customizing Salesforce instances on behalf of companies?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have some experience in customizing Salesforce; I can create and modify fields, layouts, and simple automations like email alerts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have customized Salesforce in a professional setting; I can create custom objects, complex automations using Process Builder, and utilize validation rules"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in customizing Salesforce; I can design and implement complex automations, build custom applications, and effectively manage user roles and profiles"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with customizing Salesforce instances?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have some experience in customizing Salesforce; they can create and modify fields, layouts, and simple automations like email alerts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have customized Salesforce in a professional setting; they can create custom objects, complex automations using Process Builder, and utilize validation rules"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be proficient in customizing Salesforce; they can design and implement complex automations, build custom applications, and effectively manage user roles and profiles"
+      }
+    ]
+  },
+  {
+    "questionID": "102",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "AWS",
+      "cloud platform"
+    ],
+    "question": "Which statement best describes your proficiency with AWS (Amazon Web Services)?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used AWS for simple tasks, such as launching an EC2 instance or setting up an S3 bucket"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I regularly use a variety of AWS services for more complex tasks, such as setting up a VPC, using Lambda functions, or managing RDS databases"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design, deploy, and manage complex infrastructures on AWS, including cost optimization and security management"
+      }
+    ],
+    "employerQuestion": "What level of AWS proficiency are you expecting from your candidate?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used AWS for simple tasks, such as launching an EC2 instance or setting up an S3 bucket"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate regularly uses a variety of AWS services for more complex tasks, such as setting up a VPC, using Lambda functions, or managing RDS databases"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate can design, deploy, and manage complex infrastructures on AWS, including cost optimization and security management"
+      }
+    ]
+  },
+  {
+    "questionID": "103",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "HubSpot",
+      "CRM"
+    ],
+    "question": "Which statement best describes your experience with HubSpot CRM's Sales Hub?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used HubSpot for basic contact management and deal tracking"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have configured HubSpot CRM for sales processes and created custom reports and dashboards"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can customize HubSpot CRM and Sales Hub, create automation with workflows, and handle integrations with other systems"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with HubSpot CRM's Sales Hub?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used HubSpot for basic contact management and deal tracking"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have configured HubSpot CRM for sales processes and created custom reports and dashboards"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be able to customize HubSpot CRM and Sales Hub, create automation with workflows, and handle integrations with other systems"
+      }
+    ]
+  },
+  {
+    "questionID": "104",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "Tableau",
+      "Data Visualization",
+      "Proficiency"
+    ],
+    "question": "Which statement best describes your proficiency with Tableau?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Tableau for basic tasks, such as creating simple charts and visualizations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've regularly used Tableau, including creating dashboards, interactive visualizations, and using basic features for data analytics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Tableau, including data integration, advanced data analysis, creating complex interactive dashboards, and utilizing scripting for more complex tasks"
+      }
+    ],
+    "employerQuestion": "",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      }
+    ]
+  },
+  {
+    "questionID": "105",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "BI",
+      "Business Intelligence",
+      "Power BI"
+    ],
+    "question": "Which statement best describes your experience with Microsoft Power BI?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can create basic visualizations and reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can create complex visualizations, dashboards and manipulate data models. I understand concepts like DAX formulas and Power Query"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design and implement complex reports and dashboards, integrate with other Microsoft products, and optimize performance. I can also use advanced features like quick measures, conditional columns, and hierarchy creation"
+      }
+    ],
+    "employerQuestion": "Which of these best describes the level of Microsoft Power BI experience you are looking for in a candidate?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate basic visualizations and reports in Microsoft Power BI"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of creating complex visualizations, dashboards, and manipulating data models. Familiar with DAX formulas and Power Query"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can design and implement complex reports and dashboards, integrate Power BI with other Microsoft products, and optimize performance. Utilizes advanced features like quick measures, conditional columns, and hierarchy creation"
+      }
+    ]
+  },
+  {
+    "questionID": "199",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2194,8 +4636,27 @@ export const questionsData = [
       "Dynamics",
       "Microsoft Dynamics"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with using Microsoft Dynamics 365 for customer relationship management?",
+    "question": "Which statement best describes your experience with using Microsoft Dynamics 365 for customer relationship management?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Microsoft Dynamics 365 for basic tasks like tracking contacts and leads"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can use Microsoft Dynamics 365 for more complex tasks such as creating customer journeys, managing marketing campaigns, and utilizing sales insights"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in customizing Salesforce; I can design and implement complex automations, build custom applications, and effectively manage user roles and profiles"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with using Microsoft Dynamics 365 for customer relationship management?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2215,15 +4676,82 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "179",
+    "questionID": "200",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "Salesforce CRM",
+      "Customer Relationship Management",
+      "Proficiency"
+    ],
+    "question": "Which statement best describes your experience with using Salesforce for data entry and reporting?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Salesforce for basic tasks like data entry and generating simple reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with using Salesforce for data entry and reporting?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Salesforce for basic tasks like data entry and generating simple reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
+      }
+    ]
+  },
+  {
+    "questionID": "201",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Salesforce",
       "CRM"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with importing data into Salesforce?",
+    "question": "Which statement best describes your experience with importing data into Salesforce?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used built-in tools like Data Import Wizard for basic data imports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have regularly performed data imports into Salesforce in a professional setting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient with data import in Salesforce and can handle large data volumes and complex data mappings"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with importing data into Salesforce?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2243,15 +4771,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "180",
+    "questionID": "202",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Salesforce",
       "CRM"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with using Salesforce APIs?",
+    "question": "Which statement best describes your experience with using Salesforce APIs?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concept of Salesforce APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Salesforce APIs for basic integrations"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can use Salesforce APIs for complex integrations, including SOAP and REST APIs"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with using Salesforce APIs?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2271,15 +4818,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "181",
+    "questionID": "203",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
       "JIRA"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with JIRA for issue and project tracking?",
+    "question": "Which statement best describes your experience with JIRA for issue and project tracking?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used JIRA for basic task tracking or in a learning environment, and understand the concept of issues and the basic workflow"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used JIRA in a professional setting for project tracking, and have experience with features like setting priorities, assigning issues, and updating workflows"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with JIRA, and have managed complex projects using features like advanced search, custom fields, workflow configuration, and reporting"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with JIRA for issue and project tracking?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2299,15 +4865,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "182",
+    "questionID": "204",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Tableau",
       "Data Visualization"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Tableau for data visualization?",
+    "question": "Which statement best describes your experience with Tableau for data visualization?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have created basic charts and graphs in Tableau"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can build interactive dashboards and perform data blending in Tableau"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can create complex data visualizations, use Tableau’s scripting language to create calculated fields, and optimize performance"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Tableau for data visualization?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2327,15 +4912,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "183",
+    "questionID": "205",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Zoho",
       "CRM"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Zoho CRM?",
+    "question": "Which statement best describes your experience with Zoho CRM?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Zoho CRM for basic contact and lead management"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have configured Zoho CRM modules and created reports and dashboards"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can customize Zoho CRM, automate processes using workflows, and integrate it with other systems"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Zoho CRM?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2355,15 +4959,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "184",
+    "questionID": "206",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "HubSpot",
       "CRM"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with HubSpot's marketing automation capabilities?",
+    "question": "Which statement best describes your experience with HubSpot's marketing automation capabilities?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used HubSpot for simple email campaigns"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used HubSpot to design and implement comprehensive marketing campaigns including emails, social media, and landing pages"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can use HubSpot to create complex, multi-channel marketing automation campaigns, including personalized content and A/B testing"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with HubSpot's marketing automation capabilities?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2383,15 +5006,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "185",
+    "questionID": "207",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "HubSpot",
       "CRM"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with HubSpot's Service Hub?",
+    "question": "Which statement best describes your experience with HubSpot's Service Hub?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Service Hub for basic ticket management"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Service Hub to manage customer issues, implement service automation, and report on service metrics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient with all aspects of Service Hub, including customer feedback and knowledge management tools, and advanced service analytics"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with HubSpot's Service Hub?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2411,15 +5053,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "186",
+    "questionID": "208",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Pipedrive",
       "CRM"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have in managing and optimizing sales pipelines in Pipedrive CRM?",
+    "question": "Which statement best describes your experience with Pipedrive CRM?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've used Pipedrive CRM for tracking deals and have a basic understanding of sales pipeline stages"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Pipedrive CRM to manage the sales pipeline, including creating and customizing pipeline stages, managing deals, and analyzing pipeline metrics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've used Pipedrive CRM extensively to manage and optimize sales pipelines, which includes creating multiple customized pipelines, analyzing sales metrics for forecasting, and implementing strategies for pipeline efficiency"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have in managing and optimizing sales pipelines in Pipedrive CRM?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2439,15 +5100,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "187",
+    "questionID": "209",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
       "Trello"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Trello's board and card system for project management?",
+    "question": "Which statement best describes your experience with Trello's board and card system for project management?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Trello for personal projects or in a learning environment, primarily for creating basic lists and cards"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Trello in a professional setting, using features like labels, checklists, due dates, and attachments to manage tasks and projects"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Trello, using advanced features like power-ups, automation (Butler), and integrations with other tools"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Trello's board and card system for project management?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2467,15 +5147,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "188",
+    "questionID": "210",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management.",
       "Asana"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Asana for project management and task tracking?",
+    "question": "Which statement best describes your experience with Asana for project management and task tracking?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Asana for personal projects or in a learning environment, primarily for creating tasks and subtasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Asana in a professional setting, creating and managing projects, using features like dependencies, tags, and custom fields"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Asana, creating complex projects with sections and columns, using advanced features like timeline view, reports, and automations"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Asana for project management and task tracking?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2495,7 +5194,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "189",
+    "questionID": "211",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2504,6 +5203,25 @@ export const questionsData = [
     ],
     "question": "Which statement best describes your experience with Basecamp for project management and team collaboration?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Basecamp for basic project management or in a learning environment, and am familiar with features like to-do lists and message boards"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Basecamp in a professional setting for project management, and have experience with features like creating projects, assigning tasks, and managing deadlines"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Basecamp, and have managed team collaborations using features like Hill Charts, direct messages, and automatic check-ins"
+      }
+    ],
+    "employerQuestion": "Which statement best describes your experience with Basecamp for project management and team collaboration?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2523,15 +5241,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "190",
+    "questionID": "212",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
       "Monday"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Monday.com for project management and team collaboration?",
+    "question": "Which statement best describes your experience with Monday.com for project management and team collaboration?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Monday.com for basic project management or in a learning environment, and am familiar with features like creating boards and tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Monday.com in a professional setting for project management, and have experience with features like automations, integrations, and managing deadlines"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Monday.com, and have managed team collaborations using features like workload management, time tracking, and advanced reporting"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Monday.com for project management and team collaboration?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2551,15 +5288,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "191",
+    "questionID": "213",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "project management",
       "Wrike"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Wrike for project management?",
+    "question": "Which statement best describes your experience with Wrike for project management?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Wrike for basic task management or in a learning environment, and am familiar with creating projects and tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Wrike in a professional setting, using features like time tracking, reporting, and task dependencies"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Wrike, using advanced features like Gantt charts, custom workflows, and workload view"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Wrike for project management?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2579,15 +5335,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "192",
+    "questionID": "214",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Oracle",
       "Database"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Oracle Database for data management and operations?",
+    "question": "Which statement best describes your experience with Oracle Database for data management and operations?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Oracle Database for basic data management or in a learning environment, and am familiar with SQL queries and basic database operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Oracle Database in a professional setting for data management, and have experience with features like PL/SQL, data backup, and performance tuning"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Oracle Database, and have managed large data volumes using features like Real Application Clusters (RAC), Data Guard, and Oracle Exadata"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Oracle Database for data management and operations?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2607,15 +5382,30 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "193",
+    "questionID": "215",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Oracle",
       "Database"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with performance optimization and tuning in Oracle Database?",
+    "question": "Which statement best describes your experience with Oracle Database for performance optimization and tuning?",
     "answers": [
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concepts of performance optimization and tuning in Oracle Database, such as using indexes effectively and managing optimizer statistics"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience in performance optimization and tuning in a professional setting, including using execution plans, database configuration settings, and Oracle's Automatic Database Diagnostic Monitor (ADDM)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in performance optimization and tuning in Oracle Database, and am skilled in areas such as SQL Tuning Advisor, SQL Access Advisor, and Real Application Testing (RAT)"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with performance optimization and tuning in Oracle Database?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2635,7 +5425,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "194",
+    "questionID": "216",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2643,8 +5433,27 @@ export const questionsData = [
       "SQL server",
       "Database"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Microsoft SQL Server for data management and operations?",
+    "question": "Which statement best describes your experience with Microsoft SQL Server for data management and operations?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Microsoft SQL Server for basic data management or in a learning environment, and am familiar with T-SQL queries and basic database operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Microsoft SQL Server in a professional setting for data management, and have experience with features like stored procedures, data backup, and performance tuning"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Microsoft SQL Server, and have managed large data volumes using features like Always On Availability Groups, SQL Server Integration Services (SSIS), and SQL Server Analysis Services (SSAS)"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Microsoft SQL Server for data management and operations?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2664,14 +5473,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "195",
+    "questionID": "217",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "PostgreSQL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with PostgreSQL for data management and operations?",
+    "question": "Which statement best describes your experience with PostgreSQL for data management and operations?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used PostgreSQL for basic data management or in a learning environment, and I am familiar with SQL queries and basic database operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used PostgreSQL in a professional setting for data management, and have experience with features like stored procedures, JSONB data type, and MVCC (Multi-Version Concurrency Control)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with PostgreSQL, and have managed large data volumes using features like partitioning, PostGIS for spatial data, and advanced indexing strategies"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with PostgreSQL for data management and operations?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2691,7 +5519,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "196",
+    "questionID": "218",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2699,8 +5527,27 @@ export const questionsData = [
       "database",
       "SQL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with MySQL for data management and operations?",
+    "question": "Which statement best describes your experience with MySQL for data management and operations?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used MySQL for basic data management or in a learning environment, and am familiar with SQL queries and basic database operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used MySQL in a professional setting for data management, and have experience with features like stored procedures, triggers, and InnoDB storage engine"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with MySQL, and have managed large data volumes using features like MySQL replication, performance schema, and query optimization techniques"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with MySQL for data management and operations?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2720,15 +5567,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "197",
+    "questionID": "219",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "MonogDB",
       "databasem NoSQL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with MongoDB for NoSQL data management?",
+    "question": "Which statement best describes your experience with MongoDB for NoSQL data management?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used MongoDB for basic NoSQL data management or in a learning environment, and am familiar with BSON data format and basic CRUD operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used MongoDB in a professional setting for NoSQL data management, and have experience with features like indexing, replication, and the Aggregation Pipeline"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with MongoDB, and have managed large data volumes using features like sharding, GridFS for storing large files, and advanced query optimization techniques"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with MongoDB for NoSQL data management?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2748,7 +5614,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "198",
+    "questionID": "220",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2756,8 +5622,27 @@ export const questionsData = [
       "SQL",
       "database"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with SQLite for lightweight data management?",
+    "question": "Which statement best describes your experience with SQLite for lightweight data management?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used SQLite for basic data management or in a learning environment, and am familiar with SQL queries and basic database operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used SQLite in a professional setting for lightweight data management, and have experience with features like user-defined functions, transactions, and views"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with SQLite, and have managed local databases in applications using features like Full-Text Search (FTS), Recursive Queries, and the SQLite Shell"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with SQLite for lightweight data management?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2777,7 +5662,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "199",
+    "questionID": "221",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2785,8 +5670,27 @@ export const questionsData = [
       "big data",
       "data warehousing"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Google BigQuery for big data analysis?",
+    "question": "Which statement best describes your experience with Google BigQuery for big data analysis?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Google BigQuery for basic big data analysis or in a learning environment, and am familiar with SQL queries and simple data loads"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Google BigQuery in a professional setting for big data analysis, and have experience with managing datasets, partitioning and clustering tables, and query optimization"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Google BigQuery, and have managed large data volumes using features like BigQuery ML for machine learning, BigQuery GIS for geospatial analysis, and BigQuery BI Engine for fast, in-memory analysis"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Google BigQuery for big data analysis?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2806,7 +5710,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "200",
+    "questionID": "222",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2814,8 +5718,27 @@ export const questionsData = [
       "data warehousing",
       "redshift"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Amazon Redshift for data warehousing?",
+    "question": "Which statement best describes your experience with Amazon Redshift for data warehousing?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Amazon Redshift for basic data warehousing or in a learning environment, and am familiar with loading data and simple SQL queries"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Amazon Redshift in a professional setting for data warehousing, and have experience with managing clusters, designing tables, and performance tuning"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Amazon Redshift, and have managed large data volumes using features like Redshift Spectrum for querying external data, columnar storage for fast query performance, and advanced data compression techniques"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Amazon Redshift for data warehousing?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2835,7 +5758,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "201",
+    "questionID": "223",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2843,8 +5766,27 @@ export const questionsData = [
       "data warehousing",
       "snowflake"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Snowflake's cloud data platform?",
+    "question": "Which statement best describes your experience with Snowflake's cloud data platform?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Snowflake in a learning environment or for basic data tasks, familiar with concepts like virtual warehouses and loading data"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Snowflake in a professional setting for data tasks, and have experience with managing and querying data, utilizing Snowflake's unique architecture, and optimizing performance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Snowflake, capable of designing and implementing complex data solutions, managing security and access controls, and maximizing the platform's efficiency and cost-effectiveness"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Snowflake's cloud data platform?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2864,7 +5806,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "202",
+    "questionID": "224",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2873,8 +5815,27 @@ export const questionsData = [
       "azure",
       "azure data warehouse"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Microsoft Azure Data Warehouse (Azure Synapse Analytics)?",
+    "question": "Which statement best describes your experience with Microsoft Azure Data Warehouse (Azure Synapse Analytics)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Azure Data Warehouse in a learning environment or for basic data tasks, familiar with concepts like data loading and simple SQL queries"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Azure Data Warehouse in a professional setting for data tasks, and have experience with data management, scaling compute resources, and optimizing query performance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Azure Data Warehouse, capable of designing and implementing complex data solutions, managing security and access controls, and integrating with other Azure services for comprehensive data analytics solutions"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Microsoft Azure Data Warehouse (Azure Synapse Analytics)?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2894,7 +5855,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "203",
+    "questionID": "225",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2902,8 +5863,27 @@ export const questionsData = [
       "big data",
       "data warehousing"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Teradata's data warehousing solutions?",
+    "question": "Which statement best describes your experience with Teradata's data warehousing solutions?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Teradata in a learning environment, understanding basic concepts such as data loading and basic SQL queries"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Teradata in a professional setting, being able to manage data, implement performance optimization strategies, and handle Teradata utilities like FastLoad and MultiLoad"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Teradata, capable of designing and managing complex data warehousing solutions, handling large datasets, and integrating Teradata with other analytics tools"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Teradata's data warehousing solutions?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2923,7 +5903,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "204",
+    "questionID": "226",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -2931,8 +5911,27 @@ export const questionsData = [
       "data warehousing",
       "IBM Db2"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with IBM Db2?",
+    "question": "Which statement best describes your experience with IBM Db2?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used IBM Db2 in a learning environment, familiar with basic data operations and SQL queries"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used IBM Db2 in a professional setting, capable of managing data, implementing security measures, and optimizing database performance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with IBM Db2, proficient in designing and managing complex data solutions, handling large datasets, and tuning the performance of Db2 environments"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with IBM Db2?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2952,15 +5951,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "205",
+    "questionID": "227",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Apache Hadoop",
       "big data"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Apache Hadoop?",
+    "question": "Which statement best describes your experience with Apache Hadoop?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Apache Hadoop in a learning environment, familiar with its file system (HDFS), and can perform basic data operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Apache Hadoop in a professional setting, capable of implementing MapReduce jobs, managing Hadoop clusters, and understanding YARN"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Apache Hadoop, proficient in designing and managing complex data processing tasks, implementing data-intensive applications, and optimizing Hadoop's performance"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Apache Hadoop?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -2980,15 +5998,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "206",
+    "questionID": "228",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "big data",
       "apache spark"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Apache Spark?",
+    "question": "Which statement best describes your experience with Apache Spark?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Apache Spark in a learning environment, familiar with basic concepts like Resilient Distributed Datasets (RDDs) and Spark SQL"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Apache Spark in a professional setting, able to handle data processing tasks, work with Spark Streaming, and perform data analysis with Spark MLlib"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Apache Spark, capable of developing scalable Spark applications, optimizing Spark's performance, and integrating Spark with other big data technologies"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Apache Spark?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3008,7 +6045,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "207",
+    "questionID": "229",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3016,8 +6053,27 @@ export const questionsData = [
       "apache",
       "Flink"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Apache Flink?",
+    "question": "Which statement best describes your experience with Apache Flink?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Apache Flink in a learning environment, familiar with its architecture and basic APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Apache Flink in a professional setting, can implement real-time data processing tasks and understand concepts like Event Time and Watermarks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Apache Flink, capable of designing complex streaming applications, optimizing Flink's performance, and integrating Flink with other big data technologies"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Apache Flink?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3037,7 +6093,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "208",
+    "questionID": "230",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3045,8 +6101,27 @@ export const questionsData = [
       "apache",
       "Beam"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Apache Beam?",
+    "question": "Which statement best describes your experience with Apache Beam?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Apache Beam in a learning environment, familiar with its programming model and basic transformations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Apache Beam in a professional setting, able to develop basic Beam pipelines and understand concepts like Windowing and Watermarks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Apache Beam, capable of designing complex Beam pipelines, optimizing Beam's performance, and integrating Beam with different data processing engines"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Apache Beam?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3066,7 +6141,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "209",
+    "questionID": "231",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3074,8 +6149,27 @@ export const questionsData = [
       "big data",
       "Kafka"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Apache Kafka?",
+    "question": "Which statement best describes your experience with Apache Kafka?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Apache Kafka in a learning environment, familiar with its basic concepts and components like Topics, Producers, and Consumers"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Apache Kafka in a professional setting, able to design Kafka-based messaging systems and have some understanding of Kafka Streams and Kafka Connect"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Apache Kafka, can design and optimize large-scale Kafka-based real-time data processing systems, including deep knowledge of Kafka Streams, Connect, and KSQL"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Apache Kafka?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3095,7 +6189,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "210",
+    "questionID": "232",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3103,8 +6197,27 @@ export const questionsData = [
       "ML",
       "machine learning"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Google Cloud ML Engine?",
+    "question": "Which statement best describes your experience with Google Cloud ML Engine?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Google Cloud ML Engine in a learning environment, familiar with its basic functionality and able to train and deploy basic ML models"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Google Cloud ML Engine in a professional setting, able to use its advanced features like hyperparameter tuning, and understand its integration with other Google Cloud services"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Google Cloud ML Engine, capable of designing and implementing complex ML workflows, optimizing model training and prediction performance, and managing large-scale ML projects"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Google Cloud ML Engine?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3124,7 +6237,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "211",
+    "questionID": "233",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3132,8 +6245,27 @@ export const questionsData = [
       "machine learning",
       "SageMaker"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Amazon SageMaker?",
+    "question": "Which statement best describes your experience with Amazon SageMaker?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Amazon SageMaker in a learning environment, familiar with its basic functionality like model building, training, and deployment"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Amazon SageMaker in a professional setting, capable of utilizing its features like Automatic Model Tuning and SageMaker Studio, and can integrate it with other AWS services"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Amazon SageMaker, can design, implement, and optimize end-to-end ML workflows, manage large-scale ML projects, and am knowledgeable about its latest features and best practices"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Amazon SageMaker?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3153,7 +6285,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "212",
+    "questionID": "234",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3161,8 +6293,27 @@ export const questionsData = [
       "machine learning",
       "Azure"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Microsoft Azure Machine Learning?",
+    "question": "Which statement best describes your experience with Microsoft Azure Machine Learning?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Microsoft Azure Machine Learning in a learning environment, familiar with creating and managing resources with Azure Machine Learning Studio"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Microsoft Azure Machine Learning in a professional setting, proficient in building, training, and deploying machine learning models, and using the Azure ML Python SDK"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Microsoft Azure Machine Learning, able to use advanced features like AutoML and HyperDrive for optimization, and managing and deploying machine learning pipelines at scale"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Microsoft Azure Machine Learning?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3182,7 +6333,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "213",
+    "questionID": "235",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3191,8 +6342,27 @@ export const questionsData = [
       "IBM Watson",
       "Watson"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with IBM Watson?",
+    "question": "Which statement best describes your experience with IBM Watson?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used IBM Watson in a learning environment, familiar with its basic functionality, including Watson Assistant and Watson Discovery"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used IBM Watson in a professional setting, proficient in using its features like Watson Studio, Watson Machine Learning, and Watson Visual Recognition"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with IBM Watson, capable of designing and implementing complex AI applications using multiple Watson services, and optimizing their performance"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with IBM Watson?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3212,7 +6382,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "214",
+    "questionID": "236",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3220,8 +6390,27 @@ export const questionsData = [
       "machine learning",
       "Databricks"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Databricks?",
+    "question": "Which statement best describes your experience with Databricks?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Databricks in a learning environment, familiar with basic functionalities, including setting up Databricks workspace and running Spark jobs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Databricks in a professional setting, proficient in managing clusters, developing notebooks, and using Databricks MLflow for machine learning workflows"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Databricks, capable of optimizing Spark jobs, using advanced features of Databricks Delta Lake, and integrating Databricks with other services for end-to-end data solutions"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Databricks?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3241,7 +6430,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "215",
+    "questionID": "237",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3249,8 +6438,27 @@ export const questionsData = [
       "ML",
       "machine learning"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with TensorFlow?",
+    "question": "Which statement best describes your experience with TensorFlow?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used TensorFlow in a learning environment, familiar with basic functionalities like defining, training, and executing simple machine learning models"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used TensorFlow in a professional setting, proficient in using TensorFlow's advanced features like Keras API, TensorFlow Data and TensorFlow Estimators"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with TensorFlow, capable of designing and implementing complex machine learning models, using TensorFlow Extended (TFX) for end-to-end machine learning workflows, and optimizing model performance using TensorFlow Profiler"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with TensorFlow?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3270,7 +6478,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "216",
+    "questionID": "238",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3278,8 +6486,27 @@ export const questionsData = [
       "machine learning",
       "pytorch"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with PyTorch?",
+    "question": "Which statement best describes your experience with PyTorch?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used PyTorch in a learning environment, familiar with creating basic neural networks and performing simple tensor operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used PyTorch in a professional setting, proficient in designing and implementing complex models, using advanced features like autograd for automatic differentiation, and PyTorch Lightning for model training"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with PyTorch, capable of optimizing models for production, integrating PyTorch with other services for end-to-end machine learning workflows, and using PyTorch's ecosystem tools like TorchServe and TorchElastic"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with PyTorch?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3299,7 +6526,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "217",
+    "questionID": "239",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3308,8 +6535,27 @@ export const questionsData = [
       "weights and biases",
       "W&B"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Weights & Biases?",
+    "question": "Which statement best describes your experience with Weights & Biases?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Weights & Biases in a learning environment, familiar with tracking experiments and visualizing results"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Weights & Biases in a professional setting, proficient in using its advanced features like Sweeps for hyperparameter optimization and Artifacts for dataset and model versioning"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Weights & Biases, capable of integrating it with other ML tools for end-to-end ML workflows, and utilizing its capabilities for team collaboration and production monitoring"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Weights & Biases?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3329,15 +6575,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "218",
+    "questionID": "240",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Talend",
       "Data Integration"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Talend?",
+    "question": "Which statement best describes your experience with Talend?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Talend for simple data integration tasks, familiar with its graphical interface and basic components"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Talend in a professional setting, proficient in creating complex jobs, handling errors, and integrating it with various data sources and targets"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Talend, capable of optimizing its performance, using its advanced features like Talend Data Quality and Talend Data Stewardship, and implementing Talend in large-scale projects"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Talend?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3357,15 +6622,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "219",
+    "questionID": "241",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Data Integration",
       "Informatica"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Informatica PowerCenter?",
+    "question": "Which statement best describes your experience with Informatica PowerCenter?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Informatica PowerCenter for simple data integration tasks, familiar with its Designer, Workflow Manager, and Workflow Monitor tools"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Informatica PowerCenter in a professional setting, proficient in creating mappings, sessions, workflows, and handling various transformations"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Informatica PowerCenter, capable of optimizing its performance, managing repositories, and implementing complex ETL processes"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Informatica PowerCenter?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3385,7 +6669,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "220",
+    "questionID": "242",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3394,8 +6678,27 @@ export const questionsData = [
       "InfoSphere",
       "DataStage"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with IBM InfoSphere DataStage?",
+    "question": "Which statement best describes your experience with IBM InfoSphere DataStage?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used IBM InfoSphere DataStage for simple data integration tasks, familiar with its basic components and stages"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used IBM InfoSphere DataStage in a professional setting, proficient in designing parallel jobs, handling various transformations, and integrating it with different data sources and targets"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with IBM InfoSphere DataStage, capable of optimizing its performance, implementing complex ETL processes, and managing IBM InfoSphere DataStage projects in large-scale environments"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with IBM InfoSphere DataStage?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3415,7 +6718,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "221",
+    "questionID": "243",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3424,8 +6727,27 @@ export const questionsData = [
       "SSIS",
       "server integration services"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Microsoft SQL Server Integration Services (SSIS)?",
+    "question": "Which statement best describes your experience with Microsoft SQL Server Integration Services (SSIS)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used SSIS for simple data integration tasks, familiar with the basic tasks and transformations, as well as the control flow and data flow design interfaces"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used SSIS in a professional setting, capable of creating complex SSIS packages, handling errors, and integrating it with various data sources and targets"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with SSIS, proficient in performance tuning, deploying and managing SSIS packages, and implementing complex ETL solutions with SSIS"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Microsoft SQL Server Integration Services (SSIS)?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3445,7 +6767,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "222",
+    "questionID": "244",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3453,8 +6775,27 @@ export const questionsData = [
       "Oracle",
       "Oracle Data Integrator"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Oracle Data Integrator?",
+    "question": "Which statement best describes your experience with Oracle Data Integrator?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Oracle Data Integrator for simple data integration tasks, familiar with its components like projects, models, and knowledge modules"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Oracle Data Integrator in a professional setting, capable of designing mappings, procedures, packages, and handling diverse data sources and targets"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Oracle Data Integrator, able to optimize its performance, handle complex transformations, and manage large-scale data integration projects"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Oracle Data Integrator?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3474,15 +6815,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "223",
+    "questionID": "245",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Stitch Data",
       "ETL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Stitch Data?",
+    "question": "Which statement best describes your experience with Stitch Data?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Stitch Data for simple ETL tasks, familiar with setting up data sources and destinations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Stitch Data in a professional setting, capable of managing and troubleshooting data replication pipelines"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Stitch Data, capable of handling complex ETL processes, optimizing data replication, and managing Stitch projects in a large-scale environment"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Stitch Data?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3502,15 +6862,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "224",
+    "questionID": "246",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "FiveTran",
       "ETL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Fivetran?",
+    "question": "Which statement best describes your experience with Fivetran?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Fivetran for basic data integration tasks, familiar with setting up connectors and configuring destinations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Fivetran in a professional setting, capable of handling diverse data sources, managing syncs, and troubleshooting pipeline issues"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Fivetran, capable of optimizing its performance, handling complex transformations, and managing Fivetran in large-scale data integration projects"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Fivetran?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3530,15 +6909,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "225",
+    "questionID": "247",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Matillion",
       "ETL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Matillion?",
+    "question": "Which statement best describes your experience with Matillion?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Matillion for simple ETL tasks, familiar with basic data transformations and job creation"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Matillion in a professional setting, capable of designing and maintaining ETL pipelines, handling data from various sources"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Matillion, capable of optimizing its performance, managing complex transformations, and handling Matillion deployments in large-scale data projects"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Matillion?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3558,15 +6956,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "226",
+    "questionID": "248",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Google Cloud Dataflow",
       "ETL"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with Google Cloud Dataflow?",
+    "question": "Which statement best describes your experience with Google Cloud Dataflow?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Google Cloud Dataflow for simple data processing tasks, familiar with basic pipeline creation and job execution"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Google Cloud Dataflow in a professional setting, capable of designing, deploying, and monitoring data pipelines"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Google Cloud Dataflow, capable of optimizing its performance, managing complex data processing tasks, and handling large-scale data processing projects"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with Google Cloud Dataflow?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3586,7 +7003,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "227",
+    "questionID": "249",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3594,8 +7011,27 @@ export const questionsData = [
       "Glue",
       "cloud platform"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with AWS Glue?",
+    "question": "Which statement best describes your experience with AWS Glue?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used AWS Glue for simple ETL tasks, familiar with basic functionalities like creating jobs and crawlers"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used AWS Glue in a professional setting, capable of designing, deploying, and monitoring ETL jobs and handling data from various AWS services"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with AWS Glue, capable of optimizing its performance, managing complex ETL workflows, and handling large-scale data projects in the AWS ecosystem"
+      }
+    ],
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with AWS Glue?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3615,7 +7051,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "228",
+    "questionID": "250",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3625,8 +7061,27 @@ export const questionsData = [
       "Gateway",
       "cloud platform"
     ],
-    "question": "What level of experience with AWS' serverless technologies (like AWS Lambda and API Gateway) are you expecting from your candidate?",
+    "question": "Which statement best describes your experience with AWS' serverless technologies (like AWS Lambda and API Gateway)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have a basic understanding of serverless concepts and have used AWS Lambda and/or API Gateway for learning purposes"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience designing and deploying applications using AWS' serverless technologies in a professional setting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with AWS' serverless technologies and can design, deploy, and manage complex serverless applications"
+      }
+    ],
+    "employerQuestion": "What level of experience with AWS' serverless technologies (like AWS Lambda and API Gateway) are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3646,7 +7101,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "229",
+    "questionID": "251",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3654,8 +7109,27 @@ export const questionsData = [
       "google cloud platform",
       "cloud platform"
     ],
-    "question": "What level of GCP (Google Cloud Platform) proficiency are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Google Cloud Platform (GCP)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used GCP for simple tasks, such as creating a VM instance or using Cloud Storage"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I regularly use a variety of GCP services for more complex tasks, such as managing data with BigQuery or using Cloud Functions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design, deploy, and manage complex infrastructures on GCP, including cost optimization and security management"
+      }
+    ],
+    "employerQuestion": "What level of GCP (Google Cloud Platform) proficiency are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3675,15 +7149,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "230",
+    "questionID": "252",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "azure",
       "cloud platform"
     ],
-    "question": "What level of Microsoft Azure proficiency are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Microsoft Azure?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Azure for simple tasks, like deploying a web app or managing Azure Storage"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I regularly use various Azure services, like Azure Functions, Logic Apps, or Cosmos DB, in a professional setting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am highly proficient in designing, deploying, and managing complex applications and infrastructures on Azure, including cost optimization and security management"
+      }
+    ],
+    "employerQuestion": "What level of Microsoft Azure proficiency are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3703,7 +7196,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "231",
+    "questionID": "253",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -3711,8 +7204,27 @@ export const questionsData = [
       "IBM",
       "IBM cloud"
     ],
-    "question": "What level of IBM Cloud proficiency are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with IBM Cloud?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used IBM Cloud for simple tasks, such as creating a VM instance or utilizing cloud storage"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I frequently use a variety of IBM Cloud services for more intricate tasks, such as managing data with Db2 or using Watson services"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design, deploy, and manage complex infrastructures on IBM Cloud, including cost optimization and security management"
+      }
+    ],
+    "employerQuestion": "What level of IBM Cloud proficiency are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3732,14 +7244,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "232",
+    "questionID": "254",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
     ],
-    "question": "What level of GitHub proficiency are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with GitHub?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic principles of version control, have used GitHub for simple tasks like forking a repository and making pull requests"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I use GitHub frequently for collaborative projects, familiar with concepts like branches, merges, and resolving conflicts"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in managing large-scale projects on GitHub, including setting up CI/CD pipelines, code reviews, and advanced repository management"
+      }
+    ],
+    "employerQuestion": "What level of GitHub proficiency are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3759,14 +7290,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "233",
+    "questionID": "255",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
     ],
-    "question": "What level of proficiency with using Jira from a software development perspective are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with using Jira from a software development perspective?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Jira to track and manage bugs, new features, and improvements"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I'm comfortable with integrating Jira with version control systems like Git, and can leverage Jira's features for release management and deployment tracking"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I'm proficient with using Jira for continuous integration and delivery, utilizing features like automatic issue transitions and release hub"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with using Jira from a software development perspective are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3786,14 +7336,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "234",
+    "questionID": "256",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
     ],
-    "question": "What level of proficiency with Subversion (SVN) are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Subversion (SVN)?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Subversion for basic version control tasks such as commits, updates, and checkouts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can comfortably branch and merge projects, resolve conflicts, and understand SVN's repository architecture"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep expertise with Subversion, including setting up and managing SVN repositories, applying advanced branching strategies, and integrating SVN with other tools"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Subversion (SVN) are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3813,14 +7382,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "235",
+    "questionID": "257",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "software development"
     ],
-    "question": "What level of proficiency with Bitbucket are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Bitbucket?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Bitbucket for basic repository management and version control with Git"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can comfortably use Bitbucket's pull requests, code reviews, and branching model, and integrate with Jira and other Atlassian tools"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep expertise with Bitbucket, including setting up and managing Bitbucket pipelines for CI/CD, integrating Bitbucket with other development tools, and managing team permissions and workflows"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Bitbucket are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3840,15 +7428,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "236",
+    "questionID": "258",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
       "outreach"
     ],
-    "question": "What level of proficiency with Outreach are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Outreach?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Outreach for basic sales engagement activities, such as sending emails and making calls"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can comfortably create sequences, analyze performance metrics, and understand how to use the platform for multi-channel sales communication"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep expertise with Outreach, including setting up and optimizing complex sequences, automating tasks, and integrating Outreach with other CRM and sales tools"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Outreach are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3868,15 +7475,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "237",
+    "questionID": "259",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
       "SalesLoft"
     ],
-    "question": "What level of proficiency with Salesloft are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Salesloft?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Salesloft for basic sales engagement tasks like sending emails and tracking responses"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can confidently create and manage cadences, use Salesloft's dialer and social selling features, and analyze sales engagement metrics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Salesloft, including setting up and managing team workflows, automating sales tasks, and integrating Salesloft with other sales and marketing tools"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Salesloft are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3896,15 +7522,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "238",
+    "questionID": "260",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
       "YesWare"
     ],
-    "question": "What level of proficiency with Yesware are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Yesware?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Yesware for basic email tracking and template creation"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I am comfortable with using advanced features of Yesware, including click-to-call, meeting scheduling, and team reporting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep expertise with Yesware, able to set up custom reports, automate follow-ups, and integrate Yesware with CRM systems"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Yesware are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3924,15 +7569,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "239",
+    "questionID": "261",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales outreach",
       "Groove"
     ],
-    "question": "What level of proficiency with Groove are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Groove?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Groove for basic sales outreach tasks such as email tracking and meeting scheduling"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can confidently use Groove's advanced features like setting up multi-step campaigns, automating follow-ups, and analyzing sales metrics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Groove, including using its data analytics tools, managing team workflows, and integrating Groove with other sales tools and CRM systems"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Groove are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3952,15 +7616,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "240",
+    "questionID": "262",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales intelligence",
       "Gong"
     ],
-    "question": "What level of proficiency with Gong are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Gong?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Gong to listen to call recordings and read transcripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can confidently use Gong's features like deal tracking, identifying talk patterns, and generating insights from sales conversations"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Gong, including utilizing advanced analytics for sales coaching, trend identification, and integrating Gong with other sales tools and CRM systems"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Gong are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -3980,15 +7663,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "241",
+    "questionID": "263",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Chorus AI",
       "sales intelligence"
     ],
-    "question": "What level of proficiency with Chorus AI are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Chorus AI?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Chorus AI for basic call recording and note-taking"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I am proficient with Chorus AI's features like conversation intelligence, deal scoring, and analyzing call metrics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Chorus AI, capable of setting up team performance metrics, coaching insights, and integrating Chorus AI with other sales and CRM tools"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Chorus AI are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4008,15 +7710,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "242",
+    "questionID": "264",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales intelligence",
       "Clearbit"
     ],
-    "question": "What level of proficiency with Clearbit are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Clearbit?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've used Clearbit for basic features like lead enrichment and prospect discovery"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I am adept at using Clearbit for detailed prospect profiling, using APIs for enrichment, and integrating Clearbit with CRM systems"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Clearbit, including using advanced features for automation, personalization, and data analysis"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Clearbit are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4036,15 +7757,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "243",
+    "questionID": "265",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "sales intelligence",
       "wingman"
     ],
-    "question": "What level of proficiency with Wingman are you expecting from your candidate?",
+    "question": "Which statement best describes your proficiency with Wingman?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've used Wingman for basic call recording and review"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I am proficient in using Wingman for real-time conversation analysis and capturing action items"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Wingman, including utilizing it for sales coaching, competitive intelligence, and CRM integration"
+      }
+    ],
+    "employerQuestion": "What level of proficiency with Wingman are you expecting from your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4064,7 +7804,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "244",
+    "questionID": "266",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -4072,8 +7812,27 @@ export const questionsData = [
       "Business Intelligence",
       "Looker"
     ],
-    "question": "Which of these best describes the level of Looker experience you are looking for in a candidate?",
+    "question": "Which statement best describes your experience with Looker?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can create basic explores and visualizations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can create complex explores, dashboards, and LookML models. I understand concepts like joins, derived tables, and liquid parameters"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design and implement complex LookML models, optimize performance, and manage user roles and permissions. I also understand advanced features like embedding, API usage, and extensions"
+      }
+    ],
+    "employerQuestion": "Which of these best describes the level of Looker experience you are looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4093,7 +7852,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "245",
+    "questionID": "267",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -4101,8 +7860,27 @@ export const questionsData = [
       "Business Intelligence",
       "QlikView"
     ],
-    "question": "Which level of QlikView experience are you looking for in a candidate?",
+    "question": "Which statement best describes your level of proficiency in QlikView?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have basic knowledge of QlikView and can create simple charts and tables"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can create complex dashboards, apply set analysis, and utilize advanced scripting"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design and optimize data models, troubleshoot performance issues, and deploy QlikView applications"
+      }
+    ],
+    "employerQuestion": "Which level of QlikView experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4122,15 +7900,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "246",
+    "questionID": "268",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
       "Domo"
     ],
-    "question": "Which level of Domo experience are you looking for in a candidate?",
+    "question": "Which statement best describes your level of proficiency in Domo?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can create basic cards, datasets and use Domo's ETL capabilities for simple tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can leverage Domo's Beast Mode functions, design complex dashboards, and utilize Domo's APIs for data integrations"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am capable of implementing advanced ETL tasks, developing complex calculations, and managing user permissions and security settings"
+      }
+    ],
+    "employerQuestion": "Which level of Domo experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4150,15 +7947,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "247",
+    "questionID": "269",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
       "Sisense"
     ],
-    "question": "Which level of Sisense experience are you looking for in a candidate?",
+    "question": "Which statement best describes your level of proficiency in Sisense?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can create basic visualizations and dashboards using Sisense"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can utilize its ElastiCube technology and manage data models"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am capable of performing complex data transformations, creating advanced dashboards, and optimizing Sisense's performance"
+      }
+    ],
+    "employerQuestion": "Which level of Sisense experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4178,15 +7994,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "248",
+    "questionID": "270",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
       "SAP Business Objects"
     ],
-    "question": "Which level of SAP BusinessObjects experience are you looking for in a candidate?",
+    "question": "Which statement best describes your level of proficiency in SAP BusinessObjects?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can generate simple reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can create complex reports, and manage data universes"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can develop and optimize data universes, and perform advanced administration tasks"
+      }
+    ],
+    "employerQuestion": "Which level of SAP BusinessObjects experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4206,15 +8041,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "249",
+    "questionID": "271",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Visual Analytics",
       "MicroStrategy"
     ],
-    "question": "Which level of MicroStrategy experience are you looking for in a candidate?",
+    "question": "Which statement best describes your level of proficiency in MicroStrategy?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can create basic reports and dashboards in MicroStrategy"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can develop complex reports and manage user security"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am capable of implementing advanced analytics solutions, optimizing platform performance, and performing administrative tasks"
+      }
+    ],
+    "employerQuestion": "Which level of MicroStrategy experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4234,15 +8088,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "250",
+    "questionID": "272",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
       "Shopify"
     ],
-    "question": "Which level of Shopify expertise are you seeking in a candidate?",
+    "question": "Which statement best describes your experience and skills with Shopify?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can set up a store, add products, and manage orders"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can customize themes, install and configure apps, and handle SEO"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can develop custom apps, handle advanced SEO, and troubleshoot complex issues"
+      }
+    ],
+    "employerQuestion": "Which level of Shopify expertise are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4262,15 +8135,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "251",
+    "questionID": "273",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
       "woocommerce"
     ],
-    "question": "Which level of WooCommerce experience are you looking for in a candidate?",
+    "question": "Which statement best describes your proficiency in WooCommerce?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can set up a store, add products, and manage orders"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can customize themes, install and configure plugins, and handle SEO"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can develop custom plugins, handle advanced SEO, and troubleshoot complex issues"
+      }
+    ],
+    "employerQuestion": "Which level of WooCommerce experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4290,15 +8182,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "252",
+    "questionID": "274",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
       "magento"
     ],
-    "question": "Which level of Magento expertise are you seeking in a candidate?",
+    "question": "Which statement best describes your experience and skills with Magento?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can set up a store, add products, and manage orders"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can customize themes, install and configure extensions, and handle SEO"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can develop custom modules, handle advanced SEO, and troubleshoot complex issues"
+      }
+    ],
+    "employerQuestion": "Which level of Magento expertise are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4318,15 +8229,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "253",
+    "questionID": "275",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "e-commerce",
       "BigCommerce"
     ],
-    "question": "Which level of BigCommerce experience are you looking for in a candidate?",
+    "question": "Which statement best describes your proficiency in BigCommerce?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can set up a store, add products, and manage orders"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can customize themes, install and configure apps, and handle SEO"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can develop custom apps, handle advanced SEO, and troubleshoot complex issues"
+      }
+    ],
+    "employerQuestion": "Which level of BigCommerce experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4346,15 +8276,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "254",
+    "questionID": "276",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
       "Azure"
     ],
-    "question": "Which level of Azure IoT Suite experience are you looking for in a candidate?",
+    "question": "Which statement best describes your experience with the Azure IoT Suite?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can deploy IoT devices and collect data using the Azure IoT Suite"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can analyze IoT data, manage devices, and secure the IoT network using Azure IoT Suite"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can architect and deploy end-to-end IoT solutions using Azure IoT Suite, including IoT Edge, IoT Central, and Time Series Insights"
+      }
+    ],
+    "employerQuestion": "Which level of Azure IoT Suite experience are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4374,7 +8323,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "255",
+    "questionID": "277",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -4382,8 +8331,27 @@ export const questionsData = [
       "Internet of Things",
       "AWS IoT Core"
     ],
-    "question": "What level of AWS IoT Core expertise are you seeking in a candidate?",
+    "question": "Which statement best describes your familiarity with AWS IoT Core?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can connect and manage IoT devices using AWS IoT Core"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can analyze IoT data, secure the IoT network, and utilize AWS IoT services such as Device Defender and IoT Analytics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can design and deploy comprehensive IoT solutions using AWS IoT Core, including edge computing and real-time analytics"
+      }
+    ],
+    "employerQuestion": "What level of AWS IoT Core expertise are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4403,15 +8371,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "256",
+    "questionID": "278",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
       "IBM Watson"
     ],
-    "question": "What level of expertise with IBM Watson IoT are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with IBM Watson IoT?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've used IBM Watson IoT to connect and manage devices"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've analyzed data from IoT devices, used device management, and applied security measures using IBM Watson IoT"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've designed and deployed full-scale IoT solutions using IBM Watson IoT, integrating IoT data with AI capabilities"
+      }
+    ],
+    "employerQuestion": "What level of expertise with IBM Watson IoT are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4431,15 +8418,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "257",
+    "questionID": "279",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "IoT",
       "Google Cloud IoT"
     ],
-    "question": "What level of experience with Google Cloud IoT are you looking for in a candidate?",
+    "question": "Which statement best describes your familiarity with Google Cloud IoT?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've used Google Cloud IoT to connect and manage devices"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've used Google Cloud IoT Core to ingest data from devices, and have experience with Google Cloud IoT services like IoT Edge and IoT Pub/Sub"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've designed and deployed comprehensive IoT solutions using Google Cloud IoT, including advanced data analytics and machine learning integration"
+      }
+    ],
+    "employerQuestion": "What level of experience with Google Cloud IoT are you looking for in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4459,15 +8465,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "258",
+    "questionID": "280",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "WordPress",
       "CMS"
     ],
-    "question": "What level of WordPress experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with WordPress?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have built and customized basic websites using WordPress"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermeiate: I have developed and managed WordPress sites, integrated with plugins, and handled WordPress security"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have developed custom themes, plugins, and have worked with advanced functionalities like multi-site installation"
+      }
+    ],
+    "employerQuestion": "What level of WordPress experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4487,15 +8512,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "259",
+    "questionID": "281",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "CMS",
       "Joomla"
     ],
-    "question": "What level of Joomla experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with Joomla?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have no experience with Joomla"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have built and customized basic websites using Joomla"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have developed and managed Joomla sites, integrated with extensions, and handled Joomla security"
+      }
+    ],
+    "employerQuestion": "What level of Joomla experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4515,15 +8559,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "260",
+    "questionID": "282",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "CMS",
       "Drupal"
     ],
-    "question": "What level of Drupal experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with Drupal?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have some experience with Drupal, including basic site setup and configuration"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have developed and managed Drupal sites, integrated with modules, and handled Drupal security"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in Drupal, having developed custom themes, modules, and have worked with advanced functionalities like multi-site installation"
+      }
+    ],
+    "employerQuestion": "What level of Drupal experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4543,15 +8606,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "261",
+    "questionID": "283",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Communication",
       "Slack"
     ],
-    "question": "What level of Slack experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with Slack?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I use Slack for basic communication and can navigate through channels and direct messages"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I'm comfortable using advanced features in Slack, like pinning messages, creating user groups, and integrating apps"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have worked with Slack's API, built integrations, and have managed a workspace, including user permissions and security"
+      }
+    ],
+    "employerQuestion": "What level of Slack experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4571,7 +8653,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "262",
+    "questionID": "284",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -4579,8 +8661,27 @@ export const questionsData = [
       "Microsoft Teams",
       "Teams"
     ],
-    "question": "What level of Microsoft Teams experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with Microsoft Teams?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I use Microsoft Teams for basic communication and can navigate through channels and direct messages"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I'm comfortable using advanced features in Teams, like scheduling meetings, sharing files, and using apps within Teams"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have worked with Microsoft Teams' API, built integrations, and have managed a team, including user permissions and security"
+      }
+    ],
+    "employerQuestion": "What level of Microsoft Teams experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4600,7 +8701,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "263",
+    "questionID": "285",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -4608,8 +8709,27 @@ export const questionsData = [
       "Cisco Webex",
       "Webex"
     ],
-    "question": "What level of Cisco Webex experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with Cisco Webex?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I use Cisco Webex for basic communication, scheduling, and attending meetings"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I'm comfortable using advanced features in Cisco Webex, like recording meetings, using virtual backgrounds, and integrating apps"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have worked with Cisco Webex's API, built integrations, and have managed a team, including user permissions and security"
+      }
+    ],
+    "employerQuestion": "What level of Cisco Webex experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4629,15 +8749,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "264",
+    "questionID": "286",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Communication",
       "Zoom"
     ],
-    "question": "What level of Zoom experience are you seeking in a candidate?",
+    "question": "Which statement best describes your experience with Zoom?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I use Zoom for basic communication, scheduling, and attending meetings"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I'm comfortable using advanced features in Zoom, like recording meetings, breakout rooms, and using virtual backgrounds"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have worked with Zoom's API, built integrations, and have managed a team, including user permissions and security"
+      }
+    ],
+    "employerQuestion": "What level of Zoom experience are you seeking in a candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4657,15 +8796,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "265",
+    "questionID": "287",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Containerization",
       "Docker"
     ],
-    "question": "What is the desired level of Docker experience for your candidate?",
+    "question": "What is your experience level with Docker?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have pulled and run Docker images, used Dockerfile to build new images, and I understand the principles of containerization"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have created and managed Docker images, and used Docker Compose for multi-container applications. I have some understanding of container orchestration"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have managed complex multi-container applications, optimized Docker images for production, and troubleshooted Docker-related issues. I have an in-depth understanding of containerization principles and best practices"
+      }
+    ],
+    "employerQuestion": "What is the desired level of Docker experience for your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4685,15 +8843,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "266",
+    "questionID": "288",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "Containerization",
       "Kubernetes"
     ],
-    "question": "What is the desired level of Kubernetes experience for your candidate?",
+    "question": "What is your experience level with Kubernetes?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can deploy simple applications, manage pods, and services in Kubernetes"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have deployed and scaled applications, managed network configuration, and persistent storage in Kubernetes. I understand the principles of Kubernetes architecture"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have managed production-grade applications, performed advanced network configuration and storage management, fine-tuned resource usage, and troubleshooted Kubernetes clusters"
+      }
+    ],
+    "employerQuestion": "What is the desired level of Kubernetes experience for your candidate?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4713,15 +8890,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "267",
+    "questionID": "289",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "API Testing",
       "Postman"
     ],
-    "question": "What level of experience and proficiency with Postman would you like your candidate to have?",
+    "question": "Which statement best describes your experience with Postman?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have basic knowledge about using Postman for sending requests and testing API endpoints"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I am comfortable with Postman's advanced features, like writing tests using Chai assertion library, managing collections, and environments"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in using advanced Postman features such as creating mock servers, running collections using Newman, and building workflows"
+      }
+    ],
+    "employerQuestion": "What level of experience and proficiency with Postman would you like your candidate to have?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4741,15 +8937,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "268",
+    "questionID": "290",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
       "API Testing",
       "Apigee"
     ],
-    "question": "What level of experience and proficiency with Apigee would you like your candidate to have?",
+    "question": "Which statement best describes your experience with Apigee?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have basic knowledge about using Apigee for API design and deployment"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I am comfortable with Apigee's advanced features, like managing API lifecycle, implementing API policies, and analyzing API performance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in using advanced Apigee features such as creating custom reports, setting up developer portals, and managing app developer relationships"
+      }
+    ],
+    "employerQuestion": "What level of experience and proficiency with Apigee would you like your candidate to have?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No experience required"
@@ -4769,16 +8984,35 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "269",
+    "questionID": "291",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Business",
       "Travel",
       "Preference"
     ],
-    "question": "What level of business travel is required in this role?",
+    "question": "What is your preference for business travel in your role?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "No travel: I prefer a role that requires no business travel"
+      },
+      {
+        "answerID": 2,
+        "answer": "Minimal travel: Occasional travel is acceptable, but it's not my preference"
+      },
+      {
+        "answerID": 3,
+        "answer": "Moderate travel: I'm open to some travel as part of my role"
+      },
+      {
+        "answerID": 4,
+        "answer": "Frequent travel: I enjoy traveling and am willing to do so frequently for my role"
+      }
+    ],
+    "employerQuestion": "What level of business travel is required in this role?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "No travel: This role does not require any business travel"
@@ -4798,16 +9032,35 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "270",
+    "questionID": "292",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Work",
       "Location",
       "Preference"
     ],
-    "question": "What work location options does this role offer?",
+    "question": "What is your preferred work location?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Fully remote: I prefer to work completely remotely"
+      },
+      {
+        "answerID": 2,
+        "answer": "Mostly remote with occasional office visits: I prefer to work remotely most of the time, but I'm open to occasional office visits"
+      },
+      {
+        "answerID": 3,
+        "answer": "Hybrid (half remote, half office): I prefer a balance between remote work and office-based work"
+      },
+      {
+        "answerID": 4,
+        "answer": "Fully office-based: I prefer working in an office environment full-time"
+      }
+    ],
+    "employerQuestion": "What work location options does this role offer?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Fully remote: This role is completely remote"
@@ -4827,17 +9080,36 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "271",
+    "questionID": "293",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Diversity",
       "Inclusion",
       "Commitment",
       "Importance"
     ],
-    "question": "How mature is your diversity and inclusion program? ",
+    "question": "How important is a company's commitment to diversity and inclusion to you?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Not at all important: I don't consider a company's diversity and inclusion policies when deciding on a job"
+      },
+      {
+        "answerID": 2,
+        "answer": "Somewhat important: A company's commitment to diversity and inclusion is a positive factor but not a key decision point for me"
+      },
+      {
+        "answerID": 3,
+        "answer": "Very important: A company's commitment to diversity and inclusion significantly influences my job decisions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Extremely important: I only consider companies that demonstrate a strong commitment to diversity and inclusion"
+      }
+    ],
+    "employerQuestion": "How mature is your diversity and inclusion program? ",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Our company doesn't have specific diversity and inclusion initiatives in place"
@@ -4857,17 +9129,36 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "272",
+    "questionID": "294",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Travel",
       "work requirements",
       "job duties",
       "location"
     ],
-    "question": "How often does your company require employees to travel for work?",
+    "question": "How do you feel about travel requirements for work?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "I don't mind frequent travel: I'm comfortable with a job that requires frequent travel"
+      },
+      {
+        "answerID": 2,
+        "answer": "I prefer occasional travel: I prefer a job that requires occasional travel, but not consistently"
+      },
+      {
+        "answerID": 3,
+        "answer": "I prefer minimal to no travel: I prefer a job that requires minimal to no travel"
+      },
+      {
+        "answerID": 4,
+        "answer": "I am unable to travel: I am unable to travel for work due to personal constraints"
+      }
+    ],
+    "employerQuestion": "How often does your company require employees to travel for work?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Frequent travel: Our employees are frequently required to travel for work"
@@ -4887,14 +9178,33 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "273",
+    "questionID": "295",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Career advancement opportunities"
     ],
-    "question": "What are the primary opportunities for career advancement in this role over the next 2 years?",
+    "question": "What is your primary career ambition in the next two years?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Remain in a similar sales engineer role, focusing on honing my skills and becoming more efficient"
+      },
+      {
+        "answerID": 2,
+        "answer": "Transition to a management role within sales engineering"
+      },
+      {
+        "answerID": 3,
+        "answer": "Shift into a specialized role, becoming an SME in a specific technology or industry"
+      },
+      {
+        "answerID": 4,
+        "answer": "Seek opportunities outside of sales engineering, for a change in career direction"
+      }
+    ],
+    "employerQuestion": "What are the primary opportunities for career advancement in this role over the next 2 years?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "We anticipate minimal opportunities for advancement"
@@ -4914,15 +9224,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "274",
+    "questionID": "296",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Management transition potential",
       "Future leadership opportunities"
     ],
-    "question": "Is there potential for an employee in this role to transition into a management position in the future?",
+    "question": "Do you foresee yourself transitioning into a management role in the future?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Not at the moment, I enjoy my current role and focus"
+      },
+      {
+        "answerID": 2,
+        "answer": "Maybe, I am open to the idea but it's not a current priority"
+      },
+      {
+        "answerID": 3,
+        "answer": "Yes, I am actively seeking opportunities to transition into management"
+      },
+      {
+        "answerID": 4,
+        "answer": "Already in a management role and planning to continue along this path"
+      }
+    ],
+    "employerQuestion": "Is there potential for an employee in this role to transition into a management position in the future?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Unlikely, this role is more technical and specialized"
@@ -4942,15 +9271,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "275",
+    "questionID": "297",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Transition opportunities",
       "Different industry/sector within company"
     ],
-    "question": "How open are you to accepting a Sales Engineer who comes from outside of your company's primary industry?",
+    "question": "Would you consider moving into a different industry or sector?",
     "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes, I am open to any industry"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, but I would prefer to stay within related industries"
+      },
+      {
+        "answerID": 3,
+        "answer": "Possibly, it would depend on the specifics of the job and the industry"
+      },
+      {
+        "answerID": 4,
+        "answer": "No, I prefer to remain in my current industry"
+      }
+    ],
+    "employerQuestion": "How open are you to accepting a Sales Engineer who comes from outside of your company's primary industry?",
+    "employerAnswers": [
       {
         "answerID": 1,
         "answer": "Very open - Industry experience is not important"
@@ -4970,9 +9318,9 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "276",
+    "questionID": "298",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       ""
     ],
@@ -4994,35 +9342,8 @@ export const questionsData = [
         "answerID": 4,
         "answer": "No preference"
       }
-    ]
-  },
-  {
-    "questionID": "277",
-    "order": -1,
-    "category": "Tools & Platforms",
-    "tags": [
-      "Salesforce CRM",
-      "Customer Relationship Management",
-      "Proficiency"
     ],
-    "question": "Which statement best describes the level of experience a candidate should have with using Salesforce for data entry and reporting?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: The candidate should have used Salesforce for basic tasks like data entry and generating simple reports"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: The candidate should have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: The candidate should be proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
-      }
-    ]
+    "employerQuestion": "",
+    "employerAnswers": []
   }
 ]

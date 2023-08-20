@@ -11,6 +11,7 @@ import goldfishLogo from './images/logo.svg';
 import DropdownMenu from './DropdownMenu';
 import CandidateAccountPage from './CandidateAccountPage';
 import CandidateAnswerPage from './CandidateAnswersPage';
+import CandidateProfilePage from './CandidateProfilePage';
 
 function CandidatePage(returnURL) {
     const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
@@ -20,20 +21,22 @@ function CandidatePage(returnURL) {
     const [subscribed, setSubscribed] = useState(false);
     const [searchParams] = useSearchParams();
     const [userProfile, setUserProfile] = useState(null);
+    const [userAnswers, setUserAnswers] = useState({});
     const [hasLoadedProfile, setHasLoadedProfile] = useState(false);
     const [selectedTab, setSelectedTab] = useState('Home');
 
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
 
-    const getUserProfile = async (user_id) => {
+    const getUserProfile = async () => {
         try {
-            const response = await axios.get('/api/getUserProfile', {
-                params: { user_id }
-            });
+            const response = await axios.get(`${apiURL}/getUserProfile?user_id=${user.sub}&email=${user.email}`);
             if (response.data.success) {
                 console.log('got user profile:', response.data);
                 setUserProfile(response.data.profile);
+                setUserAnswers(response.data.answers);
+                console.log('set answers to:', response.data.answers);
+                setHasLoadedProfile(true);
                 // setSubscribed(response.data.profile.subscribed_newsletter);
             }
         } catch (error) {
@@ -44,7 +47,7 @@ function CandidatePage(returnURL) {
 
     useEffect(() => {
         if (user && isAuthenticated) {
-            getUserProfile(user.user_id);
+            getUserProfile();
         }
     }, [user, isAuthenticated]);
 
@@ -54,7 +57,17 @@ function CandidatePage(returnURL) {
         if (refFromURL === 'join') { // if jobID exists in the URL
             console.log('jumping back to ref');
         }
-    }, [user, searchParams]);
+
+        //if url ends in /account then set selected tab to account, same for /matches and /answer
+        if (window.location.href.endsWith('/account')) {
+            setSelectedTab('Account');
+        } else if (window.location.href.endsWith('/matches')) {
+            setSelectedTab('Matches');
+        } else if (window.location.href.endsWith('/answer')) {
+            setSelectedTab('Answer');
+        }
+    }, [searchParams]);
+
 
     const selectedPageContent = useCallback(() => {
         switch (selectedTab) {
@@ -65,7 +78,16 @@ function CandidatePage(returnURL) {
                 break;
             case 'Answer':
                 console.log('answer page selected');
-                return <CandidateAnswerPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
+                return <CandidateAnswerPage apiURL={apiURL} userProfile={userProfile}
+                    hasLoadedProfile={hasLoadedProfile}
+                />;
+            case 'Profile':
+                console.log('profile page selected');
+                return <CandidateProfilePage apiURL={apiURL} userProfile={userProfile}
+                    userAnswers={userAnswers}
+                    setUserAnswers={setUserAnswers}
+                    hasLoadedProfile={hasLoadedProfile}
+                />;
             default:
                 return <Box p={16}>
                     <Heading as='h1' w='100%' h='100%'>
@@ -139,92 +161,95 @@ function CandidatePage(returnURL) {
                 </Flex>
             </Box>
 
+            {(user && isAuthenticated) ? (
 
-            <Stack
-                direction="row"
-                justify="flex-start"
-                align="flex-start"
-                spacing="0px"
-                overflow="hidden"
-                flex="1"
-                alignSelf="stretch"
-            >
-                <Stack
-                    paddingY="100px"
-                    justify="flex-start"
-                    align="center"
-                    spacing="0px"
-                    overflow="hidden"
-                    borderColor="#FFFFFF"
-                    borderEndWidth="1px"
-                    // borderStyle="dashed"
-                    width="200px"
-                    minWidth='136px'
-                    // maxWidth='200px'
-                    // flex='1'
-                    // maxWidth='50%'
-                    alignSelf="stretch"
-                    // maxWidth="100%"
-                    background="linear-gradient(333deg, #1a298099 60%, #26d0ce4d 90%)"
-                >
-                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Home'); }}>
-                        <Text fontFamily="Inter"
-                            lineHeight="1.2"
-                            fontWeight="bold"
-                            fontSize="20px">
-                            Home
-                        </Text>
-                    </Button>
-                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Matches'); }}>
-                        <Text fontFamily="Inter"
-                            lineHeight="1.2"
-                            fontWeight="bold"
-                            fontSize="20px">
-                            Matches
-                        </Text>
-                    </Button>
-                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Answer'); }}>
-                        <Text fontFamily="Inter"
-                            lineHeight="1.2"
-                            fontWeight="bold"
-                            fontSize="20px">
-                            Answer
-                        </Text>
-                    </Button>
-                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Profile'); }}>
-                        <Text fontFamily="Inter"
-                            lineHeight="1.2"
-                            fontWeight="bold"
-                            fontSize="20px">
-                            Profile
-                        </Text>
-                    </Button>
-                    <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Account'); }}>
-                        <Text fontFamily="Inter"
-                            lineHeight="1.2"
-                            fontWeight="bold"
-                            fontSize="20px">
-                            Account
-                        </Text>
-                    </Button>
 
-                </Stack>
                 <Stack
-                    // paddingStart="64px"
-                    // paddingEnd="32px"
-                    // paddingTop="80px"
+                    direction="row"
                     justify="flex-start"
                     align="flex-start"
-                    // spacing="80px"
-                    // flex="1"
-                    // alignSelf="stretch"
-                    w='100%'
+                    spacing="0px"
+                    overflow="hidden"
+                    flex="1"
+                    alignSelf="stretch"
                 >
+                    <Stack
+                        paddingY="100px"
+                        justify="flex-start"
+                        align="center"
+                        spacing="0px"
+                        overflow="hidden"
+                        borderColor="#FFFFFF"
+                        borderEndWidth="1px"
+                        // borderStyle="dashed"
+                        width="200px"
+                        minWidth='136px'
+                        // maxWidth='200px'
+                        // flex='1'
+                        // maxWidth='50%'
+                        alignSelf="stretch"
+                        // maxWidth="100%"
+                        background="linear-gradient(333deg, #1a298099 60%, #26d0ce4d 90%)"
+                    >
+                        <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Home'); }}>
+                            <Text fontFamily="Inter"
+                                lineHeight="1.2"
+                                fontWeight="bold"
+                                fontSize="20px">
+                                Home
+                            </Text>
+                        </Button>
+                        <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Matches'); }}>
+                            <Text fontFamily="Inter"
+                                lineHeight="1.2"
+                                fontWeight="bold"
+                                fontSize="20px">
+                                Matches
+                            </Text>
+                        </Button>
+                        <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Answer'); }}>
+                            <Text fontFamily="Inter"
+                                lineHeight="1.2"
+                                fontWeight="bold"
+                                fontSize="20px">
+                                Answer
+                            </Text>
+                        </Button>
+                        <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Profile'); }}>
+                            <Text fontFamily="Inter"
+                                lineHeight="1.2"
+                                fontWeight="bold"
+                                fontSize="20px">
+                                Profile
+                            </Text>
+                        </Button>
+                        <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Account'); }}>
+                            <Text fontFamily="Inter"
+                                lineHeight="1.2"
+                                fontWeight="bold"
+                                fontSize="20px">
+                                Account
+                            </Text>
+                        </Button>
+
+                    </Stack>
+                    <Stack
+                        // paddingStart="64px"
+                        // paddingEnd="32px"
+                        // paddingTop="80px"
+                        justify="flex-start"
+                        align="flex-start"
+                        // spacing="80px"
+                        // flex="1"
+                        // alignSelf="stretch"
+                        w='100%'
+                    >
 
 
-                    {selectedPageContent()}
+                        {selectedPageContent()}
+                    </Stack>
                 </Stack>
-            </Stack>
+            ) : <Box p={16}> <Heading as='h1' w='100%' h='100%'>Please Login</Heading></Box>}
             {/* <Stack justify="flex-end" alignSelf='flex-end' align="flex-start" w='100%' h='full' bg='blue.600' flex='1 1 auto' px={5}> */}
 
         </Flex >

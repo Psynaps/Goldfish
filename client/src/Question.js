@@ -33,9 +33,9 @@ const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen, i
             cursor="pointer"
         >
             <Collapsible
-                trigger={<div onClick={handleTriggerClick}>{question.question}</div>}
-                triggerWhenOpen={<div onClick={handleTriggerClick}>{question.question}</div>}
-                triggerWhenClosed={<div onClick={handleTriggerClick}>{question.question}</div>}
+                trigger={<div onClick={handleTriggerClick}>{question.employerQuestion}</div>}
+                triggerWhenOpen={<div onClick={handleTriggerClick}>{question.employerQuestion}</div>}
+                triggerWhenClosed={<div onClick={handleTriggerClick}>{question.employerQuestion}</div>}
                 open={isOpen}
             >
                 {children}

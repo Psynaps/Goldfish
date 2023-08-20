@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Stack, HStack, VStack, Box, Text, Select, Collapse, Circle, Input, Button, Icon, Heading, Flex, } from '@chakra-ui/react';
+import { Stack, HStack, VStack, Box, Text, Select, Collapse, Circle, Input, Button, Icon, Heading, Flex, SimpleGrid, } from '@chakra-ui/react';
 import { useSearchParams, useNavigate, useLocation } from "react-router-dom";
 import axios from 'axios';
 import { LoginButton } from './LoginButton';
@@ -40,23 +40,43 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 					</Text>
 				</Button>
 				<Collapse in={expandedQuestionID === question.questionID} w='100%' align='stretch'>
-					<VStack w='100%' justify='center' pt={4} h='100%' maxHeight='100%' bg='blue.500'>
-						{question.answers.map(answer => (
-							<Button
-								key={answer.answerID}
-								w='100%'
-								colorScheme={(expandedQuestionID === question.questionID && currentQuestionAnswer === answer.answerID) ? 'blue' : 'gray'}
-								onClick={() => {
-									setCurrentQuestionAnswer(answer.answerID);
-									setIsAnswerSelected(true);
-								}}
-							>
-								<Text fontSize='sm'>
-									{answer.answer}
-								</Text>
-							</Button>
-						))}
-					</VStack>
+					{question.answers.length > 4 && (
+						<SimpleGrid columns={2} spacing={2} pt={4} w='100%' h='100%' maxHeight='100%' bg='blue.500'>
+							{question.answers.map(answer => (
+								<Button
+									key={answer.answerID}
+									w='100%'
+									colorScheme={(expandedQuestionID === question.questionID && currentQuestionAnswer === answer.answerID) ? 'blue' : 'gray'}
+									onClick={() => {
+										setCurrentQuestionAnswer(answer.answerID);
+										setIsAnswerSelected(true);
+									}}
+								>
+									<Text fontSize='sm'>
+										{answer.answer}
+									</Text>
+								</Button>
+							))}
+						</SimpleGrid>
+					)}
+					{question.answers.length <= 4 && (
+						<VStack w='100%' justify='center' pt={4} h='100%' maxHeight='100%' bg='blue.500'>
+							{question.answers.map(answer => (
+								<Button
+									key={answer.answerID}
+									w='100%'
+									colorScheme={(expandedQuestionID === question.questionID && currentQuestionAnswer === answer.answerID) ? 'blue' : 'gray'}
+									onClick={() => {
+										setCurrentQuestionAnswer(answer.answerID);
+										setIsAnswerSelected(true);
+									}}
+								>
+									<Text fontSize='sm'>
+										{answer.answer}
+									</Text>
+								</Button>
+							))}
+						</VStack>)}
 				</Collapse>
 			</Box>
 		);
@@ -79,19 +99,34 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 	};
 
 
-	const handleConfirmAnswers = () => {
+	const handleConfirmAnswers = async () => {
 		if (expandedQuestionID && currentQuestionAnswer) {
-			console.log('expandedQuestionID: ', expandedQuestionID);
-			console.log('currentQuestionAnswer: ', currentQuestionAnswer);
-			let newAnswered = { ...answered, [expandedQuestionID]: currentQuestionAnswer };
-			console.log('newAnswered: ', newAnswered);
-			setAnswered(newAnswered);
-			setExpandedQuestionID(null);
-			setCurrentQuestionAnswer(null);
-			setIsAnswerSelected(false);
-			// filterQuestions();
+			// console.log('expandedQuestionID: ', expandedQuestionID);
+			// console.log('currentQuestionAnswer: ', currentQuestionAnswer);
+
+			try {
+				const response = await axios.post(`${apiURL}/setUserAnswer`, {
+					user_id: user.sub, // Assuming this holds the Auth0 user ID. Adjust accordingly.
+					question_id: expandedQuestionID,
+					answer_id: currentQuestionAnswer,
+				});
+
+				if (response.data.message) {
+					console.log(response.data.message);
+				}
+
+				let newAnswered = { ...answered, [expandedQuestionID]: currentQuestionAnswer };
+				console.log('newAnswered: ', newAnswered);
+				setAnswered(newAnswered);
+				setExpandedQuestionID(null);
+				setCurrentQuestionAnswer(null);
+				setIsAnswerSelected(false);
+			} catch (error) {
+				console.error('Error saving answer: ', error);
+			}
 		}
 	};
+
 
 	// const filterQuestions = useCallback(() => {
 	// }, [selectedCategory, searchTerm, answered]);
@@ -133,18 +168,7 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 		}
 	}, [expandedQuestionID]);
 
-	// useEffect(() => {
-	// 	// console.log('questionsData: ', questionsData);
-	// 	// let newDisplayedQuestions = sortQuestionBankQuestions(questionsData);
-	// 	if (questionsData) {
-	// 		setDisplayedQuestions(questionsData);
-	// 	}
-	// 	console.log('searchTerm: ', searchTerm);
-	// }, [selectedCategory, searchTerm]);
 
-	// if (selectedCategory) {
-	//   let newDisplayedQuestions = displayedQuestions?.filter(q => q.category === selectedCategory);
-	// }
 	useEffect(() => {
 		if (questionsData) {
 			// 	}
@@ -238,9 +262,9 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 			// bg='blue'
 
 			>
-				<Button size='lg' onClick={handleConfirmAnswers} isDisabled={!isAnswerSelected}>Confirm Answers</Button>
+				<Button size='lg' onClick={handleConfirmAnswers} isDisabled={!isAnswerSelected} colorScheme={!isAnswerSelected ? 'gray' : 'green'}>Confirm Answers</Button>
 
-				<VStack w='100%' spacing={4} overflow='scroll' >
+				<VStack w='100%' spacing={4} overflowY='auto' >
 					{displayedQuestions.map(question => (
 						<QuestionCard key={question.questionID} question={question} onConfirm={setAnsweredQuestions} />
 					))}
@@ -250,14 +274,5 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 		</Flex >
 	);
 }
-
-
-
-
-
-
-
-
-
 
 export default CandidateAnswerPage;

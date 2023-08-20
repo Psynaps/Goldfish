@@ -1,6 +1,1870 @@
 export const questionsDataFull = [
   {
-    "questionID": "101",
+    "questionID": "115",
+    "order": "1",
+    "category": "Deal Experience",
+    "tags": [
+      "deal size",
+      "deal experience",
+      "money"
+    ],
+    "question": "What is the largest deal size you've been personally responsible for closing, either independently or with an AE?",
+    "employerQuestion": "What is the largest deal you would expect a sales engineer to have closed, either independently or with an AE?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $25,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "Between $25,000 and $50,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50,000 and $100,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100,000 and $200,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $200,000 and $300,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between $300,000 and $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $500,000 and $1M"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than $1M"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $25,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "Between $25,000 and $50,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50,000 and $100,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100,000 and $200,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $200,000 and $300,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between $300,000 and $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $500,000 and $1M"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than $1M"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 5,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 6,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 7,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 8,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "116",
+    "order": "2",
+    "category": "Deal Experience",
+    "tags": [
+      "sniority level"
+    ],
+    "question": "What level of experience do you have in implementing APIs on behalf of prospective customers?",
+    "employerQuestion": "What level of experience in implementing APIs on behalf of prospective customers do you expect from a Sales Engineer candidate in this role, on day 1?\"",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have participated in API implementation for customers with support from a team, but have not led the process"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have regularly led the process of implementing APIs for customers, with an understanding of the associated practices and protocols"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Have extensive experience in independently leading the process of API implementation for a variety of customers, with the ability to troubleshoot issues and optimize the process"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience necessary"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has participated in API implementation for customers with support from a team, but may not have led the process"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate has regularly led the process of implementing APIs for customers, with an understanding of the associated practices and protocols"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate has extensive experience in independently leading the process of API implementation for a variety of customers, with the ability to troubleshoot issues and optimize the process"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "117",
+    "order": "3",
+    "category": "Deal Experience",
+    "tags": [
+      "seniority",
+      "sales"
+    ],
+    "question": "Over the last 2 years, what level of seniority have you most often engaged with in your role as a Sales Engineer?",
+    "employerQuestion": "What level of seniority should the Sales Engineer candidate have the most experience engaging with?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "C-Level Executives"
+      },
+      {
+        "answerID": 2,
+        "answer": "Senior Management (VP, Director)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Mid-level Management (Manager, Team Lead)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Individual Contributors"
+      },
+      {
+        "answerID": 5,
+        "answer": "Non-managerial staff"
+      },
+      {
+        "answerID": 6,
+        "answer": "Consultants or external advisors"
+      },
+      {
+        "answerID": 7,
+        "answer": "Technicians or end users"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "C-Level Executives"
+      },
+      {
+        "answerID": 2,
+        "answer": "Senior Management (VP, Director)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Mid-level Management (Manager, Team Lead)"
+      },
+      {
+        "answerID": 4,
+        "answer": "Individual Contributors"
+      },
+      {
+        "answerID": 5,
+        "answer": "Non-managerial staff"
+      },
+      {
+        "answerID": 6,
+        "answer": "Consultants or external advisors"
+      },
+      {
+        "answerID": 7,
+        "answer": "Technicians or end users"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 5,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 6,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 7,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 8,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "118",
+    "order": "4",
+    "category": "Deal Experience",
+    "tags": [
+      "Customer Size",
+      "Sales Engineering",
+      "Experience Level"
+    ],
+    "question": "Over the last 2 years, what has been the average size of the customers (in terms of employee count) you have been dealing with in your Sales Engineer role?",
+    "employerQuestion": "What is the average size (in terms of employee count) of the customers your ideal Sales Engineer candidate would be accustomed to dealing with?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than 50 employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "51 - 200 employees"
+      },
+      {
+        "answerID": 3,
+        "answer": "201 - 500 employees"
+      },
+      {
+        "answerID": 4,
+        "answer": "501 - 1,000 employees"
+      },
+      {
+        "answerID": 5,
+        "answer": "1,001 - 5,000 employees"
+      },
+      {
+        "answerID": 6,
+        "answer": "5,001 - 10,000 employees"
+      },
+      {
+        "answerID": 7,
+        "answer": "10,001 - 50,000 employees"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than 50,000 employees"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Less than 50 employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "51 - 200 employees"
+      },
+      {
+        "answerID": 3,
+        "answer": "201 - 500 employees"
+      },
+      {
+        "answerID": 4,
+        "answer": "501 - 1,000 employees"
+      },
+      {
+        "answerID": 5,
+        "answer": "1,001 - 5,000 employees"
+      },
+      {
+        "answerID": 6,
+        "answer": "5,001 - 10,000 employees"
+      },
+      {
+        "answerID": 7,
+        "answer": "10,001 - 50,000 employees"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than 50,000 employees"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 5,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 6,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 7,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 8,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "119",
+    "order": "5",
+    "category": "Deal Experience",
+    "tags": [
+      "Security Reviews",
+      "Procurement Cycle",
+      "Risk Management"
+    ],
+    "question": "How would you rate your experience in conducting security reviews as a Sales Engineer?",
+    "employerQuestion": "What level of experience conducting security reviews do you require for this Sales Engineer role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have assisted in conducting security reviews, but I am not the main person responsible"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have independently conducted security reviews, but they are not a regular part of my duties"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Conducting security reviews is a regular part of my duties, and I am confident in my abilities"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Experience: Security reviews will not be a part of this role's duties"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role will require some assistance in conducting security reviews, but it won't be the main responsibility"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: We require a Sales Engineer who can independently conduct security reviews when necessary"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Regularly conducting security reviews is an important part of this role, and we require someone who is experienced and confident in this area"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "120",
+    "order": "6",
+    "category": "Deal Experience",
+    "tags": [
+      "functional role",
+      "prospect type"
+    ],
+    "question": "In your role as a Sales Engineer over the last 2 years, which functional role have you most commonly engaged with?",
+    "employerQuestion": "Which functional roles should the Sales Engineer candidate have the most experience engaging with?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Information Technology"
+      },
+      {
+        "answerID": 2,
+        "answer": "Operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Marketing"
+      },
+      {
+        "answerID": 4,
+        "answer": "Engineering"
+      },
+      {
+        "answerID": 5,
+        "answer": "Finance"
+      },
+      {
+        "answerID": 6,
+        "answer": "Human Resources"
+      },
+      {
+        "answerID": 7,
+        "answer": "Sales"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Information Technology"
+      },
+      {
+        "answerID": 2,
+        "answer": "Operations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Marketing"
+      },
+      {
+        "answerID": 4,
+        "answer": "Engineering"
+      },
+      {
+        "answerID": 5,
+        "answer": "Finance"
+      },
+      {
+        "answerID": 6,
+        "answer": "Human Resources"
+      },
+      {
+        "answerID": 7,
+        "answer": "Sales"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 5,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 5,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 6,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 6,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 7,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 7,
+        "answerID2": 8,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 5,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 6,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 7,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 8,
+        "answerID2": 8,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "122",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -45,7 +1909,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "102",
+    "questionID": "123",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -90,7 +1954,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "103",
+    "questionID": "124",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -134,7 +1998,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "104",
+    "questionID": "125",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -178,7 +2042,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "105",
+    "questionID": "126",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -222,7 +2086,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "106",
+    "questionID": "127",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -266,7 +2130,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "107",
+    "questionID": "128",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -309,7 +2173,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "108",
+    "questionID": "129",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -354,7 +2218,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "109",
+    "questionID": "130",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -399,7 +2263,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "110",
+    "questionID": "131",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -444,7 +2308,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "111",
+    "questionID": "132",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -487,7 +2351,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "112",
+    "questionID": "133",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -530,7 +2394,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "113",
+    "questionID": "134",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -573,7 +2437,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "114",
+    "questionID": "135",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -616,7 +2480,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "115",
+    "questionID": "136",
     "order": -1,
     "category": "Industry Certifications",
     "tags": [
@@ -659,7 +2523,1308 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "116",
+    "questionID": "121",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "IT",
+      "risk assessments",
+      "security"
+    ],
+    "question": "Which statement best describes your experience in performing IT risk assessments?",
+    "employerQuestion": "What level of experience in performing IT risk assessments do you expect from a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I've assisted in risk assessments and understand the basic concepts of identifying, analyzing, and evaluating potential IT threats and vulnerabilities"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've directly contributed to the risk assessment process and have a good understanding of the techniques and methodologies used"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I've led risk assessments, designed mitigation strategies, and I'm adept at using professional risk assessment tools and methodologies"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to assist in risk assessments and understand the basic concepts of identifying, analyzing, and evaluating potential IT threats and vulnerabilities"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of directly contributing to the risk assessment process and has a good understanding of the techniques and methodologies used"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can lead risk assessments, design mitigation strategies, and is adept at using professional risk assessment tools and methodologies"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "106",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "API",
+      "integration",
+      "system integration"
+    ],
+    "question": "How experienced are you in integrating various systems and platforms using APIs?",
+    "employerQuestion": "How experienced should the candidate be in integrating various systems and platforms using APIs?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the basic concepts and have conducted simple integrations using APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience integrating various systems and platforms using APIs in a professional context"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience in integrating complex systems and platforms using APIs, including handling issues like data mapping, error handling, and security"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: This role requires basic understanding and ability to conduct simple integrations using APIs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: This role requires experience integrating various systems and platforms using APIs"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience in integrating complex systems and platforms using APIs, including handling issues like data mapping, error handling, and security"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "107",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "SQL",
+      "querying",
+      "programming",
+      "languages"
+    ],
+    "question": "What is your proficiency level in SQL?",
+    "employerQuestion": "What proficiency level in SQL is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic SQL commands and can perform simple data retrieval and updates"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with more complex operations like joins, subqueries, and database design"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in database administration, performance optimization, and writing stored procedures"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic SQL commands and the ability to perform simple data retrieval and updates"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with complex SQL operations and database design"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in database administration, SQL performance optimization, and writing stored procedures"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "108",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "Python",
+      "coding language"
+    ],
+    "question": "Which best describes your proficiency level in Python?",
+    "employerQuestion": "What proficiency level in Python is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Able to write simple Python scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with Python libraries like Pandas, NumPy, or Matplotlib. Experience with web frameworks like Django or Flask"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient with advanced topics like decorators, generators, and metaclasses. Can develop, test, and debug complex applications, including using frameworks like Django or Flask"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Able to write simple scripts and understand Python code"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with Python libraries and web frameworks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expected to create complex applications. Familiarity with advanced topics and frameworks is necessary"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "109",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "SOAP APIs",
+      "REST",
+      "API"
+    ],
+    "question": "How would you rate your experience and understanding of REST and SOAP APIs?",
+    "employerQuestion": "What level of experience and understanding of REST and SOAP APIs is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I understand the theoretical concepts of REST and SOAP, such as HTTP methods (GET, POST, PUT, DELETE) or XML messaging but have little to no practical experience"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have experience constructing API requests, working with endpoints, and understand the differences between stateless (REST) and stateful (SOAP) APIs from practical project work"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have deep experience working with REST and SOAP APIs in a professional context. I've designed, developed, and maintained APIs and understand concepts like resources, collections, namespaces, error handling, and security concerns"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "The role requires a basic understanding of REST and SOAP APIs, with practical experience not essential but beneficial"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with REST and SOAP APIs, including constructing API requests and understanding the core differences between REST and SOAP"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role necessitates a deep understanding and hands-on experience in designing, developing, and maintaining REST and SOAP APIs, with knowledge in error handling and security measures as well"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "110",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "API Authentication",
+      "API"
+    ],
+    "question": "Which best describes your understanding of API Authentication Methods?",
+    "employerQuestion": "What level of experience and understanding of API Authentication Methods is necessary for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I am familiar with the basics of API authentication methods like Basic Auth, API keys, OAuth but have limited practical application"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have implemented API authentication methods in my projects. I understand the differences between them and know when to use which"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience implementing various API authentication methods, including sophisticated ones like OAuth2.0 and JWT, in a professional context. I understand the security implications and best practices"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires a basic understanding of API authentication methods"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires hands-on experience with implementing various API authentication methods"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: This role requires extensive experience with API authentication methods, including understanding the security implications and best practices"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "111",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "Java",
+      "coding language",
+      "programming"
+    ],
+    "question": "What is your proficiency level in Java?",
+    "employerQuestion": "What proficiency level in Java is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Able to write simple Java programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with OOP concepts, error handling, and file operations in Java. Experience with Java libraries and frameworks like Spring or Hibernate"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient with multithreading, networking, and JVM internals. Can develop, test, and debug complex Java applications"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of Java's basics and the ability to write simple programs"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in Java and experience with Java libraries or frameworks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of Java, including multithreading and JVM internals"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "112",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "PHP",
+      "coding",
+      "languages"
+    ],
+    "question": "What is your proficiency level in PHP?",
+    "employerQuestion": "What proficiency level in PHP is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, and control structures. Can write simple PHP scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with OOP in PHP, error handling, and PHP libraries and frameworks like Laravel or Symfony"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Proficient in PHP best practices, secure coding, and performance optimization. Experienced in developing and maintaining complex PHP applications"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of basic PHP syntax and the ability to write simple scripts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with OOP in PHP, error handling, and PHP libraries and frameworks"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires proficiency in PHP best practices, secure coding, and performance optimization. Experience in developing and maintaining complex PHP applications is needed"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "113",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "JavaScript",
+      "coding language"
+    ],
+    "question": "What is your proficiency level in JavaScript?",
+    "employerQuestion": "What proficiency level in JavaScript is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiar with basic syntax, variables, data types, and writing functions. Understanding of DOM manipulation and events"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Comfortable with ES6 features, asynchronous JavaScript, and AJAX. Experience using front-end libraries or frameworks like React, Angular, or Vue"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Deep understanding of the JavaScript engine, prototypical inheritance, closures, and the event loop. Proficiency in Node.js and backend JavaScript development"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The role requires an understanding of JavaScript's basics and DOM manipulation"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The role requires familiarity with modern JavaScript features and front-end frameworks or libraries"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The role requires a deep understanding of JavaScript, including backend development with Node.js"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "114",
+    "order": -1,
+    "category": "Technical Knowledge",
+    "tags": [
+      "network",
+      "security",
+      "firewalls",
+      "VPN",
+      "encryption",
+      "IDS/IPS"
+    ],
+    "question": "What is your level of proficiency with network security principles and technologies (firewalls, VPN, encryption, IDS/IPS, etc.)?",
+    "employerQuestion": "What level of proficiency with network security principles and technologies (firewalls, VPN, encryption, IDS/IPS, etc.) is required for this role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Familiarity with the concept of network security, basic principles, and fundamental technologies like firewalls and VPN"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Experience in setting up and managing network security tools. Familiarity with encryption and intrusion detection/prevention systems"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expertise in designing and managing network security infrastructures. Ability to detect and respond to security incidents, and proficiency in advanced security technologies"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Requires familiarity with the concept of network security and fundamental technologies"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Requires experience in setting up and managing network security tools"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Requires expertise in designing and managing network security infrastructures and proficiency in advanced security technologies"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "137",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -788,7 +3953,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "117",
+    "questionID": "138",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -917,7 +4082,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "118",
+    "questionID": "139",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1046,7 +4211,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "119",
+    "questionID": "140",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1177,7 +4342,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "120",
+    "questionID": "141",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1307,7 +4472,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "121",
+    "questionID": "142",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1436,7 +4601,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "122",
+    "questionID": "143",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1565,7 +4730,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "123",
+    "questionID": "144",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1697,7 +4862,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "124",
+    "questionID": "145",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1826,7 +4991,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "125",
+    "questionID": "146",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -1956,7 +5121,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "126",
+    "questionID": "147",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2086,7 +5251,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "127",
+    "questionID": "148",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2217,7 +5382,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "128",
+    "questionID": "149",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2347,7 +5512,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "129",
+    "questionID": "150",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2479,7 +5644,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "130",
+    "questionID": "151",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2609,7 +5774,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "131",
+    "questionID": "152",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2738,7 +5903,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "132",
+    "questionID": "153",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -2872,7 +6037,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "133",
+    "questionID": "154",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3001,7 +6166,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "134",
+    "questionID": "155",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3129,7 +6294,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "135",
+    "questionID": "156",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3258,7 +6423,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "136",
+    "questionID": "157",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3387,7 +6552,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "137",
+    "questionID": "158",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3516,7 +6681,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "138",
+    "questionID": "159",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3645,7 +6810,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "139",
+    "questionID": "160",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3776,7 +6941,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "140",
+    "questionID": "161",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -3904,7 +7069,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "141",
+    "questionID": "162",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4033,7 +7198,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "142",
+    "questionID": "163",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4162,7 +7327,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "143",
+    "questionID": "164",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4291,7 +7456,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "144",
+    "questionID": "165",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4420,7 +7585,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "145",
+    "questionID": "166",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4549,7 +7714,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "146",
+    "questionID": "167",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4678,7 +7843,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "147",
+    "questionID": "168",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4808,7 +7973,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "148",
+    "questionID": "169",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -4938,7 +8103,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "149",
+    "questionID": "170",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5068,7 +8233,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "150",
+    "questionID": "171",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5197,7 +8362,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "151",
+    "questionID": "172",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5325,7 +8490,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "152",
+    "questionID": "173",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5454,7 +8619,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "153",
+    "questionID": "174",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5583,7 +8748,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "154",
+    "questionID": "175",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5712,7 +8877,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "155",
+    "questionID": "176",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5802,7 +8967,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "156",
+    "questionID": "177",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -5932,7 +9097,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "157",
+    "questionID": "178",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -6063,7 +9228,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "158",
+    "questionID": "179",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -6192,7 +9357,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "159",
+    "questionID": "180",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -6321,7 +9486,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "160",
+    "questionID": "181",
     "order": -1,
     "category": "Technical Knowledge",
     "tags": [
@@ -6450,7 +9615,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "161",
+    "questionID": "182",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -6462,7 +9627,7 @@ export const questionsDataFull = [
     "answers": [
       {
         "answerID": 1,
-        "answer": "Never: Not involved in proposal writing process"
+        "answer": "Never"
       },
       {
         "answerID": 2,
@@ -6579,7 +9744,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "162",
+    "questionID": "183",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -6708,7 +9873,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "163",
+    "questionID": "184",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -6837,7 +10002,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "164",
+    "questionID": "185",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -6967,7 +10132,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "165",
+    "questionID": "186",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -7212,7 +10377,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "166",
+    "questionID": "187",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -7342,7 +10507,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "167",
+    "questionID": "188",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -7472,7 +10637,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "168",
+    "questionID": "189",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -7873,7 +11038,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "169",
+    "questionID": "190",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -8274,7 +11439,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "170",
+    "questionID": "191",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -8675,7 +11840,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "171",
+    "questionID": "192",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -8920,7 +12085,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "172",
+    "questionID": "193",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -9165,7 +12330,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "173",
+    "questionID": "194",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -9411,7 +12576,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "174",
+    "questionID": "195",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -9812,7 +12977,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "175",
+    "questionID": "196",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -10215,7 +13380,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "176",
+    "questionID": "197",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -10461,7 +13626,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "177",
+    "questionID": "198",
     "order": -1,
     "category": "Deal Experience",
     "tags": [
@@ -10589,7 +13754,642 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "178",
+    "questionID": "101",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "Salesforce",
+      "CRM"
+    ],
+    "question": "Which statement best describes your experience with customizing Salesforce instances on behalf of companies?",
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with customizing Salesforce instances?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have some experience in customizing Salesforce; I can create and modify fields, layouts, and simple automations like email alerts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have customized Salesforce in a professional setting; I can create custom objects, complex automations using Process Builder, and utilize validation rules"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in customizing Salesforce; I can design and implement complex automations, build custom applications, and effectively manage user roles and profiles"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have some experience in customizing Salesforce; they can create and modify fields, layouts, and simple automations like email alerts"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have customized Salesforce in a professional setting; they can create custom objects, complex automations using Process Builder, and utilize validation rules"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be proficient in customizing Salesforce; they can design and implement complex automations, build custom applications, and effectively manage user roles and profiles"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "102",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "AWS",
+      "cloud platform"
+    ],
+    "question": "Which statement best describes your proficiency with AWS (Amazon Web Services)?",
+    "employerQuestion": "What level of AWS proficiency are you expecting from your candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used AWS for simple tasks, such as launching an EC2 instance or setting up an S3 bucket"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I regularly use a variety of AWS services for more complex tasks, such as setting up a VPC, using Lambda functions, or managing RDS databases"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design, deploy, and manage complex infrastructures on AWS, including cost optimization and security management"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate has used AWS for simple tasks, such as launching an EC2 instance or setting up an S3 bucket"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate regularly uses a variety of AWS services for more complex tasks, such as setting up a VPC, using Lambda functions, or managing RDS databases"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate can design, deploy, and manage complex infrastructures on AWS, including cost optimization and security management"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "103",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "HubSpot",
+      "CRM"
+    ],
+    "question": "Which statement best describes your experience with HubSpot CRM's Sales Hub?",
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with HubSpot CRM's Sales Hub?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used HubSpot for basic contact management and deal tracking"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have configured HubSpot CRM for sales processes and created custom reports and dashboards"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can customize HubSpot CRM and Sales Hub, create automation with workflows, and handle integrations with other systems"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used HubSpot for basic contact management and deal tracking"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have configured HubSpot CRM for sales processes and created custom reports and dashboards"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be able to customize HubSpot CRM and Sales Hub, create automation with workflows, and handle integrations with other systems"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "104",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "Tableau",
+      "Data Visualization",
+      "Proficiency"
+    ],
+    "question": "Which statement best describes your proficiency with Tableau?",
+    "employerQuestion": "",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Tableau for basic tasks, such as creating simple charts and visualizations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I've regularly used Tableau, including creating dashboards, interactive visualizations, and using basic features for data analytics"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I have extensive experience with Tableau, including data integration, advanced data analysis, creating complex interactive dashboards, and utilizing scripting for more complex tasks"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "105",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "BI",
+      "Business Intelligence",
+      "Power BI"
+    ],
+    "question": "Which statement best describes your experience with Microsoft Power BI?",
+    "employerQuestion": "Which of these best describes the level of Microsoft Power BI experience you are looking for in a candidate?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I can create basic visualizations and reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I can create complex visualizations, dashboards and manipulate data models. I understand concepts like DAX formulas and Power Query"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I can design and implement complex reports and dashboards, integrate with other Microsoft products, and optimize performance. I can also use advanced features like quick measures, conditional columns, and hierarchy creation"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can generate basic visualizations and reports in Microsoft Power BI"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of creating complex visualizations, dashboards, and manipulating data models. Familiar with DAX formulas and Power Query"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can design and implement complex reports and dashboards, integrate Power BI with other Microsoft products, and optimize performance. Utilizes advanced features like quick measures, conditional columns, and hierarchy creation"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "199",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -10719,7 +14519,137 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "179",
+    "questionID": "200",
+    "order": -1,
+    "category": "Tools & Platforms",
+    "tags": [
+      "Salesforce CRM",
+      "Customer Relationship Management",
+      "Proficiency"
+    ],
+    "question": "Which statement best describes your experience with using Salesforce for data entry and reporting?",
+    "employerQuestion": "Which statement best describes the level of experience a candidate should have with using Salesforce for data entry and reporting?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: I have used Salesforce for basic tasks like data entry and generating simple reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: I have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: I am proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
+      }
+    ],
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No experience required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: The candidate should have used Salesforce for basic tasks like data entry and generating simple reports"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: The candidate should have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: The candidate should be proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
+      }
+    ],
+    "matchScores": [
+      {
+        "answerID1": 1,
+        "answerID2": 1,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 1,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 2,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 2,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 3,
+        "matchValue": 100
+      },
+      {
+        "answerID1": 3,
+        "answerID2": 4,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 1,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 2,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 3,
+        "matchValue": 0
+      },
+      {
+        "answerID1": 4,
+        "answerID2": 4,
+        "matchValue": 100
+      }
+    ]
+  },
+  {
+    "questionID": "201",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -10848,7 +14778,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "180",
+    "questionID": "202",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -10977,7 +14907,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "181",
+    "questionID": "203",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11106,7 +15036,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "182",
+    "questionID": "204",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11235,7 +15165,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "183",
+    "questionID": "205",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11364,7 +15294,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "184",
+    "questionID": "206",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11493,7 +15423,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "185",
+    "questionID": "207",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11622,7 +15552,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "186",
+    "questionID": "208",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11751,7 +15681,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "187",
+    "questionID": "209",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -11880,7 +15810,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "188",
+    "questionID": "210",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12009,7 +15939,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "189",
+    "questionID": "211",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12138,7 +16068,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "190",
+    "questionID": "212",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12267,7 +16197,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "191",
+    "questionID": "213",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12396,7 +16326,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "192",
+    "questionID": "214",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12525,7 +16455,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "193",
+    "questionID": "215",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12615,7 +16545,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "194",
+    "questionID": "216",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12745,7 +16675,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "195",
+    "questionID": "217",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -12873,7 +16803,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "196",
+    "questionID": "218",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13003,7 +16933,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "197",
+    "questionID": "219",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13132,7 +17062,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "198",
+    "questionID": "220",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13262,7 +17192,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "199",
+    "questionID": "221",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13392,7 +17322,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "200",
+    "questionID": "222",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13522,7 +17452,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "201",
+    "questionID": "223",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13652,7 +17582,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "202",
+    "questionID": "224",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13783,7 +17713,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "203",
+    "questionID": "225",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -13913,7 +17843,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "204",
+    "questionID": "226",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14043,7 +17973,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "205",
+    "questionID": "227",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14172,7 +18102,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "206",
+    "questionID": "228",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14301,7 +18231,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "207",
+    "questionID": "229",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14431,7 +18361,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "208",
+    "questionID": "230",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14561,7 +18491,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "209",
+    "questionID": "231",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14691,7 +18621,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "210",
+    "questionID": "232",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14821,7 +18751,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "211",
+    "questionID": "233",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -14951,7 +18881,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "212",
+    "questionID": "234",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15081,7 +19011,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "213",
+    "questionID": "235",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15212,7 +19142,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "214",
+    "questionID": "236",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15342,7 +19272,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "215",
+    "questionID": "237",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15472,7 +19402,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "216",
+    "questionID": "238",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15602,7 +19532,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "217",
+    "questionID": "239",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15733,7 +19663,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "218",
+    "questionID": "240",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15862,7 +19792,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "219",
+    "questionID": "241",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -15991,7 +19921,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "220",
+    "questionID": "242",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16122,7 +20052,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "221",
+    "questionID": "243",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16253,7 +20183,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "222",
+    "questionID": "244",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16383,7 +20313,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "223",
+    "questionID": "245",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16512,7 +20442,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "224",
+    "questionID": "246",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16641,7 +20571,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "225",
+    "questionID": "247",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16770,7 +20700,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "226",
+    "questionID": "248",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -16899,7 +20829,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "227",
+    "questionID": "249",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17029,7 +20959,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "228",
+    "questionID": "250",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17161,7 +21091,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "229",
+    "questionID": "251",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17291,7 +21221,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "230",
+    "questionID": "252",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17420,7 +21350,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "231",
+    "questionID": "253",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17550,7 +21480,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "232",
+    "questionID": "254",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17678,7 +21608,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "233",
+    "questionID": "255",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17806,7 +21736,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "234",
+    "questionID": "256",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -17934,7 +21864,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "235",
+    "questionID": "257",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18062,7 +21992,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "236",
+    "questionID": "258",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18191,7 +22121,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "237",
+    "questionID": "259",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18320,7 +22250,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "238",
+    "questionID": "260",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18449,7 +22379,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "239",
+    "questionID": "261",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18578,7 +22508,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "240",
+    "questionID": "262",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18707,7 +22637,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "241",
+    "questionID": "263",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18836,7 +22766,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "242",
+    "questionID": "264",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -18965,7 +22895,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "243",
+    "questionID": "265",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19094,7 +23024,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "244",
+    "questionID": "266",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19224,7 +23154,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "245",
+    "questionID": "267",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19354,7 +23284,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "246",
+    "questionID": "268",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19483,7 +23413,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "247",
+    "questionID": "269",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19612,7 +23542,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "248",
+    "questionID": "270",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19741,7 +23671,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "249",
+    "questionID": "271",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19870,7 +23800,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "250",
+    "questionID": "272",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -19999,7 +23929,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "251",
+    "questionID": "273",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20128,7 +24058,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "252",
+    "questionID": "274",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20257,7 +24187,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "253",
+    "questionID": "275",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20386,7 +24316,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "254",
+    "questionID": "276",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20515,7 +24445,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "255",
+    "questionID": "277",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20645,7 +24575,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "256",
+    "questionID": "278",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20774,7 +24704,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "257",
+    "questionID": "279",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -20903,7 +24833,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "258",
+    "questionID": "280",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21032,7 +24962,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "259",
+    "questionID": "281",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21161,7 +25091,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "260",
+    "questionID": "282",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21290,7 +25220,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "261",
+    "questionID": "283",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21419,7 +25349,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "262",
+    "questionID": "284",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21549,7 +25479,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "263",
+    "questionID": "285",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21679,7 +25609,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "264",
+    "questionID": "286",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21808,7 +25738,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "265",
+    "questionID": "287",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -21937,7 +25867,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "266",
+    "questionID": "288",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -22066,7 +25996,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "267",
+    "questionID": "289",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -22195,7 +26125,7 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "268",
+    "questionID": "290",
     "order": -1,
     "category": "Tools & Platforms",
     "tags": [
@@ -22324,9 +26254,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "269",
+    "questionID": "291",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Business",
       "Travel",
@@ -22454,9 +26384,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "270",
+    "questionID": "292",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Work",
       "Location",
@@ -22584,9 +26514,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "271",
+    "questionID": "293",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Diversity",
       "Inclusion",
@@ -22715,9 +26645,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "272",
+    "questionID": "294",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Travel",
       "work requirements",
@@ -22846,9 +26776,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "273",
+    "questionID": "295",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Career advancement opportunities"
     ],
@@ -22974,9 +26904,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "274",
+    "questionID": "296",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Management transition potential",
       "Future leadership opportunities"
@@ -23103,9 +27033,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "275",
+    "questionID": "297",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       "Transition opportunities",
       "Different industry/sector within company"
@@ -23232,9 +27162,9 @@ export const questionsDataFull = [
     ]
   },
   {
-    "questionID": "276",
+    "questionID": "298",
     "order": -1,
-    "category": "Job Specific HR",
+    "category": "HR (Other)",
     "tags": [
       ""
     ],
@@ -23259,136 +27189,6 @@ export const questionsDataFull = [
       }
     ],
     "employerAnswers": [],
-    "matchScores": [
-      {
-        "answerID1": 1,
-        "answerID2": 1,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 1,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 2,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 2,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 3,
-        "matchValue": 100
-      },
-      {
-        "answerID1": 3,
-        "answerID2": 4,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 1,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 2,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 3,
-        "matchValue": 0
-      },
-      {
-        "answerID1": 4,
-        "answerID2": 4,
-        "matchValue": 100
-      }
-    ]
-  },
-  {
-    "questionID": "277",
-    "order": -1,
-    "category": "Tools & Platforms",
-    "tags": [
-      "Salesforce CRM",
-      "Customer Relationship Management",
-      "Proficiency"
-    ],
-    "question": "Which statement best describes your experience with using Salesforce for data entry and reporting?",
-    "employerQuestion": "Which statement best describes the level of experience a candidate should have with using Salesforce for data entry and reporting?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have used Salesforce for basic tasks like data entry and generating simple reports"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I am proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
-      }
-    ],
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No experience required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: The candidate should have used Salesforce for basic tasks like data entry and generating simple reports"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: The candidate should have used Salesforce extensively for data entry and can generate complex reports, including using filters and custom fields"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: The candidate should be proficient in using Salesforce for data entry, can generate and customize complex reports, and understand how to use Salesforce's reporting tools to derive insights for decision-making"
-      }
-    ],
     "matchScores": [
       {
         "answerID1": 1,

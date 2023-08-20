@@ -87,8 +87,10 @@ fs.createReadStream('questions.csv')
                 order: obj.order,
                 category: obj.category,
                 tags: obj.tags,
-                question: (obj.employerQuestion ? obj.employerQuestion : obj.question),
-                answers: (obj.employerAnswers.length ? obj.employerAnswers : obj.answers),
+                question: obj.question,
+                answers: obj.answers,
+                employerQuestion: obj.employerQuestion,
+                employerAnswers: obj.employerAnswers,
             };
         });
         fs.writeFile('../client/src/QuestionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {

@@ -617,7 +617,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                         ...
                     </Heading>}
             </HStack>
-            {(Object.keys(selectedAnswers).length >= 2) &&
+            {(Object.keys(selectedAnswers).length >= 2) &&  // TODO Change to >= 20
                 <Button colorScheme='orange' rightIcon={<ArrowRightIcon />}
                     as={RouterLink} to={`/candidate/account`} size='lg' mt={5}>
                     See Matches
