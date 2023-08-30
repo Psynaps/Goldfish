@@ -1,5 +1,2280 @@
 export const questionsData = [
   {
+    "questionID": "1",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "work experience"
+    ],
+    "question": "How long have you been working as a sales or solution engineer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I don't have any work experience as a sales engineer"
+      },
+      {
+        "answerID": 2,
+        "answer": "<1 year"
+      },
+      {
+        "answerID": 3,
+        "answer": "1 - 2 years"
+      },
+      {
+        "answerID": 4,
+        "answer": "3 - 4 years"
+      },
+      {
+        "answerID": 5,
+        "answer": "5 - 6 years"
+      },
+      {
+        "answerID": 6,
+        "answer": "7 - 8 years"
+      },
+      {
+        "answerID": 7,
+        "answer": "8 - 10 years"
+      },
+      {
+        "answerID": 8,
+        "answer": "10+ years"
+      }
+    ],
+    "employerQuestion": "How many years of prior sales or solution engineering experience should a candidate ideally have?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "We don't require direct experience"
+      },
+      {
+        "answerID": 2,
+        "answer": "<1 year"
+      },
+      {
+        "answerID": 3,
+        "answer": "1 - 2 years"
+      },
+      {
+        "answerID": 4,
+        "answer": "3 - 4 years"
+      },
+      {
+        "answerID": 5,
+        "answer": "5 - 6 years"
+      },
+      {
+        "answerID": 6,
+        "answer": "7 - 8 years"
+      },
+      {
+        "answerID": 7,
+        "answer": "8 - 10 years"
+      },
+      {
+        "answerID": 8,
+        "answer": "10+ years"
+      }
+    ]
+  },
+  {
+    "questionID": "9",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      ""
+    ],
+    "question": "Would you prefer a role that focuses on pre-sales (i.e. helping to secure new sales) or post-sales (i.e. onboarding and client support)?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Pre-sales"
+      },
+      {
+        "answerID": 2,
+        "answer": "Post-sales"
+      },
+      {
+        "answerID": 3,
+        "answer": "I prefer a 50/50 mix"
+      },
+      {
+        "answerID": 4,
+        "answer": "I don't have a specific preference"
+      }
+    ],
+    "employerQuestion": "Between pre-sales activities (securing the sale), or post-sales (onboarding and client consulting), where will this SE hire primarily spend their time? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Predominantly pre-sales activities"
+      },
+      {
+        "answerID": 2,
+        "answer": "Predominantly post-sales activities"
+      },
+      {
+        "answerID": 3,
+        "answer": "Roughly 50-50 mix"
+      },
+      {
+        "answerID": 4,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "16",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "Highest education level",
+      "Completed education",
+      "Degree",
+      "Diploma"
+    ],
+    "question": "What's your highest completed level of education?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No formal education"
+      },
+      {
+        "answerID": 2,
+        "answer": "High School Diploma"
+      },
+      {
+        "answerID": 3,
+        "answer": "Associate Degree"
+      },
+      {
+        "answerID": 4,
+        "answer": "Bachelor's Degree"
+      },
+      {
+        "answerID": 5,
+        "answer": "Master's Degree"
+      },
+      {
+        "answerID": 6,
+        "answer": "Doctorate Degree"
+      }
+    ],
+    "employerQuestion": "What's the minimum level of education you expect in a candidate?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No formal education required"
+      },
+      {
+        "answerID": 2,
+        "answer": "High School Diploma"
+      },
+      {
+        "answerID": 3,
+        "answer": "Associate Degree"
+      },
+      {
+        "answerID": 4,
+        "answer": "Bachelor's Degree"
+      },
+      {
+        "answerID": 5,
+        "answer": "Master's Degree"
+      },
+      {
+        "answerID": 6,
+        "answer": "Doctorate"
+      }
+    ]
+  },
+  {
+    "questionID": "17",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "education"
+    ],
+    "question": "Which of the following best describes your primary area of study?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I did not pursue higher education"
+      },
+      {
+        "answerID": 2,
+        "answer": "Computer Science / Software Engineering"
+      },
+      {
+        "answerID": 3,
+        "answer": "Electrical / Electronics Engineering"
+      },
+      {
+        "answerID": 4,
+        "answer": "Mechanical / Civil Engineering"
+      },
+      {
+        "answerID": 5,
+        "answer": "Business / Marketing"
+      },
+      {
+        "answerID": 6,
+        "answer": "Mathematics / Statistics"
+      },
+      {
+        "answerID": 7,
+        "answer": "Physics / Chemistry / Biology (Natural Sciences)"
+      },
+      {
+        "answerID": 8,
+        "answer": "Humanities / Social Sciences"
+      }
+    ],
+    "employerQuestion": "What type of college degree is most relevant or desirable for this SE position?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No specific degree type"
+      },
+      {
+        "answerID": 2,
+        "answer": "Computer Science / Software Engineering"
+      },
+      {
+        "answerID": 3,
+        "answer": "Electrical / Electronics Engineering"
+      },
+      {
+        "answerID": 4,
+        "answer": "Mechanical / Civil Engineering"
+      },
+      {
+        "answerID": 5,
+        "answer": "Business / Marketing"
+      },
+      {
+        "answerID": 6,
+        "answer": "Mathematics / Statistics"
+      },
+      {
+        "answerID": 7,
+        "answer": "Physics / Chemistry / Biology (Natural Sciences)"
+      },
+      {
+        "answerID": 8,
+        "answer": "Humanities / Social Sciences"
+      }
+    ]
+  },
+  {
+    "questionID": "12",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "industry specialization"
+    ],
+    "question": "What industry do you prefer to work in as an SE? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Technology & Software"
+      },
+      {
+        "answerID": 2,
+        "answer": "Healthcare & Medical Devices"
+      },
+      {
+        "answerID": 3,
+        "answer": "Financial Services & Banking"
+      },
+      {
+        "answerID": 4,
+        "answer": "Manufacturing & Industrial Automation"
+      },
+      {
+        "answerID": 5,
+        "answer": "Retail & E-commerce"
+      },
+      {
+        "answerID": 6,
+        "answer": "Education & E-Learning"
+      },
+      {
+        "answerID": 7,
+        "answer": "Telecommunications & Networking"
+      },
+      {
+        "answerID": 8,
+        "answer": "Energy & Utilities"
+      },
+      {
+        "answerID": 9,
+        "answer": "Pharmaceuticals & Biotechnology"
+      },
+      {
+        "answerID": 10,
+        "answer": "Media & Entertainment"
+      },
+      {
+        "answerID": 11,
+        "answer": "Transportation & Logistics"
+      },
+      {
+        "answerID": 12,
+        "answer": "Construction & Engineering"
+      },
+      {
+        "answerID": 13,
+        "answer": "Government & Public Sector"
+      },
+      {
+        "answerID": 14,
+        "answer": "Hospitality & Tourism"
+      },
+      {
+        "answerID": 15,
+        "answer": "Real Estate & Property Management"
+      },
+      {
+        "answerID": 16,
+        "answer": "Food & Beverage"
+      },
+      {
+        "answerID": 17,
+        "answer": "Non-Profit & Social Impact"
+      },
+      {
+        "answerID": 18,
+        "answer": "Legal & Compliance"
+      },
+      {
+        "answerID": 19,
+        "answer": "Automotive & Transport"
+      },
+      {
+        "answerID": 20,
+        "answer": "No preference"
+      }
+    ],
+    "employerQuestion": "How would you characterize the industry in which your company operates?  ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Technology & Software"
+      },
+      {
+        "answerID": 2,
+        "answer": "Healthcare & Medical Devices"
+      },
+      {
+        "answerID": 3,
+        "answer": "Financial Services & Banking"
+      },
+      {
+        "answerID": 4,
+        "answer": "Manufacturing & Industrial Automation"
+      },
+      {
+        "answerID": 5,
+        "answer": "Retail & E-commerce"
+      },
+      {
+        "answerID": 6,
+        "answer": "Education & E-Learning"
+      },
+      {
+        "answerID": 7,
+        "answer": "Telecommunications & Networking"
+      },
+      {
+        "answerID": 8,
+        "answer": "Energy & Utilities"
+      },
+      {
+        "answerID": 9,
+        "answer": "Pharmaceuticals & Biotechnology"
+      },
+      {
+        "answerID": 10,
+        "answer": "Media & Entertainment"
+      },
+      {
+        "answerID": 11,
+        "answer": "Transportation & Logistics"
+      },
+      {
+        "answerID": 12,
+        "answer": "Construction & Engineering"
+      },
+      {
+        "answerID": 13,
+        "answer": "Government & Public Sector"
+      },
+      {
+        "answerID": 14,
+        "answer": "Hospitality & Tourism"
+      },
+      {
+        "answerID": 15,
+        "answer": "Real Estate & Property Management"
+      },
+      {
+        "answerID": 16,
+        "answer": "Food & Beverage"
+      },
+      {
+        "answerID": 17,
+        "answer": "Non-Profit & Social Impact"
+      },
+      {
+        "answerID": 18,
+        "answer": "Legal & Compliance"
+      },
+      {
+        "answerID": 19,
+        "answer": "Automotive & Transport"
+      },
+      {
+        "answerID": 20,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "14",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "specilization",
+      "industry specialization"
+    ],
+    "question": "How many years of sales engineering experience do you have in your preferred industry?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Not applicable"
+      },
+      {
+        "answerID": 2,
+        "answer": "<1 year"
+      },
+      {
+        "answerID": 3,
+        "answer": "1 - 2 years"
+      },
+      {
+        "answerID": 4,
+        "answer": "3 - 4 years"
+      },
+      {
+        "answerID": 5,
+        "answer": "5 - 6 years"
+      },
+      {
+        "answerID": 6,
+        "answer": "7 - 8 years"
+      },
+      {
+        "answerID": 7,
+        "answer": "8 - 10 years"
+      },
+      {
+        "answerID": 8,
+        "answer": "10+ years"
+      }
+    ],
+    "employerQuestion": "How many years of sales engineering experience should an ideal candidate have in your industry niche? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Specialization not required"
+      },
+      {
+        "answerID": 2,
+        "answer": "<1 year"
+      },
+      {
+        "answerID": 3,
+        "answer": "1 - 2 years"
+      },
+      {
+        "answerID": 4,
+        "answer": "3 - 4 years"
+      },
+      {
+        "answerID": 5,
+        "answer": "5 - 6 years"
+      },
+      {
+        "answerID": 6,
+        "answer": "7 - 8 years"
+      },
+      {
+        "answerID": 7,
+        "answer": "8 - 10 years"
+      },
+      {
+        "answerID": 8,
+        "answer": "10+ years"
+      }
+    ]
+  },
+  {
+    "questionID": "10",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "vertical",
+      "niche"
+    ],
+    "question": "Which of the following product categories would you be most interesed in supporting? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Customer Relationship Management (CRM) Software"
+      },
+      {
+        "answerID": 2,
+        "answer": "Enterprise Resource Planning (ERP) Systems"
+      },
+      {
+        "answerID": 3,
+        "answer": "Cybersecurity Solutions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Data Analytics and Business Intelligence Tools"
+      },
+      {
+        "answerID": 5,
+        "answer": "Collaboration and Communication Platforms"
+      },
+      {
+        "answerID": 6,
+        "answer": "Cloud Computing Services"
+      },
+      {
+        "answerID": 7,
+        "answer": "E-commerce Solutions"
+      },
+      {
+        "answerID": 8,
+        "answer": "Industrial Automation Tools"
+      },
+      {
+        "answerID": 9,
+        "answer": "Health Technology Solutions"
+      },
+      {
+        "answerID": 10,
+        "answer": "Content Management Systems (CMS)"
+      },
+      {
+        "answerID": 11,
+        "answer": "Supply Chain Management Software"
+      },
+      {
+        "answerID": 12,
+        "answer": "Financial and Accounting Software"
+      },
+      {
+        "answerID": 13,
+        "answer": "Education Technology Platforms"
+      },
+      {
+        "answerID": 14,
+        "answer": "Marketing Automation Tools"
+      },
+      {
+        "answerID": 15,
+        "answer": "Network Management Solutions"
+      },
+      {
+        "answerID": 16,
+        "answer": "Project Management Software"
+      },
+      {
+        "answerID": 17,
+        "answer": "Human Resource Management Systems (HRMS)"
+      },
+      {
+        "answerID": 18,
+        "answer": "Product Lifecycle Management (PLM) Tools"
+      },
+      {
+        "answerID": 19,
+        "answer": "Virtualization and Containerization Solutions"
+      },
+      {
+        "answerID": 20,
+        "answer": "No preference"
+      }
+    ],
+    "employerQuestion": "Which most accurately describes the type of product an SE would primarily support in this role?  ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Customer Relationship Management (CRM) Software"
+      },
+      {
+        "answerID": 2,
+        "answer": "Enterprise Resource Planning (ERP) Systems"
+      },
+      {
+        "answerID": 3,
+        "answer": "Cybersecurity Solutions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Data Analytics and Business Intelligence Tools"
+      },
+      {
+        "answerID": 5,
+        "answer": "Collaboration and Communication Platforms"
+      },
+      {
+        "answerID": 6,
+        "answer": "Cloud Computing Services"
+      },
+      {
+        "answerID": 7,
+        "answer": "E-commerce Solutions"
+      },
+      {
+        "answerID": 8,
+        "answer": "Industrial Automation Tools"
+      },
+      {
+        "answerID": 9,
+        "answer": "Health Technology Solutions"
+      },
+      {
+        "answerID": 10,
+        "answer": "Content Management Systems (CMS)"
+      },
+      {
+        "answerID": 11,
+        "answer": "Supply Chain Management Software"
+      },
+      {
+        "answerID": 12,
+        "answer": "Financial and Accounting Software"
+      },
+      {
+        "answerID": 13,
+        "answer": "Education Technology Platforms"
+      },
+      {
+        "answerID": 14,
+        "answer": "Marketing Automation Tools"
+      },
+      {
+        "answerID": 15,
+        "answer": "Network Management Solutions"
+      },
+      {
+        "answerID": 16,
+        "answer": "Project Management Software"
+      },
+      {
+        "answerID": 17,
+        "answer": "Human Resource Management Systems (HRMS)"
+      },
+      {
+        "answerID": 18,
+        "answer": "Product Lifecycle Management (PLM) Tools"
+      },
+      {
+        "answerID": 19,
+        "answer": "Virtualization and Containerization Solutions"
+      },
+      {
+        "answerID": 20,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "15",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "Deal Size",
+      "Sales Experience",
+      "Past Roles"
+    ],
+    "question": "What would you say has been the average deal size you've worked on, in conjunction with AE's, over the last year?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $25,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "Between $25,000 and $50,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50,000 and $100,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100,000 and $200,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $200,000 and $300,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between $300,000 and $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $500,000 and $1M"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than $1M"
+      }
+    ],
+    "employerQuestion": "What is the minimum average deal size you would expect a sales engineer candidate to have experience supporting?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $25,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "Between $25,000 and $50,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between $50,000 and $100,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between $100,000 and $200,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "Between $200,000 and $300,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "Between $300,000 and $500,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "Between $500,000 and $1M"
+      },
+      {
+        "answerID": 8,
+        "answer": "More than $1M"
+      }
+    ]
+  },
+  {
+    "questionID": "19",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "prospect type",
+      "SMB",
+      "enterprise",
+      "mid-market"
+    ],
+    "question": "What is the typical size of the companies (based on number of employees) that you have the most experience supporting on deals?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Under 100 employees (Small Businesses)"
+      },
+      {
+        "answerID": 2,
+        "answer": "100-500 employees (Small to Medium-sized Businesses)"
+      },
+      {
+        "answerID": 3,
+        "answer": "500-1,000 employees (Medium-sized Businesses)"
+      },
+      {
+        "answerID": 4,
+        "answer": "1,000-5,000 employees (Large Businesses)"
+      },
+      {
+        "answerID": 5,
+        "answer": "5,000-10,000 employees (Large to Enterprise Businesses)"
+      },
+      {
+        "answerID": 6,
+        "answer": "10,000-50,000 employees (Enterprise Businesses)"
+      },
+      {
+        "answerID": 7,
+        "answer": "50,000-100,000 employees (Large Enterprise Businesses)"
+      },
+      {
+        "answerID": 8,
+        "answer": "100,000+ employees (Very Large Enterprise Businesses)"
+      }
+    ],
+    "employerQuestion": "What is the typical size of the companies (based on number of employees) that your ideal candidate should have experience selling to?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Under 100 employees (Small Businesses)"
+      },
+      {
+        "answerID": 2,
+        "answer": "100-500 employees (Small to Medium-sized Businesses)"
+      },
+      {
+        "answerID": 3,
+        "answer": "500-1,000 employees (Medium-sized Businesses)"
+      },
+      {
+        "answerID": 4,
+        "answer": "1,000-5,000 employees (Large Businesses)"
+      },
+      {
+        "answerID": 5,
+        "answer": "5,000-10,000 employees (Large to Enterprise Businesses)"
+      },
+      {
+        "answerID": 6,
+        "answer": "10,000-50,000 employees (Enterprise Businesses)"
+      },
+      {
+        "answerID": 7,
+        "answer": "50,000-100,000 employees (Large Enterprise Businesses)"
+      },
+      {
+        "answerID": 8,
+        "answer": "100,000+ employees (Very Large Enterprise Businesses)"
+      }
+    ]
+  },
+  {
+    "questionID": "20",
+    "order": -1,
+    "category": "Job Questions",
+    "tags": [
+      "Proof of Concept (POC)",
+      "Client Support",
+      "Trial Process"
+    ],
+    "question": "How often have you been involved in running proof of concept (POC) or trial processes with prospects in the last 3 years?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Never: Not involved in running proof of concepts or trials in the last 2 years"
+      },
+      {
+        "answerID": 2,
+        "answer": "Rarely: Involved a few times over the past 2 years"
+      },
+      {
+        "answerID": 3,
+        "answer": "Occasionally: Involved several times a year"
+      },
+      {
+        "answerID": 4,
+        "answer": "Frequently: Regular involvement on a monthly or more frequent basis"
+      }
+    ],
+    "employerQuestion": "How often do you expect the candidate to be involved in running proof of concept or trial processes with prospects?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Never: Role doesn't involve running proof of concept or trials"
+      },
+      {
+        "answerID": 2,
+        "answer": "Rarely: Role may occasionally require running proof of concept or trials"
+      },
+      {
+        "answerID": 3,
+        "answer": "Occasionally: Candidate expected to engage several times a year"
+      },
+      {
+        "answerID": 4,
+        "answer": "Frequently: Regular involvement required, monthly or more frequently"
+      }
+    ]
+  },
+  {
+    "questionID": "6",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "location"
+    ],
+    "question": "Where would you prefer the nearest company office to be located?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "San Francisco, CA"
+      },
+      {
+        "answerID": 2,
+        "answer": "New York City, NY"
+      },
+      {
+        "answerID": 3,
+        "answer": "San Jose, CA"
+      },
+      {
+        "answerID": 4,
+        "answer": "Seattle, WA"
+      },
+      {
+        "answerID": 5,
+        "answer": "Boston, MA"
+      },
+      {
+        "answerID": 6,
+        "answer": "Austin, TX"
+      },
+      {
+        "answerID": 7,
+        "answer": "Chicago, IL"
+      },
+      {
+        "answerID": 8,
+        "answer": "Atlanta, GA"
+      },
+      {
+        "answerID": 9,
+        "answer": "Washington, D.C"
+      },
+      {
+        "answerID": 10,
+        "answer": "Los Angeles, CA"
+      },
+      {
+        "answerID": 11,
+        "answer": "Dallas, TX"
+      },
+      {
+        "answerID": 12,
+        "answer": "Denver, CO"
+      },
+      {
+        "answerID": 13,
+        "answer": "Raleigh-Durham, NC"
+      },
+      {
+        "answerID": 14,
+        "answer": "Minneapolis, MN"
+      },
+      {
+        "answerID": 15,
+        "answer": "Philadelphia, PA"
+      },
+      {
+        "answerID": 16,
+        "answer": "Houston, TX"
+      },
+      {
+        "answerID": 17,
+        "answer": "San Diego, CA"
+      },
+      {
+        "answerID": 18,
+        "answer": "Portland, OR"
+      },
+      {
+        "answerID": 19,
+        "answer": "Miami, FL"
+      },
+      {
+        "answerID": 20,
+        "answer": "Tampa, FL"
+      }
+    ],
+    "employerQuestion": "Where is this job's nearest home office located? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "San Francisco, CA"
+      },
+      {
+        "answerID": 2,
+        "answer": "New York City, NY"
+      },
+      {
+        "answerID": 3,
+        "answer": "San Jose, CA"
+      },
+      {
+        "answerID": 4,
+        "answer": "Seattle, WA"
+      },
+      {
+        "answerID": 5,
+        "answer": "Boston, MA"
+      },
+      {
+        "answerID": 6,
+        "answer": "Austin, TX"
+      },
+      {
+        "answerID": 7,
+        "answer": "Chicago, IL"
+      },
+      {
+        "answerID": 8,
+        "answer": "Atlanta, GA"
+      },
+      {
+        "answerID": 9,
+        "answer": "Washington, D.C"
+      },
+      {
+        "answerID": 10,
+        "answer": "Los Angeles, CA"
+      },
+      {
+        "answerID": 11,
+        "answer": "Dallas, TX"
+      },
+      {
+        "answerID": 12,
+        "answer": "Denver, CO"
+      },
+      {
+        "answerID": 13,
+        "answer": "Raleigh-Durham, NC"
+      },
+      {
+        "answerID": 14,
+        "answer": "Minneapolis, MN"
+      },
+      {
+        "answerID": 15,
+        "answer": "Philadelphia, PA"
+      },
+      {
+        "answerID": 16,
+        "answer": "Houston, TX"
+      },
+      {
+        "answerID": 17,
+        "answer": "San Diego, CA"
+      },
+      {
+        "answerID": 18,
+        "answer": "Portland, OR"
+      },
+      {
+        "answerID": 19,
+        "answer": "Miami, FL"
+      },
+      {
+        "answerID": 20,
+        "answer": "Tampa, FL"
+      }
+    ]
+  },
+  {
+    "questionID": "7",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "wfh",
+      "WFH",
+      "work from home"
+    ],
+    "question": "What is your work from home preferences?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Fully Remote: I prefer a role that is 100% remote, with no office presence required at any time"
+      },
+      {
+        "answerID": 2,
+        "answer": "Some Office Attendance: I prefer a role that is primarily remote, but I'm open to regular visits to the office for collaboration and team engagement"
+      },
+      {
+        "answerID": 3,
+        "answer": "Some Weekly Office Attendance Required: I prefer a role that requires a consistent in-office presence on a weekly basis, with the flexibility to work remotely on other days"
+      },
+      {
+        "answerID": 4,
+        "answer": "In-Office Only: I prefer a role that requires full-time presence in the office"
+      }
+    ],
+    "employerQuestion": "What is the work arrangement for this role in terms of remote work versus in-office work?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Fully Remote: This role is 100% remote, and no office presence is required at any time"
+      },
+      {
+        "answerID": 2,
+        "answer": "Weekly Office Attendance Preferred: This role is primarily remote, but visits to the office are preferred for collaboration and team engagement"
+      },
+      {
+        "answerID": 3,
+        "answer": "Some Weekly Office Attendance Required: This role requires a consistent in-office presence on a weekly basis, with the flexibility to work remotely on other days"
+      },
+      {
+        "answerID": 4,
+        "answer": "In-Office Only: This role requires full-time presence in the office and does not offer remote work flexibility"
+      }
+    ]
+  },
+  {
+    "questionID": "13",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "travel"
+    ],
+    "question": "What is your comfort level with travel for client meetings, events, etc.?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I am not able or willing to travel for work"
+      },
+      {
+        "answerID": 2,
+        "answer": "I prefer very minimal travel (less than 10% of the time)"
+      },
+      {
+        "answerID": 3,
+        "answer": "I can handle some travel (10-25% of the time)"
+      },
+      {
+        "answerID": 4,
+        "answer": "I am willing and able to travel a decent amount (25-50% of the time)"
+      },
+      {
+        "answerID": 5,
+        "answer": "I am comfortable with frequent travel (50-75% of the time)"
+      },
+      {
+        "answerID": 6,
+        "answer": "I am comfortable with significant travel (more than 75% of the time)"
+      }
+    ],
+    "employerQuestion": "What level of travel is required in this role for client meetings, events, etc.?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "This role does not require any travel"
+      },
+      {
+        "answerID": 2,
+        "answer": "This role requires very minimal travel (less than 10% of the time)"
+      },
+      {
+        "answerID": 3,
+        "answer": "This role requires some travel (10-25% of the time)"
+      },
+      {
+        "answerID": 4,
+        "answer": "This role requires occasional travel (25-50% of the time)"
+      },
+      {
+        "answerID": 5,
+        "answer": "This role requires frequent travel (50-75% of the time)"
+      },
+      {
+        "answerID": 6,
+        "answer": "This role requires significant travel (more than 75% of the time)"
+      }
+    ]
+  },
+  {
+    "questionID": "11",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "company size",
+      "size",
+      "startup"
+    ],
+    "question": "What size of company do prefer to work for? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Seed Stage Startup: 1-20 employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "Early Stage Startup: 21-100 employees"
+      },
+      {
+        "answerID": 3,
+        "answer": "Mid Stage Startup: 101-200 employees"
+      },
+      {
+        "answerID": 4,
+        "answer": "Growth Startup: 201-500 employees"
+      },
+      {
+        "answerID": 5,
+        "answer": "Late Stage Startup: 501-1000 employees"
+      },
+      {
+        "answerID": 6,
+        "answer": "Established Company: 1001+ employees"
+      }
+    ],
+    "employerQuestion": "Considering the continuum of company maturity, how would you describe your organization? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Seed Stage Startup: 1-20 employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "Early Stage Startup: 21-100 employees"
+      },
+      {
+        "answerID": 3,
+        "answer": "Mid Stage Startup: 101-200 employees"
+      },
+      {
+        "answerID": 4,
+        "answer": "Growth Startup: 201-500 employees"
+      },
+      {
+        "answerID": 5,
+        "answer": "Late Stage Startup: 501-1000 employees"
+      },
+      {
+        "answerID": 6,
+        "answer": "Established Company: 1001+ employees"
+      }
+    ]
+  },
+  {
+    "questionID": "2",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "base salary"
+    ],
+    "question": "What's the base salary range you're looking for in your next role?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "$60,000 - $80,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "$80,000 - $100,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$100,000 - $120,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$120,000 - $140,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$140,000 - $160,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$160,000 - $180,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "$180,000 - $200,000"
+      },
+      {
+        "answerID": 8,
+        "answer": "$200,000+"
+      }
+    ],
+    "employerQuestion": "What base salary does this role offer, omitting performance based OTE? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "$60,000 - $80,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "$80,000 - $100,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$100,000 - $120,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$120,000 - $140,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$140,000 - $160,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$160,000 - $180,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "$180,000 - $200,000"
+      },
+      {
+        "answerID": 8,
+        "answer": "$200,000+"
+      }
+    ]
+  },
+  {
+    "questionID": "3",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "OTE",
+      "salary"
+    ],
+    "question": "What's the minimum yearly OTE (on track earnings) you'd need to think about joining a company?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $40,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "$40,000 - $60,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$60,000 - $80,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$80,000 - $100,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$100,000 - $120,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$120,000 - $140,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "$140,000 - $160,000"
+      },
+      {
+        "answerID": 8,
+        "answer": "$160,000+"
+      }
+    ],
+    "employerQuestion": "What is the expected annual on-target earning (OTE) for this position?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Less than $40,000"
+      },
+      {
+        "answerID": 2,
+        "answer": "$40,000 - $60,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$60,000 - $80,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$80,000 - $100,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$100,000 - $120,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$120,000 - $140,000"
+      },
+      {
+        "answerID": 7,
+        "answer": "$140,000 - $160,000"
+      },
+      {
+        "answerID": 8,
+        "answer": "$160,000+"
+      }
+    ]
+  },
+  {
+    "questionID": "4",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "OTE"
+    ],
+    "question": "Do you have any preferences on how OTE is measured? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Product specific, net-new revenue"
+      },
+      {
+        "answerID": 2,
+        "answer": "Multi-product, net-new revenue"
+      },
+      {
+        "answerID": 3,
+        "answer": "New logos"
+      },
+      {
+        "answerID": 4,
+        "answer": "Upsell / x-sell revenue"
+      },
+      {
+        "answerID": 5,
+        "answer": "Client renewals / retention"
+      },
+      {
+        "answerID": 6,
+        "answer": "Customer satisfaction / NPS"
+      },
+      {
+        "answerID": 7,
+        "answer": "Qualified leads / business development"
+      },
+      {
+        "answerID": 8,
+        "answer": "No preference"
+      }
+    ],
+    "employerQuestion": "How is OTE (on track earnings) measured for this position?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Product specific, net-new revenue"
+      },
+      {
+        "answerID": 2,
+        "answer": "Multi-product, net-new revenue"
+      },
+      {
+        "answerID": 3,
+        "answer": "New logos"
+      },
+      {
+        "answerID": 4,
+        "answer": "Upsell / x-sell revenue"
+      },
+      {
+        "answerID": 5,
+        "answer": "Client renewals / retention"
+      },
+      {
+        "answerID": 6,
+        "answer": "Customer satisfaction / NPS"
+      },
+      {
+        "answerID": 7,
+        "answer": "Qualified leads / business development"
+      },
+      {
+        "answerID": 8,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "5",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "OTE"
+    ],
+    "question": "Do you have a preference on the size of the group against which OTE is evaluated? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Based on the performance of a single Account Executive"
+      },
+      {
+        "answerID": 2,
+        "answer": "Based on the performance of a small group of Account Executives (e.g. manager level, <6 AE's)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Based on the performance of a larger group (e.g. director level, <30 AE's)"
+      },
+      {
+        "answerID": 4,
+        "answer": "No preference"
+      }
+    ],
+    "employerQuestion": "At what organizational level is on-target earnings (OTE) evaluated for this position in your company?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Based on the performance of a single Account Executive"
+      },
+      {
+        "answerID": 2,
+        "answer": "Based on the performance of a small group of Account Executives (manager level, <6 AE's)"
+      },
+      {
+        "answerID": 3,
+        "answer": "Based on the performance of a larger group (director level, <30 AE's))"
+      },
+      {
+        "answerID": 4,
+        "answer": "Other"
+      }
+    ]
+  },
+  {
+    "questionID": "8",
+    "order": -1,
+    "category": "Job HR",
+    "tags": [
+      "visa",
+      "sponsorship"
+    ],
+    "question": "Would you require a company sponsored work visa to work in the United States? ",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ],
+    "employerQuestion": "Would you support sponsorship of a work visa for this role? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
+  },
+  {
+    "questionID": "21",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "health insurance"
+    ],
+    "question": "What is the minimum percentage of health insurance premium coverage provided by a company that would still make a job offer appealing to you?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I have other means of health coverage and do not require it from a job"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ],
+    "employerQuestion": "What percentage of health insurance premium costs does your company cover for your employees?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "We do not cover health insurance premium costs"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ]
+  },
+  {
+    "questionID": "22",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "dependents"
+    ],
+    "question": "Are you seeking a position where the company covers dependents (spouse, children) under its medical insurance plan?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No, dependent coverage is not a crucial factor for me"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, I'm looking for a company that offers dependent coverage, even if I have to cover a significant portion"
+      },
+      {
+        "answerID": 3,
+        "answer": "Yes, I'm looking for a company that covers a majority of the premium costs for dependents. I'm comfortable with paying the remainder"
+      },
+      {
+        "answerID": 4,
+        "answer": "Yes, I'm looking for a company that covers 100% of the premium costs for dependents"
+      }
+    ],
+    "employerQuestion": "Does your company cover dependents (spouse, children) under its medical insurance plan?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No, we do not offer coverage for dependents"
+      },
+      {
+        "answerID": 2,
+        "answer": "Yes, we offer dependent coverage, but the employee is responsible for a majority of the costs of dependents"
+      },
+      {
+        "answerID": 3,
+        "answer": "Yes, we cover a majority of the premium costs for dependents. The employee is responsible for the remainder"
+      },
+      {
+        "answerID": 4,
+        "answer": "Yes, we cover 100% of the premium costs for dependents"
+      }
+    ]
+  },
+  {
+    "questionID": "23",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "PTO"
+    ],
+    "question": "What is the minimum number of paid time off (PTO) days provided by a company that would still make a job appealing to you?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No PTO required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 10 days"
+      },
+      {
+        "answerID": 3,
+        "answer": "10-15 days"
+      },
+      {
+        "answerID": 4,
+        "answer": "16-20 days"
+      },
+      {
+        "answerID": 5,
+        "answer": "21-25 days"
+      },
+      {
+        "answerID": 6,
+        "answer": "26-30 days"
+      },
+      {
+        "answerID": 7,
+        "answer": "30+ days"
+      },
+      {
+        "answerID": 8,
+        "answer": "I'm not sure"
+      }
+    ],
+    "employerQuestion": "How many days of paid time off (PTO) are new employees entitled to annually?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "We do not offer PTO"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 10 days"
+      },
+      {
+        "answerID": 3,
+        "answer": "10-15 days"
+      },
+      {
+        "answerID": 4,
+        "answer": "16-20 days"
+      },
+      {
+        "answerID": 5,
+        "answer": "21-25 days"
+      },
+      {
+        "answerID": 6,
+        "answer": "26-30 days"
+      },
+      {
+        "answerID": 7,
+        "answer": "30-35 days"
+      },
+      {
+        "answerID": 8,
+        "answer": "Unlimited; practically accceptable to take more than 35 days"
+      }
+    ]
+  },
+  {
+    "questionID": "24",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "PTO"
+    ],
+    "question": "What is the most restrictive PTO accrual structure you would accept in a potential job?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "Start from Zero: I would accept starting with zero PTO and earning more with each pay period"
+      },
+      {
+        "answerID": 2,
+        "answer": "Baseline Accrual: I would accept starting with a set amount of PTO (not all) and accruing more throughout my tenure"
+      },
+      {
+        "answerID": 3,
+        "answer": "All Up Front: I would need to receive my full annual PTO allotment at the start of each year"
+      },
+      {
+        "answerID": 4,
+        "answer": "Unlimited: I would only consider a company with an unlimited PTO policy"
+      }
+    ],
+    "employerQuestion": "How is PTO (Paid Time Off) accrued in your company?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Start from Zero: Employees start with zero PTO and earn more with each pay period"
+      },
+      {
+        "answerID": 2,
+        "answer": "Baseline Accrual: Employees start with a set amount of PTO and accrue more throughout their tenure"
+      },
+      {
+        "answerID": 3,
+        "answer": "All up front: Employees receive all PTO for the year at the start of their employment"
+      },
+      {
+        "answerID": 4,
+        "answer": "Unlimited: We have an unlimited PTO policy; this question does not apply"
+      }
+    ]
+  },
+  {
+    "questionID": "25",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "401k"
+    ],
+    "question": "What is the minimum percentage of 401k match offered by a company that would still make a job appealing to you?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I would be willing to work for a company that has no 401k program"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 1%"
+      },
+      {
+        "answerID": 3,
+        "answer": "1% - 2%"
+      },
+      {
+        "answerID": 4,
+        "answer": "3% - 4%"
+      },
+      {
+        "answerID": 5,
+        "answer": "5% - 6%"
+      },
+      {
+        "answerID": 6,
+        "answer": "7% - 8%"
+      },
+      {
+        "answerID": 7,
+        "answer": "More than 8%"
+      },
+      {
+        "answerID": 8,
+        "answer": "Only a full (100%) match would be appealing"
+      }
+    ],
+    "employerQuestion": "What percentage does your company match for employee 401k contributions?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "We do not offer a 401k match"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 1%"
+      },
+      {
+        "answerID": 3,
+        "answer": "1% - 2%"
+      },
+      {
+        "answerID": 4,
+        "answer": "3% - 4%"
+      },
+      {
+        "answerID": 5,
+        "answer": "5% - 6%"
+      },
+      {
+        "answerID": 6,
+        "answer": "7% - 8%"
+      },
+      {
+        "answerID": 7,
+        "answer": "More than 8%"
+      },
+      {
+        "answerID": 8,
+        "answer": "We offer a full (100%) match"
+      }
+    ]
+  },
+  {
+    "questionID": "26",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "dental insurance"
+    ],
+    "question": "What is the minimum percentage of dental insurance premium coverage provided by a company that would still make a job offer appealing to you?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I have other means of dental coverage and do not require it from a job"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ],
+    "employerQuestion": "What percentage of dental insurance premium costs does your company cover for your employees?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "We do not cover dental insurance premium costs"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ]
+  },
+  {
+    "questionID": "27",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "vision insurance"
+    ],
+    "question": "What is the minimum percentage of vision insurance premium coverage provided by a company that would still make a job offer appealing to you?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I have other means of vision coverage and do not require it from a job"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      }
+    ],
+    "employerQuestion": "What percentage of vision insurance premium costs does your company cover for your employees?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "We do not cover vision insurance premium costs"
+      },
+      {
+        "answerID": 2,
+        "answer": "Less than 25%"
+      },
+      {
+        "answerID": 3,
+        "answer": "Between 25% and 50%"
+      },
+      {
+        "answerID": 4,
+        "answer": "Between 50% and 75%"
+      },
+      {
+        "answerID": 5,
+        "answer": "More than 75% but less than 100%"
+      },
+      {
+        "answerID": 6,
+        "answer": "100%"
+      }
+    ]
+  },
+  {
+    "questionID": "28",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "maternity leave",
+      "mat leave"
+    ],
+    "question": "What minimum amount of paid maternity/paternity leave would be acceptable to you in a potential job?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No paid leave"
+      },
+      {
+        "answerID": 2,
+        "answer": "Up to 2 weeks paid leave"
+      },
+      {
+        "answerID": 3,
+        "answer": "3-4 weeks paid leave"
+      },
+      {
+        "answerID": 4,
+        "answer": "5-8 weeks paid leave"
+      },
+      {
+        "answerID": 5,
+        "answer": "9-12 weeks paid leave"
+      },
+      {
+        "answerID": 6,
+        "answer": "More than 12 weeks paid leave"
+      }
+    ],
+    "employerQuestion": "What is your company's paid maternity/paternity leave policy?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Paid Leave"
+      },
+      {
+        "answerID": 2,
+        "answer": "Up to 2 Weeks Paid Leave"
+      },
+      {
+        "answerID": 3,
+        "answer": "3-4 Weeks Paid Leave"
+      },
+      {
+        "answerID": 4,
+        "answer": "5-8 Weeks Paid Leave"
+      },
+      {
+        "answerID": 5,
+        "answer": "9-12 Weeks Paid Leave"
+      },
+      {
+        "answerID": 6,
+        "answer": "More than 12 Weeks Paid Leave"
+      }
+    ]
+  },
+  {
+    "questionID": "29",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "PTO"
+    ],
+    "question": "As a new employee, what is the maximum level of restrictiveness on Paid Time Off (PTO) that you would you find acceptable?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Restrictions: I prefer a role where, as a new employee, I can take PTO at any time, without restrictions"
+      },
+      {
+        "answerID": 2,
+        "answer": "Holiday Blackout Dates: I can accept a role where new employees cannot take PTO during major holidays"
+      },
+      {
+        "answerID": 3,
+        "answer": "Seasonal Peak Business Blackout Dates: I can accept a role where new employees cannot take PTO during the company's peak business seasons"
+      },
+      {
+        "answerID": 4,
+        "answer": "Holiday and Peak Business Blackout Dates: I can accept a role where new employees cannot take PTO during major holidays or the company's peak business seasons"
+      }
+    ],
+    "employerQuestion": "What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Restrictions: New employees can take PTO at any time, without restrictions"
+      },
+      {
+        "answerID": 2,
+        "answer": "Holiday Blackout Dates: New employees cannot take PTO during major holidays"
+      },
+      {
+        "answerID": 3,
+        "answer": "Seasonal Peak Business Blackout Dates: New employees cannot take PTO during our peak business seasons"
+      },
+      {
+        "answerID": 4,
+        "answer": "Holiday and Peak Business Blackout Dates: New employees cannot take PTO during major holidays or our peak business seasons"
+      }
+    ]
+  },
+  {
+    "questionID": "30",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "student loan reimbursement",
+      "student loans"
+    ],
+    "question": "What is the minimum annual dollar amount of student loan reimbursement that would make a potential employer attractive?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Assistance Needed"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1 - $1,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$1,001 - $2,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$2,001 - $3,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$3,001 - $4,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$4,000+"
+      }
+    ],
+    "employerQuestion": "What is the annual dollar amount of student loan reimbursement your company offers?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Assistance"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1 - $1,000"
+      },
+      {
+        "answerID": 3,
+        "answer": "$1,001 - $2,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$2,001 - $3,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$3,001 - $4,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$4,001 - $5,250"
+      }
+    ]
+  },
+  {
+    "questionID": "31",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "L&D",
+      "learning budget"
+    ],
+    "question": "What is the minimum annual learning and development allowance that would make a potential employer attractive?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Allowance Needed"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1 - $500"
+      },
+      {
+        "answerID": 3,
+        "answer": "$501 - $1,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$1,001 - $2,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$2,001 - $3,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$3000+"
+      }
+    ],
+    "employerQuestion": "Does your company offer a learning and development allowance? If yes, how much is it annually?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Allowance"
+      },
+      {
+        "answerID": 2,
+        "answer": "$1 - $500"
+      },
+      {
+        "answerID": 3,
+        "answer": "$501 - $1,000"
+      },
+      {
+        "answerID": 4,
+        "answer": "$1,001 - $2,000"
+      },
+      {
+        "answerID": 5,
+        "answer": "$2,001 - $3,000"
+      },
+      {
+        "answerID": 6,
+        "answer": "$3000+"
+      }
+    ]
+  },
+  {
+    "questionID": "32",
+    "order": -1,
+    "category": "Account HR",
+    "tags": [
+      "life insurance"
+    ],
+    "question": "What type of life insurance coverage would you expect from a potential employer?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "I do not require life insurance benefits from an employer"
+      },
+      {
+        "answerID": 2,
+        "answer": "Basic Coverage: I expect life insurance that covers an amount equivalent to my annual salary"
+      },
+      {
+        "answerID": 3,
+        "answer": "Enhanced Coverage: I expect life insurance that covers an amount equivalent to double my annual salary"
+      },
+      {
+        "answerID": 4,
+        "answer": "Premium Coverage: I expect life insurance that covers an amount equivalent to triple my annual salary or more"
+      }
+    ],
+    "employerQuestion": "Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No Coverage: We do not offer life insurance benefits to our employees"
+      },
+      {
+        "answerID": 2,
+        "answer": "Basic Coverage: We offer life insurance that covers the employee for an amount equivalent to their annual salary"
+      },
+      {
+        "answerID": 3,
+        "answer": "Enhanced Coverage: We offer life insurance that covers the employee for an amount equivalent to double their annual salary"
+      },
+      {
+        "answerID": 4,
+        "answer": "Premium Coverage: We offer life insurance that covers the employee for an amount equivalent to triple their annual salary or more"
+      }
+    ]
+  },
+  {
     "questionID": "115",
     "order": "1",
     "category": "Deal Experience",
@@ -431,8 +2706,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Certified Cloud Security Professional (CCSP) certification from ISC²?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "123",
@@ -454,8 +2738,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Systems Security Certified Practitioner (SSCP) certification from ISC²",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "124",
@@ -476,8 +2769,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Certified Information Systems Security Professional (CISSP) certification from ISC²",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "125",
@@ -498,8 +2800,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Certified in Cybersecurity (CC) certification from ISC²?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "126",
@@ -520,8 +2831,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Certified in Governance, Risk and Compliance (CGRC) certification from ISC²?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "127",
@@ -542,8 +2862,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a HealthCare Information Security and Privacy Practitioner (HCISPP) certification from ISC²?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "128",
@@ -563,8 +2892,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Offensive Security Certified Professional (OSCP) certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "129",
@@ -586,8 +2924,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Certified in the Governance of Enterprise IT (CGEIT) certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "130",
@@ -609,8 +2956,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Google Certified Professional – Cloud Network Engineer certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "131",
@@ -632,8 +2988,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Certified Wireless Network Professional (CWNP) certification? ",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "132",
@@ -653,8 +3018,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a SnowPro Core Certification from Snowflake?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "133",
@@ -674,8 +3048,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a GitHub Certified Campus Advisors certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "134",
@@ -695,8 +3078,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Atlassian Certified Professional Jira Software Administrator certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "135",
@@ -716,8 +3108,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a Zoho CRM Certified Consultant certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "136",
@@ -737,8 +3138,17 @@ export const questionsData = [
         "answer": "No"
       }
     ],
-    "employerQuestion": "",
-    "employerAnswers": []
+    "employerQuestion": "Should a candidate hold a HubSpot Sales Software Certification?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "Yes"
+      },
+      {
+        "answerID": 2,
+        "answer": "No"
+      }
+    ]
   },
   {
     "questionID": "121",

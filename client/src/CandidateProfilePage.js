@@ -8,7 +8,8 @@ import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
 import { questionsData } from './QuestionsData';
 
-const categories = ['Industry Certifications', 'Technical Knowledge', 'Deal Experience', 'Tools & Platforms', 'HR Preferences',
+const categories = ['Industry Certifications', 'Technical Knowledge',
+    'Deal Experience', 'Tools & Platforms', 'HR Preferences',
     'Job Specific HR',];
 
 function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers, hasLoadedProfile }) {
@@ -42,8 +43,8 @@ function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers
                         <SimpleGrid columns={2} spacing={2} pt={4} w='100%' h='100%' maxHeight='100%' bg='blue.500'>
                             {question.answers.map(answer => (
                                 <Button
-                                    // key={answer.answerID}
-                                    key={`${question.questionID}-${answer.answerID}:${userAnswers[question.questionID]}`}
+                                    key={answer.answerID}
+                                    // key={`${question.questionID}-${answer.answerID}:${userAnswers[question.questionID]}`}
                                     // key={`${question.questionID}-${answer.answerID}$-${userAnswers[question.questionID]}`}
                                     w='100%'
                                     colorScheme={((expandedQuestionID === question.questionID) && (currentQuestionAnswer === answer.answerID)) ? 'blue' : 'gray'}
@@ -70,6 +71,7 @@ function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers
                                         setCurrentQuestionAnswer(answer.answerID);
                                         handleAnswerSelect(answer.answerID);
                                     }}
+                                    h='auto'
                                 >
                                     <Text fontSize='sm'>
                                         {answer.answer}
@@ -81,17 +83,6 @@ function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers
             </Box>
         );
     }
-
-
-
-
-
-
-
-
-
-
-
 
 
     const sortQuestionBankQuestions = (questions) => {
@@ -106,6 +97,11 @@ function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers
             // console.log('currentQuestionAnswer: ', currentQuestionAnswer);
 
             try {
+                let newAnswered = { ...userAnswers, [expandedQuestionID]: answerID };
+                console.log('setting newAnswered: ', newAnswered);
+                setUserAnswers(newAnswered);
+                // setExpandedQuestionID(null);
+                setCurrentQuestionAnswer(answerID);
                 const response = await axios.post(`${apiURL}/setUserAnswer`, {
                     user_id: user.sub, // Assuming this holds the Auth0 user ID. Adjust accordingly.
                     question_id: expandedQuestionID,
@@ -116,12 +112,9 @@ function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers
                     console.log(response.data.message);
                 }
 
-                let newAnswered = { ...userAnswers, [expandedQuestionID]: answerID };
                 // console.log('newAnswered: ', newAnswered);
                 // setAnswered(newAnswered);
-                setUserAnswers(newAnswered);
-                // setExpandedQuestionID(null);
-                setCurrentQuestionAnswer(answerID);
+
                 // setIsAnswerSelected(false);
             } catch (error) {
                 console.error('Error saving answer: ', error);
@@ -146,11 +139,13 @@ function CandidateProfilePage({ apiURL, userProfile, userAnswers, setUserAnswers
         }
 
         setDisplayedQuestions(newDisplayedQuestions);
-    }, [selectedCategory, userAnswers]);
+    }, [selectedCategory, hasLoadedProfile]);
 
     useEffect(() => {
         // setSele(answered[expandedQuestionID]);
+        console.log('test print1', userAnswers);
         if (userAnswers[expandedQuestionID]) {
+            // console.log('test print2', userAnswers[expandedQuestionID]);
             setCurrentQuestionAnswer(userAnswers[expandedQuestionID]);
         }
         else {

@@ -99,19 +99,8 @@ function CandidatePage(returnURL) {
 
     return (
         <Flex minHeight='100vh' minWidth='100%' flex='1 1 auto' direction='column'>
-            {/* <Flex
-                justify="flex-start"
-                direction='column'
-                spacing="0px"
-                overflow="hidden"
 
-                align="flex-start"
-            // bg='green'
-            // background="linear-gradient(142deg, #1f35a4 0%, #1c2b73 20.23%, #080e28 82.12%)"
-            > */}
-
-
-            <Box w='100%' background="linear-gradient(270deg, rgba(26, 41, 128, 0.6) 50%, rgba(38, 208, 206, 0.3) 90.0%)"
+            <Box w='100%' background="linear-gradient(270deg, rgba(26,38,95,255) 50%, rgba(30,85,93,255) 90.0%)"
                 borderBottomWidth="1px" borderStyle='solid' borderColor='white'>
                 <Flex
                     paddingX="64px"
@@ -189,7 +178,7 @@ function CandidatePage(returnURL) {
                         // maxWidth='50%'
                         alignSelf="stretch"
                         // maxWidth="100%"
-                        background="linear-gradient(333deg, #1a298099 60%, #26d0ce4d 90%)"
+                        background="linear-gradient(333deg, rgba(26,38,95,255) 60%,  rgba(30,85,93,255) 90%)"
                     >
                         <Button w='95%' h='72px' variant='ghost' color='white' onClick={() => { setSelectedTab('Home'); }}>
                             <Text fontFamily="Inter"

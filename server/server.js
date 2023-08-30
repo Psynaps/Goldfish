@@ -410,6 +410,14 @@ app.delete('/api/deleteJobPosting', async (req, res) => {
         };
         const result = await pool.query(deleteJobQuery);
 
+        //TODO: Delete job_posting_questions entries as well
+        const deleteJobQuestionsQuery = {
+            text: 'DELETE FROM job_posting_questions WHERE job_posting_id = $1',
+            values: [job_posting_id],
+        };
+        await pool.query(deleteJobQuestionsQuery);
+
+
         if (result.rowCount === 0) {
             return res.status(409).send({ error: 'Job posting not found. Please refresh the jobs list.' });
         }
@@ -421,6 +429,59 @@ app.delete('/api/deleteJobPosting', async (req, res) => {
         res.send("Error " + err);
     }
 });
+
+// /api/getUserMatches endpoint which takes in user_id as a query parameter and returns a 
+// array of job_posting objects which contain job_posting_id, job_title, company, company_logo, 
+// and match_score. The array should be sorted by match_score in descending order.
+// Currently the returned list of job_postings is hardcoded, but will be replaced with real data
+app.get('/api/getUserMatches', async (req, res) => {
+    const user_id = req.query.user_id;
+    if (!user_id) {
+        return res.status(400).send({ error: 'Missing user_id query parameter' });
+    }
+
+    let matches = [];
+
+    try {
+        const client = await pool.connect();
+
+        // Fetch the first 5 rows from job_postings table
+        const result = await client.query('SELECT * FROM job_postings LIMIT 5');
+        const job_postings = result.rows;
+        const matches = job_postings;
+
+        for (const job of matches) {
+            // Assuming job_postings table has a column named employer_user_id
+            const employerUserId = job.employer_user_id;
+
+            // Fetch data from employer_profile using employerUserId
+            const employerProfileResult = await client.query('SELECT * FROM employer_profile WHERE user_id = $1', [employerUserId]);
+            const employerProfile = employerProfileResult.rows[0];
+
+            matches.push({
+                job_posting_id: job.id,
+                job_title: job.title,
+                company: employerProfile.company,
+                company_logo: employerProfile.company_logo,
+                //Match score is a 4-tuple, consisting of the overall match score,
+                // the Skills match score, the compensation match score, and the benefits match score
+                match_score: ({ overall: Math.random() * 100, skills: Math.random() * 100, compensation: Math.random() * 100, benefits: Math.random() * 100 }) // This is a hardcoded value, replace with real data
+            });
+        }
+
+        client.release();
+
+        // Sorting the matches array based on match_score in descending order
+        matches.sort((a, b) => b.match_score[0] - a.match_score[0]);
+
+        res.send({ success: true, matches: matches });
+
+    } catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+    }
+});
+
 
 
 app.post('/api/setUserAnswer', async (req, res) => {
@@ -447,7 +508,7 @@ app.post('/api/setUserAnswer', async (req, res) => {
 
 app.get('/api/getUserAnswers', async (req, res) => {
     const user_id = req.query.user_id;
-    console.log('getUserAnswers req received', user_id);
+    // console.log('getUserAnswers req received', user_id);
 
     try {
         const query = `
@@ -601,7 +662,7 @@ app.get('/api/getUserProfile', async (req, res) => {
         let queryText = `SELECT * FROM user_profiles WHERE user_id = $1`;
         const values = [user_id];
         const result = await pool.query(queryText, values);
-        console.log(result.rows[0]);
+        // console.log(result.rows[0]);
 
         // If there is no result for this query then the user hasn't been added to the user_profiles table yet,
         // so add them with default values

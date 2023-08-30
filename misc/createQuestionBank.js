@@ -26,9 +26,9 @@ fs.createReadStream('questions.csv')
             return;
         }
 
-        if (question.questionID <= 100 || row['Onboarding Index' !== '']) { // These are the onboarding questions
-            return;
-        }
+        // if (question.questionID <= 100 || row['Onboarding Index' !== '']) { // These are the onboarding questions
+        //     return;
+        // }
 
 
         // if (!question.isOnboarding) {
@@ -39,7 +39,7 @@ fs.createReadStream('questions.csv')
         //     return;
         // }
         // Add any answers present in the row to the question object
-        for (let i = 1; i <= 8; i++) {
+        for (let i = 1; i <= 20; i++) {
             if (row[`Answer (${i})`]) {
                 let ans = row[`Answer (${i})`].trim();
                 if (ans.charAt(ans.length - 1) === '.') {
@@ -96,7 +96,7 @@ fs.createReadStream('questions.csv')
         fs.writeFile('../client/src/QuestionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
             if (err) console.log('Error writing file:', err);
         });
-        fs.writeFile('../server/QuestionsData.js', 'export const questionsDataFull = ' + JSON.stringify(questionsDataFull, null, 2), function (err) {
-            if (err) console.log('Error writing file:', err);
-        });
+        // fs.writeFile('../server/QuestionsData.js', 'export const questionsDataFull = ' + JSON.stringify(questionsDataFull, null, 2), function (err) {
+        //     if (err) console.log('Error writing file:', err);
+        // });
     });

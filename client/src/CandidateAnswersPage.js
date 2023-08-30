@@ -70,6 +70,7 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 										setCurrentQuestionAnswer(answer.answerID);
 										setIsAnswerSelected(true);
 									}}
+									h='auto'
 								>
 									<Text fontSize='sm'>
 										{answer.answer}

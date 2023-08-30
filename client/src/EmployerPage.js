@@ -6,12 +6,15 @@ import QuestionBank from './QuestionBank';
 import JobPostingBank from './JobPostingBank';
 import DropdownMenu from './DropdownMenu';
 import { LoginButton } from './LoginButton';
-import { questionsData } from './QuestionsData';
+import { questionsData as questionsDataOriginal } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Spacer, useColorMode, useColorModeValue } from '@chakra-ui/react';
 // import './App.css';
 
 // const deployURL = 'https://goldfishai.netlify.app';
+
+// Filter questiondata to remove questionID's <= 100 (onboarding questions)
+const questionsData = questionsDataOriginal.filter(question => question.questionID >= 100);
 
 
 function EmployerPage(returnURL) {
