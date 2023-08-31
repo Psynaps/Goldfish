@@ -446,23 +446,36 @@ app.get('/api/getUserMatches', async (req, res) => {
         const client = await pool.connect();
 
         // Fetch the first 5 rows from job_postings table
-        const result = await client.query('SELECT * FROM job_postings LIMIT 5');
+        const result = await client.query('SELECT * FROM job_postings LIMIT 3'); // TODO Remove or change limit
         const job_postings = result.rows;
-        const matches = job_postings;
+        const query_matches = job_postings;
+        console.log('matches:', query_matches);
+        let matches = [];
 
-        for (const job of matches) {
-            // Assuming job_postings table has a column named employer_user_id
-            const employerUserId = job.employer_user_id;
+        for (const job of query_matches) {
+            // TODO: Likely add a employer_id in the future so multiple user_id's can point to an employer_id
+            const employerUserId = job.user_id;
 
             // Fetch data from employer_profile using employerUserId
-            const employerProfileResult = await client.query('SELECT * FROM employer_profile WHERE user_id = $1', [employerUserId]);
+            const employerProfileResult = await client.query('SELECT * FROM employer_profiles WHERE user_id = $1', [employerUserId]);
             const employerProfile = employerProfileResult.rows[0];
-
+            console.log(employerProfile);
+            console.log("test:", employerProfile?.companyname);
+            let base64Image = null;
+            if (employerProfile.companylogo) {
+                base64Image = Buffer.from(employerProfile.companylogo).toString('base64');
+            } else {
+                console.warn("Company Logo is undefined for user:", employerUserId);
+            }
             matches.push({
-                job_posting_id: job.id,
-                job_title: job.title,
-                company: employerProfile.company,
-                company_logo: employerProfile.company_logo,
+                job_posting_id: job.job_posting_id,
+                job_title: job.job_title,
+                company: employerProfile.companyname,
+                // company_logo: employerProfile.company_logo,
+                company_logo: base64Image,
+                website: employerProfile.website,
+                main_office: employerProfile.office1,
+
                 //Match score is a 4-tuple, consisting of the overall match score,
                 // the Skills match score, the compensation match score, and the benefits match score
                 match_score: ({ overall: Math.random() * 100, skills: Math.random() * 100, compensation: Math.random() * 100, benefits: Math.random() * 100 }) // This is a hardcoded value, replace with real data

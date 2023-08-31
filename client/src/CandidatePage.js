@@ -12,6 +12,7 @@ import DropdownMenu from './DropdownMenu';
 import CandidateAccountPage from './CandidateAccountPage';
 import CandidateAnswerPage from './CandidateAnswersPage';
 import CandidateProfilePage from './CandidateProfilePage';
+import CandidateMatchesPage from './CandidateMatchesPage';
 
 function CandidatePage(returnURL) {
     const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
@@ -75,6 +76,8 @@ function CandidatePage(returnURL) {
                 return <CandidateAccountPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
             case 'Matches':
                 console.log('matches page selected');
+                return <CandidateMatchesPage apiURL={apiURL}
+                />;
                 break;
             case 'Answer':
                 console.log('answer page selected');

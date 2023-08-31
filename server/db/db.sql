@@ -67,3 +67,5 @@ CREATE TABLE user_profiles (
     suspended BOOLEAN DEFAULT FALSE,
     PRIMARY KEY (user_id, email)
 );
+
+-- SELECT left(encode(companylogo, 'hex'), 40), user_id from employer_profiles; 
