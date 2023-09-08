@@ -14,7 +14,7 @@ import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Te
 // const deployURL = 'https://goldfishai.netlify.app';
 
 // Filter questiondata to remove questionID's <= 100 (onboarding questions)
-const questionsData = questionsDataOriginal.filter(question => question.questionID >= 100);
+const questionsData = questionsDataOriginal.filter(question => question.questionID >= 3);
 
 
 function EmployerPage(returnURL) {
@@ -45,8 +45,7 @@ function EmployerPage(returnURL) {
     // const jobPostingSelectedBorderColor = useColorModeValue('orange.500', 'orange.300');
     // const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
-    const categories = ['Industry Certifications', 'Technical Knowledge', 'Deal Experience', 'Tools & Platforms', 'HR Preferences',
-        'Job Specific HR',];
+    const categories = ['HR Requirements', 'Technical Skills', 'Legal Experience', 'Platform Workflows',];
 
     // const [message, setMessage] = useState(null);
     const [isPosting, setIsPosting] = useState(false);
@@ -438,7 +437,7 @@ function EmployerPage(returnURL) {
                         bg='white'
                         color='black'
                     />
-                    <SimpleGrid columns={3} spacing={2} my='15px'>
+                    <SimpleGrid columns={2} spacing={2} my='15px'>
                         {categories.map(category => (
                             <Button
                                 key={category}

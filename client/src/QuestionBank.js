@@ -24,7 +24,7 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
     return (
         <VStack spacing={5} align='stretch' maxHeight='50vh' overflowY='auto' w='100%'>
             {displayedQuestions.map((question, index) => (
-                <Box key={question.questionID} borderBottom='1px' borderColor='gray.200'>
+                <Box key={question.questionID}>
                     <Question
                         question={question}
                         isSelected={selectedQuestion === question}

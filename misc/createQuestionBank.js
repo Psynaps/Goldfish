@@ -9,10 +9,10 @@ fs.createReadStream('questions.csv')
         let question = {
             questionID: row['QuestionID'],
             order: row['Importance Index'] ? row['Importance Index'] : -1,
-            category: row['Domain Tags'].trim(),
-            tags: row['Search Tags'].split(', ').map(tag => tag.trim()),
-            question: row['Question'],
-            employerQuestion: row['Employer Question Phrasing'],
+            category: row['Question_Category'].trim(),
+            tags: row['Search_Tags'].split(', ').map(tag => tag.trim()),
+            question: row['Job_Seeker_Question'],
+            employerQuestion: row['Employer_Question_Phrasing'],
             answers: [],
             employerAnswers: [],
         };
@@ -40,8 +40,8 @@ fs.createReadStream('questions.csv')
         // }
         // Add any answers present in the row to the question object
         for (let i = 1; i <= 20; i++) {
-            if (row[`Answer (${i})`]) {
-                let ans = row[`Answer (${i})`].trim();
+            if (row[`JS_Answer_${i}`]) {
+                let ans = row[`JS_Answer_${i}`].trim();
                 if (ans.charAt(ans.length - 1) === '.') {
                     ans = ans.slice(0, -1);
                 }
@@ -50,8 +50,8 @@ fs.createReadStream('questions.csv')
                     answer: ans
                 });
             }
-            if (row[`Employer Answer ${i}`]) {
-                let ans = row[`Employer Answer ${i}`].trim();
+            if (row[`Employer_Answer_${i}`]) {
+                let ans = row[`Employer_Answer_${i}`].trim();
                 if (ans.charAt(ans.length - 1) === '.') {
                     ans = ans.slice(0, -1);
                 }

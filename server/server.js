@@ -17,6 +17,7 @@ const { Pool } = require('pg');
 // require { Client } from 'pg';
 // const { Client } = require('pg');
 const cors = require('cors');
+const { get } = require('http');
 const isDev = process.env.NODE_ENV !== 'production';
 
 const app = express();
@@ -448,7 +449,7 @@ app.get('/api/getUserMatches', async (req, res) => {
         // Fetch the first 5 rows from job_postings table
         const result = await client.query('SELECT * FROM job_postings LIMIT 3'); // TODO Remove or change limit
         const job_postings = result.rows;
-        const query_matches = job_postings;
+        const query_matches = getMatches(job_postings, user_id);
         console.log('matches:', query_matches);
         let matches = [];
 
@@ -459,8 +460,7 @@ app.get('/api/getUserMatches', async (req, res) => {
             // Fetch data from employer_profile using employerUserId
             const employerProfileResult = await client.query('SELECT * FROM employer_profiles WHERE user_id = $1', [employerUserId]);
             const employerProfile = employerProfileResult.rows[0];
-            console.log(employerProfile);
-            console.log("test:", employerProfile?.companyname);
+            // console.log(employerProfile);
             let base64Image = null;
             if (employerProfile.companylogo) {
                 base64Image = Buffer.from(employerProfile.companylogo).toString('base64');
@@ -494,6 +494,13 @@ app.get('/api/getUserMatches', async (req, res) => {
         res.send("Error " + err);
     }
 });
+
+// function getMatches which takes in array of job_posting objects and user_id and returns an array of job_posting objects
+// which contain job_posting_id, job_title, company, company_logo, and match_score. 
+// TODO: replace with real matching algorithm
+function getMatches(job_postings, user_id) {
+    return job_postings;
+}
 
 
 

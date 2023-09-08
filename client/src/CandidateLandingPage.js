@@ -218,7 +218,7 @@ function CandidateLandingPage(returnURL) {
                                     <Box as="span" color="orange.500">
                                         easy
                                     </Box>
-                                    <Box as="span"> to swim in the job market. </Box>
+                                    <Box as="span"> to swim in the legal job market. </Box>
                                 </Text>
                             </Stack>
                         </Stack>
@@ -245,11 +245,11 @@ function CandidateLandingPage(returnURL) {
                                     maxWidth="100%"
                                 >
                                     Answer simple questions and let meaningful career opportunities
-                                    float to you.{' '}
+                                    float to you.
                                 </Text>
                             </Stack>
                             <Stack direction="row" justify="center" align="center">
-                                <Button textAlign="center" colorScheme='pink' onClick={scrollToQuestions}>Start Cruising </Button>
+                                <Button textAlign="center" colorScheme='pink' onClick={scrollToQuestions}>Start Cruising</Button>
                             </Stack>
                         </Stack>
                     </Stack>
@@ -375,15 +375,11 @@ function CandidateLandingPage(returnURL) {
                                             color="white"
                                             flex="1"
                                         >
-                                            <span>For those </span>
+                                            <span>Your </span>
                                             <Box as="span" color="pink.500">
-                                                always
+                                                skills
                                             </Box>
-                                            <Box as="span"> looking, but </Box>
-                                            <Box as="span" color="pink.500">
-                                                rarely
-                                            </Box>
-                                            <Box as="span"> interviewing. </Box>
+                                            <Box as="span"> take you beyond the shallow.</Box>
                                         </Text>
                                     </Stack>
                                 </Stack>
@@ -404,14 +400,12 @@ function CandidateLandingPage(returnURL) {
                                         flex="1"
                                     >
                                         <span>
-                                            We know great employees like you rarely take interviews.
-                                            We’ve designed Goldfish to support the pragmatic job-seeker,
-                                            starting wih{' '}
+                                            Our automated framework lets them shine to law firms who place a premium on your expertise.
                                         </span>
-                                        <Box as="span" color="orange.200">
+                                        {/* <Box as="span" color="orange.200">
                                             sales engineers
                                         </Box>
-                                        <Box as="span">. </Box>
+                                        <Box as="span">. </Box> */}
                                     </Text>
                                 </Stack>
                                 <Stack direction="row" justify="center" align="center">
@@ -469,8 +463,10 @@ function CandidateLandingPage(returnURL) {
                                             color="orange.500"
                                             flex="1"
                                             textAlign="center"
+                                            w='20%'
                                         >
-                                            Bringing candidates to the center of searching...
+                                            <Box>Bringing legal professionals</Box>
+                                            to the center of searching...
                                         </Text>
                                         <ArrowDownIcon data-icon="CkArrowDown" />
                                     </Stack>
@@ -578,7 +574,7 @@ function CandidateLandingPage(returnURL) {
                                             fontSize="20px"
                                             color="white"
                                         >
-                                            Your Career Goals{' '}
+                                            Your Career Goals
                                         </Text>
                                     </Stack>
                                     <Stack
@@ -610,7 +606,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Management Track
+                                                Practice Niche
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -633,7 +629,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                ME Specialization
+                                                Case Focus
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -656,7 +652,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Industry Niche{' '}
+                                                Subject Expertise
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -723,7 +719,7 @@ function CandidateLandingPage(returnURL) {
                                             fontSize="20px"
                                             color="white"
                                         >
-                                            Your Skill Background{' '}
+                                            Your Skill Background
                                         </Text>
                                     </Stack>
                                     <Stack
@@ -755,7 +751,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Industry Certs
+                                                Certifications
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -801,7 +797,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Deal Experience
+                                                Legal Knowledge
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -824,7 +820,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Tool Familiarity
+                                                Tool Workflows
                                             </Text>
                                         </Stack>
                                     </Stack>
@@ -960,7 +956,7 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Wellness Benefits
+                                                Salary / Contract
                                             </Text>
                                         </Stack>
                                     </Stack>
@@ -1277,7 +1273,7 @@ function CandidateLandingPage(returnURL) {
                                                         color="pink.500"
                                                         flex="1"
                                                     >
-                                                        Join our weekly newsletter.{' '}
+                                                        Join our weekly newsletter.
                                                     </Text>
                                                 </Stack>
                                                 <Stack
@@ -1295,9 +1291,9 @@ function CandidateLandingPage(returnURL) {
                                                         flex="1"
                                                     >
                                                         We continuously learn new things about the sales
-                                                        engineering job market. Our newsletter shares
+                                                        legal job market. Our newsletter shares
                                                         interview tips, skill development spotlights, and
-                                                        salary trends to keep you in the current.{' '}
+                                                        salary trends to keep you in the current.
                                                     </Text>
                                                 </Stack>
                                             </Stack>
