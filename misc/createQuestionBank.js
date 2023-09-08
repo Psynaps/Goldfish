@@ -93,9 +93,15 @@ fs.createReadStream('questions.csv')
                 employerAnswers: obj.employerAnswers,
             };
         });
+        // make variable onboardingQuestionsData which is a subset of questionsData where questionID <= 100
+        // let onboardingQuestionsData = questionsData.filter(q => q.questionID <= 100);
         fs.writeFile('../client/src/QuestionsData.js', 'export const questionsData = ' + JSON.stringify(questionsData, null, 2), function (err) {
             if (err) console.log('Error writing file:', err);
         });
+        // fs.writeFile('../client/src/OnboardingQuestionsData.js', 'export const onboardingQuestionsData = ' + JSON.stringify(onboardingQuestionsData, null, 2), function (err) {
+        //     if (err) console.log('Error writing onboarding questions file:', err);
+        // });
+
         // fs.writeFile('../server/QuestionsData.js', 'export const questionsDataFull = ' + JSON.stringify(questionsDataFull, null, 2), function (err) {
         //     if (err) console.log('Error writing file:', err);
         // });

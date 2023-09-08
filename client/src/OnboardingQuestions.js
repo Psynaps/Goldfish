@@ -5,9 +5,19 @@ import axios from 'axios';
 import { ArrowRightIcon } from '@chakra-ui/icons';
 // import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
+import { questionsData as questionsDataOriginal } from './QuestionsData';
 
+const questions = questionsDataOriginal.filter(q => q.questionID <= 100);
+//run through questions and convert answerID: number, answer: x to just answerID: answer
+questions.forEach(q => {
+    // map {answerID: 1, answer: 'x'} to just {1: 'x'}
+    q.answers = Object.fromEntries(q.answers.map(a => [a.answerID, a.answer]));
+
+});
+console.log('questions:', questions);
 // Mock data
-const questions = [
+/*
+const questions2 = [
     {
         question_id: 1,
         index: 1,
@@ -446,6 +456,9 @@ const questions = [
     //     },
     // },
 ];
+*/
+console.log('questions2:', questions2);
+
 
 questions.sort((a, b) => a.index - b.index);
 console.log('sorted');
@@ -535,7 +548,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
     // hasLoaded is true, and make this effect dependent on hasLoaded
     useEffect(() => {
         if (hasLoaded) {
-            const firstUnansweredQuestionIndex = questions.findIndex(question => !selectedAnswers.hasOwnProperty(question.question_id));
+            const firstUnansweredQuestionIndex = questions.findIndex(question => !selectedAnswers.hasOwnProperty(question.questionID));
             setCurrentQuestionIndex(firstUnansweredQuestionIndex !== -1 ? firstUnansweredQuestionIndex : 0);
         }
         // Disable ESLint warning about exhaustive-deps because I don't want this to run every time selectedAnswers changes
@@ -559,10 +572,10 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                 </Box>
                 <ButtonGroup variant='outline' isAttached w='100%' p='30px' pl={35} >
                     <VStack w='100%' spacing={4}>
-                        {questions[currentQuestionIndex] && Object.entries(questions[currentQuestionIndex].answers).map(([answer_id, answer]) => (
+                        {questions[currentQuestionIndex] && Object.entries(questions[currentQuestionIndex].answers).map(([answerID, answer]) => (
                             <Button
-                                key={answer_id}
-                                onClick={() => handleAnswerSelect(questions[currentQuestionIndex].question_id, parseInt(answer_id))}
+                                key={answerID}
+                                onClick={() => handleAnswerSelect(questions[currentQuestionIndex].questionID, parseInt(answerID))}
                                 minWidth='100%'
                                 textAlign='left'
                                 justifyContent='flex-start'
@@ -572,13 +585,13 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                                     whiteSpace: 'normal',
                                     wordBreak: 'break-word',
                                 }}
-                                bg={selectedAnswers[questions[currentQuestionIndex].question_id] === parseInt(answer_id)
+                                bg={selectedAnswers[questions[currentQuestionIndex].questionID] === parseInt(answerID)
                                     ? '#6be99654'
                                     : 'rgba(255, 255, 255, 0.2)'}
                                 borderRadius='md'
                                 color='white'
-                                borderWidth={selectedAnswers[questions[currentQuestionIndex].question_id] === parseInt(answer_id) ? 2 : 1}
-                                borderColor={selectedAnswers[questions[currentQuestionIndex].question_id] === parseInt(answer_id) ? 'green.300' : 'white'}
+                                borderWidth={selectedAnswers[questions[currentQuestionIndex].questionID] === parseInt(answerID) ? 2 : 1}
+                                borderColor={selectedAnswers[questions[currentQuestionIndex].questionID] === parseInt(answerID) ? 'green.300' : 'white'}
                             >
                                 <Text fontSize='14px'> {answer} </Text>
                             </Button>
@@ -600,7 +613,7 @@ const OnboardingQuestions = ({ apiURL, selectedAnswers, setSelectedAnswers, hasL
                         bg={
                             currentQuestionIndex === index
                                 ? 'green.300'
-                                : selectedAnswers.hasOwnProperty(questions[index]?.question_id)
+                                : selectedAnswers.hasOwnProperty(questions[index]?.questionID)
                                     ? '#6be99654'
                                     : 'rgba(255, 255, 255, 0.2)'
                         }
