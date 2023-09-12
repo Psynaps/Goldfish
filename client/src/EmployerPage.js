@@ -447,7 +447,7 @@ function EmployerPage(returnURL) {
                                 color={selectedCategory === category ? 'white' : 'black'}
                                 _hover={{
                                     color: 'white',
-                                    bg: selectedCategory == category ? selectedBg : 'blue.600'
+                                    bg: selectedCategory === category ? selectedBg : 'blue.600'
                                 }}
                                 borderColor={selectedCategory === category ? selectedBorderColor : initialBorderColor}
                                 borderWidth={selectedCategory === category ? '5px' : '3px'}

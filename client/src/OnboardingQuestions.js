@@ -7,7 +7,7 @@ import { ArrowRightIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from "react-router-dom";
 import { questionsData as questionsDataOriginal } from './QuestionsData';
 
-const questions = questionsDataOriginal.filter(q => q.questionID <= 100);
+let questions = structuredClone(questionsDataOriginal).filter(q => q.questionID <= 100);
 //run through questions and convert answerID: number, answer: x to just answerID: answer
 questions.forEach(q => {
     // map {answerID: 1, answer: 'x'} to just {1: 'x'}
@@ -457,7 +457,7 @@ const questions2 = [
     // },
 ];
 */
-console.log('questions2:', questions2);
+// console.log('questions2:', questions2);
 
 
 questions.sort((a, b) => a.index - b.index);

@@ -6,10 +6,19 @@ import { LoginButton } from './LoginButton';
 // import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 import { useAuth0 } from '@auth0/auth0-react';
-import { questionsData } from './QuestionsData';
+import { questionsData as questionsDataOriginal } from './QuestionsData';
 
-const categories = ['Industry Certifications', 'Technical Knowledge', 'Deal Experience', 'Tools & Platforms', 'HR Preferences',
-	'Job Specific HR',];
+let questionsData = questionsDataOriginal.filter(q => q.questionID <= 100);
+//run through questions and convert answerID: number, answer: x to just answerID: answer
+console.log('questionsData: ', questionsData);
+// questionsData.forEach(q => {
+// 	// map {answerID: 1, answer: 'x'} to just {1: 'x'}
+// 	console.log(q.answers);
+// 	q.answers = Object.fromEntries(q.answers.map(a => [a.answerID, a.answer]));
+
+// });
+
+const categories = ['HR Requirements', 'Technical Skills', 'Legal Experience', 'Platform Workflows',];
 
 function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 	const { isAuthenticated, isLoading, user } = useAuth0();
@@ -32,8 +41,15 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 		return (
 			<Box w='100%' bg='blue.700' flex='1 1 auto'>
 				<Button w='100%' onClick={() => {
+					// console.log('clicked question: ', question, question.questionID);
+					// {
+					// 	Object.entries(question.answers).map(([answerID, answerText]) => (
+					// 		console.log('answerID: ', answerID, ' answerText: ', answerText)
+					// 	));
+					// }
 					setExpandedQuestionID(question.questionID);
 					setCurrentQuestionAnswer(null);
+					// console.log('expandedQuestionID: ', expandedQuestionID, expandedQuestionID === question.questionID);
 				}}>
 					<Text fontSize='md'>
 						{question.question}
@@ -48,6 +64,7 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 									w='100%'
 									colorScheme={(expandedQuestionID === question.questionID && currentQuestionAnswer === answer.answerID) ? 'blue' : 'gray'}
 									onClick={() => {
+										console.log('clicked answer: ', answer.answerID);
 										setCurrentQuestionAnswer(answer.answerID);
 										setIsAnswerSelected(true);
 									}}
@@ -67,10 +84,10 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 									w='100%'
 									colorScheme={(expandedQuestionID === question.questionID && currentQuestionAnswer === answer.answerID) ? 'blue' : 'gray'}
 									onClick={() => {
+										console.log('clicked answer: ', answer.answerID);
 										setCurrentQuestionAnswer(answer.answerID);
 										setIsAnswerSelected(true);
 									}}
-									h='auto'
 								>
 									<Text fontSize='sm'>
 										{answer.answer}
@@ -222,7 +239,7 @@ function CandidateAnswerPage({ apiURL, userProfile, hasLoadedProfile }) {
 						fontSize="20px"
 						color="#F2A5FF"
 					>
-						Answer more questions to improve next week’s results.{' '}
+						Answer more questions to improve next week’s results.
 					</Text>
 					<Flex direction='row' alignItems='baseline' w='100%'>
 						<Text pt='48px' pr={4} fontSize='lg' align='stretch' color='white'>

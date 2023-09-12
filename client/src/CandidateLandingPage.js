@@ -511,180 +511,45 @@ function CandidateLandingPage(returnURL) {
                         align="flex-start"
                         overflow="hidden"
                         width="2388px"
-                        height="1440px"
+                        // height="1440px"
                         maxWidth="100%"
                         border='0'
-                        p='80px'
+                        p={['4', '4', '16']}
+                        spacing={16}
                     // pb={30}
-                    // background="#FFFFFF"
+                    // background={["red", "red", "blue"]}
                     >
                         <Box>
-                            <Box>
+                            <Box pb={20}>
                                 <Stack
-                                    padding="8px"
+                                    paddingX="32px"
+                                    paddingY="16px"
+                                    borderRadius="10px"
                                     direction="row"
                                     justify="center"
-                                    align="center"
-                                    width="461px"
-                                    maxWidth="100%"
-                                    pb={20}
+                                    // align="center"
+                                    // width="581px"
+                                    w="55%"
+                                    maxWidth="55%"
+                                    background="#FFFFFF"
                                 >
+                                    <Text
+                                        align="center"
+                                        fontFamily="Inter"
+                                        lineHeight="1"
+                                        fontWeight="bold"
+                                        fontSize="48px"
+                                        color="blue.600"
+                                        flex="1"
+                                    >
 
-                                    <Heading as='h2' size='2xl' color="orange.500"
-                                        // width="445px"
-                                        maxWidth="100%">
-                                        How we match candidates.
-                                    </Heading>
+                                        How we match legal support professionals
+                                    </Text>
                                 </Stack>
                             </Box>
+
                             <Stack
-                                borderRadius="20px"
-                                justify="flex-start"
-                                align="flex-start"
-                                spacing="64px"
-                                pb={16}
-                            >
-                                <Stack
-                                    padding="20px"
-                                    borderRadius="20px"
-                                    justify="flex-start"
-                                    align="flex-start"
-                                    spacing="16px"
-                                    borderColor="orange.500"
-                                    borderWidth='2px'
-                                    background="rgba(255, 255, 255, 0.08)"
-                                    width="345px"
-                                    maxWidth="100%"
-                                    backdropFilter="blur(2px)"
-                                >
-                                    <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        width="288px"
-                                        maxWidth="100%"
-                                        background="pink.500"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="20px"
-                                            color="white"
-                                        >
-                                            Your Career Goals
-                                        </Text>
-                                    </Stack>
-                                    <Stack
-                                        paddingStart="20px"
-                                        paddingEnd="16px"
-                                        justify="flex-start"
-                                        align="flex-start"
-                                        spacing="12px"
-                                        width="288px"
-                                        maxWidth="100%"
-                                    >
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.6)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Practice Niche
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.6)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Case Focus
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.6)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Subject Expertise
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.6)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Mission Focus
-                                            </Text>
-                                        </Stack>
-                                    </Stack>
-                                </Stack>
-                            </Stack>
-                        </Box>
-                        <Box>
-                            <Stack
-                                direction="row"
+                                direction={['column', 'column', 'row', 'row']}
                                 justify="flex-start"
                                 align="flex-start"
                                 spacing={16}
@@ -698,143 +563,7 @@ function CandidateLandingPage(returnURL) {
                                     borderColor="orange.500"
                                     borderWidth='2px'
                                     background="rgba(255, 255, 255, 0.08)"
-                                    width="345px"
-                                    maxWidth="100%"
-                                    backdropFilter="blur(2px)"
-                                >
-                                    <Stack
-                                        paddingX="28px"
-                                        paddingY="20px"
-                                        borderRadius="10px"
-                                        justify="center"
-                                        align="center"
-                                        width="288px"
-                                        maxWidth="100%"
-                                        background="pink.500"
-                                    >
-                                        <Text
-                                            fontFamily="Inter"
-                                            lineHeight="1.2"
-                                            fontWeight="bold"
-                                            fontSize="20px"
-                                            color="white"
-                                        >
-                                            Your Skill Background
-                                        </Text>
-                                    </Stack>
-                                    <Stack
-                                        paddingStart="20px"
-                                        paddingEnd="16px"
-                                        justify="flex-start"
-                                        align="flex-start"
-                                        spacing="12px"
-                                        width="288px"
-                                        maxWidth="100%"
-                                    >
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.9)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Certifications
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.9)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Technical Skills
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.9)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Legal Knowledge
-                                            </Text>
-                                        </Stack>
-                                        <Stack
-                                            paddingX="28px"
-                                            paddingY="20px"
-                                            borderRadius="10px"
-                                            justify="center"
-                                            align="center"
-                                            spacing="16px"
-                                            borderColor="cyan.500"
-                                            borderWidth="2px"
-                                            width='100%'
-                                            maxWidth="100%"
-                                            background="rgba(41, 41, 41, 0.9)"
-                                        >
-                                            <Text
-                                                fontFamily="Inter"
-                                                lineHeight="1.2"
-                                                fontWeight="bold"
-                                                fontSize="20px"
-                                                color="white"
-                                            >
-                                                Tool Workflows
-                                            </Text>
-                                        </Stack>
-                                    </Stack>
-                                </Stack>
-                                <Stack
-                                    padding="20px"
-                                    borderRadius="20px"
-                                    justify="flex-start"
-                                    align="flex-start"
-                                    spacing="16px"
-                                    borderColor="orange.500"
-                                    borderWidth='2px'
-                                    background="rgba(255, 255, 255, 0.08)"
-                                    width="345px"
+                                    // width="345px"
                                     maxWidth="100%"
                                     backdropFilter="blur(2px)"
                                 >
@@ -867,6 +596,29 @@ function CandidateLandingPage(returnURL) {
                                         width="288px"
                                         maxWidth="100%"
                                     >
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.9)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                Salkary / Contract
+                                            </Text>
+                                        </Stack>
                                         <Stack
                                             paddingX="28px"
                                             paddingY="20px"
@@ -933,7 +685,74 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Flexibility Needs
+                                                Flexibility / Hours
+                                            </Text>
+                                        </Stack>
+                                    </Stack>
+                                </Stack>
+                                <Stack
+                                    padding="20px"
+                                    borderRadius="20px"
+                                    justify="flex-start"
+                                    align="flex-start"
+                                    spacing="16px"
+                                    borderColor="orange.500"
+                                    borderWidth='2px'
+                                    background="rgba(255, 255, 255, 0.08)"
+                                    width="345px"
+                                    maxWidth="100%"
+                                    backdropFilter="blur(2px)"
+                                >
+                                    <Stack
+                                        paddingX="28px"
+                                        paddingY="20px"
+                                        borderRadius="10px"
+                                        justify="center"
+                                        align="center"
+                                        width="288px"
+                                        maxWidth="100%"
+                                        background="pink.500"
+                                    >
+                                        <Text
+                                            fontFamily="Inter"
+                                            lineHeight="1.2"
+                                            fontWeight="bold"
+                                            fontSize="20px"
+                                            color="white"
+                                        >
+                                            Your Legal Expertise
+                                        </Text>
+                                    </Stack>
+                                    <Stack
+                                        paddingStart="20px"
+                                        paddingEnd="16px"
+                                        justify="flex-start"
+                                        align="flex-start"
+                                        spacing="12px"
+                                        width="288px"
+                                        maxWidth="100%"
+                                    >
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.9)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                State level e-filing
                                             </Text>
                                         </Stack>
                                         <Stack
@@ -956,13 +775,207 @@ function CandidateLandingPage(returnURL) {
                                                 fontSize="20px"
                                                 color="white"
                                             >
-                                                Salary / Contract
+                                                Legal Certifications
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.9)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                Practice Niche
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.9)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                Case Management
                                             </Text>
                                         </Stack>
                                     </Stack>
                                 </Stack>
                             </Stack>
                         </Box>
+                        <Box>
+
+                            <Stack
+                                borderRadius="20px"
+                                justify="flex-start"
+                                align="flex-start"
+                                spacing="64px"
+                                pb={16}
+                            >
+                                <Stack
+                                    padding="20px"
+                                    borderRadius="20px"
+                                    justify="flex-start"
+                                    align="flex-start"
+                                    spacing="16px"
+                                    borderColor="orange.500"
+                                    borderWidth='2px'
+                                    background="rgba(255, 255, 255, 0.08)"
+                                    width="345px"
+                                    maxWidth="100%"
+                                    backdropFilter="blur(2px)"
+                                >
+                                    <Stack
+                                        paddingX="28px"
+                                        paddingY="20px"
+                                        borderRadius="10px"
+                                        justify="center"
+                                        align="center"
+                                        width="288px"
+                                        maxWidth="100%"
+                                        background="pink.500"
+                                    >
+                                        <Text
+                                            fontFamily="Inter"
+                                            lineHeight="1.2"
+                                            fontWeight="bold"
+                                            fontSize="20px"
+                                            color="white"
+                                        >
+                                            Technical Skills
+                                        </Text>
+                                    </Stack>
+                                    <Stack
+                                        paddingStart="20px"
+                                        paddingEnd="16px"
+                                        justify="flex-start"
+                                        align="flex-start"
+                                        spacing="12px"
+                                        width="288px"
+                                        maxWidth="100%"
+                                    >
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.6)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                OCR & Processing
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.6)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                Search Querying
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.6)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                SQL Database
+                                            </Text>
+                                        </Stack>
+                                        <Stack
+                                            paddingX="28px"
+                                            paddingY="20px"
+                                            borderRadius="10px"
+                                            justify="center"
+                                            align="center"
+                                            spacing="16px"
+                                            borderColor="cyan.500"
+                                            borderWidth="2px"
+                                            width='100%'
+                                            maxWidth="100%"
+                                            background="rgba(41, 41, 41, 0.6)"
+                                        >
+                                            <Text
+                                                fontFamily="Inter"
+                                                lineHeight="1.2"
+                                                fontWeight="bold"
+                                                fontSize="20px"
+                                                color="white"
+                                            >
+                                                Data Encryption
+                                            </Text>
+                                        </Stack>
+                                    </Stack>
+                                </Stack>
+                            </Stack>
+                        </Box>
+
                     </Stack>
                 </Stack>
             </Box>
@@ -1025,7 +1038,7 @@ function CandidateLandingPage(returnURL) {
                                             fontSize="36px"
                                             color="pink.500"
                                         >
-                                            TLDR: We put job seekers first.{' '}
+                                            TLDR: We put job seekers first.
                                         </Text>
                                     </Stack>
                                 </Stack>
@@ -1057,10 +1070,12 @@ function CandidateLandingPage(returnURL) {
                                 // padding="6.47px"
                                 justify="center"
                                 align="center"
+                                alignSelf='center'
                                 // spacing="6.47px"
                                 height="480px"
                                 flexBasis={{ base: "100%", lg: "50%" }}
                                 backgroundImage={rock1Img}
+                                backgroundPosition={{ base: "center", lg: "left" }}
                                 backgroundSize='contain'
                                 backgroundRepeat='no-repeat'
                             >
@@ -1106,10 +1121,10 @@ function CandidateLandingPage(returnURL) {
                                             fontFamily="Inter"
                                             lineHeight="1.33"
                                             // fontWeight="bold"
-                                            fontSize="24px"
+                                            fontSize={{ base: "20px", lg: "24px" }}
                                             color="#FFFFFF"
-                                            width="471.77px"
-                                            height="296.31px"
+                                            width="415px"
+                                            // height="296px"
                                             maxWidth="95%"
                                             px={4}
                                             textAlign='center'
@@ -1130,6 +1145,7 @@ function CandidateLandingPage(returnURL) {
                                 height="480px"
                                 flexBasis={{ base: "100%", lg: "50%" }}
                                 backgroundImage={rock2Img}
+                                backgroundPosition={{ base: "center", lg: "left" }}
                                 backgroundSize='contain'
                                 backgroundRepeat='no-repeat'
                             >
@@ -1179,7 +1195,7 @@ function CandidateLandingPage(returnURL) {
                                             // fontWeight="bold"
                                             fontSize="24px"
                                             color="#FFFFFF"
-                                            width="471.77px"
+                                            width="415px"
                                             height="296.31px"
                                             maxWidth="95%"
                                             px={4}
@@ -1290,7 +1306,7 @@ function CandidateLandingPage(returnURL) {
                                                         color="white"
                                                         flex="1"
                                                     >
-                                                        We continuously learn new things about the sales
+                                                        We continuously learn new things about the
                                                         legal job market. Our newsletter shares
                                                         interview tips, skill development spotlights, and
                                                         salary trends to keep you in the current.

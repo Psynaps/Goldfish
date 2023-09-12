@@ -744,7 +744,7 @@ function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, s
     );
 
     useEffect(() => {
-        setSelectedJobListing(jobs !== {} ? jobs[Object.keys(jobs)[0]]?.job_posting_id : -1);
+        setSelectedJobListing(Object.keys(jobs).length > 0 ? jobs[Object.keys(jobs)[0]]?.job_posting_id : -1);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
