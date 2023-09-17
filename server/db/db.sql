@@ -5,12 +5,14 @@ CREATE TABLE job_postings (
     job_posting_id SERIAL PRIMARY KEY,
     user_id VARCHAR(255) NOT NULL,
     job_title VARCHAR(255),
-    salary_base DECIMAL,
-    salary_ote DECIMAL,
-    ote_value DECIMAL,
-    home_office_address VARCHAR(255),
-    active BOOLEAN
-    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    job_location DECIMAL,
+    salary DECIMAL,
+    contract_term DECIMAL,
+    work_from_home DECIMAL,
+    visa DECIMAL,
+    travel DECIMAL,
+    active BOOLEAN,
+    date_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 CREATE UNIQUE INDEX job_postings_unique ON job_postings (job_posting_id, user_id);
 
@@ -32,7 +34,6 @@ CREATE TABLE employer_profiles (
   website VARCHAR(255),
   linkedin VARCHAR(255),
   companysize INTEGER,
-  producttype INTEGER,
   companylogo BYTEA,
   office1 VARCHAR(255),
   office2 VARCHAR(255),

@@ -28,7 +28,7 @@ function EmployerPage(returnURL) {
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [job_title, setjob_title] = useState('Job Title');
-    const [jobLocation, setJobLocation] = useState('');
+    // const [jobLocation, setJobLocation] = useState('');
     // const [company, setCompany] = useState('myspace');
     const [canAddQuestion, setCanAddQuestion] = useState(false);
     // const { colorMode, toggleColorMode } = useColorMode();
@@ -65,7 +65,6 @@ function EmployerPage(returnURL) {
             body: JSON.stringify({
                 user_id: user.sub,
                 // company: company,
-                home_office_address: jobLocation,
                 job_title: job_title,
                 job_posting_id: job_posting_id,
                 jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
@@ -90,7 +89,7 @@ function EmployerPage(returnURL) {
                 console.error(e); // This will log any errors to the console.
                 setIsPosting(false);
             });
-    }, [user, job_posting_id, jobLocation, job_title, jobPostingQuestions, apiURL]);
+    }, [user, job_posting_id, job_title, jobPostingQuestions, apiURL]);
 
 
     const handleFilterButtonClick = (category) => {
@@ -122,9 +121,6 @@ function EmployerPage(returnURL) {
                 console.log('json', json);
                 if (json.job_title) {
                     setjob_title(json.job_title);
-                }
-                if (json.home_office_address) {
-                    setJobLocation(json.home_office_address);
                 }
                 if (json.jobData && json.jobData !== "{}") {
                     console.log('calling load job posting');
@@ -349,9 +345,9 @@ function EmployerPage(returnURL) {
         // console.log('jobpostingquestions:', jobPostingQuestions);
     };
 
-    const handleLocationChange = (value) => {
-        setJobLocation(value);
-    };
+    // const handleLocationChange = (value) => {
+    //     setJobLocation(value);
+    // };
 
 
     useEffect(() => {
@@ -365,7 +361,7 @@ function EmployerPage(returnURL) {
             // Reset state here
             setQuestionBankQuestions(sortQuestionBankQuestions(questionsData));
             setJobPostingQuestions([]);
-            setJobLocation('');
+            // setJobLocation('');
             setjob_title('');
             // setCompany('myspace');
             setSelectedAnswers([]);
@@ -505,7 +501,7 @@ function EmployerPage(returnURL) {
                             {/* <Flex w='100%' direction='row' alignItems={'flex-end'}> */}
                             {/* <Text fontSize='2xl'>Job Posting Builder</Text> */}
                             <Textarea
-                                // placeholder={job_title}
+                                placeholder={'Job title'}
                                 value={job_title}
                                 onChange={e => handlejob_titleChange(e.target.value)}
                                 minHeight='15%'
@@ -536,7 +532,7 @@ function EmployerPage(returnURL) {
                         {(jobPostingQuestions.length > 0 && isAuthenticated && job_title === '') && <Button isDisabled colorScheme='blue' width='auto'>
                             <Text p={4}>Set job title to save</Text>
                         </Button>}
-                        {(jobPostingQuestions.length > 0 && isAuthenticated && job_title !== '') && <Button colorScheme='blue' width='auto' onClick={() => postJob()}>
+                        {(jobPostingQuestions.length > 0 && isAuthenticated && job_title !== '') && <Button colorScheme='blue' width='auto' isLoading={isPosting} onClick={() => postJob()}>
                             <Text p={4}>Save</Text>
                         </Button>}
                         {(jobPostingQuestions.length > 0 && !isAuthenticated) && <Button isDisabled colorScheme='blue' width='auto' >

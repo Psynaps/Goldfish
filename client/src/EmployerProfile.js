@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
 import {
-    Box, Flex, HStack, Button, Spacer, Select, VStack, IconButton, Text, Avatar, Spinner, Circle, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
+    Box, Flex, HStack, Button, Spacer, Select, VStack, IconButton, Text, Avatar, Spinner, Circle, Image, Heading, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogHeader,
@@ -19,6 +19,7 @@ import axios from 'axios';
 // import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
 import { useAuth0 } from '@auth0/auth0-react';
 import { LoginButton } from './LoginButton';
+import goldfishLogo from './images/logo.svg';
 import './App.css';
 import DropdownMenu from './DropdownMenu';
 import { DeleteIcon } from '@chakra-ui/icons';
@@ -261,14 +262,14 @@ const EmployerProfileBuilderRightContent = ({
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.companyname}>
                             {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
-                            <FormLabel htmlFor="companyname">Company Name or DBA</FormLabel>
+                            <FormLabel htmlFor="companyname" w='95%'>Company Name or DBA</FormLabel>
                             <Input id="companyname" {...register("companyname", { required: "This is required" })} w='95%' alignSelf='center' />
                             <FormErrorMessage>
                                 {errors.companyname && errors.companyname.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.website}>
-                            <FormLabel htmlFor="website">Website</FormLabel>
+                            <FormLabel htmlFor="website" w='95%'>Website</FormLabel>
                             <Input id="website" {...register("website", { required: "This is required" })} w='95%' alignSelf='center' />
                             <FormErrorMessage>
                                 {errors.website && errors.website.message}
@@ -279,50 +280,33 @@ const EmployerProfileBuilderRightContent = ({
                             <Input id="linkedin" {...register("linkedin")} w='95%' alignSelf='center' />
                         </FormControl>
                         <FormControl isInvalid={errors.companysize}>
-                            <FormLabel htmlFor="companysize">Considering the continuum from early-stage startups to established corporations, how would you describe your organization?</FormLabel>
+                            <FormLabel htmlFor="companysize" w='95%'>Considering the continuum from botique law firms to the AmLaw100, how would you describe your firm?</FormLabel>
                             <Select id="companysize" {...register("companysize", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>Early-Stage Startup: We're still in the process of setting up structures and processes, and innovation is our driving force</option>
-                                <option value='1' style={{ color: 'black' }}>Mid-Stage Startup: We have some established structures and processes, but we are still highly dynamic and focused on growth and innovation</option>
-                                <option value='2' style={{ color: 'black' }}>Growth Stage Company: We have a good balance between established processes and the agility needed for growth and adaptation</option>
-                                <option value='3' style={{ color: 'black' }}>Established Company: We have well-defined roles and processes, and value stability and predictability</option>
+                                <option value='0' style={{ color: 'black' }}>Boutique: Our firm is a small, specialized practice focusing on a particular area of law</option>
+                                <option value='1' style={{ color: 'black' }}>Small Independent: Our firm is small, with general legal services and a localized clientele</option>
+                                <option value='2' style={{ color: 'black' }}>Regional: Our firm operates at a regional level, offering a range of legal services across multiple states</option>
+                                <option value='3' style={{ color: 'black' }}>Mid-size: Our firm is neither small nor large, offering a variety of legal services and possibly multiple offices</option>
+                                <option value='4' style={{ color: 'black' }}>National: Our firm has a broad scope, with offices in multiple states, offering a wide array of legal services</option>
+                                <option value='5' style={{ color: 'black' }}>AmLaw 100: Our firm is among the 100 largest firms in the U.S., offering comprehensive services both nationally and internationally</option>
                             </Select>
                             <FormErrorMessage>
                                 {errors.companysize && errors.companysize.message}
                             </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.producttype}>
-                            <FormLabel htmlFor="producttype">Which most accurately describes the type of product your company sells?</FormLabel>
-                            <Select id="producttype" {...register("producttype", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
-                            >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='1' style={{ color: 'black' }}>Business Intelligence (BI)</option>
-                                <option value='2' style={{ color: 'black' }}>Cybersecurity</option>
-                                <option value='3' style={{ color: 'black' }}>Data Analytics / Big Data</option>
-                                <option value='4' style={{ color: 'black' }}>Customer Relationship Management (CRM)</option>
-                                <option value='5' style={{ color: 'black' }}>Advertising Technology</option>
-                                <option value='6' style={{ color: 'black' }}>DevOps and Cloud Infrastructure</option>
-                                <option value='7' style={{ color: 'black' }}>Human Resource Management (HRM)</option>
-                                <option value='0' style={{ color: 'black' }}>Other</option>
-                            </Select>
-                            <FormErrorMessage>
-                                {errors.producttype && errors.producttype.message}
-                            </FormErrorMessage>
-                        </FormControl>
                         <FormControl isInvalid={errors.logo}>
-                            <FormLabel htmlFor="logo">Logo Upload</FormLabel>
+                            <FormLabel htmlFor="logo" w='95%'>Please upload your law firm logo</FormLabel>
                             <Input type="file" id="logo" accept="image/*" {...register("logo", imageValidationRule)} w='95%' p={2} alignSelf='center' />
                             {errors.logo && <FormErrorMessage>{errors.logo.message}</FormErrorMessage>}
                         </FormControl>
-                        <HStack>
+                        <HStack alignSelf='end' mr='5%'>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={currentIndex === 0}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant='ghost'
+                                variant='outline'
                             >
                                 <Text>Back</Text>
                             </Button>
@@ -348,26 +332,26 @@ const EmployerProfileBuilderRightContent = ({
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.office1}>
-                            <FormLabel htmlFor="office1">HQ (Main Office)</FormLabel>
+                            <FormLabel htmlFor="office1" w='95%'>HQ (Main Office)</FormLabel>
                             <Input id="office1" {...register("office1", { required: "This is required" })} w='95%' alignSelf='center' />
                             <FormErrorMessage>
                                 {errors.office1 && errors.office1.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl>
-                            <FormLabel htmlFor="office2">Office Hub 2 (Optional)</FormLabel>
+                            <FormLabel htmlFor="office2" w='95%'>Office Hub 2 (Optional)</FormLabel>
                             <Input id="office2" {...register("office2")} w='95%' alignSelf='center' />
                         </FormControl>
                         <FormControl>
-                            <FormLabel htmlFor="office3">Office Hub 3 (Optional)</FormLabel>
+                            <FormLabel htmlFor="office3" w='95%'>Office Hub 3 (Optional)</FormLabel>
                             <Input id="office3" {...register("office3")} w='95%' alignSelf='center' />
                         </FormControl>
-                        <HStack>
+                        <HStack alignSelf='end' mr='5%'>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant='ghost'
+                                variant='outline'
                             >
                                 <Text>Back</Text>
                             </Button>
@@ -393,7 +377,7 @@ const EmployerProfileBuilderRightContent = ({
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.medical1}>
-                            <FormLabel htmlFor="medical1">What percentage of health insurance premium costs does your company cover for your employees?</FormLabel>
+                            <FormLabel htmlFor="medical1" w='95%'>What percentage of health insurance premium costs does your company cover for your employees?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
                             <Select id="medical1" {...register("medical1", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
@@ -409,7 +393,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.medical2}>
-                            <FormLabel htmlFor="medical2">What percentage of dental insurance premium costs does your company cover for your employees?</FormLabel>
+                            <FormLabel htmlFor="medical2" w='95%'>What percentage of dental insurance premium costs does your company cover for your employees?</FormLabel>
                             <Select id="medical2" {...register("medical2", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -424,7 +408,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.medical3}>
-                            <FormLabel htmlFor="medical3">What percentage of vision insurance premium costs does your company cover for your employees?</FormLabel>
+                            <FormLabel htmlFor="medical3" w='95%'>What percentage of vision insurance premium costs does your company cover for your employees?</FormLabel>
                             <Select id="medical3" {...register("medical3", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -441,7 +425,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.medical4}>
-                            <FormLabel htmlFor="medical4">Does your company cover dependents (spouse, children) under its medical insurance plan?</FormLabel>
+                            <FormLabel htmlFor="medical4" w='95%'>Does your company cover dependents (spouse, children) under its medical insurance plan?</FormLabel>
                             <Select id="medical4" {...register("medical4", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -456,7 +440,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.medical5}>
-                            <FormLabel htmlFor="medical5"> Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?</FormLabel>
+                            <FormLabel htmlFor="medical5" w='95%'> Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?</FormLabel>
                             <Select id="medical5" {...register("medical5", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -470,12 +454,12 @@ const EmployerProfileBuilderRightContent = ({
                                 {errors.medical5 && errors.medical5.message}
                             </FormErrorMessage>
                         </FormControl>
-                        <HStack>
+                        <HStack alignSelf='end' mr='5%'>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant='ghost'
+                                variant='outline'
                             >
                                 <Text>Back</Text>
                             </Button>
@@ -501,7 +485,7 @@ const EmployerProfileBuilderRightContent = ({
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.pto1}>
-                            <FormLabel htmlFor="pto1">How many days of paid time off (PTO) are new employees entitled to annually?</FormLabel>
+                            <FormLabel htmlFor="pto1" w='95%'>How many days of paid time off (PTO) are new employees entitled to annually?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
                             <Select id="pto1" {...register("pto1", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
@@ -521,7 +505,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.pto2}>
-                            <FormLabel htmlFor="pto2">How is PTO accrued at your company?</FormLabel>
+                            <FormLabel htmlFor="pto2" w='95%'>How is PTO accrued at your company?</FormLabel>
                             <Select id="pto2" {...register("pto2", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -536,7 +520,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.pto3}>
-                            <FormLabel htmlFor="pto3">What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?</FormLabel>
+                            <FormLabel htmlFor="pto3" w='95%'>What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?</FormLabel>
 
                             <Select id="pto3" {...register("pto3", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
@@ -552,7 +536,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.pto4}>
-                            <FormLabel htmlFor="pto4">What is your company's maternity / paternity leave policy?</FormLabel>
+                            <FormLabel htmlFor="pto4" w='95%'>What is your company's maternity / paternity leave policy?</FormLabel>
                             <Select id="pto4" {...register("pto4", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -568,12 +552,12 @@ const EmployerProfileBuilderRightContent = ({
                                 {errors.pto4 && errors.pto4.message}
                             </FormErrorMessage>
                         </FormControl>
-                        <HStack>
+                        <HStack alignSelf='end' mr='5%'>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant='ghost'
+                                variant='outline'
                             >
                                 <Text>Back</Text>
                             </Button>
@@ -600,7 +584,7 @@ const EmployerProfileBuilderRightContent = ({
                     <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.financial1}>
-                            <FormLabel htmlFor="financial1">Does your company offer a 401k program? </FormLabel>
+                            <FormLabel htmlFor="financial1" w='95%'>Does your company offer a 401k program? </FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
                             <Select id="financial1" {...register("financial1", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
@@ -614,7 +598,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.financial2}>
-                            <FormLabel htmlFor="financial2">What percentage does your company match for employee 401k contributions?</FormLabel>
+                            <FormLabel htmlFor="financial2" w='95%'>What percentage does your company match for employee 401k contributions?</FormLabel>
                             <Select id="financial2" {...register("financial2", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -633,7 +617,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.financial3}>
-                            <FormLabel htmlFor="financial3">What is the annual dollar amount of student loan reimbursement your company offers?</FormLabel>
+                            <FormLabel htmlFor="financial3" w='95%'>What is the annual dollar amount of student loan reimbursement your company offers?</FormLabel>
 
                             <Select id="financial3" {...register("financial3", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
@@ -651,7 +635,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.financial4}>
-                            <FormLabel htmlFor="financial4">Does your company offer a learning and development allowance? If yes, how much is it annually?</FormLabel>
+                            <FormLabel htmlFor="financial4" w='95%'>Does your company offer a learning and development allowance? If yes, how much is it annually?</FormLabel>
                             <Select id="financial4" {...register("financial4", { required: "This is required" })} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
@@ -667,12 +651,12 @@ const EmployerProfileBuilderRightContent = ({
                                 {errors.financial4 && errors.financial4.message}
                             </FormErrorMessage>
                         </FormControl>
-                        <HStack>
+                        <HStack alignSelf='end' mr='5%'>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant={(canSubmit) ? 'ghost' : 'solid'}
+                                variant={(canSubmit) ? 'outline' : 'solid'}
                             >
                                 <Text>Back</Text>
                             </Button>
@@ -891,7 +875,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
             // console.log('resetting form', jobs[selectedJobPosting]);
         }
         else {
-            reset({ job_title: '', salary_base: '', salary_ote: '', ote_value: '', home_office_address: '' });
+            reset({ job_title: '', salary: '', contract_term: '', work_from_home: '', visa: '', travel: '' });
             // console.log('full form reset');
         }
     }, [jobs, selectedJobPosting, reset]);
@@ -906,38 +890,121 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                 <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                     <FormControl isInvalid={errors.job_title}>
                         {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
-                        <FormLabel htmlFor="job_title">Job Title</FormLabel>
+                        <FormLabel htmlFor="job_title" w='95%'>Job Title</FormLabel>
                         <Input id="job_title" {...register("job_title", { required: "This is required" })} w='95%' alignSelf='center' />
                         <FormErrorMessage>
                             {errors.job_title && errors.job_title.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.salary_base}>
-                        <FormLabel htmlFor="salary_base">Salary Base ($)</FormLabel>
-                        <Input id="salary_base" type="number" {...register("salary_base", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.location}>
+                        <FormLabel htmlFor="location" w='95%'>What is the nearest home office</FormLabel>
+                        <Select id="location" {...register("location", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>New York, NY</option>
+                            <option value='1' style={{ color: 'black' }}>Washington, D.C.</option>
+                            <option value='2' style={{ color: 'black' }}>San Francisco, CA</option>
+                            <option value='3' style={{ color: 'black' }}>Los Angeles, CA</option>
+                            <option value='4' style={{ color: 'black' }}>Chicago, IL</option>
+                            <option value='5' style={{ color: 'black' }}>Boston, MA</option>
+                            <option value='6' style={{ color: 'black' }}>Houston, TX</option>
+                            <option value='7' style={{ color: 'black' }}>Atlanta, GA</option>
+                            <option value='8' style={{ color: 'black' }}>Dallas, TX</option>
+                            <option value='9' style={{ color: 'black' }}>Philadelphia, PA</option>
+                            <option value='10' style={{ color: 'black' }}>Seattle, WA</option>
+                            <option value='11' style={{ color: 'black' }}>Miami, FL</option>
+                            <option value='12' style={{ color: 'black' }}>Denver, CO</option>
+                            <option value='13' style={{ color: 'black' }}>Minneapolis, MN</option>
+                            <option value='14' style={{ color: 'black' }}>San Diego, CA</option>
+                            <option value='15' style={{ color: 'black' }}>Austin, TX</option>
+                            <option value='16' style={{ color: 'black' }}>Phoenix, AZ</option>
+                            <option value='17' style={{ color: 'black' }}>Charlotte, NC</option>
+                            <option value='18' style={{ color: 'black' }}>Tampa, FL</option>
+                            <option value='19' style={{ color: 'black' }}>St. Louis, MO</option>
+                        </Select>
                         <FormErrorMessage>
-                            {errors.salary_base && errors.salary_base.message}
+                            {errors.location && errors.location.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.salary_ote}>
-                        <FormLabel htmlFor="salary_ote">Annual Salary at 100% OTE ($)</FormLabel>
-                        <Input id="salary_ote" type="number"{...register("salary_ote", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.salary}>
+                        <FormLabel htmlFor="salary" w='95%'>If this position is salaried, what is the salary?   </FormLabel>
+                        <Select id="salary" {...register("salary", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>N/A</option>
+                            <option value='1' style={{ color: 'black' }}>&lt;$50,000</option>
+                            <option value='2' style={{ color: 'black' }}>$50,000 - $60,000</option>
+                            <option value='3' style={{ color: 'black' }}>$60,000 - $70,000</option>
+                            <option value='4' style={{ color: 'black' }}>$70,000 - $80,000</option>
+                            <option value='5' style={{ color: 'black' }}>$80,000 - $90,000</option>
+                            <option value='6' style={{ color: 'black' }}>$90,000 - $100,000</option>
+                            <option value='7' style={{ color: 'black' }}>$100,000+</option>
+                        </Select>
                         <FormErrorMessage>
-                            {errors.salary_ote && errors.salary_ote.message}
+                            {errors.salary && errors.salary.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.ote_value}>
-                        <FormLabel htmlFor="ote_value">Value of 100% OTE Attainment ($)</FormLabel>
-                        <Input id="ote_value" type="number" {...register("ote_value", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.contract_term}>
+                        <FormLabel htmlFor="contract_term" w='95%'>If this is a contract-based position, what is the closest contract term?</FormLabel>
+                        <Select id="contract_term" {...register("contract_term", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>N/A</option>
+                            <option value='1' style={{ color: 'black' }}>Month-to-month</option>
+                            <option value='2' style={{ color: 'black' }}>6 months</option>
+                            <option value='3' style={{ color: 'black' }}>12 months</option>
+                            <option value='4' style={{ color: 'black' }}>18 months</option>
+                        </Select>
                         <FormErrorMessage>
-                            {errors.ote_value && errors.ote_value.message}
+                            {errors.contract_term && errors.contract_term.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.home_office_address}>
-                        <FormLabel htmlFor="home_office_address">Home Office Address</FormLabel>
-                        <Input id="home_office_address" {...register("home_office_address", { required: "This is required" })} w='95%' alignSelf='center' />
+                    <FormControl isInvalid={errors.work_from_home}>
+                        <FormLabel htmlFor="work_from_home" w='95%'>What is the work arrangement for this role in terms of remote work versus in-office work?</FormLabel>
+                        <Select id="work_from_home" {...register("work_from_home", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>Fully Remote: This role is 100% remote, and no office presence is required at any time</option>
+                            <option value='1' style={{ color: 'black' }}>Weekly Office Attendance Preferred: This role is primarily remote, but visits to the office are preferred for collaboration and team engagement</option>
+                            <option value='2' style={{ color: 'black' }}>Some Weekly Office Attendance Required: This role requires a consistent in-office presence on a weekly basis, with the flexibility to work remotely on other days</option>
+                            <option value='3' style={{ color: 'black' }}>In-Office Only: This role requires full-time presence in the office and does not offer remote work flexibility.</option>
+                        </Select>
                         <FormErrorMessage>
-                            {errors.home_office_address && errors.home_office_address.message}
+                            {errors.work_from_home && errors.work_from_home.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.visa}>
+                        <FormLabel htmlFor="visa" w='95%'>Would you support sponsorship of a work visa for this role?</FormLabel>
+                        <Select id="visa" {...register("visa", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='1' style={{ color: 'black' }}>Yes</option>
+                            <option value='0' style={{ color: 'black' }}>No</option>
+                        </Select>
+                        <FormErrorMessage>
+                            {errors.visa && errors.visa.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.travel}>
+                        <FormLabel htmlFor="travel" w='95%'>What level of travel is required in this role for client meetings, events, etc.?</FormLabel>
+                        <Select id="travel" {...register("travel", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>This role does not require any travel</option>
+                            <option value='1' style={{ color: 'black' }}>This role requires very minimal travel (less than 10% of the time)</option>
+                            <option value='2' style={{ color: 'black' }}>This role requires some travel (10-25% of the time)</option>
+                            <option value='3' style={{ color: 'black' }}>This role requires occasional travel (25-50% of the time)</option>
+                            <option value='4' style={{ color: 'black' }}>This role requires frequent travel (50-75% of the time)</option>
+                            <option value='4' style={{ color: 'black' }}>This role requires significant travel (more than 75% of the time)</option>
+                        </Select>
+                        <FormErrorMessage>
+                            {errors.travel && errors.travel.message}
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl >
@@ -957,14 +1024,14 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                 </VStack>
                 <Text fontSize={['lg', 'xl', '2xl']} mt={3} fontWeight='bold' >Edit Job Criteria</Text>
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
-                <Button as={RouterLink} to={`/employer?jobID=${selectedJobPosting}`} size='lg' w={36} colorScheme='teal' bgGradient='linear(to-l, teal.400, yellow.400)' alignSelf='flex-end' >
+                <Button as={RouterLink} to={`/employer?jobID=${selectedJobPosting}`} size='lg' w={36} colorScheme='teal' bgGradient='linear(to-l, teal.400, yellow.400)' alignSelf='flex-end' mr={6} >
                     <Text align='center' color='white'>Go to Job Builder</Text>
                 </Button>
 
                 <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
                 {selectedJobPosting !== -1 &&
                     <>
-                        <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold' >Delete Job Posting</Text>
+                        <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Delete Job Posting</Text>
                         <IconButton
                             _hover={{ bg: "red.700" }}
                             bg='red.500'
@@ -973,6 +1040,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                             size='lg'
                             width={36}
                             alignSelf='flex-end'
+                            mr={6}
                             onClick={onOpen}
                         />
                         <AlertDialog
@@ -1107,12 +1175,27 @@ function EmployerProfile({ returnURL }) {
             flexDirection='column'
             minHeight='100vh'>
             <Box bg='#051672' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem' borderBottom='1px solid gray'>
-                < Box display='flex' alignItems='baseline' p={0} >
+                {/* < Box display='flex' alignItems='baseline' p={0} >
                     <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
                         <Text fontSize={{ base: '3xl', md: '3xl', lg: '3xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
                         <Text ml={3} fontSize={{ base: '1xl', md: '1xl', lg: '1xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
                     </ChakraLink>
-                </Box >
+                </Box > */}
+                <HStack alignItems='baseline' p={0} >
+                    <Image
+                        borderRadius='25%'
+                        boxSize='64px'
+                        borderColor='white'
+                        borderWidth='3px'
+                        // border='10px solid white'
+                        borderStyle='solid'
+                        src={goldfishLogo}
+                        alt='Goldfish Ai Logo'
+                    />
+                    <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
+                        <Heading as='h2' size='lg' fontFamily='Poppins' color='white'>Goldfish AI</Heading>
+                    </ChakraLink>
+                </HStack>
                 <HStack spacing={5} alignItems='top'>
                     {isLoading ? <Spinner /> :
                         <>

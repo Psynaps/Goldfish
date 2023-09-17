@@ -61,7 +61,7 @@ app.post('/api/postJob', async (req, res) => {
         // console.log(req.body);
         const client = await pool.connect();
 
-        const { user_id, home_office_address, job_title, jobData } = req.body;
+        const { user_id, job_title, jobData } = req.body;
         let job_posting_id = req.body.job_posting_id;
 
         // Convert the jobData string to an object
@@ -72,17 +72,17 @@ app.post('/api/postJob', async (req, res) => {
         let query;
         if (!job_posting_id) {
             query = {
-                text: `INSERT INTO job_postings (user_id, home_office_address, job_title) 
-            VALUES ($1, $2, $3) 
+                text: `INSERT INTO job_postings (user_id, job_title) 
+            VALUES ($1, $2) 
             RETURNING job_posting_id`,
-                values: [user_id, home_office_address, job_title],
+                values: [user_id, job_title],
             };
         } else {
             query = {
-                text: `UPDATE job_postings SET home_office_address = $2, job_title = $3
+                text: `UPDATE job_postings SET job_title = $2
             WHERE job_posting_id = $1
             RETURNING job_posting_id`,
-                values: [job_posting_id, home_office_address, job_title],
+                values: [job_posting_id, job_title],
             };
         }
         result = await client.query(query);
@@ -165,7 +165,7 @@ app.get('/api/getJob', async (req, res) => {
         const responseObject = {
             user_id: jobProfileData.user_id,
             // company: jobProfileData.company,
-            home_office_address: jobProfileData.home_office_address,
+            location: jobProfileData.location,
             job_title: jobProfileData.job_title,
             jobData: JSON.stringify(jobQuestionsData),
         };
@@ -181,7 +181,7 @@ app.get('/api/getJob', async (req, res) => {
 
 app.post('/api/postJobInfo', upload.none(), async (req, res) => {
     try {
-        const { user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active, job_posting_id } = req.body;
+        const { user_id, job_title, location, salary, contract_term, work_from_home, visa, travel, active, job_posting_id } = req.body;
         console.log("postJobInfo req received");
         // console.log(req.body);
 
@@ -195,20 +195,20 @@ app.post('/api/postJobInfo', upload.none(), async (req, res) => {
             return res.status(400).send({ error: 'Missing job_posting_id query parameter' });
         }
         if (job_posting_id == -1) {
-            const queryText = `INSERT INTO job_postings(user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active)
-                                VALUES($1, $2, $3, $4, $5, $6, $7) 
+            const queryText = `INSERT INTO job_postings(user_id, job_title, job_location, salary, contract_term, work_from_home, visa, travel, active)
+                                VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) 
                                 RETURNING job_posting_id, date_created;`;
-            const queryValues = [user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active];
+            const queryValues = [user_id, job_title, location, salary, contract_term, work_from_home, visa, travel, active];
 
             const { rows } = await pool.query(queryText, queryValues);
             res.send({ success: true, job_posting_id: rows[0].job_posting_id, date_created: rows[0].date_created });
 
         } else {
-            const queryText = `UPDATE job_postings SET user_id = $1, job_title = $2, salary_base = $3, salary_ote = $4, 
-                                ote_value = $5, home_office_address = $6, active = $7 
+            const queryText = `UPDATE job_postings SET user_id = $1, job_title = $2, job_location = $3, salary = $4, contract_term = $5, work_from_home = $6, visa = $7, travel = $8,
+             active = $9 
                                 WHERE job_posting_id = $8 
                                 RETURNING job_posting_id;`;
-            const queryValues = [user_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active, job_posting_id];
+            const queryValues = [user_id, job_title, location, salary, contract_term, work_from_home, visa, travel, active, job_posting_id];
 
             const { rows } = await pool.query(queryText, queryValues);
             res.send({ success: true, job_posting_id: rows[0].job_posting_id });
@@ -231,7 +231,7 @@ app.get('/api/getUserJobPostings', async (req, res) => {
 
         // Get job profile information
         const jobProfileQuery = {
-            text: 'SELECT job_posting_id, job_title, salary_base, salary_ote, ote_value, home_office_address, active, date_created FROM job_postings WHERE user_id = $1',
+            text: 'SELECT job_posting_id, job_title, job_location, salary, contract_term, work_from_home, visa, travel, active, date_created FROM job_postings WHERE user_id = $1',
             values: [user_id],
         };
         const result = await client.query(jobProfileQuery);
@@ -241,7 +241,7 @@ app.get('/api/getUserJobPostings', async (req, res) => {
         }
 
         // Construct the response object
-        const responseObject = result.rows.map((row) => { return { job_posting_id: row.job_posting_id, job_title: row.job_title, salary_base: row.salary_base, salary_ote: row.salary_ote, ote_value: row.ote_value, home_office_address: row.home_office_address, active: row.active, date_created: row.date_created }; });
+        const responseObject = result.rows.map((row) => { return { job_posting_id: row.job_posting_id, job_title: row.job_title, location: row.job_location, salary: row.salary, contract_term: row.contract_term, work_from_home: row.work_from_home, visa: row.visa, travel: row.travel, active: row.active, date_created: row.date_created }; });
         console.log(responseObject);
         console.log(JSON.stringify(responseObject));
         res.send(responseObject);
@@ -259,7 +259,7 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
         // console.log(req.body);
         const client = await pool.connect();
 
-        const { user_id, companyname, website, linkedin, companysize, producttype,
+        const { user_id, companyname, website, linkedin, companysize,
             office1, office2, office3,
             medical1, medical2, medical3, medical4, medical5,
             pto1, pto2, pto3, pto4,
@@ -290,23 +290,23 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
             query = {
                 text: `
                     INSERT INTO employer_profiles 
-                    (user_id, companyname, website, linkedin, companysize, producttype, companylogo,
+                    (user_id, companyname, website, linkedin, companysize, companylogo,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
                     financial1, financial2, financial3, financial4) 
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
                     ON CONFLICT (user_id) 
                     DO UPDATE SET 
                     companyname = EXCLUDED.companyname, website = EXCLUDED.website, linkedin = EXCLUDED.linkedin, 
-                    companysize = EXCLUDED.companysize, producttype = EXCLUDED.producttype, companyLogo = EXCLUDED.companyLogo, 
+                    companysize = EXCLUDED.companysize, companyLogo = EXCLUDED.companyLogo, 
                     office1 = EXCLUDED.office1, office2 = EXCLUDED.office2, office3 = EXCLUDED.office3, 
                     medical1 = EXCLUDED.medical1, medical2 = EXCLUDED.medical2, medical3 = EXCLUDED.medical3, 
                     medical4 = EXCLUDED.medical4, medical5 = EXCLUDED.medical5, 
                     pto1 = EXCLUDED.pto1, pto2 = EXCLUDED.pto2, pto3 = EXCLUDED.pto3, pto4 = EXCLUDED.pto4,
                     financial1 = EXCLUDED.financial1, financial2 = EXCLUDED.financial2, financial3 = EXCLUDED.financial3, 
                     financial4 = EXCLUDED.financial4`,
-                values: [user_id, companyname, website, linkedin, companysize, producttype, companyLogo,
+                values: [user_id, companyname, website, linkedin, companysize, companyLogo,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
@@ -316,23 +316,23 @@ app.post('/api/saveEmployerProfile', upload.single('logo'), async (req, res) => 
             query = {
                 text: `
                     INSERT INTO employer_profiles 
-                    (user_id, companyname, website, linkedin, companysize, producttype,
+                    (user_id, companyname, website, linkedin, companysize,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
                     financial1, financial2, financial3, financial4) 
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22)
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21)
                     ON CONFLICT (user_id) 
                     DO UPDATE SET 
                     companyname = EXCLUDED.companyname, website = EXCLUDED.website, linkedin = EXCLUDED.linkedin, 
-                    companysize = EXCLUDED.companysize, producttype = EXCLUDED.producttype, 
+                    companysize = EXCLUDED.companysize,
                     office1 = EXCLUDED.office1, office2 = EXCLUDED.office2, office3 = EXCLUDED.office3, 
                     medical1 = EXCLUDED.medical1, medical2 = EXCLUDED.medical2, medical3 = EXCLUDED.medical3, 
                     medical4 = EXCLUDED.medical4, medical5 = EXCLUDED.medical5, 
                     pto1 = EXCLUDED.pto1, pto2 = EXCLUDED.pto2, pto3 = EXCLUDED.pto3, pto4 = EXCLUDED.pto4,
                     financial1 = EXCLUDED.financial1, financial2 = EXCLUDED.financial2, financial3 = EXCLUDED.financial3, 
                     financial4 = EXCLUDED.financial4`,
-                values: [user_id, companyname, website, linkedin, companysize, producttype,
+                values: [user_id, companyname, website, linkedin, companysize,
                     office1, office2, office3,
                     medical1, medical2, medical3, medical4, medical5,
                     pto1, pto2, pto3, pto4,
@@ -471,7 +471,7 @@ app.get('/api/getUserMatches', async (req, res) => {
                 job_posting_id: job.job_posting_id,
                 job_title: job.job_title,
                 company: employerProfile.companyname,
-                // company_logo: employerProfile.company_logo,
+                location: job.job_location,
                 company_logo: base64Image,
                 website: employerProfile.website,
                 main_office: employerProfile.office1,
