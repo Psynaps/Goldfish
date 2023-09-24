@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Box, VStack } from "@chakra-ui/react";
 import Question from './Question';
 import Answer from './Answer';
-const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect, onNonAnswerSelect }) => {
+const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQuestionSelect, onAnswerSelect }) => {
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions[0]);
 
     let displayedQuestions = questionBankQuestions;
@@ -30,6 +30,7 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                         isSelected={selectedQuestion === question}
                         onSelect={() => {
                             if (selectedQuestion !== question) {
+                                console.log('selected question', question);
                                 setSelectedQuestion(question);
                                 onQuestionSelect(question);
                             }
@@ -44,17 +45,17 @@ const QuestionBank = ({ questionBankQuestions, selectedCategory, searchTerm, onQ
                                     answer={answer}
                                     question={question}
                                     selectedAnswers={question.selectedAnswers}
-                                    selectedNonAnswers={question.selectedNonAnswers}
+                                    // selectedNonAnswers={question.selectedNonAnswers}
                                     onSelect={(answer, question, isSelected) => {
                                         setSelectedQuestion(question);
                                         onQuestionSelect(question);
                                         onAnswerSelect(answer, question, isSelected);
                                     }}
-                                    onNonSelect={(e, answer, question, isNonAnswer) => {
-                                        setSelectedQuestion(question);
-                                        onQuestionSelect(question);
-                                        onNonAnswerSelect(e, answer, question, isNonAnswer);
-                                    }}
+                                // onNonSelect={(e, answer, question, isNonAnswer) => {
+                                //     setSelectedQuestion(question);
+                                //     onQuestionSelect(question);
+                                //     onNonAnswerSelect(e, answer, question, isNonAnswer);
+                                // }}
                                 />
                             ))}
 

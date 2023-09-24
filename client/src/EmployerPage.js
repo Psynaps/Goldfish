@@ -6,9 +6,10 @@ import QuestionBank from './QuestionBank';
 import JobPostingBank from './JobPostingBank';
 import DropdownMenu from './DropdownMenu';
 import { LoginButton } from './LoginButton';
+import goldfishLogo from './images/logo.svg';
 import { questionsData as questionsDataOriginal } from './QuestionsData';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Spacer, useColorMode, useColorModeValue } from '@chakra-ui/react';
+import { Spinner, Box, Text, SimpleGrid, Button, Input, Heading, HStack, VStack, Flex, Textarea, Avatar, Spacer, Image, useColorMode, useColorModeValue } from '@chakra-ui/react';
 // import './App.css';
 
 // const deployURL = 'https://goldfishai.netlify.app';
@@ -24,7 +25,7 @@ function EmployerPage(returnURL) {
     const [questionBankQuestions, setQuestionBankQuestions] = useState([]);
     const [selectedQuestion, setSelectedQuestion] = useState(questionBankQuestions ? questionBankQuestions[0] : null);
     const [selectedAnswers, setSelectedAnswers] = useState([]);
-    const [selectedNonAnswers, setSelectedNonAnswers] = useState([]);
+    // const [selectedNonAnswers, setSelectedNonAnswers] = useState([]);
     const [selectedJobPostingQuestion, setSelectedJobPostingQuestion] = useState(null);
     const [jobPostingQuestions, setJobPostingQuestions] = useState([]);
     const [job_title, setjob_title] = useState('Job Title');
@@ -68,7 +69,7 @@ function EmployerPage(returnURL) {
                 job_title: job_title,
                 job_posting_id: job_posting_id,
                 jobData: JSON.stringify(jobPostingQuestions.reduce((acc, question) => {
-                    acc[question.questionID] = [question.selectedAnswers, question.selectedNonAnswers, parseInt(question.importance)];
+                    acc[question.questionID] = [question.selectedAnswers, parseInt(question.importance)];
                     return acc;
                 }, {}))
             })
@@ -159,11 +160,11 @@ function EmployerPage(returnURL) {
         const loadedQuestions = Object.keys(jobData).map(questionID => {
             const matchingQuestion = questionsData.find(question => question.questionID === questionID);
             const jobMatchingAnswers = jobData[questionID][0];
-            const jobMatchingNonAnswers = jobData[questionID][1];
+            // const jobMatchingNonAnswers = jobData[questionID][1];
             // console.log('matchingQuestion', matchingQuestion);
             // console.log('jobMatchingAnswers', jobMatchingAnswers);
             // console.log('jobMatchingNonAnswers', jobMatchingNonAnswers);
-            return { ...matchingQuestion, importance: (jobData[questionID][2] ? jobData[questionID][2] : 3), selectedAnswers: jobMatchingAnswers, selectedNonAnswers: jobMatchingNonAnswers };
+            return { ...matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 3), selectedAnswers: jobMatchingAnswers };
         });
         // console.log('loadedQuestions', loadedQuestions);
         setJobPostingQuestions(loadedQuestions);
@@ -188,25 +189,28 @@ function EmployerPage(returnURL) {
         return sortedQuestions;
     };
 
-    const addQuestionToJobPosting = (question) => {
+    const addQuestionToJobPosting = (question, selectedAnswers, importance) => {
         const newQuestion = {
             ...question,
-            importance: 3,
+            importance: importance, // 1 = required, 2 = nice to have
             selectedAnswers: question.selectedAnswers,
-            selectedNonAnswers: question.selectedNonAnswers,
+            // selectedNonAnswers: question.selectedNonAnswers,
         };
         console.log('adding question: ', newQuestion);
 
-        console.log('prev jobPostingQuestions', jobPostingQuestions);
+        // console.log('prev jobPostingQuestions', jobPostingQuestions);
         setJobPostingQuestions(prev => [...prev, newQuestion]);
         setQuestionBankQuestions(prev => prev.filter(item => item.questionID !== question.questionID));
         setSelectedQuestion(null);
     };
 
     const removeQuestionFromJobPosting = (question) => {
+        question.selectedAnswers = [];
+        // console.log('removing question: ', question);
         setQuestionBankQuestions(prev => {
             // const updatedList = [...prev, question.originalQuestion];
-            const updatedList = [...prev, { answers: question.answers, category: question.category, question: question.question, questionID: question.questionID, tags: question.tags }]; //could make it copy back the selected answers, but probably feels weird
+            const updatedList = [...prev, { ...question }];
+            // const updatedList = [...prev, { answers: question.answers, category: question.category, question: question.question, questionID: question.questionID, tags: question.tags, selectedAnswers: [], }]; //could make it copy back the selected answers, but probably feels weird
             // updatedList.sort((a, b) => a.questionID - b.questionID);
             return sortQuestionBankQuestions(updatedList);
         });
@@ -217,6 +221,11 @@ function EmployerPage(returnURL) {
 
     const handleJobPostingQuestionSelection = (question) => {
         console.log('selectedJobPostingQuestion', selectedJobPostingQuestion, question);
+        if (jobPostingQuestions.length <= 1) {
+            setSelectedJobPostingQuestion(question);
+            return;
+        }
+
         if (selectedJobPostingQuestion === question) {
             setSelectedJobPostingQuestion(null);
         } else {
@@ -225,6 +234,7 @@ function EmployerPage(returnURL) {
     };
 
 
+    /*
     const handleImportanceChange = (e, item) => {
         e.stopPropagation();
         setSelectedJobPostingQuestion(item);
@@ -236,6 +246,7 @@ function EmployerPage(returnURL) {
         ));
         // console.log(jobPostingQuestions);
     };
+    */
 
     const handleQuestionSelect = (question) => {
         setSelectedQuestion(question);
@@ -243,30 +254,18 @@ function EmployerPage(returnURL) {
 
 
     const handleQuestionBankAnswerSelect = (answer, question, isSelected) => {
-        // copy current state
         let updatedQuestionBankQuestions = [...questionBankQuestions];
-        // find the right question
         let q = updatedQuestionBankQuestions.find(q => q.questionID === question.questionID);
 
-        // initialize selectedAnswers and selectedNonAnswers arrays if they don't exist
-        q.selectedAnswers = q.selectedAnswers || [];
-        q.selectedNonAnswers = q.selectedNonAnswers || [];
-        // console.log('handleAnswerSelect isSelected', isSelected);
-
-        // if isSelected is true, remove the answer from the selectedAnswers list
-        // otherwise, add the answer to the selectedAnswers list
         if (isSelected) {
-            q.selectedAnswers = q.selectedAnswers.filter(a => a !== answer.answerID);
+            q.selectedAnswers = []; // Clears any existing selections
         } else {
-            q.selectedAnswers.push(answer.answerID);
-            // if this answer was a non-answer before, remove it from non-answers
-            q.selectedNonAnswers = q.selectedNonAnswers.filter(a => a !== answer.answerID);
+            q.selectedAnswers = [answer.answerID]; // Sets the selected answer
         }
-
-        // setSelectedQuestion(q);
         setQuestionBankQuestions(updatedQuestionBankQuestions);
     };
 
+    /*
     const handleQuestionBankNonAnswerSelect = (event, answer, question, isNonAnswer) => {
         // copy current state
         let updatedQuestionBankQuestions = [...questionBankQuestions];
@@ -290,51 +289,46 @@ function EmployerPage(returnURL) {
         // setSelectedQuestion(q);
         setQuestionBankQuestions(updatedQuestionBankQuestions);
     };
+    */
 
     const handleJobPostingAnswerSelect = (answer, question, isSelected) => {
+        if (isSelected) return;
+
         let updatedJobPostingQuestions = [...jobPostingQuestions];
-        // find the right question
+
         let q = updatedJobPostingQuestions.find(q => q.questionID === question.questionID);
 
-        // initialize selectedAnswers and selectedNonAnswers arrays if they don't exist
-        q.selectedAnswers = q.selectedAnswers || [];
-        q.selectedNonAnswers = q.selectedNonAnswers || [];
-        // console.log('handleAnswerSelect isSelected', isSelected);
+        // Prevents deselecting the already selected answer
 
-        // if isSelected is true, remove the answer from the selectedAnswers list
-        // otherwise, add the answer to the selectedAnswers list
-        if (isSelected) {
-            q.selectedAnswers = q.selectedAnswers.filter(a => a !== answer.answerID);
-        } else {
-            q.selectedAnswers.push(answer.answerID);
-            // if this answer was a non-answer before, remove it from non-answers
-            q.selectedNonAnswers = q.selectedNonAnswers.filter(a => a !== answer.answerID);
-        }
+        // Sets the selected answer
+        q.selectedAnswers = [answer.answerID];
 
-        // setSelectedQuestion(q);
         setJobPostingQuestions(updatedJobPostingQuestions);
     };
 
-    const handleJobPostingNonAnswerSelect = (event, answer, question, isNonAnswer) => {
-        let updatedJobPostingQuestions = [...jobPostingQuestions];
-        // find the right question
-        let q = updatedJobPostingQuestions.find(q => q.questionID === question.questionID);
 
-        // initialize selectedAnswers and selectedNonAnswers arrays if they don't exist
-        q.selectedAnswers = q.selectedAnswers || [];
-        q.selectedNonAnswers = q.selectedNonAnswers || [];
-
-        // if isNonAnswer is true, remove the answer from the selectedNonAnswers list
-        // otherwise, add the answer to the selectedNonAnswers list
-        if (isNonAnswer) {
-            q.selectedNonAnswers = q.selectedNonAnswers.filter(a => a !== answer.answerID);
-        } else {
-            q.selectedNonAnswers.push(answer.answerID);
-            // if this answer was a selected answer before, remove it from answers
-            q.selectedAnswers = q.selectedAnswers.filter(a => a !== answer.answerID);
-        }
-        setJobPostingQuestions(updatedJobPostingQuestions);
-    };
+    /*
+        const handleJobPostingNonAnswerSelect = (event, answer, question, isNonAnswer) => {
+            let updatedJobPostingQuestions = [...jobPostingQuestions];
+            // find the right question
+            let q = updatedJobPostingQuestions.find(q => q.questionID === question.questionID);
+    
+            // initialize selectedAnswers and selectedNonAnswers arrays if they don't exist
+            q.selectedAnswers = q.selectedAnswers || [];
+            q.selectedNonAnswers = q.selectedNonAnswers || [];
+    
+            // if isNonAnswer is true, remove the answer from the selectedNonAnswers list
+            // otherwise, add the answer to the selectedNonAnswers list
+            if (isNonAnswer) {
+                q.selectedNonAnswers = q.selectedNonAnswers.filter(a => a !== answer.answerID);
+            } else {
+                q.selectedNonAnswers.push(answer.answerID);
+                // if this answer was a selected answer before, remove it from answers
+                q.selectedAnswers = q.selectedAnswers.filter(a => a !== answer.answerID);
+            }
+            setJobPostingQuestions(updatedJobPostingQuestions);
+        };
+        */
 
 
 
@@ -365,7 +359,7 @@ function EmployerPage(returnURL) {
             setjob_title('');
             // setCompany('myspace');
             setSelectedAnswers([]);
-            setSelectedNonAnswers([]);
+            // setSelectedNonAnswers([]);
             setSelectedQuestion(null);
             setSelectedJobPostingQuestion(null);
             setSelectedCategory(null);
@@ -399,28 +393,54 @@ function EmployerPage(returnURL) {
 
     return (
         <div className='Employer'>
-            <Box bg='#1398ff' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem'>
-                <Box display='flex' alignItems='baseline' p={0} >
-                    <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
-                        <Text fontSize={{ base: '4xl', md: '5xl', lg: '6xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
-                        <Text ml={3} fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
-                    </ChakraLink>
-                </Box>
-                <HStack spacing={5} alignItems='top'>
-                    {isLoading ? <Spinner /> :
-                        <>
-                            {(isAuthenticated) ?
-                                <VStack spacing={1} alignItems='center'>
-                                    <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} />
-                                    <Box bg='#FAD156' borderRadius='full' px={2}>
-                                        <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
-                                    </Box>
-                                </VStack>
-                                : <LoginButton />}
-                            <DropdownMenu returnURL={window.location.href} />
-                        </>
-                    }
-                </HStack>
+            <Box w='100%' background="linear-gradient(270deg, rgba(26,38,95,255) 50%, rgba(30,85,93,255) 90.0%)"
+                borderBottomWidth="1px" borderStyle='solid' borderColor='white'>
+                <Flex
+                    paddingX="64px"
+                    paddingY="32px"
+                    direction="row"
+                    justify="flex-start"
+                    align="flex-end"
+                    overflow="hidden"
+                    height='35%'
+                    alignSelf="stretch"
+                    width='100%'
+                    justifyContent='space-between'
+                    alignItems='baseline'
+
+                >
+
+                    <HStack alignItems='baseline' p={0} >
+                        <Image
+                            borderRadius='25%'
+                            boxSize='64px'
+                            borderColor='white'
+                            borderWidth='3px'
+                            // border='10px solid white'
+                            borderStyle='solid'
+                            src={goldfishLogo}
+                            alt='Goldfish Ai Logo'
+                        />
+                        <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
+                            <Heading as='h2' size='lg' fontFamily='Poppins' color='white'>Goldfish AI</Heading>
+                        </ChakraLink>
+                    </HStack>
+                    <HStack spacing={5} alignItems='top'>
+                        {isLoading ? <Spinner /> :
+                            <>
+                                {(isAuthenticated) ?
+                                    <VStack spacing={1} alignItems='center'>
+                                        <Avatar src={user.picture} name={user.name} alt='Profile' borderRadius='full' boxSize={45} />
+                                        <Box bg='#FAD156' borderRadius='full' px={2}>
+                                            <Text fontSize={{ base: 'sm', md: 'md', lg: 'lg' }} color='black'>{user.name}</Text>
+                                        </Box>
+                                    </VStack>
+                                    : <LoginButton />}
+                                <DropdownMenu returnURL={window.location.href} />
+                            </>
+                        }
+                    </HStack>
+                </Flex>
             </Box>
             <VStack spacing='1vh' align='stretch'>
                 <Box p='20px' w='100%' bg='#f5f5f5' background='#1a202c' >
@@ -471,23 +491,28 @@ function EmployerPage(returnURL) {
                         p={5}
                     >
                         <HStack justifyContent='space-between' w='100%'>
-                            <Text fontSize='2xl'>Question Bank</Text>
-                            <Button isDisabled={!canAddQuestion} width='auto' colorScheme={!canAddQuestion ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, selectedNonAnswers)}>
-                                <Text p={1}>Add</Text>
-                            </Button>
+                            <Text fontSize='2xl'>Question Select</Text>
+                            <HStack>
+                                <Button isDisabled={!canAddQuestion} width='auto' colorScheme={!canAddQuestion ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, 1)}>
+                                    <Text p={1}>Nice to Have</Text>
+                                </Button>
+                                <Button isDisabled={!canAddQuestion} width='auto' colorScheme={!canAddQuestion ? 'gray' : 'blue'} onClick={() => addQuestionToJobPosting(selectedQuestion, selectedAnswers, 2)}>
+                                    <Text p={1}>Important</Text>
+                                </Button>
+                            </HStack>
                         </HStack>
                         <QuestionBank
+                            questionBankQuestions={questionBankQuestions}
                             selectedCategory={selectedCategory}
                             searchTerm={searchTerm}
                             onQuestionSelect={handleQuestionSelect}
                             onAnswerSelect={handleQuestionBankAnswerSelect}
-                            onNonAnswerSelect={handleQuestionBankNonAnswerSelect}
-                            questionBankQuestions={questionBankQuestions}
+                        // onNonAnswerSelect={handleQuestionBankNonAnswerSelect}
                         />
                     </VStack>
 
                     <VStack
-                        spacing='5vh'
+                        // spacing='5vh'
                         alignItems='start'
                         w={{ base: '100%', md: '48%' }}
                         mx='2vw'
@@ -525,8 +550,8 @@ function EmployerPage(returnURL) {
                         <JobPostingBank
                             onQuestionSelect={handleJobPostingQuestionSelection}
                             onAnswerSelect={handleJobPostingAnswerSelect}
-                            onNonAnswerSelect={handleJobPostingNonAnswerSelect}
-                            onImportanceChange={handleImportanceChange}
+                            // onNonAnswerSelect={handleJobPostingNonAnswerSelect}
+                            // onImportanceChange={handleImportanceChange}
                             jobPostingQuestions={jobPostingQuestions}
                         />
                         {(jobPostingQuestions.length > 0 && isAuthenticated && job_title === '') && <Button isDisabled colorScheme='blue' width='auto'>

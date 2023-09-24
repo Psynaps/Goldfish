@@ -27,9 +27,9 @@ const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen, i
             onClick={handleClick}
             borderWidth={isSelected ? "4px" : "3px"}
             borderColor={isSelected ? (isQuestionBankQuestion ? "blue.500" : 'orange.500') : "gray.200"}
-            borderRadius="md"
+            borderRadius="2xl"
             p={4}
-            _hover={{ bg: "blue.900" }}
+            // _hover={{ bg: "blue.500" }}
             cursor="pointer"
         >
             <Collapsible

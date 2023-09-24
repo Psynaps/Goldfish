@@ -97,10 +97,10 @@ app.post('/api/postJob', async (req, res) => {
         // Insert or update the questions
         console.log(JSON.stringify(jobDataObj));
         for (const question_id in jobDataObj) {
-            const [answer_ids, nonanswer_ids, importance] = jobDataObj[question_id];
+            const [answer_ids, importance] = jobDataObj[question_id];
             query = {
-                text: 'INSERT INTO job_posting_questions (job_posting_id, question_id, answer_ids, nonanswer_ids, importance) VALUES ($1, $2, $3, $4, $5)',
-                values: [job_posting_id, question_id, answer_ids, nonanswer_ids, importance],
+                text: 'INSERT INTO job_posting_questions (job_posting_id, question_id, answer_ids, importance) VALUES ($1, $2, $3, $4)',
+                values: [job_posting_id, question_id, answer_ids, importance],
             };
             await client.query(query);
         }
@@ -147,7 +147,7 @@ app.get('/api/getJob', async (req, res) => {
 
         // Get question & answer pairs for this job posting
         const jobQuestionsQuery = {
-            text: 'SELECT question_id, answer_ids, nonanswer_ids, importance FROM job_posting_questions WHERE job_posting_id = $1',
+            text: 'SELECT question_id, answer_ids, importance FROM job_posting_questions WHERE job_posting_id = $1',
             values: [job_posting_id],
         };
         const jobQuestionsResult = await client.query(jobQuestionsQuery);
@@ -157,7 +157,7 @@ app.get('/api/getJob', async (req, res) => {
             //     nonanswer_ids: curr.nonanswer_ids,
             //     importance: curr.importance
             // };
-            acc[curr.question_id] = [curr.answer_ids, curr.nonanswer_ids, curr.importance];
+            acc[curr.question_id] = [curr.answer_ids, curr.importance];
             return acc;
         }, {});
 
