@@ -47,7 +47,7 @@ export const questionsData = [
       },
       {
         "answerID": 4,
-        "answer": "I'm in the later rounds of one or more interview process"
+        "answer": "I'm in the later rounds of one or more interview processes"
       }
     ],
     "employerQuestion": "N/A",
@@ -75,7 +75,7 @@ export const questionsData = [
       },
       {
         "answerID": 3,
-        "answer": "~A month"
+        "answer": "~1 month"
       },
       {
         "answerID": 4,
@@ -188,7 +188,7 @@ export const questionsData = [
     "tags": [
       "experience"
     ],
-    "question": "What type of law practice do you have the most experience supporting?",
+    "question": "Would you say that you have a particular practice specialization area? ",
     "answers": [
       {
         "answerID": 1,
@@ -330,84 +330,6 @@ export const questionsData = [
   {
     "questionID": "6",
     "order": -1,
-    "category": "Legal Experience",
-    "tags": [
-      ""
-    ],
-    "question": "Assuming you have a practice focus, how many years of expereince do you have in that niche? ",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "I don't have a specific focus"
-      },
-      {
-        "answerID": 2,
-        "answer": "<1 year"
-      },
-      {
-        "answerID": 3,
-        "answer": "1 - 2 years"
-      },
-      {
-        "answerID": 4,
-        "answer": "3 - 4 years"
-      },
-      {
-        "answerID": 5,
-        "answer": "5 - 6 years"
-      },
-      {
-        "answerID": 6,
-        "answer": "7 - 8 years"
-      },
-      {
-        "answerID": 7,
-        "answer": "8 - 10 years"
-      },
-      {
-        "answerID": 8,
-        "answer": "10+ years"
-      }
-    ],
-    "employerQuestion": "Assuming you prefer experience in a specific practice area, how many years of expereince do you want them to have in that niche? ",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No specialization area required"
-      },
-      {
-        "answerID": 2,
-        "answer": "<1 year"
-      },
-      {
-        "answerID": 3,
-        "answer": "1 - 2 years"
-      },
-      {
-        "answerID": 4,
-        "answer": "3 - 4 years"
-      },
-      {
-        "answerID": 5,
-        "answer": "5 - 6 years"
-      },
-      {
-        "answerID": 6,
-        "answer": "7 - 8 years"
-      },
-      {
-        "answerID": 7,
-        "answer": "8 - 10 years"
-      },
-      {
-        "answerID": 8,
-        "answer": "10+ years"
-      }
-    ]
-  },
-  {
-    "questionID": "7",
-    "order": -1,
     "category": "HR Requirements",
     "tags": [
       "firm size"
@@ -468,7 +390,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "8",
+    "questionID": "7",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -534,7 +456,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "9",
+    "questionID": "8",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -548,7 +470,7 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Ful Time, Hourly"
+        "answer": "Full Time, Hourly"
       },
       {
         "answerID": 3,
@@ -580,7 +502,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "10",
+    "questionID": "9",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -634,7 +556,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "11",
+    "questionID": "10",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -644,7 +566,7 @@ export const questionsData = [
     "answers": [
       {
         "answerID": 1,
-        "answer": "I am not interested in contract-based postions"
+        "answer": "I am not interested in contract-based positions"
       },
       {
         "answerID": 2,
@@ -700,7 +622,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "12",
+    "questionID": "11",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -710,7 +632,7 @@ export const questionsData = [
     "answers": [
       {
         "answerID": 1,
-        "answer": "I am not interested in salaried postions"
+        "answer": "I am not interested in salaried positions"
       },
       {
         "answerID": 2,
@@ -778,7 +700,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "13",
+    "questionID": "12",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -826,7 +748,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "14",
+    "questionID": "13",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -997,7 +919,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "15",
+    "questionID": "14",
     "order": -1,
     "category": "HR Requirements",
     "tags": [
@@ -1028,294 +950,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "16",
-    "order": -1,
-    "category": "Legal Experience",
-    "tags": [
-      "multi-district",
-      "litigation"
-    ],
-    "question": "Have you worked on multi-district litigation cases?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have been involved in one multi-district litigation case, but in a limited capacity (e.g., basic document preparation)"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I have worked on multiple multi-district litigation cases, taking on responsibilities like legal research and document review"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I have extensive experience with multi-district litigation, including roles in case management, client communication, and court proceedings"
-      }
-    ],
-    "employerQuestion": "What level of experience in multi-district litigation cases are you seeking in a candidate?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Candidate involved in at least one multi-district litigation case in a limited capacity (e.g., basic document preparation)"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: candidate has worked on multiple multi-district litigation cases, responsible for legal research and document review"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: candidate has extensive experience in multi-district litigation, including roles in case management, client communication, and court proceedings"
-      }
-    ]
-  },
-  {
-    "questionID": "17",
-    "order": -1,
-    "category": "Legal Experience",
-    "tags": [
-      "legal procedure",
-      "federal",
-      "civil procedure"
-    ],
-    "question": "How familiar are you with legal procedures and regulations at the federal level?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Assisted in 1-2 federal cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Directly managed 3-5 federal cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Managed 6 or more federal cases, including case strategy and court representations"
-      }
-    ],
-    "employerQuestion": "What familiarity with federal-level legal procedures and regulations are you seeking in a candidate?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Seeking a candidate who has assisted in 1-2 federal cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: candidate has directly managed 3-5 federal cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Candidate has managed 6 or more federal cases, including case strategy and court representations"
-      }
-    ]
-  },
-  {
-    "questionID": "18",
-    "order": -1,
-    "category": "Legal Experience",
-    "tags": [
-      "legal procedure",
-      "state",
-      "civil procedure"
-    ],
-    "question": "How familiar are you with legal procedures and regulations at the state level?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Assisted in 1-2 state cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Directly managed 3-5 state cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Managed 6 or more state cases, including case strategy and court representations"
-      }
-    ],
-    "employerQuestion": "What familiarity with state-level legal procedures and regulations are you seeking in a candidate?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Seeking a candidate who has assisted in 1-2 state cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: candidate has directly managed 3-5 state cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Candidate has managed 6 or more state cases, including case strategy and court representations"
-      }
-    ]
-  },
-  {
-    "questionID": "19",
-    "order": -1,
-    "category": "Legal Experience",
-    "tags": [
-      "legal procedure",
-      "local",
-      "county",
-      "civil procedure"
-    ],
-    "question": "How familiar are you with legal procedures and regulations at the local level (e.g., municipal or county)?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Assisted in 1-2 local cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Directly managed 3-5 local cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Managed 6 or more local cases, including case strategy and court representations"
-      }
-    ],
-    "employerQuestion": "What familiarity with local-level (e.g., municipal or county) legal procedures and regulations are you seeking in a candidate?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Seeking a candidate who has assisted in 1-2 local cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: candidate has directly managed 3-5 local cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Candidate has managed 6 or more local cases, including case strategy and court representations"
-      }
-    ]
-  },
-  {
-    "questionID": "20",
-    "order": -1,
-    "category": "Legal Experience",
-    "tags": [
-      "legal procedure",
-      "international",
-      "civil procedure"
-    ],
-    "question": "How familiar are you with legal procedures and regulations involving international jurisdictions?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Assisted in 1-2 international cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Directly managed 3-5 international cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Managed 6 or more international cases, including case strategy and negotiations"
-      }
-    ],
-    "employerQuestion": "What familiarity with international jurisdiction legal procedures and regulations are you seeking in a candidate?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Seeking a candidate who has assisted in 1-2 international cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: candidate has directly managed 3-5 international cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Candidate has managed 6 or more international cases, including case strategy and negotiations"
-      }
-    ]
-  },
-  {
-    "questionID": "21",
-    "order": -1,
-    "category": "Technical Skills",
-    "tags": [
-      "SQL",
-      "querying"
-    ],
-    "question": "How would you rate your SQL querying skills?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I can perform basic SELECT queries"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I can JOIN tables and apply WHERE conditions"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Can write complex queries including sub-queries and transactions"
-      }
-    ],
-    "employerQuestion": "What level of SQL querying skills do you require in a candidate?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Assisted in 1-2 international cases, mainly data entry and document organization"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: candidate has managed 3-5 international cases, responsible for legal research and filings"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Candidate has managed 6 or more international cases, including case strategy and negotiations"
-      }
-    ]
-  },
-  {
-    "questionID": "22",
+    "questionID": "15",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1363,7 +998,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "23",
+    "questionID": "16",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1409,7 +1044,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "24",
+    "questionID": "17",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1456,7 +1091,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "25",
+    "questionID": "18",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1504,7 +1139,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "26",
+    "questionID": "19",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1550,7 +1185,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "27",
+    "questionID": "20",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1598,7 +1233,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "28",
+    "questionID": "21",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1646,7 +1281,7 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "29",
+    "questionID": "22",
     "order": -1,
     "category": "Technical Skills",
     "tags": [
@@ -1693,269 +1328,34 @@ export const questionsData = [
     ]
   },
   {
-    "questionID": "30",
+    "questionID": "23",
     "order": -1,
-    "category": "Technical Skills",
-    "tags": [
-      "data analysis",
-      "tableau",
-      "statistics",
-      "data science"
-    ],
-    "question": "How would you evaluate your skills in data analysis within the legal sector?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have some experience with data analysis tools like Excel but not in a legal context"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I have used specialized data analysis software (e.g., R, Tableau) for legal tasks"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I can perform complex data analysis, including predictive modeling, in a legal context"
-      }
-    ],
-    "employerQuestion": "What level of expertise in data analysis within the legal sector is necessary for this position?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Has some experience with data analysis tools like Excel but not in a legal context"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has used specialized data analysis software (e.g., R, Tableau) for legal tasks"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Can perform complex data analysis, including predictive modeling, in a legal context"
-      }
-    ]
-  },
-  {
-    "questionID": "31",
-    "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "document management"
-    ],
-    "question": "How would you rate your proficiency in document management?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have basic experience in organizing and storing legal documents"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've managed complex document libraries and facilitated access controls"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I've set up and administered document management systems, including tagging, versioning, and automation"
-      }
-    ],
-    "employerQuestion": "What level of experience should a candidate have with document management?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Has basic experience in organizing and storing legal documents"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has managed complex document libraries and facilitated access controls"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Has set up and administered document management systems, including tagging, versioning, and automation"
-      }
-    ]
-  },
-  {
-    "questionID": "32",
-    "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "research",
-      "Lexis Nexis",
-      "Westlaw"
-    ],
-    "question": "How would you rate your experience with legal research workflows? ",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No experience"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I have performed simple case look-ups"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've conducted legal research involving case law, statutes, and secondary sources"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I've led comprehensive legal research projects, including Boolean searches, citation checking, and drafting memoranda"
-      }
-    ],
-    "employerQuestion": "What level of experience with legal research databases like LexisNexis or Westlaw is needed?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Has performed simple case look-ups"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has conducted legal research involving case law, statutes, and secondary sources"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Has led comprehensive legal research projects, including Boolean searches, citation checking, and drafting memoranda"
-      }
-    ]
-  },
-  {
-    "questionID": "33",
-    "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "case management"
-    ],
-    "question": "How familiar are you with case management workflows?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I can input case details into a management system"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I can manage schedules, deadlines, and associated documentation"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I can coordinate all aspects of case management, including client communication and court filings"
-      }
-    ],
-    "employerQuestion": "How familiar should the candidate be with case management workflows?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Can input case details into a management system"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Can manage schedules, deadlines, and associated documentation"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Can coordinate all aspects of case management, including client communication and court filings"
-      }
-    ]
-  },
-  {
-    "questionID": "34",
-    "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "e-discovery"
-    ],
-    "question": "How would you evaluate your understanding of e-discovery workflows?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I've worked on simple e-discovery projects involving basic search and collection"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've handled e-discovery projects involving multiple data types and custodians"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I've managed end-to-end e-discovery, including identification, collection, processing, and review"
-      }
-    ],
-    "employerQuestion": "What level of understanding is needed for e-discovery workflows?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Has worked on simple e-discovery projects involving basic search and collection"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has handled e-discovery projects involving multiple data types and custodians"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Has managed end-to-end e-discovery, including identification, collection, processing, and review"
-      }
-    ]
-  },
-  {
-    "questionID": "35",
-    "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
     "tags": [
       "billing",
       "time",
       "billing management"
     ],
-    "question": "What is your proficiency level in time and billing management?",
+    "question": "What is your proficiency level in using time and billing software in a legal setting?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I can track time and input data into a billing system"
+        "answer": "Beginner: Used basic features of time and billing software under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I can manage invoices, monitor budgets, and perform basic financial reporting"
+        "answer": "Intermediate: Comfortable using most features for billing and time tracking without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I've optimized billing workflows, integrated with accounting systems, and have a deep understanding of legal billing codes"
+        "answer": "Advanced: Expert in time and billing software, capable of training others and streamlining billing processes"
       }
     ],
-    "employerQuestion": "How proficient does the candidate need to be in time and billing management?",
+    "employerQuestion": "What level of expertise should the candidate have in using time and billing software in a legal setting?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -1963,45 +1363,45 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Can track time and input data into a billing system"
+        "answer": "The candidate has used basic features of time and billing software under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Can manage invoices, monitor budgets, and perform basic financial reporting"
+        "answer": "The candidate is comfortable using most features for billing and time tracking without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has optimized billing workflows, integrated with accounting systems, and has a deep understanding of legal billing codes"
+        "answer": "The candidate is an expert in time and billing software, capable of training others and optimizing billing processes"
       }
     ]
   },
   {
-    "questionID": "36",
+    "questionID": "24",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
     "tags": [
       "contract management"
     ],
-    "question": "How would you rate your experience with contract management workflows?",
+    "question": "How would you rate your experience with managing contracts, including drafting, reviewing, and storage?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I've assisted in the drafting and review of basic contracts"
+        "answer": "Beginner: Have assisted in drafting or reviewing contracts under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've managed contract lifecycles from initiation through execution"
+        "answer": "Intermediate: Can independently manage contracts, including drafting, reviewing, and storage"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I've designed and implemented contract management systems, including automated reminders and compliance checks"
+        "answer": "Advanced: Expert in contract management, can create templates and streamline contract workflows"
       }
     ],
-    "employerQuestion": "What level of experience is required in contract management workflows?",
+    "employerQuestion": "What level of experience should the candidate have with managing contracts, including drafting, reviewing, and storage?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2009,45 +1409,45 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has assisted in the drafting and review of basic contracts"
+        "answer": "The candidate has some experience in contract management but needs supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has managed contract lifecycles from initiation through execution"
+        "answer": "The candidate can independently manage contracts, including drafting, reviewing, and storage"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has designed and implemented contract management systems, including automated reminders and compliance checks"
+        "answer": "The candidate is an expert in contract management, capable of streamlining processes and providing strategic insights"
       }
     ]
   },
   {
-    "questionID": "37",
+    "questionID": "25",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
     "tags": [
       "compleance tracking"
     ],
-    "question": "How proficient are you with compliance tracking workflows?",
+    "question": "How proficient are you in using compliance tracking software in a legal context?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I've maintained basic records for compliance purposes"
+        "answer": "Beginner: Have used basic features under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've managed multiple compliance initiatives and reported on status"
+        "answer": "Intermediate: Comfortable using compliance software to track and report issues"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I've developed and implemented compliance programs, including policy development and training"
+        "answer": "Advanced: Expert in compliance tracking software, can customize tracking and reporting features"
       }
     ],
-    "employerQuestion": "How proficient should the candidate be in compliance tracking?",
+    "employerQuestion": "How proficient should the candidate be in using compliance tracking software in a legal context?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2055,120 +1455,28 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has maintained basic records for compliance purposes"
+        "answer": "The candidate has used compliance tracking software under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has managed multiple compliance initiatives and reported on status"
+        "answer": "The candidate is comfortable with using compliance tracking software for routine tasks without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has developed and implemented compliance programs, including policy development and training"
+        "answer": "The candidate is highly proficient, able to optimize compliance workflows and train others on best practices"
       }
     ]
   },
   {
-    "questionID": "38",
+    "questionID": "26",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
     "tags": [
       "evidence management",
       "evidence rooms",
       "chain of custody"
     ],
-    "question": "How proficient are you in using software for evidence management?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I can log evidence and manage storage"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've coordinated chain-of-custody procedures and managed digital evidence"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I've overseen complex evidence rooms, with specialized knowledge in preserving and retrieving evidence"
-      }
-    ],
-    "employerQuestion": "What level of expertise is needed in using software for evidence management?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Can log evidence and manage storage"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has coordinated chain-of-custody procedures and managed digital evidence"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Has overseen complex evidence rooms, with specialized knowledge in preserving and retrieving evidence"
-      }
-    ]
-  },
-  {
-    "questionID": "39",
-    "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "patent research"
-    ],
-    "question": "How familiar are you with patent and intellectual property workflows?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Exposure"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: I've conducted basic searches for existing patents"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: I've managed patent applications, including drafting and submission"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: I've overseen IP portfolios, including patent applications, renewals, and oppositions"
-      }
-    ],
-    "employerQuestion": "How familiar should the candidate be with patent and intelectual property workflows?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Has conducted basic searches for existing patents"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Has managed patent applications, including drafting and submission"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Has overseen IP portfolios, including patent applications, renewals, and oppositions"
-      }
-    ]
-  },
-  {
-    "questionID": "40",
-    "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "OCR"
-    ],
-    "question": "How experienced are you with using OCR software?",
+    "question": "How proficient are you in using evidence management software?",
     "answers": [
       {
         "answerID": 1,
@@ -2176,18 +1484,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Can perform basic text recognition"
+        "answer": "Beginner: Have uploaded and tagged evidence under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Can edit and convert OCR files"
+        "answer": "Intermediate: Can manage digital and physical evidence using software without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Can automate OCR processes for large-scale document handling"
+        "answer": "Advanced: Expert in evidence management software, can train others and customize workflows"
       }
     ],
-    "employerQuestion": "Is experience with OCR software a requirement for this position?",
+    "employerQuestion": "How proficient should the candidate be in using evidence management software?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2195,27 +1503,119 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Can perform basic text recognition"
+        "answer": "The candidate has basic experience with evidence management software under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Can edit and convert OCR files"
+        "answer": "The candidate can manage and organize evidence using software without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Can automate OCR processes for large-scale document handling"
+        "answer": "The candidate is an expert in evidence management software, able to implement advanced features and optimize the evidence management process"
       }
     ]
   },
   {
-    "questionID": "41",
+    "questionID": "27",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
+    "tags": [
+      "patent research"
+    ],
+    "question": "How familiar are you with patent application and intellectual property registration processes?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have assisted in preparing patent or IP applications under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Capable of managing patent applications or IP registrations independently"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert in patent and IP processes, capable of advising on strategy and disputes"
+      }
+    ],
+    "employerQuestion": "How familiar should the candidate be with patent application and intellectual property registration processes?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "The candidate has basic understanding but requires supervision for patent and IP tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "The candidate can independently handle routine patent and intellectual property registration tasks"
+      },
+      {
+        "answerID": 4,
+        "answer": "The candidate is highly skilled in patent and IP processes, able to manage complex registrations and provide strategic advice on intellectual property issues"
+      }
+    ]
+  },
+  {
+    "questionID": "28",
+    "order": -1,
+    "category": "Software Workflows",
+    "tags": [
+      "OCR"
+    ],
+    "question": "How experienced are you with using Optical Character Recognition (OCR) software for legal tasks?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Used OCR for simple document conversions under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Regularly use OCR for document conversions and searches without assistance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert in OCR, capable of managing large-scale projects and training others"
+      }
+    ],
+    "employerQuestion": "What level of expertise should the candidate have with using Optical Character Recognition (OCR) software for legal tasks?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should have used OCR for basic document conversions"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should regularly use OCR for document conversions and searches"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Should be able to manage large-scale OCR projects and train others"
+      }
+    ]
+  },
+  {
+    "questionID": "29",
+    "order": -1,
+    "category": "Software Workflows",
     "tags": [
       "CRM",
       "client relationship"
     ],
-    "question": "What is your experience with CRM workflows (client relationship management software) in a legal context?",
+    "question": "What is your experience with using Client Relationship Management (CRM) software in a legal context?",
     "answers": [
       {
         "answerID": 1,
@@ -2223,18 +1623,18 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: I've managed client information and basic communications"
+        "answer": "Beginner: Used CRM for basic client interactions under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: I've tracked client interactions, coordinated meetings, and managed opportunities"
+        "answer": "Intermediate: Comfortable using CRM for various client-related tasks, including case tracking"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: I've implemented CRM systems tailored to the needs of a legal practice, including customization and reporting"
+        "answer": "Advanced: Expert in CRM for complex legal workflows, capable of customization and optimization"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with CRM workflows (client relationship management software) in a legal context?",
+    "employerQuestion": "How familiar should the candidate be with using Client Relationship Management (CRM) software in a legal context?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2242,22 +1642,22 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has managed client information and basic communications"
+        "answer": "Beginner: Should have used CRM for basic client interactions"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has tracked client interactions, coordinated meetings, and managed opportunities"
+        "answer": "Intermediate: Should be comfortable using CRM for various client-related tasks"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has implemented CRM systems tailored to the needs of a legal practice, including customization and reporting"
+        "answer": "Expert: Should be an expert in CRM for complex legal workflows, capable of customization and optimization"
       }
     ]
   },
   {
-    "questionID": "42",
+    "questionID": "30",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
     "tags": [
       "legal citations",
       "citation"
@@ -2266,22 +1666,22 @@ export const questionsData = [
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Never used legal citation tools"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Less than a year of using legal citation tools"
+        "answer": "Beginner: Familiar with basics but work under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: 1-2 years of moderate usage of legal citation tools"
+        "answer": "Intermediate: Comfortable with legal citation tools, use them regularly without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: 3 or more years of extensive usage and familiarity with legal citation tools"
+        "answer": "Advanced: Expert in legal citation, capable of dealing with complex requirements and training others"
       }
     ],
-    "employerQuestion": "What level of proficiency should the candidate have in legal citation management?",
+    "employerQuestion": "What level of proficiency in legal citation management should the candidate possess?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2289,68 +1689,22 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Less than a year of using legal citation tools"
+        "answer": "Beginner: Should be familiar with the basics of legal citation"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: 1-2 years of moderate usage of legal citation tools"
+        "answer": "Intermediate: Should be comfortable with legal citation tools and use them regularly"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: 3 or more years of extensive usage and familiarity with legal citation tools"
+        "answer": "Expert: Should be able to train others and ensure that citation practices meet industry standards"
       }
     ]
   },
   {
-    "questionID": "43",
+    "questionID": "31",
     "order": -1,
-    "category": "Platform Workflows",
-    "tags": [
-      "e-filings"
-    ],
-    "question": "How familiar are you with managing e-filings in various courts?",
-    "answers": [
-      {
-        "answerID": 1,
-        "answer": "No Exposure: Never handled e-filings"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Never handled e-filings"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Have managed e-filings occasionally"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Regularly manage e-filings and understand specific court requirements"
-      }
-    ],
-    "employerQuestion": "How familiar should the candidate be with managing e-filings in various courts?",
-    "employerAnswers": [
-      {
-        "answerID": 1,
-        "answer": "No exposure required"
-      },
-      {
-        "answerID": 2,
-        "answer": "Beginner: Should have minimal experience with e-filings"
-      },
-      {
-        "answerID": 3,
-        "answer": "Intermediate: Should have managed e-filings occasionally"
-      },
-      {
-        "answerID": 4,
-        "answer": "Advanced: Should regularly manage e-filings and understand specific court requirements"
-      }
-    ]
-  },
-  {
-    "questionID": "44",
-    "order": -1,
-    "category": "Platform Workflows",
+    "category": "Software Workflows",
     "tags": [
       "deadline tracking",
       "calendar",
@@ -2364,22 +1718,22 @@ export const questionsData = [
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Never involved in calendaring or deadline tracking"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Rarely involved in calendaring or deadline tracking"
+        "answer": "Beginner: Assisted in maintaining a legal calendar under close supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Often handle calendaring and deadline tracking but not the sole person responsible"
+        "answer": "Intermediate: Regularly manage calendars and deadlines for multiple cases without assistance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Primary person responsible for all calendaring and deadline tracking"
+        "answer": "Advanced: Expert in calendaring and deadline management, capable of managing complex schedules"
       }
     ],
-    "employerQuestion": "How experienced should the candidate be in calendaring and deadline tracking in a legal context?",
+    "employerQuestion": "What level of expertise should the candidate have in calendaring and deadline tracking in a legal context?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2387,45 +1741,648 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has rarely involved in calendaring or deadline tracking"
+        "answer": "Beginner: Should be able to track basic deadlines and appointments"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has handled calendaring and deadline tracking but was not the sole person responsible"
+        "answer": "Intermediate: Should be able to manage multiple calendars and critical deadlines without supervision"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has been primary person responsible for all calendaring and deadline tracking"
+        "answer": "Expert: Should be proficient in using advanced calendaring software and can train others"
+      }
+    ]
+  },
+  {
+    "questionID": "38",
+    "order": -1,
+    "category": "Software Workflows",
+    "tags": [
+      "confidentialty",
+      "privelage"
+    ],
+    "question": "How would you evaluate your understanding of protocols for maintaining client confidentiality and privilege in a legal setting?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Understand basic principles but need supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Routinely maintain client confidentiality and privilege without supervision"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Deeply familiar with all protocols and have trained others in maintaining client confidentiality"
+      }
+    ],
+    "employerQuestion": "What level of understanding do you expect for protocols for maintaining client confidentiality and privilege in a legal setting?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should understand basic principles but may need supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should routinely maintain client confidentiality and privilege without supervision"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Should be deeply familiar with all protocols and be capable of training others"
+      }
+    ]
+  },
+  {
+    "questionID": "33",
+    "order": -1,
+    "category": "Software Workflows",
+    "tags": [
+      "conflict checks",
+      "risk",
+      "risk assesments"
+    ],
+    "question": "How proficient are you in conducting risk assessments and conflict checks using software?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have performed simple conflict checks under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can independently perform complex conflict checks and risk assessments"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Highly skilled in using advanced software for risk and conflict assessment, and can train others"
+      }
+    ],
+    "employerQuestion": "What level of proficiency do you expect in conducting risk assessments and conflict checks using software?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should perform simple conflict checks under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should independently perform complex conflict checks and risk assessments"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Should be highly skilled in using advanced software for risk and conflict assessment"
+      }
+    ]
+  },
+  {
+    "questionID": "34",
+    "order": -1,
+    "category": "Software Workflows",
+    "tags": [
+      "Pacer"
+    ],
+    "question": "How would you rate your proficiency in electronic filing of legal documents, specifically using platforms like Pacer or Tyler Tech?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have e-filed basic documents under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can e-file complex documents without assistance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Deeply familiar with e-filing protocols, including emergency filings, and can train others"
+      }
+    ],
+    "employerQuestion": "What level of proficiency do you expect in electronic filing of legal documents, specifically using platforms like Pacer or Tyler Tech?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should e-file basic documents under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should be able to e-file complex documents without assistance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Should be deeply familiar with e-filing protocols, including emergency filings"
+      }
+    ]
+  },
+  {
+    "questionID": "35",
+    "order": -1,
+    "category": "Software Workflows",
+    "tags": [
+      "case management"
+    ],
+    "question": "How familiar are you with using case management software, such as Clio or iManage, for legal work?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have basic familiarity and can perform simple tasks under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can independently manage cases using the software"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Highly proficient, able to optimize workflows, and can train others in best practices"
+      }
+    ],
+    "employerQuestion": "What level of familiarity do you expect with using case management software, such as Clio or iManage, for legal work?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should have basic familiarity and can perform simple tasks under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should independently manage cases using the software"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Should be highly proficient, able to optimize workflows, and be capable of training others"
+      }
+    ]
+  },
+  {
+    "questionID": "41",
+    "order": -1,
+    "category": "Software Workflows",
+    "tags": [
+      ""
+    ],
+    "question": "How often have you worked on discovery tasks, including e-discovery?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Assisted in gathering and organizing documents for discovery"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Managed e-discovery software and reviewed documents for relevance and privilege"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Led discovery efforts in complex litigation, including managing e-discovery process and teams"
+      }
+    ],
+    "employerQuestion": "How experienced should the paralegal be in handling discovery tasks, including e-discovery?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Assisting in gathering and organizing documents is generally adequate"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Must manage e-discovery software and review documents for relevance and privilege"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Should lead discovery efforts in complex litigation, including managing e-discovery processes and teams"
+      }
+    ]
+  },
+  {
+    "questionID": "32",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      "expert witnesses",
+      "consultants",
+      "coordination"
+    ],
+    "question": "How experienced are you in coordinating with expert witnesses or consultants in legal cases?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No Exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have coordinated with witnesses or consultants under close supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have independently coordinated with multiple expert witnesses or consultants"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Routinely manage all aspects of expert witness and consultant coordination and can train others"
+      }
+    ],
+    "employerQuestion": "What level of expertise do you expect in coordinating with expert witnesses or consultants in legal cases?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should coordinate with witnesses or consultants under close supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should independently coordinate with multiple expert witnesses or consultants"
+      },
+      {
+        "answerID": 4,
+        "answer": "Expert: Should manage all aspects of expert witness and consultant coordination and can train others"
+      }
+    ]
+  },
+  {
+    "questionID": "36",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "How proficient are you in legal research using electronic databases like LexisNexis or Westlaw?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can perform basic searches for case law or statutes but may need guidance"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Proficient in using Boolean search queries and can identify relevant precedents without assistance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Capable of comprehensive research across multiple databases and can synthesize information efficiently"
+      }
+    ],
+    "employerQuestion": "What level of expertise should the paralegal have in legal research using electronic databases like LexisNexis or Westlaw?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic searches for case law or statutes are generally adequate"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Must use Boolean search queries and identify relevant precedents"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Should be capable of comprehensive research across multiple databases and synthesizing information"
+      }
+    ]
+  },
+  {
+    "questionID": "39",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "How experienced are you in drafting and filing motions?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can draft simple motions under close supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Able to draft and file complex motions with minimal guidance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Routinely drafts and files a wide range of motions, and understands the strategic implications of each"
+      }
+    ],
+    "employerQuestion": "How proficient should the paralegal be in drafting and filing motions?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Simple motions under close supervision are adequate"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Must be able to draft and file complex motions with minimal guidance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Should routinely draft and file a wide range of motions, and understand their strategic implications"
+      }
+    ]
+  },
+  {
+    "questionID": "40",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "Have you participated in pre-trial preparation, including witness interviews?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have attended witness interviews but primarily in an observatory role"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Conducted witness interviews under supervision and contributed to pre-trial strategy"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Routinely involved in all phases of pre-trial preparation, including independently conducting witness interviews"
+      }
+    ],
+    "employerQuestion": "What level of involvement should the paralegal have in pre-trial preparation, including witness interviews?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Observing witness interviews is sufficient"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should conduct witness interviews under supervision and contribute to pre-trial strategy"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Must be fully involved in all phases of pre-trial preparation, including independently conducting witness interviews"
+      }
+    ]
+  },
+  {
+    "questionID": "37",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "Are you familiar with the rules of evidence for your jurisdiction?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have a basic understanding but may need to refer to a guide frequently"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Know the rules well enough to assist attorneys in making objections or motions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Highly proficient, can advise attorneys on complex rules of evidence, including exceptions and nuances"
+      }
+    ],
+    "employerQuestion": "How familiar should the paralegal be with the rules of evidence in your jurisdiction?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding with frequent reference to a guide is adequate"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should know the rules well enough to assist in making objections or motions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Must be highly proficient and able to advise on complex rules of evidence, including exceptions and nuances"
+      }
+    ]
+  },
+  {
+    "questionID": "42",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "Have you assisted in managing a litigation calendar, including deadlines for filings and court dates?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Assisted in inputting deadlines and dates under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Independently manage a litigation calendar, including setting reminders for upcoming deadlines"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Routinely manage complex litigation calendars for multiple cases and attorneys, and proactively coordinate schedules"
+      }
+    ],
+    "employerQuestion": "How proficient should the paralegal be in managing a litigation calendar, including deadlines for filings and court dates?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Should assist in inputting deadlines and dates under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Must independently manage a litigation calendar, including setting reminders for upcoming deadlines"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Should routinely manage complex litigation calendars for multiple cases and attorneys, and proactively coordinate schedules"
+      }
+    ]
+  },
+  {
+    "questionID": "43",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "How experienced are you in drafting legal memoranda?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Drafted simple memos under close supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can draft complex legal memoranda with minimal guidance, including case citations and legal arguments"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Routinely draft in-depth legal memoranda for various case types and can mentor others in effective memo writing"
+      }
+    ],
+    "employerQuestion": "What level of expertise is required in drafting legal memoranda?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Simple memos under close supervision are generally adequate"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should be able to draft complex legal memoranda with minimal guidance, including case citations and legal arguments"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Must routinely draft in-depth legal memoranda for various case types and be capable of mentoring others in effective memo writing"
+      }
+    ]
+  },
+  {
+    "questionID": "44",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "Have you participated in depositions, either by prepping materials or being present?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have prepared materials or attended depositions as an observer"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Assisted attorneys during depositions and managed exhibits"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Fully responsible for deposition preparation, including creating deposition outlines and managing complex exhibits"
+      }
+    ],
+    "employerQuestion": "To what extent should the candidate have experience participating in depositions, either by prepping materials or being present?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Preparing materials or attending depositions as an observer is sufficient"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Should assist attorneys during depositions and manage exhibits"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Must be fully responsible for deposition preparation, including creating deposition outlines and managing complex exhibits"
       }
     ]
   },
   {
     "questionID": "45",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Legal Experience",
     "tags": [
-      "client intake"
+      ""
     ],
-    "question": "What is your level of proficiency in handling client intake workflows?",
+    "question": "How experienced are you with bankruptcy filing procedures?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Never involved in client intake"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in client intake processes"
+        "answer": "Beginner: Assisted in compiling basic bankruptcy forms under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Handle routine client intake independently"
+        "answer": "Intermediate: Able to prepare and file most bankruptcy forms with minimal guidance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Experience in complex client intake including conflict checks and initial assessments"
+        "answer": "Advanced: Highly proficient in all aspects of bankruptcy filing, including complex Chapter 11 cases"
       }
     ],
-    "employerQuestion": "What level of proficiency should the candidate have in handling client intake workflows?",
+    "employerQuestion": "How familiar should the candidate be with bankruptcy filing procedures?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2433,47 +2390,45 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Should have assisted in client intake processes"
+        "answer": "Beginner: Assisting in compiling basic bankruptcy forms under supervision is adequate"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Should handle routine client intake independently"
+        "answer": "Intermediate: Should prepare and file most bankruptcy forms with minimal guidance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Should have experience in complex client intake including conflict checks and initial assessments"
+        "answer": "Advanced: Must be highly proficient in all aspects of bankruptcy filing, including complex Chapter 11 cases"
       }
     ]
   },
   {
     "questionID": "46",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Legal Experience",
     "tags": [
-      "expert witnesses",
-      "consultants",
-      "coordination"
+      ""
     ],
-    "question": "How experienced are you in coordinating with expert witnesses or consultants?",
+    "question": "Have you worked on cases involving constitutional law issues?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Never coordinated with expert witnesses or consultants"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Never coordinated with expert witnesses or consultants"
+        "answer": "Beginner: Assisted in research or documentation for constitutional law cases"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Occasionally coordinated with expert witnesses or consultants"
+        "answer": "Intermediate: Participated in case strategy and drafted relevant sections for motions or briefs"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Have extensive experience in coordinating and briefing expert witnesses or consultants"
+        "answer": "Advanced: Have in-depth knowledge of constitutional law and regularly contribute to case strategies and filings"
       }
     ],
-    "employerQuestion": "How experienced should the candidate be in coordinating with expert witnesses or consultants?",
+    "employerQuestion": "What level of involvement should the candidate have in cases involving constitutional law issues?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2481,46 +2436,45 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has minimal experience with coordinating with expert witnesses or consultants"
+        "answer": "Beginner: Assisting in research or documentation is generally adequate"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Should have occasionally coordinated with expert witnesses or consultants"
+        "answer": "Intermediate: Should participate in case strategy and draft relevant sections for motions or briefs"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Should have extensive experience in coordinating and briefing expert witnesses or consultants"
+        "answer": "Advanced: Must have in-depth knowledge of constitutional law and regularly contribute to case strategies and filings"
       }
     ]
   },
   {
     "questionID": "47",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Legal Experience",
     "tags": [
-      "confidentialty",
-      "privelage"
+      ""
     ],
-    "question": "How would you evaluate your understanding of client confidentiality and privilege protocols?",
+    "question": "Are you familiar with handling and organizing case-related documents using legal management software?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Never dealt with these protocols"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Basic understanding but always consult a superior"
+        "answer": "Beginner: Used software for basic tasks like uploading documents under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Good understanding, occasionally consult a superior for complex issues"
+        "answer": "Intermediate: Comfortable with managing case files, including tagging and organizing documents"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Complete understanding and capable of advising others"
+        "answer": "Advanced: Highly proficient, can train others in utilizing features for case management and workflow automation"
       }
     ],
-    "employerQuestion": "How should the candidate evaluate their understanding of client confidentiality and privilege protocols?",
+    "employerQuestion": "How proficient should the paralegal be in handling and organizing case-related documents using legal management software?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2528,63 +2482,61 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Should have basic understanding but always consult a superior"
+        "answer": "Beginner: Should use software for basic tasks like uploading documents under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Should have good understanding, occasionally consult a superior for complex issues"
+        "answer": "Intermediate: Must be comfortable with managing case files, including tagging and organizing documents"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Should have complete understanding and capable of advising others"
+        "answer": "Advanced: Should be highly proficient, able to train others in utilizing features for case management and workflow automation"
       }
     ]
   },
   {
     "questionID": "48",
     "order": -1,
-    "category": "Platform Workflows",
+    "category": "Legal Experience",
     "tags": [
-      "conflict checks",
-      "risk",
-      "risk assesments"
+      ""
     ],
-    "question": "How proficient are you in risk assessment and conflict checking workflows?",
+    "question": "How often have you interacted with clients to gather information or provide updates?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Never conducted these activities"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Never conducted risk assessments or conflict checks"
+        "answer": "Beginner: Have spoken to clients under close supervision for basic information gathering"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Have conducted risk assessments and conflict checks under supervision"
+        "answer": "Intermediate: Regularly interact with clients to update them on case progress or gather details"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Independently conduct risk assessments and conflict checks, including for complex cases"
+        "answer": "Advanced: Act as a main point of contact for clients, handling complex inquiries and providing substantive updates"
       }
     ],
-    "employerQuestion": "How proficient should the candidate be in risk assessment and conflict checking workflows?",
+    "employerQuestion": "What frequency and depth of client interaction is expected from the paralegal?",
     "employerAnswers": [
       {
         "answerID": 1,
-        "answer": "No Exposure: Should never have conducted these activities"
+        "answer": "No exposure required"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Should have minimal experience with these activities"
+        "answer": "Beginner: Interactions under close supervision for basic information gathering are adequate"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Should have conducted risk assessments and conflict checks under supervision"
+        "answer": "Intermediate: Must regularly interact with clients to update them on case progress or gather details"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Should independently conduct risk assessments and conflict checks, including for complex cases"
+        "answer": "Advanced: Should act as a main point of contact for clients, handling complex inquiries and providing substantive updates"
       }
     ]
   },
@@ -2593,28 +2545,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion to dismiss"
+      ""
     ],
-    "question": "How would you rate your experience with drafting a Motion to Dismiss?",
+    "question": "Are you skilled in summarizing depositions, interrogatories, and testimony?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Filed 1-2 motions to dismiss in simple cases"
+        "answer": "Beginner: Have summarized straightforward depositions or interrogatories under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions, including some with complex arguments"
+        "answer": "Intermediate: Capable of summarizing complex depositions and testimony with minimal guidance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions in both simple and complex cases"
+        "answer": "Advanced: Routinely create summaries for a range of case types, often handling complex or technical material"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions to dismiss?",
+    "employerQuestion": "To what extent should the paralegal be skilled in summarizing depositions, interrogatories, and testimony?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2622,15 +2574,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions in straightforward cases"
+        "answer": "Beginner: Summarizing straightforward depositions or interrogatories under supervision is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions, including some with complex arguments"
+        "answer": "Intermediate: Must be capable of summarizing complex depositions and testimony with minimal guidance"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions in both simple and complex cases"
+        "answer": "Advanced: Should routinely create summaries for a range of case types, often handling complex or technical material"
       }
     ]
   },
@@ -2639,28 +2591,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion for summary judgement"
+      ""
     ],
-    "question": "How familiar are you with preparing a Motion for Summary Judgment?",
+    "question": "Have you prepared exhibits for trial?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Filed 1-2 summary judgments"
+        "answer": "Beginner: Assisted in the preparation of basic exhibits under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions, including those that required extensive research"
+        "answer": "Intermediate: Independently prepared and organized exhibits for trial, including digital presentations"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions and led strategy on some"
+        "answer": "Advanced: Expert in trial exhibit preparation, including complex electronic exhibits and demonstratives"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions for summary judgment?",
+    "employerQuestion": "What level of expertise is required in preparing exhibits for trial?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2668,15 +2620,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 summary judgments in straightforward cases"
+        "answer": "Beginner: Assisting in the preparation of basic exhibits under supervision is adequate"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 summary judgments, including some with complex arguments"
+        "answer": "Intermediate: Must independently prepare and organize exhibits for trial, including digital presentations"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ summary judgments in both simple and complex cases"
+        "answer": "Advanced: Should be an expert in trial exhibit preparation, including complex electronic exhibits and demonstratives"
       }
     ]
   },
@@ -2685,29 +2637,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "compel discovery",
-      "motion"
+      ""
     ],
-    "question": "How experienced are you in handling a Motion to Compel Discovery?",
+    "question": "How familiar are you with the ethical rules governing paralegal work in your jurisdiction?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Involved in 1-2 motions to compel discovery"
+        "answer": "Beginner: Basic understanding, but often need to consult a guide or supervisor"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Led 3-5 motions to compel, with research"
+        "answer": "Intermediate: Confidently navigate most ethical scenarios without guidance, and aware of consequences for violations"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Led 6+ motions and set strategy"
+        "answer": "Advanced: Expert-level understanding of ethical rules, including grey areas; capable of educating others on ethical considerations"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions to compel discovery?",
+    "employerQuestion": "How familiar should the paralegal be with the ethical rules governing their work in your jurisdiction?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2715,15 +2666,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions to compel in straightforward cases"
+        "answer": "Beginner: A basic understanding but may often need to consult a guide or supervisor is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions to compel, including some with complex arguments"
+        "answer": "Intermediate: Must confidently navigate most ethical scenarios without guidance, and be aware of consequences for violations"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions to compel in both simple and complex cases"
+        "answer": "Advanced: Should have an expert-level understanding of ethical rules, including grey areas; capable of educating others on ethical considerations"
       }
     ]
   },
@@ -2732,29 +2683,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "compel evidence"
+      ""
     ],
-    "question": "What is your level of expertise in preparing a Motion to Suppress Evidence?",
+    "question": "Have you helped in alternative dispute resolution processes like mediation or arbitration?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in 1-2 motions to suppress"
+        "answer": "Beginner: Have observed mediation or arbitration sessions but had limited involvement"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Managed 3-5 motions to suppress, including some complex cases"
+        "answer": "Intermediate: Assisted in preparing mediation briefs or arbitration exhibits and attended sessions"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions, led complex cases"
+        "answer": "Advanced: Fully involved in ADR processes, including preparation and strategy, and able to guide attorneys on best practices"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions to suppress evidence?",
+    "employerQuestion": "What level of involvement is expected from the paralegal in alternative dispute resolution processes like mediation or arbitration?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2762,15 +2712,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions to suppress in straightforward cases"
+        "answer": "Beginner: Observing mediation or arbitration sessions with limited involvement is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions to suppress, including some with complex arguments"
+        "answer": "Intermediate: Must assist in preparing mediation briefs or arbitration exhibits and attend sessions"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions to suppress in both simple and complex cases"
+        "answer": "Advanced: Should be fully involved in ADR processes, including preparation and strategy, and able to guide attorneys on best practices"
       }
     ]
   },
@@ -2779,29 +2729,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "limine"
+      ""
     ],
-    "question": "How proficient are you in filing a Motion in Limine?",
+    "question": "How adept are you in contract review and summarization?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in 1-2 motions in limine"
+        "answer": "Beginner: Can review straightforward contracts for specific clauses under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Managed 3-5 motions in limine, including complex issues"
+        "answer": "Intermediate: Capable of summarizing complex contracts including identifying key terms and potential issues"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions and influenced case strategy"
+        "answer": "Advanced: Highly proficient in contract review, can negotiate terms, and provide risk assessments"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions in limine?",
+    "employerQuestion": "What skill level is required in contract review and summarization?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2809,15 +2758,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions in limine in straightforward cases"
+        "answer": "Beginner: Reviewing straightforward contracts for specific clauses under supervision is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions in limine, including some with complex arguments"
+        "answer": "Intermediate: Must be capable of summarizing complex contracts including identifying key terms and potential issues"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions in limine in both simple and complex cases"
+        "answer": "Advanced: Highly proficient in contract review, should be able to negotiate terms, and provide risk assessments"
       }
     ]
   },
@@ -2826,29 +2775,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "default judgement"
+      ""
     ],
-    "question": "How would you rate your experience with a Motion for Default Judgment?",
+    "question": "Have you contributed to the development of a corporate compliance program?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Filed 1-2 default judgments in straightforward cases"
+        "answer": "Beginner: Assisted in collecting materials or data for a compliance program under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions, including those requiring significant documentation"
+        "answer": "Intermediate: Participated in drafting and implementing sections of a compliance program"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions and handled complex cases"
+        "answer": "Advanced: Played a key role in developing and maintaining a comprehensive corporate compliance program, including training and audits"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions for default judgment?",
+    "employerQuestion": "To what extent should the paralegal contribute to the development of a corporate compliance program?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2856,15 +2804,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions for default judgment in straightforward cases"
+        "answer": "Beginner: Assisting in collecting materials or data for a compliance program under supervision is adequate"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions for default judgment, including some with complex arguments"
+        "answer": "Intermediate: Must participate in drafting and implementing sections of a compliance program"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions for default judgment in both simple and complex cases"
+        "answer": "Advanced: Should play a key role in developing and maintaining a comprehensive corporate compliance program, including training and audits"
       }
     ]
   },
@@ -2873,29 +2821,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "continuance"
+      ""
     ],
-    "question": "How familiar are you with the process of a Motion for Continuance?",
+    "question": "Are you familiar with asset tracking procedures in judgment enforcement?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in 1-2 motions for continuance"
+        "answer": "Beginner: Have performed basic asset searches under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions for continuance, including for complex reasons"
+        "answer": "Intermediate: Skilled in using databases and other resources to track assets for judgment enforcement"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions, including those requiring strategy"
+        "answer": "Advanced: Expert-level knowledge of asset tracking, including offshore and complex asset structures"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions for continuance?",
+    "employerQuestion": "How proficient should the paralegal be in asset tracking procedures in judgment enforcement?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2903,15 +2850,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions for continuance in straightforward cases"
+        "answer": "Beginner: Performing basic asset searches under supervision is adequate"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions for continuance, including some with complex arguments"
+        "answer": "Intermediate: Must be skilled in using databases and other resources to track assets for judgment enforcement"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions for continuance in both simple and complex cases"
+        "answer": "Advanced: Should have expert-level knowledge of asset tracking, including offshore and complex asset structures"
       }
     ]
   },
@@ -2920,29 +2867,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "amend pleadings"
+      ""
     ],
-    "question": "How would you evaluate your experience with a Motion to Amend Pleadings?",
+    "question": "How familiar are you with GDPR compliance protocols?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in 1-2 motions to amend pleadings"
+        "answer": "Beginner: Basic understanding of GDPR requirements but require supervision for tasks"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions to amend pleadings, including complex cases"
+        "answer": "Intermediate: Have helped implement GDPR compliance measures in previous roles"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions and led some cases"
+        "answer": "Advanced: Highly proficient, have led GDPR compliance initiatives, including data mapping and assessments"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions to amend pleadings?",
+    "employerQuestion": "What level of familiarity is expected with GDPR compliance protocols?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2950,15 +2896,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions to amend pleadings in straightforward cases"
+        "answer": "Beginner: A basic understanding of GDPR requirements but may require supervision for tasks is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions to amend pleadings, including some with complex arguments"
+        "answer": "Intermediate: Must have helped implement GDPR compliance measures in previous roles"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions to amend pleadings in both simple and complex cases"
+        "answer": "Advanced: Should be highly proficient, having led GDPR compliance initiatives, including data mapping and assessments"
       }
     ]
   },
@@ -2967,29 +2913,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "protective order"
+      ""
     ],
-    "question": "What is your proficiency level in handling a Motion for Protective Order?",
+    "question": "Have you participated in jury selection procedures, including preparing jury questionnaires?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in filing 1-2 motions for protective orders"
+        "answer": "Beginner: Assisted in compiling questionnaires under supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions for protective orders, including research"
+        "answer": "Intermediate: Participated in jury selection strategy and independently prepared questionnaires"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions, including complex legal issues"
+        "answer": "Advanced: Routinely contribute to jury selection strategy and can analyze juror data for strategic purposes"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions for protective orders?",
+    "employerQuestion": "What level of involvement is needed in jury selection procedures, including preparing jury questionnaires?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -2997,15 +2942,15 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions for protective orders in straightforward cases"
+        "answer": "Beginner: Assisting in compiling questionnaires under supervision is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions for protective orders, including some with complex arguments"
+        "answer": "Intermediate: Must participate in jury selection strategy and independently prepare questionnaires"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions for protective orders in both simple and complex cases"
+        "answer": "Advanced: Should routinely contribute to jury selection strategy and be able to analyze juror data for strategic purposes"
       }
     ]
   },
@@ -3014,29 +2959,28 @@ export const questionsData = [
     "order": -1,
     "category": "Legal Experience",
     "tags": [
-      "Motion",
-      "strike"
+      ""
     ],
-    "question": "How would you rate your skill in dealing with a Motion to Strike?",
+    "question": "Are you skilled in due diligence processes in mergers and acquisitions?",
     "answers": [
       {
         "answerID": 1,
-        "answer": "No Exposure"
+        "answer": "No exposure"
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Assisted in 1-2 motions to strike"
+        "answer": "Beginner: Assisted in gathering basic due diligence materials under close supervision"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Filed 3-5 motions to strike, including significant research"
+        "answer": "Intermediate: Participated in due diligence processes, including document review and risk analysis"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Filed 6+ motions, including those with complex issues"
+        "answer": "Advanced: Highly skilled, have managed due diligence in complex M&A transactions, including international deals"
       }
     ],
-    "employerQuestion": "What level of experience should a candidate have with filing motions to strike?",
+    "employerQuestion": "How skilled should the paralegal be in due diligence processes in mergers and acquisitions?",
     "employerAnswers": [
       {
         "answerID": 1,
@@ -3044,16 +2988,292 @@ export const questionsData = [
       },
       {
         "answerID": 2,
-        "answer": "Beginner: Has filed 1-2 motions to strike in straightforward cases"
+        "answer": "Beginner: Assisting in gathering basic due diligence materials under close supervision is sufficient"
       },
       {
         "answerID": 3,
-        "answer": "Intermediate: Has independently filed 3-5 motions to strike, including some with complex arguments"
+        "answer": "Intermediate: Must participate in due diligence processes, including document review and risk analysis"
       },
       {
         "answerID": 4,
-        "answer": "Advanced: Has independently filed 6+ motions to strike in both simple and complex cases"
+        "answer": "Advanced: Should be highly skilled and have managed due diligence in complex M&A transactions, including international deals"
+      }
+    ]
+  },
+  {
+    "questionID": "59",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      ""
+    ],
+    "question": "How proficient are you in the preparation and filing of U.S. immigration forms?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Prepared straightforward immigration forms under close supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can independently prepare and file a range of immigration forms, including employment-based petitions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert in U.S. immigration law, including preparing petitions for complex cases and waivers"
+      }
+    ],
+    "employerQuestion": "What level of proficiency is required in the preparation and filing of U.S. immigration forms?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Preparing straightforward immigration forms under close supervision is sufficient"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Must be able to independently prepare and file a range of immigration forms, including employment-based petitions"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Should be an expert in U.S. immigration law, including preparing petitions for complex cases and waivers"
+      }
+    ]
+  },
+  {
+    "questionID": "60",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      "No exposure"
+    ],
+    "question": "How proficient are you in legal transcription?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have transcribed basic legal documents under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can transcribe complex legal documents and hearings with minimal guidance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Highly skilled in legal transcription, capable of handling specialized or technical material"
+      }
+    ],
+    "employerQuestion": "What level of expertise should the candidate have in legal transcription?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Capable of coordinating the transcription of basic legal documents"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can manage the transcription of complex legal documents and hearings"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Highly skilled in overseeing legal transcription for specialized or technical material"
+      }
+    ]
+  },
+  {
+    "questionID": "61",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      "No exposure"
+    ],
+    "question": "Have you been directly involved in the negotiation of contracts or settlements?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Assisted attorneys in negotiation preparations under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Participated directly in negotiations with some guidance"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Lead negotiations in complex contracts or settlements, skilled in various negotiation techniques"
+      }
+    ],
+    "employerQuestion": "How familiar should the candidate be with negotiating contracts or settlements?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Has assisted in internal negotiation preparations"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has participated directly in negotiations"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Can lead negotiations in complex contracts or settlements, skilled in various negotiation techniques"
+      }
+    ]
+  },
+  {
+    "questionID": "62",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      "No exposure"
+    ],
+    "question": "How familiar are you with environmental law and regulations?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding of environmental law, assisted in minor tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Have worked on cases or projects directly involving environmental law"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: In-depth understanding and experience in environmental law, including compliance and litigation"
+      }
+    ],
+    "employerQuestion": "What level of expertise should the candidate have in environmental law and regulations?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Basic understanding, capable of coordinating with lawyers on minor tasks"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Has worked on initiatives or projects directly involving environmental law"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: In-depth understanding and experience in navigating environmental law, including compliance and litigation"
+      }
+    ]
+  },
+  {
+    "questionID": "63",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      "No exposure"
+    ],
+    "question": "How experienced are you in dealing with Freedom of Information Act (FOIA) requests?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Assisted in filing or responding to basic FOIA requests under supervision"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can independently handle FOIA requests including appeals"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert in FOIA procedures, including complex cases involving national security or commercial interests"
+      }
+    ],
+    "employerQuestion": "How familiar should the candidate be with dealing with Freedom of Information Act (FOIA) requests?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Can assist in filing or responding to basic FOIA requests"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Can independently manage FOIA requests, including appeals"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Expert in FOIA procedures, capable of handling complex cases involving national security or commercial interests"
+      }
+    ]
+  },
+  {
+    "questionID": "64",
+    "order": -1,
+    "category": "Legal Experience",
+    "tags": [
+      "No exposure"
+    ],
+    "question": "Are you experienced in working with in-house counsel?",
+    "answers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Have liaised with in-house counsel for basic information gathering"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Regular collaboration with in-house counsel on various legal matters"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Have served as a primary liaison between law firms and in-house counsel, including strategy coordination"
+      }
+    ],
+    "employerQuestion": "What level of expertise should the candidate have in working with external law firms?",
+    "employerAnswers": [
+      {
+        "answerID": 1,
+        "answer": "No exposure required"
+      },
+      {
+        "answerID": 2,
+        "answer": "Beginner: Has liaised with external law firms for basic information gathering"
+      },
+      {
+        "answerID": 3,
+        "answer": "Intermediate: Regularly collaborates with external law firms on various legal matters"
+      },
+      {
+        "answerID": 4,
+        "answer": "Advanced: Capable of serving as the primary liaison between the client and external law firms, including strategy coordination"
       }
     ]
   }
-];
+]
