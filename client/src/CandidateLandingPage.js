@@ -17,6 +17,7 @@ import rock1Img from './images/rock1.svg';
 import rock2Img from './images/rock2.svg';
 import OnboardingQuestions from './OnboardingQuestions';
 // import jellyfishImg from './images/jellyfish-test.png';
+const namespace = 'https://goldfishai.net';
 
 function CandidateLandingPage(returnURL) {
     const { isAuthenticated, isLoading, user, loginWithRedirect } = useAuth0();
@@ -59,6 +60,7 @@ function CandidateLandingPage(returnURL) {
                 user_id: user ? user.sub : null,
                 email: email ? email : '',
                 subscribing: subscribing,
+                user_type: (user && user[`${namespace}/user_type`] === 'employer') ? 'e' : 'c'
             };
 
             const response = await axios.post(`${apiURL}/changeNewsletterSubscription`, payload);

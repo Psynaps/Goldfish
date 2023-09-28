@@ -382,6 +382,9 @@ function EmployerPage(returnURL) {
     }, [selectedQuestion, questionBankQuestions]);
 
     useEffect(() => {
+        const namespace = 'https://goldfishai.net';
+        console.log('href', window.location.href);
+        console.log('user', user);
         const jobIdFromUrl = searchParams.get('jobID') || searchParams.get('jobid'); // get jobID from the query string, either case
         if (jobIdFromUrl) { // if jobID exists in the URL
             console.log('loading job: ', jobIdFromUrl);

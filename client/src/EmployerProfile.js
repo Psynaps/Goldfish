@@ -1093,6 +1093,8 @@ function MatchesRightContent() {
     return <Box>Matches Right Content</Box>;
 }
 
+
+
 function EmployerProfile({ returnURL }) {
     const { isAuthenticated, isLoading, user } = useAuth0();
     // const { colorMode, toggleColorMode } = useColorMode();
@@ -1102,6 +1104,7 @@ function EmployerProfile({ returnURL }) {
     const [selectedJobPosting, setSelectedJobPosting] = useState(-1);
     const [userInfo, setUserInfo] = useState({});
     const [companyLogo, setCompanyLogo] = useState(null);
+    // const [userType, setUserType] = useState('');
     const [jobs, setJobs] = useState({
         2: { 'job_posting_id': 100, 'job_title': 'titleA', 'date_created': new Date('1 1 2020').toLocaleDateString(), 'active': true },
         3: { 'job_posting_id': 101, 'job_title': 'titleB', 'date_created': new Date(1e12).toLocaleDateString(), 'active': false }
@@ -1158,6 +1161,29 @@ function EmployerProfile({ returnURL }) {
         }
     }
 
+    /*
+    //useEffect dependent on user which calls ${apiURL}/getUserType and sets userType state variable
+    useEffect(() => {
+        if (!user) {
+            console.log('no user');
+            setUserType('none');
+            return;
+        }
+        try {
+            axios.get(`${apiURL}/getUserType?user_id=${user.sub}`)
+                .then(response => {
+                    if (response.data) {
+                        setUserType(response.data.user_type);
+                        console.log('user type retrieved', response.data.user_type);
+                    }
+                }).catch(e => {
+                    console.error(e);
+                });
+        } catch (err) {
+            console.error('No user type found');
+        }
+    }, [user]);
+    */
 
     useEffect(() => {
         getEmployerProfile();
@@ -1175,12 +1201,6 @@ function EmployerProfile({ returnURL }) {
             flexDirection='column'
             minHeight='100vh'>
             <Box bg='#051672' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem' borderBottom='1px solid gray'>
-                {/* < Box display='flex' alignItems='baseline' p={0} >
-                    <ChakraLink as={RouterLink} to="/employer" style={{ textDecoration: 'none' }} display='inline-flex' alignItems='baseline'>
-                        <Text fontSize={{ base: '3xl', md: '3xl', lg: '3xl' }} fontWeight='700' fontFamily='Poppins' color='#FAD156'>Goldfish</Text>
-                        <Text ml={3} fontSize={{ base: '1xl', md: '1xl', lg: '1xl' }} fontWeight='700' fontFamily='Poppins' color='#FFFFFF'>ai</Text>
-                    </ChakraLink>
-                </Box > */}
                 <HStack alignItems='baseline' p={0} >
                     <Image
                         borderRadius='25%'

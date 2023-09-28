@@ -552,21 +552,23 @@ app.get('/api/getUserAnswers', async (req, res) => {
 });
 
 app.post('/api/changeNewsletterSubscription', async (req, res) => {
-    let { email, user_id, subscribing = true } = req.body;
+    let { email, user_id, subscribing = true, user_type } = req.body;
 
-
+    if (!user_type) {
+        return res.status(400).json({ success: false, message: 'User type is required.' });
+    }
     if (!email) {
         return res.status(400).json({ success: false, message: 'Email is required.' });
     }
     user_id = user_id || '';
     try {
         const queryText = `
-            INSERT INTO user_profiles (user_id, email, subscribed_newsletter)
-            VALUES ($1, $2, $3)
+            INSERT INTO user_profiles (user_id, email, subscribed_newsletter, user_type)
+            VALUES ($1, $2, $3, $4)
             ON CONFLICT (user_id, email)
             DO UPDATE SET subscribed_newsletter = $3
         `;
-        const values = [user_id, email, subscribing];
+        const values = [user_id, email, subscribing, user_type];
         await pool.query(queryText, values);
         res.json({ success: true });
     } catch (error) {
@@ -575,6 +577,9 @@ app.post('/api/changeNewsletterSubscription', async (req, res) => {
     }
 });
 
+
+//TODO: determine if duplicate
+/*
 app.post('/api/changeNewsletterSubscription', async (req, res) => {
     let { email, user_id, subscribing = true } = req.body;
 
@@ -598,23 +603,27 @@ app.post('/api/changeNewsletterSubscription', async (req, res) => {
         res.status(500).json({ success: false, message: 'An error occurred while updating subscription.' });
     }
 });
+*/
 
 app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
-    let { email, user_id, subscribing = true } = req.body;
+    let { email, user_id, subscribing = true, user_type } = req.body;
 
 
+    if (!user_type) {
+        return res.status(400).json({ success: false, message: 'User type is required.' });
+    }
     if (!email || !user_id) {
         return res.status(400).json({ success: false, message: 'Email and user_id required.' });
     }
     user_id = user_id || '';
     try {
         const queryText = `
-            INSERT INTO user_profiles (user_id, email, subscribed_new_job_recs)
-            VALUES ($1, $2, $3)
+            INSERT INTO user_profiles (user_id, email, subscribed_new_job_recs, user_type)
+            VALUES ($1, $2, $3, $4)
             ON CONFLICT (user_id, email)
             DO UPDATE SET subscribed_new_job_recs = $3
         `;
-        const values = [user_id, email, subscribing];
+        const values = [user_id, email, subscribing, user_type];
         await pool.query(queryText, values);
         res.json({ success: true });
     } catch (error) {
@@ -623,6 +632,8 @@ app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
     }
 });
 
+// TODO: determine if duplicate
+/*
 app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
     let { email, user_id, subscribing = true } = req.body;
 
@@ -645,6 +656,7 @@ app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
         res.status(500).json({ success: false, message: 'An error occurred while updating subscription.' });
     }
 });
+*/
 
 app.post('/api/changeSuspendedStatus', async (req, res) => {
     let { email, user_id, suspended = true } = req.body;
