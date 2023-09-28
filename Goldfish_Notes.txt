@@ -1,0 +1,162 @@
+Make each question a button/tile
+- When a question is selected a dropdown is added below the tile containing possible answers
+- When an answer chjoice is selected the add button enables, allowing to add to the job posting
+
+Each answer on the job posting side would be grouped by the category of the question
+Each answer tile would have a dropdown in the corner to select the relative importance of the question ("Nice to have, important, required")
+- Ideally each question tile on the job posting side would also alow the client (employer) to change the answer or select multiple answers (maybe with + button, todo later)
+Questions would be auto reordered by relative importance within each category (possibly not until they click save)
+
+The job posting side would just be for the ease of understanding of the client, and is never visible to a candidate (employee)
+
+Add page prefix class names to everything so that the css file only formats each page separately
+
+Look into using copilot
+
+Add button doesn't disable when you unselect an answer. Need to set selected question and answer to null when you add
+
+Make profile picture sync with auth0 profile picture (which will use google pic if set hopefully)
+Show name in the dropdown with settings maybe
+
+Make question bank section use chakraUI collapse
+
+Implement saving user profile: export as json and save as user (app metadata), encode/simplify using just question and answer id's. 
+
+Consider remaking question bank boxes using Accordion from chakraUI
+
+Add dashed line between position and company in job posting builder
+
+Get color moide working by making theme.js and adding to index.js and using it for initial colorMode
+
+Fix padding on button text for add, remove, publish.
+ - Make responsive
+
+Use Next.js
+
+Make non-search listing of questions for posting be ranked by question popularity
+
+last 2 employer sub pages turjn into settings
+
+Consider adding salaryLow and salaryHigh fields to job_profiles table.
+
+Application Tracking systems
+- current ecosystem of job board listing
+
+Save currently answered questions as a cookie so that when they log in it persists. 
+
+
+Might need to change getUserJobs api endpoint to take userID from cookies so that someone else can't access someones jobs. 
+
+Figure out user metadata to store if employer or client
+
+when you have selected an answer for a question then navigate back to base emplyoer page that question will still have the answer preselected. Only affects 1 question.
+
+Make 2 Bucket boxes on the right side "important" and "Nice to have". Be able to drag question boxes around between those (and maybe within to reorder, idk). Have the right side be a reflection of the current left side question bank, with it expanding and contracting.
+- Allow for right/double clicking of an answer to mark it as red (non-answer/landmine). 
+- Maybe make it not possible to mark red a question "higher" (better) than the currently selected answer. (Potentially problems if non-answer selected first). 
+- Have dropdown selector at top of posting builder side to select category of questions displayed
+	- Default to all
+- Have a category for company questions later which will save them to the company profile, not the job profile
+
+I would like to modify my employer page to expand the idea of a selected answer for each question as part of a job profile. I would like to expand it to first support a selected non-answer that can optionally be set for each question by right clicking a button of an answer within the questions box. So I want left click to select an answer how it currently does, and right click to designate an answer as a nonAnswer which should highlight it in red as opposed to the currently darker blue highlight. In the future these will be expanded to allow multiple selected answers for a question and multiple selected nonanswers. Currently I only want to allow one of each, but I want to change the structure of answerID within the json jobData object being sent in postJob to be an array of answerids instead of one. I also want there to be a new field for nonanswerids which is also an array of ints. 
+
+
+I have made some changes to the employer page. I would now like to modify the employer page so that instead of dropdown selects to change the answers, non-answers, and importance being contained within each box on the job posting builder side, they mirror the style of the question boxes currently in the question bank. This means that 
+
+
+Make postlogin action check if metadata is set, and if not set it to the redirect url
+- Will make it work for both existing users and to set it for new users
+
+Maybe use react-filepond to create the upload component (with drag and drop) for employer profile builder
+
+Convert subtab buttons to be grid items so that I can force align the circles and the left edge of the text=
+
+Add change color of circle in employer profile dependent on if that form is completed or not
+- Then use if all forms are completed to somehow give an error message on pressing the submit for the last one if they are not all completed
+
+Make database entry onconflict and ??? maybe add default empty string values for all fields
+
+Use spacer object in the center column of employer profile 
+
+Convert 3 columns 1 above for tab, then 2 side by side below for mobile layout
+
+Make menu dropdown component for DRY
+
+Probably have to make server only respond to requests from the right origins
+
+use auth0 JWT
+
+Need to add both client and server side validation for logo filetype. First checks extension, server checks content
+
+Currently more sneaky filetype error (has right extension but isn't image file) only sends error message as response but it doesn't get displayed. 
+
+Make url employer/profile autoselect the first tab, make employer/jobs autoselect the job postings tab, etc
+
+Probably want it to be possible for users to create a new job posting from their profile and fill out the job info there before answering questions. Need to find a way to get a unique jobPostingID for that to work
+
+After I write the getJobs call, set the selectedJobListing to the first job's jobID
+
+Add hover effect to job posting boxes (one with date and circle)
+
+Use email input type for email entry
+
+Change employerProfile form elements to do better validation on type. See formik chakra example. Add dollar sign to $ inputs. 
+
+Make answered questions auto propagate from stored profile info
+	- Make it land on the next unanswered question
+
+Potentially add left and right arrow buttons to allowf or navigation between the questions on the candidate landing page
+- could allow for removal of the automove on answer
+
+Fix centering on go to job builder button text
+
+User sees 20 questions on landing page, then see matches button shows up
+- sees 10 more that they can answer there or turn into the first 10 to answer in the other place they can answer questions
+
+Add pink helper text above questions on onBoardingQuestions component, starts wi
+
+Potentially improve performance of search typing, currently slight lag with question list
+
+Potentially rework questionBank list to be object instead of array to allow efficient removal on confirm (currently slight delay)
+
+Build server side endpoints for confirm answer to a question
+
+Make entire candidate page not viewable if not logged in
+
+Build more than 8 
+
+Look into using useReducer react hook to replace some states
+
+BUild localStorage saving of user answers on the landing page so that I can display the questions box regardless of if they are signed in, and if they aren't
+ and then later create an account (replace see matches with create account at the end if they aren't signed in) they then restore their previous answers and can save them
+ 
+Make Home, Matches, Answer, etc buttons be routerLinks to change url to show what page you are on
+
+Potentially add animation on question being removed from list after being deleted (to hide delay, maybe just fix that)
+
+Make Candidate Home page, which involves getting a job listing and associated information, creating a box containing those contents, and then putting buttons and checkboxes for status and apply button.
+
+Make candidate matches page:
+-  Add various fields related to C-suite, team size, links, problem, and niche to employer_profile tables (potentially manually filled for each company first)
+- Build dummy matching alg to match users to companies, and return a list of jobs and their info
+-Display list using circle progress bar (with ellipsis as before for onboardingQuestions) 
+- Build expanded area below that also updates depending on the job viewed, and contains their additional info
+- Save and apply buttons, and associated endpoints 
+- Add appliedJobs, savedJobs, and matchedJobs to user_profiles table
+
+
+Long term build a employer job posting preview to show what the candidate will see when they match
+
+Replace add button with 2 importance buttons and that determines which importance category. Remove dropdown in questin to select
+Make 2 buckets, nice to make, and important. 2 lists of questions (add to each)
+- If changes mind on what bucket a question should be in they have to delete it (make it get autoselected and top of list on left side maybe) and they have to readd it to the other importance category
+- Until drag and drop added
+
+Need to check which page user is coming from when they make an account or check database to see their userID's account type,
+ then redirect them to the appropriate page for whichever they are trying to access
+
+Add support for post-registration call to database to add the user to user_profiles table
+- https://auth0.com/docs/customize/actions/flows-and-triggers/pre-user-registration-flow
+- Add logic in both pre-registration and postlogin (logincount == 1 and is social connection)
+
+
