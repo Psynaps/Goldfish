@@ -105,9 +105,9 @@ const EmployerProfileBuilderRightContent = ({
         handleSubmit,
         watch,
         setError,
-        formState: { errors, isSubmitting },
+        formState: { errors, isSubmitting, isValid },
         reset // reset method from useForm to update defaultValues
-    } = useForm({ userInfo });
+    } = useForm({ defaultValues: userInfo, mode: 'onChange' });
     const [isSavingProfile, setIsSavingProfile] = useState(false);
     const { isAuthenticated, user } = useAuth0();
     const [canSubmit, setCanSubmit] = useState(false);
@@ -122,7 +122,8 @@ const EmployerProfileBuilderRightContent = ({
         'office1',
         'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
         'pto1', 'pto2', 'pto3', 'pto4',
-        'financial1', 'financial2', 'financial3', 'financial4'];
+        'financial1', 'financial2', 'financial3', 'financial4'
+    ];
 
     const onSubmit = (data) => {
         setUserInfo(prev => ({ ...prev, ...data }));
@@ -144,6 +145,7 @@ const EmployerProfileBuilderRightContent = ({
     const sendSaveEmployerProfile = useCallback((newUserInfo) => {
         setIsSavingProfile(true);
         console.log('trying to save employer profile', newUserInfo);
+        console.log('isValid:', isValid);
 
         // Create FormData to send files
         const formData = new FormData();
@@ -300,7 +302,7 @@ const EmployerProfileBuilderRightContent = ({
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.logo}>
-                            <FormLabel htmlFor="logo" w='95%'>Please upload your law firm logo</FormLabel>
+                            <FormLabel htmlFor="logo" w='95%'>Please upload your law firm logo (Recommended)</FormLabel>
                             <Input type="file" id="logo" accept="image/*" {...register("logo", imageValidationRule)} w='95%' p={2} alignSelf='center' />
                             {errors.logo && <FormErrorMessage>{errors.logo.message}</FormErrorMessage>}
                         </FormControl>
@@ -379,83 +381,67 @@ const EmployerProfileBuilderRightContent = ({
                     <Text fontWeight='bold' mb={[3, 4, 5]} fontSize={['lg', 'xl', '2xl']}>Medical Benefits</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
-                        <FormControl isInvalid={errors.medical1}>
+                        <FormControl>
                             <FormLabel htmlFor="medical1" w='95%'>What percentage of health insurance premium costs does your company cover for your employees?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
-                            <Select id="medical1" {...register("medical1", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="medical1" {...register("medical1")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
-                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
-                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
-                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                                <option value="0" style={{ color: 'black' }}>None</option>
+                                <option value='1' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='3' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='4' style={{ color: 'black' }}>More than 75% but less than 100%</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.medical1 && errors.medical1.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.medical2}>
+                        <FormControl>
                             <FormLabel htmlFor="medical2" w='95%'>What percentage of dental insurance premium costs does your company cover for your employees?</FormLabel>
-                            <Select id="medical2" {...register("medical2", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="medical2" {...register("medical2")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>Less than 25%</option>
-                                <option value='1' style={{ color: 'black' }}>Between 25% and 50%</option>
-                                <option value='2' style={{ color: 'black' }}>Between 50% and 75%</option>
-                                <option value='3' style={{ color: 'black' }}>More than 75% but less than 100%</option>
+                                <option value="0" style={{ color: 'black' }}>None</option>
+                                <option value='1' style={{ color: 'black' }}>Less than 25%</option>
+                                <option value='2' style={{ color: 'black' }}>Between 25% and 50%</option>
+                                <option value='3' style={{ color: 'black' }}>Between 50% and 75%</option>
+                                <option value='4' style={{ color: 'black' }}>More than 75% but less than 100%</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.medical2 && errors.medical2.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.medical3}>
+                        <FormControl>
                             <FormLabel htmlFor="medical3" w='95%'>What percentage of vision insurance premium costs does your company cover for your employees?</FormLabel>
-                            <Select id="medical3" {...register("medical3", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="medical3" {...register("medical3")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>We do not cover health insurance premium costs</option>
+                                <option value="0" style={{ color: 'black' }}>None</option>
+                                {/* <option value='0' style={{ color: 'black' }}>We do not cover health insurance premium costs</option> */}
                                 <option value='1' style={{ color: 'black' }}>Less than 25%</option>
                                 <option value='2' style={{ color: 'black' }}>Between 25% and 50%</option>
                                 <option value='3' style={{ color: 'black' }}>Between 50% and 75%</option>
                                 <option value='4' style={{ color: 'black' }}>More than 75% but less than 100%</option>
                                 <option value='5' style={{ color: 'black' }}>100%</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.medical3 && errors.medical3.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.medical4}>
+                        <FormControl>
                             <FormLabel htmlFor="medical4" w='95%'>Does your company cover dependents (spouse, children) under its medical insurance plan?</FormLabel>
-                            <Select id="medical4" {...register("medical4", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="medical4" {...register("medical4")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
                                 <option value='0' style={{ color: 'black' }}>No, we do not offer coverage for dependents</option>
                                 <option value='1' style={{ color: 'black' }}>Yes, we offer dependent coverage, but the employee is responsible for 100% of the premium costs for dependents</option>
-                                <option value='1' style={{ color: 'black' }}>Yes, we cover a portion of the premium costs for dependents. The employee is responsible for the remainder</option>
-                                <option value='1' style={{ color: 'black' }}>Yes, we cover 100% of the premium costs for dependents</option>
+                                <option value='2' style={{ color: 'black' }}>Yes, we cover a portion of the premium costs for dependents. The employee is responsible for the remainder</option>
+                                <option value='3' style={{ color: 'black' }}>Yes, we cover 100% of the premium costs for dependents</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.medical4 && errors.medical4.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.medical5}>
+                        <FormControl>
                             <FormLabel htmlFor="medical5" w='95%'> Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?</FormLabel>
-                            <Select id="medical5" {...register("medical5", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="medical5" {...register("medical5")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>No Coverage: We do not offer life insurance benefits to our employees</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
+                                <option value='0' style={{ color: 'black' }}>No Coverage: We do not offer life insurance benefits to employees</option>
                                 <option value='1' style={{ color: 'black' }}>Basic Coverage: We offer life insurance that covers the employee for an amount equivalent to their annual salary</option>
                                 <option value='2' style={{ color: 'black' }}>Enhanced Coverage: We offer life insurance that covers the employee for an amount equivalent to double their annual salary</option>
                                 <option value='3' style={{ color: 'black' }}>Premium Coverage: We offer life insurance that covers the employee for an amount equivalent to triple their annual salary or more</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.medical5 && errors.medical5.message}
-                            </FormErrorMessage>
                         </FormControl>
                         <HStack alignSelf='end' mr='5%'>
                             <Button
@@ -487,13 +473,13 @@ const EmployerProfileBuilderRightContent = ({
                     <Text fontWeight='bold' mb={[3, 4, 5]} fontSize={['lg', 'xl', '2xl']}>Paid Time Off</Text>
                     <Divider mb={5} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
-                        <FormControl isInvalid={errors.pto1}>
+                        <FormControl>
                             <FormLabel htmlFor="pto1" w='95%'>How many days of paid time off (PTO) are new employees entitled to annually?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
-                            <Select id="pto1" {...register("pto1", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="pto1" {...register("pto1")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
                                 <option value='0' style={{ color: 'black' }}>We do not offer PTO</option>
                                 <option value='1' style={{ color: 'black' }}>Less than 10 days</option>
                                 <option value='2' style={{ color: 'black' }}>10-15 days</option>
@@ -503,47 +489,38 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='6' style={{ color: 'black' }}>31-35 days</option>
                                 <option value='7' style={{ color: 'black' }}>Unlimited; practically accceptable to take more than 35 days. </option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.pto1 && errors.pto1.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.pto2}>
+                        <FormControl>
                             <FormLabel htmlFor="pto2" w='95%'>How is PTO accrued at your company?</FormLabel>
-                            <Select id="pto2" {...register("pto2", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="pto2" {...register("pto2")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>Start from Zero: Employees start with zero PTO and earn more with each pay period</option>
-                                <option value='1' style={{ color: 'black' }}>Baseline Accrual: Employees start with a set amount of PTO and accrue more throughout their tenure </option>
-                                <option value='2' style={{ color: 'black' }}>All up front: Employees receive all PTO for the year at the start of their employment</option>
-                                <option value='3' style={{ color: 'black' }}>Unlimited: We have an unlimited PTO policy; this question does not apply</option>
+                                <option value="0" style={{ color: 'black' }}>N/A</option>
+                                <option value='1' style={{ color: 'black' }}>Start from Zero: Employees start with zero PTO and earn more with each pay period</option>
+                                <option value='2' style={{ color: 'black' }}>Baseline Accrual: Employees start with a set amount of PTO and accrue more throughout their tenure </option>
+                                <option value='3' style={{ color: 'black' }}>All up front: Employees receive all PTO for the year at the start of their employment</option>
+                                <option value='4' style={{ color: 'black' }}>Unlimited: We have an unlimited PTO policy; this question does not apply</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.pto2 && errors.pto2.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.pto3}>
+                        <FormControl>
                             <FormLabel htmlFor="pto3" w='95%'>What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?</FormLabel>
 
-                            <Select id="pto3" {...register("pto3", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="pto3" {...register("pto3")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
-                                <option value='0' style={{ color: 'black' }}>No Restrictions: New employees can take PTO at any time, without restrictions</option>
-                                <option value='1' style={{ color: 'black' }}>Holiday Blackout Dates: New employees cannot take PTO during major holidays</option>
-                                <option value='2' style={{ color: 'black' }}>Seasonal Peak Business Blackout Dates: New employees cannot take PTO during our peak business seasons</option>
-                                <option value='3' style={{ color: 'black' }}>Holiday and Peak Business Blackout Dates: New employees cannot take PTO during major holidays or our peak business seasons</option>
+                                <option value="0" style={{ color: 'black' }}>N/A</option>
+                                <option value='1' style={{ color: 'black' }}>No Restrictions: New employees can take PTO at any time, without restrictions</option>
+                                <option value='2' style={{ color: 'black' }}>Holiday Blackout Dates: New employees cannot take PTO during major holidays</option>
+                                <option value='3' style={{ color: 'black' }}>Seasonal Peak Business Blackout Dates: New employees cannot take PTO during our peak business seasons</option>
+                                <option value='4' style={{ color: 'black' }}>Holiday and Peak Business Blackout Dates: New employees cannot take PTO during major holidays or our peak business seasons</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.pto3 && errors.pto3.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.pto4}>
+                        <FormControl>
                             <FormLabel htmlFor="pto4" w='95%'>What is your company's maternity / paternity leave policy?</FormLabel>
-                            <Select id="pto4" {...register("pto4", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="pto4" {...register("pto4")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
                                 <option value='0' style={{ color: 'black' }}>No Paid Leave</option>
                                 <option value='1' style={{ color: 'black' }}>Up to 2 Weeks Paid Leave</option>
                                 <option value='2' style={{ color: 'black' }}>3-4 Weeks Paid Leave</option>
@@ -551,9 +528,6 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='4' style={{ color: 'black' }}>9-12 Weeks Paid Leave</option>
                                 <option value='5' style={{ color: 'black' }}>More than 12 Weeks Paid Leave</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.pto4 && errors.pto4.message}
-                            </FormErrorMessage>
                         </FormControl>
                         <HStack alignSelf='end' mr='5%'>
                             <Button
@@ -586,26 +560,23 @@ const EmployerProfileBuilderRightContent = ({
                     <Text fontWeight='bold' fontSize={['lg', 'xl', '2xl']}>401k and Savings</Text>
                     <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
-                        <FormControl isInvalid={errors.financial1}>
+                        <FormControl>
                             <FormLabel htmlFor="financial1" w='95%'>Does your company offer a 401k program? </FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
-                            <Select id="financial1" {...register("financial1", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="financial1" {...register("financial1")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
                                 <option value='0' style={{ color: 'black' }}>No</option>
                                 <option value='1' style={{ color: 'black' }}>Yes</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.financial1 && errors.financial1.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.financial2}>
+                        <FormControl>
                             <FormLabel htmlFor="financial2" w='95%'>What percentage does your company match for employee 401k contributions?</FormLabel>
-                            <Select id="financial2" {...register("financial2", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="financial2" {...register("financial2")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
                                 <option value='0' style={{ color: 'black' }}>We do not offer a 401k match</option>
                                 <option value='1' style={{ color: 'black' }}>Less than 1%</option>
                                 <option value='2' style={{ color: 'black' }}>1% - 2%</option>
@@ -615,17 +586,14 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='6' style={{ color: 'black' }}>More than 8%</option>
                                 <option value='7' style={{ color: 'black' }}>We offer a full (100%) match</option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.financial2 && errors.financial2.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.financial3}>
+                        <FormControl>
                             <FormLabel htmlFor="financial3" w='95%'>What is the annual dollar amount of student loan reimbursement your company offers?</FormLabel>
 
-                            <Select id="financial3" {...register("financial3", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="financial3" {...register("financial3")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
                                 <option value='0' style={{ color: 'black' }}>No Assistance</option>
                                 <option value='1' style={{ color: 'black' }}>$1 - $500</option>
                                 <option value='2' style={{ color: 'black' }}>$501 - $1,000</option>
@@ -633,16 +601,13 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='4' style={{ color: 'black' }}>$2,001 - $3,000</option>
                                 <option value='5' style={{ color: 'black' }}>$3000+ </option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.financial3 && errors.financial3.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <FormControl isInvalid={errors.financial4}>
+                        <FormControl>
                             <FormLabel htmlFor="financial4" w='95%'>Does your company offer a learning and development allowance? If yes, how much is it annually?</FormLabel>
-                            <Select id="financial4" {...register("financial4", { required: "This is required" })} w='95%' alignSelf='center'
-                                defaultValue={""}
+                            <Select id="financial4" {...register("financial4")} w='95%' alignSelf='center'
+                                defaultValue={"0"}
                             >
-                                <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                                {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
                                 <option value='0' style={{ color: 'black' }}>No Allowance</option>
                                 <option value='1' style={{ color: 'black' }}>$1 - $500</option>
                                 <option value='2' style={{ color: 'black' }}>$501 - $1,000</option>
@@ -650,27 +615,24 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='4' style={{ color: 'black' }}>$2,001 - $3,000</option>
                                 <option value='5' style={{ color: 'black' }}>$3000+ </option>
                             </Select>
-                            <FormErrorMessage>
-                                {errors.financial4 && errors.financial4.message}
-                            </FormErrorMessage>
                         </FormControl>
-                        <HStack alignSelf='end' mr='5%'>
+                        <HStack alignSelf='end' mr='5%' key={`isValid:${isValid}`}>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant={(canSubmit) ? 'outline' : 'solid'}
+                                variant={(isValid) ? 'outline' : 'solid'}
                             >
                                 <Text>Back</Text>
                             </Button>
                             {(isAuthenticated) && <Button //Shoudl redo this with disabled styling for the button instead of these conditionals
                                 // bg="#5DFC89"
                                 key={userInfo.length}
-                                bg={(canSubmit) ? '#5DFC89' : 'grey'}
-                                colorScheme={(canSubmit) ? 'teal' : 'grey'}
+                                bg={(isValid) ? '#5DFC89' : 'grey'}
+                                colorScheme={(isValid) ? 'teal' : 'grey'}
                                 isLoading={isSubmitting}
                                 type="submit"
-                                isDisabled={!canSubmit}
+                                isDisabled={!isValid}
                             // onClick={saveEmployerProfile}
                             >
 
