@@ -18,7 +18,7 @@ function DropdownMenu({ returnURL }) {
                 <MenuItem>
                     <SimpleGrid columns={2} spacing={3}>
                         <Text>Dark Mode</Text>
-                        <Switch colorScheme='blue' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
+                        <Switch colorScheme='blue' id='darkModeSwitch' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
                     </SimpleGrid>
                 </MenuItem>
                 {isAuthenticated && <MenuItem onClick={() => logout({

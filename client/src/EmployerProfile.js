@@ -24,6 +24,13 @@ import './App.css';
 import DropdownMenu from './DropdownMenu';
 import { DeleteIcon } from '@chakra-ui/icons';
 
+
+const requiredFields = ['companyname', 'website', 'companysize',
+    'office1',
+    'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
+    'pto1', 'pto2', 'pto3', 'pto4',
+    'financial1', 'financial2', 'financial3', 'financial4'
+];
 // const deployURL = 'https://goldfishai.netlify.app';
 
 const subTabs = [
@@ -98,6 +105,7 @@ const EmployerProfileBuilderRightContent = ({
     apiURL,
     companyLogo,
     setCompanyLogo,
+    handleInputChange,
 }) => {
 
     const {
@@ -106,6 +114,7 @@ const EmployerProfileBuilderRightContent = ({
         watch,
         setError,
         formState: { errors, isSubmitting, isValid },
+        // formState,
         reset // reset method from useForm to update defaultValues
     } = useForm({ defaultValues: userInfo, mode: 'onChange' });
     const [isSavingProfile, setIsSavingProfile] = useState(false);
@@ -118,12 +127,12 @@ const EmployerProfileBuilderRightContent = ({
     const currentIndex = subTabs.indexOf(selectedSubTab);
     const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
     const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
-    const requiredFields = ['companyname', 'website', 'companysize',
-        'office1',
-        'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
-        'pto1', 'pto2', 'pto3', 'pto4',
-        'financial1', 'financial2', 'financial3', 'financial4'
-    ];
+    // const requiredFields = ['companyname', 'website', 'companysize',
+    //     'office1',
+    //     'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
+    //     'pto1', 'pto2', 'pto3', 'pto4',
+    //     'financial1', 'financial2', 'financial3', 'financial4'
+    // ];
 
     const onSubmit = (data) => {
         setUserInfo(prev => ({ ...prev, ...data }));
@@ -134,29 +143,32 @@ const EmployerProfileBuilderRightContent = ({
         }
     };
 
+    /*
     const saveEmployerProfile = (data) => {
         const newUserInfo = { ...userInfo, ...data };
         setUserInfo(newUserInfo);
         // console.log('saving employer profile...');
         // console.log('userInfo:', userInfo);
+        // console.log('data', data);
         sendSaveEmployerProfile(newUserInfo);
 
     };
-    const sendSaveEmployerProfile = useCallback((newUserInfo) => {
+    */
+    const saveEmployerProfile = useCallback(() => {
         setIsSavingProfile(true);
-        console.log('trying to save employer profile', newUserInfo);
-        console.log('isValid:', isValid);
+        // console.log('trying to save employer profile', newUserInfo);
+        // console.log('isValid:', isValid);
 
         // Create FormData to send files
         const formData = new FormData();
 
         // If there's a file, add it to the FormData
-        if (newUserInfo.logo && newUserInfo.logo.length > 0) {
-            formData.append("logo", newUserInfo.logo[0]);
+        if (userInfo.logo && userInfo.logo.length > 0) {
+            formData.append("logo", userInfo.logo[0]);
         }
 
         // Convert the rest of the userInfo into a JSON string and add it to the FormData
-        const userInfoWithoutLogo = { ...newUserInfo };
+        const userInfoWithoutLogo = { ...userInfo };
         delete userInfoWithoutLogo.logo;
         // formData.append("userInfo", JSON.stringify(userInfoWithoutLogo));
 
@@ -188,7 +200,23 @@ const EmployerProfileBuilderRightContent = ({
                 console.error(e); // This will log any errors to the console.
                 setIsSavingProfile(false);
             });
-    }, [user, apiURL, setCompanyLogo]);
+    }, [user, userInfo, apiURL, setCompanyLogo]);
+
+    //function to go through all required fields and check if they are filled in.
+    // Returns true if all are filled in, false otherwise.
+    const requiredFieldsValid = () => {
+        console.log('checking required fields');
+        for (let i = 0; i < requiredFields.length; i++) {
+            if (!hasFieldFilled(userInfo, requiredFields[i])) {
+                setCanSubmit(false);
+                console.log('required field not filled in:', requiredFields[i]);
+                return false;
+            }
+        }
+        console.log('all required fields filled in');
+        setCanSubmit(true);
+        return true;
+    };
 
     const imageValidationRule = {
         validate: async (fileList) => {
@@ -208,29 +236,23 @@ const EmployerProfileBuilderRightContent = ({
         }
     };
 
+
     useEffect(() => {
-        // console.log('userinfo', userInfo);
+        // console.log('userinfo2', userInfo);
         reset(userInfo);
 
-    }, [userInfo, reset]);
+    }, [userInfo, reset,]);
 
     useEffect(() => {
         // Loop through all required fields before the last page, so excluding financial1-4,
         // from the form and check if they are filled in to userInfo.
         // If they are not then set canSubmit to false. Otherwise set it to true.
-        // console.log('checking canSubmit', canSubmit);
-        for (let i = 0; i < requiredFields.length - 4; i++) {
-            if (!hasFieldFilled(userInfo, requiredFields[i])) {
-                setCanSubmit(false);
-                // console.log('set canSubmit: false', isValid);
-                // console.log('set canSubmit: false');
-                return;
-            }
+        if (requiredFieldsValid(userInfo)) {
+            setCanSubmit(true);
         }
-        // console.log('set canSubmit: true', isValid);
-        setCanSubmit(true);
-
-        // console.log('set canSubmit: true');
+        else {
+            setCanSubmit(false);
+        }
     }, [userInfo]);
 
     useEffect(() => {
@@ -268,14 +290,14 @@ const EmployerProfileBuilderRightContent = ({
                         <FormControl isInvalid={errors.companyname}>
                             {/* {companyLogo && <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />} */}
                             <FormLabel htmlFor="companyname" w='95%'>Company Name or DBA</FormLabel>
-                            <Input id="companyname" {...register("companyname", { required: "This is required" })} w='95%' alignSelf='center' />
+                            <Input id="companyname" {...register("companyname", { required: "This is required" })} onChange={handleInputChange} w='95%' alignSelf='center' />
                             <FormErrorMessage>
                                 {errors.companyname && errors.companyname.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl isInvalid={errors.website}>
                             <FormLabel htmlFor="website" w='95%'>Website</FormLabel>
-                            <Input id="website" {...register("website", { required: "This is required" })} w='95%' alignSelf='center' />
+                            <Input id="website" {...register("website", { required: "This is required" })} onChange={handleInputChange} w='95%' alignSelf='center' />
                             <FormErrorMessage>
                                 {errors.website && errors.website.message}
                             </FormErrorMessage>
@@ -286,7 +308,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl isInvalid={errors.companysize}>
                             <FormLabel htmlFor="companysize" w='95%'>Considering the continuum from botique law firms to the AmLaw100, how would you describe your firm?</FormLabel>
-                            <Select id="companysize" {...register("companysize", { required: "This is required" })} w='95%' alignSelf='center'
+                            <Select id="companysize" {...register("companysize", { required: "This is required" })} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={""}
                             >
                                 <option value="" disabled style={{ color: 'black' }}>Select your option</option>
@@ -303,6 +325,12 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl isInvalid={errors.logo}>
                             <FormLabel htmlFor="logo" w='95%'>Please upload your law firm logo (Recommended)</FormLabel>
+                            {companyLogo && <HStack w='100%'>
+                                <Text>Previously added: </Text>
+                                <Avatar src={`data:image/png;base64,${companyLogo}`} alt='Profile' borderRadius='full' boxSize={45} />
+                            </HStack>
+
+                            }
                             <Input type="file" id="logo" accept="image/*" {...register("logo", imageValidationRule)} w='95%' p={2} alignSelf='center' />
                             {errors.logo && <FormErrorMessage>{errors.logo.message}</FormErrorMessage>}
                         </FormControl>
@@ -338,18 +366,18 @@ const EmployerProfileBuilderRightContent = ({
                     <VStack spacing={4} pl={['5', '15', '25']} alignItems='start' w='100%'>
                         <FormControl isInvalid={errors.office1}>
                             <FormLabel htmlFor="office1" w='95%'>HQ (Main Office)</FormLabel>
-                            <Input id="office1" {...register("office1", { required: "This is required" })} w='95%' alignSelf='center' />
+                            <Input id="office1" {...register("office1", { required: "This is required" })} onChange={handleInputChange} w='95%' alignSelf='center' />
                             <FormErrorMessage>
                                 {errors.office1 && errors.office1.message}
                             </FormErrorMessage>
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="office2" w='95%'>Office Hub 2 (Optional)</FormLabel>
-                            <Input id="office2" {...register("office2")} w='95%' alignSelf='center' />
+                            <Input id="office2" {...register("office2")} onChange={handleInputChange} w='95%' alignSelf='center' />
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="office3" w='95%'>Office Hub 3 (Optional)</FormLabel>
-                            <Input id="office3" {...register("office3")} w='95%' alignSelf='center' />
+                            <Input id="office3" {...register("office3")} onChange={handleInputChange} w='95%' alignSelf='center' />
                         </FormControl>
                         <HStack alignSelf='end' mr='5%'>
                             <Button
@@ -384,7 +412,7 @@ const EmployerProfileBuilderRightContent = ({
                         <FormControl>
                             <FormLabel htmlFor="medical1" w='95%'>What percentage of health insurance premium costs does your company cover for your employees?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
-                            <Select id="medical1" {...register("medical1")} w='95%' alignSelf='center'
+                            <Select id="medical1" {...register("medical1")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 <option value="0" style={{ color: 'black' }}>None</option>
@@ -396,7 +424,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="medical2" w='95%'>What percentage of dental insurance premium costs does your company cover for your employees?</FormLabel>
-                            <Select id="medical2" {...register("medical2")} w='95%' alignSelf='center'
+                            <Select id="medical2" {...register("medical2")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 <option value="0" style={{ color: 'black' }}>None</option>
@@ -408,7 +436,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="medical3" w='95%'>What percentage of vision insurance premium costs does your company cover for your employees?</FormLabel>
-                            <Select id="medical3" {...register("medical3")} w='95%' alignSelf='center'
+                            <Select id="medical3" {...register("medical3")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 <option value="0" style={{ color: 'black' }}>None</option>
@@ -422,7 +450,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="medical4" w='95%'>Does your company cover dependents (spouse, children) under its medical insurance plan?</FormLabel>
-                            <Select id="medical4" {...register("medical4")} w='95%' alignSelf='center'
+                            <Select id="medical4" {...register("medical4")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 <option value='0' style={{ color: 'black' }}>No, we do not offer coverage for dependents</option>
@@ -433,7 +461,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="medical5" w='95%'> Does your company provide life insurance benefits to its employees? If yes, how would you characterize the coverage?</FormLabel>
-                            <Select id="medical5" {...register("medical5")} w='95%' alignSelf='center'
+                            <Select id="medical5" {...register("medical5")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -476,7 +504,7 @@ const EmployerProfileBuilderRightContent = ({
                         <FormControl>
                             <FormLabel htmlFor="pto1" w='95%'>How many days of paid time off (PTO) are new employees entitled to annually?</FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
-                            <Select id="pto1" {...register("pto1")} w='95%' alignSelf='center'
+                            <Select id="pto1" {...register("pto1")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -492,7 +520,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="pto2" w='95%'>How is PTO accrued at your company?</FormLabel>
-                            <Select id="pto2" {...register("pto2")} w='95%' alignSelf='center'
+                            <Select id="pto2" {...register("pto2")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 <option value="0" style={{ color: 'black' }}>N/A</option>
@@ -505,7 +533,7 @@ const EmployerProfileBuilderRightContent = ({
                         <FormControl>
                             <FormLabel htmlFor="pto3" w='95%'>What restrictions, if any, apply to new employees taking Paid Time Off (PTO)?</FormLabel>
 
-                            <Select id="pto3" {...register("pto3")} w='95%' alignSelf='center'
+                            <Select id="pto3" {...register("pto3")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 <option value="0" style={{ color: 'black' }}>N/A</option>
@@ -517,7 +545,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="pto4" w='95%'>What is your company's maternity / paternity leave policy?</FormLabel>
-                            <Select id="pto4" {...register("pto4")} w='95%' alignSelf='center'
+                            <Select id="pto4" {...register("pto4")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -563,7 +591,7 @@ const EmployerProfileBuilderRightContent = ({
                         <FormControl>
                             <FormLabel htmlFor="financial1" w='95%'>Does your company offer a 401k program? </FormLabel>
                             {/* <Input id="medical1" {...register("medical1")} w='95%' alignSelf='center' /> */}
-                            <Select id="financial1" {...register("financial1")} w='95%' alignSelf='center'
+                            <Select id="financial1" {...register("financial1")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -573,7 +601,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="financial2" w='95%'>What percentage does your company match for employee 401k contributions?</FormLabel>
-                            <Select id="financial2" {...register("financial2")} w='95%' alignSelf='center'
+                            <Select id="financial2" {...register("financial2")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -590,7 +618,7 @@ const EmployerProfileBuilderRightContent = ({
                         <FormControl>
                             <FormLabel htmlFor="financial3" w='95%'>What is the annual dollar amount of student loan reimbursement your company offers?</FormLabel>
 
-                            <Select id="financial3" {...register("financial3")} w='95%' alignSelf='center'
+                            <Select id="financial3" {...register("financial3")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -604,7 +632,7 @@ const EmployerProfileBuilderRightContent = ({
                         </FormControl>
                         <FormControl>
                             <FormLabel htmlFor="financial4" w='95%'>Does your company offer a learning and development allowance? If yes, how much is it annually?</FormLabel>
-                            <Select id="financial4" {...register("financial4")} w='95%' alignSelf='center'
+                            <Select id="financial4" {...register("financial4")} onChange={handleInputChange} w='95%' alignSelf='center'
                                 defaultValue={"0"}
                             >
                                 {/* <option value="" disabled style={{ color: 'black' }}>Select your option</option> */}
@@ -616,23 +644,23 @@ const EmployerProfileBuilderRightContent = ({
                                 <option value='5' style={{ color: 'black' }}>$3000+ </option>
                             </Select>
                         </FormControl>
-                        <HStack alignSelf='end' mr='5%' key={`isValid:${isValid}`}>
+                        <HStack alignSelf='end' mr='5%' key={`cansubmit:${canSubmit}`}>
                             <Button
                                 colorScheme="teal"
                                 isDisabled={!prevSubTab}
                                 onClick={() => prevSubTab && setSelectedSubTab(prevSubTab)}
-                                variant={(isValid) ? 'outline' : 'solid'}
+                                variant={(canSubmit) ? 'outline' : 'solid'}
                             >
                                 <Text>Back</Text>
                             </Button>
                             {(isAuthenticated) && <Button //Shoudl redo this with disabled styling for the button instead of these conditionals
                                 // bg="#5DFC89"
                                 key={userInfo.length}
-                                bg={(isValid) ? '#5DFC89' : 'grey'}
-                                colorScheme={(isValid) ? 'teal' : 'grey'}
+                                bg={(canSubmit) ? '#5DFC89' : 'grey'}
+                                colorScheme={(canSubmit) ? 'teal' : 'grey'}
                                 isLoading={isSubmitting}
                                 type="submit"
-                                isDisabled={!isValid}
+                                isDisabled={!canSubmit}
                             // onClick={saveEmployerProfile}
                             >
 
@@ -1066,7 +1094,31 @@ function EmployerProfile({ returnURL }) {
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
     const [selectedJobPosting, setSelectedJobPosting] = useState(-1);
-    const [userInfo, setUserInfo] = useState({});
+    // const [userInfo, setUserInfo] = useState({});
+    const [userInfo, setUserInfo] = useState({
+        companyname: "",
+        website: "",
+        linkedin: "",
+        companysize: "",
+        // logo: "",
+        office1: "",
+        office2: "",
+        office3: "",
+        medical1: "",
+        medical2: "",
+        medical3: "",
+        medical4: "",
+        medical5: "",
+        pto1: "",
+        pto2: "",
+        pto3: "",
+        pto4: "",
+        financial1: "",
+        financial2: "",
+        financial3: "",
+        financial4: "",
+    });
+    const [showErrors, setShowErrors] = useState(false);
     const [companyLogo, setCompanyLogo] = useState(null);
     // const [userType, setUserType] = useState('');
     const [jobs, setJobs] = useState({
@@ -1075,6 +1127,11 @@ function EmployerProfile({ returnURL }) {
     });
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');
+
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        setUserInfo(prev => ({ ...prev, [id]: value }));
+    };
 
     // Function getEmployerProfile will be called when the component mounts and will retrieve the user's 
     // employer profile from the database using an api call to /api/getEmployerProfile
@@ -1217,8 +1274,9 @@ function EmployerProfile({ returnURL }) {
                             fontSize={['2xs', 'xs', 'sm', 'md', 'lg']}
                             whiteSpace={'normal'}
                             p={[2, 4, 6]}
+                            color='white'
                         >
-                            <Text>Employer Profile</Text>
+                            <Text>Firm Profile</Text>
                         </Button>
                         <Button
                             // Make the button text wrap
@@ -1281,6 +1339,7 @@ function EmployerProfile({ returnURL }) {
                         apiURL={apiURL}
                         companyLogo={companyLogo}
                         setCompanyLogo={setCompanyLogo}
+                        handleInputChange={handleInputChange}
                     />}
                     {selectedTab === 'Job Postings' && <JobPostingsRightContent
                         apiURL={apiURL}
@@ -1289,6 +1348,7 @@ function EmployerProfile({ returnURL }) {
                         selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobPosting}
                         getUserJobPostings={getUserJobPostings}
+
                     />}
                     {/* {selectedTab === 'Account Settings' && <AccountSettingsRightContent />} */}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
