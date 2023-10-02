@@ -118,7 +118,7 @@ const EmployerProfileBuilderRightContent = ({
     const currentIndex = subTabs.indexOf(selectedSubTab);
     const nextSubTab = currentIndex < subTabs.length - 1 ? subTabs[currentIndex + 1] : null;
     const prevSubTab = currentIndex > 0 ? subTabs[currentIndex - 1] : null;
-    const requiredFields = ['companyname', 'website', 'companysize', 'producttype',
+    const requiredFields = ['companyname', 'website', 'companysize',
         'office1',
         'medical1', 'medical2', 'medical3', 'medical4', 'medical5',
         'pto1', 'pto2', 'pto3', 'pto4',
@@ -220,11 +220,14 @@ const EmployerProfileBuilderRightContent = ({
         for (let i = 0; i < requiredFields.length - 4; i++) {
             if (!hasFieldFilled(userInfo, requiredFields[i])) {
                 setCanSubmit(false);
+                // console.log('set canSubmit: false', isValid);
                 // console.log('set canSubmit: false');
                 return;
             }
         }
+        // console.log('set canSubmit: true', isValid);
         setCanSubmit(true);
+
         // console.log('set canSubmit: true');
     }, [userInfo]);
 
@@ -764,9 +767,9 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
         register,
         handleSubmit,
         setError,
-        formState: { errors, isSubmitting },
+        formState: { errors, isSubmitting, isValid },
         reset // reset method from useForm to update defaultValues
-    } = useForm({});
+    } = useForm();
     const [isSaving, setIsSaving] = useState(false);
     const { user } = useAuth0();
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -990,9 +993,9 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                             {errors.visa && errors.visa.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <FormControl isInvalid={errors.travel}>
+                    <FormControl >
                         <FormLabel htmlFor="travel" w='95%'>What level of travel is required in this role for client meetings, events, etc.?</FormLabel>
-                        <Select id="travel" {...register("travel", { required: "This is required" })} w='95%' alignSelf='center'
+                        <Select id="travel" {...register("travel")} w='95%' alignSelf='center'
                             defaultValue={""}
                         >
                             <option value="" disabled style={{ color: 'black' }}>Select your option</option>
@@ -1003,9 +1006,6 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                             <option value='4' style={{ color: 'black' }}>This role requires frequent travel (50-75% of the time)</option>
                             <option value='4' style={{ color: 'black' }}>This role requires significant travel (more than 75% of the time)</option>
                         </Select>
-                        <FormErrorMessage>
-                            {errors.travel && errors.travel.message}
-                        </FormErrorMessage>
                     </FormControl>
                     <FormControl >
                         <FormLabel htmlFor="active">Active</FormLabel>
@@ -1018,6 +1018,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                         // isLoading={isSubmitting}
                         isLoading={isSaving || isSubmitting}
                         type="submit"
+                        isDisabled={!isValid}
                     >
                         <Text>Save</Text>
                     </Button>
@@ -1076,7 +1077,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
     );
 }
 
-
+/*
 function AccountSettingsContent() {
     return <Box>Account Settings Content</Box>;
 }
@@ -1084,6 +1085,7 @@ function AccountSettingsContent() {
 function AccountSettingsRightContent() {
     return <Box>Account Settings Right Content</Box>;
 }
+*/
 
 function MatchesContent() {
     return <Box>Matches Content</Box>;
@@ -1200,7 +1202,7 @@ function EmployerProfile({ returnURL }) {
             display='flex'
             flexDirection='column'
             minHeight='100vh'>
-            <Box bg='#051672' display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem' borderBottom='1px solid gray'>
+            <Box bg="linear-gradient(270deg, rgba(26,38,95,255) 50%, rgba(30,85,93,255) 90.0%)" display='flex' justifyContent='space-between' alignItems='end' padding='1.5rem' borderBottom='1px solid gray'>
                 <HStack alignItems='baseline' p={0} >
                     <Image
                         borderRadius='25%'
@@ -1269,7 +1271,7 @@ function EmployerProfile({ returnURL }) {
                         >
                             <Text p={5}>Job Postings</Text>
                         </Button>
-                        <Button
+                        {/* <Button
                             w='80%'
                             variant={selectedTab === "Account Settings" ? "solid" : "outline"}
                             colorScheme="blue"
@@ -1280,7 +1282,7 @@ function EmployerProfile({ returnURL }) {
                             color='white'
                         >
                             <Text>Account Settings</Text>
-                        </Button>
+                        </Button> */}
                         <Button
                             w='80%'
                             variant={selectedTab === "Matches" ? "solid" : "outline"}
@@ -1303,7 +1305,7 @@ function EmployerProfile({ returnURL }) {
                         jobs={jobs}
                         setJobs={setJobs}
                     />}
-                    {selectedTab === 'Account Settings' && <AccountSettingsContent />}
+                    {/* {selectedTab === 'Account Settings' && <AccountSettingsContent />} */}
                     {selectedTab === 'Matches' && <MatchesContent />}
                 </Box>
                 <Spacer bg='gray' boxSize='10px' />
@@ -1326,7 +1328,7 @@ function EmployerProfile({ returnURL }) {
                         setSelectedJobListing={setSelectedJobPosting}
                         getUserJobPostings={getUserJobPostings}
                     />}
-                    {selectedTab === 'Account Settings' && <AccountSettingsRightContent />}
+                    {/* {selectedTab === 'Account Settings' && <AccountSettingsRightContent />} */}
                     {selectedTab === 'Matches' && <MatchesRightContent />}
                 </Box>
             </Flex>}
