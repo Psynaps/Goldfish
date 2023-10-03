@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
 import {
-    Box, Flex, HStack, Button, Spacer, Select, VStack, IconButton, Text, Avatar, Spinner, Circle, Image, Heading, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
+    Box, Flex, HStack, Button, Spacer, Select, VStack, Icon, IconButton, Text, Avatar, Spinner, Circle, Image, Heading, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogHeader,
@@ -14,7 +14,7 @@ import { useSearchParams } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-import { useForm } from "react-hook-form";
+import { set, useForm } from "react-hook-form";
 import axios from 'axios';
 // import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
 import { useAuth0 } from '@auth0/auth0-react';
@@ -22,8 +22,14 @@ import { LoginButton } from './LoginButton';
 import goldfishLogo from './images/logo.svg';
 import './App.css';
 import DropdownMenu from './DropdownMenu';
-import { DeleteIcon } from '@chakra-ui/icons';
+import { DeleteIcon, CheckIcon } from '@chakra-ui/icons';
 
+// enum for submitted status: 0 = not submitted, 1 = submitted, 2 = error
+const submittedStatus = {
+    NOT_SUBMITTED: 0,
+    SUBMITTED: 1,
+    ERROR: 2,
+};
 
 const requiredFields = ['companyname', 'website', 'companysize',
     'office1',
@@ -113,13 +119,14 @@ const EmployerProfileBuilderRightContent = ({
         handleSubmit,
         watch,
         setError,
-        formState: { errors, isSubmitting, isValid },
+        formState: { errors, isSubmitting },
         // formState,
         reset // reset method from useForm to update defaultValues
     } = useForm({ defaultValues: userInfo, mode: 'onChange' });
     const [isSavingProfile, setIsSavingProfile] = useState(false);
     const { isAuthenticated, user } = useAuth0();
     const [canSubmit, setCanSubmit] = useState(false);
+    const [formSubmitted, setFormSubmitted] = useState(false);
     const watchLogo = watch('logo', []);
 
 
@@ -196,9 +203,11 @@ const EmployerProfileBuilderRightContent = ({
                 setCompanyLogo(json.companyLogo);
                 // console.log('logo:', logo);
                 setIsSavingProfile(false);
+                setFormSubmitted(submittedStatus.SUBMITTED);
             }).catch(e => {
                 console.error(e); // This will log any errors to the console.
                 setIsSavingProfile(false);
+                setFormSubmitted(submittedStatus.ERROR);
             });
     }, [user, userInfo, apiURL, setCompanyLogo]);
 
@@ -220,6 +229,7 @@ const EmployerProfileBuilderRightContent = ({
 
     const imageValidationRule = {
         validate: async (fileList) => {
+            if (!fileList) return 'Error';
             const file = fileList[0];
             if (file) {
                 if (file.size > 2097152) {
@@ -247,6 +257,8 @@ const EmployerProfileBuilderRightContent = ({
         // Loop through all required fields before the last page, so excluding financial1-4,
         // from the form and check if they are filled in to userInfo.
         // If they are not then set canSubmit to false. Otherwise set it to true.
+        setFormSubmitted(false);
+        setFormSubmitted(submittedStatus.NOT_SUBMITTED);
         if (requiredFieldsValid(userInfo)) {
             setCanSubmit(true);
         }
@@ -657,16 +669,21 @@ const EmployerProfileBuilderRightContent = ({
                                 // bg="#5DFC89"
                                 key={userInfo.length}
                                 bg={(canSubmit) ? '#5DFC89' : 'grey'}
-                                colorScheme={(canSubmit) ? 'teal' : 'grey'}
+                                colorScheme={(canSubmit) ? 'green' : 'grey'}
                                 isLoading={isSubmitting}
                                 type="submit"
                                 isDisabled={!canSubmit}
+                                minWidth='50%'
+                            // w='100%'
                             // onClick={saveEmployerProfile}
                             >
+                                {formSubmitted ? <Icon as={CheckIcon} /> :
 
-                                <Text>Complete Profile</Text>
+                                    <Text>Complete Profile</Text>
+                                }
                             </Button>}
-                            {(!isAuthenticated) && <Button isDisabled colorScheme='teal' width='auto'>
+
+                            {(!isAuthenticated) && <Button isDisabled colorScheme='green' width='auto'>
                                 <Text p={4}>Log in to Save</Text>
                             </Button>}
                         </HStack>
@@ -1104,26 +1121,26 @@ function EmployerProfile({ returnURL }) {
         office1: "",
         office2: "",
         office3: "",
-        medical1: "",
-        medical2: "",
-        medical3: "",
-        medical4: "",
-        medical5: "",
-        pto1: "",
-        pto2: "",
-        pto3: "",
-        pto4: "",
-        financial1: "",
-        financial2: "",
-        financial3: "",
-        financial4: "",
+        medical1: "0",
+        medical2: "0",
+        medical3: "0",
+        medical4: "0",
+        medical5: "0",
+        pto1: "0",
+        pto2: "0",
+        pto3: "0",
+        pto4: "0",
+        financial1: "0",
+        financial2: "0",
+        financial3: "0",
+        financial4: "0",
     });
     const [showErrors, setShowErrors] = useState(false);
     const [companyLogo, setCompanyLogo] = useState(null);
     // const [userType, setUserType] = useState('');
     const [jobs, setJobs] = useState({
-        2: { 'job_posting_id': 100, 'job_title': 'titleA', 'date_created': new Date('1 1 2020').toLocaleDateString(), 'active': true },
-        3: { 'job_posting_id': 101, 'job_title': 'titleB', 'date_created': new Date(1e12).toLocaleDateString(), 'active': false }
+        // 2: { 'job_posting_id': 100, 'job_title': 'titleA', 'date_created': new Date('1 1 2020').toLocaleDateString(), 'active': true },
+        // 3: { 'job_posting_id': 101, 'job_title': 'titleB', 'date_created': new Date(1e12).toLocaleDateString(), 'active': false }
     });
 
     const [apiURL] = useState((window.location.href.includes('localhost')) ? 'http://localhost:8080/api' : 'https://goldfishai-website.herokuapp.com/api');

@@ -159,4 +159,7 @@ Add support for post-registration call to database to add the user to user_profi
 - https://auth0.com/docs/customize/actions/flows-and-triggers/pre-user-registration-flow
 - Add logic in both pre-registration and postlogin (logincount == 1 and is social connection)
 
+Known bug: filling out employer profile form fully, then going to a tab of it and deleting a field (job title) then not pressing next, clicking button to skip to end tab, you are still allowed to complete profile (submit)
+- Reason is userInfo state only updates on pressing next. Probably has to be fully controlled form to avoid. 
 
+Financial options are not preselecting
