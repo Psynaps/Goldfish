@@ -15,7 +15,8 @@ import { Spinner, Box, Text, SimpleGrid, Button, Input, Heading, HStack, VStack,
 // const deployURL = 'https://goldfishai.netlify.app';
 
 // Filter questiondata to remove questionID's <= 100 (onboarding questions)
-const questionsData = questionsDataOriginal.filter(question => question.questionID >= 3);
+const questionsData = questionsDataOriginal.filter(question =>
+    question.questionID >= 3 && question.category !== 'HR Requirements');
 
 
 function EmployerPage(returnURL) {
@@ -46,7 +47,7 @@ function EmployerPage(returnURL) {
     // const jobPostingSelectedBorderColor = useColorModeValue('orange.500', 'orange.300');
     // const jobPostingSelectedBackground = useColorModeValue('orange.100', 'orange.760');
 
-    const categories = ['HR Requirements', 'Technical Skills', 'Legal Experience', 'Platform Workflows',];
+    const categories = ['E-Discovery', 'Legal Experience', 'Technical Skills', 'Software Workflows',];
 
     // const [message, setMessage] = useState(null);
     const [isPosting, setIsPosting] = useState(false);

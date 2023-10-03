@@ -181,7 +181,7 @@ app.get('/api/getJob', async (req, res) => {
 
 app.post('/api/postJobInfo', upload.none(), async (req, res) => {
     try {
-        const { user_id, job_title, location, salary, contract_term, work_from_home, visa, travel, active, job_posting_id } = req.body;
+        const { user_id, job_title, location, salary, hourly_rate, contract_term, flexibility, work_from_home, visa, travel, active, job_posting_id } = req.body;
         console.log("postJobInfo req received");
         // console.log(req.body);
 
@@ -195,20 +195,20 @@ app.post('/api/postJobInfo', upload.none(), async (req, res) => {
             return res.status(400).send({ error: 'Missing job_posting_id query parameter' });
         }
         if (job_posting_id == -1) {
-            const queryText = `INSERT INTO job_postings(user_id, job_title, job_location, salary, contract_term, work_from_home, visa, travel, active)
-                                VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9) 
+            const queryText = `INSERT INTO job_postings(user_id, job_title, job_location, salary, hourly_rate, contract_term, flexibility, work_from_home, visa, travel, active)
+                                VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) 
                                 RETURNING job_posting_id, date_created;`;
-            const queryValues = [user_id, job_title, location, salary, contract_term, work_from_home, visa, travel, active];
+            const queryValues = [user_id, job_title, location, salary, hourly_rate, contract_term, flexibility, work_from_home, visa, travel, active];
 
             const { rows } = await pool.query(queryText, queryValues);
             res.send({ success: true, job_posting_id: rows[0].job_posting_id, date_created: rows[0].date_created });
 
         } else {
-            const queryText = `UPDATE job_postings SET user_id = $1, job_title = $2, job_location = $3, salary = $4, contract_term = $5, work_from_home = $6, visa = $7, travel = $8,
-             active = $9 
-                                WHERE job_posting_id = $8 
+            const queryText = `UPDATE job_postings SET user_id = $1, job_title = $2, job_location = $3, salary = $4, 
+            hourly_rate = $5, contract_term = $6, flexibility = $7, work_from_home = $8, visa = $9, travel = $10, active = $11 
+                                WHERE job_posting_id = $12 
                                 RETURNING job_posting_id;`;
-            const queryValues = [user_id, job_title, location, salary, contract_term, work_from_home, visa, travel, active, job_posting_id];
+            const queryValues = [user_id, job_title, location, salary, hourly_rate, contract_term, flexibility, work_from_home, visa, travel, active, job_posting_id];
 
             const { rows } = await pool.query(queryText, queryValues);
             res.send({ success: true, job_posting_id: rows[0].job_posting_id });
@@ -222,6 +222,7 @@ app.post('/api/postJobInfo', upload.none(), async (req, res) => {
 
 app.get('/api/getUserJobPostings', async (req, res) => {
     const user_id = req.query.user_id;
+    console.log('test1');
     if (!user_id) {
         return res.status(400).send({ error: 'Missing user_id query parameter' });
     }
@@ -231,7 +232,7 @@ app.get('/api/getUserJobPostings', async (req, res) => {
 
         // Get job profile information
         const jobProfileQuery = {
-            text: 'SELECT job_posting_id, job_title, job_location, salary, contract_term, work_from_home, visa, travel, active, date_created FROM job_postings WHERE user_id = $1',
+            text: 'SELECT job_posting_id, job_title, job_location, salary, hourly_rate, contract_term, flexibility, work_from_home, visa, travel, active, date_created FROM job_postings WHERE user_id = $1',
             values: [user_id],
         };
         const result = await client.query(jobProfileQuery);
@@ -241,7 +242,7 @@ app.get('/api/getUserJobPostings', async (req, res) => {
         }
 
         // Construct the response object
-        const responseObject = result.rows.map((row) => { return { job_posting_id: row.job_posting_id, job_title: row.job_title, location: row.job_location, salary: row.salary, contract_term: row.contract_term, work_from_home: row.work_from_home, visa: row.visa, travel: row.travel, active: row.active, date_created: row.date_created }; });
+        const responseObject = result.rows.map((row) => { return { job_posting_id: row.job_posting_id, job_title: row.job_title, location: row.job_location, salary: row.salary, hourly_rate: row.hourly_rate, contract_term: row.contract_term, flexibility: row.flexibility, work_from_home: row.work_from_home, visa: row.visa, travel: row.travel, active: row.active, date_created: row.date_created }; });
         console.log(responseObject);
         console.log(JSON.stringify(responseObject));
         res.send(responseObject);

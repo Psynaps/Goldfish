@@ -171,7 +171,13 @@ const EmployerProfileBuilderRightContent = ({
 
         // If there's a file, add it to the FormData
         if (userInfo.logo && userInfo.logo.length > 0) {
+            console.log('append 1');
             formData.append("logo", userInfo.logo[0]);
+        }
+
+        if (companyLogo) {
+            console.log('append 2, companyLogo:', companyLogo);
+            formData.append("logo", companyLogo);
         }
 
         // Convert the rest of the userInfo into a JSON string and add it to the FormData
@@ -200,7 +206,10 @@ const EmployerProfileBuilderRightContent = ({
             .then(json => {
                 // setLogo(json.img);
                 // console.log('logo:', json.companyLogo);
-                setCompanyLogo(json.companyLogo);
+                if (json.companyLogo) {
+                    setCompanyLogo(json.companyLogo);
+                }
+                // setCompanyLogo(json.companyLogo);
                 // console.log('logo:', logo);
                 setIsSavingProfile(false);
                 setFormSubmitted(submittedStatus.SUBMITTED);
@@ -222,7 +231,7 @@ const EmployerProfileBuilderRightContent = ({
                 return false;
             }
         }
-        console.log('all required fields filled in');
+        // console.log('all required fields filled in');
         setCanSubmit(true);
         return true;
     };
@@ -885,7 +894,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
             // console.log('resetting form', jobs[selectedJobPosting]);
         }
         else {
-            reset({ job_title: '', salary: '', contract_term: '', work_from_home: '', visa: '', travel: '' });
+            reset({ job_title: '', salary: '', contract_term: '', flexibility: '', hourly_rate: '', work_from_home: '', visa: '', travel: '' });
             // console.log('full form reset');
         }
     }, [jobs, selectedJobPosting, reset]);
@@ -956,6 +965,25 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                             {errors.salary && errors.salary.message}
                         </FormErrorMessage>
                     </FormControl>
+                    <FormControl isInvalid={errors.hourly_rate}>
+                        <FormLabel htmlFor="hourly_rate" w='95%'>If this position is salaried, what is the salary?   </FormLabel>
+                        <Select id="hourly_rate" {...register("hourly_rate", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>N/A</option>
+                            <option value='1' style={{ color: 'black' }}>$15 - $20/hr</option>
+                            <option value='2' style={{ color: 'black' }}>$21 - $25/hr</option>
+                            <option value='3' style={{ color: 'black' }}>$26 - $30/hr</option>
+                            <option value='4' style={{ color: 'black' }}>$31 - $40/hr</option>
+                            <option value='5' style={{ color: 'black' }}>$41 - $50/hr</option>
+                            <option value='6' style={{ color: 'black' }}>$51 - $60/hr</option>
+                            <option value='7' style={{ color: 'black' }}>$61+/hr</option>
+                        </Select>
+                        <FormErrorMessage>
+                            {errors.hourly_rate && errors.hourly_rate.message}
+                        </FormErrorMessage>
+                    </FormControl>
                     <FormControl isInvalid={errors.contract_term}>
                         <FormLabel htmlFor="contract_term" w='95%'>If this is a contract-based position, what is the closest contract term?</FormLabel>
                         <Select id="contract_term" {...register("contract_term", { required: "This is required" })} w='95%' alignSelf='center'
@@ -970,6 +998,21 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                         </Select>
                         <FormErrorMessage>
                             {errors.contract_term && errors.contract_term.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.flexibility}>
+                        <FormLabel htmlFor="flexibility" w='95%'>What are the work hour and schedule requirements for this paralegal position?</FormLabel>
+                        <Select id="flexibility" {...register("flexibility", { required: "This is required" })} w='95%' alignSelf='center'
+                            defaultValue={""}
+                        >
+                            <option value="" disabled style={{ color: 'black' }}>Select your option</option>
+                            <option value='0' style={{ color: 'black' }}>Regular Hours: The position strictly adheres to a 9-5 schedule with no expectation of overtime</option>
+                            <option value='1' style={{ color: 'black' }}>Occasional Overtime: The role generally follows a 9-5 schedule but may require occasional overtime and weekend work</option>
+                            <option value='2' style={{ color: 'black' }}>Frequent Overtime: The position often requires overtime during weekdays and occasional weekend work</option>
+                            <option value='3' style={{ color: 'black' }}>Highly Variable: The role demands a fully adaptable schedule, including extended hours, weekends, and holidays depending on case requirements</option>
+                        </Select>
+                        <FormErrorMessage>
+                            {errors.flexibility && errors.flexibility.message}
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={errors.work_from_home}>
@@ -1025,7 +1068,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                         // isLoading={isSubmitting}
                         isLoading={isSaving || isSubmitting}
                         type="submit"
-                        isDisabled={!isValid}
+                    // isDisabled={!isValid}
                     >
                         <Text>Save</Text>
                     </Button>
