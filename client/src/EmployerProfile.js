@@ -14,7 +14,7 @@ import { useSearchParams } from "react-router-dom";
 import { Link as ChakraLink } from "@chakra-ui/react";
 import { Link as RouterLink } from "react-router-dom";
 
-import { set, useForm } from "react-hook-form";
+import { get, set, useForm } from "react-hook-form";
 import axios from 'axios';
 // import { FormControl, FormLabel, Input, FormErrorMessage } from "@chakra-ui/react";
 import { useAuth0 } from '@auth0/auth0-react';
@@ -706,7 +706,7 @@ const EmployerProfileBuilderRightContent = ({
     }
 };
 
-function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, setJobs }) {
+function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs }) {
     // console.log('jobs:', jobs);
     // console.log('selectedJobPosting:', selectedJobPosting);
     const JobListingButton = ({ job_title, secondaryText, job_posting_id, jobActive }) => (
@@ -718,9 +718,9 @@ function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, s
             alignSelf='center'
             // variant={selectedJobPosting === job_posting_id ? 'solid' : 'outline'}
             variant='unstyled'
-            border={selectedJobPosting === job_posting_id ? '3px ' : '0'}
+            border={selectedJobPosting === job_posting_id ? '2.5px ' : '0'}
             // border='5px'
-            borderColor='black'
+            borderColor='white'
             borderStyle='solid'
             borderRadius={['md', 'lg', 'lg']}
             onClick={() => setSelectedJobListing(job_posting_id)}
@@ -1114,7 +1114,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
                                         <Button ref={cancelRef} onClick={onClose}>
                                             Cancel
                                         </Button>
-                                        <Button colorScheme='red' onClick={deleteJobPosting} >
+                                        <Button ml={4} colorScheme='red' onClick={deleteJobPosting} >
                                             Delete
                                         </Button>
                                     </AlertDialogFooter>
@@ -1138,23 +1138,94 @@ function AccountSettingsRightContent() {
 */
 
 function MatchesContent() {
-    return <Box>Matches Content</Box>;
+    return;
+    // return <JobPostingsContent
+    //     selectedJobPosting={selectedJobPosting}
+    //     setSelectedJobListing={setSelectedJobPosting}
+    //     jobs={jobs}
+    // />;
+
 }
 
-function MatchesRightContent() {
-    return <Box>Matches Right Content</Box>;
+function MatchesRightContent({ matches, loadingMatches, selectedJobPosting }) {
+
+
+    // console.log('matches:', Object.keys(matches).length, matches);
+    // console.log('selectedJobPosting:', selectedJobPosting, Object.keys(matches));
+    // console.log('matches[selectedJobPosting]:', matches[selectedJobPosting], matches[selectedJobPosting]?.length);
+    // if (matches && matches[selectedJobPosting] && matches[selectedJobPosting].length > 0) {
+    //     console.log('matches[selectedJobPosting][0]:', matches[selectedJobPosting][0]);
+    // }
+    // else {
+    //     return;
+    // }
+    // console.log('x:', Object.keys(matches).filter(jobID => parseInt(jobID) == selectedJobPosting));
+    // return <Box>Matches Right Content</Box>;
+    const MatchCard = ({ match }) => {
+        // const { match_id, job_posting_id, job_title, job_location, job_salary, job_contract_term, job_flexibility, job_hourly_rate, job_work_from_home, job_visa, job_travel, job_active, match_score, match_status } = match;
+        return (
+            <Box key={match.match_id} w='100%' borderWidth='1px' borderRadius='lg' borderColor='gray.400' borderStyle='solid' p={3}>
+                <HStack w='100%' justifyContent='space-between'>
+                    <VStack w='1/3' alignItems='flex-start'>
+                        <Avatar alt='Candidate' borderRadius='full' boxSize={45} />
+                        <Text fontSize={['md', 'lg', 'xl']} fontWeight='normal'>{new Date(match.date_matched).toLocaleDateString()}</Text>
+                    </VStack>
+                    <VStack w='1/3'>
+                        <HStack w='100%' justifyContent='space-between'>
+                            <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Overall: </Text>
+                            <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[0] * 100)}</Text>
+                        </HStack>
+                    </VStack>
+                    <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{match.status}</Text>
+
+                    <VStack w='1/3' ></VStack>
+                    {/* <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{match.user_id}</Text> */}
+                    {/* <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{match.match_scores}</Text> */}
+
+                </HStack>
+            </Box>);
+    };
+
+    return ((loadingMatches) ? <Box p={4}>
+        <Text>Loading...
+        </Text>
+        <Spinner />
+    </Box> :
+        <VStack align='start' justifyContent='center' py={4} px={10} w='100%' color='white'>
+            <HStack justifyContent='space-between' w='100%' >
+                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Matches</Text>
+                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Match Score</Text>
+                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Status</Text>
+            </HStack>
+            <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
+            <VStack w='100%' spacing={4} >
+                {/* {(matches && Object.keys(matches).length > 0) && < Text > Test B</Text>} */}
+                {(matches && matches[selectedJobPosting] && matches[selectedJobPosting].length > 0) &&
+                    matches[selectedJobPosting].map((match, index) => {
+                        return <MatchCard key={`card:${match.match_id}`} match={match} />;
+                    })
+                }
+
+            </VStack>
+        </VStack >
+    );
 }
 
 
 
 function EmployerProfile({ returnURL }) {
+
+    // {(matches && matches[selectedJobPosting] && Object.keys(matches[selectedJobPosting]).length > 0) && matches[selectedJobPosting].map((match, index) => {
+    //     // return <Text>TestA</Text>;
+    //     return <MatchCard cardID={`${selectedJobPosting}-${index}`} jobID={selectedJobPosting} match={matches[selectedJobPosting]} />;
+    // })}
     const { isAuthenticated, isLoading, user } = useAuth0();
-    // const { colorMode, toggleColorMode } = useColorMode();
+    // const {colorMode, toggleColorMode} = useColorMode();
     const [searchParams] = useSearchParams();
     const [selectedTab, setSelectedTab] = useState("Employer Profile");
     const [selectedSubTab, setSelectedSubTab] = useState('Company Info');
     const [selectedJobPosting, setSelectedJobPosting] = useState(-1);
-    // const [userInfo, setUserInfo] = useState({});
+    // const [userInfo, setUserInfo] = useState({ });
     const [userInfo, setUserInfo] = useState({
         companyname: "",
         website: "",
@@ -1178,7 +1249,10 @@ function EmployerProfile({ returnURL }) {
         financial3: "0",
         financial4: "0",
     });
-    const [showErrors, setShowErrors] = useState(false);
+    const [matches, setMatches] = useState({});
+    const [loadingMatches, setLoadingMatches] = useState(false);
+
+    // const [showErrors, setShowErrors] = useState(false);
     const [companyLogo, setCompanyLogo] = useState(null);
     // const [userType, setUserType] = useState('');
     const [jobs, setJobs] = useState({
@@ -1242,38 +1316,84 @@ function EmployerProfile({ returnURL }) {
         }
     }
 
+
+    // Function getMatches will call the /api/getMatches api endpoint to retrieve the user's matches
+    // If the user has no matches, the function will set matches to an empty object
+    // If the user has matches, the function will set the matches state variable to the user's matches
+    async function getMatches() {
+        console.log('getting matches');
+        setLoadingMatches(true);
+        if (!user) {
+            console.log('no user');
+            setMatches({});
+            return;
+        }
+        try {
+            const response = await axios.get(`${apiURL}/getEmployerMatches?user_id=${user.sub}`);
+            if (response.data) {
+                // console.log('matches retrieved', response.data);
+                // let newMatches = { };
+                // response.data.matches.forEach(match => {newMatches[match.match_id] = match; });
+                setMatches(response.data.matches);
+                setLoadingMatches(false);
+                console.log('matches retrieved', response.data.matches);
+                // console.log('matches: ', response.data);
+            }
+        } catch (err) {
+            console.error('No matches found');
+        }
+    }
+
+
     /*
     //useEffect dependent on user which calls ${apiURL}/getUserType and sets userType state variable
     useEffect(() => {
         if (!user) {
-            console.log('no user');
-            setUserType('none');
-            return;
+                    console.log('no user');
+                setUserType('none');
+                return;
         }
-        try {
-            axios.get(`${apiURL}/getUserType?user_id=${user.sub}`)
-                .then(response => {
-                    if (response.data) {
-                        setUserType(response.data.user_type);
-                        console.log('user type retrieved', response.data.user_type);
-                    }
-                }).catch(e => {
-                    console.error(e);
-                });
+                try {
+                    axios.get(`${apiURL}/getUserType?user_id=${user.sub}`)
+                        .then(response => {
+                            if (response.data) {
+                                setUserType(response.data.user_type);
+                                console.log('user type retrieved', response.data.user_type);
+                            }
+                        }).catch(e => {
+                            console.error(e);
+                        });
         } catch (err) {
-            console.error('No user type found');
+                    console.error('No user type found');
         }
     }, [user]);
-    */
+                */
 
     useEffect(() => {
         getEmployerProfile();
         getUserJobPostings();
+        getMatches();
         if (window.location.href.includes('/employer/jobs')) { // if jobID exists in the URL
             console.log('loading jobs page from URL');
             setSelectedTab('Job Postings');
         }
     }, [user]);
+
+    useEffect(() => {
+        const refFromURL = searchParams.get('ref') || searchParams.get('Ref'); // get jobID from the query string, either case
+        if (refFromURL === 'join') { // if jobID exists in the URL
+            console.log('jumping back to ref');
+        }
+
+        //if url ends in /account then set selected tab to account, same for /matches and /answer
+        if (window.location.href.endsWith('/profile')) {
+            setSelectedTab('Employer Profile');
+        } else if (window.location.href.endsWith('/jobs')) {
+            setSelectedTab('Job Postings');
+        } else if (window.location.href.endsWith('/matches')) {
+            setSelectedTab('Matches');
+        }
+    }, [searchParams]);
 
     return (
         <Box className='EmployerProfile'
@@ -1383,10 +1503,15 @@ function EmployerProfile({ returnURL }) {
                         selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobPosting}
                         jobs={jobs}
-                        setJobs={setJobs}
+                    // setJobs={setJobs}
                     />}
                     {/* {selectedTab === 'Account Settings' && <AccountSettingsContent />} */}
-                    {selectedTab === 'Matches' && <MatchesContent />}
+                    {selectedTab === 'Matches' && <JobPostingsContent
+                        selectedJobPosting={selectedJobPosting}
+                        setSelectedJobListing={setSelectedJobPosting}
+                        jobs={jobs}
+                    // setJobs={setJobs}
+                    />}
                 </Box>
                 <Spacer bg='gray' boxSize='10px' />
                 <Box w='1px' bg='gray' />
@@ -1411,7 +1536,7 @@ function EmployerProfile({ returnURL }) {
 
                     />}
                     {/* {selectedTab === 'Account Settings' && <AccountSettingsRightContent />} */}
-                    {selectedTab === 'Matches' && <MatchesRightContent />}
+                    {selectedTab === 'Matches' && <MatchesRightContent matches={matches} loadingMatches={loadingMatches} selectedJobPosting={selectedJobPosting} />}
                 </Box>
             </Flex>}
             {!isAuthenticated && <Flex p={4}><Text color='white' fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Please login to continue</Text></Flex>}
@@ -1419,4 +1544,4 @@ function EmployerProfile({ returnURL }) {
     );
 };
 
-export default EmployerProfile;
+export default EmployerProfile;;

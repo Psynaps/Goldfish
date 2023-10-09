@@ -4,7 +4,9 @@ import Question from './Question';
 import Answer from './Answer';
 
 const JobPostingBank = ({ jobPostingQuestions, onQuestionSelect, onAnswerSelect }) => {
-    const [selectedQuestion, setSelectedQuestion] = useState(jobPostingQuestions[0]);
+    const [selectedQuestion, setSelectedQuestion] = useState(jobPostingQuestions ? jobPostingQuestions[0] : null);
+    console.log('job posting questions', jobPostingQuestions, jobPostingQuestions.length);
+    console.log('selected question', selectedQuestion);
 
     return (
         <VStack spacing={4} align='stretch' maxHeight='50vh' overflowY='auto' w='100%'>
@@ -14,6 +16,7 @@ const JobPostingBank = ({ jobPostingQuestions, onQuestionSelect, onAnswerSelect 
                 {jobPostingQuestions.filter(q => q.importance === 2).map((question, index) => (
                     <Box key={question.questionID} bg='blue.400' borderRadius='2xl' _hover={{ bg: "blue.500" }}>
                         <Question
+                            key={`Q1:${question.questionID}`}
                             question={question}
                             isSelected={selectedQuestion === question}
                             onSelect={() => {
@@ -52,6 +55,7 @@ const JobPostingBank = ({ jobPostingQuestions, onQuestionSelect, onAnswerSelect 
                 {jobPostingQuestions.filter(q => q.importance === 1).map((question, index) => (
                     <Box key={question.questionID} bg='blue.400' borderRadius='2xl'>
                         <Question
+                            key={`Q2:${question.questionID}`}
                             question={question}
                             isSelected={selectedQuestion === question}
                             onSelect={() => {

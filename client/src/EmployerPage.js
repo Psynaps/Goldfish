@@ -136,18 +136,37 @@ function EmployerPage(returnURL) {
 
     const loadJobPosting = (data) => {
         // setCompany(data.company);
-        console.log('inside load job posting', data, data.job_title);
+        // console.log('inside load job posting', data, data.job_title);
         let jobData;
         // Parse the jobData field into a JavaScript object
         try {
+            //parse jobData questionID: [selectedAnswers, importance] into a JavaScript object
             jobData = JSON.parse(data["jobData"]);
-            console.log('setting jobData', jobData);
+            // create object with contents of matching questionID from questionsData, but with selectedAnswers and importance from jobData
+            let loadedQuestions = Object.keys(jobData).map(questionID => {
+                const matchingQuestion = questionsData.find(question => question.questionID === questionID);
+                const jobMatchingAnswers = jobData[questionID][0];
+                // const jobMatchingNonAnswers = jobData[questionID][1];
+                // console.log('matchingQuestion', matchingQuestion);
+                // console.log('jobMatchingAnswers', jobMatchingAnswers);
+                // console.log('jobMatchingNonAnswers', jobMatchingNonAnswers);
+                if (!matchingQuestion) {
+                    // console.log('no matching question');
+                    setJobPostingQuestions([]);
+                    return;
+                }
+                return { ...matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 2), selectedAnswers: jobMatchingAnswers };
+            });
+
+            // jobData = jobData.map(question => { 
+            // jobData = JSON.parse(data["jobData"]);
+            // console.log('setting jobData', jobData);
         } catch (e) {
             console.log('error parsing jobData', e);
             return;
         }
-        console.log('test2');
-        console.log('jobData', jobData);
+        // console.log('test2');
+        // console.log('jobData', jobData);
 
         loadJobPostingQuestions(jobData);
         filterQuestionBankOnLoad(jobData);
@@ -165,6 +184,11 @@ function EmployerPage(returnURL) {
             // console.log('matchingQuestion', matchingQuestion);
             // console.log('jobMatchingAnswers', jobMatchingAnswers);
             // console.log('jobMatchingNonAnswers', jobMatchingNonAnswers);
+            if (!matchingQuestion) {
+                // console.log('no matching question');
+                setJobPostingQuestions([]);
+                return;
+            }
             return { ...matchingQuestion, importance: (jobData[questionID][1] ? jobData[questionID][1] : 3), selectedAnswers: jobMatchingAnswers };
         });
         // console.log('loadedQuestions', loadedQuestions);
@@ -378,6 +402,7 @@ function EmployerPage(returnURL) {
         // otherwise set it to false
         const canAddQuestion = questionBankQuestions.some(q => q.questionID === selectedQuestion?.questionID && q.selectedAnswers?.length > 0);
         setCanAddQuestion(canAddQuestion);
+        console.log('jobPostingQuestions', jobPostingQuestions);
         // console.log('set canAddQuestion to', canAddQuestion);
         // console.log('selectedQuestion', selectedQuestion);
     }, [selectedQuestion, questionBankQuestions]);

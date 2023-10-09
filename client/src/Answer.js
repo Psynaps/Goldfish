@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Button, Text } from "@chakra-ui/react";
 
-const Answer = ({ answer, question, selectedAnswers, selectedNonAnswers, onSelect, onNonSelect }) => {
+const Answer = ({ answer, question, selectedAnswers, onSelect }) => {
     const isSelected = selectedAnswers?.includes(answer.answerID);
     // const isNonAnswer = selectedNonAnswers?.includes(answer.answerID);
 
@@ -24,6 +24,7 @@ const Answer = ({ answer, question, selectedAnswers, selectedNonAnswers, onSelec
             height='auto'
             blockSize='auto'
             whiteSpace='normal'
+            fontWeight='normal'
             p={2}
         >
             <Text>{answer.answer}</Text>

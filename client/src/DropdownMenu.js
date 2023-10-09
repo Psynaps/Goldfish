@@ -15,12 +15,12 @@ function DropdownMenu({ returnURL }) {
                 {isAuthenticated && <MenuItem>Saved Jobs</MenuItem>}
                 {isAuthenticated && <MenuItem>Settings</MenuItem>}
                 <MenuItem>About Us</MenuItem>
-                <MenuItem>
+                {/* <MenuItem>
                     <SimpleGrid columns={2} spacing={3}>
                         <Text>Dark Mode</Text>
                         <Switch colorScheme='blue' id='darkModeSwitch' onChange={toggleColorMode} isChecked={colorMode === 'dark'} />
                     </SimpleGrid>
-                </MenuItem>
+                </MenuItem> */}
                 {isAuthenticated && <MenuItem onClick={() => logout({
                     logoutParams: {
                         returnTo: returnURL

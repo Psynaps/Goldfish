@@ -29,6 +29,7 @@ const Question = ({ question, children, onSelect, isSelected, isInitiallyOpen, i
             borderColor={isSelected ? (isQuestionBankQuestion ? "blue.500" : 'orange.500') : "gray.200"}
             borderRadius="2xl"
             p={4}
+            fontWeight='bold'
             // _hover={{ bg: "blue.500" }}
             cursor="pointer"
         >

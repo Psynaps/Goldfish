@@ -33,6 +33,7 @@ function CandidatePage(returnURL) {
         try {
             const response = await axios.get(`${apiURL}/getUserProfile?user_id=${user.sub}&email=${user.email}`);
             if (response.data.success) {
+                // user.
                 console.log('got user profile:', response.data);
                 setUserProfile(response.data.profile);
                 setUserAnswers(response.data.answers);

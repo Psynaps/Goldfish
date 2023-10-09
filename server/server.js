@@ -50,6 +50,45 @@ const pool = (() => {
     }
 })();
 
+//function generateMatches which optionally takes in a user_id and searches for matches for that user, 
+// updating the job_candidate_matches table with the results
+// if no user_id is provided, it will search for matches for all users
+async function generateMatches(user_id = null) {
+    console.log("generateMatches req received");
+    // console.log(req.body);
+    try {
+        const client = await pool.connect();
+        // query job_postings table for all active job postings
+        // for now just get the first one to 3 job postings and generate matches for them
+        const job_postings = await client.query('SELECT * FROM job_postings WHERE active = true LIMIT 3');
+        if (!user_id) {
+            // query users table for all users
+            const users = await client.query('SELECT user_id FROM user_profiles');
+            user_id = users.rows[0].user_id;
+        }
+
+
+        // add entry to job_candidate_matches table for each job posting
+        if (!job_postings?.rows) {
+            console.log('no job postings found to generate matches for');
+            return;
+        }
+        for (const job_posting of job_postings.rows) {
+            const querytext = `INSERT INTO job_candidate_matches (job_posting_id, candidate_user_id, status, isRevealed, match_scores)
+            VALUES ($1, $2, $3, $4, $5) ON CONFLICT DO NOTHING;`;
+            const values = [job_posting.job_posting_id, user_id, 'matched', false, [Math.random(), Math.random(), Math.random(), Math.random()]]; //treat first index as overall, next 3 are breakdown of each category
+            const res = await client.query(querytext, values);
+            client.release();
+        }
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+
+
+
+
 
 app.get('/', (req, res) => { res.send('Hello from Express!'); });
 
@@ -583,8 +622,8 @@ app.post('/api/changeNewsletterSubscription', async (req, res) => {
 /*
 app.post('/api/changeNewsletterSubscription', async (req, res) => {
     let { email, user_id, subscribing = true } = req.body;
-
-
+ 
+ 
     if (!email) {
         return res.status(400).json({ success: false, message: 'Email is required.' });
     }
@@ -637,8 +676,8 @@ app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
 /*
 app.post('/api/changeEmailNewJobRecsSubscription', async (req, res) => {
     let { email, user_id, subscribing = true } = req.body;
-
-
+ 
+ 
     if (!email || !user_id) {
         return res.status(400).json({ success: false, message: 'Email and user_id required.' });
     }
@@ -684,7 +723,7 @@ app.post('/api/changeSuspendedStatus', async (req, res) => {
 
 app.get('/api/getUserProfile', async (req, res) => {
     const { user_id, email } = req.query;
-
+    const user_type_default = 'c'; //candidate default if no user type is specified
 
 
     if (!user_id) {
@@ -700,9 +739,9 @@ app.get('/api/getUserProfile', async (req, res) => {
         // If there is no result for this query then the user hasn't been added to the user_profiles table yet,
         // so add them with default values
         if (result.rowCount === 0) {
-            const insertQueryText = `INSERT INTO user_profiles (user_id, email, subscribed_newsletter, subscribed_new_job_recs, suspended)
-            VALUES ($1, $2, $3, $4, $5)`;
-            const insertValues = [user_id, email, false, false, false];
+            const insertQueryText = `INSERT INTO user_profiles (user_id, email, user_type, subscribed_newsletter, subscribed_new_job_recs, suspended)
+            VALUES ($1, $2, $3, $4, $5, $6)`;
+            const insertValues = [user_id, email, 'c', false, false, false];
             const result2 = await pool.query(insertQueryText, insertValues);
         }
 
@@ -748,6 +787,63 @@ app.post('/api/deleteUserAccount', async (req, res) => {
         res.send("Error " + err);
     }
 });
+
+// endpoint getEmployerMatches which takes in user_id as a query parameter and returns a 
+// object containing match objects for each job_posting the user has created. Each match object is an 
+// array of candidate objects which contain user_id, match_score array (same as in getUserMatches), and date_matched.
+// currently the returned list of candidates is hardcoded, but will be replaced with real data
+app.get('/api/getEmployerMatches', async (req, res) => {
+    const user_id = req.query.user_id;
+    console.log('getEmployerMatches req received');
+    if (!user_id) {
+        return res.status(400).send({ error: 'Missing user_id query parameter' });
+    }
+
+    try {
+        generateMatches();
+        const client = await pool.connect();
+        //first need to get job_posting_ids for this user
+        const jobPostingIdsQuery = {
+            text: 'SELECT job_posting_id FROM job_postings WHERE user_id = $1',
+            values: [user_id],
+        };
+        const jobPostingIdsResult = await client.query(jobPostingIdsQuery);
+        const jobPostingIds = jobPostingIdsResult.rows.map((row) => row.job_posting_id);
+        console.log('jobpostingids', jobPostingIds);
+
+        // get all entries in job_candidate_matches table for each job_posting_id, building them 
+        // into a matches object with an array of candidates for each job_posting_id
+        const matches = {};
+        for (const job_posting_id of jobPostingIds) {
+            const matchQuery = {
+                text: 'SELECT * FROM job_candidate_matches WHERE job_posting_id = $1 AND status IN (\'matched\', \'applied\', \'accepted\') ORDER BY match_scores[1] DESC',
+                values: [job_posting_id],
+            };
+            const matchResult = await client.query(matchQuery);
+            console.log('result', matchResult.rows);
+            const matchData = matchResult.rows.map((row) => {
+                return {
+                    match_id: row.match_id,
+                    user_id: row.candidate_user_id,
+                    match_scores: row.match_scores,
+                    date_matched: row.created_at,
+                    status: row.status,
+                    isRevealed: row.is_revealed,
+                };
+            });
+            matches[job_posting_id] = matchData;
+
+        }
+        client.release();
+        res.send({ success: true, matches: matches });
+    } catch (err) {
+        console.error(err);
+        res.send("Error " + err);
+    }
+});
+
+
+
 
 
 // All remaining requests return the React app, so it can handle routing.

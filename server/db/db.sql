@@ -72,4 +72,34 @@ CREATE TABLE user_profiles (
     PRIMARY KEY (user_id, email)
 );
 
+
 -- SELECT left(encode(companylogo, 'hex'), 40), user_id from employer_profiles; 
+
+-- Create the enum type for status
+CREATE TYPE match_status AS ENUM ('matched', 'applied', 'accepted', 'rejected');
+
+CREATE TABLE job_candidate_matches (
+    match_id SERIAL,
+    job_posting_id VARCHAR(255) NOT NULL,
+    candidate_user_id VARCHAR(255) NOT NULL,
+    status match_status NOT NULL DEFAULT 'matched', -- Default status is 'matched'
+    isRevealed BOOLEAN NOT NULL DEFAULT FALSE, -- Default isRevealed is FALSE
+    match_scores decimal[] DEFAULT ARRAY[]::decimal[], -- Default match_scores is an empty array
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (job_posting_id, candidate_user_id)
+);
+
+-- Trigger for updating the `updated_at` timestamp
+CREATE OR REPLACE FUNCTION update_timestamp()
+RETURNS TRIGGER AS $$
+BEGIN
+   NEW.updated_at = NOW();
+   RETURN NEW;
+END;
+$$ language 'plpgsql';
+
+CREATE TRIGGER update_job_candidate_matches_modtime
+BEFORE UPDATE ON job_candidate_matches
+FOR EACH ROW
+EXECUTE FUNCTION update_timestamp();
