@@ -1284,11 +1284,17 @@ function EmployerProfile({ returnURL }) {
                 const { companylogo, ...otherData } = response.data;
                 setUserInfo(otherData);
                 setCompanyLogo(companylogo);
+                let fileName = 'previous logo file';
+                let file = new File([companyLogo], fileName, { type: "data:image/png;base64", lastModified: new Date().getTime() }, 'utf-8');
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                document.querySelector('#logo').files = dataTransfer.files;
                 // console.log('employer profile retrieved');
                 // console.log('userInfo: ', otherData);
                 // console.log('companyLogo: ', companyLogo);
             }
         } catch (err) {
+            console.log(err);
             console.error('No employer profile found');
         }
     }

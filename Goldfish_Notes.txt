@@ -163,3 +163,7 @@ Known bug: filling out employer profile form fully, then going to a tab of it an
 - Reason is userInfo state only updates on pressing next. Probably has to be fully controlled form to avoid. 
 
 Financial options are not preselecting
+
+Need to change candidate side profile page resume upload to update the box to be small/replace it when a file has been uploaded
+
+Need to change buttons on candidate page to persist the highlighting depending on which tab is selected.
