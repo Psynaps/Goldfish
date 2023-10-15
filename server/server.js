@@ -71,6 +71,7 @@ async function generateMatches(user_id = null) {
         // add entry to job_candidate_matches table for each job posting
         if (!job_postings?.rows) {
             console.log('no job postings found to generate matches for');
+            client.release();
             return;
         }
         for (const job_posting of job_postings.rows) {
@@ -78,8 +79,9 @@ async function generateMatches(user_id = null) {
             VALUES ($1, $2, $3, $4, $5) ON CONFLICT DO NOTHING;`;
             const values = [job_posting.job_posting_id, user_id, 'matched', false, [Math.random(), Math.random(), Math.random(), Math.random()]]; //treat first index as overall, next 3 are breakdown of each category
             const res = await client.query(querytext, values);
-            client.release();
+
         }
+        client.release();
     } catch (err) {
         console.error(err);
     }

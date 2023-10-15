@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 // eslint-disable-next-line no-unused-vars
 import {
-    Box, Flex, HStack, Button, Spacer, Select, VStack, Icon, IconButton, Text, Avatar, Spinner, Circle, Image, Heading, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
+    Box, Flex, HStack, Button, Spacer, Select, VStack, Grid, Icon, IconButton, Text, Avatar, Spinner, Circle, Image, Heading, Divider, useColorMode, useDisclosure, FormControl, FormLabel, Input, FormErrorMessage, Switch, Slider, AlertDialog,
     AlertDialogBody,
     AlertDialogFooter,
     AlertDialogHeader,
     AlertDialogContent,
     AlertDialogOverlay,
     AlertDialogCloseButton,
+    Tag,
 } from '@chakra-ui/react';
 // import { DeleteIcon } from 'react-icons/md';
 import { useSearchParams } from "react-router-dom";
@@ -22,7 +23,7 @@ import { LoginButton } from './LoginButton';
 import goldfishLogo from './images/logo.svg';
 import './App.css';
 import DropdownMenu from './DropdownMenu';
-import { DeleteIcon, CheckIcon } from '@chakra-ui/icons';
+import { DeleteIcon, CheckIcon, UnlockIcon } from '@chakra-ui/icons';
 
 // enum for submitted status: 0 = not submitted, 1 = submitted, 2 = error
 const submittedStatus = {
@@ -706,7 +707,7 @@ const EmployerProfileBuilderRightContent = ({
     }
 };
 
-function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs }) {
+function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs, omitAddJobButton }) {
     // console.log('jobs:', jobs);
     // console.log('selectedJobPosting:', selectedJobPosting);
     const JobListingButton = ({ job_title, secondaryText, job_posting_id, jobActive }) => (
@@ -767,13 +768,13 @@ function JobPostingsContent({ selectedJobPosting, setSelectedJobListing, jobs })
                     })}
             </VStack>
             {/* {objectMap(jobs, (job) => { <JobListingButton title={job.title} secondaryText={job.date_created} tabName={job.job_posting_id} jobActive={job.active} />; })} */}
-            <Button w='80%' key={'-1'} alignSelf='center' color='white' variant={selectedJobPosting === -1 ? 'solid' : 'outline'}
+            {!omitAddJobButton && <Button w='80%' key={'-1'} alignSelf='center' color='white' variant={selectedJobPosting === -1 ? 'solid' : 'outline'}
                 borderWidth={selectedJobPosting === -1 ? '4px' : '1px'}
                 onClick={() => setSelectedJobListing(-1)}>
                 <Text fontWeight='bold' fontSize={['md', 'lg', 'xl']}>
                     +
                 </Text>
-            </Button>
+            </Button>}
         </VStack>
     );
 }
@@ -894,7 +895,7 @@ function JobPostingsRightContent({ apiURL, selectedJobPosting, setSelectedJobLis
             // console.log('resetting form', jobs[selectedJobPosting]);
         }
         else {
-            reset({ job_title: '', salary: '', contract_term: '', flexibility: '', hourly_rate: '', work_from_home: '', visa: '', travel: '' });
+            reset({ job_title: '', location: '', salary: '', hourly_rate: '', contract_term: '', flexibility: '', work_from_home: '', visa: '', travel: '' });
             // console.log('full form reset');
         }
     }, [jobs, selectedJobPosting, reset]);
@@ -1147,44 +1148,102 @@ function MatchesContent() {
 
 }
 
-function MatchesRightContent({ matches, loadingMatches, selectedJobPosting }) {
 
 
-    // console.log('matches:', Object.keys(matches).length, matches);
-    // console.log('selectedJobPosting:', selectedJobPosting, Object.keys(matches));
-    // console.log('matches[selectedJobPosting]:', matches[selectedJobPosting], matches[selectedJobPosting]?.length);
-    // if (matches && matches[selectedJobPosting] && matches[selectedJobPosting].length > 0) {
-    //     console.log('matches[selectedJobPosting][0]:', matches[selectedJobPosting][0]);
-    // }
-    // else {
-    //     return;
-    // }
-    // console.log('x:', Object.keys(matches).filter(jobID => parseInt(jobID) == selectedJobPosting));
-    // return <Box>Matches Right Content</Box>;
+function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosting, revealedMatches, setRevealedMatches }) {
+
+    // Function revealMatch(match_id) takes in a match_id and reveals the match to the candidate
+    // by sending a request to server to update the match status to 'revealed' and verify they can do so
+    const revealMatch = useCallback((match_id) => {
+        console.log('trying to reveal match', match_id);
+        axios.post(`${apiURL}/revealMatch`, {
+            match_id: match_id
+        })
+
+            .then(response => {
+                if (response.data.success) {
+                    console.log('match revealed:', match_id);
+                    if (response.data.revealedMatches) {
+                        setRevealedMatches(response.data.revealedMatches);
+                    }
+                }
+                else {
+                    console.log('error revealing match:', response.data);
+                }
+            }
+            ).catch(e => {
+                console.error(e);
+            }
+            );
+    }, [apiURL, revealedMatches, setRevealedMatches]);
+
+    /*
+    // Make something similar to match card but instead use the revealedMatches state to display 
+    // the full candidate info and allow expandable card
+    const RevealedMatchCard = ({ revealedMatch }) => {
+    };
+    */
+
     const MatchCard = ({ match }) => {
         // const { match_id, job_posting_id, job_title, job_location, job_salary, job_contract_term, job_flexibility, job_hourly_rate, job_work_from_home, job_visa, job_travel, job_active, match_score, match_status } = match;
         return (
-            <Box key={match.match_id} w='100%' borderWidth='1px' borderRadius='lg' borderColor='gray.400' borderStyle='solid' p={3}>
-                <HStack w='100%' justifyContent='space-between'>
-                    <VStack w='1/3' alignItems='flex-start'>
-                        <Avatar alt='Candidate' borderRadius='full' boxSize={45} />
+            <Flex key={match.match_id} w='100%' h='auto' borderWidth='1px' borderRadius='lg' borderColor='gray.400' borderStyle='solid' p={3}>
+                <HStack w='100%' alignItems='stretch' h='auto'>
+                    <Flex direction='column' align='flex-start' w='40%' h='100%' pl={4} >
                         <Text fontSize={['md', 'lg', 'xl']} fontWeight='normal'>{new Date(match.date_matched).toLocaleDateString()}</Text>
-                    </VStack>
-                    <VStack w='1/3'>
-                        <HStack w='100%' justifyContent='space-between'>
-                            <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Overall: </Text>
-                            <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[0] * 100)}</Text>
+                        <Avatar alt='Candidate' justifySelf='center' mt={5} borderRadius='full' boxSize={45} />
+                    </Flex>
+                    <VStack w='35%' minWidth='35%' justifySelf='center'>
+                        <HStack w='100%' justifyContent='center'>
+                            <Tag size='lg' w='60%' variant='solid' bg='pink.700' color='white' alignSelf='center' justifyContent='start' borderRadius='md' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Overall</Text>
+                            </Tag>
+                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' justifyContent='center' borderRadius='md' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[0] * 100)}</Text>
+                            </Tag>
+                        </HStack>
+                        <HStack w='100%' justifyContent='center'>
+                            <Tag size='lg' w='60%' variant='solid' bg='pink.300' color='white' alignSelf='center' justifyContent='start' borderRadius='md' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Skill Match</Text>
+                            </Tag>
+                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' justifyContent='center' borderRadius='md' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[1] * 100)}</Text>
+                            </Tag>
+                        </HStack>
+                        <HStack w='100%' justifyContent='center'>
+                            <Tag size='lg' w='60%' variant='solid' bg='pink.300' color='white' alignSelf='center' justifyContent='start' borderRadius='md' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Legal Match</Text>
+                            </Tag>
+                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' borderRadius='md' justifyContent='center' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[2] * 100)}</Text>
+                            </Tag>
+                        </HStack>
+                        <HStack w='100%' justifyContent='center'>
+                            <Tag size='lg' w='60%' variant='solid' bg='pink.300' color='white' alignSelf='center' justifyContent='start' borderRadius='md'  >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>HR Match</Text>
+                            </Tag>
+                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' borderRadius='md' justifyContent='center' >
+                                <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[3] * 100)}</Text>
+                            </Tag>
                         </HStack>
                     </VStack>
-                    <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{match.status}</Text>
 
-                    <VStack w='1/3' ></VStack>
+                    <Flex direction='column' w='25%' align='center' alignSelf='flex-start' h='100%'>
+                        {match.status === 'matched' && <Tag size='lg' bg='green.300' color='white' justifySelf='end'>Applied</Tag>}
+                        {match.status === 'revealed' && <Tag size='lg' bg='green.300' color='white' justifySelf='end'>Applied</Tag>}
+                        <Spacer />
+                        <Button rightIcon={<UnlockIcon />} size='lg' alignSelf='center' bg='#11C3FC' variant='solid' border='2pt solid black' color='white' >
+                            Reveal
+                        </Button>
+                    </Flex>
                     {/* <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{match.user_id}</Text> */}
                     {/* <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{match.match_scores}</Text> */}
 
                 </HStack>
-            </Box>);
+            </Flex>);
     };
+
+    //Add Revealed match card
 
     return ((loadingMatches) ? <Box p={4}>
         <Text>Loading...
@@ -1193,12 +1252,12 @@ function MatchesRightContent({ matches, loadingMatches, selectedJobPosting }) {
     </Box> :
         <VStack align='start' justifyContent='center' py={4} px={10} w='100%' color='white'>
             <HStack justifyContent='space-between' w='100%' >
-                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Matches</Text>
-                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Match Score</Text>
-                <Text fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Status</Text>
+                <Text w='40%' fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Matches</Text>
+                <Text w='35%' align='center' fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Match Score</Text>
+                <Text w='25%' align='end' fontSize={['lg', 'xl', '2xl']} fontWeight='bold'>Status</Text>
             </HStack>
             <Divider my={[3, 4, 5]} borderColor='gray.400' borderStyle='dashed' />
-            <VStack w='100%' spacing={4} >
+            <VStack w='100%' spacing={4} overflowY='auto' >
                 {/* {(matches && Object.keys(matches).length > 0) && < Text > Test B</Text>} */}
                 {(matches && matches[selectedJobPosting] && matches[selectedJobPosting].length > 0) &&
                     matches[selectedJobPosting].map((match, index) => {
@@ -1251,6 +1310,7 @@ function EmployerProfile({ returnURL }) {
     });
     const [matches, setMatches] = useState({});
     const [loadingMatches, setLoadingMatches] = useState(false);
+    const [revealedMatches, setRevealedMatches] = useState({});
 
     // const [showErrors, setShowErrors] = useState(false);
     const [companyLogo, setCompanyLogo] = useState(null);
@@ -1288,7 +1348,9 @@ function EmployerProfile({ returnURL }) {
                 let file = new File([companyLogo], fileName, { type: "data:image/png;base64", lastModified: new Date().getTime() }, 'utf-8');
                 const dataTransfer = new DataTransfer();
                 dataTransfer.items.add(file);
-                document.querySelector('#logo').files = dataTransfer.files;
+                if (document.querySelector('#logo')) {
+                    document.querySelector('#logo').files = dataTransfer.files;
+                }
                 // console.log('employer profile retrieved');
                 // console.log('userInfo: ', otherData);
                 // console.log('companyLogo: ', companyLogo);
@@ -1509,6 +1571,7 @@ function EmployerProfile({ returnURL }) {
                         selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobPosting}
                         jobs={jobs}
+                        omitAddJobButton={false}
                     // setJobs={setJobs}
                     />}
                     {/* {selectedTab === 'Account Settings' && <AccountSettingsContent />} */}
@@ -1516,6 +1579,7 @@ function EmployerProfile({ returnURL }) {
                         selectedJobPosting={selectedJobPosting}
                         setSelectedJobListing={setSelectedJobPosting}
                         jobs={jobs}
+                        omitAddJobButton={true}
                     // setJobs={setJobs}
                     />}
                 </Box>
@@ -1542,7 +1606,14 @@ function EmployerProfile({ returnURL }) {
 
                     />}
                     {/* {selectedTab === 'Account Settings' && <AccountSettingsRightContent />} */}
-                    {selectedTab === 'Matches' && <MatchesRightContent matches={matches} loadingMatches={loadingMatches} selectedJobPosting={selectedJobPosting} />}
+                    {selectedTab === 'Matches' && <MatchesRightContent
+                        apiURL={apiURL}
+                        matches={matches}
+                        loadingMatches={loadingMatches}
+                        selectedJobPosting={selectedJobPosting}
+                        revealedMatches={revealedMatches}
+                        setRevealedMatches={setRevealedMatches}
+                    />}
                 </Box>
             </Flex>}
             {!isAuthenticated && <Flex p={4}><Text color='white' fontSize={{ base: 'lg', md: '2xl', lg: '3xl' }}>Please login to continue</Text></Flex>}

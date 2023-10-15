@@ -167,3 +167,7 @@ Financial options are not preselecting
 Need to change candidate side profile page resume upload to update the box to be small/replace it when a file has been uploaded
 
 Need to change buttons on candidate page to persist the highlighting depending on which tab is selected.
+
+Look into trying to make apiURL an anvironment variable
+
+Consider moving all clientRelease calls to asap in each function on server

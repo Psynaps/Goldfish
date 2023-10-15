@@ -40,6 +40,7 @@ function App() {
                     <Route path='/employer' element={<EmployerPage returnURL={`${returnUrl}/employer`} />} />
                     <Route path='/employer/profile' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
                     <Route path='/employer/jobs' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
+                    <Route path='/employer/matches' element={<EmployerProfile returnURL={`${returnUrl}/employer`} />} />
                     <Route path='/candidate' element={<CandidatePage returnURL={`${returnUrl}/candidate`} />} />
                     <Route path='/candidate/account' element={<CandidatePage returnURL={`${returnUrl}/candidate/account`} />} />
                     <Route path='/candidate/home' element={<CandidatePage returnURL={`${returnUrl}/candidate/home`} />} />
