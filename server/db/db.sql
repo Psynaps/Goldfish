@@ -85,8 +85,8 @@ CREATE TABLE job_candidate_matches (
     status match_status NOT NULL DEFAULT 'matched', -- Default status is 'matched'
     isRevealed BOOLEAN NOT NULL DEFAULT FALSE, -- Default isRevealed is FALSE
     match_scores decimal[] DEFAULT ARRAY[]::decimal[], -- Default match_scores is an empty array
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (job_posting_id, candidate_user_id)
 );
 

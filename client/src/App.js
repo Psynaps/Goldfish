@@ -10,6 +10,7 @@ import Home from './Home';
 import EmployerProfile from './EmployerProfile';
 import CandidateLandingPage from './CandidateLandingPage';
 import CandidatePage from './CandidatePage';
+import PrivacyPolicy from './PrivacyPolicy';
 import './App.css';
 // import { useAuth0 } from '@auth0/auth0-react';
 // import { Spinner, Box, Text, SimpleGrid, Button, Input, HStack, VStack, Flex, Textarea, Avatar, Menu, MenuButton, MenuList, MenuItem, IconButton, useColorMode, useColorModeValue, Switch } from '@chakra-ui/react';
@@ -48,6 +49,7 @@ function App() {
                     <Route path='/candidate/matches' element={<CandidatePage returnURL={`${returnUrl}/candidate/matches`} />} />
                     <Route path='/candidate/profile' element={<CandidatePage returnURL={`${returnUrl}/candidate/profile`} />} />
                     <Route path='/candidate/account' element={<CandidatePage returnURL={`${returnUrl}/candidate/account`} />} />
+                    <Route path='/privacy' element={<PrivacyPolicy />} />
                 </Routes>
             </Router>
         </div>

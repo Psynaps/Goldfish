@@ -73,6 +73,13 @@ function CandidatePage(returnURL) {
 
     const selectedPageContent = useCallback(() => {
         switch (selectedTab) {
+            case 'Home':
+                return <Box p={16}>
+                    <Heading as='h1' w='100%' h='100%'>
+                        Home
+                    </Heading>
+                </Box>;
+
             case 'Account':
                 return <CandidateAccountPage apiURL={apiURL} userProfile={userProfile} hasLoadedProfile={hasLoadedProfile} />;
             case 'Matches':
@@ -147,7 +154,7 @@ function CandidatePage(returnURL) {
                                         </Box>
                                     </VStack>
                                     : <LoginButton />}
-                                <DropdownMenu returnURL={window.location.href} />
+                                <DropdownMenu returnURL={window.location.href} isEmployer={false} />
                             </>
                         }
                     </HStack>

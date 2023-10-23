@@ -465,7 +465,7 @@ function EmployerPage(returnURL) {
                                         </Box>
                                     </VStack>
                                     : <LoginButton />}
-                                <DropdownMenu returnURL={window.location.href} />
+                                <DropdownMenu returnURL={window.location.href} isEmployer={true} />
                             </>
                         }
                     </HStack>

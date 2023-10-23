@@ -239,6 +239,7 @@ const EmployerProfileBuilderRightContent = ({
 
     const imageValidationRule = {
         validate: async (fileList) => {
+            console.log('test');
             if (!fileList) return 'Error';
             const file = fileList[0];
             if (file) {
@@ -247,6 +248,7 @@ const EmployerProfileBuilderRightContent = ({
                 } else {
                     const acceptableImageTypes = ["jpg", "jpeg", "png", "gif", "webp"];
                     const extension = file.name.split('.').pop().toLowerCase();
+                    console.log('logo type:', extension);
                     if (!acceptableImageTypes.includes(extension)) {
                         return 'Invalid file type. Only .jpg, .jpeg, .png, .gif, and .webp are accepted';
                     }
@@ -1177,6 +1179,11 @@ function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosti
             );
     }, [apiURL, revealedMatches, setRevealedMatches]);
 
+    //placeholder reveal function which does an alert which says coming soon
+    const placeholderReveal = useCallback(() => {
+        alert('Coming Soon!');
+    }, []);
+
     /*
     // Make something similar to match card but instead use the revealedMatches state to display 
     // the full candidate info and allow expandable card
@@ -1198,7 +1205,7 @@ function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosti
                             <Tag size='lg' w='60%' variant='solid' bg='pink.700' color='white' alignSelf='center' justifyContent='start' borderRadius='md' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Overall</Text>
                             </Tag>
-                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' justifyContent='center' borderRadius='md' >
+                            <Tag size='lg' w='19%' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' justifyContent='center' borderRadius='md' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[0] * 100)}</Text>
                             </Tag>
                         </HStack>
@@ -1206,7 +1213,7 @@ function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosti
                             <Tag size='lg' w='60%' variant='solid' bg='pink.300' color='white' alignSelf='center' justifyContent='start' borderRadius='md' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Skill Match</Text>
                             </Tag>
-                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' justifyContent='center' borderRadius='md' >
+                            <Tag size='lg' w='19%' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' justifyContent='center' borderRadius='md' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[1] * 100)}</Text>
                             </Tag>
                         </HStack>
@@ -1214,7 +1221,7 @@ function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosti
                             <Tag size='lg' w='60%' variant='solid' bg='pink.300' color='white' alignSelf='center' justifyContent='start' borderRadius='md' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>Legal Match</Text>
                             </Tag>
-                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' borderRadius='md' justifyContent='center' >
+                            <Tag size='lg' w='19%' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' borderRadius='md' justifyContent='center' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[2] * 100)}</Text>
                             </Tag>
                         </HStack>
@@ -1222,7 +1229,7 @@ function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosti
                             <Tag size='lg' w='60%' variant='solid' bg='pink.300' color='white' alignSelf='center' justifyContent='start' borderRadius='md'  >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>HR Match</Text>
                             </Tag>
-                            <Tag size='lg' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' borderRadius='md' justifyContent='center' >
+                            <Tag size='lg' w='19%' variant='solid' bg='#7d7d7d' color='white' alignSelf='center' borderRadius='md' justifyContent='center' >
                                 <Text fontSize={['md', 'lg', 'xl']} fontWeight='bold'>{Math.round(match.match_scores[3] * 100)}</Text>
                             </Tag>
                         </HStack>
@@ -1232,7 +1239,7 @@ function MatchesRightContent({ apiURL, matches, loadingMatches, selectedJobPosti
                         {match.status === 'matched' && <Tag size='lg' bg='green.300' color='white' justifySelf='end'>Applied</Tag>}
                         {match.status === 'revealed' && <Tag size='lg' bg='green.300' color='white' justifySelf='end'>Applied</Tag>}
                         <Spacer />
-                        <Button rightIcon={<UnlockIcon />} size='lg' alignSelf='center' bg='#11C3FC' variant='solid' border='2pt solid black' color='white' >
+                        <Button rightIcon={<UnlockIcon />} size='lg' alignSelf='center' bg='#11C3FC' variant='solid' border='2pt solid black' color='white' onClick={placeholderReveal}>
                             Reveal
                         </Button>
                     </Flex>
@@ -1344,7 +1351,7 @@ function EmployerProfile({ returnURL }) {
                 const { companylogo, ...otherData } = response.data;
                 setUserInfo(otherData);
                 setCompanyLogo(companylogo);
-                let fileName = 'previous logo file';
+                let fileName = 'previous_logo.png';
                 let file = new File([companyLogo], fileName, { type: "data:image/png;base64", lastModified: new Date().getTime() }, 'utf-8');
                 const dataTransfer = new DataTransfer();
                 dataTransfer.items.add(file);
@@ -1499,7 +1506,7 @@ function EmployerProfile({ returnURL }) {
                                     </VStack>
                                 </>
                                 : <LoginButton redirectURL={''} />}
-                            <DropdownMenu returnURL={window.location.href.substring(0, window.location.href.indexOf('/profile'))} />
+                            <DropdownMenu returnURL={window.location.href.substring(0, window.location.href.indexOf('/profile'))} isEmployer={true} />
                         </>
                     }
                 </HStack>
