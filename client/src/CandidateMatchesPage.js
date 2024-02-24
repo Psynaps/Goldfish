@@ -25,16 +25,16 @@ function CandidateMatchesPage({ apiURL }) {
     //TODO: re-fetch matches both when the user answers more questions and on an error
     useEffect(() => {
         if (user) {
-            axios.get(`${apiURL}/getUserMatches?user_id=${user.sub}`)
-                .then(response => {
-                    setMatches(response.data.matches);
-                    // console.log("Matches:", response.data.matches.length, response.data);
-                    setHasLoadedMatches(true);
-                })
-                .catch(error => {
-                    console.error("Error fetching matches:", error);
-                    setErrorLoadingMatches(true);
-                });
+            // axios.get(`${apiURL}/getUserMatches?user_id=${user.sub}`)
+            //     .then(response => {
+            //         setMatches(response.data.matches);
+            //         // console.log("Matches:", response.data.matches.length, response.data);
+            //         setHasLoadedMatches(true);
+            //     })
+            //     .catch(error => {
+            //         console.error("Error fetching matches:", error);
+            //         setErrorLoadingMatches(true);
+            //     });
         }
     }, [user, apiURL]);
 
@@ -61,13 +61,16 @@ function CandidateMatchesPage({ apiURL }) {
             w='100%'
             h='100%'
         >
-            {!hasLoadedMatches && (
+            
+            {/* {!hasLoadedMatches && ( 
                 <VStack justify="center" align="center" w='100%' h='100%'>
                     <Text fontFamily="Inter" lineHeight="1.2" fontWeight="bold" fontSize="20px" color="#F2A5FF">
                         Loading Matches...
                     </Text>
                 </VStack>
             )}
+            */}
+            
             {hasLoadedMatches && (
                 <VStack justify="center" align="flex-start" w='100%' >
                     <Text fontFamily="Inter" lineHeight="1.2" fontWeight="bold" fontSize="20px" color="#F2A5FF">
@@ -117,6 +120,7 @@ function CandidateMatchesPage({ apiURL }) {
                     </HStack>
                 </VStack>
             )}
+            
         </Flex>
     );
 }
