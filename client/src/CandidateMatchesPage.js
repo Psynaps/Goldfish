@@ -71,8 +71,8 @@ function CandidateMatchesPage({ apiURL }) {
                 </VStack>
             )}
             */}
-            
-            {hasLoadedMatches && (
+            {/* {hasLoadedMatches && ( */}
+            {false && (
                 <VStack justify="center" align="flex-start" w='100%' >
                     <Text fontFamily="Inter" lineHeight="1.2" fontWeight="bold" fontSize="20px" color="#F2A5FF">
                         {/* Your Matches {'test' + matches.length} */}
@@ -120,7 +120,7 @@ function CandidateMatchesPage({ apiURL }) {
 
                     </HStack>
                 </VStack>
-            )}
+             )}*/
             
         </Flex>
     );
