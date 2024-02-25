@@ -35,14 +35,14 @@ app.use(express.static(path.resolve(__dirname, '../client/build'))); // Maybe ad
 const pool = (() => {
     if (process.env.NODE_ENV !== 'production') {
         return new Pool({
-            connectionString: 'postgres://fhpaktypylwyhq:eeeace6b5ebfcbf4c3cd83a51dc0b237a80dbe4a96b89834c783cd3a44a9c4a5@ec2-34-236-199-229.compute-1.amazonaws.com:5432/d6v1l2cfura9pa',
+            connectionString: process.env.DATABASE_STRING,
             ssl: {
                 rejectUnauthorized: false
             }
         });
     } else {
         return new Pool({
-            connectionString: 'postgres://fhpaktypylwyhq:eeeace6b5ebfcbf4c3cd83a51dc0b237a80dbe4a96b89834c783cd3a44a9c4a5@ec2-34-236-199-229.compute-1.amazonaws.com:5432/d6v1l2cfura9pa',
+            connectionString: process.env.DATABASE_STRING,
             ssl: {
                 rejectUnauthorized: false
             }
